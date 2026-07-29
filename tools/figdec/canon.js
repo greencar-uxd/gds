@@ -94,7 +94,80 @@ const hierarchy = {
 };
 const spacingDef = spTexts.find(t => /^Spacing\(스페이싱\)은/.test(t.t));
 
+// ---------- Typography 정본 스케일 ----------
+// 표 한 행 = [토큰명] [굵기] [크기] [행간] [사용영역]
+const tyTexts = texts(PAGES.typo);
+const TOKEN_RE = /^(Display|Title|Body|Caption|Heading|Label)\s*\d+$/i;
+const typo = [];
+for (const t of tyTexts.filter(x => TOKEN_RE.test(x.t))) {
+  const row = tyTexts.filter(x => x !== t && Math.abs(x.y - t.y) < 10 && x.x > t.x).sort((a, b) => a.x - b.x);
+  const weight = row.find(x => /^(Bold|Semibold|Medium|Regular|Light)\s*\(\d+\)$/i.test(x.t));
+  const size = row.find(x => /^\d{1,3}px$/.test(x.t));
+  const lh = row.find(x => /^(Auto|\d{1,3}(px|%))$/i.test(x.t) && x !== size);
+  const usage = row.filter(x => x !== weight && x !== size && x !== lh).slice(-1)[0];
+  if (!size && !weight) continue;
+  typo.push({
+    token: t.t.replace(/\s+/g, ' '),
+    weight: weight ? weight.t : null,
+    size: size ? parseInt(size.t, 10) : null,
+    lineHeight: lh ? lh.t : null,
+    usage: usage ? usage.t.slice(0, 40) : null,
+  });
+}
+// 같은 토큰명이 서로 다른 크기를 갖는지
+const tyBy = new Map();
+for (const t of typo) { if (!tyBy.has(t.token)) tyBy.set(t.token, []); tyBy.get(t.token).push(t.size); }
+const typoConflicts = [...tyBy].filter(([, v]) => new Set(v.filter(Boolean)).size > 1)
+  .map(([token, v]) => ({ token, values: [...new Set(v.filter(Boolean))].sort((a, b) => a - b) }));
+typo.sort((a, b) => (b.size || 0) - (a.size || 0));
+
+// ---------- G-11: 스와치 ↔ 라벨 대조 (구조 기반) ----------
+// 좌표 대신 조상 체인을 씁니다. 팔레트 셀 = HEX 라벨과 색면을 함께 담은 프레임.
+const childrenOf = new Map();
+for (const nd of nodes.values()) {
+  if (!nd._p) continue;
+  if (!childrenOf.has(nd._p)) childrenOf.set(nd._p, []);
+  childrenOf.get(nd._p).push(nd._id);
+}
+function descendants(id, out = [], depth = 0) {
+  if (depth > 6) return out;
+  for (const c of childrenOf.get(id) || []) { out.push(c); descendants(c, out, depth + 1); }
+  return out;
+}
+function solidFillHex(nd) {
+  const p = (nd.fillPaints || []).find(x => x.type === 'SOLID' && x.color);
+  if (!p || !nd.size) return null;
+  if (nd.size.x * nd.size.y < 2000) return null;   // 아이콘·선 제외, 팔레트 칩 크기만
+  return '#' + [p.color.r, p.color.g, p.color.b].map(v => Math.round(v * 255).toString(16).padStart(2, '0')).join('').toUpperCase();
+}
+const g11 = { checked: 0, match: 0, mismatch: [], unpaired: 0 };
+for (const nd of nodes.values()) {
+  if (pgOf.get(nd._id) !== PAGES.color || nd.type !== 'TEXT') continue;
+  const txt = nd.textData && nd.textData.characters ? nd.textData.characters.trim() : '';
+  if (!/^#[0-9A-Fa-f]{6}$/.test(txt)) continue;
+  // 조상을 한 단계씩 올라가며, 색면을 가진 형제/자손을 찾습니다
+  let cur = nd._p, found = null;
+  for (let up = 0; up < 4 && cur && !found; up++) {
+    for (const d of descendants(cur)) {
+      if (d === nd._id) continue;
+      const h = solidFillHex(nodes.get(d) || {});
+      if (h) { found = h; break; }
+    }
+    cur = (nodes.get(cur) || {})._p;
+  }
+  if (!found) { g11.unpaired++; continue; }
+  g11.checked++;
+  if (found === txt.toUpperCase()) g11.match++;
+  else g11.mismatch.push({ label: txt.toUpperCase(), swatch: found, node: nd._id });
+}
+
 const canon = {
+  typography: {
+    scale: typo,
+    conflicts: typoConflicts,
+    source: 'Typography system (타이포 시스템) ✅ · 42066:25472',
+  },
+  g11,
   spacing: {
     unit: '1 unit = 2px',
     scale: spacing.map(({ token, px, mul }) => ({ token, px, mul })),
@@ -110,7 +183,7 @@ const canon = {
   },
   // 주의: 스와치↔라벨 좌표 대조(G-11)는 이 스크립트로 신뢰할 수 없습니다.
   // 오토레이아웃 안에서 transform 만으로 절대 좌표가 복원되지 않아, 열 위치가 뭉갭니다.
-  g11_note: '스와치↔라벨 대조는 좌표 복원 한계로 미수행 [미확인]',
+
 };
 
 const D = JSON.parse(fs.readFileSync(DATA, 'utf8'));
