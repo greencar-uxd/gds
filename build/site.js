@@ -5,10 +5,12 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 
-const TEMPLATE = path.join(ROOT, 'site', 'template.html');
+const TEMPLATE = path.join(ROOT, 'site', 'canon.html');       // 정본 사이트 → index.html
+const DIAG = path.join(ROOT, 'site', 'template.html');        // 진단 리포트 → diagnostics.html
 const DATA = path.join(ROOT, 'data', 'foundation-data.json');
 const OUT_DIR = path.join(ROOT, 'dist');
 const OUT = path.join(OUT_DIR, 'index.html');
+const OUT_DIAG = path.join(OUT_DIR, 'diagnostics.html');
 
 const tpl = fs.readFileSync(TEMPLATE, 'utf8');
 const raw = fs.readFileSync(DATA, 'utf8');
@@ -24,4 +26,9 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(OUT, html);
 fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
 
-console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB)`);
+// 진단 리포트 — 레거시 현황. 정본과 섞이지 않도록 별도 페이지로 분리합니다.
+const diagTpl = fs.readFileSync(DIAG, 'utf8');
+const diag = diagTpl.replace('__DATA__', () => safe);
+fs.writeFileSync(OUT_DIAG, diag);
+
+console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB) · dist/diagnostics.html (${Math.round(diag.length / 1024)} KB)`);

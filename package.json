@@ -12,10 +12,11 @@
     "extract:census": "node --max-old-space-size=8192 tools/figdec/census_radius.js",
     "build": "node build/site.js",
     "check": "node build/check.js",
-    "all": "npm run build && npm run check",
+    "all": "npm run canon && npm run tokens && npm run build && npm run check",
     "fetch:rest": "node tools/figapi/fetch.js",
     "compare": "node tools/figapi/compare.js",
-    "canon": "node --max-old-space-size=8192 tools/figdec/canon.js"
+    "canon": "node --max-old-space-size=8192 tools/figdec/canon.js",
+    "tokens": "node build/tokens.js"
   },
   "dependencies": {},
   "devDependencies": {}

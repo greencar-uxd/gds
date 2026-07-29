@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GDS — 그린카 디자인 시스템</title>
+<style>
+:root{
+  --bg:#fff; --surface:#fafafa; --surface2:#f2f3f4; --line:#e6e8ea; --line-soft:#f0f1f2;
+  --text:#111315; --text2:#5f666d; --text3:#949a9f;
+  --brand:#ED1C24; --brand-soft:#FBD2D3;
+  --ok:#00C88C; --warn:#FF8159;
+  --nav:264px; --maxw:1080px;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:104px;
+}
+[data-theme=dark]{
+  --bg:#0d0e10; --surface:#151719; --surface2:#1d2023; --line:#26292d; --line-soft:#1c1f22;
+  --text:#f0f2f4; --text2:#9aa2a9; --text3:#6b7278; --brand:#F4777C; --brand-soft:#3a1214;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+a{color:inherit;text-decoration:none}
+code,kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85em}
+code{background:var(--surface2);padding:2px 6px;border-radius:5px}
+
+/* ── 레이아웃 ── */
+.shell{display:flex;min-height:100vh}
+nav.side{width:var(--nav);flex:0 0 var(--nav);border-right:1px solid var(--line);
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:var(--s6) 0;background:var(--bg)}
+.brand{padding:0 var(--s6) var(--s5)}
+.brand .logo{display:flex;align-items:center;gap:9px;margin-bottom:5px}
+.brand .dot{width:11px;height:11px;border-radius:99px;background:var(--brand)}
+.brand b{font-size:19px;font-weight:800;letter-spacing:-.03em}
+.brand span{font-size:12px;color:var(--text3);display:block;padding-left:20px}
+.navgrp{padding:var(--s5) var(--s6) var(--s1);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text3);font-weight:700}
+nav.side a.item{display:block;padding:7px var(--s6);color:var(--text2);font-size:14.5px;cursor:pointer;
+  border-left:2px solid transparent;transition:.12s}
+nav.side a.item:hover{color:var(--text);background:var(--surface)}
+nav.side a.item.on{color:var(--brand);border-left-color:var(--brand);font-weight:600;background:var(--surface)}
+main{flex:1;min-width:0}
+.inner{max-width:var(--maxw);padding:var(--s8) var(--s7) var(--s9)}
+@media(max-width:900px){.shell{flex-direction:column}nav.side{width:100%;position:static;height:auto;flex:none}
+  .inner{padding:var(--s6) var(--s5) var(--s8)}}
+
+.bar{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) var(--s7);
+  border-bottom:1px solid var(--line-soft);position:sticky;top:0;background:var(--bg);z-index:9}
+.bar .grow{flex:1}
+button{font:inherit;font-size:13px;color:var(--text2);background:transparent;border:1px solid var(--line);
+  border-radius:7px;padding:5px 11px;cursor:pointer;transition:.12s}
+button:hover{color:var(--text);background:var(--surface)}
+
+/* ── 타이포 ── */
+h1{font-size:40px;font-weight:800;letter-spacing:-.035em;margin:0 0 var(--s3);line-height:1.2}
+h2{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:var(--s9) 0 var(--s4)}
+h2:first-of-type{margin-top:var(--s8)}
+h3{font-size:15px;font-weight:700;margin:var(--s7) 0 var(--s3);color:var(--text)}
+p{margin:0 0 var(--s4)}
+.lead{font-size:17px;color:var(--text2);margin-bottom:var(--s6);max-width:62ch;line-height:1.65}
+.muted{color:var(--text2);font-size:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--s3)}
+
+/* ── 색 ── */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:var(--s3)}
+.sw{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--surface);
+  cursor:pointer;transition:.14s;text-align:left}
+.sw:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.09)}
+.sw .chip{height:76px;box-shadow:inset 0 0 0 1px rgba(128,128,128,.14)}
+.sw .info{padding:10px 12px 12px}
+.sw .nm{font-size:12.5px;font-weight:600;line-height:1.35;margin-bottom:3px}
+.sw .hx{font-size:11.5px;color:var(--text3);font-variant-numeric:tabular-nums;font-family:ui-monospace,Menlo,monospace}
+.sw .vr{font-size:10.5px;color:var(--text3);font-family:ui-monospace,Menlo,monospace;margin-top:5px;
+  word-break:break-all;line-height:1.4}
+
+/* ── 타이포 견본 ── */
+.tyrow{display:grid;grid-template-columns:1fr auto;gap:var(--s5);align-items:baseline;
+  padding:var(--s4) 0;border-bottom:1px solid var(--line-soft)}
+.tyrow .sample{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;letter-spacing:-.02em}
+.tyrow .spec{font-size:12px;color:var(--text3);font-variant-numeric:tabular-nums;white-space:nowrap;
+  font-family:ui-monospace,Menlo,monospace}
+.tyrow .spec b{color:var(--text2);font-weight:600}
+
+/* ── 간격 ── */
+.sprow{display:grid;grid-template-columns:130px 62px 1fr;gap:var(--s4);align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.sprow .tok{font-family:ui-monospace,Menlo,monospace;font-size:12.5px}
+.sprow .px{font-variant-numeric:tabular-nums;font-size:13px;color:var(--text2);text-align:right}
+.sprow .vis{height:14px;background:var(--brand);border-radius:3px;opacity:.85}
+.sprow.bad .vis{background:repeating-linear-gradient(45deg,var(--warn),var(--warn) 5px,transparent 5px,transparent 10px)}
+.sprow.bad .tok{color:var(--warn)}
+
+/* ── 반경 ── */
+.radgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:var(--s4)}
+.rad{border:1px solid var(--line);border-radius:11px;padding:var(--s5);text-align:center;background:var(--surface)}
+.rad .box{width:96px;height:96px;background:var(--brand);margin:0 auto var(--s3)}
+.rad .tok{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--text3)}
+.rad .val{font-size:15px;font-weight:700;margin-bottom:2px}
+
+/* ── 공통 ── */
+.note{border:1px solid var(--line);border-left:3px solid var(--brand);background:var(--surface);
+  border-radius:9px;padding:var(--s4) var(--s5);margin:var(--s5) 0;font-size:14px}
+.note.warn{border-left-color:var(--warn)}
+.note b{font-weight:700}
+.note p:last-child{margin-bottom:0}
+pre{background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:var(--s4) var(--s5);
+  overflow-x:auto;font-size:12.5px;line-height:1.65;margin:var(--s3) 0 var(--s5)}
+pre code{background:none;padding:0}
+.dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s3);margin:var(--s4) 0 var(--s6)}
+.dl a{border:1px solid var(--line);border-radius:10px;padding:var(--s4) var(--s5);background:var(--surface);
+  display:block;transition:.14s}
+.dl a:hover{border-color:var(--brand);transform:translateY(-2px)}
+.dl b{display:block;font-size:14.5px;font-weight:700;margin-bottom:2px}
+.dl span{font-size:12.5px;color:var(--text3)}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:var(--s3);margin:var(--s6) 0}
+.stat div{padding:var(--s4) var(--s5);border:1px solid var(--line);border-radius:11px;background:var(--surface)}
+.stat b{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--text3)}
+footer{border-top:1px solid var(--line);padding-top:var(--s5);margin-top:var(--s9);
+  font-size:12.5px;color:var(--text3);line-height:1.8}
+#toast{position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(12px);
+  background:var(--text);color:var(--bg);padding:9px 18px;border-radius:99px;font-size:13px;
+  opacity:0;pointer-events:none;transition:.2s;z-index:99}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.grouphdr{display:flex;align-items:baseline;gap:var(--s3);margin:var(--s7) 0 var(--s3)}
+.grouphdr h3{margin:0}
+.grouphdr span{font-size:12.5px;color:var(--text3)}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="side">
+  <div class="brand">
+    <div class="logo"><i class="dot"></i><b>GDS</b></div>
+    <span>그린카 디자인 시스템</span>
+  </div>
+  <div class="navgrp">시작</div>
+  <a class="item on" data-go="start">개요 · 사용법</a>
+  <div class="navgrp">Foundation</div>
+  <a class="item" data-go="color">색</a>
+  <a class="item" data-go="type">타이포그래피</a>
+  <a class="item" data-go="space">간격</a>
+  <a class="item" data-go="radius">반경</a>
+  <div class="navgrp">참고</div>
+  <a class="item" data-go="status">진행 상태</a>
+</nav>
+<main>
+  <div class="bar"><span class="grow"></span><button id="theme">다크</button></div>
+  <div class="inner" id="view"></div>
+</main>
+</div>
+<div id="toast">복사됨</div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const C=D.canon;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $=s=>document.querySelector(s);
+
+/* 토큰 키 — build/tokens.js 와 동일 규칙 */
+function slug(s){const p=String(s).toLowerCase().replace(/[^a-z0-9가-힣]+/g,' ').trim().split(/\s+/);
+  const o=[];for(const x of p) if(!o.includes(x)) o.push(x); return o.join('-');}
+
+const COLORS=(C.color.styles||[]).map(s=>{
+  const i=s.name.indexOf('/');
+  const group=i<0?'기타':s.name.slice(0,i), name=i<0?s.name:s.name.slice(i+1);
+  return {group,name,full:s.name,hex:s.hex,vr:'--gds-color-'+slug(group+' '+name)};
+});
+const GROUP_DESC={
+  'Primary':'브랜드 기본 색. Red 계열',
+  'Gray Scale':'배경·라인·텍스트 등 보조 역할',
+  'Navy':'뱃지·지도 핀처럼 색 자체가 정보인 요소에만 유지',
+  'Badge':'혜택·프로모션 영역',
+  'Map Marker':'지도 내 G car Zone 표시',
+  'Brand':'제휴·외부 브랜드',
+  'System':'알림·성공·포커스 등 시스템 상태',
+};
+const TYPES=(C.typography.scale||[]).map(t=>({...t,
+  w:/Bold/i.test(t.weight||'')?700:/Medium/i.test(t.weight||'')?500:400, key:slug(t.token)}));
+const CONFLICT=new Set((C.spacing.conflicts||[]).map(c=>c.token));
+const SPACE=(C.spacing.scale||[]).map(s=>({...s,bad:CONFLICT.has(s.token)}));
+const RADIUS=[4,8,10,12,16,20];
+
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),1400);}
+function copy(txt){navigator.clipboard?.writeText(txt).then(()=>toast(txt+' 복사됨'),()=>toast('복사 실패'));}
+
+/* ───────── 개요 ───────── */
+function start(){
+  const conflicts=(C.spacing.conflicts||[]).length;
+  return `<p class="eyebrow">Foundation</p>
+  <h1>그린카 디자인 시스템</h1>
+  <p class="lead">웹·iOS·Android가 같은 값을 쓰기 위한 기준입니다.
+  아래 토큰은 전부 Figma의 <b>정의 완료(✅) 페이지</b>에서 직접 읽은 값이며, 사람이 옮겨 적지 않았습니다.</p>
+  <div class="stat">
+    <div><b>${COLORS.length}</b><span>색</span></div>
+    <div><b>${TYPES.length}</b><span>타입 스케일</span></div>
+    <div><b>${SPACE.length}</b><span>간격 단계</span></div>
+    <div><b>${RADIUS.length+1}</b><span>반경 단계</span></div>
+  </div>
+  <h2>토큰 내려받기</h2>
+  <div class="dl">
+    <a href="tokens/gds.css" download><b>gds.css</b><span>CSS 커스텀 속성</span></a>
+    <a href="tokens/gds.scss" download><b>gds.scss</b><span>SCSS 변수</span></a>
+    <a href="tokens/gds.tokens.json" download><b>gds.tokens.json</b><span>DTCG JSON</span></a>
+  </div>
+  <h3>웹에서 쓰기</h3>
+<pre><code>&lt;link rel="stylesheet" href="gds.css"&gt;
+
+.button {
+  background: var(--gds-color-brand-g-car-red);
+  border-radius: var(--gds-radius-12);
+  padding: var(--gds-spacing-400) var(--gds-spacing-500);
+  font-size: var(--gds-type-body-1-size);
+  font-weight: var(--gds-type-body-1-weight);
+}</code></pre>
+  <h3>토큰 이름 규칙</h3>
+  <pre><code>--gds-color-{그룹}-{이름}     예) --gds-color-gray-scale-020
+--gds-type-{토큰}-size|weight  예) --gds-type-title-3-size
+--gds-spacing-{단계}           예) --gds-spacing-500
+--gds-radius-{값}              예) --gds-radius-12 · --gds-radius-full</code></pre>
+  ${conflicts?`<div class="note warn"><p><b>일부 간격 토큰은 아직 내보내지 않습니다.</b>
+  같은 이름이 두 값을 가지고 있어 어느 쪽이 옳은지 판단할 수 없습니다 — ${conflicts}건.
+  <a href="#" data-go="space" style="color:var(--brand);font-weight:600">간격 문서</a>에 상세를 적었습니다.</p></div>`:''}
+  <div class="note"><p><b>엘리베이션(그림자)은 아직 포함되지 않았습니다.</b>
+  Figma에서 단계가 재넘버링되었고 불투명도 기준이 확정되지 않아, 확정 후 추가합니다.</p></div>
+  ${footer()}`;
+}
+
+/* ───────── 색 ───────── */
+function color(){
+  const groups={};COLORS.forEach(c=>{(groups[c.group]=groups[c.group]||[]).push(c)});
+  const order=['Primary','Gray Scale','Navy','Badge','Map Marker','Brand','System'];
+  const keys=[...new Set([...order.filter(k=>groups[k]),...Object.keys(groups)])];
+  return `<p class="eyebrow">Foundation</p><h1>색</h1>
+  <p class="lead">${esc((C.color.hierarchy.definition||'').slice(0,200))}</p>
+  <div class="note"><p>
+    <b>Primary</b> Red scale · <b>Secondary</b> Gray scale · <b>Tertiary</b> Navy scale<br>
+    Navy는 리브랜딩 이전 색으로, <b>뱃지·지도 핀처럼 색 자체가 정보인 요소에만</b> 유지하고
+    폰트·컴포넌트는 Gray scale을 씁니다.</p></div>
+  ${keys.map(g=>`
+    <div class="grouphdr"><h3>${esc(g)}</h3><span>${groups[g].length}색 · ${esc(GROUP_DESC[g]||'')}</span></div>
+    <div class="swatches">${groups[g].map(c=>`
+      <div class="sw" data-copy="${c.vr}">
+        <div class="chip" style="background:${c.hex}"></div>
+        <div class="info"><div class="nm">${esc(c.name)}</div>
+        <div class="hx">${c.hex}</div><div class="vr">${c.vr}</div></div>
+      </div>`).join('')}</div>`).join('')}
+  <p class="muted" style="margin-top:32px">스와치를 누르면 변수명이 복사됩니다. 출처 — <code>${esc(C.color.source)}</code></p>
+  ${footer()}`;
+}
+
+/* ───────── 타이포 ───────── */
+function type(){
+  const grp={};TYPES.forEach(t=>{const k=t.token.replace(/\s*\d+$/,'');(grp[k]=grp[k]||[]).push(t)});
+  const desc={Display:'그래픽 영역 전용. 가장 큰 타이포',
+    Title:'화면·영역을 대표하는 머리글',
+    Heading:'반복·나열되는 구역을 구분하는 머리글',
+    Body:'머리글 아래 실제 내용을 전달하는 본문',
+    Caption:'본문을 보조하는 부가·주석 정보'};
+  return `<p class="eyebrow">Foundation</p><h1>타이포그래피</h1>
+  <p class="lead">위계는 Display · Title · Heading · Body · Caption 순입니다.
+  아래 견본은 실제 크기와 굵기를 그대로 렌더한 것입니다.</p>
+  ${Object.entries(grp).map(([k,v])=>`
+    <div class="grouphdr"><h3>${esc(k)}</h3><span>${v.length}단계 · ${esc(desc[k]||'')}</span></div>
+    ${v.sort((a,b)=>b.size-a.size).map(t=>`
+      <div class="tyrow" data-copy="--gds-type-${t.key}-size" style="cursor:pointer">
+        <div class="sample" style="font-size:${Math.min(t.size,36)}px;font-weight:${t.w}">${esc(t.token)}</div>
+        <div class="spec"><b>${t.size}px</b> · ${t.w} · ${esc(t.lineHeight||'auto')}</div>
+      </div>`).join('')}`).join('')}
+  <p class="muted" style="margin-top:32px">행을 누르면 변수명이 복사됩니다. 출처 — <code>${esc(C.typography.source)}</code></p>
+  ${footer()}`;
+}
+
+/* ───────── 간격 ───────── */
+function space(){
+  const max=Math.max(...SPACE.map(s=>s.px))||1;
+  const conf=C.spacing.conflicts||[];
+  return `<p class="eyebrow">Foundation</p><h1>간격</h1>
+  <p class="lead">${esc(C.spacing.definition||'')}</p>
+  ${conf.length?`<div class="note warn">
+    <p><b>같은 이름이 두 값을 가진 토큰이 ${conf.length}건 있습니다.</b>
+    px 값은 0부터 52까지 끊김 없이 ${SPACE.length}단계로 증가하는데, 이름은 ${new Set(SPACE.map(s=>s.token)).size}개뿐입니다.</p>
+    <p style="margin-top:8px">${conf.map(c=>`<code>${esc(c.token)}</code> ${c.values.join('px / ')}px`).join(' &nbsp;·&nbsp; ')}</p>
+    <p style="margin-top:8px">코드로 내보내면 한쪽이 덮어써지므로 <b>이 ${conf.length}건은 토큰 파일에서 제외</b>했습니다.
+    이름이 정리되면 자동으로 포함됩니다.</p></div>`:''}
+  <div style="margin-top:28px">
+  ${SPACE.map(s=>`<div class="sprow ${s.bad?'bad':''}" ${s.bad?'':`data-copy="--gds-spacing-${slug(s.token).replace(/^spacing-/,'')}" style="cursor:pointer"`}>
+    <div class="tok">${esc(s.token)}${s.bad?' ⚠':''}</div>
+    <div class="px">${s.px}px</div>
+    <div><div class="vis" style="width:${Math.max(s.px/max*100,1.2)}%"></div></div>
+  </div>`).join('')}</div>
+  <p class="muted" style="margin-top:28px">${esc(C.spacing.unit)} · 출처 — <code>${esc(C.spacing.source)}</code></p>
+  ${footer()}`;
+}
+
+/* ───────── 반경 ───────── */
+function radius(){
+  return `<p class="eyebrow">Foundation</p><h1>반경</h1>
+  <p class="lead">로컬 7단계 스케일입니다. 컴포넌트 반경 상한은 <b>20px</b>입니다.</p>
+  <div class="radgrid">
+    ${RADIUS.map(v=>`<div class="rad" data-copy="--gds-radius-${v}" style="cursor:pointer">
+      <div class="box" style="border-radius:${v}px"></div>
+      <div class="val">${v}px</div><div class="tok">--gds-radius-${v}</div></div>`).join('')}
+    <div class="rad" data-copy="--gds-radius-full" style="cursor:pointer">
+      <div class="box" style="border-radius:9999px"></div>
+      <div class="val">원형</div><div class="tok">--gds-radius-full</div></div>
+  </div>
+  <div class="note"><p><b>상한 20px은 2026-07-28 회의에서 확정됐습니다.</b>
+  컴포넌트별 배정(어느 컴포넌트가 몇 px을 쓰는지)은 카테고리 매핑이 확정된 뒤 추가합니다.</p></div>
+  ${footer()}`;
+}
+
+/* ───────── 진행 상태 ───────── */
+function status(){
+  const rows=[
+    ['색',`${COLORS.length}색 · 7그룹`,'ok','정본 확보'],
+    ['타이포그래피',`${TYPES.length}단계`,'ok','정본 확보'],
+    ['간격',`${SPACE.length}단계`,'warn',`토큰명 중복 ${(C.spacing.conflicts||[]).length}건 — 해당 토큰 미출력`],
+    ['반경','7단계 · 상한 20px','ok','R-3 확정 반영'],
+    ['엘리베이션','—','warn','재넘버링 반영 전 · 불투명도 기준 미확정'],
+    ['컴포넌트','—','wait','Foundation 안정화 후'],
+  ];
+  const badge=s=>s==='ok'?'<span style="color:var(--ok);font-weight:700">준비됨</span>'
+    :s==='warn'?'<span style="color:var(--warn);font-weight:700">보류</span>'
+    :'<span style="color:var(--text3)">예정</span>';
+  return `<p class="eyebrow">참고</p><h1>진행 상태</h1>
+  <p class="lead">이 문서에 실린 값이 어디까지 확정됐는지입니다. 확정되지 않은 것은 싣지 않습니다.</p>
+  <div style="margin-top:24px">
+  ${rows.map(([a,b,s,c])=>`<div class="sprow" style="grid-template-columns:130px 130px 90px 1fr">
+    <div style="font-weight:600">${a}</div><div class="muted" style="text-align:left">${b}</div>
+    <div>${badge(s)}</div><div class="muted">${c}</div></div>`).join('')}</div>
+  <h2>이 문서가 만들어지는 방식</h2>
+  <p class="lead" style="font-size:15px">원본 <code>.fig</code> 파일을 직접 디코딩해 값을 읽고, 기계 검증을 통과한 것만 사이트와 토큰 파일로 내보냅니다.
+  손으로 옮겨 적는 단계가 없어 원본과 어긋날 수 없습니다.</p>
+<pre><code>GDS(Greencar Design System).fig
+   ↓  npm run canon      ✅ 페이지에서 정본 추출
+   ↓  npm run tokens     CSS / SCSS / JSON 생성
+   ↓  npm run build      사이트 생성
+   ↓  npm run check      기계 검증 — 실패 시 배포 중단</code></pre>
+  ${footer()}`;
+}
+
+function footer(){
+  return `<footer>
+    원본 <code>${esc(D.meta.source)}</code> · export ${String(D.meta.exported).slice(0,10)}<br>
+    ✅ 정의 완료 페이지에서 추출한 정본만 싣습니다. 정리되지 않은 레거시 스타일은 포함하지 않습니다.
+  </footer>`;
+}
+
+/* ───────── 라우팅 ───────── */
+const V={start,color,type,space,radius,status};
+function go(k){
+  $('#view').innerHTML=V[k]();
+  document.querySelectorAll('nav.side a.item').forEach(a=>a.classList.toggle('on',a.dataset.go===k));
+  window.scrollTo(0,0);
+  document.querySelectorAll('[data-copy]').forEach(e=>e.onclick=ev=>{ev.preventDefault();copy(e.dataset.copy)});
+  document.querySelectorAll('#view a[data-go]').forEach(a=>a.onclick=ev=>{ev.preventDefault();go(a.dataset.go)});
+}
+document.querySelectorAll('nav.side a.item').forEach(a=>a.onclick=()=>go(a.dataset.go));
+$('#theme').onclick=()=>{const r=document.documentElement,d=r.getAttribute('data-theme')==='dark';
+  r.setAttribute('data-theme',d?'light':'dark');$('#theme').textContent=d?'다크':'라이트'};
+go('start');
+</script>
+</body>
+</html>

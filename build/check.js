@@ -76,5 +76,27 @@ for (const f of ['GDS-r3-decision-20260729.md', 'r3-change-list.csv']) {
   ok(`${f} 존재`, fs.existsSync(path.join(ROOT, 'docs', f)));
 }
 
+
+// ---------- 5. 정본 사이트 · 토큰 ----------
+console.log('\n[5] 정본 산출물');
+const canon = D.canon || {};
+ok('정본 색 스타일 확보', (canon.color && (canon.color.styles||[]).length) > 0, `${(canon.color&&canon.color.styles||[]).length}개`);
+ok('정본 타입 스케일 확보', (canon.typography && canon.typography.scale.length) > 0);
+ok('정본 간격 스케일 확보', (canon.spacing && canon.spacing.scale.length) > 0);
+for (const f of ['gds.css','gds.scss','gds.tokens.json']) {
+  ok(`tokens/${f} 생성됨`, fs.existsSync(path.join(ROOT,'dist','tokens',f)));
+}
+const cssPath = path.join(ROOT,'dist','tokens','gds.css');
+if (fs.existsSync(cssPath)) {
+  const css = fs.readFileSync(cssPath,'utf8');
+  const conflictTokens = (canon.spacing.conflicts||[]).map(c=>c.token);
+  for (const t of conflictTokens) {
+    const key = t.toLowerCase().replace('spacing_','');
+    ok(`충돌 토큰 ${t} 미출력`, !new RegExp(`^\\s*--gds-spacing-${key}:`,'m').test(css));
+  }
+  ok('엘리베이션 토큰 미출력 (미확정)', !/--gds-elevation/.test(css));
+}
+ok('dist/diagnostics.html 분리 생성', fs.existsSync(path.join(ROOT,'dist','diagnostics.html')));
+
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
 process.exit(fail === 0 ? 0 : 1);

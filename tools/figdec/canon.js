@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, '..', '..');
 
 const FIG = process.env.FIG_PATH || path.join(ROOT, 'canvas.fig');
 const DATA = path.join(ROOT, 'data', 'foundation-data.json');
-const KEEP = ['guid', 'parentIndex', 'type', 'name', 'size', 'transform', 'textData', 'fillPaints', 'fontSize'];
+const KEEP = ['guid', 'parentIndex', 'type', 'name', 'size', 'transform', 'textData', 'fillPaints', 'fontSize', 'styleIdForFill'];
 
 const PAGES = { color: '42066:25436', spacing: '42066:25438', typo: '42066:25472' };
 
@@ -161,6 +161,31 @@ for (const nd of nodes.values()) {
   else g11.mismatch.push({ label: txt.toUpperCase(), swatch: found, node: nd._id });
 }
 
+
+// ---------- 정본 스타일 이름 (Color system ✅ 페이지가 실제로 참조하는 스타일) ----------
+// 중복 정리에서 "어느 이름을 남길지"의 근거가 됩니다.
+const canonStyles = [];
+{
+  const seen = new Set();
+  for (const nd of nodes.values()) {
+    if (pgOf.get(nd._id) !== PAGES.color || nd.type !== 'TEXT') continue;
+    const txt = nd.textData && nd.textData.characters ? nd.textData.characters.trim() : '';
+    if (!/^#[0-9A-Fa-f]{6}$/.test(txt)) continue;
+    let cell = nodes.get(nd._p); if (cell) cell = nodes.get(cell._p);
+    if (!cell || !cell.styleIdForFill || !cell.styleIdForFill.guid) continue;
+    const st = nodes.get(g2s(cell.styleIdForFill.guid));
+    if (!st || !st.name || seen.has(st.name)) continue;
+    seen.add(st.name);
+    const pnt = (st.fillPaints || []).find(x => x.type === 'SOLID' && x.color);
+    if (!pnt) continue;
+    canonStyles.push({
+      name: st.name,
+      hex: '#' + [pnt.color.r, pnt.color.g, pnt.color.b].map(v => Math.round(v * 255).toString(16).padStart(2, '0')).join('').toUpperCase(),
+      label: txt.toUpperCase(),
+    });
+  }
+}
+
 const canon = {
   typography: {
     scale: typo,
@@ -178,6 +203,7 @@ const canon = {
   color: {
     palette: paletteUniq,
     paletteCount: palette.length,
+    styles: canonStyles,
     hierarchy,
     source: 'Color system (컬러 시스템) ✅ · 42066:25436',
   },
@@ -194,5 +220,5 @@ console.log('=== Spacing 정본 ===');
 canon.spacing.scale.forEach(s => console.log(`  ${s.token.padEnd(14)} ${String(s.px + 'px').padStart(6)}  ${s.mul || ''}`));
 console.log(`\n토큰명 충돌 ${spacingConflicts.length}건`);
 spacingConflicts.forEach(c => console.log(`  ${c.token}: ${c.values.join('px / ')}px`));
-console.log(`\n=== Color 정본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개`);
+console.log(`\n=== Color 정본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개 · 참조 스타일 ${canonStyles.length}개`);
 console.log(`\ndata/foundation-data.json 에 canon 블록 병합 완료`);
