@@ -1,0 +1,12 @@
+# 원본 파일 — 저장소에 넣지 않습니다 (canvas.fig 17MB, .fig 원본 207MB)
+canvas.fig
+*.fig
+schema.kiwi
+doc.kiwi
+
+# 빌드 산출물 — Actions 가 만들고 Pages 로 배포합니다
+dist/
+
+node_modules/
+.DS_Store
+*.log

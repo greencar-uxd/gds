@@ -1,0 +1,51 @@
+name: Build & Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # zstd 압축 해제(zlib.zstdDecompressSync)는 Node 22.15+ 에서만 동작합니다
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 사이트 빌드
+        run: npm run build
+
+      - name: 기계 검증
+        run: npm run check
+
+      - name: 아티팩트 업로드
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

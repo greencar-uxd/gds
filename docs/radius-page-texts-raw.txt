@@ -1,0 +1,152 @@
+20
+8
+4
+10
+12
+16
+버튼 Input info_box
+버튼 xsmall
+(As-is에서) 기본
+카드
+카드
+모달 팝업
+모바일 문의 상담시간은 09:00~18:00 입니다.
+모바일 문의 상담시간은 09:00~18:00 입니다. ㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇ
+마스터로 승급되었습니다.
+등급UP혜택
+10/24시간 무료쿠폰 각2매
+월간혜택
+주중/주말 50% 할인쿠폰 1매
+주행거리 리워드
+주행거리 X40포인트
+마스터로 승급되었습니다.
+등급UP혜택
+10/24시간 무료쿠폰 각2매
+월간혜택
+주중/주말 50% 할인쿠폰 1매
+주행거리 리워드
+주행거리 X40포인트
+정의: 콘텐츠 영역에 10인데 8로 변경 필요
+8 케이스 10케이스 정의
+top_info_box
+무료 편도
+대여/주행료 0원
+메인 버튼 → as-is 버튼의 radius 따름
+10 → 8로 변경해야함
+10 → 8/12로 변경해야함
+10 → 8/12로 변경해야함
+래디어스 (radius)
+표준형 스타일은 small-medium-large-xlarge 4단계로 구성되며, 각 레벨은 컴포넌트의 사이즈로 구분되된다. 각 레벨은 함께 사용할 빈도가 높은 컴포넌트의 묶음으로 같은 형태의 래디어스(radius) 적용이 필요하다.
+표준형 스타일은 2px~12px의 래디어스 값을 사용하며, 이는 정부가 주는 신뢰감과 안정감, 친근함을 표현하기 위한 래디어스 값이다. 과하게 둥근 형태로 변형되는 것을 방지하기 위해 래디어스 최대 값을 12px로 설정한다.
+xsmall-1
+8*8
+2px
+xsmall-2
+12*12
+2px
+xsmall-3
+16*16
+2px
+small-1
+20*20
+4px
+small-2
+24*24
+4px
+small-3
+32*32
+4px
+medium-1
+40*40
+6px
+medium-2
+48*48
+6px
+medium-3
+56*56
+8px
+medium-4
+64*64
+8px
+large-1
+72*72
+10px
+large-2
+80*80
+10px
+xlarge-1
+96*96
+12px
+xlarge-2
+120*120
+12px
+Level
+Usage
+Container size
+Radius size
+Apply components
+Xsmall
+컴포넌트 레벨에서 가장 작은 크기로 인디게이터, 뱃지, 프로그레스 바 같은 초소형 크기에 사용한다.
+* 온전한 원형의 형태를 사용하는 경우 radius-max token을 사용한다.
+8*8
+4px
+12*12
+4px
+16*16
+8px
+Element
+Small
+태그, 칩 같은 작은 컴포넌트에서 사용한다.
+20*20
+8px
+24*24
+10px
+32*32
+10px
+Chips Checkbox Radio button Switch Tag
+Medium
+기본이 되는 값으로 주로 버튼, 인풋 등에서 사용한다.
+40*40
+12px
+48*48
+12px
+56*56
+14px
+64*64
+14px
+Button Text input Textarea Select Carousel-Number Step indicator Pagination
+Large
+주로 카드와 같은 큰 컴포넌트에 사용한다.
+72*72
+16px
+80*80
+16px
+Card Dialog
+Xlarge
+가장 큰 값으로 주로 배너, 바텀 시트 같은 화면을 차지하는 비율이 큰 컴포넌트에 사용한다.
+96*96
+20px
+120*120
+20px (max)
+Banner Dialog Bottom sheet
+사이즈/용도에 따라 구분
+-1.스케일 2.내부 규칙(스타일)로 기준으로 사용 방법을 정해야함. -모바일 중심의 디.시 다른거 참고해서 스케일 확인(머터리얼, 기타) -
+Glossary
+지카 디자인 시스템 문서화 템플릿
+[정의]
+Radius system (레디어스 시스템)은
+Type
+Reference
+[]
+Radius system (레디어스 시스템)은
+➊ Text field (텍스트필드)
+➋ Search text field (서치 텍스트필드)
+➌ Split text field (스플릿 텍스트필드)
+➍ Area text field (영역 텍스트필드)
+Text field (텍스트필드)
+한 줄 단위로 단일 정보 입력형
+Your comment here...
+[🔺Radius system] ➡️ 기본 값은 12로부터 시작이 되지만, Default button과 같은 하단 영역에 배치되는 컴포넌트는 기기의 형태에 영향을 안 받을 수 는 없다. 그러므로, Radius 값을 선정하고 분류하는 기준은 각 컴포넌트들간의 가로, 세로 영역에 따라서도 선정이되지만 어디에 어떻게 어떤 화면에 배치되는지에 대한 상황적은 것도 같이 고려를 하면서 분류해야한다. → 컴포넌트들 중 버튼에 백그라운드가 있는 경우에는 12로 통일 → Default button (디폴트 버튼) 같은 경우에는 하단 영역이기에 특정한 상황이므로 16으로 설정
+High priority
+Medium priority
+Low priority
