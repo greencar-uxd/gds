@@ -522,10 +522,41 @@
       "$type": "dimension"
     }
   },
+  "elevation": {
+    "1": {
+      "$value": "0px 1px 2px 0px rgba(0,0,0,0.15)",
+      "$type": "shadow",
+      "$description": "신규"
+    },
+    "2": {
+      "$value": "0px 1px 3px 1px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow",
+      "$description": "구 Elevation_1"
+    },
+    "3": {
+      "$value": "0px 2px 6px 2px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow",
+      "$description": "구 Elevation_2"
+    },
+    "4": {
+      "$value": "0px 4px 8px 3px rgba(0,0,0,0.15), 0px 1px 3px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow",
+      "$description": "구 Elevation_3"
+    },
+    "5": {
+      "$value": "0px 6px 10px 4px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow",
+      "$description": "구 Elevation_4"
+    },
+    "6": {
+      "$value": "0px 8px 12px 6px rgba(0,0,0,0.15), 0px 4px 4px 0px rgba(0,0,0,0.3)",
+      "$type": "shadow",
+      "$description": "구 Elevation_5"
+    }
+  },
   "$notes": {
-    "excluded": [
-      "elevation — 재넘버링 반영 전 · E-2 미결"
-    ],
+    "excluded": [],
+    "elevationRenumbered": true,
     "conflicts": [
       {
         "token": "Spacing_700",

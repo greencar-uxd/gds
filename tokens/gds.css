@@ -125,5 +125,12 @@
   --gds-radius-20: 20px;
   --gds-radius-full: 9999px;
 
-  /* Elevation — 재넘버링 반영 전이고 E-2(그림자 불투명도) 미결이라 출력하지 않습니다 */
+  /* Elevation */
+  /* 재넘버링 반영됨 — 구 1~5 → 2~6, 신규 1 추가 */
+  --gds-elevation-1: 0px 1px 2px 0px rgba(0,0,0,0.15);  /* 신규 */
+  --gds-elevation-2: 0px 1px 3px 1px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.3);  /* 구 Elevation_1 */
+  --gds-elevation-3: 0px 2px 6px 2px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.3);  /* 구 Elevation_2 */
+  --gds-elevation-4: 0px 4px 8px 3px rgba(0,0,0,0.15), 0px 1px 3px 0px rgba(0,0,0,0.3);  /* 구 Elevation_3 */
+  --gds-elevation-5: 0px 6px 10px 4px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.3);  /* 구 Elevation_4 */
+  --gds-elevation-6: 0px 8px 12px 6px rgba(0,0,0,0.15), 0px 4px 4px 0px rgba(0,0,0,0.3);  /* 구 Elevation_5 */
 }
