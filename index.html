@@ -76,9 +76,14 @@ tbody tr:hover{background:var(--surface)}
 /* color */
 .sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(146px,1fr));gap:var(--s3)}
 .sw{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
-.sw i{display:block;height:56px;border-bottom:1px solid var(--line)}
+.sw i{display:block;height:56px;border-bottom:1px solid var(--line);
+  box-shadow:inset 0 0 0 1px rgba(128,128,128,.22);
+  background-image:linear-gradient(45deg,rgba(128,128,128,.10) 25%,transparent 25%,transparent 75%,rgba(128,128,128,.10) 75%),
+    linear-gradient(45deg,rgba(128,128,128,.10) 25%,transparent 25%,transparent 75%,rgba(128,128,128,.10) 75%);
+  background-size:12px 12px;background-position:0 0,6px 6px}
 .sw div{padding:7px 9px}
-.sw b{display:block;font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sw b{display:block;font-size:11.5px;font-weight:600;line-height:1.35;word-break:break-all;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
 .sw span{font-size:11px;color:var(--text3);font-variant-numeric:tabular-nums}
 .dup{color:var(--warn);font-weight:600}
 details{border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--s3);background:var(--surface)}
@@ -98,9 +103,10 @@ details .body{padding:0 var(--s4) var(--s4)}
 .ty .meta b{color:var(--text2);font-weight:600}
 
 /* radius */
-.spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:var(--s4)}
-.spec{background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s4);text-align:center}
-.spec .stage{height:112px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:var(--s2)}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:var(--s4)}
+.spec{background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s4);text-align:center;overflow:hidden}
+.spec .stage{height:132px;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:var(--s2)}
+.spec .stage .box{flex:0 0 auto}
 .spec .lbl{font-size:11.5px;color:var(--text2);font-variant-numeric:tabular-nums}
 .spec .lbl b{color:var(--text)}
 .box{background:var(--accent)}.box.b{background:var(--text3)}
@@ -237,10 +243,11 @@ function color(){
   </div>
   ${canonBlock}
   <h2>레거시 스타일 현황 — 정리 대상</h2>
+  <p class="lead">${n(D.colors.length)}개 전수입니다. 그룹을 눌러 펼치거나, 검색·중복 필터를 쓰세요.</p>
   <div class="topbar"><input type="search" id="cq" placeholder="색 이름 또는 HEX 검색 (예: gray, #143C56)"><span class="grow"></span>
     <button id="cdup">중복만 보기</button></div>
   <div id="clist">${ordered.map(([g,list])=>`
-    <details${list.length>40?'':' open'}><summary>${esc(g)}<span class="c">${list.length}개</span></summary>
+    <details><summary>${esc(g)}<span class="c">${list.length}개</span></summary>
       <div class="body"><div class="sw-grid">${list.map(c=>`
         <div class="sw" data-name="${esc(c.name.toLowerCase())}" data-hex="${c.hex.toLowerCase()}" data-dup="${hexCount[c.hex]>1?1:0}">
           <i style="background:${c.hex}"></i>
@@ -255,18 +262,35 @@ function type(){
   const byFam = {}; D.types.forEach(t=>{const k=t.family||'(없음)';(byFam[k]=byFam[k]||[]).push(t)});
   const ordered = Object.entries(byFam).sort((a,b)=>b[1].length-a[1].length);
   const lh = t => t.lineHeight ? (t.lineHeight.u==='PIXELS'?t.lineHeight.v+'px':t.lineHeight.u==='PERCENT'?t.lineHeight.v+'%':'auto') : 'auto';
+  const C = (D.canon && D.canon.typography) || null;
+  const canonRows = C && C.scale.length ? C.scale.map(t=>{
+    const w = /Bold/i.test(t.weight||'')?700:/Medium/i.test(t.weight||'')?500:400;
+    return `<div class="ty">
+      <div class="sample" style="font-size:${Math.min(t.size||14,34)}px;font-weight:${w};line-height:1.3">${esc(t.token)}</div>
+      <div class="meta"><b>${t.size}px</b> · ${esc(t.weight||'')} · 행간 ${esc(t.lineHeight||'-')}</div>
+    </div>`}).join('') : '';
+  const canonTy = C && C.scale.length ? `
+  <div class="callout ok"><h4>정본 타입 스케일 — Typography system ✅ 페이지 <span class="tag t-fact">팩트</span></h4>
+    <p>아래 <strong>${C.scale.length}단계</strong>가 팀이 정의한 기준입니다. 위계는
+    <strong>Display</strong>(그래픽 전용) · <strong>Title</strong>(화면·영역 머리글) ·
+    <strong>Heading</strong>(반복 구역 머리글) · <strong>Body</strong>(본문) · <strong>Caption</strong>(보조) 순입니다.</p>
+  </div>
+  ${canonRows}
+  <p style="margin-top:16px"><code>${esc(C.source)}</code></p>
+  <h2>레거시 스타일 현황 — 정리 대상</h2>` : '';
   return `<h1>타이포그래피</h1>
-  <p class="lead">원본의 <strong>TEXT 스타일 전수</strong>. 아래 견본은 실제 크기·굵기를 그대로 렌더한 것입니다.</p>
+  <p class="lead">정본 스케일과, 원본에 남아 있는 <strong>TEXT 스타일 전수</strong>입니다. 견본은 실제 크기·굵기를 그대로 렌더한 것입니다.</p>
   <div class="kpi">
     <div><b>${D.types.length}</b><span>텍스트 스타일</span></div>
     <div class="hot"><b>${ordered.length}</b><span>폰트 패밀리</span></div>
     <div><b>${sizes.length}</b><span>크기 종류</span></div>
-    <div><b>${sizes[0]}–${sizes[sizes.length-1]}px</b><span>크기 범위</span></div>
+    <div><b>${sizes[sizes.length-1]}–${sizes[0]}px</b><span>크기 범위</span></div>
   </div>
+  ${canonTy}
   <div class="callout warn"><p>폰트 패밀리가 <strong>${ordered.length}종</strong>입니다.
   <code>pretendard GOV Variable</code>과 <code>Pretendard GOV Variable</code>처럼 <strong>대소문자만 다른 중복</strong>도 있습니다 <span class="tag t-fact">팩트</span></p></div>
   ${ordered.map(([fam,list])=>`
-    <details${list.length>30?'':' open'}><summary>${esc(fam)}<span class="c">${list.length}개</span></summary>
+    <details${list.length<=12?' open':''}><summary>${esc(fam)}<span class="c">${list.length}개</span></summary>
       <div class="body">${list.slice(0,60).map(t=>`
         <div class="ty">
           <div class="sample" style="font-size:${Math.min(t.size||14,34)}px;font-weight:${/bold|semibold|700|600/i.test(t.style||'')?700:/medium|500/i.test(t.style||'')?500:400};line-height:1.3">
@@ -328,11 +352,11 @@ function radius(){
     const A = TABLE_A[li];
     return `<h3>${lv} <span style="font-weight:400;color:var(--text3)">— ${esc(apply)}</span></h3>
     <div class="spec-grid">${szs.map((s,i)=>{
-      const d=rs[i]-A[2][i], draw=Math.min(s,96);
+      const d=rs[i]-A[2][i], draw=72;   // 고정 캔버스 — 실제 반경값을 왜곡 없이 비교
       return `<div class="spec"><div class="stage">
-        <div class="box b" style="width:${draw}px;height:${draw}px;border-radius:${A[2][i]*draw/s}px"></div>
-        <div class="box" style="width:${draw}px;height:${draw}px;border-radius:${rs[i]*draw/s}px"></div>
-      </div><div class="lbl">${s}×${s}</div>
+        <div class="box b" style="width:${draw}px;height:${draw}px;border-radius:${A[2][i]}px"></div>
+        <div class="box" style="width:${draw}px;height:${draw}px;border-radius:${rs[i]}px"></div>
+      </div><div class="lbl">컨테이너 ${s}×${s}</div>
       <div class="lbl">A <b>${A[2][i]}</b> → B <b>${rs[i]}</b>${d?` <span style="color:var(--accent)">(${d>0?'+':''}${d})</span>`:''}</div>
       </div>`}).join('')}</div>`;
   }).join('');
@@ -342,11 +366,13 @@ function radius(){
   <h2>정본 스케일 <span class="tag t-fact">팩트</span></h2>
   <p>R-1 승인 — 로컬 7단계 <code>${SCALE.join(' / ')} / 원형</code></p>
   <div class="spec-grid" style="margin-bottom:32px">${SCALE.map(v=>`
-    <div class="spec"><div class="stage"><div class="box" style="width:84px;height:84px;border-radius:${v}px"></div></div>
+    <div class="spec"><div class="stage"><div class="box" style="width:108px;height:108px;border-radius:${v}px"></div></div>
     <div class="lbl"><b>${v}px</b></div></div>`).join('')}
-    <div class="spec"><div class="stage"><div class="box" style="width:84px;height:84px;border-radius:99px"></div></div>
+    <div class="spec"><div class="stage"><div class="box" style="width:108px;height:108px;border-radius:99px"></div></div>
     <div class="lbl"><b>원형</b></div></div></div>
-  <h2>레벨별 표 A → 표 B</h2>${specs}
+  <h2>레벨별 표 A → 표 B</h2>
+  <p class="lead">모든 견본을 <strong>72×72 고정 캔버스</strong>에 그렸습니다 — 반경값을 왜곡 없이 비교하기 위해서입니다.
+  실제 컨테이너 크기는 각 카드 아래에 적었습니다.</p>${specs}
   <h2>실사용 분포 <span class="tag t-fact">팩트</span></h2>
   <p>반경 사용 도형 <strong>${n(D.radius.shapes)}개</strong> 기준. 정수 반경만 집계.</p>
   <table><thead><tr><th>반경</th><th class="num">건수</th><th style="width:45%"></th><th>스케일</th></tr></thead><tbody>
