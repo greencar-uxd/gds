@@ -128,6 +128,7 @@ footer{margin-top:var(--s8);padding-top:var(--s5);border-top:1px solid var(--lin
   <div class="grp">Foundation</div>
   <a data-go="color">색</a>
   <a data-go="type">타이포그래피</a>
+  <a data-go="spacing">간격 (Spacing)</a>
   <a data-go="radius">반경 (Radius)</a>
   <a data-go="elevation">엘리베이션</a>
   <div class="grp">현황</div>
@@ -215,6 +216,17 @@ function color(){
   D.colors.forEach(c=>{const k=(c.name.split('/')[0]||'(기타)').trim()||'(기타)';(groups[k]=groups[k]||[]).push(c)});
   const hexCount = {}; D.colors.forEach(c=>hexCount[c.hex]=(hexCount[c.hex]||0)+1);
   const ordered = Object.entries(groups).sort((a,b)=>b[1].length-a[1].length);
+  const canon = (D.canon && D.canon.color) || null;
+  const canonBlock = canon ? `
+  <div class="callout ok"><h4>정본 팔레트 — Color system ✅ 페이지 <span class="tag t-fact">팩트</span></h4>
+    <p>아래 <strong>${canon.palette.length}색</strong>이 팀이 정의해 둔 기준입니다.
+    위 레거시 스타일 ${n(D.colors.length)}개와 달리, 이쪽이 정본입니다.</p>
+    <p style="margin-top:6px"><strong>Primary</strong> Red scale · <strong>Secondary</strong> Gray scale ·
+    <strong>Tertiary</strong> Navy scale (뱃지·지도 핀 등 색이 곧 정보인 요소에만 유지)</p>
+  </div>
+  <div class="sw-grid" style="margin-bottom:32px">${canon.palette.map(h=>`
+    <div class="sw"><i style="background:${h}"></i><div><b>${h}</b>
+    <span>${(D.colors.filter(c=>c.hex===h).length)}개 스타일이 사용</span></div></div>`).join('')}</div>` : '';
   return `<h1>색</h1>
   <p class="lead">원본의 <strong>FILL 스타일 전수</strong>입니다. 확정 토큰이 아니라 <strong>정리 대상 현황</strong>입니다.</p>
   <div class="kpi">
@@ -223,6 +235,8 @@ function color(){
     <div class="hot"><b>${n(D.colors.length-uniqHex.size)}</b><span>중복</span></div>
     <div><b>${ordered.length}</b><span>이름 그룹</span></div>
   </div>
+  ${canonBlock}
+  <h2>레거시 스타일 현황 — 정리 대상</h2>
   <div class="topbar"><input type="search" id="cq" placeholder="색 이름 또는 HEX 검색 (예: gray, #143C56)"><span class="grow"></span>
     <button id="cdup">중복만 보기</button></div>
   <div id="clist">${ordered.map(([g,list])=>`
@@ -261,6 +275,49 @@ function type(){
         </div>`).join('')}
         ${list.length>60?`<p style="margin-top:12px;color:var(--text3);font-size:12.5px">…외 ${list.length-60}개 (표시 상한)</p>`:''}
       </div></details>`).join('')}`;
+}
+
+
+/* ---------- 간격 ---------- */
+function spacing(){
+  const C = D.canon && D.canon.spacing;
+  if(!C || !C.scale.length) return `<h1>간격 (Spacing)</h1><p class="lead">정본 데이터가 없습니다. <code>npm run canon</code> 을 먼저 실행하세요.</p>`;
+  const conflictTokens = new Set((C.conflicts||[]).map(c=>c.token));
+  const rows = C.scale.map(s=>{
+    const bad = conflictTokens.has(s.token);
+    return `<tr>
+      <td><strong>${esc(s.token)}</strong>${bad?' <span class="pill wip">중복</span>':''}</td>
+      <td class="num">${s.px}px</td><td class="num">${esc(s.mul||'')}</td>
+      <td><div class="bar" style="width:${(s.px/52*100).toFixed(1)}%;opacity:${bad?.45:1}"></div></td>
+    </tr>`}).join('');
+  const conf = (C.conflicts||[]).map(c=>`<tr><td><strong>${esc(c.token)}</strong></td>
+    <td>${c.values.map(v=>v+'px').join(' / ')}</td></tr>`).join('');
+  return `<h1>간격 (Spacing)</h1>
+  <p class="lead">${esc(C.definition||'')}</p>
+  <div class="kpi">
+    <div><b>${C.scale.length}</b><span>스케일 단계</span></div>
+    <div><b>${new Set(C.scale.map(s=>s.token)).size}</b><span>토큰 이름</span></div>
+    <div class="${C.conflicts.length?'hot':''}"><b>${C.conflicts.length}</b><span>이름 중복</span></div>
+    <div><b>2px</b><span>기본 단위 (1 unit)</span></div>
+  </div>
+  ${C.conflicts.length?`<div class="callout danger">
+    <h4>정본 안에서 같은 토큰 이름이 두 값을 가집니다 <span class="tag t-fact">팩트</span></h4>
+    <p>px 값 자체는 <strong>0·2·4·8·12·16·20·24·28·32·40·44·48·52</strong> 로 끊김 없이 증가하는 ${C.scale.length}단계입니다.
+    그런데 <strong>토큰 이름은 ${new Set(C.scale.map(s=>s.token)).size}개뿐</strong>이라 아래 ${C.conflicts.length}개가 겹칩니다.</p>
+    <table style="margin-bottom:0"><thead><tr><th>토큰</th><th>충돌 값</th></tr></thead><tbody>${conf}</tbody></table>
+    <p style="margin-top:12px"><span class="tag t-int">해석</span> 이름 체계가 값 개수를 못 따라간 것으로 보입니다.
+    코드로 내보내는 순간 키가 덮어써지므로, <strong>토큰화 전에 반드시 정리해야 합니다.</strong></p>
+  </div>`:''}
+  <h2>정본 스케일 <span class="tag t-fact">팩트</span></h2>
+  <p>출처 — <code>${esc(C.source)}</code></p>
+  <table><thead><tr><th>토큰</th><th class="num">값</th><th class="num">배수</th><th style="width:45%"></th></tr></thead>
+  <tbody>${rows}</tbody></table>
+  <h2>실제 크기</h2>
+  <div class="elev-stage" style="justify-content:flex-start;align-items:flex-end;gap:12px">
+  ${C.scale.map(s=>`<div style="text-align:center">
+    <div style="width:${Math.max(s.px,2)}px;height:64px;background:var(--accent);border-radius:2px"></div>
+    <div style="font-size:10.5px;color:var(--text3);margin-top:6px">${s.px}</div></div>`).join('')}
+  </div>`;
 }
 
 /* ---------- 반경 ---------- */
@@ -352,7 +409,7 @@ function inventory(){
 }
 
 /* ---------- 라우팅 ---------- */
-const VIEWS = {overview,color,type,radius,elevation,inventory};
+const VIEWS = {overview,color,type,spacing,radius,elevation,inventory};
 function go(k){
   $('#view').innerHTML = VIEWS[k]();
   document.querySelectorAll('nav.side a').forEach(a=>a.classList.toggle('on',a.dataset.go===k));
