@@ -1,0 +1,554 @@
+{
+  "$description": "GDS 정본 토큰 — ✅ Foundation 페이지 기준",
+  "color": {
+    "primary-red-010": {
+      "$value": "#FBD2D3",
+      "$type": "color",
+      "$description": "Primary/Red 010"
+    },
+    "primary-red-020": {
+      "$value": "#F8A4A7",
+      "$type": "color",
+      "$description": "Primary/Red 020"
+    },
+    "primary-red-300": {
+      "$value": "#F4777C",
+      "$type": "color",
+      "$description": "Primary/Red 300"
+    },
+    "primary-red-400": {
+      "$value": "#F14950",
+      "$type": "color",
+      "$description": "Primary/Red 400"
+    },
+    "primary-red-500": {
+      "$value": "#ED1C24",
+      "$type": "color",
+      "$description": "Primary/Red 500"
+    },
+    "primary-red-060": {
+      "$value": "#BE161D",
+      "$type": "color",
+      "$description": "Primary/Red 060"
+    },
+    "primary-red-070": {
+      "$value": "#8E1116",
+      "$type": "color",
+      "$description": "Primary/Red 070"
+    },
+    "primary-red-080": {
+      "$value": "#5F0B0E",
+      "$type": "color",
+      "$description": "Primary/Red 080"
+    },
+    "primary-red-090": {
+      "$value": "#2F0607",
+      "$type": "color",
+      "$description": "Primary/Red 090"
+    },
+    "gray-scale-000": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 000"
+    },
+    "gray-scale-005": {
+      "$value": "#F8F8F8",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 005"
+    },
+    "gray-scale-010": {
+      "$value": "#F1F1F1",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 010"
+    },
+    "gray-scale-020": {
+      "$value": "#E2E2E2",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 020"
+    },
+    "gray-scale-030": {
+      "$value": "#D4D4D4",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 030"
+    },
+    "gray-scale-040": {
+      "$value": "#C5C5C5",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 040"
+    },
+    "gray-scale-050": {
+      "$value": "#B7B7B7",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 050"
+    },
+    "gray-scale-060": {
+      "$value": "#898989",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 060"
+    },
+    "gray-scale-070": {
+      "$value": "#5C5C5C",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 070"
+    },
+    "gray-scale-080": {
+      "$value": "#2F2E2E",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 080"
+    },
+    "gray-scale-100": {
+      "$value": "#000000",
+      "$type": "color",
+      "$description": "Gray Scale/Gray 100"
+    },
+    "navy-010": {
+      "$value": "#E8ECEF",
+      "$type": "color",
+      "$description": "Navy/Navy 010"
+    },
+    "navy-020": {
+      "$value": "#D0D8DD",
+      "$type": "color",
+      "$description": "Navy/Navy 020"
+    },
+    "navy-030": {
+      "$value": "#A1B1BB",
+      "$type": "color",
+      "$description": "Navy/Navy 030"
+    },
+    "navy-040": {
+      "$value": "#728A9A",
+      "$type": "color",
+      "$description": "Navy/navy 040"
+    },
+    "navy-050": {
+      "$value": "#436378",
+      "$type": "color",
+      "$description": "Navy/Navy 050"
+    },
+    "navy-060": {
+      "$value": "#0A3C5C",
+      "$type": "color",
+      "$description": "Navy/Navy 060"
+    },
+    "navy-070": {
+      "$value": "#0F2D41",
+      "$type": "color",
+      "$description": "Navy/Navy 070"
+    },
+    "navy-080": {
+      "$value": "#0A1E2B",
+      "$type": "color",
+      "$description": "Navy/Navy 080"
+    },
+    "navy-090": {
+      "$value": "#020609",
+      "$type": "color",
+      "$description": "Navy/Navy 090"
+    },
+    "navy-100": {
+      "$value": "#060809",
+      "$type": "color",
+      "$description": "Navy/Navy 100"
+    },
+    "badge-time-deal": {
+      "$value": "#FF8159",
+      "$type": "color",
+      "$description": "Badge/Time Deal"
+    },
+    "badge-bookmark": {
+      "$value": "#FED500",
+      "$type": "color",
+      "$description": "Badge/Bookmark"
+    },
+    "badge-event": {
+      "$value": "#F8679C",
+      "$type": "color",
+      "$description": "Badge/Event"
+    },
+    "badge-hot-deal": {
+      "$value": "#FD8484",
+      "$type": "color",
+      "$description": "Badge/Hot Deal"
+    },
+    "badge-new-zone": {
+      "$value": "#FD9F4D",
+      "$type": "color",
+      "$description": "Badge/New Zone"
+    },
+    "badge-new-car": {
+      "$value": "#5B68FE",
+      "$type": "color",
+      "$description": "Badge/New Car"
+    },
+    "badge-eleccar": {
+      "$value": "#A87DF9",
+      "$type": "color",
+      "$description": "Badge/Eleccar"
+    },
+    "badge-economy": {
+      "$value": "#C0C259",
+      "$type": "color",
+      "$description": "Badge/Economy"
+    },
+    "badge-clean": {
+      "$value": "#59BBF2",
+      "$type": "color",
+      "$description": "Badge/Clean"
+    },
+    "map-marker-corporation": {
+      "$value": "#005E97",
+      "$type": "color",
+      "$description": "Map Marker/Corporation"
+    },
+    "map-marker-active-line": {
+      "$value": "#A1B1BB",
+      "$type": "color",
+      "$description": "Map Marker/Active_Line"
+    },
+    "map-marker-disabled-line": {
+      "$value": "#B3BABF",
+      "$type": "color",
+      "$description": "Map Marker/Disabled Line"
+    },
+    "map-marker-disabled-text": {
+      "$value": "#BEC3C7",
+      "$type": "color",
+      "$description": "Map Marker/Disabled Text"
+    },
+    "map-marker-free-zone": {
+      "$value": "#FD8484",
+      "$type": "color",
+      "$description": "Map Marker/Free Zone"
+    },
+    "map-marker-free-zone-line": {
+      "$value": "#EB6565",
+      "$type": "color",
+      "$description": "Map Marker/Free Zone Line"
+    },
+    "brand-g-car-red": {
+      "$value": "#ED1C24",
+      "$type": "color",
+      "$description": "Brand/G car Red"
+    },
+    "brand-g-car-gray": {
+      "$value": "#3E3A39",
+      "$type": "color",
+      "$description": "Brand/G car Gray"
+    },
+    "brand-l-point": {
+      "$value": "#009BFA",
+      "$type": "color",
+      "$description": "Brand/L.POINT"
+    },
+    "brand-l-point-2": {
+      "$value": "#0079C3",
+      "$type": "color",
+      "$description": "Brand/L.POINT 2"
+    },
+    "system-alarm": {
+      "$value": "#D32828",
+      "$type": "color",
+      "$description": "System/Alarm"
+    },
+    "system-success": {
+      "$value": "#00C88C",
+      "$type": "color",
+      "$description": "System/Success"
+    },
+    "system-focus-line": {
+      "$value": "#0029FF",
+      "$type": "color",
+      "$description": "System/Focus Line"
+    },
+    "brand-t-membership": {
+      "$value": "#3617CB",
+      "$type": "color",
+      "$description": "Brand/T Membership"
+    }
+  },
+  "type": {
+    "display-1": {
+      "$value": {
+        "fontSize": "24px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Display 1"
+    },
+    "title-1": {
+      "$value": {
+        "fontSize": "24px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 1"
+    },
+    "title-2": {
+      "$value": {
+        "fontSize": "22px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 2"
+    },
+    "display-2": {
+      "$value": {
+        "fontSize": "20px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Display 2"
+    },
+    "title-3": {
+      "$value": {
+        "fontSize": "20px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 3"
+    },
+    "heading-1": {
+      "$value": {
+        "fontSize": "20px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Heading 1"
+    },
+    "title-4": {
+      "$value": {
+        "fontSize": "18px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 4"
+    },
+    "heading-2": {
+      "$value": {
+        "fontSize": "18px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Heading 2"
+    },
+    "display-3": {
+      "$value": {
+        "fontSize": "16px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Display 3"
+    },
+    "title-5": {
+      "$value": {
+        "fontSize": "16px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 5"
+    },
+    "body-1": {
+      "$value": {
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Body 1"
+    },
+    "heading-3": {
+      "$value": {
+        "fontSize": "16px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Heading 3"
+    },
+    "title-6": {
+      "$value": {
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 6"
+    },
+    "body-2": {
+      "$value": {
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Body 2"
+    },
+    "heading-4": {
+      "$value": {
+        "fontSize": "14px",
+        "fontWeight": 700,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Heading 4"
+    },
+    "caption-1": {
+      "$value": {
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Caption 1"
+    },
+    "body-3": {
+      "$value": {
+        "fontSize": "12px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Body 3"
+    },
+    "title-7": {
+      "$value": {
+        "fontSize": "12px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 7"
+    },
+    "caption-2": {
+      "$value": {
+        "fontSize": "10px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Caption 2"
+    },
+    "title-8": {
+      "$value": {
+        "fontSize": "10px",
+        "fontWeight": 500,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Title 8"
+    },
+    "body-4": {
+      "$value": {
+        "fontSize": "10px",
+        "fontWeight": 400,
+        "lineHeight": "Auto"
+      },
+      "$type": "typography",
+      "$description": "Body 4"
+    }
+  },
+  "spacing": {
+    "0": {
+      "$value": "0px",
+      "$type": "dimension"
+    },
+    "100": {
+      "$value": "2px",
+      "$type": "dimension"
+    },
+    "200": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "300": {
+      "$value": "8px",
+      "$type": "dimension"
+    },
+    "400": {
+      "$value": "12px",
+      "$type": "dimension"
+    },
+    "500": {
+      "$value": "16px",
+      "$type": "dimension"
+    },
+    "600": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "800": {
+      "$value": "32px",
+      "$type": "dimension"
+    }
+  },
+  "radius": {
+    "4": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "8": {
+      "$value": "8px",
+      "$type": "dimension"
+    },
+    "10": {
+      "$value": "10px",
+      "$type": "dimension"
+    },
+    "12": {
+      "$value": "12px",
+      "$type": "dimension"
+    },
+    "16": {
+      "$value": "16px",
+      "$type": "dimension"
+    },
+    "20": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "full": {
+      "$value": "9999px",
+      "$type": "dimension"
+    }
+  },
+  "$notes": {
+    "excluded": [
+      "elevation — 재넘버링 반영 전 · E-2 미결"
+    ],
+    "conflicts": [
+      {
+        "token": "Spacing_700",
+        "values": [
+          24,
+          28
+        ]
+      },
+      {
+        "token": "Spacing_900",
+        "values": [
+          40,
+          44
+        ]
+      },
+      {
+        "token": "Spacing_1000",
+        "values": [
+          48,
+          52
+        ]
+      }
+    ],
+    "colorKeyDuplicates": []
+  }
+}

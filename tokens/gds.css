@@ -1,0 +1,129 @@
+/* GDS — 그린카 디자인 시스템 토큰
+ * 생성: GDS(Greencar Design System).fig (export 2026-07-23)
+ * 출처: ✅ Foundation 페이지 정본. 레거시 스타일(현황)은 포함하지 않습니다.
+ * 자동 생성 파일입니다 — 직접 수정하지 마세요.
+ */
+:root {
+  /* Color */
+  --gds-color-primary-red-010: #FBD2D3;
+  --gds-color-primary-red-020: #F8A4A7;
+  --gds-color-primary-red-300: #F4777C;
+  --gds-color-primary-red-400: #F14950;
+  --gds-color-primary-red-500: #ED1C24;
+  --gds-color-primary-red-060: #BE161D;
+  --gds-color-primary-red-070: #8E1116;
+  --gds-color-primary-red-080: #5F0B0E;
+  --gds-color-primary-red-090: #2F0607;
+  --gds-color-gray-scale-000: #FFFFFF;
+  --gds-color-gray-scale-005: #F8F8F8;
+  --gds-color-gray-scale-010: #F1F1F1;
+  --gds-color-gray-scale-020: #E2E2E2;
+  --gds-color-gray-scale-030: #D4D4D4;
+  --gds-color-gray-scale-040: #C5C5C5;
+  --gds-color-gray-scale-050: #B7B7B7;
+  --gds-color-gray-scale-060: #898989;
+  --gds-color-gray-scale-070: #5C5C5C;
+  --gds-color-gray-scale-080: #2F2E2E;
+  --gds-color-gray-scale-100: #000000;
+  --gds-color-navy-010: #E8ECEF;
+  --gds-color-navy-020: #D0D8DD;
+  --gds-color-navy-030: #A1B1BB;
+  --gds-color-navy-040: #728A9A;
+  --gds-color-navy-050: #436378;
+  --gds-color-navy-060: #0A3C5C;
+  --gds-color-navy-070: #0F2D41;
+  --gds-color-navy-080: #0A1E2B;
+  --gds-color-navy-090: #020609;
+  --gds-color-navy-100: #060809;
+  --gds-color-badge-time-deal: #FF8159;
+  --gds-color-badge-bookmark: #FED500;
+  --gds-color-badge-event: #F8679C;
+  --gds-color-badge-hot-deal: #FD8484;
+  --gds-color-badge-new-zone: #FD9F4D;
+  --gds-color-badge-new-car: #5B68FE;
+  --gds-color-badge-eleccar: #A87DF9;
+  --gds-color-badge-economy: #C0C259;
+  --gds-color-badge-clean: #59BBF2;
+  --gds-color-map-marker-corporation: #005E97;
+  --gds-color-map-marker-active-line: #A1B1BB;
+  --gds-color-map-marker-disabled-line: #B3BABF;
+  --gds-color-map-marker-disabled-text: #BEC3C7;
+  --gds-color-map-marker-free-zone: #FD8484;
+  --gds-color-map-marker-free-zone-line: #EB6565;
+  --gds-color-brand-g-car-red: #ED1C24;
+  --gds-color-brand-g-car-gray: #3E3A39;
+  --gds-color-brand-l-point: #009BFA;
+  --gds-color-brand-l-point-2: #0079C3;
+  --gds-color-system-alarm: #D32828;
+  --gds-color-system-success: #00C88C;
+  --gds-color-system-focus-line: #0029FF;
+  --gds-color-brand-t-membership: #3617CB;
+
+  /* Typography */
+  --gds-type-display-1-size: 24px;
+  --gds-type-display-1-weight: 700;
+  --gds-type-title-1-size: 24px;
+  --gds-type-title-1-weight: 500;
+  --gds-type-title-2-size: 22px;
+  --gds-type-title-2-weight: 500;
+  --gds-type-display-2-size: 20px;
+  --gds-type-display-2-weight: 700;
+  --gds-type-title-3-size: 20px;
+  --gds-type-title-3-weight: 500;
+  --gds-type-heading-1-size: 20px;
+  --gds-type-heading-1-weight: 700;
+  --gds-type-title-4-size: 18px;
+  --gds-type-title-4-weight: 500;
+  --gds-type-heading-2-size: 18px;
+  --gds-type-heading-2-weight: 700;
+  --gds-type-display-3-size: 16px;
+  --gds-type-display-3-weight: 700;
+  --gds-type-title-5-size: 16px;
+  --gds-type-title-5-weight: 500;
+  --gds-type-body-1-size: 16px;
+  --gds-type-body-1-weight: 400;
+  --gds-type-heading-3-size: 16px;
+  --gds-type-heading-3-weight: 700;
+  --gds-type-title-6-size: 14px;
+  --gds-type-title-6-weight: 500;
+  --gds-type-body-2-size: 14px;
+  --gds-type-body-2-weight: 400;
+  --gds-type-heading-4-size: 14px;
+  --gds-type-heading-4-weight: 700;
+  --gds-type-caption-1-size: 12px;
+  --gds-type-caption-1-weight: 400;
+  --gds-type-body-3-size: 12px;
+  --gds-type-body-3-weight: 400;
+  --gds-type-title-7-size: 12px;
+  --gds-type-title-7-weight: 500;
+  --gds-type-caption-2-size: 10px;
+  --gds-type-caption-2-weight: 400;
+  --gds-type-title-8-size: 10px;
+  --gds-type-title-8-weight: 500;
+  --gds-type-body-4-size: 10px;
+  --gds-type-body-4-weight: 400;
+
+  /* Spacing */
+  --gds-spacing-0: 0px;
+  --gds-spacing-100: 2px;
+  --gds-spacing-200: 4px;
+  --gds-spacing-300: 8px;
+  --gds-spacing-400: 12px;
+  --gds-spacing-500: 16px;
+  --gds-spacing-600: 20px;
+  /* ⚠ Spacing_700: 24px / 28px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
+  --gds-spacing-800: 32px;
+  /* ⚠ Spacing_900: 40px / 44px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
+  /* ⚠ Spacing_1000: 48px / 52px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
+
+  /* Radius */
+  --gds-radius-4: 4px;
+  --gds-radius-8: 8px;
+  --gds-radius-10: 10px;
+  --gds-radius-12: 12px;
+  --gds-radius-16: 16px;
+  --gds-radius-20: 20px;
+  --gds-radius-full: 9999px;
+
+  /* Elevation — 재넘버링 반영 전이고 E-2(그림자 불투명도) 미결이라 출력하지 않습니다 */
+}
