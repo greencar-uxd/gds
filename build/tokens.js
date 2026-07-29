@@ -43,6 +43,12 @@ const radius = [
   { key: 'full', px: 9999 },
 ];
 
+// ---------- 엘리베이션 ----------
+const E = C.elevation;
+const shadowCss = st => st.layers
+  .map(l => `${l.x}px ${l.y}px ${l.blur}px ${l.spread}px rgba(0,0,0,${l.alpha})`).join(', ');
+const elevation = E ? E.scale.map(st => ({ key: st.name.replace(/^Elevation_/, ''), name: st.name, was: st.was, value: shadowCss(st), layers: st.layers })) : [];
+
 const HEAD = `/* GDS — 그린카 디자인 시스템 토큰
  * 생성: ${D.meta.source} (export ${String(D.meta.exported).slice(0, 10)})
  * 출처: ✅ Foundation 페이지 정본. 레거시 스타일(현황)은 포함하지 않습니다.
@@ -71,7 +77,14 @@ for (const s of spacing) {
 }
 css += '\n  /* Radius */\n';
 for (const r of radius) css += `  --gds-radius-${r.key}: ${r.px === 9999 ? '9999px' : r.px + 'px'};\n`;
-css += `\n  /* Elevation — 재넘버링 반영 전이고 E-2(그림자 불투명도) 미결이라 출력하지 않습니다 */\n}\n`;
+css += '\n  /* Elevation */\n';
+if (elevation.length) {
+  css += `  /* ${E.renumbered ? '재넘버링 반영됨 — 구 1~5 → 2~6, 신규 1 추가' : ''} */\n`;
+  for (const e of elevation) css += `  --gds-elevation-${e.key}: ${e.value};${e.was ? `  /* 구 ${e.was} */` : '  /* 신규 */'}\n`;
+} else {
+  css += '  /* 데이터 없음 */\n';
+}
+css += '}\n';
 
 // ---------- SCSS ----------
 let scss = HEAD + '\n';
@@ -82,13 +95,16 @@ scss += '\n';
 for (const s of spacing) if (!s.conflict) scss += `$gds-spacing-${slug(s.token).replace(/^spacing-/, '')}: ${s.px}px;\n`;
 scss += '\n';
 for (const r of radius) scss += `$gds-radius-${r.key}: ${r.px === 9999 ? '9999px' : r.px + 'px'};\n`;
+scss += '\n';
+for (const e of elevation) scss += `$gds-elevation-${e.key}: ${e.value};\n`;
 
 // ---------- JSON (DTCG 형태) ----------
 const json = {
   $description: 'GDS 정본 토큰 — ✅ Foundation 페이지 기준',
-  color: {}, type: {}, spacing: {}, radius: {},
+  color: {}, type: {}, spacing: {}, radius: {}, elevation: {},
   $notes: {
-    excluded: ['elevation — 재넘버링 반영 전 · E-2 미결'],
+    excluded: [],
+    elevationRenumbered: E ? E.renumbered : false,
     conflicts: C.spacing.conflicts || [],
     colorKeyDuplicates: [...new Set(colorDupKeys)],
   },
@@ -97,6 +113,7 @@ for (const c of colors) json.color[c.key] = { $value: c.hex, $type: 'color', $de
 for (const t of types) json.type[t.key] = { $value: { fontSize: `${t.size}px`, fontWeight: t.weight, lineHeight: t.lineHeight }, $type: 'typography', $description: t.token };
 for (const s of spacing) if (!s.conflict) json.spacing[slug(s.token).replace(/^spacing-/, '')] = { $value: `${s.px}px`, $type: 'dimension' };
 for (const r of radius) json.radius[r.key] = { $value: r.px === 9999 ? '9999px' : `${r.px}px`, $type: 'dimension' };
+for (const e of elevation) json.elevation[e.key] = { $value: e.value, $type: 'shadow', $description: e.was ? `구 ${e.was}` : '신규' };
 
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'gds.css'), css);
@@ -104,7 +121,7 @@ fs.writeFileSync(path.join(OUT, 'gds.scss'), scss);
 fs.writeFileSync(path.join(OUT, 'gds.tokens.json'), JSON.stringify(json, null, 2));
 
 console.log(`토큰 생성 → dist/tokens/`);
-console.log(`  색 ${colors.length} · 타이포 ${types.length} · 간격 ${spacing.filter(s => !s.conflict).length}(충돌 ${spacing.filter(s => s.conflict).length} 제외) · 반경 ${radius.length}`);
+console.log(`  색 ${colors.length} · 타이포 ${types.length} · 간격 ${spacing.filter(s => !s.conflict).length}(충돌 ${spacing.filter(s => s.conflict).length} 제외) · 반경 ${radius.length} · 엘리베이션 ${elevation.length}`);
 if (colorDupKeys.length) console.log(`  ⚠ 색 키 중복 ${new Set(colorDupKeys).size}종 — 원본 스타일명 정리 필요`);
 
-module.exports = { colors, types, spacing, radius, colorDupKeys };
+module.exports = { colors, types, spacing, radius, elevation, colorDupKeys };

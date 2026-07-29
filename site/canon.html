@@ -93,6 +93,13 @@ p{margin:0 0 var(--s4)}
 .sprow.bad .tok{color:var(--warn)}
 
 /* ── 반경 ── */
+.elevgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:var(--s5);margin-top:var(--s5)}
+.elevcard{background:var(--bg);border-radius:14px;padding:var(--s5);border:1px solid rgba(128,128,128,.10)}
+.elevcard .nm{font-size:14px;font-weight:700;margin-bottom:3px}
+.elevcard .meta{font-size:11.5px;color:var(--text3);font-family:ui-monospace,Menlo,monospace;line-height:1.6;word-break:break-all}
+.elevcard .badge{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:99px;
+  background:var(--brand-soft);color:var(--brand);margin-left:6px;vertical-align:2px}
+.elevstage{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s7) var(--s5)}
 .radgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:var(--s4)}
 .rad{border:1px solid var(--line);border-radius:11px;padding:var(--s5);text-align:center;background:var(--surface)}
 .rad .box{width:96px;height:96px;background:var(--brand);margin:0 auto var(--s3)}
@@ -143,6 +150,7 @@ footer{border-top:1px solid var(--line);padding-top:var(--s5);margin-top:var(--s
   <a class="item" data-go="type">타이포그래피</a>
   <a class="item" data-go="space">간격</a>
   <a class="item" data-go="radius">반경</a>
+  <a class="item" data-go="elev">엘리베이션</a>
   <div class="navgrp">참고</div>
   <a class="item" data-go="status">진행 상태</a>
 </nav>
@@ -200,6 +208,7 @@ function start(){
     <div><b>${TYPES.length}</b><span>타입 스케일</span></div>
     <div><b>${SPACE.length}</b><span>간격 단계</span></div>
     <div><b>${RADIUS.length+1}</b><span>반경 단계</span></div>
+    <div><b>${(C.elevation&&C.elevation.scale.length)||0}</b><span>엘리베이션</span></div>
   </div>
   <h2>토큰 내려받기</h2>
   <div class="dl">
@@ -221,12 +230,14 @@ function start(){
   <pre><code>--gds-color-{그룹}-{이름}     예) --gds-color-gray-scale-020
 --gds-type-{토큰}-size|weight  예) --gds-type-title-3-size
 --gds-spacing-{단계}           예) --gds-spacing-500
---gds-radius-{값}              예) --gds-radius-12 · --gds-radius-full</code></pre>
+--gds-radius-{값}              예) --gds-radius-12 · --gds-radius-full
+--gds-elevation-{단계}         예) --gds-elevation-3</code></pre>
   ${conflicts?`<div class="note warn"><p><b>일부 간격 토큰은 아직 내보내지 않습니다.</b>
   같은 이름이 두 값을 가지고 있어 어느 쪽이 옳은지 판단할 수 없습니다 — ${conflicts}건.
   <a href="#" data-go="space" style="color:var(--brand);font-weight:600">간격 문서</a>에 상세를 적었습니다.</p></div>`:''}
-  <div class="note"><p><b>엘리베이션(그림자)은 아직 포함되지 않았습니다.</b>
-  Figma에서 단계가 재넘버링되었고 불투명도 기준이 확정되지 않아, 확정 후 추가합니다.</p></div>
+  <div class="note"><p><b>엘리베이션 단계가 재배치되었습니다.</b>
+  기존 1~5단계가 2~6단계로 밀리고 1단계가 새로 생겼습니다 —
+  <a href="#" data-go="elev" style="color:var(--brand);font-weight:600">엘리베이션 문서</a>에 대조표를 실었습니다.</p></div>
   ${footer()}`;
 }
 
@@ -314,6 +325,41 @@ function radius(){
   ${footer()}`;
 }
 
+
+/* ───────── 엘리베이션 ───────── */
+function elev(){
+  const E=C.elevation;
+  if(!E||!E.scale.length) return `<h1>엘리베이션</h1><p class="lead">데이터가 없습니다.</p>${footer()}`;
+  const sh=st=>st.layers.map(l=>`${l.x}px ${l.y}px ${l.blur}px ${l.spread}px rgba(0,0,0,${l.alpha})`).join(', ');
+  return `<p class="eyebrow">Foundation</p><h1>엘리베이션</h1>
+  <p class="lead">그림자로 표면의 높이를 표현합니다. ${E.scale.length}단계이며,
+  1단계를 제외한 나머지는 <b>넓게 퍼지는 그림자(15%)와 좁고 진한 그림자(30%)를 겹친 2겹 구조</b>입니다.</p>
+  ${E.renumbered?`<div class="note"><p><b>단계가 재배치되었습니다.</b>
+    기존 1~5단계가 <b>2~6단계로 밀리고</b>, 1단계가 새로 생겼습니다.
+    아래 각 카드에 이전 이름을 함께 적었습니다 — 기존 화면을 옮길 때 참고하세요.</p></div>`:''}
+  <div class="elevstage">
+    <div class="elevgrid">
+    ${E.scale.map(st=>`<div class="elevcard" style="box-shadow:${sh(st)}" data-copy="--gds-elevation-${st.name.replace(/^Elevation_/,'')}">
+      <div class="nm">${esc(st.name)}${st.was?'':'<span class="badge">신규</span>'}</div>
+      <div class="meta">${st.was?('구 '+esc(st.was)):'새로 추가됨'}<br>
+      ${st.layers.map(l=>`Y${l.y} blur${l.blur} spread${l.spread} · ${Math.round(l.alpha*100)}%`).join('<br>')}</div>
+    </div>`).join('')}
+    </div>
+  </div>
+  <h3>이름 변경 대조</h3>
+  <div style="margin-top:12px">
+  ${E.scale.map(st=>`<div class="sprow" style="grid-template-columns:150px 24px 150px 1fr">
+    <div class="tok">${st.was?esc(st.was):'—'}</div><div style="text-align:center;color:var(--text3)">→</div>
+    <div class="tok" style="font-weight:700">${esc(st.name)}</div>
+    <div class="muted">${st.was?'값 유지':'신규 추가 · 가장 낮은 단계'}</div>
+  </div>`).join('')}</div>
+  <div class="note warn"><p><b>확인이 남은 것</b> — 신규 1단계가 1겹인지 2겹인지는 속성 패널 화면 한 장으로 확인한 것이라
+  두 번째 레이어가 있을 가능성을 배제하지 못했습니다. 2~6단계 값은 재넘버링 전 값이 그대로 밀린 것으로 보고 있습니다.
+  <code>.fig</code>를 새로 내려받아 <code>npm run extract</code>를 돌리면 원본 값으로 자동 대체됩니다.</p></div>
+  <p class="muted" style="margin-top:24px">카드를 누르면 변수명이 복사됩니다. 출처 — ${esc(E.source||'')}</p>
+  ${footer()}`;
+}
+
 /* ───────── 진행 상태 ───────── */
 function status(){
   const rows=[
@@ -321,7 +367,7 @@ function status(){
     ['타이포그래피',`${TYPES.length}단계`,'ok','정본 확보'],
     ['간격',`${SPACE.length}단계`,'warn',`토큰명 중복 ${(C.spacing.conflicts||[]).length}건 — 해당 토큰 미출력`],
     ['반경','7단계 · 상한 20px','ok','R-3 확정 반영'],
-    ['엘리베이션','—','warn','재넘버링 반영 전 · 불투명도 기준 미확정'],
+    ['엘리베이션','6단계 · 재넘버링 반영','ok','1단계 레이어 수만 재확인 필요'],
     ['컴포넌트','—','wait','Foundation 안정화 후'],
   ];
   const badge=s=>s==='ok'?'<span style="color:var(--ok);font-weight:700">준비됨</span>'
@@ -352,7 +398,7 @@ function footer(){
 }
 
 /* ───────── 라우팅 ───────── */
-const V={start,color,type,space,radius,status};
+const V={start,color,type,space,radius,elev,status};
 function go(k){
   $('#view').innerHTML=V[k]();
   document.querySelectorAll('nav.side a.item').forEach(a=>a.classList.toggle('on',a.dataset.go===k));

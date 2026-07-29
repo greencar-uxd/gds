@@ -39,8 +39,9 @@ ok('모든 타이포에 이름', D.types.every(t => typeof t.name === 'string' &
 console.log('\n[2] 확정 결정 (2026-07-28 회의)');
 const elev = D.effects.filter(e => /^elevation/i.test(e.name));
 ok('Elevation 스타일 존재', elev.length > 0, `${elev.length}개`);
-ok('Elevation 은 전부 2겹 구조', elev.every(e => e.layers.length >= 2),
-  elev.filter(e => e.layers.length < 2).map(e => e.name).join(', '));
+// 재넘버링 후 1단계는 1겹이므로, 2단계 이상만 2겹인지 봅니다
+const eScale = ((D.canon||{}).elevation||{}).scale || [];
+ok('엘리베이션 2~6단계는 2겹 구조', eScale.filter(s=>s.was).every(s=>s.layers.length>=2));
 
 // R-3: 정본 스케일 안에 20 이 포함되어야 함 (상한 20px)
 const SCALE = [4, 8, 10, 12, 16, 20];
@@ -94,7 +95,9 @@ if (fs.existsSync(cssPath)) {
     const key = t.toLowerCase().replace('spacing_','');
     ok(`충돌 토큰 ${t} 미출력`, !new RegExp(`^\\s*--gds-spacing-${key}:`,'m').test(css));
   }
-  ok('엘리베이션 토큰 미출력 (미확정)', !/--gds-elevation/.test(css));
+  ok('엘리베이션 토큰 출력됨', /--gds-elevation-1:/.test(css) && /--gds-elevation-6:/.test(css));
+  ok('엘리베이션 6단계', ((canon.elevation||{}).scale||[]).length === 6, String(((canon.elevation||{}).scale||[]).length));
+  ok('재넘버링 반영 표시', !!(canon.elevation && canon.elevation.renumbered));
 }
 ok('dist/diagnostics.html 분리 생성', fs.existsSync(path.join(ROOT,'dist','diagnostics.html')));
 

@@ -186,7 +186,28 @@ const canonStyles = [];
   }
 }
 
+
+// ---------- Elevation ----------
+// 07-23 스냅샷 이후 Figma 에서 재넘버링됨 (구 1~5 → 2~6, 신규 1 추가).
+// data/elevation-override.json 이 있으면 그것을 정본으로 씁니다.
+// .fig 를 새로 내려받아 npm run extract 를 돌리면 override 를 지우고 원본 값을 쓰면 됩니다.
+let elevation = null;
+{
+  const ovPath = path.join(ROOT, 'data', 'elevation-override.json');
+  if (fs.existsSync(ovPath)) {
+    const ov = JSON.parse(fs.readFileSync(ovPath, 'utf8'));
+    elevation = {
+      source: ov._source,
+      note: ov._note,
+      renumbered: !!ov.renumbered,
+      confidence: ov._confidence,
+      scale: ov.styles,
+    };
+  }
+}
+
 const canon = {
+  elevation,
   typography: {
     scale: typo,
     conflicts: typoConflicts,
@@ -220,5 +241,6 @@ console.log('=== Spacing 정본 ===');
 canon.spacing.scale.forEach(s => console.log(`  ${s.token.padEnd(14)} ${String(s.px + 'px').padStart(6)}  ${s.mul || ''}`));
 console.log(`\n토큰명 충돌 ${spacingConflicts.length}건`);
 spacingConflicts.forEach(c => console.log(`  ${c.token}: ${c.values.join('px / ')}px`));
+if (elevation) console.log(`\n=== Elevation ===\n  ${elevation.scale.length}단계 (재넘버링 반영: ${elevation.renumbered ? '예' : '아니오'})`);
 console.log(`\n=== Color 정본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개 · 참조 스타일 ${canonStyles.length}개`);
 console.log(`\ndata/foundation-data.json 에 canon 블록 병합 완료`);

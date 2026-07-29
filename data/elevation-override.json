@@ -1,0 +1,56 @@
+{
+  "_source": "강민관 확인 · 2026-07-29",
+  "_note": "07-23 .fig 스냅샷 이후 Figma에서 재넘버링됨. 기존 Elevation_1~5 → 2~6 으로 밀리고, Elevation_1 이 신규 생성됨. 다음 .fig export 시 tools/figdec/foundation.js 결과가 이 파일을 대체합니다.",
+  "_confidence": {
+    "renumbering": "팩트 — 강민관 확인",
+    "elevation_1_values": "팩트 — 속성 패널 스크린샷 (X0 Y1 blur2 spread0 #000000 15%)",
+    "elevation_1_layer_count": "미확인 — 스크린샷에 한 레이어만 보였음. 2겹일 가능성 배제 못 함",
+    "elevation_2_6_values": "추론 — 07-23 스냅샷 값이 그대로 밀렸다고 가정. 재export 전까지 미확인"
+  },
+  "renumbered": true,
+  "styles": [
+    {
+      "name": "Elevation_1",
+      "status": "신규",
+      "was": null,
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.15 }
+      ]
+    },
+    {
+      "name": "Elevation_2", "status": "이동", "was": "Elevation_1",
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 3, "spread": 1, "hex": "#000000", "alpha": 0.15 },
+        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+      ]
+    },
+    {
+      "name": "Elevation_3", "status": "이동", "was": "Elevation_2",
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 2, "blur": 6, "spread": 2, "hex": "#000000", "alpha": 0.15 },
+        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+      ]
+    },
+    {
+      "name": "Elevation_4", "status": "이동", "was": "Elevation_3",
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 4, "blur": 8, "spread": 3, "hex": "#000000", "alpha": 0.15 },
+        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 3, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+      ]
+    },
+    {
+      "name": "Elevation_5", "status": "이동", "was": "Elevation_4",
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 6, "blur": 10, "spread": 4, "hex": "#000000", "alpha": 0.15 },
+        { "type": "DROP_SHADOW", "x": 0, "y": 2, "blur": 3, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+      ]
+    },
+    {
+      "name": "Elevation_6", "status": "이동", "was": "Elevation_5",
+      "layers": [
+        { "type": "DROP_SHADOW", "x": 0, "y": 8, "blur": 12, "spread": 6, "hex": "#000000", "alpha": 0.15 },
+        { "type": "DROP_SHADOW", "x": 0, "y": 4, "blur": 4, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+      ]
+    }
+  ]
+}
