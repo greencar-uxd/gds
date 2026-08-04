@@ -111,10 +111,13 @@
   --gds-spacing-400: 12px;
   --gds-spacing-500: 16px;
   --gds-spacing-600: 20px;
-  /* ⚠ Spacing_700: 24px / 28px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
-  --gds-spacing-800: 32px;
-  /* ⚠ Spacing_900: 40px / 44px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
-  /* ⚠ Spacing_1000: 48px / 52px — 같은 이름이 두 값을 가져 어느 쪽이 옳은지 판단 불가. 이름 정리 후 출력합니다. */
+  --gds-spacing-700: 24px;
+  --gds-spacing-800: 28px;
+  --gds-spacing-900: 32px;
+  --gds-spacing-1000: 40px;
+  --gds-spacing-1100: 44px;
+  --gds-spacing-1200: 48px;
+  --gds-spacing-1300: 52px;
 
   /* Radius */
   --gds-radius-4: 4px;

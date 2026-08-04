@@ -487,8 +487,32 @@
       "$value": "20px",
       "$type": "dimension"
     },
+    "700": {
+      "$value": "24px",
+      "$type": "dimension"
+    },
     "800": {
+      "$value": "28px",
+      "$type": "dimension"
+    },
+    "900": {
       "$value": "32px",
+      "$type": "dimension"
+    },
+    "1000": {
+      "$value": "40px",
+      "$type": "dimension"
+    },
+    "1100": {
+      "$value": "44px",
+      "$type": "dimension"
+    },
+    "1200": {
+      "$value": "48px",
+      "$type": "dimension"
+    },
+    "1300": {
+      "$value": "52px",
       "$type": "dimension"
     }
   },
@@ -557,29 +581,7 @@
   "$notes": {
     "excluded": [],
     "elevationRenumbered": true,
-    "conflicts": [
-      {
-        "token": "Spacing_700",
-        "values": [
-          24,
-          28
-        ]
-      },
-      {
-        "token": "Spacing_900",
-        "values": [
-          40,
-          44
-        ]
-      },
-      {
-        "token": "Spacing_1000",
-        "values": [
-          48,
-          52
-        ]
-      }
-    ],
+    "conflicts": [],
     "colorKeyDuplicates": []
   }
 }
