@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>햅틱 — GDS 그린카 디자인 시스템</title>
+<style>
+:root{
+  --bg:#fff; --surface:#fafafa; --surface2:#f2f3f4; --line:#e6e8ea; --line-soft:#f0f1f2;
+  --text:#111315; --text2:#5f666d; --text3:#949a9f;
+  --brand:#ED1C24; --brand-soft:#FBD2D3; --ok:#00C88C; --warn:#FF8159;
+  --nav:264px; --maxw:1080px;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:104px;
+}
+[data-theme=dark]{
+  --bg:#0d0e10; --surface:#151719; --surface2:#1d2023; --line:#26292d; --line-soft:#1c1f22;
+  --text:#f0f2f4; --text2:#9aa2a9; --text3:#6b7278; --brand:#F4777C; --brand-soft:#3a1214;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+a{color:inherit;text-decoration:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85em;
+  background:var(--surface2);padding:2px 6px;border-radius:5px}
+.shell{display:flex;min-height:100vh}
+nav.side{width:var(--nav);flex:0 0 var(--nav);border-right:1px solid var(--line);
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:var(--s6) 0;background:var(--bg)}
+.brand{padding:0 var(--s6) var(--s5)}
+.brand .logo{display:flex;align-items:center;gap:9px;margin-bottom:5px}
+.brand .dot{width:11px;height:11px;border-radius:99px;background:var(--brand)}
+.brand b{font-size:19px;font-weight:800;letter-spacing:-.03em}
+.brand span{font-size:12px;color:var(--text3);display:block;padding-left:20px}
+.navgrp{padding:var(--s5) var(--s6) var(--s1);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text3);font-weight:700}
+nav.side a.item{display:block;padding:7px var(--s6);color:var(--text2);font-size:14.5px;
+  border-left:2px solid transparent;transition:.12s}
+nav.side a.item:hover{color:var(--text);background:var(--surface)}
+nav.side a.item.on{color:var(--brand);border-left-color:var(--brand);font-weight:600;background:var(--surface)}
+main{flex:1;min-width:0}
+.inner{max-width:var(--maxw);padding:var(--s8) var(--s7) var(--s9)}
+@media(max-width:900px){.shell{flex-direction:column}nav.side{width:100%;position:static;height:auto;flex:none}
+  .inner{padding:var(--s6) var(--s5) var(--s8)}}
+.bar{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) var(--s7);
+  border-bottom:1px solid var(--line-soft);position:sticky;top:0;background:var(--bg);z-index:9}
+.bar .grow{flex:1}
+button{font:inherit;font-size:13px;color:var(--text2);background:transparent;border:1px solid var(--line);
+  border-radius:7px;padding:5px 11px;cursor:pointer}
+button:hover{color:var(--text);background:var(--surface)}
+h1{font-size:40px;font-weight:800;letter-spacing:-.035em;margin:0 0 var(--s3);line-height:1.2}
+h2{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:var(--s8) 0 var(--s4)}
+h3{font-size:15px;font-weight:700;margin:var(--s6) 0 var(--s3)}
+p{margin:0 0 var(--s4)}
+.lead{font-size:17px;color:var(--text2);margin-bottom:var(--s6);max-width:62ch;line-height:1.65}
+.muted{color:var(--text2);font-size:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:var(--s3)}
+.note{border:1px solid var(--line);border-left:3px solid var(--brand);background:var(--surface);
+  border-radius:9px;padding:var(--s4) var(--s5);margin:var(--s5) 0;font-size:14px}
+.note.warn{border-left-color:var(--warn)}
+.note p:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;margin:var(--s3) 0 var(--s5);font-size:13.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-weight:600;color:var(--text2);font-size:11.5px;letter-spacing:.03em;
+  text-transform:uppercase;background:var(--surface)}
+.pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:99px;
+  border:1px solid var(--line);color:var(--text3)}
+.pill.todo{border-color:var(--warn);color:var(--warn)}
+.checklist{list-style:none;padding:0;margin:var(--s3) 0 var(--s5)}
+.checklist li{padding:10px 0 10px 30px;border-bottom:1px solid var(--line-soft);position:relative}
+.checklist li::before{content:"";position:absolute;left:2px;top:15px;width:14px;height:14px;
+  border:1.5px solid var(--text3);border-radius:4px}
+.checklist li b{font-weight:700}
+.checklist li span{display:block;font-size:13px;color:var(--text3);margin-top:2px}
+footer{border-top:1px solid var(--line);padding-top:var(--s5);margin-top:var(--s9);
+  font-size:12.5px;color:var(--text3);line-height:1.8}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="side">
+  <div class="brand">
+    <a href="../"><div class="logo"><i class="dot"></i><b>GDS</b></div></a>
+    <span>그린카 디자인 시스템</span>
+  </div>
+  <div class="navgrp">시작</div>
+  <a class="item" href="../">개요 · 사용법</a>
+  <div class="navgrp">Foundation</div>
+  <a class="item" href="../">색</a>
+  <a class="item" href="../">타이포그래피</a>
+  <a class="item" href="../">간격</a>
+  <a class="item" href="../">반경</a>
+  <a class="item" href="../">엘리베이션</a>
+  <div class="navgrp">확장</div>
+  <a class="item on" href="./">햅틱</a>
+</nav>
+<main>
+  <div class="bar"><span class="grow"></span><button id="theme">다크</button></div>
+  <div class="inner">
+    <p class="eyebrow">확장 · 작성 전</p>
+    <h1>햅틱</h1>
+    <p class="lead">진동 피드백을 언제·얼마나 쓸지에 대한 기준입니다.
+    아직 정의되지 않았습니다 — 이 페이지는 <strong>무엇을 정해야 하는지</strong>를 담고 있습니다.</p>
+
+    <div class="note warn">
+      <p><strong>Figma에 햅틱 페이지가 아직 없습니다.</strong>
+      원본(2026-07-30 기준 62페이지)을 전수 조회했지만 haptic·햅틱·진동 관련 정의가 확인되지 않았습니다.
+      따라서 아래 내용은 <strong>측정값이 아니라 정해야 할 항목의 목록</strong>입니다.</p>
+    </div>
+
+    <h2>정해야 할 것</h2>
+    <ul class="checklist">
+      <li><b>패턴 정의</b>
+        <span>어떤 종류의 피드백을 몇 개로 나눌지. 선택 / 성공 / 경고 / 오류 / 임팩트 강약 등</span></li>
+      <li><b>사용 시점</b>
+        <span>어떤 인터랙션에 붙일지. 예약 완료 · 스마트키 잠금·해제 · 결제 · 오류 등 GDS 컴포넌트와의 대응</span></li>
+      <li><b>플랫폼 매핑</b>
+        <span>같은 패턴을 iOS와 Android에서 각각 무엇으로 구현할지. 두 OS의 API 체계가 다릅니다</span></li>
+      <li><b>강도 · 지속시간</b>
+        <span>단계별 수치. 이게 정해져야 토큰으로 내보낼 수 있습니다</span></li>
+      <li><b>접근성 · 사용자 설정</b>
+        <span>시스템 햅틱을 끈 사용자, 저전력 모드, 운전 중 상황을 어떻게 다룰지</span></li>
+      <li><b>남용 방지 기준</b>
+        <span>연속 진동 제한, 스크롤·리스트처럼 반복되는 동작에서의 금지 규칙</span></li>
+    </ul>
+
+    <h2>플랫폼 API — 참고</h2>
+    <p class="muted">패턴을 정의할 때 각 OS가 제공하는 기본 단위를 알고 있어야 합니다.
+    아래는 GDS 결정이 아니라 <strong>OS가 제공하는 것</strong>입니다.</p>
+    <table>
+      <thead><tr><th>구분</th><th>iOS</th><th>Android</th></tr></thead>
+      <tbody>
+        <tr><td>선택 변경</td><td><code>UISelectionFeedbackGenerator</code></td>
+            <td><code>HapticFeedbackConstants.CLOCK_TICK</code></td></tr>
+        <tr><td>결과 알림</td><td><code>UINotificationFeedbackGenerator</code><br>success / warning / error</td>
+            <td><code>HapticFeedbackConstants.CONFIRM</code> / <code>REJECT</code></td></tr>
+        <tr><td>충격 강도</td><td><code>UIImpactFeedbackGenerator</code><br>light / medium / heavy / soft / rigid</td>
+            <td><code>VibrationEffect.createPredefined</code><br><code>Composition</code> (강도 지정 가능)</td></tr>
+        <tr><td>사용자 정의</td><td>Core Haptics (<code>.ahap</code>)</td>
+            <td><code>VibrationEffect.createWaveform</code></td></tr>
+      </tbody>
+    </table>
+    <p class="muted">두 OS의 단계 구분이 1:1로 맞지 않습니다. <strong>GDS 패턴을 먼저 정하고 각 OS 값을 매핑</strong>하는 순서여야 하며,
+    반대로 하면 한쪽에 종속됩니다.</p>
+
+    <h2>토큰으로 나가는 형태 <span class="pill todo">미정</span></h2>
+    <p>패턴과 수치가 정해지면 다른 Foundation 축과 같은 방식으로 내보냅니다.</p>
+    <table>
+      <thead><tr><th>예시 키</th><th>값</th></tr></thead>
+      <tbody>
+        <tr><td><code>--gds-haptic-selection</code></td><td class="muted">미정</td></tr>
+        <tr><td><code>--gds-haptic-success</code></td><td class="muted">미정</td></tr>
+        <tr><td><code>--gds-haptic-error</code></td><td class="muted">미정</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">CSS 변수로는 진동을 표현할 수 없으므로 실제로는 <code>gds.tokens.json</code>에만 실리고,
+    앱은 거기서 읽어 각 OS API로 변환합니다 <span class="pill">설계 제안</span>.</p>
+
+    <div class="note">
+      <p><strong>다음 단계</strong> — Figma에 <code>Haptic system (햅틱 시스템) 🚧</code> 페이지를 만들고
+      패턴·수치를 정의하면, 다른 축과 동일하게 <code>npm run canon</code>이 자동으로 읽어갑니다.
+      그 전까지 이 페이지는 결정 목록으로 유지됩니다.</p>
+    </div>
+
+    <footer>
+      GDS 그린카 디자인 시스템 · <a href="../" style="color:var(--brand)">Foundation으로 돌아가기</a><br>
+      이 페이지의 표는 OS 공식 API 목록이며, GDS의 확정 결정이 아닙니다.
+    </footer>
+  </div>
+</main>
+</div>
+<script>
+document.getElementById('theme').onclick=()=>{
+  const r=document.documentElement,d=r.getAttribute('data-theme')==='dark';
+  r.setAttribute('data-theme',d?'light':'dark');
+  document.getElementById('theme').textContent=d?'다크':'라이트';
+};
+</script>
+</body>
+</html>
