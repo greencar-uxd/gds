@@ -232,9 +232,7 @@ function start(){
 --gds-spacing-{단계}           예) --gds-spacing-500
 --gds-radius-{값}              예) --gds-radius-12 · --gds-radius-full
 --gds-elevation-{단계}         예) --gds-elevation-3</code></pre>
-  ${conflicts?`<div class="note warn"><p><b>일부 간격 토큰은 아직 내보내지 않습니다.</b>
-  같은 이름이 두 값을 가지고 있어 어느 쪽이 옳은지 판단할 수 없습니다 — ${conflicts}건.
-  <a href="#" data-go="space" style="color:var(--brand);font-weight:600">간격 문서</a>에 상세를 적었습니다.</p></div>`:''}
+
   <div class="note"><p><b>엘리베이션 단계가 재배치되었습니다.</b>
   기존 1~5단계가 2~6단계로 밀리고 1단계가 새로 생겼습니다 —
   <a href="#" data-go="elev" style="color:var(--brand);font-weight:600">엘리베이션 문서</a>에 대조표를 실었습니다.</p></div>
@@ -288,23 +286,40 @@ function type(){
 
 /* ───────── 간격 ───────── */
 function space(){
-  const max=Math.max(...SPACE.map(s=>s.px))||1;
-  const conf=C.spacing.conflicts||[];
+  const S=C.spacing;
+  const max=Math.max(...SPACE.map(x=>x.px))||1;
+  const moved=SPACE.filter(x=>x.moved);
   return `<p class="eyebrow">Foundation</p><h1>간격</h1>
-  <p class="lead">${esc(C.spacing.definition||'')}</p>
-  ${conf.length?`<div class="note warn">
-    <p><b>같은 이름이 두 값을 가진 토큰이 ${conf.length}건 있습니다.</b>
-    px 값은 0부터 52까지 끊김 없이 ${SPACE.length}단계로 증가하는데, 이름은 ${new Set(SPACE.map(s=>s.token)).size}개뿐입니다.</p>
-    <p style="margin-top:8px">${conf.map(c=>`<code>${esc(c.token)}</code> ${c.values.join('px / ')}px`).join(' &nbsp;·&nbsp; ')}</p>
-    <p style="margin-top:8px">코드로 내보내면 한쪽이 덮어써지므로 <b>이 ${conf.length}건은 토큰 파일에서 제외</b>했습니다.
-    이름이 정리되면 자동으로 포함됩니다.</p></div>`:''}
-  <div style="margin-top:28px">
-  ${SPACE.map(s=>`<div class="sprow ${s.bad?'bad':''}" ${s.bad?'':`data-copy="--gds-spacing-${slug(s.token).replace(/^spacing-/,'')}" style="cursor:pointer"`}>
-    <div class="tok">${esc(s.token)}${s.bad?' ⚠':''}</div>
-    <div class="px">${s.px}px</div>
-    <div><div class="vis" style="width:${Math.max(s.px/max*100,1.2)}%"></div></div>
+  <p class="lead">${esc(S.definition||'')}</p>
+  <div class="stat">
+    <div><b>${SPACE.length}</b><span>스케일 단계</span></div>
+    <div><b>${new Set(SPACE.map(x=>x.token)).size}</b><span>토큰 이름</span></div>
+    <div><b>0</b><span>이름 중복</span></div>
+    <div><b>2px</b><span>기본 단위 (1 unit)</span></div>
+  </div>
+  ${S.renamed?`<div class="note"><p><b>토큰 이름을 순차로 정리했습니다.</b>
+    px 오름차순으로 <code>Spacing_0</code>부터 100단위씩 부여했습니다.
+    이전에는 같은 이름이 두 값을 갖는 경우가 ${(S.originalConflicts||[]).length}건 있었는데,
+    이제 ${SPACE.length}단계가 이름과 1:1로 대응합니다.</p></div>`:''}
+  <h2>스케일</h2>
+  <div>
+  ${SPACE.map(x=>`<div class="sprow" data-copy="--gds-spacing-${x.token.replace('Spacing_','')}" style="cursor:pointer">
+    <div class="tok">${esc(x.token)}</div>
+    <div class="px">${x.px}px</div>
+    <div><div class="vis" style="width:${Math.max(x.px/max*100,1.2)}%"></div></div>
   </div>`).join('')}</div>
-  <p class="muted" style="margin-top:28px">${esc(C.spacing.unit)} · 출처 — <code>${esc(C.spacing.source)}</code></p>
+  ${moved.length?`<h2>이름 대조 — ${moved.length}건 변경</h2>
+  <p class="lead" style="font-size:15px"><b>28px 이상은 이름이 한 칸씩 밀립니다.</b>
+  값은 그대로이고 이름만 바뀌었습니다. 기존 화면을 옮길 때 확인하세요.</p>
+  <div>
+  ${moved.map(x=>`<div class="sprow" style="grid-template-columns:150px 24px 150px 70px 1fr">
+    <div class="tok" style="color:var(--text3)">${esc(x.was)}</div>
+    <div style="text-align:center;color:var(--text3)">→</div>
+    <div class="tok" style="font-weight:700">${esc(x.token)}</div>
+    <div class="px">${x.px}px</div>
+    <div class="muted">값 유지</div>
+  </div>`).join('')}</div>`:''}
+  <p class="muted" style="margin-top:28px">${esc(S.unit||'')} · 출처 — <code>${esc(S.source||'')}</code></p>
   ${footer()}`;
 }
 
@@ -365,7 +380,7 @@ function status(){
   const rows=[
     ['색',`${COLORS.length}색 · 7그룹`,'ok','정본 확보'],
     ['타이포그래피',`${TYPES.length}단계`,'ok','정본 확보'],
-    ['간격',`${SPACE.length}단계`,'warn',`토큰명 중복 ${(C.spacing.conflicts||[]).length}건 — 해당 토큰 미출력`],
+    ['간격',`${SPACE.length}단계`,'ok','토큰명 순차 재정리 완료'],
     ['반경','7단계 · 상한 20px','ok','R-3 확정 반영'],
     ['엘리베이션','6단계 · 재넘버링 반영','ok','1단계 레이어 수만 재확인 필요'],
     ['컴포넌트','—','wait','Foundation 안정화 후'],

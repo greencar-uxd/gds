@@ -72,11 +72,22 @@ for (const t of spTexts.filter(x => /^Spacing_\d+$/.test(x.t))) {
 }
 spacing.sort((a, b) => a.px - b.px);
 
-// 같은 토큰명이 서로 다른 px 를 갖는지 — 정본 내부 충돌
+// 원본의 토큰명 충돌 기록 (재명명 근거로 남깁니다)
 const byToken = new Map();
 for (const s of spacing) { if (!byToken.has(s.token)) byToken.set(s.token, []); byToken.get(s.token).push(s.px); }
 const spacingConflicts = [...byToken].filter(([, v]) => new Set(v).size > 1)
   .map(([token, v]) => ({ token, values: [...new Set(v)].sort((a, b) => a - b) }));
+
+// ---------- 간격 재명명 (강민관 결정 2026-07-29) ----------
+// px 오름차순으로 0 · 100 · 200 … 100단위 순차 부여. 중복 이름이 사라집니다.
+// 32px 이상은 기존 이름에서 한 칸씩 밀립니다 — was 에 이전 이름을 남겨 대조표를 만듭니다.
+const spacingRenamed = spacing.map((s, i) => ({
+  token: `Spacing_${i === 0 ? 0 : i * 100}`,
+  was: s.token,
+  px: s.px,
+  mul: s.mul,
+  moved: s.token !== `Spacing_${i === 0 ? 0 : i * 100}`,
+}));
 
 // ---------- Color 정본 팔레트 ----------
 const colorTexts = texts(PAGES.color);
@@ -216,8 +227,11 @@ const canon = {
   g11,
   spacing: {
     unit: '1 unit = 2px',
-    scale: spacing.map(({ token, px, mul }) => ({ token, px, mul })),
-    conflicts: spacingConflicts,
+    scale: spacingRenamed.map(({ token, was, px, mul, moved }) => ({ token, was, px, mul, moved })),
+    conflicts: [],                       // 재명명으로 해소됨
+    originalConflicts: spacingConflicts, // 재명명 근거 (원본 상태)
+    renamed: true,
+    renamedNote: '강민관 결정 2026-07-29 — px 오름차순 100단위 순차 부여',
     definition: spacingDef ? spacingDef.t : null,
     source: 'Spacing system (스페이싱 시스템) ✅ · 42066:25438',
   },
@@ -239,8 +253,9 @@ fs.writeFileSync(DATA, JSON.stringify(D));
 
 console.log('=== Spacing 정본 ===');
 canon.spacing.scale.forEach(s => console.log(`  ${s.token.padEnd(14)} ${String(s.px + 'px').padStart(6)}  ${s.mul || ''}`));
-console.log(`\n토큰명 충돌 ${spacingConflicts.length}건`);
-spacingConflicts.forEach(c => console.log(`  ${c.token}: ${c.values.join('px / ')}px`));
+console.log(`\n원본 토큰명 충돌 ${spacingConflicts.length}건 → 재명명으로 해소`);
+console.log('=== 재명명 결과 ===');
+spacingRenamed.forEach(s => console.log(`  ${String(s.px + 'px').padStart(6)}  ${s.was.padEnd(14)} → ${s.token}${s.moved ? '  [변경]' : ''}`));
 if (elevation) console.log(`\n=== Elevation ===\n  ${elevation.scale.length}단계 (재넘버링 반영: ${elevation.renumbered ? '예' : '아니오'})`);
 console.log(`\n=== Color 정본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개 · 참조 스타일 ${canonStyles.length}개`);
 console.log(`\ndata/foundation-data.json 에 canon 블록 병합 완료`);

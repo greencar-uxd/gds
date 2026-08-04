@@ -90,11 +90,10 @@ for (const f of ['gds.css','gds.scss','gds.tokens.json']) {
 const cssPath = path.join(ROOT,'dist','tokens','gds.css');
 if (fs.existsSync(cssPath)) {
   const css = fs.readFileSync(cssPath,'utf8');
-  const conflictTokens = (canon.spacing.conflicts||[]).map(c=>c.token);
-  for (const t of conflictTokens) {
-    const key = t.toLowerCase().replace('spacing_','');
-    ok(`충돌 토큰 ${t} 미출력`, !new RegExp(`^\\s*--gds-spacing-${key}:`,'m').test(css));
-  }
+  const sp = (canon.spacing||{}).scale||[];
+  ok('간격 토큰명 중복 없음', new Set(sp.map(s=>s.token)).size === sp.length, `${new Set(sp.map(s=>s.token)).size}/${sp.length}`);
+  ok('간격 토큰 100단위 순차', sp.every((s,i)=>s.token === 'Spacing_' + (i===0?0:i*100)));
+  ok('간격 토큰 전부 출력', sp.every(s=>new RegExp(`--gds-spacing-${s.token.replace('Spacing_','')}:`).test(css)));
   ok('엘리베이션 토큰 출력됨', /--gds-elevation-1:/.test(css) && /--gds-elevation-6:/.test(css));
   ok('엘리베이션 6단계', ((canon.elevation||{}).scale||[]).length === 6, String(((canon.elevation||{}).scale||[]).length));
   ok('재넘버링 반영 표시', !!(canon.elevation && canon.elevation.renumbered));
