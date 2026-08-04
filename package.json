@@ -16,7 +16,8 @@
     "fetch:rest": "node tools/figapi/fetch.js",
     "compare": "node tools/figapi/compare.js",
     "canon": "node --max-old-space-size=8192 tools/figdec/canon.js",
-    "tokens": "node build/tokens.js"
+    "tokens": "node build/tokens.js",
+    "watch": "node tools/figapi/watch.js"
   },
   "dependencies": {},
   "devDependencies": {}
