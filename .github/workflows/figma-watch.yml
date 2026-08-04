@@ -1,0 +1,66 @@
+name: Figma 변경 감지
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: figma-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 원본 version 확인
+        id: watch
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        run: |
+          set +e
+          node tools/figapi/watch.js
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: 변경 없음
+        if: steps.watch.outputs.code == '0'
+        run: echo "변경 없음 — 종료"
+
+      - name: 감지 실패
+        if: steps.watch.outputs.code != '0' && steps.watch.outputs.code != '10'
+        run: |
+          echo "::warning::Figma 확인 실패 — FIGMA_TOKEN 과 스코프를 점검하세요"
+          exit 1
+
+      - name: 변경 기록 커밋
+        if: steps.watch.outputs.code == '10'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/figma-version.json data/figma-change.json
+          git commit -m "chore: Figma 원본 변경 감지 (자동)" || exit 0
+          git push
+
+      - name: 이슈 본문 생성
+        if: steps.watch.outputs.code == '10'
+        run: node tools/figapi/issue-body.js > /dev/null
+
+      - name: 이슈 생성
+        if: steps.watch.outputs.code == '10'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "GDS 원본 변경 감지 — $(date -u +%Y-%m-%d)" \
+            --body-file /tmp/issue.md
