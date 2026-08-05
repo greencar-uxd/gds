@@ -268,6 +268,23 @@ if (VIEW.typeSemantic) {
     families: VIEW.typeSemantic.families.map(f => ({ usage: f.usage, steps: f.steps, why: f.why })),
   };
 }
+// ── 간격 — 시맨틱 계층이 «없다»는 사실도 근거와 함께 남깁니다 ──
+if (VIEW.spacingCensus) {
+  const SC = VIEW.spacingCensus;
+  json.$notes.spacingSemantic = {
+    exists: false,
+    why: '정본에 간격의 쓰임새 이름이 없습니다. Spacing system ✅ 표는 열이 Spacing · px · 배수 셋뿐이고, ✅ 컴포넌트 페이지의 간격 주석에도 이름이 붙어 있지 않습니다.',
+    evidence: `tools/spacing-census.js — ✅ 페이지 ${SC.pages.length}곳 · 주석 ${SC.counts.annotations}건 조사`,
+    layerInstead: '간격의 쓰임새 수준 이름은 Layout ✅ 의 Guidelines 토큰이 유일합니다(--gds-layout-*).',
+    census: {
+      pages: SC.pages,
+      annotations: SC.counts.annotations,
+      onScale: SC.summary.filter(x => x.onScale).reduce((a, x) => a + x.count, 0),
+      offScale: SC.summary.filter(x => !x.onScale).map(x => ({ value: x.value, count: x.count })),
+      unreadableCallouts: SC.counts.unreadable,
+    },
+  };
+}
 // ── Layout (Guidelines 계층) ──
 if (VIEW.layout) {
   json.layout = {};

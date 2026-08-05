@@ -54,6 +54,12 @@ injected.canon.typography.semantic = VIEW.typeSemantic || null;
 injected.canon.typography.library = VIEW.typeLib
   ? { namingRule: VIEW.typeLib.namingRule, groups: VIEW.typeLib.groups, styles: VIEW.typeLib.styles.map(s => ({ name: s.name, canonToken: s.canonToken, currentLibraryName: s.currentLibraryName })) }
   : null;
+injected.canon.spacingCensus = VIEW.spacingCensus ? {
+  pages: VIEW.spacingCensus.pages,
+  counts: VIEW.spacingCensus.counts,
+  summary: VIEW.spacingCensus.summary,
+  why: VIEW.spacingCensus.why,
+} : null;
 injected.canon.structure = VIEW.structure || null;
 injected.canon.gapSummary = VIEW.GAPS ? {
   total: VIEW.GAPS.items.length,

@@ -734,6 +734,47 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     }
   }
 
+  // ── 간격 쓰임새 조사 ── «간격에 시맨틱이 없다»는 주장이 조사로 뒷받침되는지 봅니다.
+  {
+    const SC = VIEW.spacingCensus;
+    ok('간격 쓰임새 조사가 있음', !!SC && SC.counts.annotations > 0,
+      SC ? `${SC.counts.annotations}건` : '없음');
+    if (SC) {
+      // 조사 표의 건수 합계가 실제 행 수와 같은지 — 요약이 손으로 적힌 게 아닌지 확인합니다.
+      ok('요약 건수 합 = 실제 주석 행 수',
+        SC.summary.reduce((a, x) => a + x.count, 0) === SC.rows.length
+        && SC.rows.length === SC.counts.annotations,
+        `${SC.summary.reduce((a, x) => a + x.count, 0)} / ${SC.rows.length} / ${SC.counts.annotations}`);
+      // 값 판정이 정본 스케일과 대조되는지
+      const scale = VIEW.LIB.pages.spacing.값;
+      ok('스케일 안/밖 판정이 정본 스케일과 일치',
+        SC.summary.every(x => x.onScale === scale.includes(x.value)));
+      // 라벨을 못 읽은 말풍선은 «값»으로 세지 않았는지 — 세면 라벨 상자 크기가 간격으로 둔갑합니다.
+      {
+        const unread = new Set(SC.unreadable.map(u => u.id));
+        ok('읽지 못한 말풍선은 값으로 세지 않음',
+          SC.counts.unreadable === SC.unreadable.length
+          && SC.rows.every(r => !unread.has(r.id))
+          && SC.rows.every(r => r.kind === '띠' || r.kind === '말풍선'),
+          `못읽음 ${SC.unreadable.length} · 행 ${SC.rows.length}`);
+      }
+      ok('조사한 ✅ 페이지가 2곳 이상', SC.pages.length >= 2, SC.pages.join(', '));
+      const J3 = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+      ok('토큰에 «간격 시맨틱 없음»이 근거와 함께 기록됨',
+        !!J3.$notes.spacingSemantic && J3.$notes.spacingSemantic.exists === false
+        && /spacing-census/.test(J3.$notes.spacingSemantic.evidence || ''));
+      ok('간격 시맨틱 토큰을 만들지 않았음',
+        !/--gds-spacing-semantic/.test(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8')));
+      const idx3 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      ok('조사 결과가 Spacing 페이지에 실림',
+        idx3.includes('spacingCensus') && /쓰임새 조사/.test(idx3));
+      ok('스케일 밖 값이 GAP 으로 기록됨',
+        SC.summary.some(x => !x.onScale)
+          ? VIEW.GAPS.items.some(g => g.id === 'GAP-30' && /스케일에 없는 값/.test(g.finding))
+          : true);
+    }
+  }
+
   const GAPS = VIEW.GAPS;
   ok('해소된 GAP 마다 해소 문구가 있음',
     GAPS.items.filter(i => i.status === 'resolved').every(i => (i.resolution || '').length > 10));
