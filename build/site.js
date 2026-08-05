@@ -17,8 +17,34 @@ const OUT_DIAG = path.join(OUT_DIR, 'diagnostics.html');
 const SUBPAGES = ['haptic'];
 
 const tpl = fs.readFileSync(TEMPLATE, 'utf8');
-const raw = fs.readFileSync(DATA, 'utf8');
-JSON.parse(raw); // 파싱 실패 시 여기서 중단
+
+// 확정 결정을 반영한 정본을 주입합니다 — 사이트가 구 이름(Red 500 등)을 보여주면 안 됩니다.
+const VIEW = require('./canon-view.js');
+const FONT = require('./font.js');
+const injected = JSON.parse(fs.readFileSync(DATA, 'utf8'));
+injected.canon.color.styles = VIEW.colors.map(c => ({
+  name: c.name, hex: c.hex, label: c.label,
+  ...(c.renamed ? { was: c.originalName } : {}),
+  ...(c.overridden ? { wasHex: c.originalHex } : {}),
+  ...(c.isMain ? { main: true } : {}),
+  ...(c.added ? { added: true, sourceName: c.sourceName } : {}),
+  ...(c.alpha != null ? { alpha: c.alpha } : {}),
+}));
+injected.canon.color.figmaSync = VIEW.figmaSync;
+injected.canon.color.decisions = {
+  decidedBy: VIEW.DEC.decidedBy, decidedAt: VIEW.DEC.decidedAt,
+  step: VIEW.DEC.rules.step.value, mergeBase: VIEW.DEC.rules.mergeBase.value,
+  main: VIEW.DEC.main, renames: VIEW.renames, open: VIEW.openDecisions,
+};
+const TDEC_SITE = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
+injected.canon.typography.decisions = TDEC_SITE;
+// 용도(Usage) — 값이 같은 토큰을 구분하는 유일한 축이므로 사이트에도 싣습니다.
+if (TDEC_SITE.usage && TDEC_SITE.usage.status === 'confirmed') {
+  injected.canon.typography.scale = injected.canon.typography.scale.map(t => ({
+    ...t, usage: TDEC_SITE.usage.map[t.token] || null,
+  }));
+}
+const raw = JSON.stringify(injected);
 
 if (!tpl.includes('__DATA__')) throw new Error('template.html 에 __DATA__ 자리표시자가 없습니다');
 
@@ -27,21 +53,24 @@ const safe = raw.replace(/<\//g, '<\\/');
 const html = tpl.replace('__DATA__', () => safe);
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
-fs.writeFileSync(OUT, html);
+fs.writeFileSync(OUT, FONT.applyFont(html));
 fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
 
 // 진단 리포트 — 레거시 현황. 정본과 섞이지 않도록 별도 페이지로 분리합니다.
 const diagTpl = fs.readFileSync(DIAG, 'utf8');
 const diag = diagTpl.replace('__DATA__', () => safe);
-fs.writeFileSync(OUT_DIAG, diag);
+fs.writeFileSync(OUT_DIAG, FONT.applyFont(diag));
 
 for (const name of SUBPAGES) {
   const src = path.join(ROOT, 'site', `${name}.html`);
   if (!fs.existsSync(src)) { console.warn(`  건너뜀: site/${name}.html 없음`); continue; }
   const dir = path.join(OUT_DIR, name);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), fs.readFileSync(src, 'utf8'));
+  fs.writeFileSync(path.join(dir, 'index.html'), FONT.applyFont(fs.readFileSync(src, 'utf8')));
   console.log(`  하위 경로 → dist/${name}/index.html`);
 }
 
+require('./decisions.js');
+
+console.log(`  정본 폰트 주입 — ${FONT.FAMILY} ${FONT.WEIGHTS.join('/')} (서브셋 임베드)`);
 console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB) · dist/diagnostics.html (${Math.round(diag.length / 1024)} KB)`);
