@@ -1,0 +1,33 @@
+{
+  "$description": "Layout 토큰 — ✅ Layout for ios/aos/web 페이지 본문에서 읽은 값. Guidelines 계층 소속입니다.",
+  "source": "43185:36342 (Layout for ios/aos/web ✅)",
+  "checkedAt": "2026-08-05",
+  "screen": [
+    { "token": "screen-ios-width", "value": 375, "unit": "px", "platform": "ios" },
+    { "token": "screen-ios-height", "value": 812, "unit": "px", "platform": "ios" },
+    { "token": "screen-android-width", "value": 360, "unit": "px", "platform": "aos/web" },
+    { "token": "screen-android-height", "value": 800, "unit": "px", "platform": "aos/web" }
+  ],
+  "margin": [
+    { "token": "margin-side", "value": 20, "unit": "px", "rule": "좌·우 마진은 20px 로 통일합니다" },
+    { "token": "margin-top", "value": 20, "unit": "px", "rule": "상단 마진은 20px 로 통일합니다" },
+    { "token": "margin-bottom-ios", "value": 0, "unit": "px", "platform": "ios", "rule": "iOS 홈 인디케이터의 자동 노출·숨김 동작에 대응해 하단 마진은 0px" },
+    { "token": "margin-bottom-android", "value": 20, "unit": "px", "platform": "aos/web", "rule": "홈 인디케이터가 없는 환경이므로 하단 마진도 20px 유지" }
+  ],
+  "safeArea": [
+    { "token": "home-indicator-height", "value": 34, "unit": "px", "platform": "ios" }
+  ],
+  "header": [
+    { "token": "header-border-width", "value": 1, "unit": "px", "rule": "헤더 영역 하단에는 1px 라인을 기본으로 포함합니다" }
+  ],
+  "regions": [
+    { "name": "Header area", "설명": "화면 상단 고정 영역 — 타이틀 · 뒤로가기 · 메뉴 등 네비게이션 요소가 위치" },
+    { "name": "Contents area", "설명": "헤더와 버튼 사이의 본문 영역 — 서비스의 핵심 정보와 콘텐츠 표시" },
+    { "name": "Buttons area", "설명": "화면 하단 고정 영역 — 주요 액션을 실행하는 버튼이 배치" }
+  ],
+  "buttonBehavior": [
+    { "name": "스티키", "설명": "콘텐츠와 함께 스크롤되어 움직이는 형태" },
+    { "name": "픽스", "설명": "화면의 일정 위치에 고정되어 항상 따라오는 형태" }
+  ],
+  "conflict": "Bottom navigation ✅ 페이지는 AOS/Web 폭을 365 로 적고 있어 이 페이지의 360 과 다릅니다 (GAP-24). 저장소는 Layout ✅ 의 360 을 씁니다 — 화면 전체 규격을 정의하는 페이지가 Layout 이기 때문입니다."
+}

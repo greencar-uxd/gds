@@ -391,5 +391,123 @@
       "status": "confirmed",
       "decidedAt": "2026-08-05"
     }
-  ]
+  ],
+  "roles": {
+    "$description": "✅ Color system 페이지 본문이 규정하는 역할 축과 용도 규칙. 시맨틱 토큰은 이 규칙에서 끌어냅니다.",
+    "source": "42066:25436 (Color system ✅)",
+    "decidedAt": "2026-08-05",
+    "status": "confirmed",
+    "brandAttributes": [
+      "Clean",
+      "Comfort",
+      "Easy"
+    ],
+    "items": [
+      {
+        "role": "Primary",
+        "ko": "프라이머리",
+        "scale": "Primary/Red",
+        "main": "Primary/Red 040",
+        "rule": "Red 050 이 브랜드 색상에 가장 가깝지만 가독성과 접근성을 고려해 Red 040 을 메인으로 사용합니다."
+      },
+      {
+        "role": "Secondary",
+        "ko": "세컨더리",
+        "scale": "Gray Scale",
+        "rule": "배경 · 라인 · 텍스트 등 보조 역할로 Primary 를 지지합니다. 텍스트는 모두 Gray scale 로 쓰는 것이 원칙입니다."
+      },
+      {
+        "role": "Tertiary",
+        "ko": "터셔리",
+        "scale": "Navy",
+        "rule": "리브랜딩 이전 Secondary. 뱃지 · 지도 핀처럼 색 자체가 정보인 요소에 한해 기존 그대로 쓰고, 그 외 폰트 · 컴포넌트는 Gray scale 로 정의합니다."
+      },
+      {
+        "role": "Badge",
+        "ko": "뱃지",
+        "scale": "Badge",
+        "rule": "혜택 및 프로모션 영역. 주로 Tag 등 시각적 구분이 필요할 때."
+      },
+      {
+        "role": "Map Marker",
+        "ko": "맵 마커",
+        "scale": "Map Marker",
+        "rule": "차량 예약 시 지도 내 G car Zone 위치 표시. Zone 외 구역 안내에도 사용."
+      },
+      {
+        "role": "Brand",
+        "ko": "브랜드",
+        "scale": "Brand",
+        "rule": "G car Official Brand Color 및 제휴 브랜드 관련 색."
+      },
+      {
+        "role": "System",
+        "ko": "시스템",
+        "scale": "System",
+        "rule": "모달 배경 Dim 처리 및 성공 · 주의 · 에러 등 상태 표현."
+      }
+    ]
+  },
+  "semantic": {
+    "$description": "시맨틱 색 토큰. 각 항목은 ✅ 페이지 본문의 규칙이나 실측 스펙에서 끌어낸 것이며 evidence 로 출처를 답니다.",
+    "decidedAt": "2026-08-05",
+    "status": "confirmed",
+    "tokens": [
+      {
+        "token": "Semantic/Text/Default",
+        "ref": "Gray Scale/Gray 100",
+        "evidence": "Color system ✅ — \"Text 의 경우 모두 Gray scale 로 사용하는 것을 원칙으로 합니다\""
+      },
+      {
+        "token": "Semantic/Text/Secondary",
+        "ref": "Gray Scale/Gray 060",
+        "evidence": "Color system ✅ Secondary 규칙 — 보조 텍스트는 Gray scale"
+      },
+      {
+        "token": "Semantic/Text/Disabled",
+        "ref": "Gray Scale/Gray 040",
+        "evidence": "Bottom navigation ✅ — Disabled(미선택) 텍스트 컬러 Gray scale 40"
+      },
+      {
+        "token": "Semantic/Icon/Default",
+        "ref": "Gray Scale/Gray 080",
+        "evidence": "Bottom navigation ✅ — Pressed(선택) 아이콘 컬러 Gray scale 80"
+      },
+      {
+        "token": "Semantic/Icon/Disabled",
+        "ref": "Gray Scale/Gray 040",
+        "evidence": "Bottom navigation ✅ — Disabled(미선택) 아이콘 컬러 Gray scale 40"
+      },
+      {
+        "token": "Semantic/Overlay/Modal",
+        "ref": "System/Dim Layer 060",
+        "evidence": "Modal ✅ — Basic alert 는 Dim layer 1 사용"
+      },
+      {
+        "token": "Semantic/Overlay/Fullscreen",
+        "ref": "System/Dim Layer 080",
+        "evidence": "Modal ✅ — Full screen alert 는 Dim layer 2 사용"
+      },
+      {
+        "token": "Semantic/Border/Input",
+        "ref": "System/Input Line",
+        "evidence": "GDS 라이브러리 System/Input Line 스타일 · Color system ✅ System 정의"
+      },
+      {
+        "token": "Semantic/Action/Primary",
+        "ref": "Primary/Red 040",
+        "evidence": "Color system ✅ — \"가독성과 접근성을 고려하여 Red 040 을 메인 색상으로 사용\""
+      },
+      {
+        "token": "Semantic/Status/Success",
+        "ref": "System/Success",
+        "evidence": "Color system ✅ System 정의 — 성공 상태 표현"
+      },
+      {
+        "token": "Semantic/Status/Alarm",
+        "ref": "System/Alarm",
+        "evidence": "Color system ✅ System 정의 — 주의 · 에러 상태 표현"
+      }
+    ]
+  }
 }

@@ -102,7 +102,9 @@
       "severity": "높음",
       "finding": "Map Marker/Shadow 가 두 값으로 존재합니다 — FILL 스타일은 #E2E2E2(불투명 회색), 변수 Map marker_Shadow 는 #0000001A(검정 10%).",
       "evidence": "라이브러리 FILL 스타일 vs COLOR 변수",
-      "fix": "그림자는 알파여야 겹침에서 맞습니다. 변수 쪽(#0000001A)을 정본으로 삼고 FILL 스타일은 대체 대상으로 표시합니다."
+      "fix": "그림자는 알파여야 겹침에서 맞습니다. 변수 쪽(#0000001A)을 정본으로 삼고 FILL 스타일은 대체 대상으로 표시합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Map Marker/Shadow 를 valueOverrides 로 #E2E2E2 → #0000001A 로 교체했습니다. 그림자가 알파라 겹칠 때 밑이 비칩니다."
     },
     {
       "id": "GAP-5",
@@ -118,7 +120,9 @@
       "severity": "중간",
       "finding": "System/Dim Layer 와 System/Info Box BG 가 둘 다 #000000 이고 불투명도가 토큰 어디에도 없습니다. 개발자가 값을 알 수 없습니다.",
       "evidence": "라이브러리 FILL 스타일 2종 · ✅ 스와치 캡션은 60% · 80%",
-      "fix": "CQ-9 확정대로 System/Dim Layer 060 · 080 으로 나누고 8자리 HEX 로 내보냅니다."
+      "fix": "CQ-9 확정대로 System/Dim Layer 060 · 080 으로 나누고 8자리 HEX 로 내보냅니다.",
+      "status": "resolved",
+      "resolution": "해소 — CQ-9 splits 로 System/Dim Layer 060(#00000099) · 080(#000000CC) 으로 나누고 8자리 HEX 로 내보냅니다."
     },
     {
       "id": "GAP-7",
@@ -126,7 +130,9 @@
       "severity": "낮음",
       "finding": "Navy 그룹에서 navy 040 만 소문자입니다.",
       "evidence": "computed.caseInconsistent",
-      "fix": "저장소 정본은 Navy 040 으로 통일하고 원본 이름을 renames 에 남깁니다."
+      "fix": "저장소 정본은 Navy 040 으로 통일하고 원본 이름을 renames 에 남깁니다.",
+      "status": "resolved",
+      "resolution": "해소 — renames 로 Navy/navy 040 → Navy/Navy 040 통일. 원본 이름은 originalName 에 남습니다."
     },
     {
       "id": "GAP-8",
@@ -142,7 +148,9 @@
       "severity": "중간",
       "finding": "폐기 표시된 스타일이 published 상태로 남아 있습니다 — as-is_Shadow/(X)Bottom Sheet · (X)Floating Button. 라이브러리를 쓰는 사람에게 그대로 노출됩니다.",
       "evidence": "라이브러리 EFFECT 스타일",
-      "fix": "저장소 정본에서 제외하고 폐기 목록으로만 기록합니다."
+      "fix": "저장소 정본에서 제외하고 폐기 목록으로만 기록합니다.",
+      "status": "resolved",
+      "resolution": "해소 — as-is_Shadow/(X)… 2종은 정본 60종에서 제외했고 data/gds-library.json 의 effect 에 deprecated 로만 기록합니다."
     },
     {
       "id": "GAP-10",
@@ -168,7 +176,8 @@
       "severity": "높음",
       "finding": "변수화가 색과 반경에만 돼 있고 간격·타이포는 표와 스타일로만 존재합니다. 프리미티브→시맨틱→컴포넌트 3계층이 색에서만 성립합니다.",
       "evidence": "라이브러리 변수 컬렉션 — Collection(color) · semantic(float/Radius)",
-      "fix": "저장소 토큰은 네 영역 모두 같은 3계층으로 내보내고, 라이브러리에 없는 계층은 저장소가 정의한 것으로 표시합니다."
+      "fix": "저장소 토큰은 네 영역 모두 같은 3계층으로 내보내고, 라이브러리에 없는 계층은 저장소가 정의한 것으로 표시합니다.",
+      "progress": "부분 해소 — 색은 프리미티브 60 + 시맨틱 11 로 2계층이 섰고, Layout 이 Guidelines 계층으로 들어왔습니다. 간격·타이포의 시맨틱 계층은 아직 없습니다."
     },
     {
       "id": "GAP-13",
@@ -176,7 +185,9 @@
       "severity": "높음",
       "finding": "✅ Layout for ios/aos/web 페이지의 내용이 저장소에 통째로 없습니다. 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 영역 동작이 전부 정의돼 있는데 토큰으로도 문서로도 안 들어와 있습니다.",
       "evidence": "get_metadata 43185:36342 — iOS 375×812 · AOS/Web 360×800 · 마진 20px 통일 · iOS 하단 0px · 헤더 하단 1px 라인 · 홈 인디케이터 34px · 버튼 스티키/픽스",
-      "fix": "Layout 은 Foundation 이 아니라 **Guidelines** 계층 소속입니다([Guidelines] ✅ 구조도 기준). Guidelines 영역을 저장소에 만들고 화면 크기·마진·안전영역을 토큰으로 내보냅니다. 값은 data/gds-library.json 의 pages.layout 에 담았습니다."
+      "fix": "Layout 은 Foundation 이 아니라 **Guidelines** 계층 소속입니다([Guidelines] ✅ 구조도 기준). Guidelines 영역을 저장소에 만들고 화면 크기·마진·안전영역을 토큰으로 내보냅니다. 값은 data/gds-library.json 의 pages.layout 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/layout-tokens.json 신설. 화면 크기 4 · 마진 4 · 안전영역 1 · 헤더 1 = 토큰 10개를 dist/tokens 로 내보냅니다(--gds-layout-*). 영역 3종과 버튼 동작 2종도 기록."
     },
     {
       "id": "GAP-14",
@@ -184,7 +195,9 @@
       "severity": "높음",
       "finding": "Foundation 구성 요소를 두 ✅ 페이지가 다르게 적고 있습니다 — [Foundation] 본문은 \"Color · Typography · Spacing · Icon\" 4개, [Guidelines] 구조도는 \"Color · Typography · Spacing · Icon · Elevation · Radius\" 6개. 어느 쪽이든 저장소에는 Icon 이 없습니다.",
       "evidence": "get_metadata 42066:25435 (Foundation 본문) vs 43176:109107 (Guidelines 구조도) vs 43176:107194 (Getting started 목차 — 6개)",
-      "fix": "목차와 구조도가 둘 다 6개이므로 6개를 정본으로 삼고, [Foundation] 본문 쪽을 원본 결함으로 기록합니다. Icon 은 원본이 🚧 라 저장소에서는 빈칸으로 표시합니다."
+      "fix": "목차와 구조도가 둘 다 6개이므로 6개를 정본으로 삼고, [Foundation] 본문 쪽을 원본 결함으로 기록합니다. Icon 은 원본이 🚧 라 저장소에서는 빈칸으로 표시합니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/gds-structure.json 에서 Foundation 을 6요소로 확정했습니다(다수 근거: [Guidelines] 구조도 + Getting started 목차). [Foundation] 본문의 4개 표기는 conflict 로 남겨 뒀습니다."
     },
     {
       "id": "GAP-15",
@@ -208,7 +221,9 @@
       "severity": "높음",
       "finding": "GDS 는 Guidelines → Foundation → Components → Template 4계층으로 설계돼 있는데 저장소에는 이 구조가 없습니다. 저장소가 쓰는 \"프리미티브 → 시맨틱 → 컴포넌트\" 3계층은 토큰 계층이라 별개입니다.",
       "evidence": "[Guidelines] ✅ 구조도 43176:109614 · Getting started ✅ 목차 43176:107181",
-      "fix": "저장소 구성을 4계층에 맞추고, 토큰 3계층과 문서 4계층을 각각 무엇인지 명시해 섞이지 않게 합니다."
+      "fix": "저장소 구성을 4계층에 맞추고, 토큰 3계층과 문서 4계층을 각각 무엇인지 명시해 섞이지 않게 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/gds-structure.json 신설. Guidelines → Foundation → Components → Template 4계층에 35개 항목을 넣고 각 항목의 Figma 상태(done/wip/none)와 저장소 반영 상태(tokens/docs/measured/none)를 표시합니다."
     },
     {
       "id": "GAP-18",
@@ -240,7 +255,9 @@
       "severity": "높음",
       "finding": "✅ UI/UX guide 의 내용이 저장소에 한 줄도 없습니다. UX 라이팅 규칙 6종(어투·헤더 타이틀·문장형 타이틀·본문·플레이스홀더·알림 버튼)과 그래픽 3단계 체계가 전부 여기 있습니다.",
       "evidence": "get_metadata 42066:27864 — 어투/타이틀/마침표/플레이스홀더/버튼명 규칙 · 그래픽 Lv.1 시스템 아이콘 · Lv.2 커스텀 아이콘 · Lv.3 일러스트 + 선택·예외·밀도 기준",
-      "fix": "Guidelines 계층에 UI/UX Guide 를 만들고 규칙을 그대로 싣습니다. 값은 data/gds-library.json 의 pages.uiuxGuide 에 담았습니다."
+      "fix": "Guidelines 계층에 UI/UX Guide 를 만들고 규칙을 그대로 싣습니다. 값은 data/gds-library.json 의 pages.uiuxGuide 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — docs/GDS-uiux-guide.md 생성(build/guide.js). UX 라이팅 6항목 · 그래픽 3단계 · 기준 3가지 · 원칙 4개를 데이터에서 뽑아 씁니다."
     },
     {
       "id": "GAP-22",
@@ -256,7 +273,9 @@
       "severity": "높음",
       "finding": "✅ Color system 본문이 정의하는 역할 축(Primary=Red · Secondary=Gray · Tertiary=Navy)과 용도 규칙이 저장소에 없습니다. 특히 \"텍스트는 모두 Gray scale 로 쓰는 것이 원칙\"과 \"Navy 는 색 자체가 정보인 요소에만\" 이 두 규칙은 시맨틱 계층의 근거인데 빠져 있었습니다.",
       "evidence": "get_metadata 42066:25436 — Primary/Secondary/Tertiary 정의 · Gray scale_Text 원칙 · Tertiary 사용 제한 · Badge/Map marker/Brand/System 용도",
-      "fix": "색 그룹에 역할(role)과 용도 규칙을 붙이고, 시맨틱 토큰을 이 규칙에서 끌어냅니다(GAP-12 와 함께 해소). 값은 data/gds-library.json 의 pages.colorSystem 에 담았습니다."
+      "fix": "색 그룹에 역할(role)과 용도 규칙을 붙이고, 시맨틱 토큰을 이 규칙에서 끌어냅니다(GAP-12 와 함께 해소). 값은 data/gds-library.json 의 pages.colorSystem 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — color-decisions.json 에 roles(역할 축 7종)와 semantic(시맨틱 토큰 11종)을 추가했습니다. 시맨틱 토큰마다 evidence 로 ✅ 페이지 근거를 답니다."
     },
     {
       "id": "GAP-24",
