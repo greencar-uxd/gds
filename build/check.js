@@ -146,8 +146,13 @@ console.log('\n[6-3] 결정 기록 페이지');
     const dh = fs.readFileSync(dp, 'utf8');
     const missS = dec.settled.filter(i => !dh.includes(`id="${i.id}"`));
     ok('확정 항목이 전부 표시됨', missS.length === 0, missS.map(i => i.id).join(', '));
-    const missG = dec.gaps.filter(g => !dh.includes(`id="${g.id}"`));
-    ok('모자란 곳이 전부 표시됨', missG.length === 0, missG.map(g => g.id).join(', '));
+    const missG = dec.gapsOpen.filter(g => !dh.includes(`id="${g.id}"`));
+    ok('남은 모자란 곳이 전부 표시됨', missG.length === 0, missG.map(g => g.id).join(', '));
+    ok('메운 것이 표에 표시됨', dec.gapsDone.every(g => dh.includes(`<code>${g.id}</code>`)),
+      dec.gapsDone.filter(g => !dh.includes(`<code>${g.id}</code>`)).map(g => g.id).join(', '));
+    ok('메운 건수가 제목에 표기됨', dh.includes(`${dec.gaps.length}건 중 ${dec.gapsDone.length}건 메움`));
+    ok('4계층 표가 페이지에 있음',
+      VIEW0.structure ? VIEW0.structure.layers.every(l => dh.includes(`${l.name} (${l.ko})`)) : true);
     ok('제외 라이브러리가 표시됨', VIEW0.excludedLibraries.every(l => dh.includes(l.name)));
     ok('스와치 그림에서 빠졌던 색이 표시됨', VIEW0.missedBySwatch.every(n => dh.includes(n)));
     ok('레거시 통폐합 흔적이 남아 있지 않음',

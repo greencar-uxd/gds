@@ -30,6 +30,9 @@ const open = []
   .concat((TDEC.open || []).filter(o => o.status === 'open').map(o => ({ ...o, group: '타이포' })));
 
 const groups = [...new Set(VIEW.colors.map(c => c.name.split('/')[0]))];
+const gapsDone = GAPS ? GAPS.items.filter(g => g.status === 'resolved') : [];
+const gapsOpen = GAPS ? GAPS.items.filter(g => g.status !== 'resolved') : [];
+const ST = VIEW.structure;
 
 const html = `<!DOCTYPE html>
 <html lang="ko" data-theme="light">
@@ -170,13 +173,25 @@ ${VIEW.missedBySwatch.length ? `<p class="sub" style="margin-top:14px"><b>✅ �
 </div>
 
 ${GAPS ? `<div class="eyebrow" style="margin-top:40px">Gaps</div>
-<h2 style="font-size:22px;margin:6px 0 4px">디자인 시스템으로서 모자란 곳 — ${GAPS.items.length}건</h2>
+<h2 style="font-size:22px;margin:6px 0 4px">디자인 시스템으로서 모자란 곳 — ${GAPS.items.length}건 중 ${gapsDone.length}건 메움</h2>
 <p class="lead">${esc(GAPS.principle)}</p>
-${GAPS.items.map(g => `<div class="card" id="${g.id}">
+<div class="stats">
+<div class="ok"><b>${gapsDone.length}</b><span>메운 것</span></div>
+<div class="hl"><b>${gapsOpen.filter(g => g.severity === '높음').length}</b><span>남은 것 · 높음</span></div>
+<div><b>${gapsOpen.filter(g => g.severity === '중간').length}</b><span>중간</span></div>
+<div><b>${gapsOpen.filter(g => g.severity === '낮음').length}</b><span>낮음</span></div>
+</div>
+${gapsDone.length ? `<h4 style="font-size:13px;margin:22px 0 6px;color:var(--ok)">✅ 메운 것 ${gapsDone.length}건</h4>
+<table><thead><tr><th>ID</th><th>영역</th><th>무엇이 모자랐나</th><th>어떻게 메웠나</th></tr></thead><tbody>
+${gapsDone.map(g => `<tr><td><code>${g.id}</code></td><td class="muted">${esc(g.area)}</td><td>${esc(g.finding.slice(0, 90))}…</td><td>${esc(g.resolution)}</td></tr>`).join('')}
+</tbody></table>` : ''}
+<h4 style="font-size:13px;margin:22px 0 6px;color:var(--brand)">남은 것 ${gapsOpen.length}건</h4>
+${gapsOpen.map(g => `<div class="card" id="${g.id}">
 <div class="meta"><span class="pill id">${g.id}</span><span class="pill ${sev(g.severity)}">${g.severity}</span><span class="pill tag">${esc(g.area)}</span></div>
 <h3>${esc(g.finding)}</h3>
 <p class="muted"><b>근거.</b> ${esc(g.evidence)}</p>
 <div class="note"><b>메우는 법.</b> ${esc(g.fix)}</div>
+${g.progress ? `<p class="muted"><b>진행.</b> ${esc(g.progress)}</p>` : ''}
 </div>`).join('')}
 <div class="sync">
 <h3>계산으로 찾은 것</h3>
@@ -186,6 +201,21 @@ ${GAPS.computed.caseInconsistent.map(n => `<tr><td>표기 변형</td><td><code>$
 ${GAPS.computed.luminanceInversion.map(i => `<tr><td>명도 역전</td><td>${esc(i.detail)}</td></tr>`).join('')}
 </tbody></table>
 </div>` : ''}
+
+${ST ? `<div class="eyebrow" style="margin-top:40px">Structure</div>
+<h2 style="font-size:22px;margin:6px 0 4px">GDS 4계층 — 저장소 반영 상태</h2>
+<p class="lead">${esc(ST.note)}</p>
+${ST.layers.map(l => `<div class="sync">
+<h3>${l.name} (${l.ko}) — ${esc(l.role)}</h3>
+${l.정의 ? `<p class="sub">${esc(l.정의)}</p>` : ''}
+${l.items.length ? `<table><thead><tr><th>항목</th><th>Figma</th><th>저장소</th><th>어디에</th></tr></thead><tbody>
+${l.items.map(i => `<tr><td>${esc(i.name)}</td>
+<td>${i.figma === 'done' ? '✅' : i.figma === 'wip' ? '🚧' : '—'}</td>
+<td class="${i.repo === 'none' ? 'no' : ''}">${i.repo === 'none' ? '없음' : i.repo === 'tokens' ? '토큰' : i.repo === 'docs' ? '문서' : '실측'}</td>
+<td class="muted">${esc(i.where || i.note || '')}</td></tr>`).join('')}
+</tbody></table>` : `<p class="muted">${esc(l.note || '')}</p>`}
+${l.conflict ? `<div class="note"><b>불일치.</b> ${esc(l.conflict)}</div>` : ''}
+</div>`).join('')}` : ''}
 
 ${open.length ? `<div class="eyebrow" style="margin-top:40px">Open</div>
 <h2 style="font-size:22px;margin:6px 0 12px">아직 정해야 할 것 — ${open.length}건</h2>
@@ -261,4 +291,4 @@ fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(path.join(dir, 'index.html'), FONT.applyFont(html));
 console.log(`  결정 기록 → dist/decisions/index.html (${Math.round(html.length / 1024)} KB · 확정 ${settled.length}건 · 남은 ${open.length}건 · 모자란 곳 ${GAPS ? GAPS.items.length : 0}건)`);
 
-module.exports = { settled, open, gaps: GAPS ? GAPS.items : [] };
+module.exports = { settled, open, gaps: GAPS ? GAPS.items : [], gapsDone, gapsOpen };
