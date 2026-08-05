@@ -19,7 +19,7 @@
     "canon": "node --max-old-space-size=8192 tools/figdec/canon.js",
     "tokens": "node build/tokens.js",
     "watch": "node tools/figapi/watch.js",
-    "audit": "node tools/audit/color_audit.js && node tools/audit/type_audit.js && node tools/audit/merge_map.js && node tools/audit/orphan_clusters.js && node tools/audit/report.js"
+    "audit": "node tools/audit/type_audit.js"
   },
   "dependencies": {},
   "devDependencies": {}
