@@ -658,23 +658,34 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       `nav ${navKeys.join(',')} / V ${viewKeys.join(',')}`);
     ok('사이트에 레이아웃 · 시맨틱 항목이 있음',
       navKeys.includes('layout') && navKeys.includes('semantic'));
+    // 섹션 탭은 알약·상자가 아니라 밑줄 하나여야 합니다 — 강민관 지적 2026-08-06.
+    {
+      const st = (idx.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1];
+      const topnavRules = [...st.matchAll(/\.topnav a[^{]*\{([^}]*)\}/g)].map(m => m[1]);
+      ok('섹션 탭에 상자·알약 스타일이 없음',
+        topnavRules.length > 0
+        && !topnavRules.some(r => /border-radius|background:var\(--surface/.test(r))
+        && /\.topnav a\.on:after\{[^}]*height:2px/.test(st));
+    }
     ok('최상위 네비가 2단으로 갈라짐(가로 섹션 + 섹션 내 사이드바)',
       /id="topnav"/.test(idx) && /id="secnav"/.test(idx) && (nm ? /sec:'/.test(nm[1]) : false));
 
-    // ── 크롬이 브랜드 빨강을 입지 않았는지 ──
-    // 문서가 자기 색으로 칠해져 있으면 색 스와치가 UI 의 일부처럼 보입니다.
-    // accent 는 정본 Navy 값이어야 합니다 — 사이트가 자기 토큰으로 만들어졌다는 뜻입니다.
-    const navy060 = VIEW.colors.find(c => c.name === 'Navy/Navy 060');
-    const navy010 = VIEW.colors.find(c => c.name === 'Navy/Navy 010');
-    const navy030 = VIEW.colors.find(c => c.name === 'Navy/Navy 030');
-    const navy080 = VIEW.colors.find(c => c.name === 'Navy/Navy 080');
+    // ── 크롬 accent 가 «정본에 실재하는 값»인지 ──
+    // 어느 색을 쓸지는 강민관이 정합니다(2026-08-06 · Primary 빨강).
+    // 기계가 보는 것은 «지어낸 색이 아니라 정본 단계 그대로인가» 하나입니다.
+    const hexOf = n => (VIEW.colors.find(c => c.name === n) || {}).hex;
     const acc = idx.match(/--accent:(#[0-9A-Fa-f]{6}); --accent-soft:(#[0-9A-Fa-f]{6})/g) || [];
-    ok('크롬 accent 가 정본 Navy 값과 같음(라이트/다크)', acc.length === 2
-      && acc[0] === `--accent:${navy060.hex}; --accent-soft:${navy010.hex}`
-      && acc[1] === `--accent:${navy030.hex}; --accent-soft:${navy080.hex}`,
+    ok('크롬 accent 가 정본 Primary 단계와 같음(라이트/다크)', acc.length === 2
+      && acc[0] === `--accent:${hexOf('Primary/Red 040')}; --accent-soft:${hexOf('Primary/Red 010')}`
+      && acc[1] === `--accent:${hexOf('Primary/Red 030')}; --accent-soft:${hexOf('Primary/Red 080')}`,
       acc.join(' | '));
-    ok('사이드바 활성 표시가 브랜드 빨강이 아님',
-      /nav\.side a\.item\.on\{color:var\(--accent\)/.test(idx));
+    ok('라이트 accent 가 메인 색(Primary/Red 040)임',
+      !!VIEW.mainStyle && acc[0] === `--accent:${VIEW.mainStyle.hex}; --accent-soft:${hexOf('Primary/Red 010')}`);
+    ok('크롬 색이 전부 정본 단계에서 옴(지어낸 HEX 없음)', (() => {
+      const declared = [...idx.matchAll(/--accent(?:-soft)?:(#[0-9A-Fa-f]{6})/g)].map(m => m[1].toUpperCase());
+      const canon = new Set(VIEW.colors.map(c => c.hex.slice(0, 7).toUpperCase()));
+      return declared.length === 4 && declared.every(h => canon.has(h));
+    })());
     // 크롬 CSS 안만 봅니다 — 주입된 데이터에는 정본 색 값이 그대로 들어 있어 전체 검색은 무의미합니다.
     const styleBlock = (idx.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1];
     ok('히어로가 브랜드 그라디언트를 입지 않음',
