@@ -42,7 +42,7 @@ npm run check
 그 이유를 커밋 메시지에 남겨 주세요.
 
 ---
-<sub>이 이슈는 \`.github/workflows/figma-watch.yml\` 이 30분마다 자동 생성합니다.</sub>
+<sub>이 이슈는 \`.github/workflows/figma-watch.yml\` 이 하루 1회(UTC 00:10 · KST 09:10) 자동 생성합니다.</sub>
 `;
 
 fs.writeFileSync('/tmp/issue.md', body);

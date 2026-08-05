@@ -32,8 +32,13 @@ const EXIT = { SAME: 0, CHANGED: 10, ERROR: 1 };
     await new Promise(r => setTimeout(r, wait));
   }
   if (!res.ok) {
+    const body = (await res.text()).slice(0, 300);
     console.error(`실패: ${res.status} ${res.statusText}`);
-    console.error((await res.text()).slice(0, 300));
+    console.error(body);
+    // 만료·권한은 원인이 완전히 다릅니다 — 로그를 파고들지 않아도 알 수 있게 구분해 찍습니다.
+    if (/token expired/i.test(body)) console.error('원인: FIGMA_TOKEN 만료 — 새 토큰 발급 후 저장소 시크릿 교체가 필요합니다.');
+    else if (res.status === 403) console.error('원인: 권한 부족 — 토큰 스코프(File content: Read-only)와 파일 접근 권한을 확인하세요.');
+    else if (res.status === 404) console.error(`원인: 파일을 찾을 수 없음 — FIGMA_FILE_KEY(${FILE_KEY})를 확인하세요.`);
     process.exit(EXIT.ERROR);
   }
   const j = await res.json();
