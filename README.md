@@ -11,18 +11,27 @@
 
 > **GDS 는 Figma 파일을 기반으로 이 저장소에 선구축한다.**
 
-우선순위는 **원본 Figma 파일을 읽어 저장소에 정리하는 것**입니다. 원본 `.fig` 를 고치는 일은
-이 작업의 일부가 아닙니다 — 읽기 권한이 있든 없든 마찬가지입니다.
+### 작업 순서
+
+```
+① 원본 Figma 읽기  →  ② 저장소에서 차기 라이브러리를 만든다  →  ③ 라이브러리 반영  →  ④ Figma 원본에 덮어쓴다
+                        ← 지금 여기 (①~②)                        아직 안 함
+```
+
+저장소는 **기록장이 아니라 차기 라이브러리 그 자체**입니다. 모자란 곳을 찾으면 "원본이 이러니 기록만"이 아니라
+**고친 정의를 여기서 먼저 만들고**, 그다음 라이브러리 → Figma 원본 순서로 반영합니다.
 
 그래서 이 저장소는 이렇게 동작합니다.
 
 - 확정된 결정은 원본을 고치지 않고 **추출 결과 위에 덮어씁니다**
   (`data/color-decisions.json` · `data/type-decisions.json` → `build/canon-view.js`).
   원본이 나중에 바뀌어도 결정은 그대로 살아남고, 어긋나면 빌드가 실패합니다.
-- 원본 `.fig` 자체의 오류는 **고치지 않고 기록만** 합니다
-  (`data/color-decisions.json` 의 `sourceDefects`, 노드 ID 포함).
-  원본 반영 여부는 디자인팀이 별도로 판단할 사안이지 이 저장소의 대기 작업이 아닙니다.
-- Figma 는 **읽기 전용으로만** 씁니다 — 변수 조회, 스크린샷, 변경 감지.
+- 차기 라이브러리에 넣을 정의는 `to-be` 로 표시하고 **현재 이름을 함께 싣습니다** —
+  예: 타이포 토큰의 `$extensions.gds.libraryName`(차기) / `currentLibraryName`(현재).
+  반영할 때 무엇을 무엇으로 바꾸는지가 토큰만 봐도 드러납니다.
+- 원본 `.fig` 자체의 오류는 **지금은 고치지 않고 기록**합니다
+  (`data/color-decisions.json` 의 `sourceDefects`, 노드 ID 포함). ④ 단계에서 함께 반영합니다.
+- Figma 는 **현재 읽기 전용으로만** 씁니다 — 변수 조회, 스크린샷, 변경 감지.
 
 ---
 
@@ -53,9 +62,9 @@
 
 정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
 
-**28건 중 10건 해소 · 18건 남음**
+**29건 중 13건 해소 · 16건 남음**
 
-### 메운 것 10건
+### 메운 것 13건
 
 | | |
 |---|---|
@@ -69,18 +78,32 @@
 | `GAP-7` | `Navy/navy 040` → `Navy/Navy 040` 표기 통일 |
 | `GAP-9` | `(X)` 폐기 표시 스타일 2종을 정본에서 제외 |
 | `GAP-11` | 반경 7단계 값 실측 |
+| **`GAP-1`·`GAP-2`·`GAP-3`** | **텍스트 스타일 21종 정의** — `data/typography-library.json`. 라이브러리 5종은 스타일이 아니라 **그룹**이었고 이름에 단계 번호가 빠져 충돌한 것이었습니다 |
 
-### 남은 것 18건
+### 남은 것 16건
 
-| 높음 3건 | |
+| 높음 2건 | |
 |---|---|
-| `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. `noto_sans/title/medium` 이 노드마다 **14 · 16 · 18px** |
 | `GAP-12` | **부분 해소** — 색은 프리미티브 60 + 시맨틱 11 로 2계층이 섰고 Layout 이 Guidelines 로 들어왔습니다. 간격·타이포의 시맨틱 계층은 아직 없습니다 |
 | `GAP-27` | 확정한 `TQ-6`(Noto Sans KR 단일)과 ✅ Picker 본문(「숫자는 Rubik」)이 어긋남 |
 
-중간 9건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · ODA 색이 Badge/Brand 로 분리 · 그림자 효과가 Elevation 밖에 9종 더 · Components 25개 중 실측 6개 · Icon 규칙이 두 곳으로 흩어짐 · ✅ 페이지끼리 AOS/Web 폭 불일치(360 vs 365) · ✅ 인데 미해결 메모가 남은 페이지 · Bottom sheet 정의가 Picker ✅ 안에
+중간 9건 — 같은 값 두 이름 6쌍 · ODA 색이 Badge/Brand 로 분리 · 그림자 효과가 Elevation 밖에 9종 더 · Components 25개 중 실측 6개 · Icon 규칙이 두 곳으로 흩어짐 · ✅ 페이지끼리 AOS/Web 폭 불일치(360 vs 365) · ✅ 인데 미해결 메모가 남은 페이지 · Bottom sheet 정의가 Picker ✅ 안에 · **Title 8단계 중 2개가 라이브러리에 없음**
 
-낮음 6건 — `noto_sans/boby` 오타 · `Frosted Glass` 체계 밖 · 간격 배수 열 구멍 · 목차 오타 다수 · 히스토리 파일 위치 미기록 · 색 축약 표기
+낮음 5건 — `Frosted Glass` 체계 밖 · 간격 배수 열 구멍 · 목차 오타 다수 · 히스토리 파일 위치 미기록 · 색 축약 표기
+
+### 차기 라이브러리 — 텍스트 스타일 21종
+
+라이브러리 5종은 **스타일이 아니라 그룹**입니다. 그룹별 단계 수와 published 수가 맞아떨어집니다 — `Display` 3단계/3개, `Body` 4단계/4개. 이름에 **단계 번호가 빠져** 있어서 같은 이름이 여러 값으로 published 된 것이었습니다.
+
+| 그룹 | 단계 | 굵기 | 현재 이름 | 차기 이름 |
+|---|---|---|---|---|
+| Display | 3 | Bold | `noto_sans/display/bold` | `noto_sans/display/1~3` |
+| Heading | 4 | Bold | `noto_sans/heading/bold` | `noto_sans/heading/1~4` |
+| Title | 8 | Medium | `noto_sans/title/medium` (6개만) | `noto_sans/title/1~8` |
+| Body | 4 | Regular | `noto_sans/boby/regular` (오타) | `noto_sans/body/1~4` |
+| Caption | 2 | Regular | `noto_sans/caption/regular` | `noto_sans/caption/1~2` |
+
+굵기는 그룹이 결정하므로 이름에서 뺐습니다. 정의는 `data/typography-library.json`, 토큰에는 `$extensions.gds.libraryName`(차기) / `currentLibraryName`(현재)로 실립니다.
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
 
@@ -245,6 +268,7 @@ npm run check    # 정본·결정·산출물 기계 대조 (167개 항목)
 | `data/gds-gaps.json` | 디자인 시스템으로서 모자란 곳 — 해소·미해소 상태 포함 |
 | `data/gds-structure.json` | GDS 4계층 구조 + 항목별 Figma/저장소 반영 상태 |
 | `data/layout-tokens.json` | Layout 토큰 (Guidelines 계층) |
+| `data/typography-library.json` | 차기 라이브러리 텍스트 스타일 21종 (생성물) |
 | `docs/GDS-uiux-guide.md` | UX 라이팅 규칙 + 그래픽 3단계 (생성물) |
 | `docs/GDS-typo-v0.2.md` | 타이포 정리안 |
 
