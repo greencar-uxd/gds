@@ -183,7 +183,19 @@
       "finding": "변수화가 색과 반경에만 돼 있고 간격·타이포는 표와 스타일로만 존재합니다. 프리미티브→시맨틱→컴포넌트 3계층이 색에서만 성립합니다.",
       "evidence": "라이브러리 변수 컬렉션 — Collection(color) · semantic(float/Radius)",
       "fix": "저장소 토큰은 네 영역 모두 같은 3계층으로 내보내고, 라이브러리에 없는 계층은 저장소가 정의한 것으로 표시합니다.",
-      "progress": "부분 해소 — 색은 프리미티브 60 + 시맨틱 11 로 2계층이 섰고, Layout 이 Guidelines 계층으로 들어왔습니다. 간격·타이포의 시맨틱 계층은 아직 없습니다."
+      "progress": "부분 해소 — 색은 프리미티브 60 + 시맨틱 11, 타이포는 프리미티브 21 + 시맨틱 8(계열 5는 미확정), Layout 10 이 Guidelines 계층으로 들어왔습니다. 남은 것은 간격의 시맨틱 계층입니다 — Spacing system ✅(43242:4209) 표는 Spacing / px / 배수 세 열뿐이고 Usage 열이 없어, 정본에 간격의 쓰임새 이름이 존재하지 않습니다. 없는 것을 지어내지 않고 남겨 둡니다.",
+      "typeSemantic": {
+        "source": "Typography system ✅ 42066:25472 · Type scale 표 21행 Usage 열",
+        "tokens": 8,
+        "families": 5,
+        "note": "쓰임새가 한 단계만 가리키면 토큰, 여러 단계를 가리키면 계열로 남깁니다 — data/typography-semantic.json"
+      },
+      "spacingSemantic": {
+        "finding": "Spacing system ✅ 표에 Usage 열이 없습니다 (열 = Spacing · px · 배수).",
+        "evidence": "44090:19455 List — Section 1 머리행 텍스트 \"Spacing\" / \"px\" / \"배수 (1unit=2px)\"",
+        "onlyUsageLevel": "Layout for ios/aos/web ✅ 의 마진·헤더·세이프에어리어 10종이 유일한 쓰임새 이름입니다.",
+        "status": "open"
+      }
     },
     {
       "id": "GAP-13",
@@ -313,7 +325,9 @@
       "severity": "높음",
       "finding": "확정한 TQ-6(서체 Noto Sans KR 단일)과 ✅ Picker 페이지 본문이 어긋납니다. 본문은 \"숫자에 해당되는 부분은 Typography system 에 지정되어있는 Rubik 서체 사용\"이라고 명시합니다.",
       "evidence": "get_metadata 42073:63438 (Picker ✅) · TQ-6 확정 2026-08-05",
-      "fix": "결정은 유지하되 정본 본문과 어긋난다는 사실을 남깁니다. Typography system ✅ 표 21단계에는 Rubik 이 없으므로, 본문이 가리키는 \"Typography system 에 지정된 Rubik\"이 무엇인지 확인이 필요합니다."
+      "fix": "결정은 유지하되 정본 본문과 어긋난다는 사실을 남깁니다. Typography system ✅ 표 21단계에는 Rubik 이 없으므로, 본문이 가리키는 \"Typography system 에 지정된 Rubik\"이 무엇인지 확인이 필요합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Typography system ✅(42066:25472) 본문을 직접 읽어 확인했습니다. 페이지에 \"Rubik\"은 한 번도 나오지 않고(레이어 이름 3,492개 중 0건), 본문은 \"[Noto Sans KR]\"과 \"한글·영문·숫자의 일관된 어우러짐과 명확한 정보 위계 전달을 위해 Noto Sans KR을 지카 서체로 사용합니다\"라고 적습니다. Type scale 표의 Usage 열은 오히려 Title 1(24/Medium)=Time picker_number, Title 2(22/Medium)=Time picker_date 로 숫자 영역을 Noto Sans KR 단계에 배정합니다. 따라서 TQ-6(Noto Sans KR 단일)은 그대로 서고, Picker 본문의 Rubik 문장은 정본이 가리키는 곳에 실물이 없는 낡은 참조입니다 — SD-18 로 기록합니다."
     },
     {
       "id": "GAP-28",

@@ -347,6 +347,14 @@
         "problem": "이름 가운데 공백이 아니라 제어문자 U+2028(LINE SEPARATOR)이 들어 있음",
         "actual": "화면에는 \"Default Btn\" 으로 보이지만 실제 문자는 공백이 아닙니다",
         "impact": "SD-13(U+0008)과 같은 건입니다. 이름으로 검색·매핑하면 조용히 실패합니다 — 이 저장소는 결정 파일에 실제 문자를 그대로 기록해 대조가 깨지지 않게 했습니다"
+      },
+      {
+        "id": "SD-18",
+        "node": "42073:63438 (Picker ✅) · 42066:25472 (Typography system ✅)",
+        "where": "Picker ✅ 본문",
+        "problem": "본문이 \"숫자에 해당되는 부분은 Typography system 에 지정되어있는 Rubik 서체 사용\"이라고 적지만, 그 Typography system ✅ 페이지에는 Rubik 이 없습니다 — 레이어 이름 3,492개 가운데 0건이고 본문은 Noto Sans KR 단일을 선언합니다.",
+        "actual": "Type scale 표 Usage 열은 숫자 영역을 Title 1(24/Medium) · Title 2(22/Medium) 로 배정합니다",
+        "impact": "가리키는 곳에 실물이 없는 참조입니다. TQ-6(Noto Sans KR 단일)은 그대로 서고, Picker 본문 문장이 낡은 쪽입니다 — GAP-27 해소 근거"
       }
     ]
   },
