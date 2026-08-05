@@ -10,6 +10,13 @@ const ROOT = path.resolve(__dirname, '..');
 
 const D = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foundation-data.json'), 'utf8'));
 const DEC = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
+// 정본의 근거는 «GDS (그린카 디자인 시스템)» 라이브러리입니다 — ✅ 페이지의 스와치 그림이 아닙니다.
+// 그림에는 흰색(Map Marker/Active)처럼 안 보이는 색이 빠져 있었습니다. 강민관 지시 2026-08-05.
+const LIB = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'gds-library.json'), 'utf8'));
+const GAPS = (() => {
+  const p = path.join(ROOT, 'data', 'gds-gaps.json');
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
+})();
 
 const renameMap = new Map();
 for (const r of DEC.renames) {
@@ -17,7 +24,30 @@ for (const r of DEC.renames) {
   renameMap.set(r.from, r);
 }
 
-const raw = (((D.canon || {}).color || {}).styles) || [];
+const libFill = LIB.fill.map(s => ({ name: s.name, hex: s.hex, group: s.group, label: s.name.split('/').pop() }));
+
+// 정본 안에서의 재정의 — 원본 .fig 는 고치지 않으므로 여기서 적용합니다.
+//  splits       한 스타일을 불투명도 단계로 나눔 (CQ-9 · Dim Layer 060/080)
+//  canonRetires 정본 이름 하나를 다른 정본 토큰으로 흡수 (CQ-9 · Info Box BG)
+const splits = (DEC.splits || []).filter(s => s.status === 'confirmed');
+const canonRetires = (DEC.canonRetires || []).filter(r => r.status === 'confirmed');
+const splitFrom = new Set(splits.map(s => s.token));
+const retiredNames = new Set(canonRetires.map(r => r.token));
+const splitMissing = splits.filter(s => !libFill.some(x => x.name === s.token)).map(s => s.token);
+const retireMissing = canonRetires.filter(r => !libFill.some(x => x.name === r.token)).map(r => r.token);
+
+const raw = libFill
+  .filter(s => !splitFrom.has(s.name) && !retiredNames.has(s.name))
+  .concat(splits.flatMap(s => s.into.map(t => ({
+    name: t.token, hex: t.hex, alpha: t.alpha,
+    group: s.token.split('/')[0], label: t.token.split('/').pop(),
+    splitFrom: s.token, splitId: s.id,
+  }))));
+// 흡수 대상이 실제로 정본에 있는지 — 없으면 결정 파일이 낡은 것입니다.
+const retireTargetMissing = canonRetires.filter(r => !raw.some(x => x.name === r.into)).map(r => r.into);
+// ✅ 스와치 그림에서 뽑았던 옛 목록 — 무엇이 빠져 있었는지 보여주려고만 둡니다.
+const swatchOnly = (((D.canon || {}).color || {}).styles) || [];
+const missedBySwatch = libFill.filter(s => !swatchOnly.some(x => x.name === s.name)).map(s => s.name);
 
 // 값 교체 (data/color-decisions.json · valueOverrides) — 원본 .fig 를 못 고치므로 여기서 덮어씁니다.
 const overrideMap = new Map();
@@ -89,9 +119,12 @@ const colors = raw.concat(adopted.map(a => ({
 const mainStyle = colors.find(c => c.isMain) || null;
 
 module.exports = {
-  D, DEC, colors, mainStyle,
+  D, DEC, LIB, GAPS, colors, mainStyle, missedBySwatch,
+  canonBasis: DEC.canonBasis || null,
+  libFill, splits, canonRetires,
+  excludedLibraries: LIB.excludedLibraries || [],
   renames: [...renameMap.values()],
-  integrity: { missing, hexMismatch, overrideMissing, overrideStale, additionUnknown, additionStale, additionCollision },
+  integrity: { missing, hexMismatch, overrideMissing, overrideStale, additionUnknown, additionStale, additionCollision, splitMissing, retireMissing, retireTargetMissing },
   figmaSync: DEC.figmaSync || null,
   figmaVariables: FIGVARS,
   additions, adopted,
@@ -119,5 +152,5 @@ module.exports = {
   closedDecisions: (DEC.open || []).filter(o => o.status === 'closed'),
   stepExceptions: (DEC.rules.stepExceptions && DEC.rules.stepExceptions.status === 'confirmed')
     ? DEC.rules.stepExceptions : null,
-  orphanDispositions: (DEC.orphanDispositions || []).filter(o => o.status === 'confirmed'),
+  orphanDispositions: [],  // 철회 — 레거시 기반 판정이었습니다
 };

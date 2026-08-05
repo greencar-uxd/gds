@@ -6,11 +6,9 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 
 const TEMPLATE = path.join(ROOT, 'site', 'canon.html');       // 정본 사이트 → index.html
-const DIAG = path.join(ROOT, 'site', 'template.html');        // 진단 리포트 → diagnostics.html
 const DATA = path.join(ROOT, 'data', 'foundation-data.json');
 const OUT_DIR = path.join(ROOT, 'dist');
 const OUT = path.join(OUT_DIR, 'index.html');
-const OUT_DIAG = path.join(OUT_DIR, 'diagnostics.html');
 
 // 하위 경로 섹션 — site/<name>.html → dist/<name>/index.html → /gds/<name>
 // 데이터 주입이 필요 없는 정적 섹션입니다. 늘리려면 여기에 이름만 추가하면 됩니다.
@@ -27,14 +25,17 @@ injected.canon.color.styles = VIEW.colors.map(c => ({
   ...(c.renamed ? { was: c.originalName } : {}),
   ...(c.overridden ? { wasHex: c.originalHex } : {}),
   ...(c.isMain ? { main: true } : {}),
-  ...(c.added ? { added: true, sourceName: c.sourceName } : {}),
+  ...(c.splitFrom ? { splitFrom: c.splitFrom } : {}),
   ...(c.alpha != null ? { alpha: c.alpha } : {}),
 }));
 injected.canon.color.figmaSync = VIEW.figmaSync;
+injected.canon.color.basis = VIEW.canonBasis;
+injected.canon.color.library = { name: VIEW.LIB.canonLibrary.name, checkedAt: VIEW.LIB.checkedAt, excluded: VIEW.excludedLibraries };
+injected.canon.color.gaps = VIEW.GAPS ? VIEW.GAPS.items : [];
 injected.canon.color.decisions = {
   decidedBy: VIEW.DEC.decidedBy, decidedAt: VIEW.DEC.decidedAt,
-  step: VIEW.DEC.rules.step.value, mergeBase: VIEW.DEC.rules.mergeBase.value,
-  main: VIEW.DEC.main, renames: VIEW.renames, open: VIEW.openDecisions,
+  step: VIEW.DEC.rules.step.value, basis: VIEW.canonBasis && VIEW.canonBasis.value,
+  main: VIEW.DEC.main, renames: VIEW.renames, open: VIEW.openDecisions, settled: VIEW.closedDecisions,
 };
 const TDEC_SITE = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
 injected.canon.typography.decisions = TDEC_SITE;
@@ -46,7 +47,7 @@ if (TDEC_SITE.usage && TDEC_SITE.usage.status === 'confirmed') {
 }
 const raw = JSON.stringify(injected);
 
-if (!tpl.includes('__DATA__')) throw new Error('template.html 에 __DATA__ 자리표시자가 없습니다');
+if (!tpl.includes('__DATA__')) throw new Error('canon.html 에 __DATA__ 자리표시자가 없습니다');
 
 // </script> 가 JSON 문자열 안에 있으면 스크립트 블록이 조기 종료됩니다
 const safe = raw.replace(/<\//g, '<\\/');
@@ -55,11 +56,6 @@ const html = tpl.replace('__DATA__', () => safe);
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(OUT, FONT.applyFont(html));
 fs.writeFileSync(path.join(OUT_DIR, '.nojekyll'), '');
-
-// 진단 리포트 — 레거시 현황. 정본과 섞이지 않도록 별도 페이지로 분리합니다.
-const diagTpl = fs.readFileSync(DIAG, 'utf8');
-const diag = diagTpl.replace('__DATA__', () => safe);
-fs.writeFileSync(OUT_DIAG, FONT.applyFont(diag));
 
 for (const name of SUBPAGES) {
   const src = path.join(ROOT, 'site', `${name}.html`);
@@ -73,4 +69,4 @@ for (const name of SUBPAGES) {
 require('./decisions.js');
 
 console.log(`  정본 폰트 주입 — ${FONT.FAMILY} ${FONT.WEIGHTS.join('/')} (서브셋 임베드)`);
-console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB) · dist/diagnostics.html (${Math.round(diag.length / 1024)} KB)`);
+console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB)`);

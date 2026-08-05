@@ -199,7 +199,7 @@ if (VIEW.mainStyle) {
 }
 json.$notes.colorDecisions = {
   decidedBy: VIEW.DEC.decidedBy, decidedAt: VIEW.DEC.decidedAt,
-  stepRule: VIEW.DEC.rules.step.value, mergeBase: VIEW.DEC.rules.mergeBase.value,
+  stepRule: VIEW.DEC.rules.step.value, canonBasis: VIEW.canonBasis && VIEW.canonBasis.value,
   stepExceptions: VIEW.stepExceptions ? VIEW.stepExceptions.value : [],
   valueOverrides: VIEW.valueOverrides.map(o => ({ token: o.token, from: o.from, to: o.to })),
   closed: VIEW.closedDecisions.map(o => ({ id: o.id, resolution: o.resolution })),

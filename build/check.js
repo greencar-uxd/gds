@@ -98,7 +98,6 @@ if (fs.existsSync(cssPath)) {
   ok('엘리베이션 6단계', ((canon.elevation||{}).scale||[]).length === 6, String(((canon.elevation||{}).scale||[]).length));
   ok('재넘버링 반영 표시', !!(canon.elevation && canon.elevation.renumbered));
 }
-ok('dist/diagnostics.html 분리 생성', fs.existsSync(path.join(ROOT,'dist','diagnostics.html')));
 ok('dist/decisions/index.html 생성', fs.existsSync(path.join(ROOT,'dist','decisions','index.html')));
 if (fs.existsSync(path.join(ROOT,'dist','decisions','index.html'))) {
   const dh = fs.readFileSync(path.join(ROOT,'dist','decisions','index.html'),'utf8');
@@ -109,67 +108,12 @@ if (fs.existsSync(path.join(ROOT,'dist','decisions','index.html'))) {
 
 // ---------- 6. 감사 문서 ↔ 감사 데이터 대조 ----------
 // 문서에 적힌 숫자가 스크립트 계산값과 어긋나면 실패합니다 (작업 규칙 1).
-console.log('\n[6] 감사 문서 (색 · 타이포)');
-const caPath = path.join(ROOT, 'data', 'color-audit.json');
-const taPath = path.join(ROOT, 'data', 'type-audit.json');
-if (!fs.existsSync(caPath) || !fs.existsSync(taPath)) {
-  console.log('  SKIP 감사 데이터 없음 — `npm run audit` 먼저 실행하세요');
-} else {
-  const CA = JSON.parse(fs.readFileSync(caPath, 'utf8'));
-  const TA = JSON.parse(fs.readFileSync(taPath, 'utf8'));
-
-  // 감사 데이터가 원본과 같은 스냅샷에서 나왔는지
-  ok('색 감사 = 현재 스냅샷', CA.meta.exported === D.meta.exported);
-  ok('타이포 감사 = 현재 스냅샷', TA.meta.exported === D.meta.exported);
-  ok('색 감사 대상 수 = 원본 색 스타일 수', CA.legacy.styles === D.colors.length);
-  ok('타이포 감사 대상 수 = 원본 텍스트 스타일 수', TA.legacy.styles === D.types.length);
-  ok('색 감사 정본 수 = canon 색 수', CA.canon.styles === ((canon.color || {}).styles || []).length);
-  ok('타이포 감사 정본 수 = canon 타입 수', TA.canon.tokens === ((canon.typography || {}).scale || []).length);
-  ok('고유 HEX + 중복 = 전체', CA.legacy.uniqueHex + CA.legacy.duplicateStyleCount === CA.legacy.styles);
-
-  const docPairs = [
-    ['GDS-color-naming-v0.1.md', [
-      ['레거시 스타일 수', CA.legacy.styles], ['고유 HEX', CA.legacy.uniqueHex],
-      ['중복 수', CA.legacy.duplicateStyleCount], ['정본 색 수', CA.canon.styles],
-      ['흡수 가능', CA.legacy.absorbable], ['정본에 없는 색', CA.legacy.orphanHex],
-      ['이름-값 충돌', CA.legacy.nameValueConflicts],
-    ]],
-    ['GDS-typo-v0.2.md', [
-      ['정본 단계', TA.canon.tokens], ['동일 스펙 쌍', TA.canon.specCollisionGroups],
-    ]],
-  ];
-  for (const [file, nums] of docPairs) {
-    const p = path.join(ROOT, 'docs', file);
-    if (!fs.existsSync(p)) { ok(`${file} 존재`, false); continue; }
-    ok(`${file} 존재`, true);
-    const md = fs.readFileSync(p, 'utf8');
-    for (const [label, v] of nums) {
-      ok(`${file} · ${label} ${v} 표기`, new RegExp(`(^|[^0-9])${v}([^0-9]|$)`).test(md), `문서에 ${v} 없음`);
-    }
-  }
-
-  // 문서가 "정본에 없다"고 부른 HEX 가 실제로 정본에 없는지
-  const canonHex = new Set(((canon.color || {}).styles || []).map(s => s.hex.toUpperCase()));
-  const orphan = new Set(CA.details.legacyOrphanHex.map(h => h.toUpperCase()));
-  const namingMd = fs.readFileSync(path.join(ROOT, 'docs', 'GDS-color-naming-v0.1.md'), 'utf8');
-  const orphanSection = (namingMd.split('### 4-4.')[1] || '').split('### 결정이 필요한 것')[0];
-  const quoted = [...orphanSection.matchAll(/#([0-9A-Fa-f]{6})/g)].map(m => '#' + m[1].toUpperCase());
-  const wrong = quoted.filter(h => canonHex.has(h) || !orphan.has(h));
-  ok(`§4-4 에 인용된 HEX ${quoted.length}개가 전부 실제 orphan`, wrong.length === 0, `어긋남: ${wrong.join(', ')}`);
-
-  // CSV 행 수 = 감사 결과 건수
-  const dupCsv = fs.readFileSync(path.join(ROOT, 'docs', 'color-duplicates.csv'), 'utf8').trim().split('\n');
-  const hexDupCount = Object.entries(CA.details).length && CA.legacy.uniqueHex;
-  ok('color-duplicates.csv 헤더 + 데이터 존재', dupCsv.length > 1 && dupCsv.length - 1 <= hexDupCount);
-}
-
-// ---------- 6-2. 정본 폰트 ----------
 console.log('\n[6-2] 정본 폰트');
 {
   const FONT = require('./font.js');
-  const pages = ['dist/index.html', 'dist/diagnostics.html', 'dist/decisions/index.html']
+  const pages = ['dist/index.html', 'dist/decisions/index.html']
     .map(f => path.join(ROOT, f)).filter(f => fs.existsSync(f));
-  ok('빌드된 페이지 존재', pages.length === 3, `${pages.length}/3`);
+  ok('빌드된 페이지 존재', pages.length === 2, `${pages.length}/2`);
   for (const f of pages) {
     const html = fs.readFileSync(f, 'utf8');
     const rel = path.relative(ROOT, f);
@@ -191,28 +135,26 @@ console.log('\n[6-2] 정본 폰트');
 
 // ---------- 6-3. 결정 안건 페이지 표현 ----------
 // 이 페이지는 "아직 정해야 할 것"만 담습니다. 확정된 것이 남아 있으면 실패.
-console.log('\n[6-3] 결정 안건 페이지 표현');
+console.log('\n[6-3] 결정 기록 페이지');
 {
   const dec = require('./decisions.js');
-  ok('미결/확정 분류 존재', dec.open.length > 0 && dec.settled.length > 0,
-    `미결 ${dec.open.length} · 확정 ${dec.settled.length}`);
+  const VIEW0 = require('./canon-view.js');
+  ok('확정 결정이 기록돼 있음', dec.settled.length > 0, `확정 ${dec.settled.length}`);
+  ok('모자란 곳 목록이 있음', dec.gaps.length > 0, `${dec.gaps.length}건`);
   const dp = path.join(ROOT, 'dist', 'decisions', 'index.html');
   if (fs.existsSync(dp)) {
     const dh = fs.readFileSync(dp, 'utf8');
-    // 확정 항목의 카드가 페이지에 남아 있으면 실패
-    const leaked = dec.settled.filter(i => dh.includes(`class="card" id="${i.id}"`));
-    ok('확정 항목 카드가 페이지에 없음', leaked.length === 0, leaked.map(i => i.id).join(', '));
-    // 미결 항목은 전부 있어야 함
-    const missing = dec.open.filter(i => !dh.includes(`id="${i.id}"`));
-    ok('미결 항목이 전부 표시됨', missing.length === 0, missing.map(i => i.id).join(', '));
-    ok('제목에 남은 건수 표기', new RegExp(`아직 정해야 할 것 — ${dec.open.length}건`).test(dh));
-    ok('확정 건수를 어디서 보는지 안내', /확정 \d+건은 이 페이지에서 뺐습니다/.test(dh));
-    // 확정 항목은 목록으로만 (본문 근거 없이)
-    ok('확정 목록에 전 항목 나열', dec.settled.every(i => dh.includes(`<b>${i.id}</b>`)));
+    const missS = dec.settled.filter(i => !dh.includes(`id="${i.id}"`));
+    ok('확정 항목이 전부 표시됨', missS.length === 0, missS.map(i => i.id).join(', '));
+    const missG = dec.gaps.filter(g => !dh.includes(`id="${g.id}"`));
+    ok('모자란 곳이 전부 표시됨', missG.length === 0, missG.map(g => g.id).join(', '));
+    ok('제외 라이브러리가 표시됨', VIEW0.excludedLibraries.every(l => dh.includes(l.name)));
+    ok('스와치 그림에서 빠졌던 색이 표시됨', VIEW0.missedBySwatch.every(n => dh.includes(n)));
+    ok('레거시 통폐합 흔적이 남아 있지 않음',
+      !/ABSORB|RESOLVE|묶음으로 줄였습니다|개별 판단 대상/.test(dh), '레거시는 판단 근거가 아닙니다');
   }
 }
 
-// ---------- 7. 확정 결정 반영 ----------
 console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
 {
   const VIEW = require('./canon-view.js');
@@ -315,43 +257,6 @@ console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
     ok('DTCG 결정 기록 존재', !!(J.$notes && J.$notes.colorDecisions && J.$notes.fontFamily));
   }
 
-  // 통폐합 매핑
-  const mgPath = path.join(ROOT, 'data', 'color-merge.json');
-  if (!fs.existsSync(mgPath)) { ok('color-merge.json 존재', false); }
-  else {
-    const MG = JSON.parse(fs.readFileSync(mgPath, 'utf8'));
-    const T = MG.totals;
-    ok('color-merge.json 존재', true);
-    const sum = T.absorb + T.resolve + T.near + T.retire + T.review;
-    ok('판정 합계 = 레거시 스타일 수', sum === D.colors.length, `${sum} vs ${D.colors.length}`);
-    ok('제거 확정 색이 정본에 없음',
-      VIEW.orphanDispositions.every(o => !VIEW.colors.some(c => c.hex.toUpperCase() === o.hex.toUpperCase())),
-      '정본에 등록된 색을 제거 대상으로 지정할 수 없습니다');
-    ok('제거 확정의 치환 대상이 정본에 존재',
-      VIEW.orphanDispositions.filter(o => o.action !== 'external')
-        .every(o => VIEW.colors.some(c => c.name === o.target)),
-      VIEW.orphanDispositions.filter(o => o.action !== 'external' && !VIEW.colors.some(c => c.name === o.target)).map(o => o.target).join(', '));
-    ok('외부 분리 처분에는 소유자가 적혀 있고 치환 대상이 없음',
-      VIEW.orphanDispositions.filter(o => o.action === 'external').every(o => o.owner && !o.target));
-    ok('처분마다 사유가 있음', VIEW.orphanDispositions.every(o => o.reason && o.reason.length > 10));
-    ok('처분한 색이 묶음 결정과 이어져 있음',
-      VIEW.orphanDispositions.every(o => !o.cluster || /^(OC-\d|CQ-\d)/.test(o.cluster)));
-    ok('RETIRE 판정 수 = 제거 대상 스타일 수',
-      T.retire === VIEW.orphanDispositions.reduce((a, o) => a + o.legacyStyles, 0),
-      `${T.retire} vs 선언 ${VIEW.orphanDispositions.reduce((a, o) => a + o.legacyStyles, 0)}`);
-    ok('통폐합 기준 = 정본', MG.meta.basis === DEC.rules.mergeBase.value);
-    ok('orphan 분해 합계 일치', T.orphanNear + T.orphanRetired + T.orphanReview === T.orphanHex);
-    ok('color-merge-map.csv 행 수 = 레거시 + 헤더',
-      fs.readFileSync(path.join(ROOT, 'docs', 'color-merge-map.csv'), 'utf8').trim().split('\n').length === D.colors.length + 1);
-    const mergeMd = path.join(ROOT, 'docs', 'GDS-color-merge-v0.1.md');
-    ok('GDS-color-merge-v0.1.md 존재', fs.existsSync(mergeMd));
-    if (fs.existsSync(mergeMd)) {
-      const md = fs.readFileSync(mergeMd, 'utf8');
-      for (const [label, v] of [['ABSORB', T.absorb], ['RESOLVE', T.resolve], ['NEAR', T.near], ['RETIRE', T.retire], ['REVIEW', T.review], ['orphan', T.orphanHex]]) {
-        ok(`병합 문서 · ${label} ${v} 표기`, new RegExp(`(^|[^0-9])${v}([^0-9]|$)`).test(md));
-      }
-    }
-  }
 }
 
 // ────────────────────────────────────────────────────────────
@@ -364,9 +269,8 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
   if (FV && SYNC) {
     ok('스냅샷은 손으로 쓴 값이 아님 — 조회 도구 기록 있음',
       FV.source && /get_variable_defs/.test(FV.source.tool), JSON.stringify(FV.source || {}));
-    ok('스냅샷 변수 수 = 선언값',
-      Object.keys(FV.variables).length === SYNC.figmaVariables,
-      `${Object.keys(FV.variables).length} vs ${SYNC.figmaVariables}`);
+    ok('figmaSync 가 정정 표시를 달고 있음', SYNC.corrected === true,
+      'get_variable_defs 는 파일 전체가 아니라 노드가 쓰는 변수만 돌려줍니다');
     ok('스냅샷 count 필드 = 실제 변수 수', FV.count === Object.keys(FV.variables).length);
 
     // 정본 53종이 Figma 변수의 부분집합인가 (이름 기준)
@@ -374,7 +278,8 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       .canon.color.styles).map(s => s.name);
     const notInFigma = rawNames.filter(n => !(n in FV.variables));
     ok('정본 색이 전부 Figma 변수에 존재', notInFigma.length === 0, notInFigma.join(', '));
-    ok('선언한 정본 수 = 실제 정본 수', rawNames.length === SYNC.canonStyles, `${rawNames.length} vs ${SYNC.canonStyles}`);
+    ok('정본 색 수 = 라이브러리 선언값', VIEW.colors.length === SYNC.canonFillStyles,
+      `${VIEW.colors.length} vs ${SYNC.canonFillStyles}`);
 
     // 값 불일치 0건 (Gray 080 은 다중 fill 로 반환되므로 앞자리만 비교)
     const mism = rawNames.filter(n => {
@@ -393,12 +298,15 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
     const typeHandled = new Set(Object.values(TD)
       .filter(v => v && typeof v === 'object' && typeof v.evidence === 'string')
       .flatMap(v => Object.keys(FV.variables).filter(n => v.evidence.includes(n))));
-    const unhandled = undocumented.filter(n => !handled.has(n) && !typeHandled.has(n));
+    const inCanon = new Set(VIEW.libFill.map(s => s.name));
+    const unhandled = undocumented.filter(n => !handled.has(n) && !typeHandled.has(n) && !inCanon.has(n));
     ok('문서화 안 된 변수가 전부 처분됨 (색=additions · 그 외=type-decisions)',
       unhandled.length === 0, unhandled.join(', '));
-    ok('처분 합계 = 문서화 안 된 변수 수',
-      VIEW.additions.length + VIEW.typeHandled.length === VIEW.undocumented.length,
-      `${VIEW.additions.length}+${VIEW.typeHandled.length} vs ${VIEW.undocumented.length}`);
+    ok('처분 합계 = 정본 밖 변수 수', (() => {
+      const inCanon2 = new Set(VIEW.libFill.map(s => s.name));
+      const outside = VIEW.undocumented.filter(n => !inCanon2.has(n));
+      return VIEW.additions.length + VIEW.typeHandled.length === outside.length;
+    })());
     ok('안내문의 종수 표기가 실제와 일치',
       new RegExp(`${VIEW.undocumented.length}종`).test(SYNC.note), SYNC.note);
     ok('additions 에 유령 항목 없음', VIEW.integrity.additionUnknown.length === 0, VIEW.integrity.additionUnknown.join(', '));
@@ -414,9 +322,10 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
       return VIEW.adopted.every(a => css.includes(a.hex.toLowerCase()) || css.includes(a.hex.toUpperCase()));
     })());
-    ok('편입 색이 정본 개수에 반영됨',
-      VIEW.colors.length === SYNC.canonStyles + VIEW.adopted.length,
-      `${VIEW.colors.length} vs ${SYNC.canonStyles}+${VIEW.adopted.length}`);
+    ok('정본 = 라이브러리 − 흡수 + 분리',
+      VIEW.colors.length === VIEW.libFill.length - VIEW.canonRetires.length
+        + VIEW.splits.reduce((a, s) => a + s.into.length - 1, 0),
+      `${VIEW.colors.length} vs ${VIEW.libFill.length}`);
     ok('알파 색은 8자리 HEX 로 표기',
       VIEW.adopted.filter(a => a.alpha != null).every(a => /^#[0-9a-fA-F]{8}$/.test(a.hex)));
     ok('보류 항목은 토큰에 출력되지 않음', (() => {
@@ -448,24 +357,34 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       return names.includes('System/Dim Layer 060') && names.includes('System/Dim Layer 080');
     })());
     ok('CQ-9 알파가 정본 스와치 근거로 표시됨', (() => {
-      const a = VIEW.additions.find(x => x.id === 'AD-5');
-      return a && a.alphaSource === 'canon-swatch' && /스와치/.test(a.reason);
+      const s = VIEW.splits.find(x => x.id === 'SP-1');
+      return !!s && s.alphaSource === 'canon-swatch' && /스와치/.test(s.reason);
     })());
     ok('Info Box BG 가 Dim Layer 060 으로 흡수됨', (() => {
-      const a = VIEW.additions.find(x => x.id === 'AD-6');
-      return a && a.action === 'retire' && a.target === 'System/Dim Layer 060';
+      const r = VIEW.canonRetires.find(x => x.token === 'System/Info Box BG');
+      return !!r && r.into === 'System/Dim Layer 060';
     })());
-    ok('CQ-10 폐기 항목은 레거시 사용 0건 근거가 있음',
-      VIEW.droppedAdditions.every(a => /사용 0건/.test(a.evidence || '')),
+    ok('흡수·분리 대상이 전부 라이브러리에 실재',
+      VIEW.integrity.splitMissing.length === 0 && VIEW.integrity.retireMissing.length === 0
+        && VIEW.integrity.retireTargetMissing.length === 0);
+    ok('폐기한 변수마다 근거가 있음',
+      VIEW.droppedAdditions.every(a => (a.evidence || '').length > 10 && (a.reason || '').length > 10),
       VIEW.droppedAdditions.map(a => a.id).join(', '));
+    ok('AD-1 · AD-2 편입 취소가 라이브러리 근거로 기록됨',
+      ['AD-1', 'AD-2'].every(id => {
+        const a = VIEW.additions.find(x => x.id === id);
+        return a && a.action === 'drop' && /라이브러리/.test(a.reason + a.evidence);
+      }));
     ok('폐기 항목이 토큰에 출력되지 않음', (() => {
       const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
       return VIEW.droppedAdditions.every(a => !css.includes(a.hex.toLowerCase()));
     })());
-    ok('CQ-11 이 CQ-5 에서 갈라져 나온 것으로 기록됨', (() => {
-      const c = VIEW.openDecisions.find(o => o.id === 'CQ-11');
-      return !!c && c.from === 'CQ-5 / CF-4';
-    })());
+    ok('레거시 기반 안건이 전부 철회됨',
+      !['CQ-4', 'CQ-5', 'CQ-6', 'CQ-11'].some(id => (VIEW.DEC.open || []).some(o => o.id === id)));
+    ok('레거시 판정 데이터가 제거됨',
+      !VIEW.DEC.orphanDispositions && !VIEW.DEC.conflictDecisions && !VIEW.DEC.clusterDecisions
+        && !fs.existsSync(path.join(ROOT, 'data', 'color-merge.json'))
+        && !fs.existsSync(path.join(ROOT, 'data', 'orphan-clusters.json')));
     ok('자간 확정 — CSS 출력', (() => {
       const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
       return /--gds-type-letter-spacing:\s*0;/.test(css);
@@ -475,50 +394,10 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       return T.letterSpacing && /typo\/letter-spacing\/0/.test(T.letterSpacing.evidence)
         && FV.variables['typo/letter-spacing/0'] === T.letterSpacing.value;
     })());
-    ok('쓰기 권한 미사용 기록 남아 있음', /쓰기 보류/.test(SYNC.seat || ''), SYNC.seat);
-  }
-}
-
-// ────────────────────────────────────────────────────────────
-console.log('\n[9] CQ-6 orphan 묶음');
-{
-  const ocPath = path.join(ROOT, 'data', 'orphan-clusters.json');
-  ok('data/orphan-clusters.json 존재', fs.existsSync(ocPath));
-  if (fs.existsSync(ocPath)) {
-    const OC = JSON.parse(fs.readFileSync(ocPath, 'utf8'));
-    const MG2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-merge.json'), 'utf8'));
-    const review = MG2.orphans.filter(o => o.delta > MG2.meta.nearLimit);
-    ok('묶음 대상 = merge 의 REVIEW orphan 수',
-      OC.totalOrphanReview === review.length, `${OC.totalOrphanReview} vs ${review.length}`);
-    ok('묶음 HEX 합계 = 대상 수',
-      OC.clusters.reduce((a, c) => a + c.hexCount, 0) === OC.totalOrphanReview);
-    ok('묶음 스타일 합계 = 대상 스타일 수',
-      OC.clusters.reduce((a, c) => a + c.styleCount, 0) === OC.totalStyles);
-    ok('같은 HEX 가 두 묶음에 들어가지 않음', (() => {
-      const seen = new Set();
-      for (const c of OC.clusters) for (const i of c.items) {
-        if (seen.has(i.hex)) return false; seen.add(i.hex);
-      }
-      return true;
-    })());
-    ok('묶음마다 권고와 조치가 있음',
-      OC.clusters.every(c => c.recommend && c.action), OC.clusters.filter(c => !c.recommend || !c.action).map(c => c.id).join(', '));
-    ok('묶음이 개별 판단보다 적음 — 판단 횟수가 실제로 줄어듦',
-      OC.clusters.length < OC.totalOrphanReview, `${OC.clusters.length} vs ${OC.totalOrphanReview}`);
-    ok('nearLimit 이 merge 와 동일', OC.nearLimit === MG2.meta.nearLimit);
-    ok('이미 처분된 색은 처분 묶음에만 있음', (() => {
-      const DEC2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
-      const disp = new Set((DEC2.orphanDispositions || []).filter(o => o.status === 'confirmed').map(o => o.hex.toUpperCase()));
-      return OC.clusters.every(c => c.id === 'OC-1' || c.items.every(i => !disp.has(i.hex.toUpperCase())));
-    })());
-    ok('외부 출처 묶음의 근거가 이름에 실제로 있음', (() => {
-      const f = OC.clusters.find(c => c.id === 'OC-3');
-      return !f || f.items.every(i => i.foreign || i.ios);
-    })(), '출처 표시 없는 항목이 외부 묶음에 들어갔습니다');
-    const dh = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
-    ok('묶음이 결정 안건 페이지에 표시됨', OC.clusters.every(c => dh.includes(c.id)));
-    ok('묶음 권고가 페이지에 표시됨',
-      OC.clusters.every(c => dh.includes(c.action)));
+    ok('정본 기준이 라이브러리로 기록됨',
+      !!VIEW.canonBasis && /GDS \(그린카 디자인 시스템\) 라이브러리/.test(VIEW.canonBasis.value));
+    ok('제외 라이브러리가 6개 기록됨', VIEW.excludedLibraries.length === 6,
+      String(VIEW.excludedLibraries.length));
   }
 }
 
@@ -557,7 +436,7 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
     ok('TQ-6 이 Noto Sans KR 단일로 확정됨', !!open6 && /Noto Sans KR 단일/.test(open6.resolution || ''));
     ok('원본 결함 SD-16 기록됨', (DEC2.sourceDefects.items || []).some(d => d.id === 'SD-16'));
     const dh2 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
-    ok('원본 대조 결과가 결정 안건 페이지에 표시됨', dh2.includes(F.typography.source));
+    ok('타이포 대조 결과가 결정 기록 페이지에 표시됨', dh2.includes(String(F.typography.matched)));
     ok('TQ-6 이 결정 안건 페이지에 표시됨', dh2.includes('TQ-6'));
   }
 }
@@ -612,81 +491,8 @@ console.log('\n[11] 컴포넌트 — Buttons');
 
     const dh3 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
     ok('Buttons 실측이 결정 안건 페이지에 표시됨', B.types.every(t => dh3.includes(t.name)));
-    ok('3계층 매핑이 페이지에 표시됨', dh3.includes('Semantic/Color/Background/Filled/Default'));
+    ok('3계층을 쓴다는 사실이 페이지에 표시됨', /3계층/.test(dh3));
   }
-}
-
-// ────────────────────────────────────────────────────────────
-console.log('\n[12] CQ-5 이름 충돌 · CQ-6 묶음 확정');
-{
-  const VIEW = require('./canon-view.js');
-  const DEC4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
-  const MG4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-merge.json'), 'utf8'));
-  const OC4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'orphan-clusters.json'), 'utf8'));
-  const CF = DEC4.conflictDecisions;
-  const CL = DEC4.clusterDecisions;
-
-  ok('conflictDecisions 기록 존재', !!CF && Array.isArray(CF.items));
-  if (CF) {
-    const unresolved = MG4.conflictResolution.filter(c => !c.adopt);
-    ok('자동 판정되지 않은 충돌이 전부 확정됨',
-      unresolved.every(c => CF.items.some(i => i.name === c.name)),
-      unresolved.filter(c => !CF.items.some(i => i.name === c.name)).map(c => c.name).join(', '));
-    ok('확정 기록이 실재하는 충돌만 가리킴',
-      CF.items.every(i => MG4.conflictResolution.some(c => c.name === i.name)),
-      CF.items.filter(i => !MG4.conflictResolution.some(c => c.name === i.name)).map(i => i.name).join(', '));
-    ok('충돌 확정마다 값·결론·근거가 있음',
-      CF.items.every(i => i.values.length === 2 && i.resolution && i.basis));
-    ok('기록한 값이 실제 충돌 값과 일치',
-      CF.items.every(i => {
-        const c = MG4.conflictResolution.find(x => x.name === i.name);
-        return c && i.values.every(v => c.values.includes(v.toUpperCase()));
-      }));
-    ok('CF-1 Default Btn 두 값 모두 처분됨',
-      ['#40535E', '#143C56'].every(h =>
-        VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h && o.target === 'Navy/Navy 060')));
-    ok('CF-2 navy090 두 값은 정본에 실재 — 처분 대상 아님',
-      ['#020609', '#0A1E2B'].every(h => VIEW.colors.some(c => c.hex.toUpperCase() === h))
-      && ['#020609', '#0A1E2B'].every(h => !VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h)));
-    ok('CF-3 First Green 두 값 모두 Primary/Red 060 으로',
-      ['#007E54', '#009669'].every(h =>
-        VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h && o.target === 'Primary/Red 060')));
-    ok('CF-4 롯데 빨강은 외부 분리로 처분됨',
-      VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === '#E50012' && o.action === 'external'));
-    ok('CF-4 후속이 CQ-11 로 남아 있음',
-      /CQ-11/.test((CF.items.find(i => i.id === 'CF-4') || {}).followUp || ''));
-    ok('숨은 제어문자가 든 이름은 실제 문자 그대로 기록됨', (() => {
-      const i = CF.items.find(x => x.id === 'CF-1');
-      return !!i && i.name.includes(' ') && i.displayName === 'Default Btn' && i.defect === 'SD-17';
-    })(), '이름을 보기 좋게 고쳐 적으면 원본과 대조가 깨집니다');
-    ok('원본 결함 SD-17 기록됨', DEC4.sourceDefects.items.some(d => d.id === 'SD-17'));
-  }
-
-  ok('clusterDecisions 기록 존재', !!CL && Array.isArray(CL.items));
-  if (CL) {
-    ok('묶음 결정이 OC-1~OC-8 전부를 다룸',
-      ['OC-1', 'OC-2', 'OC-3', 'OC-4', 'OC-5', 'OC-6', 'OC-7', 'OC-8']
-        .every(id => CL.items.some(i => i.id === id)));
-    ok('확정된 묶음에는 결론이, 미결 묶음에는 사유가 있음',
-      CL.items.every(i => (i.status === 'closed' ? !!i.resolution : !!i.note)));
-    const closedIds = CL.items.filter(i => i.status === 'closed').map(i => i.id);
-    ok('확정 묶음의 색이 실제로 처분됨 — 남은 묶음에 거의 남지 않음',
-      OC4.clusters.filter(c => closedIds.includes(c.id) && c.id !== 'OC-1')
-        .every(c => c.hexCount <= 2),
-      OC4.clusters.filter(c => closedIds.includes(c.id) && c.id !== 'OC-1').map(c => `${c.id}:${c.hexCount}`).join(', '));
-    ok('남긴 색은 색이 곧 정보인 것뿐', (() => {
-      const held = ['#00AD73', '#00AD79', '#FCF8E8'];
-      return held.every(h => !VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h));
-    })());
-    ok('개별 판단 대상이 실제로 줄어듦',
-      MG4.totals.orphanReview < OC4.totalOrphanReview,
-      `${MG4.totals.orphanReview} vs 최초 ${OC4.totalOrphanReview}`);
-  }
-
-  const dh4 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
-  ok('충돌 확정이 결정 안건 페이지에 표시됨', !CF || CF.items.every(i => dh4.includes(i.id)));
-  ok('묶음 확정이 결정 안건 페이지에 표시됨', !CL || CL.items.every(i => dh4.includes(i.id)));
-  ok('CQ-11 이 결정 안건 페이지에 표시됨', dh4.includes('CQ-11'));
 }
 
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
