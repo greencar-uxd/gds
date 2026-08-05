@@ -51,25 +51,43 @@
 
 ## 디자인 시스템으로서 모자란 곳
 
-정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. 12건을 `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
+정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
 
-| | |
-|---|---|
-**16건 중 1건 해소 · 15건 남음** (`GAP-11` 반경 값 실측으로 해소)
+**23건 중 1건 해소 · 22건 남음** (`GAP-11` 반경 값 실측으로 해소)
 
-| 높음 5건 | |
+| 높음 8건 | |
 |---|---|
 | `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. 게다가 `noto_sans/title/medium` 이 조회한 노드마다 **14 · 16 · 18px** 로 다릅니다 |
 | `GAP-4` | `Map Marker/Shadow` 가 두 값 — FILL 스타일 `#E2E2E2`(불투명) vs 변수 `#0000001A`(검정 10%) |
 | `GAP-12` | 변수화가 색·반경에만 있어 3계층이 색에서만 성립 |
 | **`GAP-13`** | **✅ Layout 페이지 내용이 저장소에 통째로 없음** — 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 동작 |
-| **`GAP-14`** | ✅ [Foundation] 정의는 **Color · Typography · Spacing · Icon** 인데, 저장소는 Icon 이 없고 정의에 없는 Radius·Elevation 을 Foundation 으로 다룹니다 |
+| **`GAP-14`** | Foundation 구성을 두 ✅ 페이지가 다르게 적음 — [Foundation] 본문은 **4개**, [Guidelines] 구조도와 목차는 **6개**. 어느 쪽이든 저장소에 **Icon 이 없음** |
+| **`GAP-17`** | **GDS 4계층(Guidelines → Foundation → Components → Template) 구조가 저장소에 없음** |
+| **`GAP-21`** | **✅ UI/UX guide 내용이 저장소에 한 줄도 없음** — UX 라이팅 규칙 6종 + 그래픽 3단계 체계 |
+| **`GAP-23`** | **✅ Color system 의 역할 축이 없음** — Primary=Red · Secondary=Gray · Tertiary=Navy, 그리고 「텍스트는 모두 Gray scale」·「Navy 는 색이 곧 정보인 곳에만」 |
 
-중간 6건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함)**
+중간 8건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더**(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함) · **Components 목차 25개 중 실측은 Buttons 1개뿐** · Icon 규칙이 UI/UX guide 와 Icon system 두 곳으로 흩어짐
 
-낮음 4건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X 없음)
+낮음 6건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X) · **목차 오타 다수**(`Bage`·`Pasing`·`Tap`·`Tap app bar`·`Getting stared`) · 히스토리 파일 위치 미기록
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
+
+### GDS 4계층 구조 (`[Guidelines]` ✅ · `Getting started` ✅)
+
+```
+Guidelines (가이드라인) — 방향성과 기준정의의 토대
+  Principle · UI/UX Guide · Layout for ios/aos/web · Component overview
+Foundation (파운데이션) — 디자인의 기본 재료
+  Color · Typography · Spacing · Icon · Elevation · Radius
+Components (컴포넌트) — 완성형 단위
+  Buttons · Bottom sheet · Input · Bottom navigation · Border · Picker · Modal · Check box … 25개
+Template (템플릿) — 상위 조합 단위
+  (원본에 "설명 추가 예정")
+```
+
+저장소가 쓰는 **프리미티브 → 시맨틱 → 컴포넌트 3계층은 토큰 계층**이고, 위 4계층은 **문서 계층**입니다. 둘은 별개인데 저장소에 문서 계층이 없습니다 (`GAP-17`).
+
+**문서화 규칙도 원본에 있습니다** — 현재 사용 중인 요소는 **포함**, 사용되지 않는 요소는 **제외(히스토리 파일)**, 변경은 `As is / To be` 주석. 레거시를 판단 근거에서 빼는 것이 이 저장소만의 방침이 아니라 **정본 규칙**이었습니다.
 
 ### ✅ 페이지 본문에서 읽은 것
 
@@ -81,6 +99,11 @@
 | **Layout** | iOS `375×812` · AOS/Web `360×800` · 마진 20px 통일 · **iOS 하단만 0px**(홈 인디케이터 자동 노출 대응) · 헤더 하단 1px 라인 · 홈 인디케이터 34px · 버튼 스티키/픽스 |
 | **Spacing** | 기본 단위 2px · 14단계 · 원본 이름 중복 3건(`Spacing_700`·`900`·`1000` 이 각각 두 값) |
 | **Foundation 정의** | 각 요소는 서로 종속되지 않고 각자 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않음 |
+| **UX 라이팅 규칙** | 어투(구어체·비격식체 + 정중) · 헤더 타이틀(`~하기`/명사형) · 문장형 타이틀(하오체, 3줄 이내, **마침표 금지**) · 본문 마침표 · 플레이스홀더 · 알림 버튼명 |
+| **그래픽 3단계** | `Lv.1` 시스템 아이콘(단일 정보·기능 수행) · `Lv.2` 커스텀 아이콘(설명 구조) · `Lv.3` 일러스트(상황+행동+흐름). 분류는 **정보 구조**로, 선택은 **맥락**으로, 밀도는 표현 강도. **2D 원칙 · 3D 지양** |
+| **컴포넌트 정의** | 텍스트·그래픽·인터랙션 요소가 결합되어 하나의 기능 또는 정보를 전달하는 UI 단위 |
+| **색 역할 축** | `Primary`=Red · `Secondary`=Gray(보조·지지) · `Tertiary`=Navy(리브랜딩 이전 Secondary). 브랜드 속성 **Clean · Comfort · Easy** |
+| **색 용도 규칙** | **텍스트는 모두 Gray scale 이 원칙** · **Navy 는 뱃지·지도 핀처럼 색 자체가 정보인 요소에만**, 그 외 폰트·컴포넌트는 Gray scale |
 
 ---
 
