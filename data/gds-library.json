@@ -767,6 +767,162 @@
         }
       ],
       "note": "Primary / Secondary / Tertiary 라는 역할 축과 용도 규칙이 ✅ 본문에 있습니다. 저장소는 그룹 이름(Primary·Gray Scale·Navy…)만 갖고 있고 이 축이 없었습니다."
+    },
+    "components": {
+      "$description": "✅ 컴포넌트 페이지 본문에서 읽은 정의·스펙. 등록된 스타일에는 없는 내용입니다.",
+      "modal": {
+        "node": "42419:35762 (Modal ✅)",
+        "정의": "현재 화면 위에 Dim layer 와 함께 표시되는 컴포넌트. 사용자의 확인·선택이나 중요한 정보 전달이 필요할 때 강제성을 높이기 위해 사용합니다.",
+        "종류": [
+          {
+            "name": "Alert Modal (알럿 모달)",
+            "목적": "단순 정보 전달",
+            "버튼": "확인 하나",
+            "variants": [
+              {
+                "name": "Basic alert (기본 알럿)",
+                "dim": "Dim layer 1"
+              },
+              {
+                "name": "Full-screen alert (풀스크린 알럿)",
+                "dim": "Dim layer 2",
+                "note": "화면 전체를 덮어 강제성을 높이고 내용에 포커싱"
+              }
+            ]
+          },
+          {
+            "name": "Confirm Modal (컨펌 모달)",
+            "목적": "사용자의 선택이 필요한 경우",
+            "버튼": "확인 · 취소",
+            "variants": [
+              {
+                "name": "Basic confirm (기본 컨펌)",
+                "note": "Body 에 다양한 콘텐츠를 자유롭게 조합"
+              }
+            ]
+          }
+        ],
+        "구조": "Top (상단) · Body (중단) · Action (하단). Top 은 케이스에 따라 생략 가능.",
+        "치수": {
+          "텍스트박스": "327px",
+          "딤내부마진": "24px",
+          "이전값": "312px"
+        },
+        "typeVariants": [
+          "default",
+          "default + title",
+          "vertical two",
+          "horizontal two",
+          "three button",
+          "one text",
+          "scroll",
+          "two text",
+          "contents",
+          "contents + two button",
+          "date picker"
+        ],
+        "중요": "Dim layer 1 = 기본 알럿 · Dim layer 2 = 풀스크린 알럿. CQ-9 에서 나눈 System/Dim Layer 060·080 의 용도가 여기서 확인됩니다."
+      },
+      "checkbox": {
+        "node": "42066:25441 (Checkbox ✅)",
+        "종류": [
+          {
+            "name": "Icon checkbox (아이콘 체크박스)",
+            "box": "24×24 고정"
+          },
+          {
+            "name": "Capsule checkbox (캡슐 체크박스)",
+            "box": "16×16 고정"
+          }
+        ],
+        "체크아이콘": "9×12 통일",
+        "형태": [
+          "basic — 배경 없는 체크",
+          "round — 배경 있는 체크",
+          "with text"
+        ],
+        "tokens": [
+          "Components/Checkbox/Icon/Primary",
+          "Components/Checkbox/Icon/Secondary",
+          "Components/Checkbox/Capsule/Primary",
+          "Components/Checkbox/Capsule/Secondary"
+        ],
+        "미해결메모": [
+          "\"이 화면에는 체크박스라고 해야할지 선택박스라고 해야할지 → 템플릿으로 들어가기\"",
+          "\"캡슐버튼처럼 백그라운드가 늘어나는걸 with 텍스트라고 하면 안될 것 같다 … s m l 이런식으로 값을 정하고,\""
+        ]
+      },
+      "bottomNavigation": {
+        "node": "42073:50821 (Bottom navigation ✅)",
+        "크기": {
+          "ios": "375×70",
+          "aos/web": "365×70"
+        },
+        "구성": [
+          "Icon (아이콘)",
+          "Background (백그라운드)",
+          "Elevation (엘리베이션)",
+          "Label (레이블)"
+        ],
+        "스펙": {
+          "높이": 70,
+          "상단여백": 20,
+          "아이콘": "32×32",
+          "아이콘-레이블 간격": 4,
+          "아이콘굵기": 1.5,
+          "텍스트스케일": "Caption 2"
+        },
+        "states": [
+          {
+            "name": "Disabled (미선택)",
+            "아이콘색": "Gray scale 40",
+            "텍스트색": "Gray scale 40"
+          },
+          {
+            "name": "Pressed (선택)",
+            "아이콘색": "Gray scale 80",
+            "텍스트색": "Gray scale 80"
+          }
+        ],
+        "메뉴": [
+          "이동하기",
+          "콘텐츠",
+          "혜택받기",
+          "마이"
+        ],
+        "미해결메모": [
+          "\"Bottom navigation 컬러 업데이트 필요\" — ✅ 인데 Annotation 이 남아 있습니다"
+        ]
+      },
+      "picker": {
+        "node": "42073:63438 (Picker ✅)",
+        "종류": [
+          {
+            "name": "Time picker (타임피커)",
+            "설명": "시간 값을 스크롤 방식으로 선택"
+          },
+          {
+            "name": "Calendar picker (데이트피커)",
+            "설명": "날짜 값을 달력 형태로 선택"
+          }
+        ],
+        "서체": "원문 — \"숫자에 해당되는 부분은 Typography system (타이포그래피 시스템) 에 지정되어있는 Rubik 서체 사용\"",
+        "하위컴포넌트": {
+          "name": "Picker icon button (피커 아이콘 버튼)",
+          "설명": "피커 내에서만 사용되는 하위 컴포넌트",
+          "token": "Components/Picker/Icon button/Primary"
+        }
+      },
+      "bottomSheet": {
+        "node": "42073:63438 (Picker ✅ 페이지 안) · Bottom sheet 🚧",
+        "정의": "화면 하단에서 올라오는 레이어 형태의 컴포넌트. 현재 화면을 벗어나지 않고 추가 정보 확인·선택·액션 실행이 필요할 때 사용합니다.",
+        "사용조건": "전체 화면으로 넘어가는 Pasing (페이징) 없이 현재 화면 안에서 조작을 끝낼 수 있을 경우",
+        "구조": "Top (상단) · Body (중단) · Action (하단)",
+        "top": "바텀시트 최상단. 콘텐츠 맥락·목적에 따라 유연하게 변경 — 닫기 버튼 · 타이틀 텍스트 · 새로고침 아이콘 조합, 케이스에 따라 핸들 형태로 대체.",
+        "action": "최하단 고정. 단일 버튼 또는 복수 버튼. 종류 3 — Button · Button + Text button.",
+        "elevation": "Elevation_Bottom sheet 사용",
+        "note": "Bottom sheet 는 별도 페이지가 🚧 인데 정의와 구조는 Picker ✅ 안에 들어 있습니다."
+      }
     }
   }
 }

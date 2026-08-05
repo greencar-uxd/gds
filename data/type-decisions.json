@@ -59,7 +59,13 @@
       "evidence": "✅ Type scale 표 43376:18436 · 정리중 40299:575 · 레거시 rubik/Time Pickerㅣ50px B·M·R",
       "status": "closed",
       "settledTitle": "Time picker 숫자도 Noto Sans KR 로 갑니다 — 정본 폰트 단일 유지",
-      "resolution": "A — 서체는 Noto Sans KR 단일. 강민관 확정 2026-08-05. Rubik 50px 3단계(B·M·R)와 레거시 rubik/Time Pickerㅣ50px 스타일은 정본에 편입하지 않습니다. 크기 축은 TQ-4 에서 이미 확정한 \"정본 21단계가 유일한 기준\" 원칙을 따라 Title 1(24px)을 씁니다. 실제 시간 선택 화면이 50px 로 렌더되고 있으므로 구현 시 크기 조정이 따라옵니다 — 이 차이는 sourceDefects SD-16 으로 기록합니다."
+      "resolution": "A — 서체는 Noto Sans KR 단일. 강민관 확정 2026-08-05. Rubik 50px 3단계(B·M·R)와 레거시 rubik/Time Pickerㅣ50px 스타일은 정본에 편입하지 않습니다. 크기 축은 TQ-4 에서 이미 확정한 \"정본 21단계가 유일한 기준\" 원칙을 따라 Title 1(24px)을 씁니다. 실제 시간 선택 화면이 50px 로 렌더되고 있으므로 구현 시 크기 조정이 따라옵니다 — 이 차이는 sourceDefects SD-16 으로 기록합니다.",
+      "conflict": {
+        "found": "2026-08-05 · Picker ✅ 페이지 본문",
+        "원문": "숫자에 해당되는 부분은 Typography system (타이포그래피 시스템) 에 지정되어있는 Rubik 서체 사용",
+        "node": "42073:63438",
+        "note": "TQ-6 은 \"서체는 Noto Sans KR 단일\"로 확정했습니다(강민관 2026-08-05). 그런데 ✅ 표시된 Picker 페이지 본문은 숫자에 Rubik 을 쓰라고 명시하고 있습니다. 결정이 정본 본문과 어긋나는 상태이므로 사실만 기록합니다 — 결정은 그대로 유지합니다."
+      }
     },
     {
       "id": "TQ-7",
