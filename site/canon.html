@@ -753,11 +753,11 @@ function elev(){
 /* ───────── 레이아웃 ───────── */
 function layout(){
   const L=C.layout;
-  if(!L) return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Layout</h1>
+  if(!L) return `<div class="pagehead"><p class="eyebrow">Guidelines</p><h1>Layout</h1>
     <p class="lead">아직 실리지 않았습니다.</p></div>${footer()}`;
   const GRP=[['screen','화면'],['margin','마진'],['safeArea','세이프 에어리어'],['header','헤더']];
   const all=GRP.flatMap(([g])=>L[g]||[]);
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Layout</h1>
+  return `<div class="pagehead"><p class="eyebrow">Guidelines</p><h1>Layout</h1>
   <p class="lead">화면 크기·마진·헤더는 ✅ <b>Layout for ios/aos/web</b> 페이지가 정합니다.
   Foundation 이 아니라 <b>Guidelines</b> 계층이라, 값이 아니라 «어디에 얼마를 두는가»의 규칙입니다.</p></div>
   ${pmeta({basis:'Layout for ios/aos/web (OS별 레이아웃) ✅ · 43185:36342',tokens:`<code>--gds-layout-*</code> ${all.length}종`})}
@@ -896,11 +896,12 @@ const V={start,color,type,space,radius,elev,layout,semantic,status};
 /* 2단 네비 — 최상위는 가로(topnav), 사이드바는 «지금 섹션 안»만 그립니다.
    컴포넌트가 25종 들어와도 사이드바 길이가 늘지 않습니다. */
 const NAV=[
-  {sec:'Get started', items:[['start','Overview'],['status','Status']]},
+  {sec:'Get started', items:[['start','Overview']]},
   {sec:'Foundation',  items:[['color','Color'],['type','Typography'],['space','Spacing'],
                              ['radius','Radius'],['elev','Elevation']]},
   {sec:'Semantic',    items:[['semantic','Tokens']]},
   {sec:'Guidelines',  items:[['layout','Layout']]},
+  {sec:'Reference',   items:[['status','Status']]},
 ];
 const SEC_OF={}; NAV.forEach(g=>g.items.forEach(([k])=>SEC_OF[k]=g.sec));
 const LABEL={};  NAV.forEach(g=>g.items.forEach(([k,l])=>LABEL[k]=l));
