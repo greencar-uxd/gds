@@ -14,14 +14,14 @@
     "absorb": 424,
     "resolve": 16,
     "near": 14,
-    "retire": 24,
-    "review": 171,
-    "mergeable": 478,
-    "canonStyles": 55,
+    "retire": 133,
+    "review": 62,
+    "mergeable": 587,
+    "canonStyles": 57,
     "orphanHex": 87,
     "orphanNear": 12,
-    "orphanRetired": 1,
-    "orphanReview": 74,
+    "orphanRetired": 49,
+    "orphanReview": 26,
     "conflictNames": 6,
     "conflictAutoResolved": 2
   },
@@ -822,6 +822,390 @@
       "target": "Gray Scale/Gray 020",
       "targetHex": "#E2E2E2",
       "delta": 2.67
+    },
+    {
+      "hex": "#2C0809",
+      "styles": 1,
+      "sample": "$-primary-800",
+      "target": "Primary/Red 090",
+      "targetHex": "#2F0607",
+      "delta": 2.68
+    },
+    {
+      "hex": "#636366",
+      "styles": 1,
+      "sample": "Default/SystemGray/02/Dark",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 3.49
+    },
+    {
+      "hex": "#AEAEB2",
+      "styles": 1,
+      "sample": "Default/SystemGray/02/Light",
+      "target": "Gray Scale/Gray 050",
+      "targetHex": "#B7B7B7",
+      "delta": 3.88
+    },
+    {
+      "hex": "#EBEBF5",
+      "styles": 1,
+      "sample": "Label Color/Dark/Secondary",
+      "target": "Navy/Navy 010",
+      "targetHex": "#E8ECEF",
+      "delta": 3.9
+    },
+    {
+      "hex": "#143C56",
+      "styles": 8,
+      "sample": "$-G_Default Btn-500",
+      "target": "Navy/Navy 060",
+      "targetHex": "#0A3C5C",
+      "delta": 4.03
+    },
+    {
+      "hex": "#545458",
+      "styles": 1,
+      "sample": "Separator Color/Dark/With Transparency",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 4.07
+    },
+    {
+      "hex": "#EFD2D3",
+      "styles": 1,
+      "sample": "$-primary-100",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "delta": 4.68
+    },
+    {
+      "hex": "#565C63",
+      "styles": 1,
+      "sample": "Gray/07",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 4.88
+    },
+    {
+      "hex": "#073B62",
+      "styles": 1,
+      "sample": "Korail(Pending)/코레일_text_button",
+      "target": "Navy/Navy 060",
+      "targetHex": "#0A3C5C",
+      "delta": 4.97
+    },
+    {
+      "hex": "#FF5555",
+      "styles": 1,
+      "sample": "Secondary/timedeal",
+      "target": "Primary/Red 040",
+      "targetHex": "#F14950",
+      "delta": 4.97
+    },
+    {
+      "hex": "#120304",
+      "styles": 1,
+      "sample": "$-primary-900",
+      "target": "Gray Scale/Gray 100",
+      "targetHex": "#000000",
+      "delta": 5.06
+    },
+    {
+      "hex": "#581012",
+      "styles": 1,
+      "sample": "$-primary-700",
+      "target": "Primary/Red 080",
+      "targetHex": "#5F0B0E",
+      "delta": 5.42
+    },
+    {
+      "hex": "#3C3C43",
+      "styles": 2,
+      "sample": "Label Color/Light/Secondary",
+      "target": "Brand/G car Gray",
+      "targetHex": "#3E3A39",
+      "delta": 5.59
+    },
+    {
+      "hex": "#F8E9EA",
+      "styles": 1,
+      "sample": "$-primary-50",
+      "target": "Gray Scale/Gray 010",
+      "targetHex": "#F1F1F1",
+      "delta": 5.64
+    },
+    {
+      "hex": "#E50012",
+      "styles": 2,
+      "sample": "Brand Color/lotte rental",
+      "target": "Primary/Red 050",
+      "targetHex": "#ED1C24",
+      "delta": 5.75
+    },
+    {
+      "hex": "#1E1B13",
+      "styles": 1,
+      "sample": "material-theme/sys/light/on-surface",
+      "target": "Brand/G car Logo Text",
+      "targetHex": "#1A1A1A",
+      "delta": 5.94
+    },
+    {
+      "hex": "#031109",
+      "styles": 1,
+      "sample": "Gray/900",
+      "target": "Navy/Navy 090",
+      "targetHex": "#060809",
+      "delta": 5.98
+    },
+    {
+      "hex": "#CDE0EE",
+      "styles": 1,
+      "sample": "Korail(Pending)/코레일_bg_button_normal dim",
+      "target": "Navy/Navy 020",
+      "targetHex": "#D0D8DD",
+      "delta": 6.29
+    },
+    {
+      "hex": "#202A2F",
+      "styles": 1,
+      "sample": "Gray/908",
+      "target": "Gray Scale/Gray 080",
+      "targetHex": "#2F2E2E",
+      "delta": 6.44
+    },
+    {
+      "hex": "#E9F7EF",
+      "styles": 1,
+      "sample": "Primary/50",
+      "target": "Gray Scale/Gray 010",
+      "targetHex": "#F1F1F1",
+      "delta": 6.51
+    },
+    {
+      "hex": "#494F51",
+      "styles": 1,
+      "sample": "GRAYSCALE/gray_009",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 6.56
+    },
+    {
+      "hex": "#4B4E53",
+      "styles": 1,
+      "sample": "Gray/DarkGray",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 6.88
+    },
+    {
+      "hex": "#84171B",
+      "styles": 1,
+      "sample": "$-primary-600",
+      "target": "Primary/Red 070",
+      "targetHex": "#8E1116",
+      "delta": 7.02
+    },
+    {
+      "hex": "#2D303A",
+      "styles": 1,
+      "sample": "static/bk_stronger",
+      "target": "Gray Scale/Gray 080",
+      "targetHex": "#2F2E2E",
+      "delta": 7.04
+    },
+    {
+      "hex": "#8C989E",
+      "styles": 5,
+      "sample": "Gray/904",
+      "target": "Gray Scale/Gray 060",
+      "targetHex": "#898989",
+      "delta": 7.44
+    },
+    {
+      "hex": "#E6FAF4",
+      "styles": 1,
+      "sample": "First\bRed/g50",
+      "target": "Gray Scale/Gray 005",
+      "targetHex": "#F8F8F8",
+      "delta": 7.69
+    },
+    {
+      "hex": "#4F4D55",
+      "styles": 1,
+      "sample": "Global / Neutral Grey / 1000",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 7.8
+    },
+    {
+      "hex": "#0066B3",
+      "styles": 2,
+      "sample": "Korail(Pending)/코레일_text_blue_b",
+      "target": "Brand/L.POINT 2",
+      "targetHex": "#0079C3",
+      "delta": 8.7
+    },
+    {
+      "hex": "#33D3A3",
+      "styles": 1,
+      "sample": "First Green/g400",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 8.74
+    },
+    {
+      "hex": "#40535E",
+      "styles": 4,
+      "sample": "Default Btn",
+      "target": "Navy/Navy 050",
+      "targetHex": "#436378",
+      "delta": 9.19
+    },
+    {
+      "hex": "#B01F24",
+      "styles": 1,
+      "sample": "$-primary-500",
+      "target": "Primary/Red 060",
+      "targetHex": "#BE161D",
+      "delta": 9.2
+    },
+    {
+      "hex": "#EDB8B8",
+      "styles": 1,
+      "sample": "freezone",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "delta": 9.71
+    },
+    {
+      "hex": "#DFA5A7",
+      "styles": 1,
+      "sample": "$-primary-200",
+      "target": "Primary/Red 020",
+      "targetHex": "#F8A4A7",
+      "delta": 10.82
+    },
+    {
+      "hex": "#00A870",
+      "styles": 3,
+      "sample": "Brand color/GR060",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 12.16
+    },
+    {
+      "hex": "#4DB778",
+      "styles": 2,
+      "sample": "400",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 12.75
+    },
+    {
+      "hex": "#D2EDDD",
+      "styles": 1,
+      "sample": "Primary/100",
+      "target": "Gray Scale/Gray 020",
+      "targetHex": "#E2E2E2",
+      "delta": 12.85
+    },
+    {
+      "hex": "#D0797C",
+      "styles": 1,
+      "sample": "$-primary-300",
+      "target": "Primary/Red 020",
+      "targetHex": "#F8A4A7",
+      "delta": 15.62
+    },
+    {
+      "hex": "#20A556",
+      "styles": 2,
+      "sample": "Default",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 17.9
+    },
+    {
+      "hex": "#007AFF",
+      "styles": 1,
+      "sample": "Default/SystemBlue/Light",
+      "target": "Badge/New Car",
+      "targetHex": "#5B68FE",
+      "delta": 18.23
+    },
+    {
+      "hex": "#66DEBA",
+      "styles": 1,
+      "sample": "g300",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 19.9
+    },
+    {
+      "hex": "#082916",
+      "styles": 1,
+      "sample": "Primary/800",
+      "target": "Brand/G car Logo Text",
+      "targetHex": "#1A1A1A",
+      "delta": 20.24
+    },
+    {
+      "hex": "#009669",
+      "styles": 1,
+      "sample": "First Green/g600_G press",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 20.46
+    },
+    {
+      "hex": "#0A84FF",
+      "styles": 1,
+      "sample": "Default/SystemBlue/Dark",
+      "target": "Brand/L.POINT",
+      "targetHex": "#009BFA",
+      "delta": 21.2
+    },
+    {
+      "hex": "#79C99A",
+      "styles": 3,
+      "sample": "green040",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 21.45
+    },
+    {
+      "hex": "#A6DBBB",
+      "styles": 1,
+      "sample": "Primary/200",
+      "target": "Gray Scale/Gray 030",
+      "targetHex": "#D4D4D4",
+      "delta": 25.68
+    },
+    {
+      "hex": "#007E54",
+      "styles": 1,
+      "sample": "First Green/g600_G press",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 29.88
+    },
+    {
+      "hex": "#187C41",
+      "styles": 2,
+      "sample": "Posi_Press",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "delta": 30.33
+    },
+    {
+      "hex": "#10532B",
+      "styles": 1,
+      "sample": "Primary/700",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "delta": 36.39
     }
   ]
 }

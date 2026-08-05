@@ -110,7 +110,9 @@
         "AD-5",
         "AD-6"
       ],
-      "status": "open"
+      "status": "closed",
+      "settledTitle": "알파를 토큰에 포함합니다 — System/Dim Layer 060 · 080",
+      "resolution": "A 확정 2026-08-05. System/Dim Layer 060(#00000099) · System/Dim Layer 080(#000000CC) 2종으로 쪼개고, System/Info Box BG 는 060 으로 흡수합니다. 이미 확정된 Map Marker/Shadow(#0000001A)와 같은 8자리 HEX 규칙입니다. 불투명도 값의 근거는 원본 변수가 아니라 정본 스와치 캡션이므로 alphaSource 로 표시했습니다."
     },
     {
       "id": "CQ-10",
@@ -125,8 +127,24 @@
       "blocks": [
         "AD-4"
       ],
+      "status": "closed",
+      "figmaEvidence": "2026-08-05 Buttons 페이지에서 원본이 이미 3계층을 쓰고 있음을 확인했습니다. Components/Buttons/Default/Primary → Semantic/Color/Background/Filled/{Default,Pressed,Disabled} → 프리미티브. 시맨틱 계층을 둘지 여부는 사실상 이미 정해져 있습니다(README 확정 결정: 프리미티브 → 시맨틱 → 컴포넌트 3계층). 남는 판단은 color/text/bolder 한 건을 그 계층에 어떻게 넣을지입니다.",
+      "settledTitle": "color/text/bolder 는 폐기합니다 — 시맨틱 계층은 이미 원본에 있습니다",
+      "resolution": "C 확정 2026-08-05. 레거시 649 스타일에서 사용 0건이라 옮길 자리가 없고, 값(#131416)도 정본 어느 단계와도 맞지 않습니다. 시맨틱 계층 자체는 원본 Buttons 페이지에서 이미 쓰고 있는 것을 확인했으므로(Semantic/Color/Background/*), 계층을 새로 만들 이유가 이 변수 하나에는 없습니다."
+    },
+    {
+      "id": "CQ-11",
+      "question": "지도 active 마커의 채움색을 정본에 새로 둘 것인가",
+      "detail": "정본 Map Marker 그룹에는 선·비활성·프리존·그림자만 있고 활성 마커의 채움색이 없습니다. 레거시 `Map Marker/active` 는 두 값(롯데 빨강 #E50012 · 구 브랜드 그린 #00AD73)을 갖고 있었는데 둘 다 다른 출처의 잔재라 CQ-5 에서 이름째 폐기했습니다. 실제 지도 화면에 활성 마커 채움색이 필요한지, 필요하다면 어떤 색인지가 남았습니다.",
+      "options": [
+        "A — Primary/Red 050 을 그대로 씁니다. 브랜드 주색이라 활성 상태 표현으로 자연스럽고 새 토큰이 필요 없습니다.",
+        "B — Map Marker/Active 를 신규 토큰으로 정의합니다. 마커 색은 지도에서 정보라 Primary 와 분리하는 편이 안전할 수 있습니다.",
+        "C — 필요 없습니다. 활성 마커를 채움색이 아니라 크기·그림자로 구분한다면 토큰을 추가하지 않습니다."
+      ],
+      "recommendation": "실제 지도 화면을 봐야 정할 수 있습니다. 화면에서 활성 마커가 색으로 구분되고 있으면 B, 아니면 C 입니다.",
+      "blocks": [],
       "status": "open",
-      "figmaEvidence": "2026-08-05 Buttons 페이지에서 원본이 이미 3계층을 쓰고 있음을 확인했습니다. Components/Buttons/Default/Primary → Semantic/Color/Background/Filled/{Default,Pressed,Disabled} → 프리미티브. 시맨틱 계층을 둘지 여부는 사실상 이미 정해져 있습니다(README 확정 결정: 프리미티브 → 시맨틱 → 컴포넌트 3계층). 남는 판단은 color/text/bolder 한 건을 그 계층에 어떻게 넣을지입니다."
+      "from": "CQ-5 / CF-4"
     }
   ],
   "orphanDispositions": [
@@ -150,6 +168,763 @@
       ],
       "reason": "정본에 추가하지 않고 시스템에서 제거 — 강민관 결정 2026-08-04. 치환 대상은 색차가 가장 가까운 Gray Scale/Gray 020(ΔE 2.67). 이름은 Navy 계열을 가리키지만 용도(비활성 버튼·입력선·보조 텍스트)가 정본 Tertiary 방침('네이비는 색 자체가 정보인 요소에만, 그 외 폰트·컴포넌트는 Gray scale')에 해당하므로 Gray 로 보냅니다.",
       "caution": "ΔE 2.67 은 흡수 권고선(2.3) 을 넘습니다 — 나란히 놓으면 미세하게 구분됩니다. 치환 후 비활성 버튼·입력선을 실제 화면에서 확인하세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#00A870",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 050",
+      "targetHex": "#ED1C24",
+      "deltaE": 128.36,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "Brand color/GR060",
+        "First Green/g500_Default",
+        "System/g500_45%"
+      ],
+      "reason": "구 브랜드 주색(First Green g500 · Brand color GR060). 리브랜딩으로 Primary 가 Red 로 바뀌었으므로 같은 자리인 Primary/Red 050 으로 보냅니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "System/g500_45% 는 투명도가 걸린 상태 표시용입니다 — 이 용도는 System/Success 로 따로 옮겨야 합니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#79C99A",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 030",
+      "targetHex": "#F4777C",
+      "deltaE": 83.97,
+      "legacyStyles": 4,
+      "legacyNames": [
+        "green040",
+        "Primary/300",
+        "Secondary/economy"
+      ],
+      "reason": "구 Primary/300 — 단계 그대로 Primary/Red 030. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#4DB778",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 040",
+      "targetHex": "#F14950",
+      "deltaE": 110.18,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "400",
+        "Primary/400"
+      ],
+      "reason": "구 Primary/400 — 단계 그대로 Primary/Red 040. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#20A556",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 050",
+      "targetHex": "#ED1C24",
+      "deltaE": 127.48,
+      "legacyStyles": 7,
+      "legacyNames": [
+        "Default",
+        "Primary/500 main"
+      ],
+      "reason": "구 Primary/500 main — 리브랜딩 후 메인은 Primary/Red 050 입니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "Default 라는 이름으로 6번 복제돼 있습니다. 치환 후 기본 상태 색이 전부 레드로 바뀌므로 화면 확인이 필요합니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#187C41",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "System/Success",
+      "targetHex": "#00C88C",
+      "deltaE": 30.33,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Posi_Press",
+        "Primary/600"
+      ],
+      "reason": "Posi_Press — 긍정 상태의 눌림 색입니다. 구 Primary/600 이름도 함께 붙어 있지만 상태 표시가 우선입니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "정본에는 상태 색의 눌림 단계가 없습니다. System/Success 하나로 합쳐집니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#031109",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Gray Scale/Gray 100",
+      "targetHex": "#000000",
+      "deltaE": 7.01,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Gray/900"
+      ],
+      "reason": "이름이 Gray/900 입니다 — 값만 초록빛이 돌 뿐 용도는 무채색 최상단입니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#E9F7EF",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "deltaE": 22.34,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Primary/50"
+      ],
+      "reason": "구 Primary/50 — 가장 옅은 단계이므로 Primary/Red 010. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#E6FAF4",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "deltaE": 24.27,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "First\bRed/g50"
+      ],
+      "reason": "FirstRed/g50 — 이름은 Red 인데 값은 그린입니다(리브랜딩 중간 상태). 단계상 Primary/Red 010. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#33D3A3",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 040",
+      "targetHex": "#F14950",
+      "deltaE": 119.26,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "First Green/g400"
+      ],
+      "reason": "구 First Green/g400 — 단계 그대로 Primary/Red 040. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#D2EDDD",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "deltaE": 26.6,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Primary/100"
+      ],
+      "reason": "구 Primary/100 — Primary/Red 010. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#66DEBA",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 030",
+      "targetHex": "#F4777C",
+      "deltaE": 92.94,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "g300"
+      ],
+      "reason": "구 g300 — Primary/Red 030. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#082916",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 080",
+      "targetHex": "#5F0B0E",
+      "deltaE": 55.71,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Primary/800"
+      ],
+      "reason": "구 Primary/800 — Primary/Red 080. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#009669",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 060",
+      "targetHex": "#BE161D",
+      "deltaE": 111.47,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "First Green/g600_G press"
+      ],
+      "reason": "구 First Green/g600_G press — Primary/Red 060. 같은 이름의 다른 값 #007E54 와 함께 폐기되므로 CQ-5 의 이름 충돌도 같이 풀립니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#A6DBBB",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 020",
+      "targetHex": "#F8A4A7",
+      "deltaE": 55.43,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Primary/200"
+      ],
+      "reason": "구 Primary/200 — Primary/Red 020. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#007E54",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 060",
+      "targetHex": "#BE161D",
+      "deltaE": 106.32,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "First Green/g600_G press"
+      ],
+      "reason": "구 First Green/g600_G press 의 다른 값 — 위와 같은 자리로 보냅니다. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#10532B",
+      "action": "retire",
+      "cluster": "OC-2",
+      "target": "Primary/Red 070",
+      "targetHex": "#8E1116",
+      "deltaE": 81.37,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Primary/700"
+      ],
+      "reason": "구 Primary/700 — Primary/Red 070. CQ-6 / OC-2 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#3C3C43",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Label Color/Light/Secondary",
+        "Separator Color/Light/With Transparency"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#636366",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Default/SystemGray/02/Dark"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#AEAEB2",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Default/SystemGray/02/Light"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#EBEBF5",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Label Color/Dark/Secondary"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#545458",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Separator Color/Dark/With Transparency"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#007AFF",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Default/SystemBlue/Light"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#0A84FF",
+      "action": "external",
+      "owner": "iOS UIKit",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Default/SystemBlue/Dark"
+      ],
+      "reason": "iOS UIKit 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#1E1B13",
+      "action": "external",
+      "owner": "Material / 외부 토큰셋",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "material-theme/sys/light/on-surface"
+      ],
+      "reason": "Material / 외부 토큰셋 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#4F4D55",
+      "action": "external",
+      "owner": "Material / 외부 토큰셋",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Global / Neutral Grey / 1000"
+      ],
+      "reason": "Material / 외부 토큰셋 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "OS·프레임워크가 값을 관리합니다. 화면에서는 플랫폼 기본값을 그대로 쓰세요.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#0066B3",
+      "action": "external",
+      "owner": "코레일 제휴",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Korail(Pending)/코레일_text_blue_b",
+        "코레일_bg_button_normal/dim"
+      ],
+      "reason": "코레일 제휴 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "제휴가 확정되면 정본 Brand 그룹(Brand/L.POINT · Brand/T Membership 선례) 편입을 다시 검토할 수 있습니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#073B62",
+      "action": "external",
+      "owner": "코레일 제휴",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Korail(Pending)/코레일_text_button"
+      ],
+      "reason": "코레일 제휴 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "제휴가 확정되면 정본 Brand 그룹(Brand/L.POINT · Brand/T Membership 선례) 편입을 다시 검토할 수 있습니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#CDE0EE",
+      "action": "external",
+      "owner": "코레일 제휴",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Korail(Pending)/코레일_bg_button_normal dim"
+      ],
+      "reason": "코레일 제휴 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "제휴가 확정되면 정본 Brand 그룹(Brand/L.POINT · Brand/T Membership 선례) 편입을 다시 검토할 수 있습니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#E50012",
+      "action": "external",
+      "owner": "롯데 제휴",
+      "cluster": "OC-3",
+      "target": null,
+      "targetHex": null,
+      "deltaE": null,
+      "legacyStyles": 2,
+      "legacyNames": [
+        "Brand Color/lotte rental",
+        "Map Marker/active"
+      ],
+      "reason": "롯데 제휴 가 소유한 색입니다. GDS 토큰으로 복제하면 원 소유자가 값을 바꿀 때 어긋나므로 시스템 밖으로 분리합니다 — CQ-6 / OC-3 묶음 결정 2026-08-05.",
+      "caution": "제휴가 확정되면 정본 Brand 그룹(Brand/L.POINT · Brand/T Membership 선례) 편입을 다시 검토할 수 있습니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#8C989E",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 060",
+      "targetHex": "#898989",
+      "deltaE": 7.44,
+      "legacyStyles": 9,
+      "legacyNames": [
+        "Gray/904",
+        "navy040",
+        "Second Text",
+        "Second text",
+        "Sub Navy/Navy 040 *Second Text"
+      ],
+      "reason": "보조 텍스트(Second Text) 가 대부분입니다. 정본 방침상 폰트는 Gray scale 로 갑니다. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#565C63",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "deltaE": 4.88,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Gray/07"
+      ],
+      "reason": "구 Gray/07 — 최근접 정본 단계. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#120304",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Primary/Red 090",
+      "targetHex": "#2F0607",
+      "deltaE": 18.06,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-900"
+      ],
+      "reason": "이름이 $-primary-900 입니다 — 무채색에 가깝지만 구 Primary 스케일의 최하단이라 Primary/Red 090 이 용도상 맞습니다. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#F8E9EA",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "deltaE": 11.53,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-50"
+      ],
+      "reason": "이름이 $-primary-50 — 구 Primary 스케일 최상단. Primary/Red 010. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#202A2F",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 080",
+      "targetHex": "#2F2E2E",
+      "deltaE": 6.44,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Gray/908"
+      ],
+      "reason": "구 Gray/908 — 최근접 정본 단계. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#494F51",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "deltaE": 6.56,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "GRAYSCALE/gray_009"
+      ],
+      "reason": "GRAYSCALE/gray_009 — 최근접 정본 단계. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#4B4E53",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 070",
+      "targetHex": "#5C5C5C",
+      "deltaE": 6.88,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Gray/DarkGray"
+      ],
+      "reason": "Gray/DarkGray — 최근접 정본 단계. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#2D303A",
+      "action": "retire",
+      "cluster": "OC-5",
+      "target": "Gray Scale/Gray 080",
+      "targetHex": "#2F2E2E",
+      "deltaE": 7.04,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "static/bk_stronger"
+      ],
+      "reason": "static/bk_stronger — 최근접 정본 단계. CQ-6 / OC-5 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#2C0809",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 090",
+      "targetHex": "#2F0607",
+      "deltaE": 2.68,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-800"
+      ],
+      "reason": "구 $-primary-800 — 값이 가장 가까운 정본 단계입니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#EFD2D3",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 010",
+      "targetHex": "#FBD2D3",
+      "deltaE": 4.68,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-100"
+      ],
+      "reason": "구 $-primary-100 — 값이 가장 가까운 정본 단계입니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#581012",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 080",
+      "targetHex": "#5F0B0E",
+      "deltaE": 5.42,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-700"
+      ],
+      "reason": "구 $-primary-700 — 값이 가장 가까운 정본 단계입니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#84171B",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 070",
+      "targetHex": "#8E1116",
+      "deltaE": 7.02,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-600"
+      ],
+      "reason": "구 $-primary-600 — 값이 가장 가까운 정본 단계입니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#B01F24",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 060",
+      "targetHex": "#BE161D",
+      "deltaE": 9.2,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-500"
+      ],
+      "reason": "구 $-primary-500 — 구 스케일과 신 스케일의 단계 수가 달라 한 칸 밀립니다. 이름(500)이 아니라 값을 따릅니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#DFA5A7",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 020",
+      "targetHex": "#F8A4A7",
+      "deltaE": 10.82,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-200"
+      ],
+      "reason": "구 $-primary-200 — 값이 가장 가까운 정본 단계입니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#D0797C",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Primary/Red 020",
+      "targetHex": "#F8A4A7",
+      "deltaE": 15.62,
+      "legacyStyles": 3,
+      "legacyNames": [
+        "$-primary-300"
+      ],
+      "reason": "구 $-primary-300 — 값 기준으로는 020 이 가장 가깝습니다. 200 과 같은 자리로 합쳐집니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "구 200·300 두 단계가 정본 020 하나로 합쳐집니다. 두 색을 나란히 쓰던 화면이 있으면 확인이 필요합니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#FF5555",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Badge/Time Deal",
+      "targetHex": "#FF8159",
+      "deltaE": 21.87,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "Secondary/timedeal"
+      ],
+      "reason": "Secondary/timedeal — 정본에 같은 용도의 Badge/Time Deal 이 있습니다. 값이 아니라 용도를 따릅니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "색이 #FF5555 → #FF8159 로 바뀝니다(주황 쪽). 타임딜 뱃지 화면 확인이 필요합니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#EDB8B8",
+      "action": "retire",
+      "cluster": "OC-6",
+      "target": "Map Marker/Free Zone",
+      "targetHex": "#FD8484",
+      "deltaE": 31.96,
+      "legacyStyles": 1,
+      "legacyNames": [
+        "freezone"
+      ],
+      "reason": "freezone — 정본에 같은 용도의 Map Marker/Free Zone 이 있습니다. 값이 아니라 용도를 따릅니다. CQ-6 / OC-6 묶음 결정 2026-08-05.",
+      "caution": "색이 눈에 띄게 진해집니다. 프리존 마커 화면 확인이 필요합니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#143C56",
+      "action": "retire",
+      "cluster": "CQ-5",
+      "target": "Navy/Navy 060",
+      "targetHex": "#0A3C5C",
+      "deltaE": 4.03,
+      "legacyStyles": 12,
+      "legacyNames": [
+        "$-G_Default Btn-500",
+        "$-gray-500",
+        "Brand Color/Overnight Gray",
+        "Default Btn",
+        "Navy scale/Navi070",
+        "Overnight Gray",
+        "Second Navy/navy060_Default Btn",
+        "Untitled/$-DefaultBtn_N-500"
+      ],
+      "reason": "같은 자리를 가리키는 이름 `Second Navy/navy060_Default Btn` 의 충돌 판정에서 이미 정본 값 `#0A3C5C`(Navy 060)이 채택되고 이 값은 폐기로 결정됐습니다. 이름만 다른 `Default Btn` 에도 같은 판정을 적용합니다 — CQ-5 확정 2026-08-05.",
+      "caution": "기본 버튼 색이 바뀝니다. 이 묶음은 치환 후 실제 화면 확인이 필요한 항목입니다.",
+      "status": "confirmed"
+    },
+    {
+      "hex": "#40535E",
+      "action": "retire",
+      "cluster": "CQ-5",
+      "target": "Navy/Navy 060",
+      "targetHex": "#0A3C5C",
+      "deltaE": 18.03,
+      "legacyStyles": 6,
+      "legacyNames": [
+        "Default Btn",
+        "Gray/906 Gray",
+        "Navy 060 *Default Btn",
+        "navy060"
+      ],
+      "reason": "`Default Btn` 의 다른 값입니다. 정본에 Default Btn 에 해당하는 색은 Navy 060 하나뿐이므로 같은 자리로 보냅니다 — CQ-5 확정 2026-08-05.",
+      "caution": "기본 버튼 색이 바뀝니다. 이 묶음은 치환 후 실제 화면 확인이 필요한 항목입니다.",
       "status": "confirmed"
     }
   ],
@@ -218,31 +993,45 @@
       "id": "AD-4",
       "sourceName": "color/text/bolder",
       "hex": "#131416",
-      "action": "defer",
-      "blockedBy": "CQ-10",
-      "reason": "고유 값이지만 이름 규칙이 정본과 다릅니다(소문자 color/text/… — 원시 색이 아니라 역할 별칭 계층). 별칭 계층을 GDS 에 둘지 자체가 미결이라 CQ-10 이 닫히기 전에는 편입하지 않습니다.",
+      "action": "drop",
+      "reason": "CQ-10 C 확정 — 레거시 649 스타일에서 사용 0건이고 값도 정본 어느 단계와 맞지 않습니다. 치환 대상 없이 폐기합니다.",
       "evidence": "Figma get_variable_defs 2026-08-05 · 레거시 649 스타일에 #131416 사용 0건",
-      "status": "open"
+      "status": "confirmed"
     },
     {
       "id": "AD-5",
       "sourceName": "System/Dim Layer",
       "hex": "#000000",
-      "action": "defer",
-      "blockedBy": "CQ-9",
-      "reason": "변수는 1개인데 정본 스와치는 Dim layer 01(검정 60%) · Dim layer 02(검정 80%) 2단계입니다. 알파를 토큰으로 쪼갤지 변수 1개+불투명도 사용으로 둘지 미결.",
-      "evidence": "Figma get_screenshot 43246:9911 2026-08-05 — 스와치 육안 확인",
-      "status": "open"
+      "action": "adopt",
+      "reason": "CQ-9 A 확정 — 변수는 1개지만 정본 스와치가 60% · 80% 두 단계라 토큰 2종으로 나눕니다. 불투명도는 변수가 아니라 스와치 캡션에서 왔으므로 alphaSource 로 표시하고, 원본 대조는 앞 6자리(#000000)로만 합니다.",
+      "evidence": "Figma get_variable_defs 2026-08-05 (#000000) · get_screenshot 43246:9911 스와치 캡션 60% · 80%",
+      "status": "confirmed",
+      "alphaSource": "canon-swatch",
+      "tokens": [
+        {
+          "token": "System/Dim Layer 060",
+          "hex": "#00000099",
+          "alpha": 0.6
+        },
+        {
+          "token": "System/Dim Layer 080",
+          "hex": "#000000CC",
+          "alpha": 0.8
+        }
+      ],
+      "nameDerived": true
     },
     {
       "id": "AD-6",
       "sourceName": "System/Info Box BG",
       "hex": "#000000",
-      "action": "defer",
-      "blockedBy": "CQ-9",
-      "reason": "정본 스와치 캡션은 검정 60% 로 Dim layer 01 과 동일합니다. 원본 설명문에도 25.06.08 기준 Info box bg 를 Dim layer 하위로 재분류한다고 적혀 있어, 흡수 대상으로 보입니다.",
+      "action": "retire",
+      "reason": "CQ-9 A 확정 — 정본 스와치 캡션이 Dim layer 01 과 같은 검정 60% 이고, 원본 설명문에도 25.06.08 기준 Info box bg 를 Dim layer 하위로 재분류한다고 적혀 있습니다. 별도 토큰을 두지 않고 System/Dim Layer 060 으로 흡수합니다.",
       "evidence": "Figma get_metadata 43242:8542 설명문 · get_screenshot 43246:9911",
-      "status": "open"
+      "status": "confirmed",
+      "target": "System/Dim Layer 060",
+      "targetHex": "#00000099",
+      "deltaE": 0
     }
   ],
   "sourceDefects": {
@@ -376,6 +1165,115 @@
         "problem": "Time picker 숫자의 서체·크기가 두 곳에서 다르게 정의돼 있음 — 정본 표는 Title 1(Noto Sans KR Medium 24px, 용도 Time picker_number), 정리중 페이지와 레거시 스타일은 Rubik 50px 3단계",
         "actual": "실제 시간 선택 화면은 50px 로 렌더",
         "impact": "TQ-6 에서 서체는 Noto Sans KR, 크기는 정본 Title 1(24px)로 확정했으므로 구현 시 크기 조정이 따라옵니다"
+      },
+      {
+        "id": "SD-17",
+        "node": "43242:8088 · 레거시 색 스타일",
+        "where": "레거시 색 스타일 이름 `Default Btn`",
+        "problem": "이름 가운데 공백이 아니라 제어문자 U+2028(LINE SEPARATOR)이 들어 있음",
+        "actual": "화면에는 \"Default Btn\" 으로 보이지만 실제 문자는 공백이 아닙니다",
+        "impact": "SD-13(U+0008)과 같은 건입니다. 이름으로 검색·매핑하면 조용히 실패합니다 — 이 저장소는 결정 파일에 실제 문자를 그대로 기록해 대조가 깨지지 않게 했습니다"
+      }
+    ]
+  },
+  "conflictDecisions": {
+    "$description": "CQ-5 — 같은 이름이 두 값을 갖는 건 중 정본으로 자동 판정되지 않은 4종의 확정 기록.",
+    "decidedAt": "2026-08-05",
+    "items": [
+      {
+        "id": "CF-1",
+        "name": "Default Btn",
+        "values": [
+          "#40535E",
+          "#143C56"
+        ],
+        "resolution": "두 값 모두 폐기 — 둘 다 Navy/Navy 060(#0A3C5C)으로 치환합니다.",
+        "basis": "정본 기준 통폐합 규칙. 같은 자리를 가리키는 `Second Navy/navy060_Default Btn` 이 이미 Navy 060 으로 판정됐습니다. 이름 자체에 숨은 제어문자 U+2028(LINE SEPARATOR)이 들어 있습니다 — SD-17 로 기록했습니다.",
+        "followUp": "치환 후 기본 버튼 화면 확인 필요.",
+        "displayName": "Default Btn",
+        "defect": "SD-17"
+      },
+      {
+        "id": "CF-2",
+        "name": "Second Navy/navy090",
+        "values": [
+          "#020609",
+          "#0A1E2B"
+        ],
+        "resolution": "이름을 폐기하고 값별로 갈라 보냅니다 — #020609 → Navy/Navy 100, #0A1E2B → Navy/Navy 080.",
+        "basis": "두 값 모두 정본에 실재합니다. 이름이 090 인데 값은 100 과 080 을 가리키고 있어, 이름이 아니라 값이 맞습니다. 정본 Navy 090 은 #060809 로 따로 있습니다.",
+        "followUp": ""
+      },
+      {
+        "id": "CF-3",
+        "name": "First Green/g600_G press",
+        "values": [
+          "#007E54",
+          "#009669"
+        ],
+        "resolution": "두 값 모두 폐기 — Primary/Red 060 으로 치환합니다.",
+        "basis": "CQ-6 / OC-2(구 브랜드 그린 스케일) 전량 폐기 결정에 포함됩니다. 구 Primary/600 자리이므로 Primary/Red 060.",
+        "followUp": ""
+      },
+      {
+        "id": "CF-4",
+        "name": "Map Marker/active",
+        "values": [
+          "#E50012",
+          "#00AD73"
+        ],
+        "resolution": "이름을 폐기합니다. #E50012 는 롯데 브랜드 색이라 GDS 밖으로 분리하고, #00AD73 은 구 브랜드 그린입니다.",
+        "basis": "정본 Map Marker 그룹에는 active 가 없습니다(Corporation · Active Line · Disabled Line · Disabled Text · Free Zone · Free Zone Line · Shadow). 두 값 모두 다른 출처에서 흘러든 잔재라 어느 쪽도 근거가 되지 못합니다.",
+        "followUp": "active 마커의 채움색이 실제로 필요한지는 별도 안건 CQ-11 로 분리했습니다."
+      }
+    ]
+  },
+  "clusterDecisions": {
+    "$description": "CQ-6 — orphan 묶음(OC-1~OC-8)별 결정 상태. 처분 내역 자체는 orphanDispositions 에 있습니다.",
+    "decidedAt": "2026-08-05",
+    "items": [
+      {
+        "id": "OC-1",
+        "status": "closed",
+        "resolution": "이미 처분된 색입니다. 새로 결정할 것이 없습니다."
+      },
+      {
+        "id": "OC-2",
+        "status": "closed",
+        "resolution": "전량 폐기. 구 Primary 스케일은 현재 Primary/Red 의 같은 단계로, 상태 표시(Posi_Press)는 System/Success 로, Gray/* 이름은 Gray Scale 로 보냅니다. 뱃지·마커 2종(#00AD73 · #00AD79)은 색이 곧 정보라 남깁니다."
+      },
+      {
+        "id": "OC-3",
+        "status": "closed",
+        "resolution": "GDS 밖으로 분리. iOS UIKit 7종 · Material 2종은 OS·프레임워크가 값을 관리하므로 복제하지 않습니다. 제휴사 4종(코레일 3 · 롯데 1)도 분리하되, 제휴 확정 시 Brand 그룹 편입을 다시 검토합니다."
+      },
+      {
+        "id": "OC-4",
+        "status": "open",
+        "resolution": "",
+        "note": "#143C56 · #40535E 는 CQ-5 로 처분됐습니다. 남은 것 중 #10131C(border/input/default · 12개 스타일)가 가장 큽니다 — 실제 화면 확인이 필요합니다."
+      },
+      {
+        "id": "OC-5",
+        "status": "closed",
+        "resolution": "일괄 치환. 다만 이름이 $-primary-* 인 2종은 구 Primary 스케일이라 Gray 가 아니라 Primary/Red 로 보냅니다. #FCF8E8(level/gold/num)은 등급 표시색이라 남깁니다."
+      },
+      {
+        "id": "OC-6",
+        "status": "closed",
+        "resolution": "일괄 치환. $-primary-* 7종은 값 기준 최근접 Primary/Red 단계로, Secondary/timedeal 과 freezone 2종은 값이 아니라 용도를 따라 Badge/Time Deal · Map Marker/Free Zone 으로 보냅니다."
+      },
+      {
+        "id": "OC-7",
+        "status": "open",
+        "resolution": "",
+        "note": "뱃지·마커는 색이 곧 정보입니다. ODA 계열(주황)과 파랑 계열은 정본에 대응 뱃지가 없어 신규 단계 추가 여부부터 정해야 합니다."
+      },
+      {
+        "id": "OC-8",
+        "status": "open",
+        "resolution": "",
+        "note": "규칙으로 묶이지 않는 잔여분입니다. #303E47(Def_Press · 6개)부터 봐야 합니다."
       }
     ]
   }
