@@ -658,6 +658,20 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       `nav ${navKeys.join(',')} / V ${viewKeys.join(',')}`);
     ok('사이트에 레이아웃 · 시맨틱 항목이 있음',
       navKeys.includes('layout') && navKeys.includes('semantic'));
+    // 페이지 eyebrow 와 네비 섹션이 어긋나면 «여기가 어디인지»가 두 군데서 다르게 말합니다.
+    {
+      const secOf = {};
+      for (const m of nm[1].matchAll(/sec:'([^']+)',\s*items:\[([^\]]*(?:\][^\]]*)*?)\]\}/g)) {
+        for (const it of m[2].matchAll(/\['([a-z]+)','[^']*'\]/g)) secOf[it[1]] = m[1];
+      }
+      const bad = [];
+      for (const [k, sec] of Object.entries(secOf)) {
+        if (k === 'start') continue;
+        const fn = idx.match(new RegExp(`function ${k}\\(\\)\\{[\\s\\S]*?<p class="eyebrow">([^<]+)</p>`));
+        if (fn && fn[1].trim() !== sec) bad.push(`${k}: ${fn[1].trim()} ≠ ${sec}`);
+      }
+      ok('페이지 eyebrow 가 네비 섹션과 같음', bad.length === 0, bad.join(' | '));
+    }
     // 섹션 탭은 알약·상자가 아니라 밑줄 하나여야 합니다 — 강민관 지적 2026-08-06.
     {
       const st = (idx.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1];
