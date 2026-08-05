@@ -530,5 +530,57 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
   }
 }
 
+// ────────────────────────────────────────────────────────────
+console.log('\n[11] 컴포넌트 — Buttons');
+{
+  const bp = path.join(ROOT, 'data', 'component-buttons.json');
+  ok('data/component-buttons.json 존재', fs.existsSync(bp));
+  if (fs.existsSync(bp)) {
+    const B = JSON.parse(fs.readFileSync(bp, 'utf8'));
+    ok('버튼 종류 8종', B.types.length === 8, String(B.types.length));
+    ok('종류마다 번호·이름·노드가 있음',
+      B.types.every(t => t.no && t.name && t.node));
+    ok('번호가 1~8 연속', B.types.map(t => t.no).join() === '1,2,3,4,5,6,7,8');
+    ok('컴포넌트 토큰이 전부 Components/Buttons 네임스페이스',
+      B.tokenNames.component.every(n => n.startsWith('Components/Buttons/')));
+    ok('시맨틱 토큰이 전부 Semantic/ 네임스페이스',
+      B.tokenNames.semantic.every(n => n.startsWith('Semantic/')));
+    ok('3계층 매핑이 시맨틱 토큰만 가리킴',
+      Object.values(B.tokenNames.mapping).flat().every(n => B.tokenNames.semantic.includes(n)));
+    ok('읽기 전용 명시', /읽기 전용/.test(B.method));
+
+    // Elevation_2 실측 일치가 실제로 성립하는가 — 저장소 값과 재대조
+    const EO = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'elevation-override.json'), 'utf8'));
+    const e2 = EO.styles.find(s2 => s2.name === 'Elevation_2');
+    ok('Elevation_2 가 저장소에 2겹으로 존재', !!e2 && e2.layers.length === 2);
+    ok('Elevation_2 실측 일치 주장이 저장소 값과 맞음', (() => {
+      if (!e2) return false;
+      const want = [{ x: 0, y: 1, blur: 3, spread: 1, alpha: 0.15 }, { x: 0, y: 1, blur: 2, spread: 0, alpha: 0.3 }];
+      return want.every((w, i) => {
+        const l = e2.layers[i];
+        return l && l.x === w.x && l.y === w.y && l.blur === w.blur && l.spread === w.spread
+          && Math.abs(l.alpha - w.alpha) <= 0.01;
+      });
+    })());
+    ok('Elevation_2 신뢰도가 팩트로 갱신됨', /팩트/.test(EO._confidence.elevation_2_values || ''));
+    ok('Elevation_1 레이어 수는 여전히 미확인으로 표기',
+      /미확인/.test(EO._confidence.elevation_1_layer_count || ''));
+
+    // 이 실측에서 나온 결함·안건
+    const DEC3 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
+    const ids = DEC3.sourceDefects.items.map(x => x.id);
+    for (const id of ['SD-11', 'SD-12', 'SD-13', 'SD-14', 'SD-15']) ok(`원본 결함 ${id} 기록됨`, ids.includes(id));
+    const T3 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
+    const tq7 = (T3.open || []).find(o => o.id === 'TQ-7');
+    ok('TQ-7 (행간 충돌) 열린 안건으로 존재', !!tq7 && tq7.status === 'open');
+    ok('CQ-10 에 원본 3계층 근거가 붙음',
+      /Semantic\/Color\/Background/.test((DEC3.open.find(o => o.id === 'CQ-10') || {}).figmaEvidence || ''));
+
+    const dh3 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
+    ok('Buttons 실측이 결정 안건 페이지에 표시됨', B.types.every(t => dh3.includes(t.name)));
+    ok('3계층 매핑이 페이지에 표시됨', dh3.includes('Semantic/Color/Background/Filled/Default'));
+  }
+}
+
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
 process.exit(fail === 0 ? 0 : 1);

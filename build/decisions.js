@@ -12,6 +12,8 @@ const TA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-audit.json')
 const MG = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-merge.json'), 'utf8'));
 const FSPath = path.join(ROOT, 'data', 'figma-foundation-sync.json');
 const FS_ = fs.existsSync(FSPath) ? JSON.parse(fs.readFileSync(FSPath, 'utf8')) : null;
+const BTPath = path.join(ROOT, 'data', 'component-buttons.json');
+const BT = fs.existsSync(BTPath) ? JSON.parse(fs.readFileSync(BTPath, 'utf8')) : null;
 const OCPath = path.join(ROOT, 'data', 'orphan-clusters.json');
 const OC = fs.existsSync(OCPath) ? JSON.parse(fs.readFileSync(OCPath, 'utf8')) : null;
 const VIEW = require('./canon-view.js');
@@ -344,6 +346,30 @@ ${FS_ ? `<div class="sync">
 </tbody></table>
 <p class="muted">원본 간격 표의 이름 중복 — ${FS_.spacing.originalDuplicateNames.map(x => `<code>${esc(x.name)}</code>(${x.values.join('px · ')}px)`).join(' · ')}. 저장소는 <code>Spacing_0~1300</code> 순차로 재정리해 해소했습니다.</p>
 <p class="muted">엘리베이션 — 원본 ${FS_.elevation.figmaLevels.map(l => `${l.level}(${l.dp}dp)`).join(' · ')} vs 저장소 ${FS_.elevation.canonSteps.join(' · ')}. ${esc(FS_.elevation.openFromHandoff)}</p>
+</div>` : ''}
+${BT ? `<div class="sync">
+<h3>컴포넌트 — Buttons 원본 실측 (${BT.checkedAt})</h3>
+<p class="sub">${esc(BT.source.page)} · ${esc(BT.method)}</p>
+<div class="stats">
+<div><b>${BT.types.length}</b><span>버튼 종류</span></div>
+<div><b>${BT.tokenNames.component.length}</b><span>컴포넌트 토큰</span></div>
+<div class="ok"><b>${BT.tokenNames.semantic.length}</b><span>시맨틱 토큰</span></div>
+<div><b>${BT.variablesUsed}</b><span>참조 변수</span></div>
+</div>
+<table><thead><tr><th>#</th><th>종류</th><th>정의</th></tr></thead><tbody>
+${BT.types.map(t => `<tr><td>${t.no}</td><td><b>${esc(t.name)}</b></td><td class="muted">${esc(t.definition || '—')}${t.rule ? `<br><b style="color:var(--warn)">규칙</b> ${esc(t.rule)}` : ''}</td></tr>`).join('')}
+</tbody></table>
+<h4 style="font-size:13px;margin:18px 0 6px;color:var(--ok)">원본은 이미 3계층을 씁니다</h4>
+<p class="muted">${esc(BT.tokenNames.$note)}</p>
+<table><thead><tr><th>컴포넌트 토큰</th><th>→ 시맨틱 토큰</th></tr></thead><tbody>
+${Object.entries(BT.tokenNames.mapping).map(([k, v]) => `<tr><td><code>${esc(k)}</code></td><td class="muted">${v.map(x => `<code>${esc(x)}</code>`).join('<br>')}</td></tr>`).join('')}
+</tbody></table>
+<h4 style="font-size:13px;margin:18px 0 6px;color:var(--brand)">실측으로 드러난 것</h4>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td><b>반경 변수 존재</b></td><td class="muted">원본에 이름 붙은 반경 변수가 있습니다 — ${Object.entries(BT.findings.radiusVariables.observed).map(([k, v]) => `<code>${esc(k)}</code>=${v}`).join(' · ')}. 저장소는 숫자 스케일이라 이름 체계가 다릅니다. ${esc(BT.findings.radiusVariables.incomplete)}</td></tr>
+<tr><td><b>Elevation_2 확인</b></td><td class="muted">원본 <code>${esc(BT.findings.elevationVerified.figma)}</code> = 저장소 <code>${esc(BT.findings.elevationVerified.repo)}</code> — <b style="color:var(--ok)">정확히 일치, 2겹</b>. 지금까지 추론이던 값이 팩트가 됐습니다. ${esc(BT.findings.elevationVerified.stillUnknown)}</td></tr>
+<tr><td><b>행간 충돌</b></td><td class="muted">${esc(BT.findings.lineHeightConflict.$note)} → <code>${esc(BT.findings.lineHeightConflict.blocks)}</code></td></tr>
+</tbody></table>
 </div>` : ''}
 ${VIEW.sourceDefects ? `<div class="defect">
 <h3>원본 .fig 자체의 오류 ${VIEW.sourceDefects.items.length}건</h3>
