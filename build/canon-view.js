@@ -122,6 +122,15 @@ module.exports = {
   D, DEC, LIB, GAPS, colors, mainStyle, missedBySwatch,
   canonBasis: DEC.canonBasis || null,
   libFill, splits, canonRetires,
+  roles: (DEC.roles && DEC.roles.status === 'confirmed') ? DEC.roles : null,
+  semantic: (DEC.semantic && DEC.semantic.status === 'confirmed') ? DEC.semantic : null,
+  // 시맨틱 토큰이 가리키는 정본 이름이 실재하는지 — 없으면 빌드를 세웁니다.
+  semanticMissing: (DEC.semantic ? DEC.semantic.tokens : [])
+    .filter(t => !colors.some(c => c.name === t.ref)).map(t => `${t.token}→${t.ref}`),
+  structure: (() => { const p = path.join(ROOT, 'data', 'gds-structure.json');
+    return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
+  layout: (() => { const p = path.join(ROOT, 'data', 'layout-tokens.json');
+    return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
   excludedLibraries: LIB.excludedLibraries || [],
   renames: [...renameMap.values()],
   integrity: { missing, hexMismatch, overrideMissing, overrideStale, additionUnknown, additionStale, additionCollision, splitMissing, retireMissing, retireTargetMissing },

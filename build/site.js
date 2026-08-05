@@ -66,6 +66,7 @@ for (const name of SUBPAGES) {
   console.log(`  하위 경로 → dist/${name}/index.html`);
 }
 
+require('./guide.js');
 require('./decisions.js');
 
 console.log(`  정본 폰트 주입 — ${FONT.FAMILY} ${FONT.WEIGHTS.join('/')} (서브셋 임베드)`);

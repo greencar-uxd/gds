@@ -495,5 +495,89 @@ console.log('\n[11] 컴포넌트 — Buttons');
   }
 }
 
+// ────────────────────────────────────────────────────────────
+console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
+{
+  const VIEW = require('./canon-view.js');
+  const S = VIEW.structure, LY = VIEW.layout, SM = VIEW.semantic;
+
+  ok('data/gds-structure.json 존재', !!S);
+  if (S) {
+    ok('4계층이 전부 있음', S.layers.length === 4 && ['Guidelines', 'Foundation', 'Components', 'Template']
+      .every((n, i) => S.layers[i].name === n));
+    ok('Foundation 이 6요소', S.layers[1].items.length === 6, String(S.layers[1].items.length));
+    ok('Foundation 6요소 이름이 원본 목차와 일치',
+      ['Color', 'Typography', 'Spacing', 'Icon', 'Elevation', 'Radius']
+        .every(n => S.layers[1].items.some(i => i.name === n)));
+    ok('Components 목차 25개', S.layers[2].items.length === 25, String(S.layers[2].items.length));
+    ok('[Foundation] 본문과의 불일치가 기록돼 있음', /GAP-14/.test(S.layers[1].conflict || ''));
+    ok('항목마다 Figma 상태와 저장소 반영 상태가 있음',
+      S.layers.every(l => l.items.every(i => i.figma && i.repo)));
+    ok('문서화 규칙 3줄이 담겨 있음', (S.documentationRules.rules || []).length === 3);
+    ok('토큰 계층과 문서 계층이 구분돼 있음',
+      (S.tokenLayers || []).length === 3 && /문서 계층/.test(S.note || ''));
+  }
+
+  ok('data/layout-tokens.json 존재', !!LY);
+  if (LY) {
+    const n = ['screen', 'margin', 'safeArea', 'header'].reduce((a, g) => a + (LY[g] || []).length, 0);
+    ok('Layout 토큰 10개', n === 10, String(n));
+    ok('마진 규칙에 iOS 하단 0px 이 있음',
+      LY.margin.some(m => m.token === 'margin-bottom-ios' && m.value === 0));
+    ok('AOS/Web 하단은 20px', LY.margin.some(m => m.token === 'margin-bottom-android' && m.value === 20));
+    ok('홈 인디케이터 34px', LY.safeArea.some(s => s.value === 34));
+    ok('화면 영역 3종 기록', (LY.regions || []).length === 3);
+    ok('폭 불일치(360 vs 365)가 기록돼 있음', /GAP-24/.test(LY.conflict || ''));
+    const css0 = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+    ok('Layout 토큰이 CSS 로 출력됨',
+      ['screen-ios-width', 'margin-side', 'home-indicator-height']
+        .every(k => css0.includes(`--gds-layout-${k}:`)));
+  }
+
+  ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
+  if (SM) {
+    ok('시맨틱 참조가 전부 정본에 실재', VIEW.semanticMissing.length === 0, VIEW.semanticMissing.join(', '));
+    ok('시맨틱 토큰마다 근거가 있음', SM.tokens.every(t => (t.evidence || '').length > 10));
+    ok('시맨틱 이름이 전부 Semantic/ 네임스페이스', SM.tokens.every(t => /^Semantic\//.test(t.token)));
+    ok('딤 레이어 시맨틱이 Modal 근거로 붙음',
+      SM.tokens.some(t => t.token === 'Semantic/Overlay/Modal' && /Dim layer 1/.test(t.evidence))
+      && SM.tokens.some(t => t.token === 'Semantic/Overlay/Fullscreen' && /Dim layer 2/.test(t.evidence)));
+    const css1 = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+    ok('시맨틱이 CSS 에서 프리미티브를 var() 로 참조', (() => {
+      const m = css1.match(/--gds-text-default:\s*([^;]+);/);
+      return !!m && /^var\(--gds-color-/.test(m[1].trim());
+    })(), '시맨틱은 값을 직접 쓰면 안 됩니다');
+    const J = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+    ok('DTCG 에 semantic · layout 블록이 있음', !!J.semantic && !!J.layout);
+    ok('DTCG 시맨틱이 참조 문법을 씀',
+      Object.values(J.semantic).every(v => /^\{color\./.test(v.$value)));
+  }
+
+  ok('색 역할 축 7종 기록', !!VIEW.roles && VIEW.roles.items.length === 7);
+  if (VIEW.roles) {
+    ok('Primary/Secondary/Tertiary 축이 있음',
+      ['Primary', 'Secondary', 'Tertiary'].every(r => VIEW.roles.items.some(i => i.role === r)));
+    ok('텍스트는 Gray scale 원칙이 기록됨',
+      VIEW.roles.items.some(i => i.role === 'Secondary' && /텍스트는 모두 Gray scale/.test(i.rule)));
+    ok('브랜드 속성 3종', (VIEW.roles.brandAttributes || []).length === 3);
+  }
+
+  const gp = path.join(ROOT, 'docs', 'GDS-uiux-guide.md');
+  ok('docs/GDS-uiux-guide.md 생성됨', fs.existsSync(gp));
+  if (fs.existsSync(gp)) {
+    const g = fs.readFileSync(gp, 'utf8');
+    ok('UX 라이팅 6항목이 문서에 있음',
+      ['어투', '헤더 타이틀', '문장형 타이틀', '본문', '플레이스홀더', '알림 · 버튼'].every(k => g.includes(k)));
+    ok('그래픽 3단계가 문서에 있음', ['Lv. 1', 'Lv. 2', 'Lv. 3'].every(k => g.includes(k)));
+    ok('손으로 적지 않았다는 근거 표기', /본문. 원본을 옮겨 적은 것/.test(g));
+  }
+
+  const GAPS = VIEW.GAPS;
+  ok('해소된 GAP 마다 해소 문구가 있음',
+    GAPS.items.filter(i => i.status === 'resolved').every(i => (i.resolution || '').length > 10));
+  ok('해소 건수가 0보다 큼', GAPS.items.filter(i => i.status === 'resolved').length > 0,
+    `${GAPS.items.filter(i => i.status === 'resolved').length}/${GAPS.items.length}`);
+}
+
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
 process.exit(fail === 0 ? 0 : 1);

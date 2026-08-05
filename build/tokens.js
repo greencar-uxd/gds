@@ -113,6 +113,24 @@ if (VIEW.mainStyle) {
   css += `  --gds-color-primary-main: var(--gds-color-${slug(VIEW.mainStyle.name.replace('/', ' '))});`
     + `  /* = ${VIEW.mainStyle.name} ${VIEW.mainStyle.hex} · 강민관 확정 ${VIEW.DEC.decidedAt} */\n`;
 }
+// 시맨틱 — 프리미티브를 var() 로 참조합니다. 값을 직접 쓰지 않습니다.
+if (VIEW.semantic) {
+  css += '\n  /* Semantic — 정본 규칙에서 끌어낸 별칭 */\n';
+  for (const t of VIEW.semantic.tokens) {
+    const key = slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '));
+    css += `  --gds-${key}: var(--gds-color-${slug(t.ref.replace('/', ' '))});  /* ${t.ref} · ${t.evidence} */\n`;
+  }
+}
+// Layout — Guidelines 계층
+if (VIEW.layout) {
+  css += '\n  /* Layout — Guidelines 계층 */\n';
+  for (const grp of ['screen', 'margin', 'safeArea', 'header']) {
+    for (const l of (VIEW.layout[grp] || [])) {
+      css += `  --gds-layout-${slug(l.token)}: ${l.value}${l.unit || 'px'};`
+        + `${l.rule || l.platform ? `  /* ${[l.platform, l.rule].filter(Boolean).join(' · ')} */` : ''}\n`;
+    }
+  }
+}
 css += '\n  /* Typography */\n';
 if (FONT) {
   css += `  --gds-font-family: "${FONT.value}", sans-serif;`
@@ -151,6 +169,12 @@ css += '}\n';
 let scss = HEAD + '\n';
 for (const c of colors) scss += `$gds-color-${c.key}: ${c.hex};${c.isMain ? '  // 메인 색상' : ''}\n`;
 if (VIEW.mainStyle) scss += `$gds-color-primary-main: $gds-color-${slug(VIEW.mainStyle.name.replace('/', ' '))};\n`;
+if (VIEW.semantic) for (const t of VIEW.semantic.tokens) {
+  scss += `$gds-${slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '))}: $gds-color-${slug(t.ref.replace('/', ' '))};\n`;
+}
+if (VIEW.layout) for (const grp of ['screen', 'margin', 'safeArea', 'header']) {
+  for (const l of (VIEW.layout[grp] || [])) scss += `$gds-layout-${slug(l.token)}: ${l.value}${l.unit || 'px'};\n`;
+}
 scss += '\n';
 if (FONT) scss += `$gds-font-family: "${FONT.value}", sans-serif;\n`;
 if (LH) scss += `$gds-type-line-height: ${LH_CSS};\n`;
@@ -189,6 +213,35 @@ for (const c of colors) {
       },
     },
   };
+}
+// ── 시맨틱 계층 ── 정본 규칙에서 끌어낸 별칭. 프리미티브를 참조만 합니다.
+if (VIEW.semanticMissing.length) {
+  throw new Error(`시맨틱 토큰이 정본에 없는 이름을 가리킵니다: ${VIEW.semanticMissing.join(', ')}`);
+}
+if (VIEW.semantic) {
+  json.semantic = {};
+  for (const t of VIEW.semantic.tokens) {
+    const key = slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '));
+    json.semantic[key] = {
+      $value: `{color.${slug(t.ref.replace('/', ' '))}}`,
+      $type: 'color',
+      $description: `${t.token} → ${t.ref}. 근거 — ${t.evidence}`,
+      $extensions: { gds: { layer: 'semantic', ref: t.ref, evidence: t.evidence } },
+    };
+  }
+}
+// ── Layout (Guidelines 계층) ──
+if (VIEW.layout) {
+  json.layout = {};
+  for (const grp of ['screen', 'margin', 'safeArea', 'header']) {
+    for (const l of (VIEW.layout[grp] || [])) {
+      json.layout[slug(l.token)] = {
+        $value: `${l.value}${l.unit || 'px'}`, $type: 'dimension',
+        $description: [l.rule, l.platform ? `대상 ${l.platform}` : ''].filter(Boolean).join(' · '),
+        $extensions: { gds: { layer: 'guidelines', group: grp, ...(l.platform ? { platform: l.platform } : {}) } },
+      };
+    }
+  }
 }
 if (VIEW.mainStyle) {
   json.color.$main = {
