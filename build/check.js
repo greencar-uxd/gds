@@ -522,8 +522,10 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
     for (const id of ['SD-7', 'SD-8', 'SD-9', 'SD-10']) ok(`원본 결함 ${id} 기록됨`, ids.includes(id));
     // 타이포 미결 안건
     const open6 = (T2.open || []).find(o => o.id === 'TQ-6');
-    ok('TQ-6 (Time picker 서체) 열린 안건으로 존재', !!open6 && open6.status === 'open');
-    ok('TQ-6 에 선택지와 권고가 있음', !!open6 && (open6.options || []).length >= 2 && !!open6.recommendation);
+    ok('TQ-6 (Time picker 서체) 확정됨', !!open6 && open6.status === 'closed');
+    ok('TQ-6 확정문에 근거와 제목이 있음', !!open6 && !!open6.resolution && !!open6.settledTitle);
+    ok('TQ-6 이 Noto Sans KR 단일로 확정됨', !!open6 && /Noto Sans KR 단일/.test(open6.resolution || ''));
+    ok('원본 결함 SD-16 기록됨', (DEC2.sourceDefects.items || []).some(d => d.id === 'SD-16'));
     const dh2 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
     ok('원본 대조 결과가 결정 안건 페이지에 표시됨', dh2.includes(F.typography.source));
     ok('TQ-6 이 결정 안건 페이지에 표시됨', dh2.includes('TQ-6'));
@@ -572,7 +574,9 @@ console.log('\n[11] 컴포넌트 — Buttons');
     for (const id of ['SD-11', 'SD-12', 'SD-13', 'SD-14', 'SD-15']) ok(`원본 결함 ${id} 기록됨`, ids.includes(id));
     const T3 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
     const tq7 = (T3.open || []).find(o => o.id === 'TQ-7');
-    ok('TQ-7 (행간 충돌) 열린 안건으로 존재', !!tq7 && tq7.status === 'open');
+    ok('TQ-7 (행간 충돌) 확정됨', !!tq7 && tq7.status === 'closed');
+    ok('TQ-7 이 Auto 유지로 확정됨', !!tq7 && /Auto 유지/.test(tq7.resolution || ''));
+    ok('타이포 미결 안건 0건', (T3.open || []).every(o => o.status === 'closed'));
     ok('CQ-10 에 원본 3계층 근거가 붙음',
       /Semantic\/Color\/Background/.test((DEC3.open.find(o => o.id === 'CQ-10') || {}).figmaEvidence || ''));
 
