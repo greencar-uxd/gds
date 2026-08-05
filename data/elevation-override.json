@@ -5,7 +5,8 @@
     "renumbering": "팩트 — 강민관 확인",
     "elevation_1_values": "팩트 — 속성 패널 스크린샷 (X0 Y1 blur2 spread0 #000000 15%)",
     "elevation_1_layer_count": "미확인 — 스크린샷에 한 레이어만 보였음. 2겹일 가능성 배제 못 함",
-    "elevation_2_6_values": "추론 — 07-23 스냅샷 값이 그대로 밀렸다고 가정. 재export 전까지 미확인"
+    "elevation_2_values": "팩트 — Buttons 페이지 변수 Elevation_2 실측과 정확히 일치 (2026-08-05). 2겹 확인",
+    "elevation_3_6_values": "추론 — 07-23 스냅샷 값이 그대로 밀렸다고 가정. Elevation_2 가 일치한 것으로 보아 나머지도 같을 가능성이 높습니다"
   },
   "renumbered": true,
   "styles": [
@@ -14,42 +15,140 @@
       "status": "신규",
       "was": null,
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.15 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.15
+        }
       ]
     },
     {
-      "name": "Elevation_2", "status": "이동", "was": "Elevation_1",
+      "name": "Elevation_2",
+      "status": "이동",
+      "was": "Elevation_1",
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 3, "spread": 1, "hex": "#000000", "alpha": 0.15 },
-        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 1,
+          "blur": 3,
+          "spread": 1,
+          "hex": "#000000",
+          "alpha": 0.15
+        },
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.3
+        }
       ]
     },
     {
-      "name": "Elevation_3", "status": "이동", "was": "Elevation_2",
+      "name": "Elevation_3",
+      "status": "이동",
+      "was": "Elevation_2",
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 2, "blur": 6, "spread": 2, "hex": "#000000", "alpha": 0.15 },
-        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 2, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 2,
+          "blur": 6,
+          "spread": 2,
+          "hex": "#000000",
+          "alpha": 0.15
+        },
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.3
+        }
       ]
     },
     {
-      "name": "Elevation_4", "status": "이동", "was": "Elevation_3",
+      "name": "Elevation_4",
+      "status": "이동",
+      "was": "Elevation_3",
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 4, "blur": 8, "spread": 3, "hex": "#000000", "alpha": 0.15 },
-        { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 3, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 4,
+          "blur": 8,
+          "spread": 3,
+          "hex": "#000000",
+          "alpha": 0.15
+        },
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 1,
+          "blur": 3,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.3
+        }
       ]
     },
     {
-      "name": "Elevation_5", "status": "이동", "was": "Elevation_4",
+      "name": "Elevation_5",
+      "status": "이동",
+      "was": "Elevation_4",
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 6, "blur": 10, "spread": 4, "hex": "#000000", "alpha": 0.15 },
-        { "type": "DROP_SHADOW", "x": 0, "y": 2, "blur": 3, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 6,
+          "blur": 10,
+          "spread": 4,
+          "hex": "#000000",
+          "alpha": 0.15
+        },
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 2,
+          "blur": 3,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.3
+        }
       ]
     },
     {
-      "name": "Elevation_6", "status": "이동", "was": "Elevation_5",
+      "name": "Elevation_6",
+      "status": "이동",
+      "was": "Elevation_5",
       "layers": [
-        { "type": "DROP_SHADOW", "x": 0, "y": 8, "blur": 12, "spread": 6, "hex": "#000000", "alpha": 0.15 },
-        { "type": "DROP_SHADOW", "x": 0, "y": 4, "blur": 4, "spread": 0, "hex": "#000000", "alpha": 0.3 }
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 8,
+          "blur": 12,
+          "spread": 6,
+          "hex": "#000000",
+          "alpha": 0.15
+        },
+        {
+          "type": "DROP_SHADOW",
+          "x": 0,
+          "y": 4,
+          "blur": 4,
+          "spread": 0,
+          "hex": "#000000",
+          "alpha": 0.3
+        }
       ]
     }
   ]

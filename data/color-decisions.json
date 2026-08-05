@@ -125,7 +125,8 @@
       "blocks": [
         "AD-4"
       ],
-      "status": "open"
+      "status": "open",
+      "figmaEvidence": "2026-08-05 Buttons 페이지에서 원본이 이미 3계층을 쓰고 있음을 확인했습니다. Components/Buttons/Default/Primary → Semantic/Color/Background/Filled/{Default,Pressed,Disabled} → 프리미티브. 시맨틱 계층을 둘지 여부는 사실상 이미 정해져 있습니다(README 확정 결정: 프리미티브 → 시맨틱 → 컴포넌트 3계층). 남는 판단은 color/text/bolder 한 건을 그 계층에 어떻게 넣을지입니다."
     }
   ],
   "orphanDispositions": [
@@ -327,6 +328,46 @@
         "problem": "Level 1 그림자 이름 오타 — map_floting_shadow",
         "actual": "floating",
         "impact": "표기 오타"
+      },
+      {
+        "id": "SD-11",
+        "node": "43684:15613",
+        "where": "Buttons ✅ > Type",
+        "problem": "종류 개수 표기가 실제와 다름 — 본문과 태그 모두 7가지인데 목록은 8종",
+        "actual": "➑ Thumbnail button 이 뒤에 추가되면서 개수만 갱신되지 않은 것으로 보입니다",
+        "impact": "문서만 보고 세면 1종이 누락됩니다"
+      },
+      {
+        "id": "SD-12",
+        "node": "43852:17636",
+        "where": "Buttons ✅ > Style",
+        "problem": "시맨틱 토큰 이름에 Fill 과 Filled 가 섞여 있음",
+        "actual": "Semantic/Color/Background/Fill/Default vs Semantic/Color/Background/Filled/Default",
+        "impact": "같은 계층에서 표기가 갈려 자동 매핑이 깨집니다"
+      },
+      {
+        "id": "SD-13",
+        "node": "43684:15337",
+        "where": "Buttons ✅ 가 참조하는 변수",
+        "problem": "변수 이름에 제어문자 U+0008(백스페이스)이 들어 있음 — First\bRed/g400 등 4건",
+        "actual": "화면에는 First Red/... 로 보이지만 실제 문자는 공백이 아닙니다",
+        "impact": "이름 검색·자동 매핑이 조용히 실패합니다. 육안 구분 불가라 위험합니다"
+      },
+      {
+        "id": "SD-14",
+        "node": "43684:15337",
+        "where": "Buttons ✅ 가 참조하는 변수",
+        "problem": "타이포 변수 이름 오타 — noto_sans/boby/regular",
+        "actual": "body",
+        "impact": "표기 오타"
+      },
+      {
+        "id": "SD-15",
+        "node": "43684:15337",
+        "where": "Buttons ✅ 가 참조하는 변수",
+        "problem": "같은 색이 대소문자만 다른 이름으로 중복 — Gray Scale/Gray 040 과 Gray Scale/gray040 등",
+        "actual": "Gray 000·005·010·020·030·040·060·080 이 각각 두 이름으로 존재",
+        "impact": "색 감사의 표기 변형 충돌 8묶음과 같은 건입니다"
       }
     ]
   }

@@ -58,6 +58,19 @@
       "recommendation": "실제 화면(Elevation 적용 예시의 시간 선택 UI)에서 숫자가 50px 로 렌더되고 있습니다. 24px 로 줄이면 화면이 바뀌므로 A 는 디자인 변경을 수반합니다. 화면을 유지한다면 B 또는 C 이고, 폰트 단일 확정을 지키려면 C 입니다.",
       "evidence": "✅ Type scale 표 43376:18436 · 정리중 40299:575 · 레거시 rubik/Time Pickerㅣ50px B·M·R",
       "status": "open"
+    },
+    {
+      "id": "TQ-7",
+      "question": "행간을 Auto 로 확정했는데 원본 변수는 세 방식이 공존합니다 — 어느 쪽으로 갈 것인가",
+      "detail": "✅ Typography system 의 Type scale 표는 21행 전부 Line height = Auto 입니다. 그런데 Buttons 페이지가 실제로 참조하는 타이포 변수는 세 방식이 섞여 있습니다 — noto_sans/* 는 lineHeight 100, Text styles/* 는 고정 px(24·20·16), Noto Sans/* 는 배수 1.5. Auto 는 폰트 메트릭 기준이라 Noto Sans KR 에서 대략 1.4~1.5 이므로 배수 1.5 와는 가깝지만 100 과는 확연히 다릅니다.",
+      "options": [
+        "A — Auto 유지: 정본 표가 정본입니다. 변수 쪽 세 방식을 Auto 로 수렴시킵니다. lineHeight 100 을 쓰던 자리는 줄간격이 넓어집니다.",
+        "B — 고정 px 채택: 단계마다 고정 px 을 정합니다. 플랫폼 간 렌더링이 완전히 같아지지만 정본 표를 고쳐야 합니다.",
+        "C — 배수 채택: 1.5 같은 배수로 통일합니다. Auto 와 가장 가깝고 크기 변화에 자동 대응합니다."
+      ],
+      "recommendation": "A. 정본 표가 이미 Auto 로 확정돼 있고 팀 합의도 났습니다. 다만 lineHeight 100 을 쓰던 자리는 줄간격이 넓어지므로, 영향 화면을 먼저 세어 보는 편이 안전합니다.",
+      "evidence": "Type scale 표 43376:18436 (Auto 21행) · Buttons 참조 변수 43684:15337",
+      "status": "open"
     }
   ],
   "lineHeight": {
