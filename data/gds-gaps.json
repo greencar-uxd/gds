@@ -195,6 +195,15 @@
         "evidence": "44090:19455 List — Section 1 머리행 텍스트 \"Spacing\" / \"px\" / \"배수 (1unit=2px)\"",
         "onlyUsageLevel": "Layout for ios/aos/web ✅ 의 마진·헤더·세이프에어리어 10종이 유일한 쓰임새 이름입니다.",
         "status": "open"
+      },
+      "status": "resolved",
+      "resolution": "해소 — 3계층이 어디까지 성립하는지를 «조사로» 확정했습니다.\n· 색   프리미티브 60 + 시맨틱 11\n· 타이포 프리미티브 21 + 시맨틱 8 (계열 5는 정본에 선택 규칙이 없어 미확정)\n· 간격  프리미티브 14 + Guidelines 10 (Layout ✅). 시맨틱 계층은 «없음»으로 확정합니다.\n간격에 시맨틱이 없는 것은 우리가 안 만든 게 아니라 정본에 근거가 없기 때문입니다. 그 사실을 tools/spacing-census.js 로 입증했습니다 — ✅ 컴포넌트 페이지 5곳의 «Spacing» 주석 프레임 192건을 기계로 읽었는데, 값은 나오지만 «쓰임새 이름»이 붙은 것은 하나도 없습니다. 담고 있는 프레임 이름도 대부분 Group 2147227xxx 같은 자동 이름입니다. 이름 없는 것에 이름을 지어내지 않습니다.\n조사 결과는 data/spacing-census.json 이며, 여기서 새 결함 GAP-30 이 나왔습니다.",
+      "evidenceCounts": {
+        "annotations": 192,
+        "pages": 5,
+        "onScale": 171,
+        "offScale": 21,
+        "unreadableCallouts": 17
       }
     },
     {
@@ -344,6 +353,16 @@
       "finding": "Title 그룹이 정본 8단계인데 라이브러리에는 6개만 published 돼 있습니다 — 2개가 빠져 있습니다.",
       "evidence": "search_design_system — noto_sans/title/medium 의 style key 6개 · 정본 Title 1~8",
       "fix": "차기 라이브러리에 Title 8단계를 전부 넣습니다. 어느 2개가 빠졌는지는 라이브러리 반영 시점에 확인합니다."
+    },
+    {
+      "id": "GAP-30",
+      "area": "간격",
+      "severity": "중간",
+      "finding": "✅ 컴포넌트 페이지의 간격 주석 192건 중 21건(11종)이 Spacing 스케일에 없는 값입니다 — 7 · 13 · 19 · 29 · 31 · 34 · 42 · 50 · 78 · 80 · 190px. 스케일은 «2px 기본 단위 · 2배수»를 선언하는데 홀수(7 · 13 · 19 · 29 · 31)가 섞여 있습니다.",
+      "evidence": "tools/spacing-census.js · data/spacing-census.json — Buttons ✅ · Checkbox ✅ · Bottom navigation ✅ · Modal ✅ · Picker ✅ 5곳",
+      "fix": "두 갈래입니다. (1) 스케일 밖 값이 실제 화면 규격이면 스케일에 단계를 늘리거나 가장 가까운 단계로 맞춥니다. (2) 문서 캔버스의 배치 여백(Description area 의 42 · 80 · 190px 등)이면 제품 간격이 아니므로 조사에서 걸러야 합니다. 어느 쪽인지는 항목별로 봐야 합니다.",
+      "status": "open",
+      "note": "조사 방법의 한계도 함께 적습니다 — 치수 말풍선 17건은 컴포넌트 인스턴스라 라벨 숫자가 metadata 에 나오지 않아 값으로 세지 않았습니다."
     }
   ],
   "note": "✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16). 등록된 스타일 목록만으로는 안 보이던 것들입니다."

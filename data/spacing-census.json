@@ -1,0 +1,2265 @@
+{
+  "$description": "간격 쓰임새 조사 — ✅ 페이지의 «Spacing» 주석 프레임을 기계로 읽은 것입니다. 이름을 지어내지 않았습니다.",
+  "generatedFrom": "tools/spacing-census.js ← Figma get_metadata (✅ 페이지)",
+  "why": "Spacing system ✅ 표에 Usage 열이 없어 «쓰임새 → 값» 표가 정본에 없습니다(GAP-12). 원본에서 유일하게 남아 있는 쓰임새 근거가 이 주석 프레임입니다.",
+  "method": "주석 프레임의 라벨 숫자(있으면) 또는 짧은 변의 길이를 값으로 보고, 부모·앞뒤 형제 이름을 «어디에» 로 기록합니다.",
+  "pages": [
+    "Bottom navigation ✅",
+    "Buttons ✅",
+    "Checkbox ✅",
+    "Modal ✅",
+    "Picker ✅"
+  ],
+  "counts": {
+    "annotations": 192,
+    "distinctValues": 19,
+    "offScale": 11,
+    "unreadable": 17
+  },
+  "unreadable": [
+    {
+      "page": "Modal ✅",
+      "id": "43205:13706"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13722"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13762"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13770"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13730"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:2594"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3786"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3787"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4000"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4176"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4192"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4184"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3789"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4200"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9235"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9236"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9237"
+    }
+  ],
+  "summary": [
+    {
+      "value": 20,
+      "onScale": true,
+      "count": 61,
+      "pages": [
+        "Bottom navigation ✅",
+        "Buttons ✅",
+        "Checkbox ✅",
+        "Picker ✅"
+      ],
+      "places": [
+        "Description area×21",
+        "Group 2147227854×8",
+        "Group 2147227904×8",
+        "Group 2147227905×8",
+        "list01×4",
+        "cupon_already_downloaded×2"
+      ]
+    },
+    {
+      "value": 24,
+      "onScale": true,
+      "count": 35,
+      "pages": [
+        "Buttons ✅",
+        "Modal ✅",
+        "Picker ✅"
+      ],
+      "places": [
+        "list_1×8",
+        "Group 2147227897×5",
+        "Group 2147227899×5",
+        "Group 2147227900×5",
+        "Description area×4",
+        "list01×4"
+      ]
+    },
+    {
+      "value": 8,
+      "onScale": true,
+      "count": 28,
+      "pages": [
+        "Buttons ✅",
+        "Checkbox ✅",
+        "Modal ✅"
+      ],
+      "places": [
+        "Description area×7",
+        "list_1×6",
+        "Group 2147227825×4",
+        "약관 동의_to be×3",
+        "Frame 716091×3",
+        "Frame 2759×2"
+      ]
+    },
+    {
+      "value": 16,
+      "onScale": true,
+      "count": 21,
+      "pages": [
+        "Buttons ✅",
+        "Checkbox ✅",
+        "Picker ✅"
+      ],
+      "places": [
+        "Description area×6",
+        "list01×4",
+        "Group 2147227823×3",
+        "Frame 3355×2",
+        "Group 2147227854×2",
+        "Group 2147227905×2"
+      ]
+    },
+    {
+      "value": 4,
+      "onScale": true,
+      "count": 10,
+      "pages": [
+        "Checkbox ✅",
+        "Modal ✅",
+        "Picker ✅"
+      ],
+      "places": [
+        "Group 2147227857×4",
+        "약관 동의_to be×2",
+        "Group 2147227863×2",
+        "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up×1",
+        "Description area×1"
+      ]
+    },
+    {
+      "value": 32,
+      "onScale": true,
+      "count": 7,
+      "pages": [
+        "Modal ✅",
+        "Picker ✅"
+      ],
+      "places": [
+        "Description area×3",
+        "Group 2147227897×1",
+        "Group 2147227899×1",
+        "Group 2147227900×1",
+        "Group 2147227891×1"
+      ]
+    },
+    {
+      "value": 28,
+      "onScale": true,
+      "count": 6,
+      "pages": [
+        "Picker ✅"
+      ],
+      "places": [
+        "Group 2147227857×4",
+        "Group 2147227865×2"
+      ]
+    },
+    {
+      "value": 78,
+      "onScale": false,
+      "count": 4,
+      "pages": [
+        "Modal ✅"
+      ],
+      "places": [
+        "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up×2",
+        "Description area×2"
+      ]
+    },
+    {
+      "value": 12,
+      "onScale": true,
+      "count": 3,
+      "pages": [
+        "Buttons ✅"
+      ],
+      "places": [
+        "Group 2147227828×2",
+        "Description area×1"
+      ]
+    },
+    {
+      "value": 19,
+      "onScale": false,
+      "count": 3,
+      "pages": [
+        "Bottom navigation ✅"
+      ],
+      "places": [
+        "Group 2147227874×3"
+      ]
+    },
+    {
+      "value": 29,
+      "onScale": false,
+      "count": 3,
+      "pages": [
+        "Picker ✅"
+      ],
+      "places": [
+        "Group 2147227857×3"
+      ]
+    },
+    {
+      "value": 7,
+      "onScale": false,
+      "count": 2,
+      "pages": [
+        "Buttons ✅"
+      ],
+      "places": [
+        "Group 2147227904×2"
+      ]
+    },
+    {
+      "value": 13,
+      "onScale": false,
+      "count": 2,
+      "pages": [
+        "Picker ✅"
+      ],
+      "places": [
+        "Group 2147227866×2"
+      ]
+    },
+    {
+      "value": 50,
+      "onScale": false,
+      "count": 2,
+      "pages": [
+        "Picker ✅"
+      ],
+      "places": [
+        "Group 2147227857×2"
+      ]
+    },
+    {
+      "value": 31,
+      "onScale": false,
+      "count": 1,
+      "pages": [
+        "Checkbox ✅"
+      ],
+      "places": [
+        "약관 동의_to be×1"
+      ]
+    },
+    {
+      "value": 34,
+      "onScale": false,
+      "count": 1,
+      "pages": [
+        "Modal ✅"
+      ],
+      "places": [
+        "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up×1"
+      ]
+    },
+    {
+      "value": 42,
+      "onScale": false,
+      "count": 1,
+      "pages": [
+        "Buttons ✅"
+      ],
+      "places": [
+        "Description area×1"
+      ]
+    },
+    {
+      "value": 80,
+      "onScale": false,
+      "count": 1,
+      "pages": [
+        "Buttons ✅"
+      ],
+      "places": [
+        "Description area×1"
+      ]
+    },
+    {
+      "value": 190,
+      "onScale": false,
+      "count": 1,
+      "pages": [
+        "Buttons ✅"
+      ],
+      "places": [
+        "Description area×1"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "page": "Checkbox ✅",
+      "id": "42734:104926",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227823",
+      "before": "Spacing",
+      "after": "Tag"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42734:104927",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227823",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42734:104928",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227823",
+      "before": null,
+      "after": "Tag"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42734:104943",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227823",
+      "before": null,
+      "after": "Tag"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35626",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": "Spacing",
+      "after": "참고 설명 텍스트"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35857",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": "Spacing",
+      "after": "참고 설명 텍스트"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35968",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": "Spacing",
+      "after": "참고 설명 텍스트"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35873",
+      "value": 31,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35925",
+      "value": 4,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:35976",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42752:36032",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "약관 동의_to be",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:2271",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "cupon_already_downloaded",
+      "before": null,
+      "after": "Frame 1261159378"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:2357",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "cupon_already_downloaded",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:2442",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 1261159375",
+      "before": "cupon_already_downloaded",
+      "after": "cupon_already_downloaded"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:2444",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 1261159375",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:3953",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Frame 3588",
+      "before": null,
+      "after": "보기 리스트1"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:4039",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Frame 3588",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:4124",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 3355",
+      "before": "Group 2864",
+      "after": "Frame 3588"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42774:4126",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 3355",
+      "before": "Spacing",
+      "after": "Component 65"
+    },
+    {
+      "page": "Checkbox ✅",
+      "id": "42775:4144",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "보기1",
+      "before": "checkbox",
+      "after": "차종"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36083",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36126",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36169",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36170",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36171",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36497",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36986",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37120",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37128",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36994",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36514",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36506",
+      "value": 16,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37136",
+      "value": 16,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36539",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37010",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37152",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37002",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36845",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36846",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36847",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36890",
+      "value": 7,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:36933",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37021",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37064",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37107",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37108",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43670:37109",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15813",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15856",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15899",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15900",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15901",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227854",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15902",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15910",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15918",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15926",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15934",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15942",
+      "value": 20,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15950",
+      "value": 16,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15958",
+      "value": 16,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Group 2147227904",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15966",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15974",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15982",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": null,
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:15990",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16000",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16001",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16002",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16045",
+      "value": 7,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16088",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227904",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16133",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16176",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16219",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16220",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:16221",
+      "value": 20,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227905",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30808",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30851",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30894",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30937",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30938",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30939",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227825",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30693",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Frame 716091",
+      "before": "Frame 716093",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30736",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 716091",
+      "before": "Spacing",
+      "after": "Frame 716092"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30737",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 716091",
+      "before": "Spacing",
+      "after": "Frame 716093"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30976",
+      "value": 8,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30984",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43684:30993",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43691:23810",
+      "value": 12,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227828",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43691:23811",
+      "value": 12,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227828",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43691:9818",
+      "value": 12,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:7392",
+      "value": 42,
+      "axis": "가로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43691:9826",
+      "value": 190,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:7384",
+      "value": 80,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43852:13532",
+      "value": 8,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70336",
+      "value": 24,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70352",
+      "value": 24,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43852:13540",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70660",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70363",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 2759",
+      "before": "(사)한국그린서비스협회",
+      "after": "인천광역시 중구 운서동 2851"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70360",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70362",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70423",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70417",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70418",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70419",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70374",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70484",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70486",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": null,
+      "after": "ico_list"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70487",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": null,
+      "after": "ico_list"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70617",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70531",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": "이메일"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "43864:70574",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": "이름"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11315",
+      "value": 8,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11323",
+      "value": 24,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11331",
+      "value": 24,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "좌,우 스페이싱 값이 없는 경우",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11339",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11347",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Frame 2147227743"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11367",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Frame 2759",
+      "before": "(사)한국그린서비스협회",
+      "after": "인천광역시 중구 운서동 2851"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11371",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11372",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11373",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11426",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11427",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11428",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11429",
+      "value": 8,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list_1",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11478",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11479",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": null,
+      "after": "ico_list"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11480",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": null,
+      "after": "ico_list"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11523",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11566",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": "이메일"
+    },
+    {
+      "page": "Buttons ✅",
+      "id": "44675:11609",
+      "value": 16,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "list01",
+      "before": "Spacing",
+      "after": "이름"
+    },
+    {
+      "page": "Bottom navigation ✅",
+      "id": "42955:59904",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227874",
+      "before": null,
+      "after": "Frame 2147227729"
+    },
+    {
+      "page": "Bottom navigation ✅",
+      "id": "42955:59942",
+      "value": 19,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227874",
+      "before": "Tag",
+      "after": "Frame 2147227731"
+    },
+    {
+      "page": "Bottom navigation ✅",
+      "id": "42955:59964",
+      "value": 19,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227874",
+      "before": "Tag",
+      "after": "Frame 2147227731"
+    },
+    {
+      "page": "Bottom navigation ✅",
+      "id": "42955:59986",
+      "value": 19,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227874",
+      "before": "Tag",
+      "after": "Frame 2147227731"
+    },
+    {
+      "page": "Bottom navigation ✅",
+      "id": "42955:60008",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227874",
+      "before": "Tag",
+      "after": "Frame 2147227732"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13437",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13438",
+      "value": 32,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13439",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13503",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13567",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:13568",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227897",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15032",
+      "value": 78,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15033",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15034",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15227",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15420",
+      "value": 78,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15421",
+      "value": 34,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15445",
+      "value": 4,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": "Frame 2147227740"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43205:15453",
+      "value": 78,
+      "axis": "가로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:2586",
+      "value": 78,
+      "axis": "가로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3856",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3858",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3859",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3861",
+      "value": 32,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3862",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3927",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227899",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:3992",
+      "value": 32,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Frame 2147227741"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4168",
+      "value": 32,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4160",
+      "value": 8,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4022",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4024",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4025",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4090",
+      "value": 24,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4154",
+      "value": 8,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4156",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Modal ✅",
+      "id": "43206:4157",
+      "value": 32,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227900",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26762",
+      "value": 29,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26805",
+      "value": 29,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26848",
+      "value": 29,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26891",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26892",
+      "value": 50,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26893",
+      "value": 50,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26894",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26895",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26896",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26897",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26898",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26899",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42925:26900",
+      "value": 4,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227857",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47722",
+      "value": 13,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227866",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47723",
+      "value": 13,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227866",
+      "before": "Group 2147227865",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47725",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227865",
+      "before": null,
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47768",
+      "value": 28,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227865",
+      "before": null,
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47812",
+      "value": 16,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227864",
+      "before": null,
+      "after": "Group 2147227863"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47814",
+      "value": 4,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227863",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "42936:47878",
+      "value": 4,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227863",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9092",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227891",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9093",
+      "value": 32,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227891",
+      "before": "Spacing",
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9094",
+      "value": 24,
+      "axis": "세로",
+      "kind": "띠",
+      "parent": "Group 2147227891",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9095",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227891",
+      "before": "Spacing",
+      "after": null
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9159",
+      "value": 20,
+      "axis": "가로",
+      "kind": "띠",
+      "parent": "Group 2147227891",
+      "before": null,
+      "after": "Spacing"
+    },
+    {
+      "page": "Picker ✅",
+      "id": "44082:9238",
+      "value": 32,
+      "axis": "세로",
+      "kind": "말풍선",
+      "parent": "Description area",
+      "before": "Frame 2147227743",
+      "after": "Frame 2147227741"
+    }
+  ]
+}
