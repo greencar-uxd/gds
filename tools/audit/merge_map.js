@@ -53,11 +53,20 @@ const conflictNames = new Set([...byName.entries()]
 // 확정된 폐기 처분 (data/color-decisions.json · orphanDispositions)
 const DISPOSE = new Map();
 for (const o of VIEW.orphanDispositions) DISPOSE.set(o.hex.toUpperCase(), o);
-const badDispose = [...DISPOSE.values()].filter(o => !CANON.some(c => c.name === o.target));
+// action:'external' 은 외부(OS·프레임워크·제휴사)가 소유한 색이라 치환 대상이 없습니다.
+const badDispose = [...DISPOSE.values()]
+  .filter(o => o.action !== 'external' && !CANON.some(c => c.name === o.target));
 if (badDispose.length) throw new Error(`orphanDispositions 의 치환 대상이 정본에 없습니다: ${badDispose.map(o => o.target).join(', ')}`);
 
 const rows = legacy.map(s => {
   const disp = DISPOSE.get(s.hexU);
+  if (disp && disp.action === 'external') {
+    return {
+      style: s.name, id: s.id, hex: s.hex,
+      verdict: 'RETIRE', target: null, targetHex: null, delta: null,
+      note: `GDS 밖으로 분리 (${VIEW.DEC.decidedAt}) — ${disp.owner} 소유. GDS 토큰으로 복제하지 않습니다`,
+    };
+  }
   if (disp) {
     const t = CANON.find(c => c.name === disp.target);
     return {
@@ -140,8 +149,8 @@ fs.writeFileSync(path.join(ROOT, 'data', 'color-merge.json'), JSON.stringify(res
 
 const esc = v => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
 let csv = '판정,레거시 스타일,node_id,HEX,정본 대상,정본 HEX,색차(ΔE),비고\n';
-for (const r of rows.sort((a, b) => a.verdict.localeCompare(b.verdict) || b.delta - a.delta)) {
-  csv += [r.verdict, esc(r.style), esc(r.id), esc(r.hex), esc(r.target), esc(r.targetHex), r.delta, esc(r.note)].join(',') + '\n';
+for (const r of rows.sort((a, b) => a.verdict.localeCompare(b.verdict) || (b.delta || 0) - (a.delta || 0))) {
+  csv += [r.verdict, esc(r.style), esc(r.id), esc(r.hex), esc(r.target || ""), esc(r.targetHex || ""), r.delta == null ? "" : r.delta, esc(r.note)].join(',') + '\n';
 }
 fs.writeFileSync(path.join(ROOT, 'docs', 'color-merge-map.csv'), csv);
 
@@ -179,12 +188,12 @@ ${T.conflictAutoResolved}/${T.conflictNames} 종이 정본 기준으로 자동 �
 
 ### 3-0. ✅ 제거 확정 — ${T.orphanRetired}종
 
-${retired.map(o => { const d = VIEW.orphanDispositions.find(x => x.hex.toUpperCase() === o.hex); return `**\`${o.hex}\` → \`${d.target}\` (\`${d.targetHex}\`)** · ΔE ${d.deltaE} · 레거시 ${d.legacyStyles}개 스타일(이름 ${d.legacyNames.length}종)
+${retired.map(o => { const d = VIEW.orphanDispositions.find(x => x.hex.toUpperCase() === o.hex); return `**\`${o.hex}\`${d.action === 'external' ? ` — GDS 밖으로 분리 (${d.owner} 소유)` : ` → \`${d.target}\` (\`${d.targetHex}\`) · ΔE ${d.deltaE}`}** · ${d.cluster ? `${d.cluster} · ` : ''}레거시 ${d.legacyStyles}개 스타일(이름 ${d.legacyNames.length}종)
 
 ${d.reason}
-
+${d.caution ? `
 > ⚠️ ${d.caution}
-
+` : ''}
 해당 스타일: ${d.legacyNames.map(n => `\`${n}\``).join(' · ')}`; }).join('\n\n') || '없음'}
 
 ### 3-1. 흡수 권고 — ΔE ≤ ${NEAR_LIMIT} · ${T.orphanNear}종
