@@ -267,23 +267,31 @@ footer{border-top:1px solid var(--line);padding-top:var(--s5);margin-top:var(--s
 
 /* ── 상단바 · 2단 네비 ── 항목이 늘어도 사이드바가 길어지지 않게, 최상위는 가로로 둡니다.
    KT·KRDS·BBC·신한이 전부 이 형태입니다(data/reference-sites.json). ── */
-.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:var(--s3);
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:stretch;gap:var(--s3);
   height:var(--top);padding:0 var(--s5);border-bottom:1px solid var(--line);
   background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(160%) blur(12px)}
 .topbar .grow{flex:1}
 .tb-brand{display:flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap}
+.ver{align-self:center}
+.topbar>button,.topbar>a>button{align-self:center}
 .tb-brand .dot{width:18px;height:18px;border-radius:6px;background:var(--accent);display:block}
 .tb-brand b{font-size:16px;font-weight:800;letter-spacing:-.03em}
 .tb-sub{font-size:12.5px;color:var(--text3);margin-left:2px}
 @media(max-width:1080px){.tb-sub{display:none}}
 .ver{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--text2);
-  border:1px solid var(--line);border-radius:99px;padding:2px 9px;white-space:nowrap}
-.topnav{display:flex;gap:2px;margin-left:var(--s4);overflow-x:auto;scrollbar-width:none}
+  border:1px solid var(--line);border-radius:99px;padding:2px 9px;white-space:nowrap;height:fit-content}
+/* 상단 섹션 네비 — 알약도 상자도 아닙니다. 밑줄 하나로만 «지금 여기»를 말합니다.
+   밑줄은 상단바 하단선 위에 정확히 겹쳐 놓아 선이 두 줄로 보이지 않게 합니다. */
+.topnav{display:flex;margin-left:var(--s5);align-self:stretch;overflow-x:auto;scrollbar-width:none}
 .topnav::-webkit-scrollbar{display:none}
-.topnav a{padding:6px 12px;font-size:14px;color:var(--text2);border-radius:8px;cursor:pointer;white-space:nowrap}
-.topnav a:hover{color:var(--text);background:var(--surface2)}
-.topnav a.on{color:var(--text);font-weight:700;box-shadow:inset 0 -2px 0 var(--accent);border-radius:8px 8px 0 0}
+.topnav a{position:relative;display:flex;align-items:center;padding:0 14px;font-size:14px;
+  color:var(--text3);cursor:pointer;white-space:nowrap;transition:color .12s}
+.topnav a:hover{color:var(--text2)}
+.topnav a.on{color:var(--text);font-weight:700}
+.topnav a.on:after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;
+  background:var(--accent)}
 .tb-search{display:flex;align-items:center;gap:7px}
+.tb-btn{display:flex;align-items:center}
 kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 5px;
   font-size:11px;color:var(--text3);background:var(--surface)}
 nav.side{top:var(--top);height:calc(100vh - var(--top));padding:var(--s5) 0 var(--s8)}
@@ -325,7 +333,7 @@ nav.side{top:var(--top);height:calc(100vh - var(--top));padding:var(--s5) 0 var(
   <nav class="topnav" id="topnav"></nav>
   <span class="grow"></span>
   <button id="search" class="tb-search">찾기 <kbd>/</kbd></button>
-  <a href="decisions/"><button>Decisions</button></a>
+  <a href="decisions/" class="tb-btn"><button>Decisions</button></a>
   <button id="theme">Dark</button>
 </header>
 <div class="shell">
