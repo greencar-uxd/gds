@@ -90,7 +90,7 @@ const shadowCss = st => st.layers
   .map(l => `${l.x}px ${l.y}px ${l.blur}px ${l.spread}px rgba(0,0,0,${l.alpha})`).join(', ');
 const elevation = E ? E.scale.map(st => ({ key: st.name.replace(/^Elevation_/, ''), name: st.name, was: st.was, value: shadowCss(st), layers: st.layers })) : [];
 
-const HEAD = `/* GDS — 그린카 디자인 시스템 토큰
+const HEAD = `/* GDS — G car Design System 토큰
  * 생성: ${D.meta.source} (export ${String(D.meta.exported).slice(0, 10)})
  * 출처: ✅ Foundation 페이지 정본. 레거시 스타일(현황)은 포함하지 않습니다.
  * 자동 생성 파일입니다 — 직접 수정하지 마세요.

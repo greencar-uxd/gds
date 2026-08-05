@@ -45,6 +45,8 @@ if (TDEC_SITE.usage && TDEC_SITE.usage.status === 'confirmed') {
     ...t, usage: TDEC_SITE.usage.map[t.token] || null,
   }));
 }
+// 버전 — 레퍼런스 다섯 곳이 전부 제품명 옆에 버전을 답니다(data/reference-sites.json).
+injected.meta.version = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
 // 정본 사이트에도 새 계층을 싣습니다 — /decisions 에만 있으면 «정본 문서»가 아니라 «작업 기록»이 됩니다.
 injected.canon.layout = VIEW.layout || null;
 injected.canon.semantic = VIEW.semantic || null;

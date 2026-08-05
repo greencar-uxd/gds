@@ -40,7 +40,7 @@ const html = `<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GDS — 결정 기록</title>
+<title>GDS — Decisions</title>
 <style>
 :root{--bg:#fff;--surface:#fbfbfc;--surface2:#f2f3f5;--line:#e7e9ec;--line-soft:#f1f2f4;
 --text:#0d0f11;--text2:#5a616a;--text3:#939aa3;--brand:#F14950;--brand-deep:#ED1C24;--brand-soft:#FBD2D3;
@@ -149,9 +149,9 @@ td.act-defer{color:var(--brand);font-weight:600}
 footer{margin-top:var(--s8);padding-top:var(--s5);border-top:1px solid var(--line);color:var(--text3);font-size:13px}
 </style></head>
 <body>
-<div class="bar"><b style="font-size:14px">GDS</b><span class="muted">결정 기록</span><span class="grow"></span>
-<a href="../"><button>정본</button></a>
-<button id="th">◐ 테마</button></div>
+<div class="bar"><b style="font-size:14px">GDS</b><span class="muted">Decisions</span><span class="grow"></span>
+<a href="../"><button>Canon</button></a>
+<button id="th">◐ Theme</button></div>
 <div class="wrap">
 <div class="eyebrow">Decisions</div>
 <h1>정본의 근거 — GDS 라이브러리</h1>

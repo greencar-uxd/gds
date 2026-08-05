@@ -631,15 +631,47 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     for (const s of scripts) { try { new Function(s); } catch (e) { parseErr = e.message; break; } }
     ok('사이트 스크립트가 문법 오류 없이 파싱됨', parseErr === null, parseErr || '');
 
-    // 사이드바 항목과 뷰 함수가 1:1 인지 — 어긋나면 클릭했을 때 빈 화면입니다.
-    const navKeys = [...idx.matchAll(/data-go="([a-z]+)"/g)].map(m => m[1]);
+    // 네비 항목과 뷰 함수가 1:1 인지 — 어긋나면 눌렀을 때 빈 화면입니다.
+    // 네비는 이제 NAV 모델에서 그려지므로 마크업이 아니라 모델을 봅니다.
+    const nm = idx.match(/const NAV=\[([\s\S]*?)\n\];/);
+    const navKeys = nm ? [...nm[1].matchAll(/\['([a-z]+)','[^']*'\]/g)].map(m => m[1]) : [];
     const vm = idx.match(/const V=\{([^}]+)\}/);
     const viewKeys = vm ? vm[1].split(',').map(s => s.trim()) : [];
-    ok('사이드바 항목이 전부 뷰 함수와 짝이 맞음',
-      navKeys.length > 0 && navKeys.every(k => viewKeys.includes(k)),
+    ok('네비 항목과 뷰 함수가 1:1', navKeys.length > 0 && viewKeys.length > 0
+      && navKeys.every(k => viewKeys.includes(k)) && viewKeys.every(k => navKeys.includes(k)),
       `nav ${navKeys.join(',')} / V ${viewKeys.join(',')}`);
     ok('사이트에 레이아웃 · 시맨틱 항목이 있음',
       navKeys.includes('layout') && navKeys.includes('semantic'));
+    ok('최상위 네비가 2단으로 갈라짐(가로 섹션 + 섹션 내 사이드바)',
+      /id="topnav"/.test(idx) && /id="secnav"/.test(idx) && (nm ? /sec:'/.test(nm[1]) : false));
+
+    // ── 크롬이 브랜드 빨강을 입지 않았는지 ──
+    // 문서가 자기 색으로 칠해져 있으면 색 스와치가 UI 의 일부처럼 보입니다.
+    // accent 는 정본 Navy 값이어야 합니다 — 사이트가 자기 토큰으로 만들어졌다는 뜻입니다.
+    const navy060 = VIEW.colors.find(c => c.name === 'Navy/Navy 060');
+    const navy010 = VIEW.colors.find(c => c.name === 'Navy/Navy 010');
+    const navy030 = VIEW.colors.find(c => c.name === 'Navy/Navy 030');
+    const navy080 = VIEW.colors.find(c => c.name === 'Navy/Navy 080');
+    const acc = idx.match(/--accent:(#[0-9A-Fa-f]{6}); --accent-soft:(#[0-9A-Fa-f]{6})/g) || [];
+    ok('크롬 accent 가 정본 Navy 값과 같음(라이트/다크)', acc.length === 2
+      && acc[0] === `--accent:${navy060.hex}; --accent-soft:${navy010.hex}`
+      && acc[1] === `--accent:${navy030.hex}; --accent-soft:${navy080.hex}`,
+      acc.join(' | '));
+    ok('사이드바 활성 표시가 브랜드 빨강이 아님',
+      /nav\.side a\.item\.on\{color:var\(--accent\)/.test(idx));
+    // 크롬 CSS 안만 봅니다 — 주입된 데이터에는 정본 색 값이 그대로 들어 있어 전체 검색은 무의미합니다.
+    const styleBlock = (idx.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1];
+    ok('히어로가 브랜드 그라디언트를 입지 않음',
+      !/\.hero\{[^}]*gradient/.test(styleBlock) && !/#B01F24/.test(styleBlock));
+
+    // ── 문서 위생 ── 버전 · 찾기 · 근거 메타
+    ok('제품명 옆 버전이 표기됨', /id="ver"/.test(idx) && /D\.meta\.version/.test(idx));
+    ok('찾기 팔레트가 있음', /id="palq"/.test(idx) && /const INDEX=/.test(idx));
+    ok('찾기 색인이 페이지와 토큰을 모두 담음',
+      /kind:'page'/.test(idx) && /kind:'color'/.test(idx) && /kind:'semantic'/.test(idx));
+    const pmetaCount = (idx.match(/pmeta\(\{/g) || []).length;
+    ok('페이지마다 «출처·근거·갱신» 고정 메타', pmetaCount >= navKeys.length - 1,
+      `${pmetaCount}개 / 뷰 ${navKeys.length}개`);
 
     // 데이터가 실제로 주입됐는지 — 뷰가 있어도 데이터가 없으면 «아직 실리지 않았습니다» 가 뜹니다.
     const dm = idx.match(/<script type="application\/json" id="data">([\s\S]*?)<\/script>/);
