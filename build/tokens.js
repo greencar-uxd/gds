@@ -262,6 +262,8 @@ json.$notes.colorDecisions = {
   additions: VIEW.additions.map(a => ({ id: a.id, sourceName: a.sourceName, hex: a.hex, action: a.action, token: a.token || a.target || null, status: a.status })),
   sourceDefects: VIEW.sourceDefects ? VIEW.sourceDefects.items.map(d => ({ id: d.id, problem: d.problem })) : [],
 };
+// 차기 라이브러리 이름을 타이포 토큰에 함께 실어, 라이브러리 반영 때 대조할 수 있게 합니다.
+const LIBNAME = new Map((VIEW.typeLib ? VIEW.typeLib.styles : []).map(s => [s.canonToken, s]));
 for (const t of types) json.type[t.key] = {
   $value: {
     ...(FONT ? { fontFamily: FONT.value } : {}),
@@ -276,6 +278,11 @@ for (const t of types) json.type[t.key] = {
       status: 'confirmed',
       ...(LH ? { lineHeightSource: `Figma ${LH.value}` } : {}),
       ...(t.usage ? { usage: t.usage } : {}),
+      ...(LIBNAME.has(t.token) ? {
+        libraryName: LIBNAME.get(t.token).name,
+        currentLibraryName: LIBNAME.get(t.token).currentLibraryName,
+        libraryStatus: 'to-be — 저장소에서 먼저 만들고 원본에 반영합니다',
+      } : {}),
     },
   },
 };

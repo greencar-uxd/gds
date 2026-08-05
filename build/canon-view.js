@@ -131,6 +131,9 @@ module.exports = {
     return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
   layout: (() => { const p = path.join(ROOT, 'data', 'layout-tokens.json');
     return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
+  // 차기 라이브러리에 넣을 텍스트 스타일 21종 — 저장소가 먼저 만들고 원본에 반영합니다.
+  typeLib: (() => { const p = path.join(ROOT, 'data', 'typography-library.json');
+    return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
   excludedLibraries: LIB.excludedLibraries || [],
   renames: [...renameMap.values()],
   integrity: { missing, hexMismatch, overrideMissing, overrideStale, additionUnknown, additionStale, additionCollision, splitMissing, retireMissing, retireTargetMissing },
