@@ -167,9 +167,9 @@ if (!fs.existsSync(caPath) || !fs.existsSync(taPath)) {
 console.log('\n[6-2] 정본 폰트');
 {
   const FONT = require('./font.js');
-  const pages = ['dist/index.html', 'dist/diagnostics.html', 'dist/decisions/index.html', 'dist/haptic/index.html']
+  const pages = ['dist/index.html', 'dist/diagnostics.html', 'dist/decisions/index.html']
     .map(f => path.join(ROOT, f)).filter(f => fs.existsSync(f));
-  ok('빌드된 페이지 존재', pages.length === 4, `${pages.length}/4`);
+  ok('빌드된 페이지 존재', pages.length === 3, `${pages.length}/3`);
   for (const f of pages) {
     const html = fs.readFileSync(f, 'utf8');
     const rel = path.relative(ROOT, f);

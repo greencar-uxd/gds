@@ -14,7 +14,7 @@ const OUT_DIAG = path.join(OUT_DIR, 'diagnostics.html');
 
 // 하위 경로 섹션 — site/<name>.html → dist/<name>/index.html → /gds/<name>
 // 데이터 주입이 필요 없는 정적 섹션입니다. 늘리려면 여기에 이름만 추가하면 됩니다.
-const SUBPAGES = ['haptic'];
+const SUBPAGES = [];
 
 const tpl = fs.readFileSync(TEMPLATE, 'utf8');
 
