@@ -492,5 +492,43 @@ console.log('\n[9] CQ-6 orphan 묶음');
   }
 }
 
+// ────────────────────────────────────────────────────────────
+console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
+{
+  const fp = path.join(ROOT, 'data', 'figma-foundation-sync.json');
+  ok('data/figma-foundation-sync.json 존재', fs.existsSync(fp));
+  if (fs.existsSync(fp)) {
+    const F = JSON.parse(fs.readFileSync(fp, 'utf8'));
+    const T2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
+    ok('타이포 대조 대상 수 = 정본 단계 수',
+      F.typography.canonTokens === ((canon.typography || {}).scale || []).length,
+      `${F.typography.canonTokens} vs ${((canon.typography || {}).scale || []).length}`);
+    ok('타이포 원본/정본 단계 수 동일', F.typography.figmaTokens === F.typography.canonTokens);
+    ok('타이포 불일치 0건', F.typography.mismatches.length === 0,
+      F.typography.mismatches.map(m => `${m.token}.${m.field}`).join(', '));
+    ok('간격 대조 대상 수 = 정본 단계 수',
+      F.spacing.canonSteps === ((canon.spacing || {}).scale || []).length);
+    ok('간격 값 일치', F.spacing.valuesMatch === true);
+    ok('원본 간격 이름 중복이 기록됨', F.spacing.originalDuplicateNames.length > 0);
+    ok('원본 중복 이름이 저장소에서는 해소됨', (() => {
+      const names = ((canon.spacing || {}).scale || []).map(x => x.token);
+      return new Set(names).size === names.length;
+    })());
+    ok('엘리베이션 원본 레벨 기록됨', (F.elevation.figmaLevels || []).length === 6);
+    ok('대조 방법이 읽기 전용임을 명시', /읽기 전용/.test(F.method), F.method);
+    // 이 대조에서 나온 원본 결함이 기록됐는가
+    const DEC2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
+    const ids = (DEC2.sourceDefects.items || []).map(d => d.id);
+    for (const id of ['SD-7', 'SD-8', 'SD-9', 'SD-10']) ok(`원본 결함 ${id} 기록됨`, ids.includes(id));
+    // 타이포 미결 안건
+    const open6 = (T2.open || []).find(o => o.id === 'TQ-6');
+    ok('TQ-6 (Time picker 서체) 열린 안건으로 존재', !!open6 && open6.status === 'open');
+    ok('TQ-6 에 선택지와 권고가 있음', !!open6 && (open6.options || []).length >= 2 && !!open6.recommendation);
+    const dh2 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
+    ok('원본 대조 결과가 결정 안건 페이지에 표시됨', dh2.includes(F.typography.source));
+    ok('TQ-6 이 결정 안건 페이지에 표시됨', dh2.includes('TQ-6'));
+  }
+}
+
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
 process.exit(fail === 0 ? 0 : 1);

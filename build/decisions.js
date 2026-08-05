@@ -10,6 +10,8 @@ const D = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foundation-data.js
 const CA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-audit.json'), 'utf8'));
 const TA = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-audit.json'), 'utf8'));
 const MG = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-merge.json'), 'utf8'));
+const FSPath = path.join(ROOT, 'data', 'figma-foundation-sync.json');
+const FS_ = fs.existsSync(FSPath) ? JSON.parse(fs.readFileSync(FSPath, 'utf8')) : null;
 const OCPath = path.join(ROOT, 'data', 'orphan-clusters.json');
 const OC = fs.existsSync(OCPath) ? JSON.parse(fs.readFileSync(OCPath, 'utf8')) : null;
 const VIEW = require('./canon-view.js');
@@ -117,6 +119,13 @@ ${OC.clusters.map(c => `<div class="ocl">
       + (o.options ? `<ol class="opts">${o.options.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : '')
       + (o.recommendation ? `<div class="note"><b>권고.</b> ${esc(o.recommendation)}</div>` : '')
       + (o.blocks ? `<p class="muted">이 결정이 막고 있는 편입 항목: ${o.blocks.map(b => `<code>${esc(b)}</code>`).join(' · ')} — <code>data/color-decisions.json</code> 의 <code>additions</code>.</p>` : ''),
+  })),
+  ...(TDEC.open || []).filter(o => o.status === 'open').map(o => ({
+    id: o.id, group: '타이포', title: o.question, weight: '차단', tag: '팩트',
+    body: `<p>${esc(o.detail)}</p>`
+      + (o.options ? `<ol class="opts">${o.options.map(x => `<li>${esc(x)}</li>`).join('')}</ol>` : '')
+      + (o.recommendation ? `<div class="note"><b>권고.</b> ${esc(o.recommendation)}</div>` : '')
+      + (o.evidence ? `<p class="muted">근거 — ${esc(o.evidence)}</p>` : ''),
   })),
   ...(TDEC.open || []).filter(o => o.status === 'closed').map(o => ({
     id: o.id, group: '타이포', title: (o.settledTitle || o.question), question: o.question,
@@ -318,6 +327,23 @@ ${VIEW.additions.map(a => `<tr>
 <td class="muted">${esc(a.reason)}</td></tr>`).join('')}
 </tbody></table>
 <p class="muted">스냅샷 원본 <code>data/figma-variables.json</code> — 손으로 쓴 값이 아니라 <code>get_variable_defs</code> 응답 그대로입니다. 빌드가 이 스냅샷과 결정 파일을 대조해 어긋나면 실패합니다.</p>
+</div>` : ''}
+${FS_ ? `<div class="sync">
+<h3>타이포 · 간격 · 엘리베이션 원본 대조 — ${FS_.checkedAt}</h3>
+<p class="sub">${esc(FS_.method)}</p>
+<div class="stats">
+<div class="${FS_.typography.mismatches.length ? 'hl' : 'ok'}"><b>${FS_.typography.figmaTokens}/${FS_.typography.canonTokens}</b><span>타이포 — 불일치 ${FS_.typography.mismatches.length}</span></div>
+<div class="${FS_.spacing.valuesMatch ? 'ok' : 'hl'}"><b>${FS_.spacing.figmaRows}/${FS_.spacing.canonSteps}</b><span>간격 — 값 ${FS_.spacing.valuesMatch ? '일치' : '불일치'}</span></div>
+<div class="hl"><b>${FS_.spacing.originalDuplicateNames.length}</b><span>원본 간격 이름 중복</span></div>
+<div><b>${FS_.elevation.figmaLevels.length}</b><span>엘리베이션 — 체계 상이</span></div>
+</div>
+<table><thead><tr><th>영역</th><th>원본 근거</th><th>판정</th></tr></thead><tbody>
+<tr><td><b>타이포그래피</b></td><td class="muted"><code>${esc(FS_.typography.source)}</code></td><td class="act-adopt">${esc(FS_.typography.verdict)} — 이름·굵기·크기·행간(${esc(FS_.typography.lineHeight.split(' ')[0])})·용도 전부</td></tr>
+<tr><td><b>간격</b></td><td class="muted"><code>${esc(FS_.spacing.source)}</code> · ${esc(FS_.spacing.unit)}</td><td class="act-adopt">${esc(FS_.spacing.verdict)}</td></tr>
+<tr><td><b>엘리베이션</b></td><td class="muted"><code>${esc(FS_.elevation.source)}</code></td><td class="act-defer">${esc(FS_.elevation.verdict)}</td></tr>
+</tbody></table>
+<p class="muted">원본 간격 표의 이름 중복 — ${FS_.spacing.originalDuplicateNames.map(x => `<code>${esc(x.name)}</code>(${x.values.join('px · ')}px)`).join(' · ')}. 저장소는 <code>Spacing_0~1300</code> 순차로 재정리해 해소했습니다.</p>
+<p class="muted">엘리베이션 — 원본 ${FS_.elevation.figmaLevels.map(l => `${l.level}(${l.dp}dp)`).join(' · ')} vs 저장소 ${FS_.elevation.canonSteps.join(' · ')}. ${esc(FS_.elevation.openFromHandoff)}</p>
 </div>` : ''}
 ${VIEW.sourceDefects ? `<div class="defect">
 <h3>원본 .fig 자체의 오류 ${VIEW.sourceDefects.items.length}건</h3>
