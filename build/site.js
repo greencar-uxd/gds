@@ -45,6 +45,20 @@ if (TDEC_SITE.usage && TDEC_SITE.usage.status === 'confirmed') {
     ...t, usage: TDEC_SITE.usage.map[t.token] || null,
   }));
 }
+// 정본 사이트에도 새 계층을 싣습니다 — /decisions 에만 있으면 «정본 문서»가 아니라 «작업 기록»이 됩니다.
+injected.canon.layout = VIEW.layout || null;
+injected.canon.semantic = VIEW.semantic || null;
+injected.canon.typography.semantic = VIEW.typeSemantic || null;
+injected.canon.typography.library = VIEW.typeLib
+  ? { namingRule: VIEW.typeLib.namingRule, groups: VIEW.typeLib.groups, styles: VIEW.typeLib.styles.map(s => ({ name: s.name, canonToken: s.canonToken, currentLibraryName: s.currentLibraryName })) }
+  : null;
+injected.canon.structure = VIEW.structure || null;
+injected.canon.gapSummary = VIEW.GAPS ? {
+  total: VIEW.GAPS.items.length,
+  resolved: VIEW.GAPS.items.filter(g => g.status === 'resolved').length,
+  open: VIEW.GAPS.items.filter(g => g.status !== 'resolved').length,
+} : null;
+
 const raw = JSON.stringify(injected);
 
 if (!tpl.includes('__DATA__')) throw new Error('canon.html 에 __DATA__ 자리표시자가 없습니다');

@@ -620,6 +620,47 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       TS.tokens.every(t => dp.includes(t.token)) && TS.families.every(f => dp.includes(f.usage)));
   }
 
+  // ── 정본 사이트가 새 계층을 싣는지 ── /decisions 에만 있으면 «정본 문서»가 아니라 «작업 기록»입니다.
+  {
+    const idx = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+    // 사이트는 브라우저에서 그려집니다 — 문법 오류 하나면 페이지 전체가 빈 화면이 됩니다.
+    // 실행하지 않고 «파싱만» 해서 그걸 잡습니다(의존성 0).
+    const scripts = [...idx.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
+    ok('사이트 스크립트가 있음', scripts.length > 0);
+    let parseErr = null;
+    for (const s of scripts) { try { new Function(s); } catch (e) { parseErr = e.message; break; } }
+    ok('사이트 스크립트가 문법 오류 없이 파싱됨', parseErr === null, parseErr || '');
+
+    // 사이드바 항목과 뷰 함수가 1:1 인지 — 어긋나면 클릭했을 때 빈 화면입니다.
+    const navKeys = [...idx.matchAll(/data-go="([a-z]+)"/g)].map(m => m[1]);
+    const vm = idx.match(/const V=\{([^}]+)\}/);
+    const viewKeys = vm ? vm[1].split(',').map(s => s.trim()) : [];
+    ok('사이드바 항목이 전부 뷰 함수와 짝이 맞음',
+      navKeys.length > 0 && navKeys.every(k => viewKeys.includes(k)),
+      `nav ${navKeys.join(',')} / V ${viewKeys.join(',')}`);
+    ok('사이트에 레이아웃 · 시맨틱 항목이 있음',
+      navKeys.includes('layout') && navKeys.includes('semantic'));
+
+    // 데이터가 실제로 주입됐는지 — 뷰가 있어도 데이터가 없으면 «아직 실리지 않았습니다» 가 뜹니다.
+    const dm = idx.match(/<script type="application\/json" id="data">([\s\S]*?)<\/script>/);
+    ok('사이트 데이터 블록이 있음', !!dm);
+    if (dm) {
+      const SD = JSON.parse(dm[1].replace(/<\\\//g, '</')).canon;
+      ok('사이트에 Layout 이 실림', !!SD.layout
+        && ['screen', 'margin', 'safeArea', 'header'].reduce((n, g) => n + (SD.layout[g] || []).length, 0) === 10);
+      ok('사이트에 색 시맨틱이 실림',
+        !!SD.semantic && SD.semantic.tokens.length === VIEW.semantic.tokens.length);
+      ok('사이트에 타이포 시맨틱이 실림',
+        !!SD.typography.semantic && SD.typography.semantic.tokens.length === VIEW.typeSemantic.tokens.length
+        && SD.typography.semantic.families.length === VIEW.typeSemantic.families.length);
+      ok('사이트에 차기 라이브러리 21종이 실림',
+        !!SD.typography.library && SD.typography.library.styles.length === VIEW.typeLib.styles.length);
+      ok('사이트에 모자란 곳 집계가 실림', !!SD.gapSummary
+        && SD.gapSummary.resolved === VIEW.GAPS.items.filter(g => g.status === 'resolved').length
+        && SD.gapSummary.total === VIEW.GAPS.items.length);
+    }
+  }
+
   const GAPS = VIEW.GAPS;
   ok('해소된 GAP 마다 해소 문구가 있음',
     GAPS.items.filter(i => i.status === 'resolved').every(i => (i.resolution || '').length > 10));
