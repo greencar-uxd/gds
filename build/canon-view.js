@@ -134,6 +134,9 @@ module.exports = {
   // 차기 라이브러리에 넣을 텍스트 스타일 21종 — 저장소가 먼저 만들고 원본에 반영합니다.
   typeLib: (() => { const p = path.join(ROOT, 'data', 'typography-library.json');
     return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
+  // 컴포넌트 목록 — 구조도 25종 + 실측 (tools/build-components.js).
+  components: (() => { const q = path.join(ROOT, 'data', 'components.json');
+    return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),
   // 간격 쓰임새 조사 — ✅ 페이지의 «Spacing» 주석을 기계로 읽은 것 (tools/spacing-census.js).
   spacingCensus: (() => { const q = path.join(ROOT, 'data', 'spacing-census.json');
     return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),

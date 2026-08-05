@@ -734,6 +734,48 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     }
   }
 
+  // ── 컴포넌트 목록 ── «✅ 인데 저장소에 없는 것»이 0인지가 핵심입니다.
+  {
+    const K = VIEW.components;
+    ok('컴포넌트 목록이 있음', !!K && K.items.length > 0, K ? `${K.items.length}종` : '없음');
+    if (K) {
+      const layer = VIEW.structure.layers.find(l => /^Components$/i.test(l.name));
+      ok('목록 수 = 구조도 항목 수', K.items.length === layer.items.length,
+        `${K.items.length} / ${layer.items.length}`);
+      ok('집계가 실제 항목과 일치', (() => {
+        const d = K.items.filter(i => i.figma === 'done').length;
+        const doc = K.items.filter(i => i.documented).length;
+        return K.counts.figmaDone === d && K.counts.documented === doc
+          && K.counts.total === K.items.length;
+      })());
+      // 이게 0이 아니면 우리 숙제가 남은 것입니다 — 원본 탓이 아닙니다.
+      ok('✅ 컴포넌트는 전부 저장소에 있음', K.counts.doneButUndocumented.length === 0,
+        K.counts.doneButUndocumented.join(', '));
+      ok('실측한 컴포넌트마다 출처 노드가 있음',
+        K.items.filter(i => i.documented).every(i => !!i.node));
+      ok('원본 대기 종은 내용을 지어내지 않음',
+        K.items.filter(i => !i.documented).every(i =>
+          !i.definition && !i.kinds && !i.specs && !i.states));
+      // 페이지는 브라우저에서 그려지므로 정적 HTML 에 앵커가 없습니다 —
+      // 주입된 데이터와 템플릿 코드를 봅니다.
+      const idx4 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      const dm4 = idx4.match(/<script type="application\/json" id="data">([\s\S]*?)<\/script>/);
+      const SD4 = dm4 ? JSON.parse(dm4[1].replace(/<\\\//g, '</')).canon.components : null;
+      ok('사이트에 컴포넌트 목록이 주입됨',
+        !!SD4 && SD4.items.length === K.items.length
+        && SD4.counts.documented === K.counts.documented);
+      ok('주입된 실측 컴포넌트에 내용이 실려 있음',
+        !!SD4 && SD4.items.filter(i => i.documented)
+          .every(i => i.node && (i.definition || i.kinds || i.specs)));
+      ok('Components 뷰가 컴포넌트마다 앵커를 만듦', /id="c-\$\{esc\(i\.name/.test(idx4));
+      ok('미해결 메모가 사이트 데이터에 실림', (() => {
+        const withMemo = K.items.filter(i => i.openMemos && i.openMemos.length);
+        return withMemo.length === 0 || (!!SD4 && withMemo.every(i =>
+          (SD4.items.find(x => x.name === i.name) || {}).openMemos));
+      })());
+    }
+  }
+
   // ── 간격 쓰임새 조사 ── «간격에 시맨틱이 없다»는 주장이 조사로 뒷받침되는지 봅니다.
   {
     const SC = VIEW.spacingCensus;
