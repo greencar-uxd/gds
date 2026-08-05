@@ -10,14 +10,16 @@
     "extract": "node --max-old-space-size=8192 tools/figdec/foundation.js",
     "extract:radius": "node --max-old-space-size=8192 tools/figdec/r3_impact.js",
     "extract:census": "node --max-old-space-size=8192 tools/figdec/census_radius.js",
+    "prebuild": "node build/tokens.js",
     "build": "node build/site.js",
     "check": "node build/check.js",
-    "all": "npm run canon && npm run tokens && npm run build && npm run check",
+    "all": "npm run canon && npm run tokens && npm run audit && npm run build && npm run check",
     "fetch:rest": "node tools/figapi/fetch.js",
     "compare": "node tools/figapi/compare.js",
     "canon": "node --max-old-space-size=8192 tools/figdec/canon.js",
     "tokens": "node build/tokens.js",
-    "watch": "node tools/figapi/watch.js"
+    "watch": "node tools/figapi/watch.js",
+    "audit": "node tools/audit/color_audit.js && node tools/audit/type_audit.js && node tools/audit/merge_map.js && node tools/audit/orphan_clusters.js && node tools/audit/report.js"
   },
   "dependencies": {},
   "devDependencies": {}
