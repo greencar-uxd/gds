@@ -176,15 +176,15 @@
       "severity": "높음",
       "finding": "✅ Layout for ios/aos/web 페이지의 내용이 저장소에 통째로 없습니다. 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 영역 동작이 전부 정의돼 있는데 토큰으로도 문서로도 안 들어와 있습니다.",
       "evidence": "get_metadata 43185:36342 — iOS 375×812 · AOS/Web 360×800 · 마진 20px 통일 · iOS 하단 0px · 헤더 하단 1px 라인 · 홈 인디케이터 34px · 버튼 스티키/픽스",
-      "fix": "Layout 을 Foundation 영역으로 편입하고 화면 크기·마진·안전영역을 토큰으로 내보냅니다. 값은 data/gds-library.json 의 pages.layout 에 이미 담았습니다."
+      "fix": "Layout 은 Foundation 이 아니라 **Guidelines** 계층 소속입니다([Guidelines] ✅ 구조도 기준). Guidelines 영역을 저장소에 만들고 화면 크기·마진·안전영역을 토큰으로 내보냅니다. 값은 data/gds-library.json 의 pages.layout 에 담았습니다."
     },
     {
       "id": "GAP-14",
       "area": "계층",
       "severity": "높음",
-      "finding": "✅ [Foundation] 페이지가 규정하는 Foundation 요소는 Color · Typography · Spacing · Icon 4가지입니다. 저장소는 Icon 이 없고, 대신 정의에 없는 Radius · Elevation 을 Foundation 으로 다룹니다.",
-      "evidence": "get_metadata 42066:25435 — \"[해당 요소] Color, Typography, Spacing, Icon 등\" · Icon system 페이지는 🚧",
-      "fix": "저장소의 Foundation 구성을 정본 정의에 맞추고, Radius·Elevation 을 어디에 둘지(Foundation 확장 vs 별도 영역) 명시합니다. Icon 은 원본이 🚧 라 지금은 빈칸으로 표시합니다."
+      "finding": "Foundation 구성 요소를 두 ✅ 페이지가 다르게 적고 있습니다 — [Foundation] 본문은 \"Color · Typography · Spacing · Icon\" 4개, [Guidelines] 구조도는 \"Color · Typography · Spacing · Icon · Elevation · Radius\" 6개. 어느 쪽이든 저장소에는 Icon 이 없습니다.",
+      "evidence": "get_metadata 42066:25435 (Foundation 본문) vs 43176:109107 (Guidelines 구조도) vs 43176:107194 (Getting started 목차 — 6개)",
+      "fix": "목차와 구조도가 둘 다 6개이므로 6개를 정본으로 삼고, [Foundation] 본문 쪽을 원본 결함으로 기록합니다. Icon 은 원본이 🚧 라 저장소에서는 빈칸으로 표시합니다."
     },
     {
       "id": "GAP-15",
@@ -201,6 +201,62 @@
       "finding": "간격 스케일이 2px 배수인데 배수 열에 구멍이 있습니다 — 3X(6px)와 18X(36px)가 없습니다.",
       "evidence": "✅ Spacing scale 표 배수 열 0·1·2·4·6·8·10·12·14·16·20·22·24·26",
       "fix": "의도한 건너뜀인지 누락인지 확인이 필요합니다. 의도라면 \"왜 없는지\"를 문서에 남겨야 합니다."
+    },
+    {
+      "id": "GAP-17",
+      "area": "구조",
+      "severity": "높음",
+      "finding": "GDS 는 Guidelines → Foundation → Components → Template 4계층으로 설계돼 있는데 저장소에는 이 구조가 없습니다. 저장소가 쓰는 \"프리미티브 → 시맨틱 → 컴포넌트\" 3계층은 토큰 계층이라 별개입니다.",
+      "evidence": "[Guidelines] ✅ 구조도 43176:109614 · Getting started ✅ 목차 43176:107181",
+      "fix": "저장소 구성을 4계층에 맞추고, 토큰 3계층과 문서 4계층을 각각 무엇인지 명시해 섞이지 않게 합니다."
+    },
+    {
+      "id": "GAP-18",
+      "area": "구조",
+      "severity": "중간",
+      "finding": "Components 목차는 25개인데 저장소가 실측한 것은 Buttons 1개뿐입니다.",
+      "evidence": "Getting started ✅ 목차 43176:107203 — Buttons · Bottom sheet · Input · Bottom navigation · Border · Picker · Modal · Check box · Switch · Selection box · Radio · Accordion · Tap app bar · Tap · Smart key · Tip · Bage · Process bar · Toast · Card · Skeleton · Loading spinner · Table · Pasing · Numbering",
+      "fix": "✅ 표시된 컴포넌트부터 순서대로 실측합니다 — Modal · Checkbox · Bottom navigation · Picker · Border 가 ✅ 입니다."
+    },
+    {
+      "id": "GAP-19",
+      "area": "명명",
+      "severity": "낮음",
+      "finding": "목차 이름에 오타가 여러 건입니다 — Bage(Badge) · Pasing(Paging) · Tap(Tab) · Tap app bar(Top app bar) · Getting stared(started). 그리고 목차의 Input 과 실제 페이지 이름 Text field 가 다릅니다.",
+      "evidence": "Getting started ✅ 목차 · 페이지 목록",
+      "fix": "저장소 정본은 바른 표기로 적고 원본 표기를 함께 남깁니다."
+    },
+    {
+      "id": "GAP-20",
+      "area": "프로세스",
+      "severity": "낮음",
+      "finding": "원본 문서화 규칙은 \"현재 사용되지 않는 요소는 제외하고 히스토리 파일에서 확인\" 인데, 히스토리 파일이 어디인지 저장소에 기록돼 있지 않습니다.",
+      "evidence": "Getting started ✅ 문서화 범위 표 43176:106899",
+      "fix": "히스토리 파일 위치를 확인해 기록합니다. 레거시 라이브러리를 배제하는 근거가 이 규칙이므로 출처가 필요합니다."
+    },
+    {
+      "id": "GAP-21",
+      "area": "가이드",
+      "severity": "높음",
+      "finding": "✅ UI/UX guide 의 내용이 저장소에 한 줄도 없습니다. UX 라이팅 규칙 6종(어투·헤더 타이틀·문장형 타이틀·본문·플레이스홀더·알림 버튼)과 그래픽 3단계 체계가 전부 여기 있습니다.",
+      "evidence": "get_metadata 42066:27864 — 어투/타이틀/마침표/플레이스홀더/버튼명 규칙 · 그래픽 Lv.1 시스템 아이콘 · Lv.2 커스텀 아이콘 · Lv.3 일러스트 + 선택·예외·밀도 기준",
+      "fix": "Guidelines 계층에 UI/UX Guide 를 만들고 규칙을 그대로 싣습니다. 값은 data/gds-library.json 의 pages.uiuxGuide 에 담았습니다."
+    },
+    {
+      "id": "GAP-22",
+      "area": "아이콘",
+      "severity": "중간",
+      "finding": "Icon 은 Foundation 요소인데 Icon system 페이지는 🚧 입니다. 정작 아이콘을 가르는 규칙(Lv.1~3 · 밀도)은 ✅ UI/UX guide 에 있어서 두 곳으로 흩어져 있습니다.",
+      "evidence": "Foundation 목차에 Icon 포함 · Icon system (아이콘 시스템) 🚧 · 그래픽 단계 정의는 UI/UX guide ✅",
+      "fix": "저장소는 UI/UX guide 의 3단계 체계를 Icon 영역의 기준으로 삼고, Icon system 페이지가 ✅ 가 되면 대조합니다."
+    },
+    {
+      "id": "GAP-23",
+      "area": "색",
+      "severity": "높음",
+      "finding": "✅ Color system 본문이 정의하는 역할 축(Primary=Red · Secondary=Gray · Tertiary=Navy)과 용도 규칙이 저장소에 없습니다. 특히 \"텍스트는 모두 Gray scale 로 쓰는 것이 원칙\"과 \"Navy 는 색 자체가 정보인 요소에만\" 이 두 규칙은 시맨틱 계층의 근거인데 빠져 있었습니다.",
+      "evidence": "get_metadata 42066:25436 — Primary/Secondary/Tertiary 정의 · Gray scale_Text 원칙 · Tertiary 사용 제한 · Badge/Map marker/Brand/System 용도",
+      "fix": "색 그룹에 역할(role)과 용도 규칙을 붙이고, 시맨틱 토큰을 이 규칙에서 끌어냅니다(GAP-12 와 함께 해소). 값은 data/gds-library.json 의 pages.colorSystem 에 담았습니다."
     }
   ],
   "note": "✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16). 등록된 스타일 목록만으로는 안 보이던 것들입니다."
