@@ -692,6 +692,25 @@ function space(){
     <div class="px">${x.px}px</div>
     <div class="muted">값 유지</div>
   </div>`).join('')}</div>`:''}
+  ${C.spacingCensus?`<h2>쓰임새 조사 — 주석 ${C.spacingCensus.counts.annotations}건</h2>
+  <p class="lead" style="font-size:15px">색·타이포에는 «쓰임새 → 값» 표가 정본에 있는데 <b>간격에는 없습니다.</b>
+  Spacing 표의 열은 <code>Spacing</code> · <code>px</code> · <code>배수</code> 셋뿐입니다.
+  그래서 ✅ 컴포넌트 페이지 ${C.spacingCensus.pages.length}곳에 디자이너가 깔아 둔
+  <b>«Spacing» 주석 프레임</b>을 기계로 읽어, 어떤 값이 실제로 얼마나 쓰이는지만 세었습니다.</p>
+  <table class="ctr"><thead><tr><th>값</th><th>스케일</th><th>건수</th><th>나온 페이지</th></tr></thead><tbody>
+  ${C.spacingCensus.summary.map(x=>`<tr><td><b>${x.value}px</b></td>
+    <td class="${x.onScale?'':'no'}">${x.onScale?'안':'밖'}</td><td>${x.count}건</td>
+    <td class="muted">${x.pages.map(p=>esc(p)).join(' · ')}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note"><p><b>간격에는 시맨틱 계층을 만들지 않았습니다.</b>
+  주석에서 값은 나오지만 <b>쓰임새 이름이 하나도 붙어 있지 않습니다.</b>
+  담고 있는 프레임 이름도 대부분 <code>Group 2147227…</code> 같은 자동 이름입니다.
+  없는 이름을 지어내면 그 순간 이 문서는 정본이 아니라 추측이 됩니다.
+  간격의 쓰임새 수준 이름은 <a href="#" data-go="layout" style="color:var(--accent);text-decoration:underline">Layout</a>
+  의 Guidelines 토큰이 유일합니다.</p></div>
+  ${C.spacingCensus.counts.unreadable?`<p class="muted"><b>조사의 한계.</b>
+  치수 말풍선 ${C.spacingCensus.counts.unreadable}건은 컴포넌트 인스턴스라 라벨 숫자가 메타데이터에 나오지 않습니다 —
+  값으로 세지 않았습니다.</p>`:''}`:''}
   <p class="muted" style="margin-top:28px">${esc(S.unit||'')} · 출처 — <code>${esc(S.source||'')}</code></p>
   ${footer()}`;
 }
