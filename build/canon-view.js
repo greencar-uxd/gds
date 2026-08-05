@@ -46,13 +46,21 @@ const FIGVARS = (() => {
   return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
 })();
 const additions = DEC.additions || [];
-const adopted = additions.filter(a => a.action === 'adopt' && a.status === 'confirmed');
+// 편입은 변수 1개 → 토큰 1개가 기본이지만, 하나의 변수가 정본 스와치에서
+// 불투명도로 갈라져 있으면 tokens[] 로 여러 토큰을 만듭니다 (CQ-9 · Dim Layer 060/080).
+const expand = a => (a.tokens && a.tokens.length)
+  ? a.tokens.map(t => ({ ...a, ...t, multi: true }))
+  : [a];
+const adopted = additions.filter(a => a.action === 'adopt' && a.status === 'confirmed').flatMap(expand);
 // 결정이 실재하지 않는 변수를 가리키면 파일이 낡은 것입니다.
 const additionUnknown = FIGVARS
   ? additions.filter(a => !(a.sourceName in FIGVARS.variables)).map(a => a.sourceName) : [];
+// alphaSource 가 붙은 항목은 불투명도가 변수가 아니라 정본 스와치에서 온 것이라
+// 8자리 HEX 의 앞 6자리(원색)만 원본과 대조합니다.
+const baseHex = a => (a.alphaSource ? a.hex.slice(0, 7) : a.hex).toUpperCase();
 const additionStale = FIGVARS
-  ? additions.filter(a => (a.sourceName in FIGVARS.variables)
-      && String(FIGVARS.variables[a.sourceName]).toUpperCase() !== a.hex.toUpperCase())
+  ? additions.flatMap(expand).filter(a => (a.sourceName in FIGVARS.variables)
+      && String(FIGVARS.variables[a.sourceName]).toUpperCase() !== baseHex(a))
       .map(a => `${a.sourceName} ${a.hex}≠${FIGVARS.variables[a.sourceName]}`) : [];
 // 편입한 이름이 이미 정본에 있으면 충돌입니다.
 const additionCollision = adopted.filter(a => raw.some(s => s.name === a.token)).map(a => a.token);
@@ -103,6 +111,8 @@ module.exports = {
   })(),
   deferredAdditions: additions.filter(a => a.action === 'defer'),
   retiredAdditions: additions.filter(a => a.action === 'retire' && a.status === 'confirmed'),
+  // drop — 치환 대상 없이 폐기. 레거시 사용이 0건이라 옮길 곳이 없는 경우입니다.
+  droppedAdditions: additions.filter(a => a.action === 'drop' && a.status === 'confirmed'),
   sourceDefects: DEC.sourceDefects || null,
   valueOverrides: [...overrideMap.values()],
   openDecisions: (DEC.open || []).filter(o => o.status === 'open'),

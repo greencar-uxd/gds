@@ -20,6 +20,8 @@ const VIEW = require('./canon-view.js');
 const DEC = VIEW.DEC;
 const TDEC = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
 const MT = MG.totals;
+const CF = DEC.conflictDecisions || null;   // CQ-5 이름 충돌 확정
+const CL = DEC.clusterDecisions || null;    // CQ-6 묶음별 결정
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const red = CA.details.redHypothesis;
@@ -67,7 +69,15 @@ ${CA.details.hexDupTop.slice(0, 8).map(x => `<tr><td><span class="dot" style="ba
     body: `<p>정본 기준 통폐합으로 <b>${MT.conflictAutoResolved}종은 자동 판정</b>됐습니다. 나머지 ${MT.conflictNames - MT.conflictAutoResolved}종은 <b>양쪽 다 정본에 없거나 양쪽 다 정본에 있어</b> 근거가 없습니다.</p>
 <table><thead><tr><th>스타일 이름</th><th>값 A</th><th>값 B</th><th>판정</th></tr></thead><tbody>
 ${MG.conflictResolution.map(c => `<tr><td><code>${esc(c.name)}</code></td><td><span class="dot" style="background:${c.values[0]}"></span><code>${c.values[0]}</code></td><td><span class="dot" style="background:${c.values[1]}"></span><code>${c.values[1]}</code></td><td class="${c.adopt ? '' : 'no'}">${c.adopt ? `${c.adopt.token} 채택` : esc(c.verdict)}</td></tr>`).join('')}
-</tbody></table>`,
+</tbody></table>
+${CF ? `<h4 style="font-size:13px;margin:20px 0 6px;color:var(--ok)">✅ 나머지 ${CF.items.length}종 확정 — ${CF.decidedAt}</h4>
+${CF.items.map(i => `<div class="ocl">
+  <div class="ochd"><span class="pill id">${i.id}</span><b>${esc(i.displayName || i.name)}</b>${i.defect ? ` <span class="pill" style="background:var(--warn);color:#000">${i.defect}</span>` : ""}
+    <span class="chips" style="display:inline-flex;margin-left:8px">${i.values.map(v => `<span class="mini" title="${v}" style="background:${v}"></span>`).join('')}</span></div>
+  <p style="margin:8px 0 0"><b>결론.</b> ${esc(i.resolution)}</p>
+  <p class="muted" style="margin:6px 0 0"><b>근거.</b> ${esc(i.basis)}</p>
+  ${i.followUp ? `<div class="note" style="margin:10px 0 0"><b>남은 것.</b> ${esc(i.followUp)}</div>` : ''}
+</div>`).join('')}` : ''}`,
   },
   {
     id: 'CQ-6', group: '색', title: OC
@@ -76,10 +86,10 @@ ${MG.conflictResolution.map(c => `<tr><td><code>${esc(c.name)}</code></td><td><s
     weight: '차단', tag: '해석',
     body: `<p>색차(ΔE ≤ ${MG.meta.nearLimit}, 육안 구분 한계)로 갈랐습니다. <b>${MT.orphanNear}종은 정본으로 흡수해도 화면이 달라 보이지 않습니다.</b> 나머지 ${MT.orphanReview}종은 그대로 치환하면 눈에 띄게 달라집니다.</p>
 ${MT.orphanRetired ? `<h4 style="font-size:13px;margin:16px 0 6px;color:var(--ok)">✅ 제거 확정 ${MT.orphanRetired}종</h4>
-<table><thead><tr><th>레거시</th><th>→ 치환</th><th>ΔE</th><th>스타일</th></tr></thead><tbody>
-${VIEW.orphanDispositions.map(o => `<tr><td><span class="dot" style="background:${o.hex}"></span><code>${o.hex}</code></td><td><span class="dot" style="background:${o.targetHex}"></span><code>${esc(o.target)}</code></td><td>${o.deltaE}</td><td>${o.legacyStyles}개 · 이름 ${o.legacyNames.length}종</td></tr>`).join('')}
+<table><thead><tr><th>묶음</th><th>레거시</th><th>→ 치환 / 분리</th><th>ΔE</th><th>스타일</th></tr></thead><tbody>
+${VIEW.orphanDispositions.map(o => `<tr><td><code>${esc(o.cluster || '—')}</code></td><td><span class="dot" style="background:${o.hex.slice(0, 7)}"></span><code>${o.hex}</code></td><td>${o.action === 'external' ? `<span class="no">GDS 밖 — ${esc(o.owner)}</span>` : `<span class="dot" style="background:${o.targetHex}"></span><code>${esc(o.target)}</code>`}</td><td>${o.deltaE == null ? '—' : o.deltaE}</td><td>${o.legacyStyles}개 · 이름 ${o.legacyNames.length}종</td></tr>`).join('')}
 </tbody></table>
-<p class="muted">${VIEW.orphanDispositions.map(o => esc(o.caution)).join('<br>')}</p>` : ''}
+<p class="muted">${VIEW.orphanDispositions.filter(o => o.caution).map(o => `<code>${o.hex}</code> ${esc(o.caution)}`).join('<br>')}</p>` : ''}
 <h4 style="font-size:13px;margin:16px 0 6px;color:var(--text2)">흡수 권고 ${MT.orphanNear}종 — 바꿔도 화면이 같습니다</h4>
 <table><thead><tr><th>레거시</th><th>→ 정본</th><th>ΔE</th></tr></thead><tbody>
 ${MG.orphans.filter(o => o.delta <= MG.meta.nearLimit).map(o => `<tr><td><span class="dot" style="background:${o.hex}"></span><code>${o.hex}</code> <span class="muted">${esc(o.sample)}</span></td><td><span class="dot" style="background:${o.targetHex}"></span><code>${esc(o.target)}</code></td><td>${o.delta}</td></tr>`).join('')}
@@ -101,7 +111,12 @@ ${OC.clusters.map(c => `<div class="ocl">
   </details>
 </div>`).join('')}
 <p class="muted">전수는 <code>docs/color-merge-map.csv</code> · 묶음 데이터는 <code>data/orphan-clusters.json</code>.</p>
-` : `<div class="chips">${MG.orphans.filter(o => o.delta > MG.meta.nearLimit).map(o => `<span class="mini" title="${o.hex}" style="background:${o.hex}"></span>`).join('')}</div>`}`,
+` : `<div class="chips">${MG.orphans.filter(o => o.delta > MG.meta.nearLimit).map(o => `<span class="mini" title="${o.hex}" style="background:${o.hex}"></span>`).join('')}</div>`}
+${CL ? `<h4 style="font-size:13px;margin:22px 0 6px;color:var(--ok)">묶음별 결정 — ${CL.decidedAt}</h4>
+<table><thead><tr><th>묶음</th><th>상태</th><th>결론 / 남은 이유</th></tr></thead><tbody>
+${CL.items.map(i => `<tr><td><code>${i.id}</code></td><td class="${i.status === 'closed' ? '' : 'no'}">${i.status === 'closed' ? '확정' : '미결'}</td><td>${esc(i.resolution || i.note || '')}</td></tr>`).join('')}
+</tbody></table>
+<p class="muted">확정된 묶음의 처분 내역(색·치환 대상·해당 스타일)은 <code>data/color-decisions.json</code> 의 <code>orphanDispositions</code> ${VIEW.orphanDispositions.length}종에 있습니다.</p>` : ''}`,
   },
   ...VIEW.closedDecisions.map(o => ({
     id: o.id, group: '색', title: (o.settledTitle || o.question), question: o.question,

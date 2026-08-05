@@ -328,7 +328,14 @@ console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
       VIEW.orphanDispositions.every(o => !VIEW.colors.some(c => c.hex.toUpperCase() === o.hex.toUpperCase())),
       '정본에 등록된 색을 제거 대상으로 지정할 수 없습니다');
     ok('제거 확정의 치환 대상이 정본에 존재',
-      VIEW.orphanDispositions.every(o => VIEW.colors.some(c => c.name === o.target)));
+      VIEW.orphanDispositions.filter(o => o.action !== 'external')
+        .every(o => VIEW.colors.some(c => c.name === o.target)),
+      VIEW.orphanDispositions.filter(o => o.action !== 'external' && !VIEW.colors.some(c => c.name === o.target)).map(o => o.target).join(', '));
+    ok('외부 분리 처분에는 소유자가 적혀 있고 치환 대상이 없음',
+      VIEW.orphanDispositions.filter(o => o.action === 'external').every(o => o.owner && !o.target));
+    ok('처분마다 사유가 있음', VIEW.orphanDispositions.every(o => o.reason && o.reason.length > 10));
+    ok('처분한 색이 묶음 결정과 이어져 있음',
+      VIEW.orphanDispositions.every(o => !o.cluster || /^(OC-\d|CQ-\d)/.test(o.cluster)));
     ok('RETIRE 판정 수 = 제거 대상 스타일 수',
       T.retire === VIEW.orphanDispositions.reduce((a, o) => a + o.legacyStyles, 0),
       `${T.retire} vs 선언 ${VIEW.orphanDispositions.reduce((a, o) => a + o.legacyStyles, 0)}`);
@@ -432,9 +439,32 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       const html = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
       return VIEW.additions.every(a => html.includes(a.sourceName));
     })());
-    ok('새 안건 CQ-9 · CQ-10 이 열린 상태로 표시됨', (() => {
+    ok('CQ-9 · CQ-10 이 확정 상태로 표시됨', (() => {
       const html = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
-      return ['CQ-9', 'CQ-10'].every(id => VIEW.openDecisions.some(o => o.id === id) && html.includes(id));
+      return ['CQ-9', 'CQ-10'].every(id => VIEW.closedDecisions.some(o => o.id === id && o.resolution) && html.includes(id));
+    })());
+    ok('CQ-9 결과가 Dim Layer 2단계로 나왔음', (() => {
+      const names = VIEW.colors.map(c => c.name);
+      return names.includes('System/Dim Layer 060') && names.includes('System/Dim Layer 080');
+    })());
+    ok('CQ-9 알파가 정본 스와치 근거로 표시됨', (() => {
+      const a = VIEW.additions.find(x => x.id === 'AD-5');
+      return a && a.alphaSource === 'canon-swatch' && /스와치/.test(a.reason);
+    })());
+    ok('Info Box BG 가 Dim Layer 060 으로 흡수됨', (() => {
+      const a = VIEW.additions.find(x => x.id === 'AD-6');
+      return a && a.action === 'retire' && a.target === 'System/Dim Layer 060';
+    })());
+    ok('CQ-10 폐기 항목은 레거시 사용 0건 근거가 있음',
+      VIEW.droppedAdditions.every(a => /사용 0건/.test(a.evidence || '')),
+      VIEW.droppedAdditions.map(a => a.id).join(', '));
+    ok('폐기 항목이 토큰에 출력되지 않음', (() => {
+      const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+      return VIEW.droppedAdditions.every(a => !css.includes(a.hex.toLowerCase()));
+    })());
+    ok('CQ-11 이 CQ-5 에서 갈라져 나온 것으로 기록됨', (() => {
+      const c = VIEW.openDecisions.find(o => o.id === 'CQ-11');
+      return !!c && c.from === 'CQ-5 / CF-4';
     })());
     ok('자간 확정 — CSS 출력', (() => {
       const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
@@ -584,6 +614,79 @@ console.log('\n[11] 컴포넌트 — Buttons');
     ok('Buttons 실측이 결정 안건 페이지에 표시됨', B.types.every(t => dh3.includes(t.name)));
     ok('3계층 매핑이 페이지에 표시됨', dh3.includes('Semantic/Color/Background/Filled/Default'));
   }
+}
+
+// ────────────────────────────────────────────────────────────
+console.log('\n[12] CQ-5 이름 충돌 · CQ-6 묶음 확정');
+{
+  const VIEW = require('./canon-view.js');
+  const DEC4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-decisions.json'), 'utf8'));
+  const MG4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'color-merge.json'), 'utf8'));
+  const OC4 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'orphan-clusters.json'), 'utf8'));
+  const CF = DEC4.conflictDecisions;
+  const CL = DEC4.clusterDecisions;
+
+  ok('conflictDecisions 기록 존재', !!CF && Array.isArray(CF.items));
+  if (CF) {
+    const unresolved = MG4.conflictResolution.filter(c => !c.adopt);
+    ok('자동 판정되지 않은 충돌이 전부 확정됨',
+      unresolved.every(c => CF.items.some(i => i.name === c.name)),
+      unresolved.filter(c => !CF.items.some(i => i.name === c.name)).map(c => c.name).join(', '));
+    ok('확정 기록이 실재하는 충돌만 가리킴',
+      CF.items.every(i => MG4.conflictResolution.some(c => c.name === i.name)),
+      CF.items.filter(i => !MG4.conflictResolution.some(c => c.name === i.name)).map(i => i.name).join(', '));
+    ok('충돌 확정마다 값·결론·근거가 있음',
+      CF.items.every(i => i.values.length === 2 && i.resolution && i.basis));
+    ok('기록한 값이 실제 충돌 값과 일치',
+      CF.items.every(i => {
+        const c = MG4.conflictResolution.find(x => x.name === i.name);
+        return c && i.values.every(v => c.values.includes(v.toUpperCase()));
+      }));
+    ok('CF-1 Default Btn 두 값 모두 처분됨',
+      ['#40535E', '#143C56'].every(h =>
+        VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h && o.target === 'Navy/Navy 060')));
+    ok('CF-2 navy090 두 값은 정본에 실재 — 처분 대상 아님',
+      ['#020609', '#0A1E2B'].every(h => VIEW.colors.some(c => c.hex.toUpperCase() === h))
+      && ['#020609', '#0A1E2B'].every(h => !VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h)));
+    ok('CF-3 First Green 두 값 모두 Primary/Red 060 으로',
+      ['#007E54', '#009669'].every(h =>
+        VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h && o.target === 'Primary/Red 060')));
+    ok('CF-4 롯데 빨강은 외부 분리로 처분됨',
+      VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === '#E50012' && o.action === 'external'));
+    ok('CF-4 후속이 CQ-11 로 남아 있음',
+      /CQ-11/.test((CF.items.find(i => i.id === 'CF-4') || {}).followUp || ''));
+    ok('숨은 제어문자가 든 이름은 실제 문자 그대로 기록됨', (() => {
+      const i = CF.items.find(x => x.id === 'CF-1');
+      return !!i && i.name.includes(' ') && i.displayName === 'Default Btn' && i.defect === 'SD-17';
+    })(), '이름을 보기 좋게 고쳐 적으면 원본과 대조가 깨집니다');
+    ok('원본 결함 SD-17 기록됨', DEC4.sourceDefects.items.some(d => d.id === 'SD-17'));
+  }
+
+  ok('clusterDecisions 기록 존재', !!CL && Array.isArray(CL.items));
+  if (CL) {
+    ok('묶음 결정이 OC-1~OC-8 전부를 다룸',
+      ['OC-1', 'OC-2', 'OC-3', 'OC-4', 'OC-5', 'OC-6', 'OC-7', 'OC-8']
+        .every(id => CL.items.some(i => i.id === id)));
+    ok('확정된 묶음에는 결론이, 미결 묶음에는 사유가 있음',
+      CL.items.every(i => (i.status === 'closed' ? !!i.resolution : !!i.note)));
+    const closedIds = CL.items.filter(i => i.status === 'closed').map(i => i.id);
+    ok('확정 묶음의 색이 실제로 처분됨 — 남은 묶음에 거의 남지 않음',
+      OC4.clusters.filter(c => closedIds.includes(c.id) && c.id !== 'OC-1')
+        .every(c => c.hexCount <= 2),
+      OC4.clusters.filter(c => closedIds.includes(c.id) && c.id !== 'OC-1').map(c => `${c.id}:${c.hexCount}`).join(', '));
+    ok('남긴 색은 색이 곧 정보인 것뿐', (() => {
+      const held = ['#00AD73', '#00AD79', '#FCF8E8'];
+      return held.every(h => !VIEW.orphanDispositions.some(o => o.hex.toUpperCase() === h));
+    })());
+    ok('개별 판단 대상이 실제로 줄어듦',
+      MG4.totals.orphanReview < OC4.totalOrphanReview,
+      `${MG4.totals.orphanReview} vs 최초 ${OC4.totalOrphanReview}`);
+  }
+
+  const dh4 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
+  ok('충돌 확정이 결정 안건 페이지에 표시됨', !CF || CF.items.every(i => dh4.includes(i.id)));
+  ok('묶음 확정이 결정 안건 페이지에 표시됨', !CL || CL.items.every(i => dh4.includes(i.id)));
+  ok('CQ-11 이 결정 안건 페이지에 표시됨', dh4.includes('CQ-11'));
 }
 
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
