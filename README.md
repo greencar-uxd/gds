@@ -53,9 +53,9 @@
 
 정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
 
-**23건 중 1건 해소 · 22건 남음** (`GAP-11` 반경 값 실측으로 해소)
+**28건 중 1건 해소 · 27건 남음** (`GAP-11` 반경 값 실측으로 해소)
 
-| 높음 8건 | |
+| 높음 9건 | |
 |---|---|
 | `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. 게다가 `noto_sans/title/medium` 이 조회한 노드마다 **14 · 16 · 18px** 로 다릅니다 |
 | `GAP-4` | `Map Marker/Shadow` 가 두 값 — FILL 스타일 `#E2E2E2`(불투명) vs 변수 `#0000001A`(검정 10%) |
@@ -65,10 +65,11 @@
 | **`GAP-17`** | **GDS 4계층(Guidelines → Foundation → Components → Template) 구조가 저장소에 없음** |
 | **`GAP-21`** | **✅ UI/UX guide 내용이 저장소에 한 줄도 없음** — UX 라이팅 규칙 6종 + 그래픽 3단계 체계 |
 | **`GAP-23`** | **✅ Color system 의 역할 축이 없음** — Primary=Red · Secondary=Gray · Tertiary=Navy, 그리고 「텍스트는 모두 Gray scale」·「Navy 는 색이 곧 정보인 곳에만」 |
+| **`GAP-27`** | **확정한 `TQ-6`(Noto Sans KR 단일)과 ✅ Picker 본문이 어긋남** — 본문은 「숫자는 Rubik 서체 사용」을 명시 |
 
-중간 8건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더**(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함) · **Components 목차 25개 중 실측은 Buttons 1개뿐** · Icon 규칙이 UI/UX guide 와 Icon system 두 곳으로 흩어짐
+중간 12건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더**(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함) · **Components 목차 25개 중 실측은 Buttons 1개뿐** · Icon 규칙이 UI/UX guide 와 Icon system 두 곳으로 흩어짐 · **✅ 페이지끼리 AOS/Web 폭이 다름(360 vs 365)** · **✅ 인데 미해결 메모가 남은 페이지**(Checkbox 명명 · Bottom navigation 컬러) · Bottom sheet 정의가 Picker ✅ 안에 들어 있음
 
-낮음 6건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X) · **목차 오타 다수**(`Bage`·`Pasing`·`Tap`·`Tap app bar`·`Getting stared`) · 히스토리 파일 위치 미기록
+낮음 7건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X) · **목차 오타 다수**(`Bage`·`Pasing`·`Tap`·`Tap app bar`·`Getting stared`) · 히스토리 파일 위치 미기록 · 컴포넌트 본문의 색 축약 표기(`Gray scale 40`)
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
 
@@ -104,6 +105,11 @@ Template (템플릿) — 상위 조합 단위
 | **컴포넌트 정의** | 텍스트·그래픽·인터랙션 요소가 결합되어 하나의 기능 또는 정보를 전달하는 UI 단위 |
 | **색 역할 축** | `Primary`=Red · `Secondary`=Gray(보조·지지) · `Tertiary`=Navy(리브랜딩 이전 Secondary). 브랜드 속성 **Clean · Comfort · Easy** |
 | **색 용도 규칙** | **텍스트는 모두 Gray scale 이 원칙** · **Navy 는 뱃지·지도 핀처럼 색 자체가 정보인 요소에만**, 그 외 폰트·컴포넌트는 Gray scale |
+| **Modal** | `Alert`(정보 전달·확인 하나) / `Confirm`(선택 필요·확인+취소). 구조 `Top · Body · Action`. **기본 알럿 = Dim layer 1 · 풀스크린 알럿 = Dim layer 2** — CQ-9 로 나눈 `060`/`080` 의 용도가 여기 있습니다. 텍스트 박스 327px, 딤 내부 마진 24px |
+| **Checkbox** | `Icon`(박스 24×24) / `Capsule`(박스 16×16), 체크 아이콘 **9×12 통일**. 형태 `basic`·`round`·`with text` |
+| **Bottom navigation** | 높이 **70** · 상단 여백 20 · 아이콘 32×32(굵기 1.5) · 아이콘–레이블 간격 4 · 레이블 `Caption 2`. 미선택 `Gray 040` / 선택 `Gray 080` |
+| **Picker** | `Time picker`(스크롤로 시간 선택) / `Calendar picker`(달력으로 날짜 선택). 하위 컴포넌트 `Picker icon button` |
+| **Bottom sheet** | 정의·구조가 **Picker ✅ 안에** 있습니다 — 페이징 없이 현재 화면에서 조작을 끝낼 때. `Top·Body·Action`, Action 은 `Button` 또는 `Button + Text button`. `Elevation_Bottom sheet` 사용 |
 
 ---
 
