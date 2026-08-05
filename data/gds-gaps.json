@@ -258,7 +258,16 @@
       "severity": "중간",
       "finding": "Components 목차는 25개인데 저장소가 실측한 것은 Buttons 1개뿐입니다.",
       "evidence": "Getting started ✅ 목차 43176:107203 — Buttons · Bottom sheet · Input · Bottom navigation · Border · Picker · Modal · Check box · Switch · Selection box · Radio · Accordion · Tap app bar · Tap · Smart key · Tip · Bage · Process bar · Toast · Card · Skeleton · Loading spinner · Table · Pasing · Numbering",
-      "fix": "✅ 표시된 컴포넌트부터 순서대로 실측합니다 — Modal · Checkbox · Bottom navigation · Picker · Border 가 ✅ 입니다."
+      "fix": "✅ 표시된 컴포넌트부터 순서대로 실측합니다 — Modal · Checkbox · Bottom navigation · Picker · Border 가 ✅ 입니다.",
+      "status": "resolved",
+      "resolution": "해소 — «25종 중 6종»이 무엇을 세는 수였는지 갈랐습니다.\n구조도 25종의 Figma 상태는 ✅ 6 · 🚧 11 · — 8 입니다. 즉 원본이 완성한 컴포넌트가 6종뿐입니다.\n그 6종을 전부 저장소에 실측해 넣었습니다(✅ 중 6/6). 마지막 하나였던 Border ✅ 는 ✅ 인데 저장소에 없던 유일한 컴포넌트였고, 이번에 Line/Divider 정의·두께·폭·컬러 쓰임까지 읽어 넣었습니다. 🚧 인 Bottom sheet 도 Picker ✅ 안에서 읽은 만큼 함께 싣습니다(실측 7종).\n남은 19종은 원본이 아직 🚧 이거나 시작 전이라 저장소가 먼저 만들 수 없습니다 — 우리 누락이 아닙니다. tools/build-components.js 가 «✅ 인데 저장소에 없는 것»을 매번 세고, 0이 아니면 check 가 실패합니다.\n사이트에 Components 섹션을 새로 만들어 25종 목록과 실측 7종의 구조·치수·상태·컬러·간격 주석을 실었습니다.",
+      "counts": {
+        "structure": 25,
+        "figmaDone": 6,
+        "documented": 7,
+        "documentedOfDone": 6,
+        "waitingOnSource": 19
+      }
     },
     {
       "id": "GAP-19",
@@ -318,7 +327,8 @@
       "severity": "중간",
       "finding": "✅ 로 표시된 페이지에 미해결 메모가 남아 있습니다. Checkbox 는 명명이 안 정해졌고(체크박스 vs 선택박스, with text vs s/m/l), Bottom navigation 에는 \"컬러 업데이트 필요\" Annotation 이 붙어 있습니다.",
       "evidence": "Checkbox ✅ 본문 메모 2건 · Bottom navigation ✅ Annotation 1건",
-      "fix": "✅ 의 기준을 정합니다 — 미해결 메모가 있으면 ✅ 가 아니거나, ✅ 는 \"구조 확정\"이고 명명·색은 별도 상태라는 뜻인지 명시해야 합니다."
+      "fix": "✅ 의 기준을 정합니다 — 미해결 메모가 있으면 ✅ 가 아니거나, ✅ 는 \"구조 확정\"이고 명명·색은 별도 상태라는 뜻인지 명시해야 합니다.",
+      "progress": "부분 — 미해결 메모가 남은 ✅ 컴포넌트는 이제 Components 페이지에서 해당 컴포넌트 바로 아래에 경고로 보입니다(Checkbox 2건 · Bottom navigation 1건). 메모 자체의 처분은 원본 작업이라 여기서 닫지 않습니다."
     },
     {
       "id": "GAP-26",
