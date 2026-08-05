@@ -1,0 +1,301 @@
+{
+  "$description": "색 확정 결정 — 원본 .fig 를 고칠 수 없으므로(View 권한) 추출 결과 위에 덮어씁니다. data/elevation-override.json 과 같은 성격입니다.",
+  "decidedBy": "강민관",
+  "decidedAt": "2026-08-04",
+  "rules": {
+    "step": {
+      "value": "3자리 10단위 (010~100)",
+      "note": "100단위(300/400/500) 체계 폐기. 2자리·3자리 혼용 금지. 보조 단계는 stepExceptions 에 명시된 것만 허용.",
+      "status": "confirmed"
+    },
+    "mergeBase": {
+      "value": "canon",
+      "note": "중복 색은 ✅ Color system 페이지(정본)에 명시된 값·이름을 기준으로 통폐합한다.",
+      "status": "confirmed"
+    },
+    "stepExceptions": {
+      "value": [
+        "Gray Scale/Gray 005"
+      ],
+      "note": "Gray Scale 의 005 는 보조 단계로 예외 유지 — 강민관 결정 2026-08-04. 재넘버링하지 않으며 Gray 090 결번도 그대로 둡니다(기존 이름이 전부 한 칸씩 밀리는 것을 피하기 위함).",
+      "status": "confirmed"
+    }
+  },
+  "main": {
+    "token": "Primary/Red 040",
+    "hex": "#F14950",
+    "note": "정본 ✅ Color system 설명문의 '가독성과 접근성을 고려하여 Red 040을 메인 색상으로 사용합니다' 를 그대로 채택. 강민관 결정 2026-08-04(050 에서 040 으로 정정).",
+    "accessibility": {
+      "contrastOnWhite": 3.62,
+      "wcagAA_body": "미달 (4.5:1 기준)",
+      "wcagAA_large": "통과 (3:1 기준 — 18.5px 이상 또는 14px Bold)",
+      "handling": "별도 처리 없음 — 용도 제한·텍스트용 별도 단계·값 조정 전부 하지 않는다. 강민관 결정 2026-08-04",
+      "residualRisk": "본문 텍스트에 메인 색을 쓰면 WCAG AA 미달입니다. 접근성 감사(A 그룹)에서 다시 지적될 항목입니다."
+    },
+    "status": "confirmed"
+  },
+  "renames": [
+    {
+      "from": "Primary/Red 300",
+      "to": "Primary/Red 030",
+      "hex": "#F4777C",
+      "reason": "10단위 체계 확정 — 명도 순 3번째 칸",
+      "status": "confirmed"
+    },
+    {
+      "from": "Primary/Red 400",
+      "to": "Primary/Red 040",
+      "hex": "#F14950",
+      "reason": "10단위 체계 확정 — 명도 순 4번째 칸",
+      "status": "confirmed"
+    },
+    {
+      "from": "Primary/Red 500",
+      "to": "Primary/Red 050",
+      "hex": "#ED1C24",
+      "reason": "10단위 체계 확정 — 명도 순 5번째 칸. 메인 색상",
+      "status": "confirmed"
+    },
+    {
+      "from": "Navy/navy 040",
+      "to": "Navy/Navy 040",
+      "hex": "#728A9A",
+      "reason": "표기 정리 — 같은 그룹 안 대소문자 통일. 값·단계 변화 없음",
+      "status": "confirmed"
+    },
+    {
+      "from": "Map Marker/Active_Line",
+      "to": "Map Marker/Active Line",
+      "hex": "#A1B1BB",
+      "reason": "표기 정리 — 의미형 이름은 공백만 사용. 값 변화 없음",
+      "status": "confirmed"
+    }
+  ],
+  "open": [
+    {
+      "id": "CQ-7",
+      "question": "Gray Scale 의 005 보조 단계를 어떻게 할 것인가",
+      "detail": "현행 Gray Scale 은 000·005·010·020·030·040·050·060·070·080·100 (11단계, 090 결번). 10단위 규칙을 그대로 적용하면 005 가 규칙 위반입니다. 마침 11단계라 000~100 을 10단위로 재넘버링하면 결번까지 정확히 메워집니다 — 다만 기존 Gray 040 등이 전부 다른 색을 가리키게 됩니다.",
+      "status": "closed",
+      "resolution": "B — 005 를 보조 단계 예외로 유지. 이름 변경 0건, Gray 090 결번은 그대로. 강민관 결정 2026-08-04",
+      "settledTitle": "Gray Scale 의 005 는 보조 단계 예외로 유지합니다"
+    },
+    {
+      "id": "CQ-8",
+      "question": "Navy 090(#020609) / 100(#060809) 명도 역전",
+      "detail": "090 이 100 보다 어둡습니다. 값이 뒤바뀐 것인지 의도인지 원본 확인이 필요합니다.",
+      "status": "closed",
+      "settledTitle": "Navy 090 / 100 값을 맞바꿔 명도 순서를 바로잡습니다",
+      "resolution": "값 교체 — Navy 090 = #060809, Navy 100 = #020609. 번호가 커질수록 어두워지는 규칙(R3)에 맞췄습니다. 강민관 결정 2026-08-04. 원본 .fig 반영은 디자인팀 몫입니다."
+    },
+    {
+      "id": "CQ-3",
+      "question": "메인 색상이 WCAG AA 미달인 점을 어떻게 처리할 것인가",
+      "detail": "메인으로 확정된 Primary/Red 040(#F14950)은 흰 배경 대비 3.62:1 로 WCAG AA 본문 기준(4.5:1) 미달입니다. 큰 글자 기준(3:1)은 통과합니다.",
+      "status": "closed",
+      "resolution": "별도 처리 없음 — 용도 제한·텍스트용 별도 단계·값 조정 전부 하지 않고 그대로 사용. 강민관 결정 2026-08-04. 잔여 리스크는 접근성 감사 A 그룹에서 다시 다룹니다.",
+      "settledTitle": "메인 색 AA 미달은 별도 처리 없이 그대로 갑니다"
+    },
+    {
+      "id": "CQ-9",
+      "question": "Dim Layer / Info Box BG 의 알파 단계를 어떻게 토큰화할 것인가",
+      "detail": "원본 변수는 System/Dim Layer · System/Info Box BG 2개인데, 정본 스와치는 Dim layer 01(검정 60%) · Dim layer 02(검정 80%) · Info_Box(검정 60%) 3개입니다. 값은 셋 다 #000000 이고 차이는 불투명도뿐입니다. 원본 설명문에는 25.06.08 기준 Info box bg 를 Dim layer 의 하위로 재분류했다고 적혀 있습니다.",
+      "options": [
+        "A — 알파를 토큰에 포함: System/Dim Layer 060(#00000099) · System/Dim Layer 080(#000000CC) 2종으로 쪼개고 Info Box BG 는 060 으로 흡수. Map Marker/Shadow(#0000001A) 와 같은 방식이라 일관됩니다.",
+        "B — 색 토큰은 #000000 하나만 두고 불투명도는 컴포넌트에서 지정. 토큰 수는 줄지만 60/80 이 어디서 쓰이는지가 시스템에 남지 않습니다.",
+        "C — 현행 유지(변수 2개, 알파 미문서화). 지금 상태로, 개발자가 값을 알 수 없습니다."
+      ],
+      "recommendation": "A. 이미 Map Marker/Shadow 를 알파 포함 8자리 HEX 로 내보내기로 했으므로 같은 규칙을 적용하는 편이 일관됩니다.",
+      "blocks": [
+        "AD-5",
+        "AD-6"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "CQ-10",
+      "question": "역할 별칭(semantic alias) 계층을 GDS 에 둘 것인가",
+      "detail": "원본에 color/text/bolder(#131416) 라는 변수가 있습니다. 소문자·역할 기반 이름으로, Gray Scale/Primary 같은 원시 색 계층과 이름 규칙이 다릅니다. 현재 GDS 정본 53종은 전부 원시 색이고 역할 별칭은 하나도 없습니다. 이 변수 하나 때문에 계층을 새로 만들지, 아니면 원시 색으로 편입할지 결정이 필요합니다.",
+      "options": [
+        "A — 별칭 계층을 만든다: color/text/bolder 같은 역할 토큰을 원시 색을 가리키게 정의. 다만 #131416 은 정본 어떤 원시 색과도 일치하지 않아 원시 색부터 추가해야 합니다.",
+        "B — 원시 색으로 편입: Gray Scale 에 새 단계로 넣는다. 다만 #131416 은 Gray 100(#000000) 과 Gray 080(#2F2E2E) 사이라 10단위 규칙상 들어갈 자리가 090(현재 결번)입니다.",
+        "C — 폐기: 레거시 649 스타일에서 사용 0건이므로 시스템에 넣지 않는다."
+      ],
+      "recommendation": "C 또는 B. 사용처가 0건이라 C 가 가장 단순합니다. 남긴다면 B 의 Gray 090 자리가 규칙에 맞습니다(CQ-7 에서 090 결번을 그대로 두기로 한 것과는 별개로, 값이 실제로 존재하면 채울 수 있습니다).",
+      "blocks": [
+        "AD-4"
+      ],
+      "status": "open"
+    }
+  ],
+  "orphanDispositions": [
+    {
+      "hex": "#D9DDDF",
+      "action": "retire",
+      "target": "Gray Scale/Gray 020",
+      "targetHex": "#E2E2E2",
+      "deltaE": 2.67,
+      "legacyStyles": 24,
+      "legacyNames": [
+        "dot",
+        "info input text",
+        "Second Navy/gray025",
+        "System Color/input_line",
+        "Disabled Btn",
+        "Navy 020 *Disabled Btn",
+        "sub text",
+        "Gray/902",
+        "System/Input Line"
+      ],
+      "reason": "정본에 추가하지 않고 시스템에서 제거 — 강민관 결정 2026-08-04. 치환 대상은 색차가 가장 가까운 Gray Scale/Gray 020(ΔE 2.67). 이름은 Navy 계열을 가리키지만 용도(비활성 버튼·입력선·보조 텍스트)가 정본 Tertiary 방침('네이비는 색 자체가 정보인 요소에만, 그 외 폰트·컴포넌트는 Gray scale')에 해당하므로 Gray 로 보냅니다.",
+      "caution": "ΔE 2.67 은 흡수 권고선(2.3) 을 넘습니다 — 나란히 놓으면 미세하게 구분됩니다. 치환 후 비활성 버튼·입력선을 실제 화면에서 확인하세요.",
+      "status": "confirmed"
+    }
+  ],
+  "valueOverrides": [
+    {
+      "token": "Navy/Navy 090",
+      "from": "#020609",
+      "to": "#060809",
+      "reason": "명도 역전 정정 — 090 이 100 보다 어두웠습니다. 두 값을 맞바꿔 '번호가 커질수록 어둡다' 규칙에 맞춥니다. 강민관 결정 2026-08-04",
+      "status": "confirmed"
+    },
+    {
+      "token": "Navy/Navy 100",
+      "from": "#060809",
+      "to": "#020609",
+      "reason": "명도 역전 정정 — Navy 090 과 값을 맞바꿉니다. 강민관 결정 2026-08-04",
+      "status": "confirmed"
+    }
+  ],
+  "figmaSync": {
+    "$description": "원본 Figma 변수 전수 조회 결과와 정본 추출본(foundation-data.json)의 차이. 스냅샷은 data/figma-variables.json.",
+    "checkedAt": "2026-08-05",
+    "seat": "Full (Greencar team) — 2026-08-05 회사 계정 재연결로 확보. 읽기 전용으로만 사용(쓰기 보류: 강민관 지시 2026-08-05)",
+    "figmaVariables": 60,
+    "canonStyles": 53,
+    "canonIsSubset": true,
+    "note": "canon 53종은 Figma 변수 60종의 부분집합입니다. 값 불일치 0건 — 정본 추출은 정확했고, 문서화되지 않은 변수 7종(색 6 · 자간 1)이 빠져 있었을 뿐입니다."
+  },
+  "additions": [
+    {
+      "id": "AD-1",
+      "sourceName": "Gcar_logo_text",
+      "hex": "#1A1A1A",
+      "action": "adopt",
+      "token": "Brand/G car Logo Text",
+      "nameDerived": true,
+      "reason": "정본 53종에 없던 고유 값입니다(가장 가까운 정본 색은 Gray 080 #2F2E2E — 육안 구분됨). 이름은 확정된 표기 규칙(그룹/이름, 의미형은 공백만)에 따라 Brand 그룹으로 넣었습니다. Brand/G car Red·Brand/G car Gray 와 같은 계열입니다.",
+      "evidence": "Figma get_variable_defs 2026-08-05 · 레거시 649 스타일에도 #1A1A1A 사용 있음",
+      "status": "confirmed"
+    },
+    {
+      "id": "AD-2",
+      "sourceName": "Map marker_Shadow",
+      "hex": "#0000001A",
+      "action": "adopt",
+      "token": "Map Marker/Shadow",
+      "alpha": 0.1,
+      "nameDerived": true,
+      "reason": "정본에 없던 알파 색(검정 10%). 이름은 Map Marker/Active Line 과 같은 표기 규칙을 적용했습니다. 알파를 가진 유일한 색 토큰이라 8자리 HEX 로 내보냅니다.",
+      "evidence": "Figma get_variable_defs 2026-08-05",
+      "status": "confirmed"
+    },
+    {
+      "id": "AD-3",
+      "sourceName": "Gcar_color",
+      "hex": "#ED1C24",
+      "action": "retire",
+      "target": "Brand/G car Red",
+      "targetHex": "#ED1C24",
+      "deltaE": 0,
+      "reason": "Brand/G car Red · Primary/Red 050 과 값이 완전히 같은 세 번째 이름입니다. 확정된 통폐합 규칙(mergeBase=canon: 정본에 있는 이름을 기준으로 통폐합)을 그대로 적용해 정본에 추가하지 않고 폐기합니다.",
+      "evidence": "Figma get_variable_defs 2026-08-05 · ΔE 0",
+      "status": "confirmed"
+    },
+    {
+      "id": "AD-4",
+      "sourceName": "color/text/bolder",
+      "hex": "#131416",
+      "action": "defer",
+      "blockedBy": "CQ-10",
+      "reason": "고유 값이지만 이름 규칙이 정본과 다릅니다(소문자 color/text/… — 원시 색이 아니라 역할 별칭 계층). 별칭 계층을 GDS 에 둘지 자체가 미결이라 CQ-10 이 닫히기 전에는 편입하지 않습니다.",
+      "evidence": "Figma get_variable_defs 2026-08-05 · 레거시 649 스타일에 #131416 사용 0건",
+      "status": "open"
+    },
+    {
+      "id": "AD-5",
+      "sourceName": "System/Dim Layer",
+      "hex": "#000000",
+      "action": "defer",
+      "blockedBy": "CQ-9",
+      "reason": "변수는 1개인데 정본 스와치는 Dim layer 01(검정 60%) · Dim layer 02(검정 80%) 2단계입니다. 알파를 토큰으로 쪼갤지 변수 1개+불투명도 사용으로 둘지 미결.",
+      "evidence": "Figma get_screenshot 43246:9911 2026-08-05 — 스와치 육안 확인",
+      "status": "open"
+    },
+    {
+      "id": "AD-6",
+      "sourceName": "System/Info Box BG",
+      "hex": "#000000",
+      "action": "defer",
+      "blockedBy": "CQ-9",
+      "reason": "정본 스와치 캡션은 검정 60% 로 Dim layer 01 과 동일합니다. 원본 설명문에도 25.06.08 기준 Info box bg 를 Dim layer 하위로 재분류한다고 적혀 있어, 흡수 대상으로 보입니다.",
+      "evidence": "Figma get_metadata 43242:8542 설명문 · get_screenshot 43246:9911",
+      "status": "open"
+    }
+  ],
+  "sourceDefects": {
+    "$description": "원본 .fig 자체의 오류. 쓰기 권한을 쓰지 않기로 했으므로(강민관 지시 2026-08-05) 여기 기록만 하고 반영은 하지 않습니다. 토큰 값에는 영향 없습니다 — 전부 문서(캡션/레이어 이름) 층위입니다.",
+    "checkedAt": "2026-08-05",
+    "items": [
+      {
+        "id": "SD-1",
+        "node": "43246:9919",
+        "where": "✅ Color system > System 스와치",
+        "problem": "Success 스와치 캡션이 #E2E2E2 (Gray 020 값)",
+        "actual": "실제 칩 색과 변수 System/Success 는 #00C88C",
+        "impact": "캡션만 오류. 토큰 값은 정상"
+      },
+      {
+        "id": "SD-2",
+        "node": "43246:9923",
+        "where": "✅ Color system > System 스와치",
+        "problem": "Focus line 스와치 캡션이 #A1B1BB (Navy 030 / Map Marker Active Line 값)",
+        "actual": "실제 칩 색과 변수 System/Focus Line 은 #0029FF",
+        "impact": "캡션만 오류. 토큰 값은 정상"
+      },
+      {
+        "id": "SD-3",
+        "node": "44164:47653",
+        "where": "✅ Color system > System 스와치",
+        "problem": "Success 라는 이름의 스와치가 2개 (#00C88C / #FD9F4D)",
+        "actual": "두 번째(#FD9F4D)는 색으로 보아 주의(Warning) 계열. 변수 목록에는 System/Success 하나뿐이라 이 스와치에 대응하는 변수가 없음",
+        "impact": "System 그룹의 상태 색 체계가 문서상 불완전 — Warning 토큰 부재 가능성"
+      },
+      {
+        "id": "SD-4",
+        "node": "43246:9928, 43246:9934, 44934:39783",
+        "where": "✅ Color system > System 스와치",
+        "problem": "HEX 표기가 #00000 (5자리)",
+        "actual": "#000000",
+        "impact": "표기 오타 3곳"
+      },
+      {
+        "id": "SD-5",
+        "node": "43246:9924, 43246:9930, 44934:39779",
+        "where": "✅ Color system > System 스와치",
+        "problem": "Dim layer 01 / Dim layer 02 / Info_Box 를 담은 프레임 이름이 전부 Map marker Shadow",
+        "actual": "복붙 후 이름 갱신 누락. 상위 프레임 이름도 Brand · 10 · 20 · 31 · 30 잔재",
+        "impact": "자동 추출 시 잘못된 그룹으로 분류될 위험"
+      },
+      {
+        "id": "SD-6",
+        "node": "44934:39779",
+        "where": "✅ Color system > System 스와치",
+        "problem": "Info_Box 스와치가 흰색으로 렌더됨",
+        "actual": "캡션은 검정 60% 인데 칩에 값이 적용되어 있지 않음",
+        "impact": "문서상 색을 알 수 없음 — CQ-9 판단에 필요"
+      }
+    ]
+  }
+}

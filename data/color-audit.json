@@ -1,0 +1,1635 @@
+{
+  "meta": {
+    "generated_from": "tools/audit/color_audit.js",
+    "source": "GDS(Greencar Design System).fig",
+    "exported": "2026-07-23T04:20:10.332Z"
+  },
+  "legacy": {
+    "styles": 649,
+    "uniqueHex": 138,
+    "duplicateStyleCount": 511,
+    "groups": 54,
+    "groupVariantCollisions": 8,
+    "groupVariantCollisionStyles": 206,
+    "sameNameDupNames": 104,
+    "sameNameDupStyles": 403,
+    "nameValueConflicts": 6,
+    "absorbable": 437,
+    "orphanHex": 88
+  },
+  "canon": {
+    "styles": 53,
+    "uniqueHex": 50,
+    "hexDupGroups": 3,
+    "namingFindings": 7,
+    "labelMismatch": 3,
+    "semanticIssues": 1
+  },
+  "details": {
+    "variantCollisions": [
+      {
+        "key": "grayscale",
+        "variants": [
+          {
+            "name": "Gray Scale",
+            "count": 91
+          },
+          {
+            "name": "Gray scale",
+            "count": 2
+          },
+          {
+            "name": "GRAYSCALE",
+            "count": 2
+          },
+          {
+            "name": "Grayscale",
+            "count": 2
+          },
+          {
+            "name": "gray scale",
+            "count": 1
+          }
+        ],
+        "total": 98
+      },
+      {
+        "key": "firstred",
+        "variants": [
+          {
+            "name": "First\bRed",
+            "count": 19
+          },
+          {
+            "name": "First Red",
+            "count": 12
+          }
+        ],
+        "total": 31
+      },
+      {
+        "key": "brandcolor",
+        "variants": [
+          {
+            "name": "Brand Color",
+            "count": 24
+          },
+          {
+            "name": "Brand color",
+            "count": 4
+          }
+        ],
+        "total": 28
+      },
+      {
+        "key": "primary",
+        "variants": [
+          {
+            "name": "Primary",
+            "count": 21
+          },
+          {
+            "name": "primary",
+            "count": 1
+          }
+        ],
+        "total": 22
+      },
+      {
+        "key": "gray",
+        "variants": [
+          {
+            "name": "Gray",
+            "count": 13
+          },
+          {
+            "name": "gray",
+            "count": 2
+          }
+        ],
+        "total": 15
+      },
+      {
+        "key": "bg",
+        "variants": [
+          {
+            "name": "bg",
+            "count": 3
+          },
+          {
+            "name": "BG",
+            "count": 1
+          }
+        ],
+        "total": 4
+      },
+      {
+        "key": "global",
+        "variants": [
+          {
+            "name": "Global ",
+            "count": 3
+          },
+          {
+            "name": "Global",
+            "count": 1
+          }
+        ],
+        "total": 4
+      },
+      {
+        "key": "icon",
+        "variants": [
+          {
+            "name": "icon",
+            "count": 3
+          },
+          {
+            "name": "Icon",
+            "count": 1
+          }
+        ],
+        "total": 4
+      }
+    ],
+    "sameNameDup": [
+      {
+        "name": "Second Navy/navy060_Default Btn",
+        "count": 14,
+        "hexes": [
+          "#0A3C5C",
+          "#143C56"
+        ],
+        "ids": [
+          "1564:15373",
+          "16144:153218",
+          "28406:194146",
+          "35982:273081",
+          "38487:37652",
+          "40613:37750",
+          "41173:25107",
+          "41321:25199",
+          "41321:25622",
+          "41321:27547",
+          "42073:45213",
+          "42342:70314",
+          "43038:3",
+          "43169:12119"
+        ]
+      },
+      {
+        "name": "Second Navy/navy040_Second Text",
+        "count": 12,
+        "hexes": [
+          "#728A9A"
+        ],
+        "ids": [
+          "4007:39944",
+          "22420:69855",
+          "23912:101742",
+          "38433:38448",
+          "38487:37650",
+          "40613:37747",
+          "41321:27507",
+          "41321:27546",
+          "42073:45217",
+          "42342:70319",
+          "42877:27290",
+          "43169:12129"
+        ]
+      },
+      {
+        "name": "Second Navy/navy020_Disabled Btn",
+        "count": 11,
+        "hexes": [
+          "#D0D8DD"
+        ],
+        "ids": [
+          "1564:15372",
+          "22420:69828",
+          "28406:194271",
+          "38433:38443",
+          "38487:37648",
+          "40046:44569",
+          "41321:27510",
+          "41321:27545",
+          "42073:45132",
+          "42342:70318",
+          "43169:12125"
+        ]
+      },
+      {
+        "name": "Second Navy/navy010",
+        "count": 9,
+        "hexes": [
+          "#E8ECEF"
+        ],
+        "ids": [
+          "1768:11900",
+          "22655:67699",
+          "38433:41946",
+          "38487:37647",
+          "40613:37761",
+          "41173:25106",
+          "41321:26951",
+          "43882:23906",
+          "43984:4789"
+        ]
+      },
+      {
+        "name": "Second Navy/navy070_Default Press",
+        "count": 9,
+        "hexes": [
+          "#0F2D41"
+        ],
+        "ids": [
+          "1564:15250",
+          "25905:190232",
+          "38433:38441",
+          "38487:37653",
+          "40227:26915",
+          "40613:37745",
+          "42342:70312",
+          "43169:12123",
+          "43882:23761"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray000",
+        "count": 8,
+        "hexes": [
+          "#FFFFFF"
+        ],
+        "ids": [
+          "22420:69821",
+          "23485:75422",
+          "38433:38437",
+          "40479:37617",
+          "40625:3022",
+          "41321:27508",
+          "42073:45214",
+          "42342:70315"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray020",
+        "count": 8,
+        "hexes": [
+          "#E2E2E2"
+        ],
+        "ids": [
+          "28406:194259",
+          "28406:194268",
+          "38433:38848",
+          "40613:37710",
+          "42066:28175",
+          "42763:45416",
+          "43169:12254",
+          "43984:5011"
+        ]
+      },
+      {
+        "name": "Second Navy/navy050",
+        "count": 8,
+        "hexes": [
+          "#436378"
+        ],
+        "ids": [
+          "1666:11834",
+          "22427:69939",
+          "28406:194274",
+          "32560:268459",
+          "38487:37651",
+          "41321:27511",
+          "42342:70324",
+          "43037:12688"
+        ]
+      },
+      {
+        "name": "Untitled/gray000",
+        "count": 8,
+        "hexes": [
+          "#FFFFFF"
+        ],
+        "ids": [
+          "1565:15495",
+          "40046:44564",
+          "40241:26533",
+          "42066:27993",
+          "42073:45282",
+          "42859:8400",
+          "43169:12138",
+          "43984:4579"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray040",
+        "count": 7,
+        "hexes": [
+          "#C5C5C5"
+        ],
+        "ids": [
+          "28406:194267",
+          "38433:38852",
+          "40241:26732",
+          "40479:37622",
+          "40714:28083",
+          "42066:28110",
+          "42763:45420"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray080",
+        "count": 7,
+        "hexes": [
+          "#2F2E2E"
+        ],
+        "ids": [
+          "28406:194252",
+          "38433:38856",
+          "40241:26868",
+          "40479:37614",
+          "42066:28174",
+          "42415:11427",
+          "43169:12258"
+        ]
+      },
+      {
+        "name": "Badge Color/bookmark",
+        "count": 6,
+        "hexes": [
+          "#FED500"
+        ],
+        "ids": [
+          "40046:44563",
+          "40613:37749",
+          "40917:27461",
+          "41321:27536",
+          "42560:39566",
+          "43984:4711"
+        ]
+      },
+      {
+        "name": "Brand Color/L.POINT",
+        "count": 6,
+        "hexes": [
+          "#009BFA"
+        ],
+        "ids": [
+          "40241:26621",
+          "41321:27543",
+          "42070:47903",
+          "42342:70320",
+          "43207:38071",
+          "44312:17269"
+        ]
+      },
+      {
+        "name": "Brand Color/L.POINT2",
+        "count": 6,
+        "hexes": [
+          "#0079C3"
+        ],
+        "ids": [
+          "40241:26622",
+          "40613:37706",
+          "41321:27542",
+          "42070:47904",
+          "42342:70321",
+          "44312:17270"
+        ]
+      },
+      {
+        "name": "Default",
+        "count": 6,
+        "hexes": [
+          "#20A556"
+        ],
+        "ids": [
+          "1564:15252",
+          "2008:11715",
+          "40241:26885",
+          "42312:20381",
+          "42560:39598",
+          "43984:4753"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray005",
+        "count": 6,
+        "hexes": [
+          "#F8F8F8"
+        ],
+        "ids": [
+          "28435:52327",
+          "40227:26822",
+          "42070:47891",
+          "42342:70323",
+          "42859:8632",
+          "44312:17271"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray010",
+        "count": 6,
+        "hexes": [
+          "#F1F1F1"
+        ],
+        "ids": [
+          "28406:194276",
+          "40917:27614",
+          "41321:26949",
+          "42073:45126",
+          "43169:12253",
+          "43984:5010"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray030",
+        "count": 6,
+        "hexes": [
+          "#D4D4D4"
+        ],
+        "ids": [
+          "40613:37708",
+          "41321:27576",
+          "42560:39594",
+          "42763:45417",
+          "42814:16224",
+          "43984:4754"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray060",
+        "count": 6,
+        "hexes": [
+          "#898989"
+        ],
+        "ids": [
+          "38433:38850",
+          "40241:27783",
+          "40479:37620",
+          "42066:28113",
+          "42763:45418",
+          "44312:17268"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray070",
+        "count": 6,
+        "hexes": [
+          "#5C5C5C"
+        ],
+        "ids": [
+          "28406:194256",
+          "28893:179891",
+          "40479:37623",
+          "42730:102533",
+          "42763:45419",
+          "43984:5029"
+        ]
+      },
+      {
+        "name": "Gray Scale/gray100",
+        "count": 6,
+        "hexes": [
+          "#000000"
+        ],
+        "ids": [
+          "28406:194257",
+          "38433:38846",
+          "40046:44562",
+          "41321:27535",
+          "43169:12106",
+          "43984:4552"
+        ]
+      },
+      {
+        "name": "System Color/red060_alarm",
+        "count": 6,
+        "hexes": [
+          "#D32828"
+        ],
+        "ids": [
+          "28441:152898",
+          "38433:38458",
+          "40046:44566",
+          "41321:27515",
+          "42342:70438",
+          "43169:12139"
+        ]
+      },
+      {
+        "name": "Badge Color/economy",
+        "count": 5,
+        "hexes": [
+          "#C0C259"
+        ],
+        "ids": [
+          "41321:27541",
+          "42560:39569",
+          "42814:16151",
+          "43882:23921",
+          "43984:4716"
+        ]
+      },
+      {
+        "name": "Badge Color/eleccar",
+        "count": 5,
+        "hexes": [
+          "#A87DF9"
+        ],
+        "ids": [
+          "41321:27540",
+          "42560:39568",
+          "42814:15972",
+          "43882:23946",
+          "43984:4715"
+        ]
+      },
+      {
+        "name": "Badge Color/event",
+        "count": 5,
+        "hexes": [
+          "#F8679C"
+        ],
+        "ids": [
+          "28893:179896",
+          "40046:44570",
+          "41321:27537",
+          "42814:16148",
+          "43984:4712"
+        ]
+      },
+      {
+        "name": "Badge Color/hotdeal",
+        "count": 5,
+        "hexes": [
+          "#FD8484"
+        ],
+        "ids": [
+          "40479:37616",
+          "41321:27538",
+          "42560:39567",
+          "42814:16149",
+          "43984:4713"
+        ]
+      },
+      {
+        "name": "Badge Color/newcar",
+        "count": 5,
+        "hexes": [
+          "#5B68FE"
+        ],
+        "ids": [
+          "28893:179895",
+          "40917:27449",
+          "41321:27539",
+          "43882:23920",
+          "43984:4714"
+        ]
+      },
+      {
+        "name": "Badge Color/newzone",
+        "count": 5,
+        "hexes": [
+          "#FD9F4D"
+        ],
+        "ids": [
+          "41321:27514",
+          "42414:4574",
+          "42814:16150",
+          "43882:23919",
+          "43984:4663"
+        ]
+      },
+      {
+        "name": "Second Text",
+        "count": 5,
+        "hexes": [
+          "#8C989E"
+        ],
+        "ids": [
+          "1564:15253",
+          "1580:13069",
+          "1869:12203",
+          "4492:49678",
+          "42553:13707"
+        ]
+      },
+      {
+        "name": "Second Navy/navy030_Line Btn text",
+        "count": 5,
+        "hexes": [
+          "#A1B1BB"
+        ],
+        "ids": [
+          "5905:54825",
+          "28435:52326",
+          "38487:37649",
+          "40917:27410",
+          "42400:56624"
+        ]
+      },
+      {
+        "name": "Badge Color/ODA",
+        "count": 4,
+        "hexes": [
+          "#ED9A1E"
+        ],
+        "ids": [
+          "42410:54441",
+          "42560:39570",
+          "42814:16152",
+          "43984:4717"
+        ]
+      },
+      {
+        "name": "Badge Color/timedeal",
+        "count": 4,
+        "hexes": [
+          "#FF8159"
+        ],
+        "ids": [
+          "41321:27534",
+          "42560:39565",
+          "42814:16147",
+          "43984:4710"
+        ]
+      },
+      {
+        "name": "dot",
+        "count": 4,
+        "hexes": [
+          "#D9DDDF"
+        ],
+        "ids": [
+          "2732:17072",
+          "2902:18741",
+          "42073:45207",
+          "42560:23759"
+        ]
+      },
+      {
+        "name": "First Green/g500_Default Logo",
+        "count": 4,
+        "hexes": [
+          "#00C88C"
+        ],
+        "ids": [
+          "24115:101751",
+          "42073:45129",
+          "42107:181412",
+          "42859:8412"
+        ]
+      },
+      {
+        "name": "First\bRed/g400",
+        "count": 4,
+        "hexes": [
+          "#F14950"
+        ],
+        "ids": [
+          "38433:38853",
+          "40613:37642",
+          "42066:28173",
+          "43169:12298"
+        ]
+      },
+      {
+        "name": "First\bRed/g500_Default",
+        "count": 4,
+        "hexes": [
+          "#ED1C24"
+        ],
+        "ids": [
+          "38433:38447",
+          "40613:37595",
+          "40714:28082",
+          "41321:27544"
+        ]
+      },
+      {
+        "name": "Gray Scale/Gray 020",
+        "count": 4,
+        "hexes": [
+          "#E2E2E2"
+        ],
+        "ids": [
+          "5197:53825",
+          "7606:76633",
+          "40241:26900",
+          "42066:28155"
+        ]
+      },
+      {
+        "name": "info input text",
+        "count": 4,
+        "hexes": [
+          "#D9DDDF"
+        ],
+        "ids": [
+          "4010:39877",
+          "40241:26971",
+          "42073:45130",
+          "42073:45246"
+        ]
+      },
+      {
+        "name": "Second Navy/gray025",
+        "count": 4,
+        "hexes": [
+          "#D9DDDF"
+        ],
+        "ids": [
+          "8388:88216",
+          "42303:62591",
+          "42686:14949",
+          "42814:15843"
+        ]
+      },
+      {
+        "name": "Second Navy/navy100",
+        "count": 4,
+        "hexes": [
+          "#060809"
+        ],
+        "ids": [
+          "1580:13096",
+          "38487:37655",
+          "41343:25350",
+          "42554:49336"
+        ]
+      }
+    ],
+    "nameValueConflict": [
+      {
+        "name": "Second Navy/navy060_Default Btn",
+        "count": 14,
+        "hexes": [
+          "#0A3C5C",
+          "#143C56"
+        ],
+        "ids": [
+          "1564:15373",
+          "16144:153218",
+          "28406:194146",
+          "35982:273081",
+          "38487:37652",
+          "40613:37750",
+          "41173:25107",
+          "41321:25199",
+          "41321:25622",
+          "41321:27547",
+          "42073:45213",
+          "42342:70314",
+          "43038:3",
+          "43169:12119"
+        ]
+      },
+      {
+        "name": "Brand color/GR060",
+        "count": 3,
+        "hexes": [
+          "#00C88C",
+          "#00A870"
+        ],
+        "ids": [
+          "9694:118611",
+          "23606:78364",
+          "42560:18070"
+        ]
+      },
+      {
+        "name": "Default Btn",
+        "count": 3,
+        "hexes": [
+          "#40535E",
+          "#143C56"
+        ],
+        "ids": [
+          "1646:11860",
+          "3563:36340",
+          "40241:26884"
+        ]
+      },
+      {
+        "name": "Second Navy/navy090",
+        "count": 3,
+        "hexes": [
+          "#020609",
+          "#0A1E2B"
+        ],
+        "ids": [
+          "7606:76672",
+          "38487:37654",
+          "42560:16120"
+        ]
+      },
+      {
+        "name": "First Green/g600_G press",
+        "count": 2,
+        "hexes": [
+          "#007E54",
+          "#009669"
+        ],
+        "ids": [
+          "28406:194273",
+          "42859:8631"
+        ]
+      },
+      {
+        "name": "Map Marker/active",
+        "count": 2,
+        "hexes": [
+          "#E50012",
+          "#00AD73"
+        ],
+        "ids": [
+          "28438:28868",
+          "40241:27784"
+        ]
+      }
+    ],
+    "hexDupTop": [
+      {
+        "hex": "#FFFFFF",
+        "count": 35,
+        "names": [
+          "bg/default",
+          "bg/layer/default",
+          "fill/input/default",
+          "Global/Base/White",
+          "Gray Scale/Gray 000",
+          "Gray Scale/Gray 000 *white",
+          "Gray Scale/gray000",
+          "Gray scale/White",
+          "Gray/01",
+          "gray/gray-0",
+          "gray000",
+          "GRAYSCALE/gray_001",
+          "Label Color/Dark/Primary",
+          "Map Marker/Active",
+          "Navy scale/White",
+          "static/wh",
+          "System Background/Light/Primary",
+          "Untitled/gray000"
+        ],
+        "nameCount": 18,
+        "canon": true
+      },
+      {
+        "hex": "#000000",
+        "count": 28,
+        "names": [
+          "black",
+          "Black",
+          "Gray Scale/Gray 100",
+          "Gray Scale/gray100",
+          "Label Color/Light/Primary",
+          "Map Marker/map marker_Shadow",
+          "Neutrals / Black #000000",
+          "System Color/btn 45%",
+          "System Color/dim layer",
+          "System Color/info box_BG",
+          "System/btn 45%",
+          "System/Dim Layer",
+          "System/Info Box BG"
+        ],
+        "nameCount": 13,
+        "canon": true
+      },
+      {
+        "hex": "#D9DDDF",
+        "count": 24,
+        "names": [
+          "Disabled Btn",
+          "dot",
+          "Gray/902",
+          "info input text",
+          "Navy 020 *Disabled Btn",
+          "Second Navy/gray025",
+          "sub text",
+          "System Color/input_line",
+          "System/Input Line"
+        ],
+        "nameCount": 9,
+        "canon": false
+      },
+      {
+        "hex": "#728A9A",
+        "count": 17,
+        "names": [
+          "$-G_Default Btn-300",
+          "$-gray-300",
+          "Navy/navy 040",
+          "Second Navy/navy040_Second Text",
+          "Untitled/$-DefaultBtn_N-300"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#E2E2E2",
+        "count": 17,
+        "names": [
+          "Gray Scale/Gray 020",
+          "Gray Scale/gray020",
+          "gray020",
+          "Map Marker/Shadow",
+          "Untitled/gray020"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#ED1C24",
+        "count": 16,
+        "names": [
+          "Brand Color/G car Red",
+          "Brand/G car Red",
+          "First Red/500",
+          "First Red/r500",
+          "First\bRed/g500_Default",
+          "Gcar_color",
+          "Primary/Red 500"
+        ],
+        "nameCount": 7,
+        "canon": true
+      },
+      {
+        "hex": "#D0D8DD",
+        "count": 15,
+        "names": [
+          "$-G_Default Btn-100",
+          "$-gray-100",
+          "Navy/Navy 020",
+          "Second Navy/navy020_Disabled Btn",
+          "Untitled/$-DefaultBtn_N-100"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#0F2D41",
+        "count": 15,
+        "names": [
+          "$-G_Default Btn-600",
+          "$-gray-600",
+          "Navy/Navy 070",
+          "Second Navy/navy070_Def Press",
+          "Second Navy/navy070_Default Press",
+          "Untitled/$-DefaultBtn_N-600"
+        ],
+        "nameCount": 6,
+        "canon": true
+      },
+      {
+        "hex": "#E8ECEF",
+        "count": 13,
+        "names": [
+          "$-G_Default Btn-50",
+          "$-gray-50",
+          "Navy/Navy 010",
+          "Second Navy/navy010",
+          "Untitled/$-DefaultBtn_N-50"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#10131C",
+        "count": 13,
+        "names": [
+          "border/input/default",
+          "border/subtle",
+          "border/subtler",
+          "fill/disabled",
+          "fill/transperent",
+          "icon/default",
+          "icon/subtle",
+          "icon/subtler",
+          "text/default",
+          "text/disabled",
+          "text/subtle",
+          "text/subtler"
+        ],
+        "nameCount": 12,
+        "canon": false
+      },
+      {
+        "hex": "#0A3C5C",
+        "count": 13,
+        "names": [
+          "Navy scale/NEW_Navi070",
+          "Navy/Navy 060",
+          "Second Navy/navy060_Default Btn"
+        ],
+        "nameCount": 3,
+        "canon": true
+      },
+      {
+        "hex": "#436378",
+        "count": 12,
+        "names": [
+          "$-G_Default Btn-400",
+          "$-gray-400",
+          "Navy/Navy 050",
+          "Second Navy/navy050",
+          "Untitled/$-DefaultBtn_N-400"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#143C56",
+        "count": 12,
+        "names": [
+          "$-G_Default Btn-500",
+          "$-gray-500",
+          "Brand Color/Overnight Gray",
+          "Default Btn",
+          "Navy scale/Navi070",
+          "Overnight Gray",
+          "Second Navy/navy060_Default Btn",
+          "Untitled/$-DefaultBtn_N-500"
+        ],
+        "nameCount": 8,
+        "canon": false
+      },
+      {
+        "hex": "#FD8484",
+        "count": 12,
+        "names": [
+          "Badge Color/hotdeal",
+          "Badge/Hot Deal",
+          "Map Marker/Free Zone",
+          "Map Marker/freezone",
+          "Secondary/freezone",
+          "Secondary/hotdeal",
+          "특가"
+        ],
+        "nameCount": 7,
+        "canon": true
+      },
+      {
+        "hex": "#00C88C",
+        "count": 12,
+        "names": [
+          "Brand Color/Daily Green",
+          "Brand color/GR060",
+          "Default Logo",
+          "First Green/g500_Default Logo",
+          "System Color/positive_green",
+          "System/Success"
+        ],
+        "nameCount": 6,
+        "canon": true
+      },
+      {
+        "hex": "#D32828",
+        "count": 11,
+        "names": [
+          "red060",
+          "Red100",
+          "Secondary/red060_alarm",
+          "System Color/red060_alarm",
+          "System/Alarm"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#A1B1BB",
+        "count": 10,
+        "names": [
+          "$-G_Default Btn-200",
+          "$-gray-200",
+          "Map Marker/Active_Line",
+          "Navy/Navy 030",
+          "Second Navy/navy030_Line Btn text",
+          "Untitled/$-DefaultBtn_N-200"
+        ],
+        "nameCount": 6,
+        "canon": true
+      },
+      {
+        "hex": "#A87DF9",
+        "count": 10,
+        "names": [
+          "Badge Color/eleccar",
+          "Badge/Eleccar",
+          "Secondary/eleccar",
+          "Secondary/puple040",
+          "전기차"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#F8F8F8",
+        "count": 10,
+        "names": [
+          "Gray Scale/Gray 005",
+          "Gray Scale/gray005",
+          "iOS/Safari/Bars Background Light",
+          "Untitled/gray005"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#F1F1F1",
+        "count": 10,
+        "names": [
+          "Gray Scale/Gray 010",
+          "Gray Scale/gray010",
+          "gray010",
+          "Korail(Pending)/코레일_bg_table",
+          "Untitled/gray010"
+        ],
+        "nameCount": 5,
+        "canon": true
+      },
+      {
+        "hex": "#C5C5C5",
+        "count": 10,
+        "names": [
+          "Gray Scale/Gray 040",
+          "Gray Scale/gray040",
+          "Untitled/gray040"
+        ],
+        "nameCount": 3,
+        "canon": true
+      },
+      {
+        "hex": "#2F2E2E",
+        "count": 10,
+        "names": [
+          "Gray Scale/Gray 080",
+          "Gray Scale/gray080"
+        ],
+        "nameCount": 2,
+        "canon": true
+      },
+      {
+        "hex": "#FED500",
+        "count": 9,
+        "names": [
+          "Badge Color/bookmark",
+          "Badge/Bookmark",
+          "Secondary/bookmark",
+          "yellow060"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#009BFA",
+        "count": 9,
+        "names": [
+          "Brand Color/L.POINT",
+          "Brand/L.POINT",
+          "COMPANY/lpoint_blue",
+          "Secondary/L.POINT"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#0079C3",
+        "count": 9,
+        "names": [
+          "Brand Color/L.POINT2",
+          "Brand/L.POINT 2",
+          "Secondary/L.POINT2"
+        ],
+        "nameCount": 3,
+        "canon": true
+      },
+      {
+        "hex": "#8C989E",
+        "count": 9,
+        "names": [
+          "Gray/904",
+          "navy040",
+          "Second Text",
+          "Second text",
+          "Sub Navy/Navy 040 *Second Text"
+        ],
+        "nameCount": 5,
+        "canon": false
+      },
+      {
+        "hex": "#F8679C",
+        "count": 8,
+        "names": [
+          "Badge Color/event",
+          "Badge/Event",
+          "Secondary/event",
+          "이벤트"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#5B68FE",
+        "count": 8,
+        "names": [
+          "Badge Color/newcar",
+          "Badge/New Car",
+          "Secondary/newcar",
+          "신차"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#FD9F4D",
+        "count": 8,
+        "names": [
+          "Badge Color/newzone",
+          "Badge/New Zone",
+          "Secondary/newzone",
+          "신규존"
+        ],
+        "nameCount": 4,
+        "canon": true
+      },
+      {
+        "hex": "#D4D4D4",
+        "count": 8,
+        "names": [
+          "Gray Scale/Gray 030",
+          "Gray Scale/gray030"
+        ],
+        "nameCount": 2,
+        "canon": true
+      }
+    ],
+    "namingFindings": [
+      {
+        "code": "CN-2",
+        "group": "Primary",
+        "kind": "단계 번호 체계 혼용",
+        "detail": "명도 순으로 정렬하면 단계 번호가 단조 증가하지 않음 — 010 → 020 → 300 → 400 → 500 → 060 → 070 → 080 → 090",
+        "suspects": [
+          {
+            "name": "Primary/Red 500",
+            "hex": "#ED1C24"
+          },
+          {
+            "name": "Primary/Red 060",
+            "hex": "#BE161D"
+          }
+        ],
+        "fix": null
+      },
+      {
+        "code": "CN-3",
+        "group": "Primary",
+        "kind": "단계 결번",
+        "detail": "010~090 사이에 030, 040, 050 없음",
+        "missing": [
+          30,
+          40,
+          50
+        ],
+        "derived": true,
+        "fix": "CN-2(번호 체계 혼용)를 먼저 정리하면 이 결번은 자동으로 메워집니다"
+      },
+      {
+        "code": "CN-4",
+        "group": "Primary",
+        "kind": "명도 역전",
+        "detail": "Primary/Red 090(#2F0607) 보다 Primary/Red 300(#F4777C) 이 더 밝음 — 단계가 커질수록 어두워야 하는 규칙에 어긋남",
+        "pair": [
+          "Primary/Red 090",
+          "Primary/Red 300"
+        ],
+        "derived": true,
+        "fix": "CN-2 정리 시 자동 해소"
+      },
+      {
+        "code": "CN-3",
+        "group": "Gray Scale",
+        "kind": "단계 결번",
+        "detail": "000~100 사이에 090 없음",
+        "missing": [
+          90
+        ],
+        "derived": false,
+        "fix": "결번을 그대로 둘지(비어 있음이 의도) 채울지 결정 필요"
+      },
+      {
+        "code": "CN-1",
+        "group": "Navy",
+        "kind": "대소문자 흔들림",
+        "detail": "Navy 그룹의 색상명이 \"Navy\" / \"navy\" 로 갈림",
+        "minority": [
+          "Navy/navy 040"
+        ],
+        "fix": "소수 표기를 \"Navy\" 로 통일"
+      },
+      {
+        "code": "CN-2",
+        "group": "Navy",
+        "kind": "단계 번호 체계 혼용",
+        "detail": "명도 순으로 정렬하면 단계 번호가 단조 증가하지 않음 — 010 → 020 → 030 → 040 → 050 → 060 → 070 → 080 → 100 → 090",
+        "suspects": [
+          {
+            "name": "Navy/Navy 100",
+            "hex": "#060809"
+          },
+          {
+            "name": "Navy/Navy 090",
+            "hex": "#020609"
+          }
+        ],
+        "fix": null
+      },
+      {
+        "code": "CN-4",
+        "group": "Navy",
+        "kind": "명도 역전",
+        "detail": "Navy/Navy 090(#020609) 보다 Navy/Navy 100(#060809) 이 더 밝음 — 단계가 커질수록 어두워야 하는 규칙에 어긋남",
+        "pair": [
+          "Navy/Navy 090",
+          "Navy/Navy 100"
+        ],
+        "derived": false,
+        "fix": "원본 확인 필요 — 값이 뒤바뀐 것인지 의도인지 판단 불가"
+      }
+    ],
+    "semanticIssues": [
+      {
+        "name": "Map Marker/Active_Line",
+        "issue": "언더스코어 사용 (다른 이름은 공백)"
+      }
+    ],
+    "labelMismatch": [
+      {
+        "name": "Map Marker/Free Zone",
+        "swatch": "#FD8484",
+        "label": "#BEC3C7"
+      },
+      {
+        "name": "System/Success",
+        "swatch": "#00C88C",
+        "label": "#E2E2E2"
+      },
+      {
+        "name": "System/Focus Line",
+        "swatch": "#0029FF",
+        "label": "#A1B1BB"
+      }
+    ],
+    "canonHexDup": [
+      {
+        "hex": "#ED1C24",
+        "names": [
+          "Primary/Red 500",
+          "Brand/G car Red"
+        ]
+      },
+      {
+        "hex": "#A1B1BB",
+        "names": [
+          "Navy/Navy 030",
+          "Map Marker/Active_Line"
+        ]
+      },
+      {
+        "hex": "#FD8484",
+        "names": [
+          "Badge/Hot Deal",
+          "Map Marker/Free Zone"
+        ]
+      }
+    ],
+    "redHypothesis": {
+      "ordered": [
+        {
+          "name": "Primary/Red 010",
+          "hex": "#FBD2D3",
+          "step": "010"
+        },
+        {
+          "name": "Primary/Red 020",
+          "hex": "#F8A4A7",
+          "step": "020"
+        },
+        {
+          "name": "Primary/Red 300",
+          "hex": "#F4777C",
+          "step": "300"
+        },
+        {
+          "name": "Primary/Red 400",
+          "hex": "#F14950",
+          "step": "400"
+        },
+        {
+          "name": "Primary/Red 500",
+          "hex": "#ED1C24",
+          "step": "500"
+        },
+        {
+          "name": "Primary/Red 060",
+          "hex": "#BE161D",
+          "step": "060"
+        },
+        {
+          "name": "Primary/Red 070",
+          "hex": "#8E1116",
+          "step": "070"
+        },
+        {
+          "name": "Primary/Red 080",
+          "hex": "#5F0B0E",
+          "step": "080"
+        },
+        {
+          "name": "Primary/Red 090",
+          "hex": "#2F0607",
+          "step": "090"
+        }
+      ],
+      "expected": [
+        {
+          "name": "Primary/Red 010",
+          "hex": "#FBD2D3",
+          "actual": "010",
+          "expected": "010"
+        },
+        {
+          "name": "Primary/Red 020",
+          "hex": "#F8A4A7",
+          "actual": "020",
+          "expected": "020"
+        },
+        {
+          "name": "Primary/Red 300",
+          "hex": "#F4777C",
+          "actual": "300",
+          "expected": "030"
+        },
+        {
+          "name": "Primary/Red 400",
+          "hex": "#F14950",
+          "actual": "400",
+          "expected": "040"
+        },
+        {
+          "name": "Primary/Red 500",
+          "hex": "#ED1C24",
+          "actual": "500",
+          "expected": "050"
+        },
+        {
+          "name": "Primary/Red 060",
+          "hex": "#BE161D",
+          "actual": "060",
+          "expected": "060"
+        },
+        {
+          "name": "Primary/Red 070",
+          "hex": "#8E1116",
+          "actual": "070",
+          "expected": "070"
+        },
+        {
+          "name": "Primary/Red 080",
+          "hex": "#5F0B0E",
+          "actual": "080",
+          "expected": "080"
+        },
+        {
+          "name": "Primary/Red 090",
+          "hex": "#2F0607",
+          "actual": "090",
+          "expected": "090"
+        }
+      ],
+      "docText": "G car의 Primary (프라이머리) 색상은 Red color palette를 기반으로 합니다. Red 050이 브랜드 색상에 가장 가깝지만, 가독성과 접근성을 고려하여 Red 040을 메인 색상으로 사용합니다. * Text color 50: 강조용 문구에 해당",
+      "mismatched": [
+        {
+          "name": "Primary/Red 300",
+          "hex": "#F4777C",
+          "actual": "300",
+          "expected": "030"
+        },
+        {
+          "name": "Primary/Red 400",
+          "hex": "#F14950",
+          "actual": "400",
+          "expected": "040"
+        },
+        {
+          "name": "Primary/Red 500",
+          "hex": "#ED1C24",
+          "actual": "500",
+          "expected": "050"
+        }
+      ],
+      "docRefs": {
+        "Red 050": "#ED1C24",
+        "Red 040": "#F14950"
+      },
+      "brandRedHex": "#ED1C24",
+      "brandMatchesRed050": true,
+      "red040OnWhite": 3.62,
+      "red050OnWhite": 4.38
+    },
+    "legacyOrphanHex": [
+      "#143C56",
+      "#050F16",
+      "#EFD2D3",
+      "#DFA5A7",
+      "#D0797C",
+      "#C04C50",
+      "#F8E9EA",
+      "#B01F24",
+      "#84171B",
+      "#581012",
+      "#2C0809",
+      "#120304",
+      "#4DB778",
+      "#00AD79",
+      "#ED9A1E",
+      "#111111",
+      "#F8F7FB",
+      "#D4D6D9",
+      "#10131C",
+      "#42C0C0",
+      "#00A870",
+      "#E50012",
+      "#BF7200",
+      "#303E47",
+      "#20A556",
+      "#40535E",
+      "#0A84FF",
+      "#007AFF",
+      "#636366",
+      "#AEAEB2",
+      "#D9DDDF",
+      "#1B69F1",
+      "#1794FA",
+      "#EAF0F6",
+      "#68A0DA",
+      "#33D3A3",
+      "#007E54",
+      "#009669",
+      "#E6FAF4",
+      "#181A1D",
+      "#EDB8B8",
+      "#66DEBA",
+      "#5F6062",
+      "#1A1A1A",
+      "#4F4D55",
+      "#0A090B",
+      "#C9C9CC",
+      "#1D1A1A",
+      "#2E2E2E",
+      "#565C63",
+      "#031109",
+      "#ECEEEF",
+      "#8C989E",
+      "#66757E",
+      "#202A2F",
+      "#101518",
+      "#4B4E53",
+      "#2D2D2D",
+      "#494F51",
+      "#79C99A",
+      "#004A98",
+      "#CDE0EE",
+      "#FAFAFA",
+      "#0066B3",
+      "#073B62",
+      "#EBEBF5",
+      "#3C3C43",
+      "#FCF8E8",
+      "#2F75BE",
+      "#00AD73",
+      "#1E1B13",
+      "#E2E2E5",
+      "#9B9EAE",
+      "#3C536F",
+      "#187C41",
+      "#D2EDDD",
+      "#A6DBBB",
+      "#E9F7EF",
+      "#10532B",
+      "#082916",
+      "#246BEB",
+      "#FF5555",
+      "#545458",
+      "#467BCE",
+      "#2D303A",
+      "#10CFC9",
+      "#EEF1F8",
+      "#DF1B35"
+    ]
+  }
+}

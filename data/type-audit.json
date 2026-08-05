@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "generated_from": "tools/audit/type_audit.js",
+    "source": "GDS(Greencar Design System).fig",
+    "exported": "2026-07-23T04:20:10.332Z"
+  },
+  "canon": {
+    "tokens": 21,
+    "uniqueSpecs": 17,
+    "specCollisionGroups": 4,
+    "specCollisionTokens": 8,
+    "lineHeightDefined": 0,
+    "lineHeightAuto": 21,
+    "letterSpacingDefined": 0,
+    "familyDefined": 0
+  },
+  "legacy": {
+    "styles": 254,
+    "families": 9,
+    "familyCaseDupGroups": 1,
+    "familyCaseDupStyles": 37,
+    "nameDupNames": 42,
+    "nameDupConflicting": 8,
+    "lineHeightUnits": {
+      "PERCENT": 46,
+      "PIXELS": 184,
+      "RAW": 24
+    },
+    "tokenNameReuse": 9
+  },
+  "details": {
+    "specCollisions": [
+      {
+        "size": 20,
+        "weight": 700,
+        "tokens": [
+          "Display 2",
+          "Heading 1"
+        ]
+      },
+      {
+        "size": 16,
+        "weight": 700,
+        "tokens": [
+          "Display 3",
+          "Heading 3"
+        ]
+      },
+      {
+        "size": 12,
+        "weight": 400,
+        "tokens": [
+          "Caption 1",
+          "Body 3"
+        ]
+      },
+      {
+        "size": 10,
+        "weight": 400,
+        "tokens": [
+          "Caption 2",
+          "Body 4"
+        ]
+      }
+    ],
+    "famCount": {
+      "Rubik": 3,
+      "Inter": 6,
+      "Pretendard GOV": 9,
+      "Noto Sans KR": 189,
+      "SF Pro Display": 1,
+      "pretendard GOV Variable": 33,
+      "Pretendard GOV Variable": 4,
+      "SF Pro Text": 8,
+      "Roboto": 1
+    },
+    "famCaseDup": [
+      {
+        "key": "pretendard gov variable",
+        "variants": [
+          {
+            "name": "pretendard GOV Variable",
+            "count": 33
+          },
+          {
+            "name": "Pretendard GOV Variable",
+            "count": 4
+          }
+        ],
+        "total": 37
+      }
+    ],
+    "reuse": [
+      {
+        "token": "Display 1",
+        "canon": {
+          "size": 24,
+          "weight": 700
+        },
+        "legacyVariants": [
+          {
+            "size": 28,
+            "weight": 400,
+            "sample": "Text styles/Display 1 | 28px R",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 1
+      },
+      {
+        "token": "Title 2",
+        "canon": {
+          "size": 22,
+          "weight": 500
+        },
+        "legacyVariants": [
+          {
+            "size": 22,
+            "weight": 400,
+            "sample": "Default/Regular/Title2",
+            "family": "SF Pro Display"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 1
+      },
+      {
+        "token": "Display 2",
+        "canon": {
+          "size": 20,
+          "weight": 700
+        },
+        "legacyVariants": [
+          {
+            "size": 24,
+            "weight": 700,
+            "sample": "Text styles/Display 2 | 24px B",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 3
+      },
+      {
+        "token": "Display 3",
+        "canon": {
+          "size": 16,
+          "weight": 700
+        },
+        "legacyVariants": [
+          {
+            "size": 20,
+            "weight": 700,
+            "sample": "Text styles/Display 3 | 20px B",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 4
+      },
+      {
+        "token": "Body 1",
+        "canon": {
+          "size": 16,
+          "weight": 400
+        },
+        "legacyVariants": [
+          {
+            "size": 18,
+            "weight": 400,
+            "sample": "Text styles/Body 1 | 18px R",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 18,
+            "weight": 500,
+            "sample": "Noto Sans/Body 1 | 18px M",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 18,
+            "weight": 700,
+            "sample": "Noto Sans/Body 1 | 18px B",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 3,
+        "hits": 3
+      },
+      {
+        "token": "Body 2",
+        "canon": {
+          "size": 14,
+          "weight": 400
+        },
+        "legacyVariants": [
+          {
+            "size": 16,
+            "weight": 500,
+            "sample": "Noto Sans/Body 2 | 16px B",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 16,
+            "weight": 400,
+            "sample": "Text styles/Body 2 | 16px R",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 16,
+            "weight": 700,
+            "sample": "Noto Sans/Body 2 | 16px B",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 3,
+        "hits": 13
+      },
+      {
+        "token": "Caption 1",
+        "canon": {
+          "size": 12,
+          "weight": 400
+        },
+        "legacyVariants": [
+          {
+            "size": 12,
+            "weight": 400,
+            "sample": "Caption 1 | 12px R",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 12,
+            "weight": 500,
+            "sample": "Noto Sans/Caption 1 | 12px M",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 11
+      },
+      {
+        "token": "Body 3",
+        "canon": {
+          "size": 12,
+          "weight": 400
+        },
+        "legacyVariants": [
+          {
+            "size": 14,
+            "weight": 400,
+            "sample": "Text styles/Body 3 | 14px R",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 14,
+            "weight": 500,
+            "sample": "Noto Sans/Body 3 | 14px M",
+            "family": "Noto Sans KR"
+          },
+          {
+            "size": 14,
+            "weight": 700,
+            "sample": "Noto Sans/Body 3 | 14px B",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 3,
+        "hits": 13
+      },
+      {
+        "token": "Caption 2",
+        "canon": {
+          "size": 10,
+          "weight": 400
+        },
+        "legacyVariants": [
+          {
+            "size": 11,
+            "weight": 400,
+            "sample": "Default/Regular/Caption2",
+            "family": "SF Pro Text"
+          },
+          {
+            "size": 10,
+            "weight": 400,
+            "sample": "Text styles/Caption 2 | 10px R",
+            "family": "Noto Sans KR"
+          }
+        ],
+        "conflictCount": 1,
+        "hits": 8
+      }
+    ],
+    "nameDupConflicting": [
+      {
+        "name": "noto_sans/title/medium",
+        "count": 9,
+        "specs": [
+          "Noto Sans KR Medium 24",
+          "Noto Sans KR Medium 22",
+          "Noto Sans KR Medium 20",
+          "Noto Sans KR Medium 18",
+          "Noto Sans KR Medium 16",
+          "Noto Sans KR Medium 14",
+          "Noto Sans KR Medium 12",
+          "Noto Sans KR Medium 10"
+        ]
+      },
+      {
+        "name": "noto_sans/heading/bold",
+        "count": 5,
+        "specs": [
+          "Noto Sans KR Bold 24",
+          "Noto Sans KR Bold 20",
+          "Noto Sans KR Bold 18",
+          "Noto Sans KR Bold 16",
+          "Noto Sans KR Bold 14"
+        ]
+      },
+      {
+        "name": "noto_sans/display/bold",
+        "count": 4,
+        "specs": [
+          "Noto Sans KR Bold 24",
+          "Noto Sans KR Bold 22",
+          "Noto Sans KR Bold 20",
+          "Noto Sans KR Bold 16"
+        ]
+      },
+      {
+        "name": "noto_sans/boby/regular",
+        "count": 4,
+        "specs": [
+          "Noto Sans KR Regular 16",
+          "Noto Sans KR Regular 14",
+          "Noto Sans KR Regular 12",
+          "Noto Sans KR Regular 10"
+        ]
+      },
+      {
+        "name": "Noto Sans/Body 2 | 16px B",
+        "count": 3,
+        "specs": [
+          "Noto Sans KR Medium 16",
+          "Noto Sans KR Bold 16"
+        ]
+      },
+      {
+        "name": "noto_sans/boby/medium",
+        "count": 3,
+        "specs": [
+          "Noto Sans KR Medium 16",
+          "Noto Sans KR Medium 14"
+        ]
+      },
+      {
+        "name": "noto_sans/boby/bold",
+        "count": 3,
+        "specs": [
+          "Noto Sans KR Bold 16",
+          "Noto Sans KR Bold 14"
+        ]
+      },
+      {
+        "name": "noto_sans/caption/regular",
+        "count": 2,
+        "specs": [
+          "Noto Sans KR Regular 12",
+          "Noto Sans KR Regular 10"
+        ]
+      }
+    ]
+  }
+}

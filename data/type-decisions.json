@@ -1,0 +1,136 @@
+{
+  "$description": "타이포 확정 결정 — 원본 .fig 를 고칠 수 없으므로(View 권한) 추출 결과 위에 덮어씁니다.",
+  "decidedBy": "강민관",
+  "decidedAt": "2026-08-04",
+  "fontFamily": {
+    "value": "Noto Sans KR",
+    "single": true,
+    "note": "정본 폰트는 Noto Sans KR 단일. 레거시에 섞여 있는 Pretendard GOV 계열·SF Pro·Inter·Rubik·Roboto 는 전부 정리 대상.",
+    "status": "confirmed"
+  },
+  "open": [
+    {
+      "id": "TQ-1",
+      "question": "정본 21단계 중 8개(4쌍)가 완전 동일 스펙 — 어떻게 구분할 것인가",
+      "detail": "Display 2=Heading 1(20px/700) · Display 3=Heading 3(16px/700) · Caption 1=Body 3(12px/400) · Caption 2=Body 4(10px/400). 값은 같지만 쓰이는 자리가 다릅니다.",
+      "options": [
+        "A. 자간으로 구분 정의",
+        "B. 21 → 17 단계로 통합하고 나머지는 별칭 처리",
+        "C. 값은 같게 두고 용도(제목용/본문용)만 문서로 고정"
+      ],
+      "status": "closed",
+      "settledTitle": "크기·굵기가 같은 4쌍은 용도(Usage)로 구분합니다",
+      "resolution": "C — 값은 같게 두고 용도로 구분. 정본 Typography system 페이지의 Usage 열을 토큰에 실었습니다. Display=Graphic vs Heading=Contents_heading, Body=Contents_body vs Caption=Contents_caption. 강민관 전달 2026-08-04"
+    },
+    {
+      "id": "TQ-2",
+      "question": "행간을 배수로 정의할 것인가 px 로 정의할 것인가",
+      "detail": "정본 21단계 행간이 전부 Auto 입니다. Figma Auto 는 폰트 메트릭 의존이라 웹·iOS·Android 값이 갈립니다. 폰트가 Noto Sans KR 단일로 확정됐으므로 메트릭은 하나로 고정됐지만, Auto 를 그대로 넘기면 플랫폼별 구현 차이는 남습니다.",
+      "status": "closed",
+      "resolution": "Auto 유지 — 배수·px 어느 쪽으로도 정의하지 않는다. 팀 합의(강민관 전달 2026-08-04). 웹은 line-height:normal 로 내보냅니다.",
+      "settledTitle": "행간은 Figma Auto 를 그대로 씁니다"
+    },
+    {
+      "id": "TQ-3",
+      "question": "21단계 각각의 행간 값",
+      "detail": "데이터로 유도 불가 — 디자인 결정입니다.",
+      "status": "closed",
+      "resolution": "해당 없음 — TQ-2 에서 Auto 로 확정돼 단계별 행간 값을 정할 필요가 없습니다.",
+      "settledTitle": "단계별 행간 값은 정하지 않습니다"
+    },
+    {
+      "id": "TQ-4",
+      "question": "정본 토큰명 9건이 레거시 동명 스타일과 다른 크기를 가리키는 문제",
+      "detail": "정본 Display 1 = 24px/700 인데 레거시 동명 스타일은 28px/400. 정본 토큰에 접두어를 붙일지, 레거시 스타일을 먼저 없앨지 결정이 필요합니다.",
+      "status": "closed",
+      "settledTitle": "레거시 동명 스타일은 안건이 아닙니다 — 정리 대상",
+      "resolution": "해당 없음 — 레거시 텍스트 스타일은 정본으로 통폐합될 대상이므로 이름 충돌을 별도로 해결할 필요가 없습니다. 정본 21단계가 유일한 기준입니다. 강민관 전달 2026-08-04"
+    }
+  ],
+  "lineHeight": {
+    "value": "Auto",
+    "note": "행간은 Figma Auto 를 그대로 쓴다 — 팀 합의. 별도 배수·px 값을 정의하지 않는다. 웹은 line-height:normal, iOS/Android 는 폰트 메트릭 기본값이 이에 해당합니다. 폰트가 Noto Sans KR 단일로 고정됐으므로 메트릭도 하나입니다.",
+    "status": "confirmed"
+  },
+  "usage": {
+    "$note": "정본 Typography system 페이지의 Usage 열. 크기·굵기가 같은 토큰은 이 용도로 구분합니다 — 강민관 전달 2026-08-04.",
+    "status": "confirmed",
+    "map": {
+      "Display 1": [
+        "Graphic"
+      ],
+      "Display 2": [
+        "Graphic"
+      ],
+      "Display 3": [
+        "Graphic"
+      ],
+      "Heading 1": [
+        "Contents_heading"
+      ],
+      "Heading 2": [
+        "Contents_heading"
+      ],
+      "Heading 3": [
+        "Contents_heading"
+      ],
+      "Heading 4": [
+        "Contents_heading"
+      ],
+      "Title 1": [
+        "Time picker_number"
+      ],
+      "Title 2": [
+        "Time picker_date"
+      ],
+      "Title 3": [
+        "Contents_title",
+        "Modal"
+      ],
+      "Title 4": [
+        "Contents_title"
+      ],
+      "Title 5": [
+        "Top app bar",
+        "Button_label",
+        "Bottom sheet"
+      ],
+      "Title 6": [
+        "Contents_title"
+      ],
+      "Title 7": [
+        "Contents_title",
+        "Bottom navigation_label"
+      ],
+      "Title 8": [
+        "Badge_label"
+      ],
+      "Body 1": [
+        "Contents_body"
+      ],
+      "Body 2": [
+        "Contents_body"
+      ],
+      "Body 3": [
+        "Contents_body"
+      ],
+      "Body 4": [
+        "Contents_body"
+      ],
+      "Caption 1": [
+        "Contents_caption"
+      ],
+      "Caption 2": [
+        "Contents_caption"
+      ]
+    }
+  },
+  "letterSpacing": {
+    "value": "0",
+    "note": "원본 Figma 변수 typo/letter-spacing/0 = 0. 정본 21단계 전부 자간 정의값이 0 이며, 단계별로 자간을 따로 두지 않습니다.",
+    "evidence": "Figma 변수 typo/letter-spacing/0 = 0 · get_variable_defs 2026-08-05 (스냅샷 data/figma-variables.json)",
+    "decidedBy": "강민관",
+    "decidedAt": "2026-08-05",
+    "status": "confirmed"
+  }
+}
