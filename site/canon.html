@@ -3,14 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GDS — 그린카 디자인 시스템</title>
+<title>GDS — G car Design System</title>
 <style>
 :root{
   --bg:#fff; --surface:#fbfbfc; --surface2:#f2f3f5; --line:#e7e9ec; --line-soft:#f1f2f4;
   --text:#0d0f11; --text2:#5a616a; --text3:#939aa3;
   --brand:#F14950; --brand-deep:#ED1C24; --brand-soft:#FBD2D3; --brand-ink:#8E1116;
+  /* 크롬(사이드바·활성표시·eyebrow)은 브랜드 빨강이 아니라 정본 Navy 를 씁니다.
+     문서가 자기 색으로 칠해져 있으면 색 스와치가 UI 의 일부처럼 보입니다.
+     값은 정본 Navy/Navy 060 · 010 그대로입니다 — build/check.js 가 대조합니다. */
+  --accent:#0A3C5C; --accent-soft:#E8ECEF;
   --ok:#00C88C; --warn:#FF8159;
-  --nav:272px; --maxw:1120px;
+  --nav:248px; --top:56px; --maxw:1240px;
   --r1:8px;--r2:12px;--r3:16px;--r4:22px;
   --sh1:0 1px 2px rgba(13,15,17,.06);
   --sh2:0 4px 16px rgba(13,15,17,.07),0 1px 3px rgba(13,15,17,.05);
@@ -21,6 +25,7 @@
   --bg:#0b0c0e; --surface:#131518; --surface2:#1b1e22; --line:#262a2f; --line-soft:#1a1d21;
   --text:#f2f4f6; --text2:#9aa2ab; --text3:#6c747d;
   --brand:#F4777C; --brand-deep:#F14950; --brand-soft:#3a1214; --brand-ink:#FBD2D3;
+  --accent:#A1B1BB; --accent-soft:#0A1E2B;
   --sh1:0 1px 2px rgba(0,0,0,.5);
   --sh2:0 4px 16px rgba(0,0,0,.5),0 1px 3px rgba(0,0,0,.4);
   --sh3:0 18px 48px rgba(0,0,0,.6),0 2px 8px rgba(0,0,0,.5);
@@ -42,7 +47,7 @@ nav.side{width:var(--nav);flex:0 0 var(--nav);border-right:1px solid var(--line)
 .brand{padding:0 var(--s6) var(--s5)}
 .brand .logo{display:flex;align-items:center;gap:9px;margin-bottom:5px}
 .brand .dot{width:22px;height:22px;border-radius:7px;
-  background:linear-gradient(135deg,var(--brand-deep),#8E1116);box-shadow:var(--sh1)}
+  background:var(--accent);box-shadow:none}
 .brand b{font-size:19px;font-weight:800;letter-spacing:-.03em}
 .brand span{font-size:12px;color:var(--text3);display:block;padding-left:31px}
 .navgrp{padding:var(--s5) var(--s6) var(--s1);font-size:10.5px;letter-spacing:.1em;
@@ -50,11 +55,10 @@ nav.side{width:var(--nav);flex:0 0 var(--nav);border-right:1px solid var(--line)
 nav.side a.item{display:block;margin:1px var(--s4);padding:8px 14px;color:var(--text2);font-size:14.5px;
   cursor:pointer;border-radius:9px;transition:.14s}
 nav.side a.item:hover{color:var(--text);background:var(--surface2)}
-nav.side a.item.on{color:#fff;background:linear-gradient(135deg,var(--brand-deep),#c2151b);
-  font-weight:600;box-shadow:var(--sh1)}
-[data-theme=dark] nav.side a.item.on{color:#fff}
+nav.side a.item.on{color:var(--accent);background:var(--accent-soft);font-weight:700}
+[data-theme=dark] nav.side a.item.on{color:var(--accent)}
 main{flex:1;min-width:0}
-.inner{max-width:var(--maxw);padding:0 var(--s7) var(--s9)}
+.inner{max-width:var(--maxw);padding:0 var(--s7) var(--s9);margin:0 auto}
 #view{animation:fade .28s ease both;min-width:0}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media(max-width:900px){.shell{flex-direction:column}nav.side{width:100%;position:static;height:auto;flex:none}
@@ -76,7 +80,7 @@ h3{font-size:15px;font-weight:700;margin:var(--s7) 0 var(--s3);color:var(--text)
 p{margin:0 0 var(--s4)}
 .lead{font-size:17px;color:var(--text2);margin-bottom:var(--s6);max-width:62ch;line-height:1.65}
 .muted{color:var(--text2);font-size:14px}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--s3)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--s3)}
 
 /* ── 색 ── */
 .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--s3)}
@@ -126,28 +130,31 @@ p{margin:0 0 var(--s4)}
 .rad .val{font-size:15px;font-weight:700;margin-bottom:2px}
 
 /* ── 히어로 ── */
-.hero{margin:0 calc(var(--s7) * -1) var(--s8);padding:var(--s9) var(--s7) var(--s8);
-  background:radial-gradient(120% 140% at 12% 0%,#ED1C24 0%,#B01F24 42%,#3a0a0d 78%,#160406 100%);
-  color:#fff;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 90% at 85% 15%,rgba(255,255,255,.18),transparent 60%)}
+/* 히어로 — 문서가 자기 색으로 칠해져 있으면 아래 스와치가 UI 의 일부처럼 보입니다.
+   배경은 종이로 두고, 색은 «값을 보여주는 곳»에서만 씁니다. */
+.hero{margin:0 calc(var(--s7) * -1) var(--s7);padding:var(--s8) var(--s7) var(--s7);
+  border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .hero .inner2{position:relative;max-width:var(--maxw)}
-.hero .eyebrow{color:rgba(255,255,255,.72)}
-.hero h1{font-size:clamp(38px,5.2vw,60px);line-height:1.08;margin-bottom:var(--s4);color:#fff}
-.hero .lead{color:rgba(255,255,255,.86);max-width:56ch;margin-bottom:var(--s6)}
+.hero h1{font-size:clamp(38px,5.2vw,58px);line-height:1.06;margin-bottom:var(--s4);
+  letter-spacing:-.045em}
+.hero .lead{max-width:58ch;margin-bottom:var(--s6);font-size:17px}
 .hero .cta{display:flex;gap:var(--s2);flex-wrap:wrap}
-.hero .cta a{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:99px;
-  font-size:14px;font-weight:600;transition:.15s;border:1px solid transparent}
-.hero .cta a.pri{background:#fff;color:#B01F24}
-.hero .cta a.pri:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.28)}
-.hero .cta a.sec{border-color:rgba(255,255,255,.34);color:#fff}
-.hero .cta a.sec:hover{background:rgba(255,255,255,.12)}
-.herostat{display:flex;flex-wrap:wrap;gap:var(--s7);margin-top:var(--s8);
-  padding-top:var(--s5);border-top:1px solid rgba(255,255,255,.18)}
-.herostat div b{display:block;font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.15;color:#fff}
-.herostat div span{font-size:12.5px;color:rgba(255,255,255,.66)}
-.pagehead{padding-top:var(--s8)}
-.sectionline{display:flex;align-items:center;gap:var(--s3);margin:var(--s9) 0 var(--s5)}
+.hero .cta a{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:10px;
+  font-size:14px;font-weight:600;transition:.15s;border:1px solid var(--line)}
+.hero .cta a.pri{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+[data-theme=dark] .hero .cta a.pri{color:#0b0c0e}
+.hero .cta a.pri:hover{transform:translateY(-1px);box-shadow:var(--sh2)}
+.hero .cta a.sec{color:var(--text2)}
+.hero .cta a.sec:hover{color:var(--text);background:var(--surface2)}
+/* 정본 색을 얇은 띠 하나로 — 히어로가 색을 «설명»하지 «착용»하지 않습니다. */
+.heroramp{display:flex;height:6px;border-radius:99px;overflow:hidden;margin:var(--s7) 0 0}
+.heroramp i{flex:1}
+.herostat{display:flex;flex-wrap:wrap;gap:var(--s7);margin-top:var(--s5);
+  padding-top:var(--s5);border-top:1px solid var(--line)}
+.herostat div b{display:block;font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.herostat div span{font-size:12.5px;color:var(--text3)}
+.pagehead{padding-top:var(--s7)}
+.sectionline{display:flex;align-items:center;gap:var(--s3);margin:var(--s8) 0 var(--s5)}
 .sectionline h2{margin:0;white-space:nowrap}
 .sectionline i{flex:1;height:1px;background:var(--line);display:block}
 
@@ -178,22 +185,22 @@ p{margin:0 0 var(--s4)}
   background:var(--bg);margin-bottom:var(--s5);box-shadow:var(--sh1)}
 .groupcard>.hd{display:flex;align-items:baseline;gap:var(--s3);margin-bottom:var(--s4);flex-wrap:wrap}
 .groupcard>.hd h3{margin:0;font-size:16px}
-.groupcard>.hd .cnt{font-size:11.5px;font-weight:700;color:var(--brand-deep);background:var(--brand-soft);
+.groupcard>.hd .cnt{font-size:11.5px;font-weight:700;color:var(--accent);background:var(--accent-soft);
   padding:2px 9px;border-radius:99px}
-[data-theme=dark] .groupcard>.hd .cnt{color:var(--brand-ink)}
+[data-theme=dark] .groupcard>.hd .cnt{color:var(--accent)}
 .groupcard>.hd span.ds{font-size:12.5px;color:var(--text3)}
 
 /* ── 본문 + 우측 목차 ── */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 224px;gap:var(--s8);align-items:start}
 @media(max-width:1240px){.layout{grid-template-columns:1fr}.toc{display:none}}
-.toc{position:sticky;top:88px;font-size:13px;line-height:1.5}
+.toc{position:sticky;top:calc(var(--top) + var(--s5));font-size:13px;line-height:1.5}
 .toc .ttl{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);
   font-weight:700;margin-bottom:var(--s3)}
 .toc a{display:block;padding:5px 0 5px 12px;color:var(--text3);border-left:2px solid var(--line);
   transition:.14s;cursor:pointer}
 .toc a:hover{color:var(--text)}
-.toc a.on{color:var(--brand-deep);border-left-color:var(--brand-deep);font-weight:600}
-[data-theme=dark] .toc a.on{color:var(--brand)}
+.toc a.on{color:var(--accent);border-left-color:var(--accent);font-weight:700}
+[data-theme=dark] .toc a.on{color:var(--accent)}
 .toc a.sub{padding-left:24px;font-size:12.5px}
 
 /* ── Overview 카드 ── */
@@ -218,7 +225,7 @@ p{margin:0 0 var(--s4)}
 .tabs button{border:0;background:none;padding:0 0 11px;font-size:14.5px;color:var(--text3);
   border-bottom:2px solid transparent;border-radius:0;font-weight:600}
 .tabs button:hover{color:var(--text);background:none}
-.tabs button.on{color:var(--text);border-bottom-color:var(--brand-deep)}
+.tabs button.on{color:var(--text);border-bottom-color:var(--accent)}
 .pane[hidden]{display:none}
 
 /* ── 대비 표 ── */
@@ -231,7 +238,7 @@ table.ctr .dot{display:inline-block;width:12px;height:12px;border-radius:99px;ma
   vertical-align:-1px;box-shadow:inset 0 0 0 1px rgba(128,128,128,.25)}
 
 /* ── 공통 ── */
-.note{border:1px solid var(--line);border-left:3px solid var(--brand);background:var(--surface);
+.note{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--surface);
   border-radius:9px;padding:var(--s4) var(--s5);margin:var(--s5) 0;font-size:14px}
 .note.warn{border-left-color:var(--warn)}
 .note b{font-weight:700}
@@ -242,7 +249,7 @@ pre code{background:none;padding:0}
 .dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s3);margin:var(--s4) 0 var(--s6)}
 .dl a{border:1px solid var(--line);border-radius:var(--r3);padding:var(--s4) var(--s5);background:var(--surface);
   display:block;transition:.16s cubic-bezier(.2,.7,.3,1)}
-.dl a:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:var(--sh2)}
+.dl a:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--sh2)}
 .dl b{display:block;font-size:14.5px;font-weight:700;margin-bottom:2px}
 .dl span{font-size:12.5px;color:var(--text3)}
 .stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:var(--s3);margin:var(--s6) 0}
@@ -258,37 +265,84 @@ footer{border-top:1px solid var(--line);padding-top:var(--s5);margin-top:var(--s
 .grouphdr{display:flex;align-items:baseline;gap:var(--s3);margin:var(--s7) 0 var(--s3)}
 .grouphdr h3{margin:0}
 .grouphdr span{font-size:12.5px;color:var(--text3)}
+
+/* ── 상단바 · 2단 네비 ── 항목이 늘어도 사이드바가 길어지지 않게, 최상위는 가로로 둡니다.
+   KT·KRDS·BBC·신한이 전부 이 형태입니다(data/reference-sites.json). ── */
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:var(--s3);
+  height:var(--top);padding:0 var(--s5);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(160%) blur(12px)}
+.topbar .grow{flex:1}
+.tb-brand{display:flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap}
+.tb-brand .dot{width:18px;height:18px;border-radius:6px;background:var(--accent);display:block}
+.tb-brand b{font-size:16px;font-weight:800;letter-spacing:-.03em}
+.tb-sub{font-size:12.5px;color:var(--text3);margin-left:2px}
+@media(max-width:1080px){.tb-sub{display:none}}
+.ver{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--text2);
+  border:1px solid var(--line);border-radius:99px;padding:2px 9px;white-space:nowrap}
+.topnav{display:flex;gap:2px;margin-left:var(--s4);overflow-x:auto;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:6px 12px;font-size:14px;color:var(--text2);border-radius:8px;cursor:pointer;white-space:nowrap}
+.topnav a:hover{color:var(--text);background:var(--surface2)}
+.topnav a.on{color:var(--text);font-weight:700;box-shadow:inset 0 -2px 0 var(--accent);border-radius:8px 8px 0 0}
+.tb-search{display:flex;align-items:center;gap:7px}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 5px;
+  font-size:11px;color:var(--text3);background:var(--surface)}
+nav.side{top:var(--top);height:calc(100vh - var(--top));padding:var(--s5) 0 var(--s8)}
+.secnav .navgrp:first-child{padding-top:0}
+
+/* ── 페이지 메타 ── 제목 밑에 «출처 · 근거 · 갱신» 을 고정으로. Workday Canvas 형태입니다. */
+.pmeta{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s4);margin:calc(var(--s5)*-1) 0 var(--s6);
+  font-size:13px;line-height:1.9}
+.pmeta dt{color:var(--text3)}
+.pmeta dd{margin:0;color:var(--text2)}
+.pmeta code{font-size:12px}
+
+/* ── 찾기 팔레트 ── */
+#pal[hidden]{display:none}
+#pal{position:fixed;inset:0;z-index:40;background:rgba(10,12,14,.42);
+  display:flex;align-items:flex-start;justify-content:center;padding-top:12vh;backdrop-filter:blur(2px)}
+.palbox{width:min(620px,92vw);background:var(--bg);border:1px solid var(--line);border-radius:var(--r3);
+  box-shadow:var(--sh3);overflow:hidden}
+#palq{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--text);
+  font:inherit;font-size:16px;padding:var(--s4) var(--s5);outline:none}
+#palr{max-height:52vh;overflow-y:auto}
+#palr .r{display:flex;align-items:center;gap:var(--s3);padding:9px var(--s5);cursor:pointer;font-size:14px}
+#palr .r .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);
+  border:1px solid var(--line);border-radius:5px;padding:1px 6px;flex:0 0 auto}
+#palr .r .v{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--text3)}
+#palr .r.sel{background:var(--accent-soft)}
+#palr .r.sel .k{border-color:var(--accent);color:var(--accent)}
+#palr .none{padding:var(--s5);color:var(--text3);font-size:14px}
+.palfoot{border-top:1px solid var(--line);padding:8px var(--s5);font-size:11.5px;color:var(--text3);
+  display:flex;gap:5px;align-items:center}
 </style>
 </head>
 <body>
+<header class="topbar">
+  <a class="tb-brand" data-go="start">
+    <i class="dot"></i><b>GDS</b><span class="tb-sub">G car Design System</span>
+  </a>
+  <span class="ver" id="ver"></span>
+  <nav class="topnav" id="topnav"></nav>
+  <span class="grow"></span>
+  <button id="search" class="tb-search">찾기 <kbd>/</kbd></button>
+  <a href="decisions/"><button>Decisions</button></a>
+  <button id="theme">Dark</button>
+</header>
 <div class="shell">
 <nav class="side">
-  <div class="brand">
-    <div class="logo"><i class="dot"></i><b>GDS</b></div>
-    <span>그린카 디자인 시스템</span>
-  </div>
-  <div class="navgrp">시작</div>
-  <a class="item on" data-go="start">개요 · 사용법</a>
-  <div class="navgrp">Foundation</div>
-  <a class="item" data-go="color">색</a>
-  <a class="item" data-go="type">타이포그래피</a>
-  <a class="item" data-go="space">간격</a>
-  <a class="item" data-go="radius">반경</a>
-  <a class="item" data-go="elev">엘리베이션</a>
-  <a class="item" data-go="layout">레이아웃</a>
-  <div class="navgrp">시맨틱</div>
-  <a class="item" data-go="semantic">쓰임새 토큰</a>
-  <div class="navgrp">확장</div>
-  <div class="navgrp">참고</div>
-  <a class="item" data-go="status">진행 상태</a>
-  <a class="item" href="decisions/">결정 안건</a>
+  <div class="secnav" id="secnav"></div>
 </nav>
 <main>
-  <div class="bar"><span class="grow"></span><button id="theme">다크</button></div>
   <div class="inner"><div class="layout"><div id="view"></div><aside class="toc" id="toc"></aside></div></div>
 </main>
 </div>
 <div id="toast">복사됨</div>
+<div id="pal" hidden><div class="palbox">
+  <input id="palq" placeholder="페이지 · 토큰 이름으로 찾기" autocomplete="off">
+  <div id="palr"></div>
+  <div class="palfoot"><kbd>↑</kbd><kbd>↓</kbd> 이동 · <kbd>Enter</kbd> 열기/복사 · <kbd>Esc</kbd> 닫기</div>
+</div></div>
 
 <script type="application/json" id="data">__DATA__</script>
 <script>
@@ -359,8 +413,11 @@ function copy(txt){navigator.clipboard?.writeText(txt).then(()=>toast(txt+' 복�
 function start(){
   const dec=(C.color.decisions||{}), tdec=(C.typography.decisions||{});
   const main=COLORS.find(c=>c.full===((dec.main||{}).token));
+  const ramp=['Primary/Red 040','Primary/Red 060','Navy/Navy 060','Navy/Navy 030','Gray Scale/Gray 040',
+    'Gray Scale/Gray 020','System/Success','Badge/ODA','Map Marker/Active','Gray Scale/Gray 000']
+    .map(n=>COLORS.find(x=>x.full===n)).filter(Boolean);
   return `<section class="hero"><div class="inner2">
-    <p class="eyebrow">Greencar Design System</p>
+    <p class="eyebrow">G car Design System</p>
     <h1>하나의 값,<br>세 개의 플랫폼.</h1>
     <p class="lead">웹 · iOS · Android 가 같은 값을 쓰기 위한 기준입니다.
     아래 토큰은 전부 Figma <b>정의 완료(✅) 페이지</b>에서 직접 읽은 값이며, 사람이 옮겨 적지 않았습니다.</p>
@@ -369,6 +426,7 @@ function start(){
       <a class="sec" href="#" data-go="color">Foundation 보기</a>
       <a class="sec" href="decisions/">남은 결정</a>
     </div>
+    <div class="heroramp">${ramp.map(c=>`<i style="background:${c.hex}" title="${esc(c.full)} ${c.hex}"></i>`).join('')}</div>
     <div class="herostat">
       <div><b>${COLORS.length}</b><span>색</span></div>
       <div><b>${TYPES.length}</b><span>타입 스케일</span></div>
@@ -464,7 +522,7 @@ function start(){
 
   <div class="note"><p><b>엘리베이션 단계가 재배치되었습니다.</b>
   기존 1~5단계가 2~6단계로 밀리고 1단계가 새로 생겼습니다 —
-  <a href="#" data-go="elev" style="color:var(--brand);font-weight:600">엘리베이션 문서</a>에 대조표를 실었습니다.</p></div>
+  <a href="#" data-go="elev" style="color:var(--accent);font-weight:600;text-decoration:underline">엘리베이션 문서</a>에 대조표를 실었습니다.</p></div>
   ${footer()}`;
 }
 
@@ -478,8 +536,9 @@ function color(){
   const ramp=g=>!groups[g]?'':`<div class="ramp">
     <div class="strip">${groups[g].map(c=>`<i style="background:${c.hex}" title="${esc(c.name)} ${c.hex}"></i>`).join('')}</div>
     <div class="cap"><span>${esc(g)}</span><span>${groups[g].length}단계</span></div></div>`;
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>색</h1>
-  <p class="lead">${esc((C.color.hierarchy.definition||'').slice(0,180))}</p></div>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Color</h1>
+  <p class="lead">${esc(C.color.hierarchy.definition||'')}</p></div>
+  ${pmeta({source:`<code>${esc(C.color.source||'')}</code>`,basis:esc((C.color.basis||{}).value||''),tokens:`<code>--gds-color-*</code> ${COLORS.length}색`})}
 
   <div class="feature">
     ${main?`<div class="big" data-copy="--gds-color-primary-main"
@@ -539,6 +598,19 @@ function color(){
   ${footer()}`;
 }
 
+
+/* ── 페이지 메타 ── 제목 밑 «출처 · 근거 · 갱신» 고정 3줄.
+   Workday Canvas 가 Version/Sources/Install 을 제목 밑에 고정으로 두는 형태를 따랐습니다.
+   페이지마다 근거 표기 위치가 달랐던 문제를 여기서 한 번에 없앱니다. */
+function pmeta(o){
+  const rows=[];
+  if(o.source) rows.push(['출처', o.source]);
+  if(o.basis)  rows.push(['근거', o.basis]);
+  if(o.tokens) rows.push(['토큰', o.tokens]);
+  rows.push(['갱신', String(D.meta.exported).slice(0,10)+' · 원본 '+esc(D.meta.source)]);
+  return `<dl class="pmeta">${rows.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>`;
+}
+
 /* ───────── 타이포 ───────── */
 function type(){
   const grp={};TYPES.forEach(t=>{const k=t.token.replace(/\s*\d+$/,'');(grp[k]=grp[k]||[]).push(t)});
@@ -547,9 +619,10 @@ function type(){
     Heading:'반복·나열되는 구역을 구분하는 머리글',
     Body:'머리글 아래 실제 내용을 전달하는 본문',
     Caption:'본문을 보조하는 부가·주석 정보'};
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>타이포그래피</h1>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Typography</h1>
   <p class="lead">위계는 Display · Title · Heading · Body · Caption 순입니다.
   아래 견본은 실제 크기와 굵기를 그대로 렌더한 것입니다.</p></div>
+  ${pmeta({source:`<code>${esc(C.typography.source||'')}</code>`,basis:'Typography system (타이포 시스템) ✅ · 42066:25472 · Type scale 표',tokens:`<code>--gds-type-*</code> ${TYPES.length}단계`})}
   ${Object.entries(grp).map(([k,v])=>`
     <div class="grouphdr"><h3>${esc(k)}</h3><span>${v.length}단계 · ${esc(desc[k]||'')}</span></div>
     ${v.sort((a,b)=>b.size-a.size).map(t=>`
@@ -581,8 +654,9 @@ function space(){
   const S=C.spacing;
   const max=Math.max(...SPACE.map(x=>x.px))||1;
   const moved=SPACE.filter(x=>x.moved);
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>간격</h1>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Spacing</h1>
   <p class="lead">${esc(S.definition||'')}</p></div>
+  ${pmeta({source:`<code>${esc(S.source||'')}</code>`,basis:'Spacing system (스페이싱 시스템) ✅ · 43242:4209',tokens:`<code>--gds-spacing-*</code> ${SPACE.length}종`})}
   <div class="stat">
     <div><b>${SPACE.length}</b><span>스케일 단계</span></div>
     <div><b>${new Set(SPACE.map(x=>x.token)).size}</b><span>토큰 이름</span></div>
@@ -617,8 +691,9 @@ function space(){
 
 /* ───────── 반경 ───────── */
 function radius(){
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>반경</h1>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Radius</h1>
   <p class="lead">로컬 7단계 스케일입니다. 컴포넌트 반경 상한은 <b>20px</b>입니다.</p></div>
+  ${pmeta({basis:'GDS 라이브러리 변수 컬렉션 semantic(float/Radius) · R-3 확정 2026-07-28',tokens:'<code>--gds-radius-*</code> 7단계'})}
   <div class="radgrid">
     ${RADIUS.map(v=>`<div class="rad" data-copy="--gds-radius-${v}" style="cursor:pointer">
       <div class="box" style="border-radius:${v}px"></div>
@@ -636,11 +711,12 @@ function radius(){
 /* ───────── 엘리베이션 ───────── */
 function elev(){
   const E=C.elevation;
-  if(!E||!E.scale.length) return `<h1>엘리베이션</h1><p class="lead">데이터가 없습니다.</p>${footer()}`;
+  if(!E||!E.scale.length) return `<h1>Elevation</h1><p class="lead">데이터가 없습니다.</p>${footer()}`;
   const sh=st=>st.layers.map(l=>`${l.x}px ${l.y}px ${l.blur}px ${l.spread}px rgba(0,0,0,${l.alpha})`).join(', ');
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>엘리베이션</h1>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Elevation</h1>
   <p class="lead">그림자로 표면의 높이를 표현합니다. ${E.scale.length}단계이며,
   1단계를 제외한 나머지는 <b>넓게 퍼지는 그림자(15%)와 좁고 진한 그림자(30%)를 겹친 2겹 구조</b>입니다.</p></div>
+  ${pmeta({source:`<code>${esc(E.source||'')}</code>`,basis:'GDS 라이브러리 Effect 스타일 · Elevation 6단계',tokens:`<code>--gds-elevation-*</code> ${E.scale.length}단계`})}
   ${E.renumbered?`<div class="note"><p><b>단계가 재배치되었습니다.</b>
     기존 1~5단계가 <b>2~6단계로 밀리고</b>, 1단계가 새로 생겼습니다.
     아래 각 카드에 이전 이름을 함께 적었습니다 — 기존 화면을 옮길 때 참고하세요.</p></div>`:''}
@@ -670,13 +746,14 @@ function elev(){
 /* ───────── 레이아웃 ───────── */
 function layout(){
   const L=C.layout;
-  if(!L) return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>레이아웃</h1>
+  if(!L) return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Layout</h1>
     <p class="lead">아직 실리지 않았습니다.</p></div>${footer()}`;
   const GRP=[['screen','화면'],['margin','마진'],['safeArea','세이프 에어리어'],['header','헤더']];
   const all=GRP.flatMap(([g])=>L[g]||[]);
-  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>레이아웃</h1>
+  return `<div class="pagehead"><p class="eyebrow">Foundation</p><h1>Layout</h1>
   <p class="lead">화면 크기·마진·헤더는 ✅ <b>Layout for ios/aos/web</b> 페이지가 정합니다.
   Foundation 이 아니라 <b>Guidelines</b> 계층이라, 값이 아니라 «어디에 얼마를 두는가»의 규칙입니다.</p></div>
+  ${pmeta({basis:'Layout for ios/aos/web (OS별 레이아웃) ✅ · 43185:36342',tokens:`<code>--gds-layout-*</code> ${all.length}종`})}
   <div class="stat">
     <div><b>${all.length}</b><span>토큰</span></div>
     <div><b>${(L.regions||[]).length}</b><span>영역</span></div>
@@ -706,12 +783,13 @@ function layout(){
 /* ───────── 시맨틱 ───────── */
 function semantic(){
   const SC=C.semantic, ST=C.typography.semantic;
-  if(!SC&&!ST) return `<div class="pagehead"><p class="eyebrow">시맨틱</p><h1>쓰임새 토큰</h1>
+  if(!SC&&!ST) return `<div class="pagehead"><p class="eyebrow">Semantic</p><h1>Semantic tokens</h1>
     <p class="lead">아직 실리지 않았습니다.</p></div>${footer()}`;
   const ct=(SC?SC.tokens.length:0), tt=(ST?ST.tokens.length:0), tf=(ST?ST.families.length:0);
-  return `<div class="pagehead"><p class="eyebrow">시맨틱</p><h1>쓰임새 토큰</h1>
+  return `<div class="pagehead"><p class="eyebrow">Semantic</p><h1>Semantic tokens</h1>
   <p class="lead">프리미티브가 <b>무슨 값인지</b>라면, 시맨틱은 <b>어디에 쓰는지</b>입니다.
   전부 ✅ 페이지 본문에서 끌어냈고, 근거가 없는 이름은 만들지 않았습니다.</p></div>
+  ${pmeta({basis:'토큰마다 <code>evidence</code> 로 ✅ 페이지 근거를 답니다',tokens:`색 <code>--gds-*</code> ${ct}종 · 타이포 <code>--gds-type-semantic-*</code> ${tt}종`})}
   <div class="stat">
     <div><b>${ct}</b><span>색 시맨틱</span></div>
     <div><b>${tt}</b><span>타이포 시맨틱</span></div>
@@ -761,8 +839,9 @@ function status(){
   const badge=s=>s==='ok'?'<span style="color:var(--ok);font-weight:700">준비됨</span>'
     :s==='warn'?'<span style="color:var(--warn);font-weight:700">보류</span>'
     :'<span style="color:var(--text3)">예정</span>';
-  return `<div class="pagehead"><p class="eyebrow">참고</p><h1>진행 상태</h1>
+  return `<div class="pagehead"><p class="eyebrow">Reference</p><h1>Status</h1>
   <p class="lead">이 문서에 실린 값이 어디까지 확정됐는지입니다. 확정되지 않은 것은 싣지 않습니다.</p></div>
+  ${pmeta({basis:`Figma 페이지 ${D.meta.pages}개 중 ✅ 표시된 것만`})}
   <div style="margin-top:24px">
   ${rows.map(([a,b,s,c])=>`<div class="sprow" style="grid-template-columns:130px 130px 90px 1fr">
     <div style="font-weight:600">${a}</div><div class="muted" style="text-align:left">${b}</div>
@@ -806,19 +885,106 @@ function bindTabs(){
   });
 }
 const V={start,color,type,space,radius,elev,layout,semantic,status};
+
+/* 2단 네비 — 최상위는 가로(topnav), 사이드바는 «지금 섹션 안»만 그립니다.
+   컴포넌트가 25종 들어와도 사이드바 길이가 늘지 않습니다. */
+const NAV=[
+  {sec:'Get started', items:[['start','Overview'],['status','Status']]},
+  {sec:'Foundation',  items:[['color','Color'],['type','Typography'],['space','Spacing'],
+                             ['radius','Radius'],['elev','Elevation']]},
+  {sec:'Semantic',    items:[['semantic','Tokens']]},
+  {sec:'Guidelines',  items:[['layout','Layout']]},
+];
+const SEC_OF={}; NAV.forEach(g=>g.items.forEach(([k])=>SEC_OF[k]=g.sec));
+const LABEL={};  NAV.forEach(g=>g.items.forEach(([k,l])=>LABEL[k]=l));
+/* 뷰 함수와 네비 항목이 어긋나면 눌렀을 때 빈 화면이 됩니다 — 로드 시점에 세웁니다. */
+for(const k of Object.keys(LABEL)) if(!V[k]) throw new Error('네비 항목에 뷰 함수가 없습니다: '+k);
+for(const k of Object.keys(V)) if(!LABEL[k]) throw new Error('뷰 함수가 네비에 없습니다: '+k);
+
+$('#topnav').innerHTML=NAV.map(g=>`<a data-sec="${g.sec}">${g.sec}</a>`).join('');
+$('#ver').textContent=(D.meta.version?'v'+D.meta.version:'')+' · '+String(D.meta.exported).slice(0,10);
+
+function paintNav(k){
+  const sec=SEC_OF[k];
+  const grp=NAV.find(g=>g.sec===sec);
+  $('#secnav').innerHTML=`<div class="navgrp">${sec}</div>`+
+    grp.items.map(([kk,l])=>`<a class="item${kk===k?' on':''}" data-go="${kk}">${l}</a>`).join('');
+  $('#secnav').querySelectorAll('a.item').forEach(a=>a.onclick=()=>go(a.dataset.go));
+  $('#topnav').querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.sec===sec));
+}
+$('#topnav').querySelectorAll('a').forEach(a=>a.onclick=()=>{
+  go(NAV.find(g=>g.sec===a.dataset.sec).items[0][0]);
+});
+$('.tb-brand').onclick=()=>go('start');
+
 function go(k){
+  if(!V[k])return;
   $('#view').innerHTML=V[k]();
-  document.querySelectorAll('nav.side a.item').forEach(a=>a.classList.toggle('on',a.dataset.go===k));
+  paintNav(k);
+  location.hash=k==='start'?'':('#'+k);
   window.scrollTo(0,0);
   document.querySelectorAll('[data-copy]').forEach(e=>e.onclick=ev=>{ev.preventDefault();copy(e.dataset.copy)});
   document.querySelectorAll('#view a[data-go],#view [data-go]').forEach(a=>a.onclick=ev=>{ev.preventDefault();go(a.dataset.go)});
   bindTabs();
   buildToc();
 }
-document.querySelectorAll('nav.side a.item').forEach(a=>a.onclick=()=>go(a.dataset.go));
+
+/* ── 찾기 ── 페이지와 토큰 이름을 한 곳에서. Apple·Shopify·Fluent 가 사이드바 최상단에 두는 것과 같은 일. */
+const INDEX=(()=>{
+  const out=Object.entries(LABEL).map(([k,l])=>({kind:'page',label:l,sub:SEC_OF[k],go:k}));
+  for(const c of COLORS) out.push({kind:'color',label:c.full,sub:c.hex,copy:c.vr,go:'color'});
+  for(const t of TYPES)  out.push({kind:'type',label:t.token,sub:t.size+'px · '+t.w,copy:'--gds-type-'+t.key+'-size',go:'type'});
+  for(const x of SPACE)  out.push({kind:'space',label:x.token,sub:x.px+'px',copy:'--gds-spacing-'+x.token.replace('Spacing_',''),go:'space'});
+  if(C.layout) for(const g of ['screen','margin','safeArea','header']) for(const l of (C.layout[g]||[]))
+    out.push({kind:'layout',label:l.token,sub:l.value+(l.unit||'px'),copy:'--gds-layout-'+slug(l.token),go:'layout'});
+  if(C.semantic) for(const t of C.semantic.tokens)
+    out.push({kind:'semantic',label:t.token,sub:t.ref,copy:'--gds-'+slug(t.token.replace(/^Semantic\//,'').replace(/\//g,' ')),go:'semantic'});
+  if(C.typography.semantic) for(const t of C.typography.semantic.tokens)
+    out.push({kind:'semantic',label:t.token,sub:t.refCanon,copy:'--gds-type-semantic-'+t.role+'-size',go:'semantic'});
+  return out;
+})();
+let palSel=0, palHits=[];
+function palRender(q){
+  const s=q.trim().toLowerCase();
+  palHits=(s?INDEX.filter(r=>(r.label+' '+(r.sub||'')+' '+(r.copy||'')).toLowerCase().includes(s)):INDEX).slice(0,40);
+  palSel=0;
+  $('#palr').innerHTML=palHits.length?palHits.map((r,i)=>
+    `<div class="r${i===0?' sel':''}" data-i="${i}"><span class="k">${r.kind}</span>
+     <span>${esc(r.label)}</span><span class="v">${esc(r.copy||r.sub||'')}</span></div>`).join('')
+    :'<div class="none">찾는 것이 없습니다.</div>';
+  $('#palr').querySelectorAll('.r').forEach(el=>el.onclick=()=>palPick(+el.dataset.i));
+}
+function palMove(d){
+  if(!palHits.length)return;
+  palSel=(palSel+d+palHits.length)%palHits.length;
+  $('#palr').querySelectorAll('.r').forEach((el,i)=>el.classList.toggle('sel',i===palSel));
+  const el=$('#palr').querySelectorAll('.r')[palSel]; if(el)el.scrollIntoView({block:'nearest'});
+}
+function palPick(i){
+  const r=palHits[i]; if(!r)return;
+  palClose(); go(r.go); if(r.copy) copy(r.copy);
+}
+function palOpen(){ $('#pal').hidden=false; $('#palq').value=''; palRender(''); $('#palq').focus(); }
+function palClose(){ $('#pal').hidden=true; }
+$('#search').onclick=palOpen;
+$('#pal').onclick=e=>{if(e.target.id==='pal')palClose()};
+$('#palq').oninput=e=>palRender(e.target.value);
+document.addEventListener('keydown',e=>{
+  if($('#pal').hidden){
+    const typing=/^(INPUT|TEXTAREA)$/.test((e.target.tagName||''));
+    if(!typing&&(e.key==='/'||((e.metaKey||e.ctrlKey)&&e.key==='k'))){e.preventDefault();palOpen();}
+    return;
+  }
+  if(e.key==='Escape'){palClose();}
+  else if(e.key==='ArrowDown'){e.preventDefault();palMove(1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();palMove(-1);}
+  else if(e.key==='Enter'){e.preventDefault();palPick(palSel);}
+});
+
 $('#theme').onclick=()=>{const r=document.documentElement,d=r.getAttribute('data-theme')==='dark';
-  r.setAttribute('data-theme',d?'light':'dark');$('#theme').textContent=d?'다크':'라이트'};
-go('start');
+  r.setAttribute('data-theme',d?'light':'dark');$('#theme').textContent=d?'Dark':'Light'};
+window.addEventListener('hashchange',()=>{const k=location.hash.slice(1)||'start'; if(V[k])go(k);});
+go(location.hash.slice(1)&&V[location.hash.slice(1)]?location.hash.slice(1):'start');
 </script>
 </body>
 </html>
