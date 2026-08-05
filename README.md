@@ -57,10 +57,13 @@ tools/figdec/     자체 제작 .fig 디코더 (외부 의존성 0)
   census_radius.js  반경 전역 census
 
 data/             추출된 측정 데이터 (커밋 대상)
+  foundation-data.json     .fig 실측 + 정본(canon)
+  component-bottom-sheet.json  Bottom sheet · coupon · Large 버튼 실측 스펙 (Figma MCP 조회)
 site/template.html  사이트 템플릿 — __DATA__ 자리에 JSON 이 주입됩니다
 build/site.js       template + data → dist/index.html
 build/check.js      기계 검증
 docs/               결정 기록·측정 결과
+  assets/                  베이스 HTML·도면 등 배포용 산출물
 .github/workflows/  push → 빌드 → 검증 → Pages 배포
 ```
 
@@ -151,6 +154,11 @@ npm run check    # 문서 수치 ↔ 감사 데이터 기계 대조
 아직 이 저장소에 없습니다. `tokens/`가 들어오면 각 섹션에 「정본」 축이 추가됩니다.
 
 **반경·엘리베이션만** 회의 결정이 반영된 정본입니다.
+
+**컴포넌트 스펙** — `data/component-bottom-sheet.json`은 `.fig` 추출이 아니라 **Figma MCP 직접 조회**로
+측정한 값입니다. `npm run extract` 로는 재현되지 않습니다. 대신 `npm run check`의 `[6]` 블록이
+이 스펙의 색·간격·타이포·반경이 **정본(`canon`) 안에 있는지**를 기계로 대조합니다.
+자세한 경위는 `docs/GDS-bottomsheet-component-20260805.md`.
 
 ---
 
