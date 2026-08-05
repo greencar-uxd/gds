@@ -151,7 +151,7 @@ docs/               결정 기록·측정 결과
 
 조회 응답 원본은 `data/figma-variables.json` 에 그대로 저장돼 있고, `npm run check` 의 `[8]` 절이 결정 파일과 이 스냅샷을 대조합니다 — 결정이 실재하지 않는 변수를 가리키거나 값이 어긋나면 빌드가 실패합니다.
 
-원본 `.fig` 자체의 오류 10건(스와치 캡션 HEX 오류 2건, `Success` 이름 중복, `#00000` 5자리 오타 3곳, 복붙 잔재 레이어명, `Info_Box` 스와치 값 미적용)은 `data/color-decisions.json` 의 `sourceDefects` 에 노드 ID 와 함께 기록만 해 뒀습니다. 토큰 값에는 영향이 없습니다.
+원본 `.fig` 자체의 오류 15건(스와치 캡션 HEX 오류 2건, `Success` 이름 중복, `#00000` 5자리 오타 3곳, 복붙 잔재 레이어명, `Info_Box` 스와치 값 미적용)은 `data/color-decisions.json` 의 `sourceDefects` 에 노드 ID 와 함께 기록만 해 뒀습니다. 토큰 값에는 영향이 없습니다.
 
 ### 감사 · 결정 안건
 
@@ -169,6 +169,31 @@ npm run check    # 문서 수치 ↔ 감사 데이터 기계 대조
 | `docs/GDS-typo-v0.2.md` | 타이포 정리안 |
 | `docs/color-merge-map.csv` | 레거시 색 스타일 → 정본 토큰 전수 매핑 |
 | `data/orphan-clusters.json` | CQ-6 보조 — 정본에 없는 색을 묶음 단위로 판단하도록 분류 |
+
+---
+
+## 컴포넌트 — Buttons (2026-08-05)
+
+Foundation 이 닫혀 첫 컴포넌트로 `Buttons (버튼) ✅` 페이지를 실측했습니다. 결과는 `data/component-buttons.json`.
+
+**버튼 8종** — Default · Icon · Text · Floating action · Capsule · Split · List · Thumbnail
+
+**원본은 이미 3계층을 씁니다.** README 확정 결정의 "프리미티브 → 시맨틱 → 컴포넌트 3계층"이 원본에서 실제로 구현돼 있는 것을 확인했습니다.
+
+```
+Components/Buttons/Default/Primary
+  → Semantic/Color/Background/Filled/{Default · Pressed · Disabled}
+Components/Buttons/Default/Secondary
+  → Semantic/Color/Background/Outlined/{Default · Pressed · Disabled}
+```
+
+**실측으로 드러난 것 3가지**
+
+| | |
+|---|---|
+| 반경 변수 존재 | 원본에 `Radius/sm`=8 · `Radius/xl`=16 · `Radius/xxl`=20 이 있습니다. 저장소는 숫자 스케일이라 이름 체계가 다릅니다 |
+| **Elevation_2 확인** | 원본 변수값이 저장소 값과 **정확히 일치**(2겹). 지금까지 추론이던 것이 팩트가 됐습니다 |
+| 행간 충돌 | 원본 타이포 변수에 `100` · 고정 px · 배수 `1.5` 세 방식이 공존 — 확정한 `Auto` 와 다릅니다 → `TQ-7` |
 
 ---
 
