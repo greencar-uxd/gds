@@ -53,23 +53,34 @@
 
 정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
 
-**28건 중 1건 해소 · 27건 남음** (`GAP-11` 반경 값 실측으로 해소)
+**28건 중 10건 해소 · 18건 남음**
 
-| 높음 9건 | |
+### 메운 것 10건
+
+| | |
 |---|---|
-| `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. 게다가 `noto_sans/title/medium` 이 조회한 노드마다 **14 · 16 · 18px** 로 다릅니다 |
-| `GAP-4` | `Map Marker/Shadow` 가 두 값 — FILL 스타일 `#E2E2E2`(불투명) vs 변수 `#0000001A`(검정 10%) |
-| `GAP-12` | 변수화가 색·반경에만 있어 3계층이 색에서만 성립 |
-| **`GAP-13`** | **✅ Layout 페이지 내용이 저장소에 통째로 없음** — 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 동작 |
-| **`GAP-14`** | Foundation 구성을 두 ✅ 페이지가 다르게 적음 — [Foundation] 본문은 **4개**, [Guidelines] 구조도와 목차는 **6개**. 어느 쪽이든 저장소에 **Icon 이 없음** |
-| **`GAP-17`** | **GDS 4계층(Guidelines → Foundation → Components → Template) 구조가 저장소에 없음** |
-| **`GAP-21`** | **✅ UI/UX guide 내용이 저장소에 한 줄도 없음** — UX 라이팅 규칙 6종 + 그래픽 3단계 체계 |
-| **`GAP-23`** | **✅ Color system 의 역할 축이 없음** — Primary=Red · Secondary=Gray · Tertiary=Navy, 그리고 「텍스트는 모두 Gray scale」·「Navy 는 색이 곧 정보인 곳에만」 |
-| **`GAP-27`** | **확정한 `TQ-6`(Noto Sans KR 단일)과 ✅ Picker 본문이 어긋남** — 본문은 「숫자는 Rubik 서체 사용」을 명시 |
+| **`GAP-17`** | **4계층 구조 신설** — `data/gds-structure.json`. 35개 항목에 Figma 상태(`done`/`wip`/`none`)와 저장소 반영 상태(`tokens`/`docs`/`measured`/`none`)를 붙였습니다 |
+| **`GAP-13`** | **Layout 토큰화** — `data/layout-tokens.json` → `--gds-layout-*` 10개. 영역 3종·버튼 동작 2종도 기록 |
+| **`GAP-23`** | **색 역할 축 7종 + 시맨틱 토큰 11종** — 토큰마다 ✅ 페이지 근거를 `evidence` 로 답니다 |
+| **`GAP-21`** | **`docs/GDS-uiux-guide.md` 생성** — `build/guide.js` 가 데이터에서 뽑아 씁니다 |
+| **`GAP-14`** | Foundation 을 **6요소**로 확정(다수 근거). `[Foundation]` 본문의 4개 표기는 `conflict` 로 보존 |
+| `GAP-4` | `Map Marker/Shadow` `#E2E2E2` → `#0000001A` 값 교체 |
+| `GAP-6` | `System/Dim Layer` → `060`·`080` 분리, 8자리 HEX 출력 |
+| `GAP-7` | `Navy/navy 040` → `Navy/Navy 040` 표기 통일 |
+| `GAP-9` | `(X)` 폐기 표시 스타일 2종을 정본에서 제외 |
+| `GAP-11` | 반경 7단계 값 실측 |
 
-중간 12건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더**(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함) · **Components 목차 25개 중 실측은 Buttons 1개뿐** · Icon 규칙이 UI/UX guide 와 Icon system 두 곳으로 흩어짐 · **✅ 페이지끼리 AOS/Web 폭이 다름(360 vs 365)** · **✅ 인데 미해결 메모가 남은 페이지**(Checkbox 명명 · Bottom navigation 컬러) · Bottom sheet 정의가 Picker ✅ 안에 들어 있음
+### 남은 것 18건
 
-낮음 7건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X) · **목차 오타 다수**(`Bage`·`Pasing`·`Tap`·`Tap app bar`·`Getting stared`) · 히스토리 파일 위치 미기록 · 컴포넌트 본문의 색 축약 표기(`Gray scale 40`)
+| 높음 3건 | |
+|---|---|
+| `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. `noto_sans/title/medium` 이 노드마다 **14 · 16 · 18px** |
+| `GAP-12` | **부분 해소** — 색은 프리미티브 60 + 시맨틱 11 로 2계층이 섰고 Layout 이 Guidelines 로 들어왔습니다. 간격·타이포의 시맨틱 계층은 아직 없습니다 |
+| `GAP-27` | 확정한 `TQ-6`(Noto Sans KR 단일)과 ✅ Picker 본문(「숫자는 Rubik」)이 어긋남 |
+
+중간 9건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · ODA 색이 Badge/Brand 로 분리 · 그림자 효과가 Elevation 밖에 9종 더 · Components 25개 중 실측 6개 · Icon 규칙이 두 곳으로 흩어짐 · ✅ 페이지끼리 AOS/Web 폭 불일치(360 vs 365) · ✅ 인데 미해결 메모가 남은 페이지 · Bottom sheet 정의가 Picker ✅ 안에
+
+낮음 6건 — `noto_sans/boby` 오타 · `Frosted Glass` 체계 밖 · 간격 배수 열 구멍 · 목차 오타 다수 · 히스토리 파일 위치 미기록 · 색 축약 표기
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
 
@@ -86,7 +97,7 @@ Template (템플릿) — 상위 조합 단위
   (원본에 "설명 추가 예정")
 ```
 
-저장소가 쓰는 **프리미티브 → 시맨틱 → 컴포넌트 3계층은 토큰 계층**이고, 위 4계층은 **문서 계층**입니다. 둘은 별개인데 저장소에 문서 계층이 없습니다 (`GAP-17`).
+저장소가 쓰는 **프리미티브 → 시맨틱 → 컴포넌트 3계층은 토큰 계층**이고, 위 4계층은 **문서 계층**입니다. 둘은 별개 축이며, 이제 `data/gds-structure.json` 에 항목별 반영 상태와 함께 들어 있습니다.
 
 **문서화 규칙도 원본에 있습니다** — 현재 사용 중인 요소는 **포함**, 사용되지 않는 요소는 **제외(히스토리 파일)**, 변경은 `As is / To be` 주석. 레거시를 판단 근거에서 빼는 것이 이 저장소만의 방침이 아니라 **정본 규칙**이었습니다.
 
@@ -195,6 +206,8 @@ docs/               결정 기록·측정 결과
 | 색 체계 | Primary = Red | 사용자 직접 확인 |
 | 대상 플랫폼 | 웹 + 앱(iOS · Android) | — |
 | 토큰 구조 | 프리미티브 → 시맨틱 → 컴포넌트 3계층 | 컴포넌트의 프리미티브 HEX 직접 바인딩 금지 |
+| **문서 구조** | **Guidelines → Foundation → Components → Template 4계층** — 토큰 계층과 별개 축 | 2026-08-05 · `[Guidelines]` ✅ 구조도 |
+| **색 역할 축** | **Primary=Red · Secondary=Gray · Tertiary=Navy** · 텍스트는 Gray scale 원칙 | 2026-08-05 · `Color system` ✅ 본문 |
 | R-1 | 로컬 7단계 반경 스케일 `4/8/10/12/16/20/원형` | 2026-07-27 승인 |
 | **R-3** | **반경 상한 20px (표 B 채택)** | **2026-07-29 확인** |
 | **E-2** | **Elevation 6단계 재넘버링** — 구 1~5 → 2~6, 신규 1단계 추가(X0 Y1 blur2 spread0 #000000 15%) | **2026-07-29 확인.** ⚠ "불투명도 15% 일괄 적용"은 오독이었습니다 — 15%는 새 1단계 한 단계의 값입니다 |
@@ -229,7 +242,10 @@ npm run check    # 정본·결정·산출물 기계 대조 (167개 항목)
 |---|---|
 | `/gds/decisions` | 결정 기록 — 정본 기준 · 확정 결정 · 모자란 곳 12건 |
 | `data/gds-library.json` | 정본 인벤토리 — GDS 라이브러리 60종 + 효과·텍스트·반경 |
-| `data/gds-gaps.json` | 디자인 시스템으로서 모자란 곳 12건 |
+| `data/gds-gaps.json` | 디자인 시스템으로서 모자란 곳 — 해소·미해소 상태 포함 |
+| `data/gds-structure.json` | GDS 4계층 구조 + 항목별 Figma/저장소 반영 상태 |
+| `data/layout-tokens.json` | Layout 토큰 (Guidelines 계층) |
+| `docs/GDS-uiux-guide.md` | UX 라이팅 규칙 + 그래픽 3단계 (생성물) |
 | `docs/GDS-typo-v0.2.md` | 타이포 정리안 |
 
 ---
