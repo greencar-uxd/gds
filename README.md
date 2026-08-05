@@ -55,11 +55,32 @@
 
 | | |
 |---|---|
-| 높음 | 라이브러리 텍스트 스타일이 4종뿐인데 ✅ 표는 21단계 · `Map Marker/Shadow` 가 두 값(`#E2E2E2` / `#0000001A`) · 변수화가 색·반경에만 있어 3계층이 색에서만 성립 |
-| 중간 | 같은 값 두 이름 6쌍 · 같은 이름 텍스트 스타일 중복 published · Dim Layer 불투명도가 토큰에 없음 · ODA 색이 Badge 와 Brand 로 갈라짐 · 폐기 표시`(X)` 스타일이 published 상태 · Radius 이름 체계 불일치 |
-| 낮음 | `noto_sans/boby` 오타 · `Navy/navy 040` 만 소문자 · `Frosted Glass` 가 체계 밖 |
+**16건 중 1건 해소 · 15건 남음** (`GAP-11` 반경 값 실측으로 해소)
+
+| 높음 5건 | |
+|---|---|
+| `GAP-1` | 라이브러리 텍스트 스타일이 **5종**뿐인데 ✅ 표는 **21단계**. 게다가 `noto_sans/title/medium` 이 조회한 노드마다 **14 · 16 · 18px** 로 다릅니다 |
+| `GAP-4` | `Map Marker/Shadow` 가 두 값 — FILL 스타일 `#E2E2E2`(불투명) vs 변수 `#0000001A`(검정 10%) |
+| `GAP-12` | 변수화가 색·반경에만 있어 3계층이 색에서만 성립 |
+| **`GAP-13`** | **✅ Layout 페이지 내용이 저장소에 통째로 없음** — 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 동작 |
+| **`GAP-14`** | ✅ [Foundation] 정의는 **Color · Typography · Spacing · Icon** 인데, 저장소는 Icon 이 없고 정의에 없는 Radius·Elevation 을 Foundation 으로 다룹니다 |
+
+중간 6건 — 같은 값 두 이름 6쌍 · 텍스트 스타일 중복 published · Dim Layer 불투명도 미표기 · ODA 색이 Badge/Brand 로 분리 · **`(X)` 폐기 표시 스타일이 published 상태** · **그림자 효과가 Elevation 밖에 9종 더(`Bottom Sheet` vs `bottom sheet` 대소문자 중복 포함)**
+
+낮음 4건 — `noto_sans/boby` 오타 · `Navy/navy 040` 소문자 · `Frosted Glass` 체계 밖 · 간격 배수 열에 구멍(3X·18X 없음)
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
+
+### ✅ 페이지 본문에서 읽은 것
+
+등록된 스타일 목록만 봐서는 안 보이던 정의입니다 — `data/gds-library.json` 의 `pages`.
+
+| | |
+|---|---|
+| **반경 7단계 확정** | `xs`4 `sm`8 `md`10 `lg`12 `xl`16 `xxl`20 `full`원형. 용도까지 — 4 버튼 xsmall · 8 버튼/Input/info_box · 10 (As-is에서) 기본 · 12·16 카드 · 20 모달 팝업 |
+| **Layout** | iOS `375×812` · AOS/Web `360×800` · 마진 20px 통일 · **iOS 하단만 0px**(홈 인디케이터 자동 노출 대응) · 헤더 하단 1px 라인 · 홈 인디케이터 34px · 버튼 스티키/픽스 |
+| **Spacing** | 기본 단위 2px · 14단계 · 원본 이름 중복 3건(`Spacing_700`·`900`·`1000` 이 각각 두 값) |
+| **Foundation 정의** | 각 요소는 서로 종속되지 않고 각자 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않음 |
 
 ---
 
