@@ -440,6 +440,22 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
     ok('TQ-6 확정문에 근거와 제목이 있음', !!open6 && !!open6.resolution && !!open6.settledTitle);
     ok('TQ-6 이 Noto Sans KR 단일로 확정됨', !!open6 && /Noto Sans KR 단일/.test(open6.resolution || ''));
     ok('원본 결함 SD-16 기록됨', (DEC2.sourceDefects.items || []).some(d => d.id === 'SD-16'));
+    // TQ-8 — 문서 사이트 서체. 그린카 공식 사이트는 Pretendard/Outfit 이지만 정본을 씁니다.
+    const open8 = (T2.open || []).find(o => o.id === 'TQ-8');
+    ok('TQ-8 (문서 사이트 서체) 확정됨', !!open8 && open8.status === 'closed');
+    ok('TQ-8 이 정본 Noto Sans KR 유지로 확정됨',
+      !!open8 && /Noto Sans KR/.test(open8.resolution || '') && /^A —/.test(open8.resolution || ''));
+    ok('TQ-8 근거가 그린카 사이트 실측임',
+      !!open8 && /getComputedStyle/.test(open8.evidence || ''));
+    // 결정과 실제 렌더가 같은지 — 사이트가 다른 글꼴로 그려지면 문서가 스스로를 반증합니다.
+    {
+      const cssF = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+      const idxF = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      ok('문서 사이트가 TQ-8 대로 Noto Sans KR 로 렌더됨',
+        /--gds-font-family:\s*"Noto Sans KR"/.test(cssF)
+        && /font-family:"Noto Sans KR",sans-serif/.test(idxF)
+        && !/Pretendard|Outfit/.test((idxF.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1]));
+    }
     const dh2 = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
     ok('타이포 대조 결과가 결정 기록 페이지에 표시됨', dh2.includes(String(F.typography.matched)));
     ok('TQ-6 이 결정 안건 페이지에 표시됨', dh2.includes('TQ-6'));
