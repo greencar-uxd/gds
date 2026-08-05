@@ -1,0 +1,443 @@
+{
+  "$description": "GDS 정본 인벤토리 — 원본 Figma 파일의 «GDS (그린카 디자인 시스템)» 라이브러리에 published 된 것만 담습니다. 레거시 라이브러리는 담지 않습니다.",
+  "checkedAt": "2026-08-05",
+  "fileKey": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+  "method": "Figma MCP search_design_system 을 GDS 라이브러리 키로 한정해 그룹별 조회 · 값은 data/foundation-data.json 추출본에서 이름으로 대조",
+  "canonLibrary": {
+    "name": "GDS (그린카 디자인 시스템)",
+    "key": "lk-5fb74b5ab83ff53f7149c5fcc4bf5216de526f9da336aeaee9a1a168b1d47d74dba3ee117cad7d8060e3f71befc8c9faff4efa63e41e14018e7f743924a5fef3"
+  },
+  "excludedLibraries": [
+    {
+      "name": "그린카 App v2.0",
+      "why": "레거시 앱 라이브러리"
+    },
+    {
+      "name": "G car APP v1.0",
+      "why": "레거시 앱 라이브러리"
+    },
+    {
+      "name": "(사용 X) 그린카 App",
+      "why": "이름부터 사용하지 않는 라이브러리"
+    },
+    {
+      "name": "[공유] Foundation",
+      "why": "외부 시맨틱 토큰셋(border/* · fill/* · text/* · bg/*). GDS 소유가 아니라 복제하면 안 됩니다"
+    },
+    {
+      "name": "작업 파일 공유",
+      "why": "작업용 임시"
+    },
+    {
+      "name": "무버스 디자인 (피그마)",
+      "why": "다른 제품 라이브러리"
+    }
+  ],
+  "exclusionRule": "색 판정 기준은 색차(ΔE)가 아니라 라이브러리 소속입니다. GDS 라이브러리에 없으면 정본이 아니고, 레거시 라이브러리의 값·이름은 판단 근거로 쓰지 않습니다 — 강민관 지시 2026-08-05.",
+  "fill": [
+    {
+      "name": "Primary/Red 010",
+      "group": "Primary",
+      "hex": "#FBD2D3"
+    },
+    {
+      "name": "Primary/Red 020",
+      "group": "Primary",
+      "hex": "#F8A4A7"
+    },
+    {
+      "name": "Primary/Red 300",
+      "group": "Primary",
+      "hex": "#F4777C"
+    },
+    {
+      "name": "Primary/Red 400",
+      "group": "Primary",
+      "hex": "#F14950"
+    },
+    {
+      "name": "Primary/Red 500",
+      "group": "Primary",
+      "hex": "#ED1C24"
+    },
+    {
+      "name": "Primary/Red 060",
+      "group": "Primary",
+      "hex": "#BE161D"
+    },
+    {
+      "name": "Primary/Red 070",
+      "group": "Primary",
+      "hex": "#8E1116"
+    },
+    {
+      "name": "Primary/Red 080",
+      "group": "Primary",
+      "hex": "#5F0B0E"
+    },
+    {
+      "name": "Primary/Red 090",
+      "group": "Primary",
+      "hex": "#2F0607"
+    },
+    {
+      "name": "Gray Scale/Gray 000",
+      "group": "Gray Scale",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "Gray Scale/Gray 005",
+      "group": "Gray Scale",
+      "hex": "#F8F8F8"
+    },
+    {
+      "name": "Gray Scale/Gray 010",
+      "group": "Gray Scale",
+      "hex": "#F1F1F1"
+    },
+    {
+      "name": "Gray Scale/Gray 020",
+      "group": "Gray Scale",
+      "hex": "#E2E2E2"
+    },
+    {
+      "name": "Gray Scale/Gray 030",
+      "group": "Gray Scale",
+      "hex": "#D4D4D4"
+    },
+    {
+      "name": "Gray Scale/Gray 040",
+      "group": "Gray Scale",
+      "hex": "#C5C5C5"
+    },
+    {
+      "name": "Gray Scale/Gray 050",
+      "group": "Gray Scale",
+      "hex": "#B7B7B7"
+    },
+    {
+      "name": "Gray Scale/Gray 060",
+      "group": "Gray Scale",
+      "hex": "#898989"
+    },
+    {
+      "name": "Gray Scale/Gray 070",
+      "group": "Gray Scale",
+      "hex": "#5C5C5C"
+    },
+    {
+      "name": "Gray Scale/Gray 080",
+      "group": "Gray Scale",
+      "hex": "#2F2E2E"
+    },
+    {
+      "name": "Gray Scale/Gray 100",
+      "group": "Gray Scale",
+      "hex": "#000000"
+    },
+    {
+      "name": "Navy/Navy 010",
+      "group": "Navy",
+      "hex": "#E8ECEF"
+    },
+    {
+      "name": "Navy/Navy 020",
+      "group": "Navy",
+      "hex": "#D0D8DD"
+    },
+    {
+      "name": "Navy/Navy 030",
+      "group": "Navy",
+      "hex": "#A1B1BB"
+    },
+    {
+      "name": "Navy/navy 040",
+      "group": "Navy",
+      "hex": "#728A9A"
+    },
+    {
+      "name": "Navy/Navy 050",
+      "group": "Navy",
+      "hex": "#436378"
+    },
+    {
+      "name": "Navy/Navy 060",
+      "group": "Navy",
+      "hex": "#0A3C5C"
+    },
+    {
+      "name": "Navy/Navy 070",
+      "group": "Navy",
+      "hex": "#0F2D41"
+    },
+    {
+      "name": "Navy/Navy 080",
+      "group": "Navy",
+      "hex": "#0A1E2B"
+    },
+    {
+      "name": "Navy/Navy 090",
+      "group": "Navy",
+      "hex": "#020609"
+    },
+    {
+      "name": "Navy/Navy 100",
+      "group": "Navy",
+      "hex": "#060809"
+    },
+    {
+      "name": "Badge/Time Deal",
+      "group": "Badge",
+      "hex": "#FF8159"
+    },
+    {
+      "name": "Badge/Bookmark",
+      "group": "Badge",
+      "hex": "#FED500"
+    },
+    {
+      "name": "Badge/Event",
+      "group": "Badge",
+      "hex": "#F8679C"
+    },
+    {
+      "name": "Badge/Hot Deal",
+      "group": "Badge",
+      "hex": "#FD8484"
+    },
+    {
+      "name": "Badge/New Zone",
+      "group": "Badge",
+      "hex": "#FD9F4D"
+    },
+    {
+      "name": "Badge/New Car",
+      "group": "Badge",
+      "hex": "#5B68FE"
+    },
+    {
+      "name": "Badge/Eleccar",
+      "group": "Badge",
+      "hex": "#A87DF9"
+    },
+    {
+      "name": "Badge/Economy",
+      "group": "Badge",
+      "hex": "#C0C259"
+    },
+    {
+      "name": "Badge/Clean",
+      "group": "Badge",
+      "hex": "#59BBF2"
+    },
+    {
+      "name": "Badge/ODA",
+      "group": "Badge",
+      "hex": "#ED9A1E"
+    },
+    {
+      "name": "Map Marker/Active",
+      "group": "Map Marker",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "Map Marker/Active_Line",
+      "group": "Map Marker",
+      "hex": "#A1B1BB"
+    },
+    {
+      "name": "Map Marker/Corporation",
+      "group": "Map Marker",
+      "hex": "#005E97"
+    },
+    {
+      "name": "Map Marker/Disabled Line",
+      "group": "Map Marker",
+      "hex": "#B3BABF"
+    },
+    {
+      "name": "Map Marker/Disabled Text",
+      "group": "Map Marker",
+      "hex": "#BEC3C7"
+    },
+    {
+      "name": "Map Marker/Free Zone",
+      "group": "Map Marker",
+      "hex": "#FD8484"
+    },
+    {
+      "name": "Map Marker/Free Zone Line",
+      "group": "Map Marker",
+      "hex": "#EB6565"
+    },
+    {
+      "name": "Map Marker/Shadow",
+      "group": "Map Marker",
+      "hex": "#E2E2E2"
+    },
+    {
+      "name": "Brand/G car Red",
+      "group": "Brand",
+      "hex": "#ED1C24"
+    },
+    {
+      "name": "Brand/G car Gray",
+      "group": "Brand",
+      "hex": "#3E3A39"
+    },
+    {
+      "name": "Brand/L.POINT",
+      "group": "Brand",
+      "hex": "#009BFA"
+    },
+    {
+      "name": "Brand/L.POINT 2",
+      "group": "Brand",
+      "hex": "#0079C3"
+    },
+    {
+      "name": "Brand/T Membership",
+      "group": "Brand",
+      "hex": "#3617CB"
+    },
+    {
+      "name": "Brand/ODA Line",
+      "group": "Brand",
+      "hex": "#BF7200"
+    },
+    {
+      "name": "System/Alarm",
+      "group": "System",
+      "hex": "#D32828"
+    },
+    {
+      "name": "System/Success",
+      "group": "System",
+      "hex": "#00C88C"
+    },
+    {
+      "name": "System/Focus Line",
+      "group": "System",
+      "hex": "#0029FF"
+    },
+    {
+      "name": "System/Dim Layer",
+      "group": "System",
+      "hex": "#000000"
+    },
+    {
+      "name": "System/Info Box BG",
+      "group": "System",
+      "hex": "#000000"
+    },
+    {
+      "name": "System/Input Line",
+      "group": "System",
+      "hex": "#D9DDDF"
+    }
+  ],
+  "effect": [
+    {
+      "name": "Elevation_1",
+      "note": "E-2 재넘버링이 라이브러리에 반영돼 있습니다"
+    },
+    {
+      "name": "Elevation_2",
+      "note": "값 실측 확인 — 2겹"
+    },
+    {
+      "name": "Elevation_3"
+    },
+    {
+      "name": "Elevation_4"
+    },
+    {
+      "name": "Elevation_5"
+    },
+    {
+      "name": "Elevation_6"
+    },
+    {
+      "name": "as-is_Shadow/(X)Bottom Sheet",
+      "deprecated": true,
+      "note": "(X) 표시된 폐기 예정 스타일이 published 상태로 남아 있습니다"
+    },
+    {
+      "name": "as-is_Shadow/(X)Floating Button",
+      "deprecated": true
+    }
+  ],
+  "text": [
+    {
+      "name": "noto_sans/display/bold",
+      "duplicatePublished": 3
+    },
+    {
+      "name": "noto_sans/heading/bold"
+    },
+    {
+      "name": "noto_sans/title/medium",
+      "duplicatePublished": 6,
+      "sample": "Noto Sans KR Medium 16/18 · lineHeight 100 · letterSpacing 0"
+    },
+    {
+      "name": "noto_sans/boby/regular",
+      "duplicatePublished": 4,
+      "typo": "boby → body",
+      "sample": "Noto Sans KR Regular 14 · lineHeight 100 · letterSpacing 0"
+    }
+  ],
+  "variables": {
+    "float": [
+      {
+        "name": "Radius/xs"
+      },
+      {
+        "name": "Radius/sm",
+        "value": 8
+      },
+      {
+        "name": "Radius/md"
+      },
+      {
+        "name": "Radius/lg"
+      },
+      {
+        "name": "Radius/xl",
+        "value": 16
+      },
+      {
+        "name": "Radius/xxl",
+        "value": 20
+      },
+      {
+        "name": "Radius/full"
+      }
+    ],
+    "color": [
+      {
+        "name": "Map marker_Shadow",
+        "value": "#0000001A"
+      },
+      {
+        "name": "Gcar_logo_text",
+        "value": "#1A1A1A"
+      },
+      {
+        "name": "Gcar_color",
+        "value": "#ED1C24"
+      },
+      {
+        "name": "typo/letter-spacing/0",
+        "value": "0"
+      }
+    ],
+    "note": "Radius 는 숫자 스케일이 아니라 t-shirt size 7단계입니다. xs·md·lg·full 값은 아직 실측하지 않았습니다."
+  },
+  "counts": {
+    "fill": 60,
+    "effect": 8,
+    "textNames": 4,
+    "radiusSteps": 7
+  }
+}

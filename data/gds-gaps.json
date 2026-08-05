@@ -1,0 +1,172 @@
+{
+  "$description": "정본(GDS 라이브러리 + ✅ 페이지)을 디자인 시스템으로서 평가한 결과. 원본을 고치자는 게 아니라, 저장소에서 어떻게 메울지 정하기 위한 목록입니다.",
+  "checkedAt": "2026-08-05",
+  "basis": "data/gds-library.json",
+  "principle": "제1원칙 — 원본 .fig 는 고치지 않습니다. 여기 적힌 것은 저장소 정본에서 해소하고, 원본 반영 여부는 디자인팀이 따로 판단합니다.",
+  "computed": {
+    "duplicateValues": [
+      {
+        "hex": "#ED1C24",
+        "names": [
+          "Primary/Red 500",
+          "Brand/G car Red"
+        ]
+      },
+      {
+        "hex": "#FFFFFF",
+        "names": [
+          "Gray Scale/Gray 000",
+          "Map Marker/Active"
+        ]
+      },
+      {
+        "hex": "#E2E2E2",
+        "names": [
+          "Gray Scale/Gray 020",
+          "Map Marker/Shadow"
+        ]
+      },
+      {
+        "hex": "#000000",
+        "names": [
+          "Gray Scale/Gray 100",
+          "System/Dim Layer",
+          "System/Info Box BG"
+        ]
+      },
+      {
+        "hex": "#A1B1BB",
+        "names": [
+          "Navy/Navy 030",
+          "Map Marker/Active_Line"
+        ]
+      },
+      {
+        "hex": "#FD8484",
+        "names": [
+          "Badge/Hot Deal",
+          "Map Marker/Free Zone"
+        ]
+      }
+    ],
+    "caseInconsistent": [
+      "Navy/navy 040"
+    ],
+    "luminanceInversion": [
+      {
+        "group": "Navy",
+        "pair": [
+          "Navy/Navy 090",
+          "Navy/Navy 100"
+        ],
+        "detail": "Navy/Navy 100 이 Navy/Navy 090 보다 밝습니다"
+      },
+      {
+        "group": "Primary",
+        "pair": [
+          "Primary/Red 090",
+          "Primary/Red 300"
+        ],
+        "detail": "Primary/Red 300 이 Primary/Red 090 보다 밝습니다"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "GAP-1",
+      "area": "타이포",
+      "severity": "높음",
+      "finding": "라이브러리 텍스트 스타일이 4종뿐인데 ✅ Typography system 표는 21단계입니다. 라이브러리가 문서를 못 따라갑니다.",
+      "evidence": "GDS 라이브러리 TEXT 스타일: noto_sans/display/bold · heading/bold · title/medium · boby/regular",
+      "fix": "저장소 정본은 ✅ 표 21단계를 그대로 유지하고, 라이브러리 4종을 21단계 중 어디에 해당하는지 매핑표로 남깁니다. 라이브러리 확장은 디자인팀 작업으로 분리합니다."
+    },
+    {
+      "id": "GAP-2",
+      "area": "타이포",
+      "severity": "중간",
+      "finding": "같은 이름의 텍스트 스타일이 여러 건 published 돼 있습니다 — title/medium 6건, boby/regular 4건, display/bold 3건. 값도 서로 다릅니다(title/medium 이 16px 과 18px 두 가지).",
+      "evidence": "search_design_system 결과에서 같은 name 에 style key 가 여러 개",
+      "fix": "저장소는 이름당 하나만 정본으로 싣고, 어느 값을 택했는지 근거를 남깁니다."
+    },
+    {
+      "id": "GAP-3",
+      "area": "타이포",
+      "severity": "낮음",
+      "finding": "스타일 이름 오타 — noto_sans/boby/regular (body).",
+      "evidence": "GDS 라이브러리 TEXT 스타일명",
+      "fix": "저장소 정본은 body 로 적고 원본 이름을 함께 기록합니다."
+    },
+    {
+      "id": "GAP-4",
+      "area": "색",
+      "severity": "높음",
+      "finding": "Map Marker/Shadow 가 두 값으로 존재합니다 — FILL 스타일은 #E2E2E2(불투명 회색), 변수 Map marker_Shadow 는 #0000001A(검정 10%).",
+      "evidence": "라이브러리 FILL 스타일 vs COLOR 변수",
+      "fix": "그림자는 알파여야 겹침에서 맞습니다. 변수 쪽(#0000001A)을 정본으로 삼고 FILL 스타일은 대체 대상으로 표시합니다."
+    },
+    {
+      "id": "GAP-5",
+      "area": "색",
+      "severity": "중간",
+      "finding": "같은 값이 두 이름으로 있습니다 — 값이 바뀔 때 한쪽만 바뀌면 조용히 어긋납니다.",
+      "evidence": "computed.duplicateValues",
+      "fix": "의미가 다르면 별칭(시맨틱)으로 연결하고, 같으면 하나로 줄입니다. Map Marker/Active_Line 은 Navy/Navy 030 의 별칭으로 두는 편이 맞습니다."
+    },
+    {
+      "id": "GAP-6",
+      "area": "색",
+      "severity": "중간",
+      "finding": "System/Dim Layer 와 System/Info Box BG 가 둘 다 #000000 이고 불투명도가 토큰 어디에도 없습니다. 개발자가 값을 알 수 없습니다.",
+      "evidence": "라이브러리 FILL 스타일 2종 · ✅ 스와치 캡션은 60% · 80%",
+      "fix": "CQ-9 확정대로 System/Dim Layer 060 · 080 으로 나누고 8자리 HEX 로 내보냅니다."
+    },
+    {
+      "id": "GAP-7",
+      "area": "색",
+      "severity": "낮음",
+      "finding": "Navy 그룹에서 navy 040 만 소문자입니다.",
+      "evidence": "computed.caseInconsistent",
+      "fix": "저장소 정본은 Navy 040 으로 통일하고 원본 이름을 renames 에 남깁니다."
+    },
+    {
+      "id": "GAP-8",
+      "area": "색",
+      "severity": "중간",
+      "finding": "같은 기능(ODA)의 색이 Badge/ODA 와 Brand/ODA Line 두 그룹으로 갈라져 있습니다.",
+      "evidence": "라이브러리 FILL 스타일",
+      "fix": "뱃지 면색과 선색이므로 Badge 그룹으로 모으거나, 컴포넌트 계층에서 한 쌍으로 묶습니다."
+    },
+    {
+      "id": "GAP-9",
+      "area": "엘리베이션",
+      "severity": "중간",
+      "finding": "폐기 표시된 스타일이 published 상태로 남아 있습니다 — as-is_Shadow/(X)Bottom Sheet · (X)Floating Button. 라이브러리를 쓰는 사람에게 그대로 노출됩니다.",
+      "evidence": "라이브러리 EFFECT 스타일",
+      "fix": "저장소 정본에서 제외하고 폐기 목록으로만 기록합니다."
+    },
+    {
+      "id": "GAP-10",
+      "area": "엘리베이션",
+      "severity": "낮음",
+      "finding": "Frosted Glass(배경 블러 40) 와 Bottom Floating Button 효과가 Elevation 체계 밖에 따로 있습니다.",
+      "evidence": "Border ✅ 페이지 변수 조회",
+      "fix": "그림자 체계와 별개인 효과 그룹으로 이름을 정리합니다."
+    },
+    {
+      "id": "GAP-11",
+      "area": "반경",
+      "severity": "중간",
+      "finding": "라이브러리 Radius 는 xs·sm·md·lg·xl·xxl·full 7단계(t-shirt size)인데 저장소는 숫자 스케일로 만들어 뒀습니다. 단계 수는 7로 같습니다.",
+      "evidence": "라이브러리 FLOAT 변수 7종 · R-1 결정(4/8/10/12/16/20/원형)",
+      "fix": "정본 이름을 t-shirt size 로 맞추고 숫자는 값으로 둡니다. xs·md·lg·full 값은 아직 실측이 필요합니다."
+    },
+    {
+      "id": "GAP-12",
+      "area": "계층",
+      "severity": "높음",
+      "finding": "변수화가 색과 반경에만 돼 있고 간격·타이포는 표와 스타일로만 존재합니다. 프리미티브→시맨틱→컴포넌트 3계층이 색에서만 성립합니다.",
+      "evidence": "라이브러리 변수 컬렉션 — Collection(color) · semantic(float/Radius)",
+      "fix": "저장소 토큰은 네 영역 모두 같은 3계층으로 내보내고, 라이브러리에 없는 계층은 저장소가 정의한 것으로 표시합니다."
+    }
+  ]
+}
