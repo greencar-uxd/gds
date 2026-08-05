@@ -4,10 +4,22 @@
   "collectedBy": "Claude in Chrome · 실제 렌더 화면 관찰",
   "method": "각 URL 을 실제 브라우저로 열어 첫 화면을 관찰했습니다. 색·폰트는 눈으로 본 것이 아니라 페이지에서 getComputedStyle 로 뽑은 것만 값으로 적습니다.",
   "blocked": [
-    { "url": "https://spectrum.adobe.com/", "reason": "브라우저 도메인 정책으로 열리지 않음" },
-    { "url": "https://developers-apps-in-toss.toss.im/design/components", "reason": "브라우저 도메인 정책으로 열리지 않음" },
-    { "url": "https://designsystem.line.me/", "reason": "브라우저 도메인 정책으로 열리지 않음" },
-    { "url": "https://www.mews.design/latest/welcome-eumfLxWD", "reason": "브라우저 도메인 정책으로 열리지 않음" }
+    {
+      "url": "https://spectrum.adobe.com/",
+      "reason": "브라우저 도메인 정책으로 열리지 않음"
+    },
+    {
+      "url": "https://developers-apps-in-toss.toss.im/design/components",
+      "reason": "브라우저 도메인 정책으로 열리지 않음"
+    },
+    {
+      "url": "https://designsystem.line.me/",
+      "reason": "브라우저 도메인 정책으로 열리지 않음"
+    },
+    {
+      "url": "https://www.mews.design/latest/welcome-eumfLxWD",
+      "reason": "브라우저 도메인 정책으로 열리지 않음"
+    }
   ],
   "sites": [
     {
@@ -18,14 +30,24 @@
       "layout": "상단 가로 GNB(그린카 · 서비스 · 인재채용 · 뉴스) + 햄버거. 좌우 여백이 매우 넓고 화면 하나에 메시지 하나.",
       "chrome": "흰 배경 · 네이비 텍스트. 브랜드 색은 히어로/일러스트 면적에서만 씁니다.",
       "measured": {
-        "fonts": ["Outfit, Pretendard, sans-serif", "Pretendard, sans-serif"],
-        "colors": ["#00C88C", "#00DC9A", "#133B55", "#222222", "#777777", "#FFFFFF"],
+        "fonts": [
+          "Outfit, Pretendard, sans-serif",
+          "Pretendard, sans-serif"
+        ],
+        "colors": [
+          "#00C88C",
+          "#00DC9A",
+          "#133B55",
+          "#222222",
+          "#777777",
+          "#FFFFFF"
+        ],
         "how": "페이지에서 getComputedStyle 집계 상위값"
       },
       "finding": [
         "기업 아이덴티티는 네이비 + 그린입니다. 빨강이 한 번도 나오지 않습니다.",
         "#00C88C 는 GDS 정본 System/Success 와 값이 같습니다 (동일 HEX).",
-        "본문 서체가 Pretendard 이고 라틴은 Outfit 입니다 — GDS 정본 서체(Noto Sans KR·TQ-6)와 다릅니다. 다른 표면이므로 충돌은 아니지만, «문서 사이트는 어느 쪽 옷을 입는가»는 결정이 필요합니다."
+        "본문 서체가 Pretendard 이고 라틴은 Outfit 입니다 — GDS 정본 서체(Noto Sans KR·TQ-6)와 다릅니다. 다른 표면이므로 충돌은 아닙니다. 문서 사이트는 정본 Noto Sans KR 을 그대로 쓰기로 확정했습니다(TQ-8 · 강민관 2026-08-06)."
       ]
     },
     {
@@ -213,16 +235,103 @@
     }
   ],
   "commonPatterns": [
-    { "pattern": "네비게이션은 영문, 본문은 한글", "seenIn": ["socar-frame", "gmarket-gds", "kt-ux", "codeit", "11st"], "note": "국내 디자인 시스템 다섯 곳이 모두 같은 형태입니다." },
-    { "pattern": "제품명 옆에 버전 표기", "seenIn": ["socar-frame", "kt-ux", "shinhan-solid", "gmarket-gds", "workday-canvas"], "note": "칩 · 드롭다운 · 사이드바 바닥 중 하나. 문서가 어느 버전을 말하는지 항상 보입니다." },
-    { "pattern": "크롬에는 브랜드색을 쓰지 않는다", "seenIn": ["11st", "kt-ux", "workday-canvas", "fluent2", "gmarket-gds"], "note": "브랜드색은 히어로나 활성 표시에만. 크롬이 색을 크게 쓰면 색 스와치가 UI 의 일부처럼 보여 정직하지 않습니다." },
-    { "pattern": "상단 가로 네비 + 좌측은 그 섹션 안만", "seenIn": ["kt-ux", "krds", "shinhan-solid", "bbc-gel"], "note": "사이드바가 길어지지 않습니다. 항목이 늘 때 유일하게 버티는 형태." },
-    { "pattern": "사이드바 상단에 Filter/Search 입력", "seenIn": ["apple-hig", "shopify-polaris", "gmarket-gds", "fluent2"], "note": "Apple 은 링크보다 위에 둡니다." },
-    { "pattern": "상위 페이지는 목차가 아니라 카드 그리드", "seenIn": ["apple-hig", "skyscanner-backpack", "gmarket-gds", "shinhan-solid", "11st"], "note": "«무엇부터 봐야 하는가»를 화면이 정해 줍니다." },
-    { "pattern": "제목 밑 고정 메타 3줄 (Version · Source · Install)", "seenIn": ["workday-canvas", "socar-frame"], "note": "우리는 여기에 «출처 노드 ID · ✅ 페이지»를 넣으면 근거 표기가 페이지마다 고정됩니다." },
-    { "pattern": "항목마다 버전과 갱신일", "seenIn": ["bbc-gel", "gmarket-gds"], "note": "문서의 신선도가 목록에서 바로 보입니다." },
-    { "pattern": "플랫폼 탭 / 필터", "seenIn": ["kt-ux", "bbc-gel", "fluent2"], "note": "우리도 iOS / AOS·Web 분기가 있어 그대로 쓸 수 있습니다." },
-    { "pattern": "제목마다 앵커 링크", "seenIn": ["kakao-sync", "kt-ux"], "note": "문단 단위 공유." }
+    {
+      "pattern": "네비게이션은 영문, 본문은 한글",
+      "seenIn": [
+        "socar-frame",
+        "gmarket-gds",
+        "kt-ux",
+        "codeit",
+        "11st"
+      ],
+      "note": "국내 디자인 시스템 다섯 곳이 모두 같은 형태입니다."
+    },
+    {
+      "pattern": "제품명 옆에 버전 표기",
+      "seenIn": [
+        "socar-frame",
+        "kt-ux",
+        "shinhan-solid",
+        "gmarket-gds",
+        "workday-canvas"
+      ],
+      "note": "칩 · 드롭다운 · 사이드바 바닥 중 하나. 문서가 어느 버전을 말하는지 항상 보입니다."
+    },
+    {
+      "pattern": "크롬에는 브랜드색을 쓰지 않는다",
+      "seenIn": [
+        "11st",
+        "kt-ux",
+        "workday-canvas",
+        "fluent2",
+        "gmarket-gds"
+      ],
+      "note": "브랜드색은 히어로나 활성 표시에만. 크롬이 색을 크게 쓰면 색 스와치가 UI 의 일부처럼 보여 정직하지 않습니다."
+    },
+    {
+      "pattern": "상단 가로 네비 + 좌측은 그 섹션 안만",
+      "seenIn": [
+        "kt-ux",
+        "krds",
+        "shinhan-solid",
+        "bbc-gel"
+      ],
+      "note": "사이드바가 길어지지 않습니다. 항목이 늘 때 유일하게 버티는 형태."
+    },
+    {
+      "pattern": "사이드바 상단에 Filter/Search 입력",
+      "seenIn": [
+        "apple-hig",
+        "shopify-polaris",
+        "gmarket-gds",
+        "fluent2"
+      ],
+      "note": "Apple 은 링크보다 위에 둡니다."
+    },
+    {
+      "pattern": "상위 페이지는 목차가 아니라 카드 그리드",
+      "seenIn": [
+        "apple-hig",
+        "skyscanner-backpack",
+        "gmarket-gds",
+        "shinhan-solid",
+        "11st"
+      ],
+      "note": "«무엇부터 봐야 하는가»를 화면이 정해 줍니다."
+    },
+    {
+      "pattern": "제목 밑 고정 메타 3줄 (Version · Source · Install)",
+      "seenIn": [
+        "workday-canvas",
+        "socar-frame"
+      ],
+      "note": "우리는 여기에 «출처 노드 ID · ✅ 페이지»를 넣으면 근거 표기가 페이지마다 고정됩니다."
+    },
+    {
+      "pattern": "항목마다 버전과 갱신일",
+      "seenIn": [
+        "bbc-gel",
+        "gmarket-gds"
+      ],
+      "note": "문서의 신선도가 목록에서 바로 보입니다."
+    },
+    {
+      "pattern": "플랫폼 탭 / 필터",
+      "seenIn": [
+        "kt-ux",
+        "bbc-gel",
+        "fluent2"
+      ],
+      "note": "우리도 iOS / AOS·Web 분기가 있어 그대로 쓸 수 있습니다."
+    },
+    {
+      "pattern": "제목마다 앵커 링크",
+      "seenIn": [
+        "kakao-sync",
+        "kt-ux"
+      ],
+      "note": "문단 단위 공유."
+    }
   ],
   "againstOurSite": [
     "브랜드 빨강(#ED1C24)을 사이드바 활성·강조·통계 숫자에 광범위하게 씁니다. 레퍼런스 다섯 곳은 크롬에 브랜드색을 쓰지 않습니다 — 색 문서가 자기 색에 물들어 있습니다.",
@@ -230,6 +339,6 @@
     "버전 표기가 없습니다. 레퍼런스 다섯 곳이 전부 갖고 있습니다.",
     "검색이 없습니다. Apple·Shopify·Fluent·Gmarket 은 사이드바 최상단에 둡니다.",
     "페이지마다 출처 표기 위치가 다릅니다. Workday 처럼 제목 밑 고정 메타로 통일할 수 있습니다.",
-    "그린카 기업 아이덴티티(네이비 + 그린)와 문서 사이트의 옷(빨강)이 다릅니다."
+    "그린카 기업 아이덴티티(네이비 + 그린)와 문서 사이트의 옷(빨강)이 달랐습니다 → 크롬 accent 를 정본 Navy 로 바꿔 해소. 서체는 정본 Noto Sans KR 유지로 확정(TQ-8)."
   ]
 }

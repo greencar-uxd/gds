@@ -81,6 +81,21 @@
       "status": "closed",
       "settledTitle": "행간은 Auto 를 유지합니다",
       "resolution": "A — Auto 유지. 강민관 확정 2026-08-05. 정본 Type scale 표 21행 전부 Auto 이고 TQ-2 에서 이미 같은 방향으로 확정했습니다. Buttons 페이지 참조 변수의 세 방식(noto_sans/* lineHeight 100 · Text styles/* 고정 px · Noto Sans/* 배수 1.5)은 정본 기준으로 Auto 에 수렴시킵니다. 웹 내보내기는 line-height:normal."
+    },
+    {
+      "id": "TQ-8",
+      "question": "문서 사이트(이 저장소가 만드는 GDS 사이트)는 어느 서체를 입는가",
+      "detail": "그린카 공식 사이트(greencar.co.kr)를 브라우저로 열어 getComputedStyle 로 집계한 결과, 본문 서체가 Pretendard 이고 라틴은 Outfit 입니다. GDS 정본 서체(TQ-6 · Noto Sans KR 단일)와 다릅니다. 문서 사이트가 기업 사이트의 옷을 입을지, 정본 서체를 유지할지가 갈립니다.",
+      "options": [
+        "A — 정본 유지: 문서 사이트도 Noto Sans KR. 타이포 견본이 정본과 같은 글꼴로 렌더됩니다.",
+        "B — 기업 서체 채택: 크롬과 본문을 Pretendard + Outfit 으로. 그린카 웹 아이덴티티와 붙습니다.",
+        "C — 혼합: 크롬만 Pretendard, 타이포 견본 영역만 Noto Sans KR."
+      ],
+      "evidence": "greencar.co.kr getComputedStyle 집계 — \"Outfit, Pretendard, sans-serif\" 791회 · data/reference-sites.json greencar.measured.fonts",
+      "status": "closed",
+      "settledTitle": "문서 사이트도 Noto Sans KR — 정본이 정배입니다",
+      "resolution": "A — 강민관 확정 2026-08-06 (\"노토산스가 정배임\"). 문서 사이트는 정본 서체 Noto Sans KR 을 그대로 씁니다. 견본이 정본과 다른 글꼴로 렌더되면 문서가 스스로를 반증하기 때문입니다. 그린카 공식 사이트의 Pretendard/Outfit 은 다른 표면의 사실로만 기록하고(data/reference-sites.json), 정본에 편입하지 않습니다. 서브셋 폰트도 Noto Sans KR 3종(400/500/700)만 유지합니다.",
+      "note": "TQ-6(정본 서체 Noto Sans KR 단일)과 같은 방향입니다 — 서체 결정이 앱과 문서에서 갈리지 않습니다."
     }
   ],
   "lineHeight": {
