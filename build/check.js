@@ -577,6 +577,49 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     ok('손으로 적지 않았다는 근거 표기', /본문. 원본을 옮겨 적은 것/.test(g));
   }
 
+  // ── 타이포 시맨틱 — ✅ Type scale Usage 열에서 계산했는지 ──
+  const TS = VIEW.typeSemantic;
+  ok('타이포 시맨틱 계층 존재', !!TS && TS.status === 'confirmed');
+  if (TS) {
+    const LIBT = VIEW.typeLib.styles;
+    // 쓰임새 역색인을 여기서 다시 계산해 생성물과 대조합니다 — 숫자를 손으로 적지 않습니다.
+    const inv = new Map();
+    for (const s of LIBT) for (const u of (s.usage || [])) {
+      if (!inv.has(u)) inv.set(u, []); inv.get(u).push(s.canonToken);
+    }
+    ok('쓰임새를 하나도 빠뜨리지 않음', TS.tokens.length + TS.families.length === inv.size,
+      `${TS.tokens.length}+${TS.families.length} vs ${inv.size}`);
+    ok('토큰은 쓰임새가 단계 하나만 가리킬 때만',
+      TS.tokens.every(t => (inv.get(t.usage) || []).length === 1));
+    ok('계열은 쓰임새가 여러 단계를 가리킬 때만',
+      TS.families.every(f => (inv.get(f.usage) || []).length > 1));
+    ok('시맨틱이 가리키는 단계가 전부 실재',
+      TS.tokens.every(t => LIBT.some(s => s.name === t.ref && s.canonToken === t.refCanon)));
+    ok('시맨틱마다 ✅ 페이지 근거가 붙음',
+      TS.tokens.concat(TS.families).every(t => /42066:25472/.test(t.evidence || '')));
+    const J2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+    ok('DTCG 에 semanticType 블록이 있음',
+      !!J2.semanticType && Object.keys(J2.semanticType).length === TS.tokens.length);
+    ok('DTCG 타이포 시맨틱이 참조 문법을 씀',
+      Object.values(J2.semanticType || {}).every(v => /^\{type\./.test(v.$value)));
+    ok('미확정 계열이 주석으로 남음',
+      (J2.$notes.typeSemantic || {}).families && J2.$notes.typeSemantic.families.length === TS.families.length);
+    const css2 = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+    ok('타이포 시맨틱이 CSS 에서 프리미티브를 var() 로 참조',
+      TS.tokens.every(t => new RegExp(`--gds-type-semantic-${t.role}-size:\\s*var\\(--gds-type-`).test(css2)));
+    // TQ-6 근거 — 정본 타이포는 Noto Sans KR 단일이고 Rubik 은 나오지 않습니다.
+    ok('정본 타이포 21단계가 전부 Noto Sans KR',
+      LIBT.every(s => s.fontFamily === 'Noto Sans KR'), 'TQ-6');
+    ok('Time picker 숫자·날짜가 Title 1 · Title 2 로 배정됨',
+      TS.tokens.some(t => t.usage === 'Time picker_number' && t.refCanon === 'Title 1')
+      && TS.tokens.some(t => t.usage === 'Time picker_date' && t.refCanon === 'Title 2'));
+    ok('Rubik 참조가 결함으로 기록됨',
+      (VIEW.sourceDefects.items || []).some(d => d.id === 'SD-18' && /Rubik/.test(d.problem)));
+    const dp = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
+    ok('결정 페이지에 타이포 시맨틱 표가 실림',
+      TS.tokens.every(t => dp.includes(t.token)) && TS.families.every(f => dp.includes(f.usage)));
+  }
+
   const GAPS = VIEW.GAPS;
   ok('해소된 GAP 마다 해소 문구가 있음',
     GAPS.items.filter(i => i.status === 'resolved').every(i => (i.resolution || '').length > 10));

@@ -121,6 +121,16 @@ if (VIEW.semantic) {
     css += `  --gds-${key}: var(--gds-color-${slug(t.ref.replace('/', ' '))});  /* ${t.ref} · ${t.evidence} */\n`;
   }
 }
+// 타이포 시맨틱 — ✅ Type scale 의 Usage 열에서 계산. 프리미티브 타이포 변수를 var() 로 참조합니다.
+if (VIEW.typeSemantic) {
+  css += '\n  /* Semantic (타이포) — ✅ Type scale Usage 열에서 계산 */\n';
+  for (const t of VIEW.typeSemantic.tokens) {
+    const k = t.role, p = slug(t.refCanon);
+    css += `  --gds-type-semantic-${k}-size: var(--gds-type-${p}-size);`
+      + `  /* ${t.refCanon} · Usage "${t.usage}" */\n`;
+    css += `  --gds-type-semantic-${k}-weight: var(--gds-type-${p}-weight);\n`;
+  }
+}
 // Layout — Guidelines 계층
 if (VIEW.layout) {
   css += '\n  /* Layout — Guidelines 계층 */\n';
@@ -180,6 +190,11 @@ if (FONT) scss += `$gds-font-family: "${FONT.value}", sans-serif;\n`;
 if (LH) scss += `$gds-type-line-height: ${LH_CSS};\n`;
 if (LS) scss += `$gds-type-letter-spacing: ${LS.value};\n`;
 for (const t of types) scss += `$gds-type-${t.key}-size: ${t.size}px;\n$gds-type-${t.key}-weight: ${t.weight};\n`;
+// 타이포 시맨틱은 프리미티브 뒤에 와야 합니다 — SCSS 변수는 선언 순서를 지킵니다.
+if (VIEW.typeSemantic) for (const t of VIEW.typeSemantic.tokens) {
+  scss += `$gds-type-semantic-${t.role}-size: $gds-type-${slug(t.refCanon)}-size;\n`;
+  scss += `$gds-type-semantic-${t.role}-weight: $gds-type-${slug(t.refCanon)}-weight;\n`;
+}
 scss += '\n';
 for (const s of spacing) if (!s.conflict) scss += `$gds-spacing-${slug(s.token).replace(/^spacing-/, '')}: ${s.px}px;\n`;
 scss += '\n';
@@ -229,6 +244,29 @@ if (VIEW.semantic) {
       $extensions: { gds: { layer: 'semantic', ref: t.ref, evidence: t.evidence } },
     };
   }
+}
+// ── 타이포 시맨틱 계층 ── ✅ Type scale 의 Usage 열에서 계산했습니다.
+if (VIEW.typeSemantic) {
+  const stepMissing = VIEW.typeSemantic.tokens.filter(t => !types.some(x => x.token === t.refCanon));
+  if (stepMissing.length) {
+    throw new Error(`타이포 시맨틱이 없는 단계를 가리킵니다: ${stepMissing.map(t => t.refCanon).join(', ')}`);
+  }
+  json.semanticType = {};
+  for (const t of VIEW.typeSemantic.tokens) {
+    json.semanticType[t.role] = {
+      $value: `{type.${slug(t.refCanon)}}`,
+      $type: 'typography',
+      $description: `${t.token} → ${t.refCanon}. 근거 — ${t.evidence}`,
+      $extensions: { gds: { layer: 'semantic', ref: t.refCanon, libraryName: t.ref, usage: t.usage, evidence: t.evidence } },
+    };
+  }
+  // 계열(family) — 정본이 여러 단계에 같은 쓰임새를 적어 두어 토큰으로 굳히지 못한 것들.
+  json.$notes.typeSemantic = {
+    rule: VIEW.typeSemantic.rule,
+    source: VIEW.typeSemantic.source,
+    tokens: VIEW.typeSemantic.counts.tokens,
+    families: VIEW.typeSemantic.families.map(f => ({ usage: f.usage, steps: f.steps, why: f.why })),
+  };
 }
 // ── Layout (Guidelines 계층) ──
 if (VIEW.layout) {

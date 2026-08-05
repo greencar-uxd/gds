@@ -134,6 +134,9 @@ module.exports = {
   // 차기 라이브러리에 넣을 텍스트 스타일 21종 — 저장소가 먼저 만들고 원본에 반영합니다.
   typeLib: (() => { const p = path.join(ROOT, 'data', 'typography-library.json');
     return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
+  // 타이포 시맨틱 — ✅ Type scale 의 Usage 열에서 계산했습니다 (tools/build-typography-semantic.js).
+  typeSemantic: (() => { const p = path.join(ROOT, 'data', 'typography-semantic.json');
+    return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
   excludedLibraries: LIB.excludedLibraries || [],
   renames: [...renameMap.values()],
   integrity: { missing, hexMismatch, overrideMissing, overrideStale, additionUnknown, additionStale, additionCollision, splitMissing, retireMissing, retireTargetMissing },

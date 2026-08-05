@@ -33,6 +33,7 @@ const groups = [...new Set(VIEW.colors.map(c => c.name.split('/')[0]))];
 const gapsDone = GAPS ? GAPS.items.filter(g => g.status === 'resolved') : [];
 const gapsOpen = GAPS ? GAPS.items.filter(g => g.status !== 'resolved') : [];
 const ST = VIEW.structure;
+const TS = VIEW.typeSemantic;
 
 const html = `<!DOCTYPE html>
 <html lang="ko" data-theme="light">
@@ -216,6 +217,23 @@ ${l.items.map(i => `<tr><td>${esc(i.name)}</td>
 </tbody></table>` : `<p class="muted">${esc(l.note || '')}</p>`}
 ${l.conflict ? `<div class="note"><b>불일치.</b> ${esc(l.conflict)}</div>` : ''}
 </div>`).join('')}` : ''}
+
+${TS ? `<div class="eyebrow" style="margin-top:40px">Semantic · Type</div>
+<h2 style="font-size:22px;margin:6px 0 4px">타이포 시맨틱 — 쓰임새 ${TS.counts.usages}종 중 ${TS.counts.tokens}종만 토큰</h2>
+<p class="lead">${esc(TS.rule)} 출처는 ${esc(TS.source)} 입니다 — 손으로 이름을 짓지 않았습니다.</p>
+<div class="sync">
+<h3>토큰 ${TS.tokens.length}종 — 쓰임새가 단계 하나만 가리킴</h3>
+<table><thead><tr><th>토큰</th><th>정본 단계</th><th>차기 라이브러리 이름</th><th>정본 Usage 셀</th></tr></thead><tbody>
+${TS.tokens.map(t => `<tr><td><code>${esc(t.token)}</code></td><td>${esc(t.refCanon)}</td><td><code>${esc(t.ref)}</code></td><td class="muted">${esc(t.usage)}</td></tr>`).join('')}
+</tbody></table>
+</div>
+<div class="sync">
+<h3>계열 ${TS.families.length}종 — 토큰으로 굳히지 못함</h3>
+<table><thead><tr><th>정본 Usage 셀</th><th>가리키는 단계</th></tr></thead><tbody>
+${TS.families.map(f => `<tr><td><code>${esc(f.usage)}</code></td><td>${f.steps.map(s => esc(s)).join(' · ')}</td></tr>`).join('')}
+</tbody></table>
+<div class="note"><b>왜 남겼나.</b> ${esc(TS.families[0] ? TS.families[0].why : '')}</div>
+</div>` : ''}
 
 ${open.length ? `<div class="eyebrow" style="margin-top:40px">Open</div>
 <h2 style="font-size:22px;margin:6px 0 12px">아직 정해야 할 것 — ${open.length}건</h2>
