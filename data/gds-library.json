@@ -338,12 +338,11 @@
   ],
   "effect": [
     {
-      "name": "Elevation_1",
-      "note": "E-2 재넘버링이 라이브러리에 반영돼 있습니다"
+      "name": "Elevation_1"
     },
     {
       "name": "Elevation_2",
-      "note": "값 실측 확인 — 2겹"
+      "value": "2겹 — #00000026 0/1/3/1 + #0000004D 0/1/2/0"
     },
     {
       "name": "Elevation_3"
@@ -359,59 +358,128 @@
     },
     {
       "name": "as-is_Shadow/(X)Bottom Sheet",
-      "deprecated": true,
-      "note": "(X) 표시된 폐기 예정 스타일이 published 상태로 남아 있습니다"
+      "deprecated": true
     },
     {
       "name": "as-is_Shadow/(X)Floating Button",
-      "deprecated": true
+      "deprecated": true,
+      "value": "#0000000A 0/-4/4/0"
+    },
+    {
+      "name": "Bottom Sheet",
+      "value": "3겹 — #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0",
+      "outsideElevation": true
+    },
+    {
+      "name": "bottom sheet",
+      "value": "#00000026 0/1/2/0",
+      "outsideElevation": true,
+      "caseDuplicate": "Bottom Sheet"
+    },
+    {
+      "name": "Bottom Sheet shadow",
+      "value": "#00000033 0/0/6/0",
+      "outsideElevation": true
+    },
+    {
+      "name": "Bottom Floating Button",
+      "value": "#0000000A 0/-2/2/0",
+      "outsideElevation": true
+    },
+    {
+      "name": "Frosted Glass",
+      "value": "BACKGROUND_BLUR 40",
+      "outsideElevation": true
+    },
+    {
+      "name": "level/gold/circle-outter",
+      "outsideElevation": true
+    },
+    {
+      "name": "level/gold/circle-inner",
+      "outsideElevation": true
+    },
+    {
+      "name": "level/gold/symbol",
+      "outsideElevation": true
     }
   ],
   "text": [
     {
       "name": "noto_sans/display/bold",
-      "duplicatePublished": 3
+      "duplicatePublished": 3,
+      "observed": [
+        "16px Bold"
+      ]
     },
     {
-      "name": "noto_sans/heading/bold"
+      "name": "noto_sans/heading/bold",
+      "observed": [
+        "16px Bold"
+      ]
     },
     {
       "name": "noto_sans/title/medium",
       "duplicatePublished": 6,
-      "sample": "Noto Sans KR Medium 16/18 · lineHeight 100 · letterSpacing 0"
+      "observed": [
+        "14px Medium",
+        "16px Medium",
+        "18px Medium"
+      ],
+      "note": "조회한 노드마다 크기가 다릅니다 — 같은 이름의 스타일이 여러 개 published 돼 있습니다"
     },
     {
       "name": "noto_sans/boby/regular",
       "duplicatePublished": 4,
       "typo": "boby → body",
-      "sample": "Noto Sans KR Regular 14 · lineHeight 100 · letterSpacing 0"
+      "observed": [
+        "12px Regular",
+        "14px Regular"
+      ]
+    },
+    {
+      "name": "noto_sans/caption/regular",
+      "observed": [
+        "12px Regular"
+      ]
     }
   ],
   "variables": {
     "float": [
       {
-        "name": "Radius/xs"
+        "name": "Radius/xs",
+        "value": 4,
+        "evidence": "get_variable_defs 42764:36974 (Radius ✅ 프레임)"
       },
       {
         "name": "Radius/sm",
-        "value": 8
+        "value": 8,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
       },
       {
-        "name": "Radius/md"
+        "name": "Radius/md",
+        "value": 10,
+        "evidence": "get_variable_defs 42764:36974"
       },
       {
-        "name": "Radius/lg"
+        "name": "Radius/lg",
+        "value": 12,
+        "evidence": "Radius 페이지 스케일 표 라벨 — 4·8·10·12·16·20 순서상 lg 자리"
       },
       {
         "name": "Radius/xl",
-        "value": 16
+        "value": 16,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
       },
       {
         "name": "Radius/xxl",
-        "value": 20
+        "value": 20,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
       },
       {
-        "name": "Radius/full"
+        "name": "Radius/full",
+        "value": "원형",
+        "evidence": "R-1 결정의 7단계 중 마지막. 값은 미실측"
       }
     ],
     "color": [
@@ -432,12 +500,93 @@
         "value": "0"
       }
     ],
-    "note": "Radius 는 숫자 스케일이 아니라 t-shirt size 7단계입니다. xs·md·lg·full 값은 아직 실측하지 않았습니다."
+    "note": "Radius 는 t-shirt size 7단계입니다. 값 6종은 실측·라벨로 확정했고 full 만 미실측입니다. 각 단계의 용도는 Radius 페이지 라벨에 있습니다 — 4 버튼 xsmall · 8 버튼/Input/info_box · 10 (As-is에서) 기본 · 12 카드 · 16 카드 · 20 모달 팝업.",
+    "radiusUsage": {
+      "4": "버튼 xsmall",
+      "8": "버튼 · Input · info_box",
+      "10": "(As-is에서) 기본",
+      "12": "카드",
+      "16": "카드",
+      "20": "모달 팝업"
+    }
   },
   "counts": {
     "fill": 60,
-    "effect": 8,
-    "textNames": 4,
+    "effect": 16,
+    "textNames": 5,
     "radiusSteps": 7
+  },
+  "effectNote": "Elevation_1~6 외에 그림자·블러 효과가 9종 더 있습니다. Bottom Sheet 계열만 4종이고 그중 둘은 대소문자만 다릅니다.",
+  "pages": {
+    "$description": "✅ 페이지 본문에서 직접 읽은 정의. 등록된 스타일만 봐서는 안 보이는 것들입니다.",
+    "foundation": {
+      "node": "42066:25435",
+      "요소": [
+        "Color",
+        "Typography",
+        "Spacing",
+        "Icon"
+      ],
+      "정의": "디자인 시스템을 구성하는 가장 기본적인 재료. 각 요소는 서로 종속되지 않고 각자의 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않습니다."
+    },
+    "spacing": {
+      "node": "43242:4209",
+      "기본단위": "2px",
+      "표": "Spacing scale · 1 unit = 2px",
+      "행수": 14,
+      "값": [
+        0,
+        2,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        40,
+        44,
+        48,
+        52
+      ],
+      "원본이름중복": [
+        [
+          "Spacing_700",
+          "24px·28px"
+        ],
+        [
+          "Spacing_900",
+          "40px·44px"
+        ],
+        [
+          "Spacing_1000",
+          "48px·52px"
+        ]
+      ]
+    },
+    "layout": {
+      "node": "43185:36342",
+      "화면": {
+        "ios": "375×812",
+        "aos/web": "360×800"
+      },
+      "마진": "좌·우·상단 20px 통일",
+      "하단마진": {
+        "ios": "0px — 홈 인디케이터 자동 노출·숨김 대응",
+        "aos/web": "20px — 홈 인디케이터가 없음"
+      },
+      "헤더": "하단 1px 라인 기본 포함",
+      "홈인디케이터": "34px",
+      "영역": [
+        "Header area",
+        "Contents area",
+        "Buttons area"
+      ],
+      "버튼동작": [
+        "스티키 — 콘텐츠와 함께 스크롤",
+        "픽스 — 화면에 고정"
+      ]
+    }
   }
 }
