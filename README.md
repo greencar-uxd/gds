@@ -62,9 +62,9 @@
 
 정본을 옮겨 적는 것이 아니라, **✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것**이 이 저장소의 일입니다. `data/gds-gaps.json` 에 기록했고 `/gds/decisions` 에서 볼 수 있습니다.
 
-**29건 중 13건 해소 · 16건 남음**
+**29건 중 14건 해소 · 15건 남음**
 
-### 메운 것 13건
+### 메운 것 14건
 
 | | |
 |---|---|
@@ -79,13 +79,13 @@
 | `GAP-9` | `(X)` 폐기 표시 스타일 2종을 정본에서 제외 |
 | `GAP-11` | 반경 7단계 값 실측 |
 | **`GAP-1`·`GAP-2`·`GAP-3`** | **텍스트 스타일 21종 정의** — `data/typography-library.json`. 라이브러리 5종은 스타일이 아니라 **그룹**이었고 이름에 단계 번호가 빠져 충돌한 것이었습니다 |
+| **`GAP-27`** | **Rubik 은 정본에 없습니다** — `Typography system` ✅ 페이지 레이어 이름 3,492개 중 Rubik 0건. `TQ-6`(Noto Sans KR 단일) 유지, Picker 본문 쪽이 낡은 참조라 `SD-18` 로 기록 |
 
-### 남은 것 16건
+### 남은 것 15건
 
-| 높음 2건 | |
+| 높음 1건 | |
 |---|---|
-| `GAP-12` | **부분 해소** — 색은 프리미티브 60 + 시맨틱 11 로 2계층이 섰고 Layout 이 Guidelines 로 들어왔습니다. 간격·타이포의 시맨틱 계층은 아직 없습니다 |
-| `GAP-27` | 확정한 `TQ-6`(Noto Sans KR 단일)과 ✅ Picker 본문(「숫자는 Rubik」)이 어긋남 |
+| `GAP-12` | **부분 해소** — 색 60+11, 타이포 21+8, Layout 10 이 섰습니다. 남은 건 **간격의 시맨틱 계층**인데, `Spacing system` ✅ 표에는 Usage 열 자체가 없습니다(열 = Spacing · px · 배수). 없는 것을 지어내지 않고 남깁니다 |
 
 중간 9건 — 같은 값 두 이름 6쌍 · ODA 색이 Badge/Brand 로 분리 · 그림자 효과가 Elevation 밖에 9종 더 · Components 25개 중 실측 6개 · Icon 규칙이 두 곳으로 흩어짐 · ✅ 페이지끼리 AOS/Web 폭 불일치(360 vs 365) · ✅ 인데 미해결 메모가 남은 페이지 · Bottom sheet 정의가 Picker ✅ 안에 · **Title 8단계 중 2개가 라이브러리에 없음**
 
@@ -106,6 +106,28 @@
 굵기는 그룹이 결정하므로 이름에서 뺐습니다. 정의는 `data/typography-library.json`, 토큰에는 `$extensions.gds.libraryName`(차기) / `currentLibraryName`(현재)로 실립니다.
 
 값 중복·표기 변형·명도 역전은 **손으로 적지 않고 스크립트가 계산**합니다.
+
+### 타이포 시맨틱 — 쓰임새 13종 중 8종만 토큰
+
+`Type scale` ✅ 표에는 **Usage 열**이 붙어 있습니다. 그 열을 뒤집으면 «쓰임새 → 단계» 표가 되고, 그게 타이포의 시맨틱 계층입니다. `tools/build-typography-semantic.js` 가 계산합니다 — 이름을 손으로 짓지 않습니다.
+
+| | 쓰임새 | 정본 단계 |
+|---|---|---|
+| 토큰 | `Time picker_number` | Title 1 (24 / Medium) |
+| 토큰 | `Time picker_date` | Title 2 (22 / Medium) |
+| 토큰 | `Modal` | Title 3 |
+| 토큰 | `Top app bar` · `Button_label` · `Bottom sheet` | Title 5 |
+| 토큰 | `Bottom navigation_label` | Title 7 |
+| 토큰 | `Badge_label` | Title 8 |
+| 계열 | `Graphic` | Display 1~3 |
+| 계열 | `Contents_heading` | Heading 1~4 |
+| 계열 | `Contents_title` | Title 3 · 4 · 6 · 7 |
+| 계열 | `Contents_body` | Body 1~4 |
+| 계열 | `Contents_caption` | Caption 1~2 |
+
+**계열은 토큰으로 굳히지 않았습니다.** 정본이 여러 단계에 같은 쓰임새를 적어 두어, 그 중 어느 단계를 고를지에 대한 규칙이 정본에 없기 때문입니다. `$notes.typeSemantic.families` 로 남깁니다.
+
+출력은 `--gds-type-semantic-<쓰임새>-size|weight` (프리미티브를 `var()` 로 참조) 와 DTCG `semanticType` 블록입니다.
 
 ### GDS 4계층 구조 (`[Guidelines]` ✅ · `Getting started` ✅)
 
@@ -269,6 +291,7 @@ npm run check    # 정본·결정·산출물 기계 대조 (167개 항목)
 | `data/gds-structure.json` | GDS 4계층 구조 + 항목별 Figma/저장소 반영 상태 |
 | `data/layout-tokens.json` | Layout 토큰 (Guidelines 계층) |
 | `data/typography-library.json` | 차기 라이브러리 텍스트 스타일 21종 (생성물) |
+| `data/typography-semantic.json` | 타이포 시맨틱 — 토큰 8 · 계열 5 (생성물) |
 | `docs/GDS-uiux-guide.md` | UX 라이팅 규칙 + 그래픽 3단계 (생성물) |
 | `docs/GDS-typo-v0.2.md` | 타이포 정리안 |
 
