@@ -849,6 +849,72 @@ function semantic(){
   ${footer()}`;
 }
 
+/* ───────── 컴포넌트 ───────── */
+function comp(){
+  const K=C.components;
+  if(!K) return `<div class="pagehead"><p class="eyebrow">Components</p><h1>Components</h1>
+    <p class="lead">아직 실리지 않았습니다.</p></div>${footer()}`;
+  const mark=f=>f==='done'?'✅':f==='wip'?'🚧':'—';
+  const doc=K.items.filter(i=>i.documented);
+  // 표/목록을 만드는 잔손질 — 원본에 있는 값만 씁니다.
+  const li=(t,v)=>v?`<div class="sprow" style="grid-template-columns:150px 1fr"><div class="tok">${esc(t)}</div><div class="muted">${v}</div></div>`:'';
+  const kv=o=>Object.entries(o||{}).map(([k,v])=>li(k,esc(String(v)))).join('');
+  const kinds=ks=>!ks?'':`<table class="ctr"><thead><tr><th>종류</th><th>정의 · 스펙</th></tr></thead><tbody>
+    ${ks.map(k=>{const {name,...rest}=k;
+      const body=Object.entries(rest).filter(([kk])=>kk!=='no'&&kk!=='id'&&kk!=='node')
+        .map(([kk,vv])=>`<b>${esc(kk)}</b> ${Array.isArray(vv)?vv.map(x=>esc(typeof x==='string'?x:(x.name||JSON.stringify(x)))).join(' · '):esc(String(vv))}`)
+        .join('<br>');
+      return `<tr><td><b>${esc(name||k.id||'')}</b></td><td class="muted">${body}</td></tr>`}).join('')}
+    </tbody></table>`;
+  return `<div class="pagehead"><p class="eyebrow">Components</p><h1>Components</h1>
+  <p class="lead">✅ <b>[Components]</b> 구조도가 세는 ${K.counts.total}종입니다.
+  원본이 아직 안 그린 것은 저장소가 지어내지 않습니다 — <b>«원본 대기»</b>로 남깁니다.</p></div>
+  ${pmeta({basis:'[Components] ✅ 구조도 + 각 컴포넌트 ✅ 페이지 실측',
+    tokens:`실측 ${K.counts.documented}종 · ✅ 중 ${K.counts.documentedOfDone}/${K.counts.figmaDone}`})}
+  <div class="stat">
+    <div><b>${K.counts.total}</b><span>구조도 전체</span></div>
+    <div><b>${K.counts.figmaDone}</b><span>Figma ✅</span></div>
+    <div><b>${K.counts.documented}</b><span>저장소 실측</span></div>
+    <div><b>${K.counts.wip+K.counts.notStarted}</b><span>원본 대기</span></div>
+  </div>
+  ${K.counts.doneButUndocumented.length
+    ? `<div class="note warn"><p><b>✅ 인데 저장소에 없는 것 ${K.counts.doneButUndocumented.length}종</b> —
+       ${K.counts.doneButUndocumented.map(n=>esc(n)).join(' · ')}. 우리 숙제입니다.</p></div>`
+    : `<div class="note"><p><b>✅ 페이지는 전부 저장소에 있습니다.</b>
+       남은 ${K.counts.wip+K.counts.notStarted}종은 원본이 아직 🚧 이거나 시작 전이라
+       저장소가 먼저 만들 수 없습니다 — 우리 누락이 아닙니다.</p></div>`}
+
+  <h2>목록</h2>
+  <table class="ctr"><thead><tr><th>컴포넌트</th><th>Figma</th><th>저장소</th><th>출처</th></tr></thead><tbody>
+  ${K.items.map(i=>`<tr><td>${i.documented?`<b>${esc(i.name)}</b>`:esc(i.name)}${i.ko?` <span class="muted">${esc(i.ko)}</span>`:''}</td>
+    <td>${mark(i.figma)}</td>
+    <td class="${i.documented?'':'no'}">${i.documented?'실측':'원본 대기'}</td>
+    <td class="muted">${i.node?`<code>${esc(String(i.node))}</code>`:''}</td></tr>`).join('')}
+  </tbody></table>
+
+  ${doc.map(i=>`
+  <h2 id="c-${esc(i.name.toLowerCase().replace(/\s+/g,'-'))}">${esc(i.name)}
+    <span class="muted" style="font-weight:400">${i.ko?esc(i.ko):''}</span></h2>
+  ${i.definition?`<p class="lead" style="font-size:15px">${esc(i.definition)}</p>`:''}
+  ${pmeta({source:i.node?`<code>${esc(String(i.node))}</code>`:'', basis:`Figma ${mark(i.figma)}`})}
+  ${kinds(i.kinds)}
+  ${i.anatomy?`<h3 class="tocable">구조</h3><p class="muted">${Array.isArray(i.anatomy)?i.anatomy.map(x=>esc(x)).join(' · '):esc(i.anatomy)}</p>`:''}
+  ${i.specs?`<h3 class="tocable">치수</h3><div>${kv(i.specs)}</div>`:''}
+  ${i.states?`<h3 class="tocable">상태</h3><table class="ctr"><thead><tr><th>상태</th><th>값</th></tr></thead><tbody>
+    ${i.states.map(st=>{const {name,...rest}=st;return `<tr><td><b>${esc(name)}</b></td><td class="muted">${Object.entries(rest).map(([k,v])=>`${esc(k)} ${esc(String(v))}`).join(' · ')}</td></tr>`}).join('')}
+    </tbody></table>`:''}
+  ${i.colors?`<h3 class="tocable">컬러</h3><table class="ctr"><thead><tr><th>값</th><th>쓰임</th></tr></thead><tbody>
+    ${i.colors.map(c2=>`<tr><td><code>${esc(c2.value)}</code></td><td class="muted">${esc(c2['쓰임']||'')}</td></tr>`).join('')}
+    </tbody></table>`:''}
+  ${i.spacing?`<h3 class="tocable">간격 주석 ${i.spacing.annotations}건</h3>
+    <p class="muted">✅ 페이지에서 기계로 읽은 값입니다 — 이름이 붙어 있지 않아 토큰으로 만들지 않았습니다.</p>
+    <div class="chips">${i.spacing.values.map(v=>`<span class="tok" style="border:1px solid var(--line);border-radius:7px;padding:3px 9px">${v.value}px <span class="muted">×${v.count}</span></span>`).join(' ')}</div>`:''}
+  ${i.openMemos?`<div class="note warn"><p><b>✅ 인데 미해결 메모가 남아 있습니다.</b><br>
+    ${i.openMemos.map(m=>esc(m)).join('<br>')}</p></div>`:''}
+  `).join('')}
+  ${footer()}`;
+}
+
 /* ───────── 진행 상태 ───────── */
 function status(){
   const rows=[
@@ -910,7 +976,7 @@ function bindTabs(){
     });
   });
 }
-const V={start,color,type,space,radius,elev,layout,semantic,status};
+const V={start,color,type,space,radius,elev,layout,semantic,comp,status};
 
 /* 2단 네비 — 최상위는 가로(topnav), 사이드바는 «지금 섹션 안»만 그립니다.
    컴포넌트가 25종 들어와도 사이드바 길이가 늘지 않습니다. */
@@ -920,6 +986,7 @@ const NAV=[
                              ['radius','Radius'],['elev','Elevation']]},
   {sec:'Semantic',    items:[['semantic','Tokens']]},
   {sec:'Guidelines',  items:[['layout','Layout']]},
+  {sec:'Components',  items:[['comp','Components']]},
   {sec:'Reference',   items:[['status','Status']]},
 ];
 const SEC_OF={}; NAV.forEach(g=>g.items.forEach(([k])=>SEC_OF[k]=g.sec));
