@@ -37,7 +37,7 @@ pip install fonttools brotli --break-system-packages
 cd <저장소 루트>
 node -e '
 const fs=require("fs");let t="";
-for(const f of ["dist/index.html","dist/diagnostics.html","dist/decisions/index.html","dist/haptic/index.html"])
+for(const f of ["dist/index.html","dist/diagnostics.html","dist/decisions/index.html"])
   t+=fs.readFileSync(f,"utf8");
 const cur=new Set([...fs.readFileSync("assets/fonts/coverage.txt","utf8")]);
 for(const c of t) cur.add(c);
