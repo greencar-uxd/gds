@@ -45,6 +45,19 @@
       "status": "closed",
       "settledTitle": "레거시 동명 스타일은 안건이 아닙니다 — 정리 대상",
       "resolution": "해당 없음 — 레거시 텍스트 스타일은 정본으로 통폐합될 대상이므로 이름 충돌을 별도로 해결할 필요가 없습니다. 정본 21단계가 유일한 기준입니다. 강민관 전달 2026-08-04"
+    },
+    {
+      "id": "TQ-6",
+      "question": "Time picker 숫자를 어느 서체·크기로 갈 것인가",
+      "detail": "정본 ✅ Typography system 은 Title 1(Noto Sans KR Medium 24px)의 용도를 Time picker_number 로 잡고 있습니다. 그런데 디자인 시스템(정리중) 페이지에는 Rubik 50px Time Picker 가 Bold·Medium·Regular 3단계로 따로 정의돼 있고, 레거시 텍스트 스타일에도 rubik/Time Pickerㅣ50px 3개가 실재합니다. 24px 과 50px 은 2배 넘게 차이 나므로 같은 것을 가리킬 수 없습니다. 정본 폰트를 Noto Sans KR 단일로 확정한 결정과도 부딪힙니다.",
+      "options": [
+        "A — 정본 유지: Title 1(Noto Sans KR 24px)로 가고 Rubik 50px 3개는 폐기. 폰트 단일 확정과 일관되지만, 실제 시간 선택 화면의 숫자 크기가 줄어듭니다.",
+        "B — Rubik 예외 인정: 시간 표시 숫자에 한해 Rubik 50px 을 정본에 추가하고 폰트 단일 규칙에 예외를 명시. Gray 005 를 보조 단계 예외로 둔 선례가 있습니다.",
+        "C — 크기만 채택: 서체는 Noto Sans KR 로 통일하되 Time picker 전용 50px 단계를 신설. 현재 정본 최대가 24px 이라 새 단계가 필요합니다."
+      ],
+      "recommendation": "실제 화면(Elevation 적용 예시의 시간 선택 UI)에서 숫자가 50px 로 렌더되고 있습니다. 24px 로 줄이면 화면이 바뀌므로 A 는 디자인 변경을 수반합니다. 화면을 유지한다면 B 또는 C 이고, 폰트 단일 확정을 지키려면 C 입니다.",
+      "evidence": "✅ Type scale 표 43376:18436 · 정리중 40299:575 · 레거시 rubik/Time Pickerㅣ50px B·M·R",
+      "status": "open"
     }
   ],
   "lineHeight": {
