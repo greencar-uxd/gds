@@ -368,6 +368,14 @@
         "problem": "같은 색이 대소문자만 다른 이름으로 중복 — Gray Scale/Gray 040 과 Gray Scale/gray040 등",
         "actual": "Gray 000·005·010·020·030·040·060·080 이 각각 두 이름으로 존재",
         "impact": "색 감사의 표기 변형 충돌 8묶음과 같은 건입니다"
+      },
+      {
+        "id": "SD-16",
+        "node": "43376:18436 · 40299:575",
+        "where": "✅ Typography system Type scale 표 / 디자인 시스템(정리중) Time Picker",
+        "problem": "Time picker 숫자의 서체·크기가 두 곳에서 다르게 정의돼 있음 — 정본 표는 Title 1(Noto Sans KR Medium 24px, 용도 Time picker_number), 정리중 페이지와 레거시 스타일은 Rubik 50px 3단계",
+        "actual": "실제 시간 선택 화면은 50px 로 렌더",
+        "impact": "TQ-6 에서 서체는 Noto Sans KR, 크기는 정본 Title 1(24px)로 확정했으므로 구현 시 크기 조정이 따라옵니다"
       }
     ]
   }

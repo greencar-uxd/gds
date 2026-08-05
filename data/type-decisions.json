@@ -57,7 +57,9 @@
       ],
       "recommendation": "실제 화면(Elevation 적용 예시의 시간 선택 UI)에서 숫자가 50px 로 렌더되고 있습니다. 24px 로 줄이면 화면이 바뀌므로 A 는 디자인 변경을 수반합니다. 화면을 유지한다면 B 또는 C 이고, 폰트 단일 확정을 지키려면 C 입니다.",
       "evidence": "✅ Type scale 표 43376:18436 · 정리중 40299:575 · 레거시 rubik/Time Pickerㅣ50px B·M·R",
-      "status": "open"
+      "status": "closed",
+      "settledTitle": "Time picker 숫자도 Noto Sans KR 로 갑니다 — 정본 폰트 단일 유지",
+      "resolution": "A — 서체는 Noto Sans KR 단일. 강민관 확정 2026-08-05. Rubik 50px 3단계(B·M·R)와 레거시 rubik/Time Pickerㅣ50px 스타일은 정본에 편입하지 않습니다. 크기 축은 TQ-4 에서 이미 확정한 \"정본 21단계가 유일한 기준\" 원칙을 따라 Title 1(24px)을 씁니다. 실제 시간 선택 화면이 50px 로 렌더되고 있으므로 구현 시 크기 조정이 따라옵니다 — 이 차이는 sourceDefects SD-16 으로 기록합니다."
     },
     {
       "id": "TQ-7",
@@ -70,7 +72,9 @@
       ],
       "recommendation": "A. 정본 표가 이미 Auto 로 확정돼 있고 팀 합의도 났습니다. 다만 lineHeight 100 을 쓰던 자리는 줄간격이 넓어지므로, 영향 화면을 먼저 세어 보는 편이 안전합니다.",
       "evidence": "Type scale 표 43376:18436 (Auto 21행) · Buttons 참조 변수 43684:15337",
-      "status": "open"
+      "status": "closed",
+      "settledTitle": "행간은 Auto 를 유지합니다",
+      "resolution": "A — Auto 유지. 강민관 확정 2026-08-05. 정본 Type scale 표 21행 전부 Auto 이고 TQ-2 에서 이미 같은 방향으로 확정했습니다. Buttons 페이지 참조 변수의 세 방식(noto_sans/* lineHeight 100 · Text styles/* 고정 px · Noto Sans/* 배수 1.5)은 정본 기준으로 Auto 에 수렴시킵니다. 웹 내보내기는 line-height:normal."
     }
   ],
   "lineHeight": {
