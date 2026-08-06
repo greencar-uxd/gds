@@ -1,5 +1,5 @@
 'use strict';
-// ✅ Foundation 페이지에서 "정본" 정의를 읽어 data/foundation-data.json 에 canon 블록으로 병합합니다.
+// ✅ Foundation 페이지에서 "원본" 정의를 읽어 data/foundation-data.json 에 canon 블록으로 병합합니다.
 // 레거시 스타일(현황)과 달리, 여기 있는 값이 팀이 정의한 기준입니다.
 const { loadFig } = require('./kiwi');
 const fs = require('fs');
@@ -59,7 +59,7 @@ function texts(pageId) {
   return out;
 }
 
-// ---------- Spacing 정본 스케일 ----------
+// ---------- Spacing 원본 스케일 ----------
 // 표는 [토큰명][px][배수] 3열이 같은 행(y)에 놓입니다.
 const spTexts = texts(PAGES.spacing);
 const spacing = [];
@@ -89,7 +89,7 @@ const spacingRenamed = spacing.map((s, i) => ({
   moved: s.token !== `Spacing_${i === 0 ? 0 : i * 100}`,
 }));
 
-// ---------- Color 정본 팔레트 ----------
+// ---------- Color 원본 팔레트 ----------
 const colorTexts = texts(PAGES.color);
 const palette = colorTexts.filter(t => /^#[0-9A-Fa-f]{6}$/.test(t.t))
   .map(t => t.t.toUpperCase());
@@ -105,7 +105,7 @@ const hierarchy = {
 };
 const spacingDef = spTexts.find(t => /^Spacing\(스페이싱\)은/.test(t.t));
 
-// ---------- Typography 정본 스케일 ----------
+// ---------- Typography 원본 스케일 ----------
 // 표 한 행 = [토큰명] [굵기] [크기] [행간] [사용영역]
 const tyTexts = texts(PAGES.typo);
 const TOKEN_RE = /^(Display|Title|Body|Caption|Heading|Label)\s*\d+$/i;
@@ -173,7 +173,7 @@ for (const nd of nodes.values()) {
 }
 
 
-// ---------- 정본 스타일 이름 (Color system ✅ 페이지가 실제로 참조하는 스타일) ----------
+// ---------- 원본 스타일 이름 (Color system ✅ 페이지가 실제로 참조하는 스타일) ----------
 // 중복 정리에서 "어느 이름을 남길지"의 근거가 됩니다.
 const canonStyles = [];
 {
@@ -200,7 +200,7 @@ const canonStyles = [];
 
 // ---------- Elevation ----------
 // 07-23 스냅샷 이후 Figma 에서 재넘버링됨 (구 1~5 → 2~6, 신규 1 추가).
-// data/elevation-override.json 이 있으면 그것을 정본으로 씁니다.
+// data/elevation-override.json 이 있으면 그것을 원본으로 씁니다.
 // .fig 를 새로 내려받아 npm run extract 를 돌리면 override 를 지우고 원본 값을 쓰면 됩니다.
 let elevation = null;
 {
@@ -251,11 +251,11 @@ const D = JSON.parse(fs.readFileSync(DATA, 'utf8'));
 D.canon = canon;
 fs.writeFileSync(DATA, JSON.stringify(D));
 
-console.log('=== Spacing 정본 ===');
+console.log('=== Spacing 원본 ===');
 canon.spacing.scale.forEach(s => console.log(`  ${s.token.padEnd(14)} ${String(s.px + 'px').padStart(6)}  ${s.mul || ''}`));
 console.log(`\n원본 토큰명 충돌 ${spacingConflicts.length}건 → 재명명으로 해소`);
 console.log('=== 재명명 결과 ===');
 spacingRenamed.forEach(s => console.log(`  ${String(s.px + 'px').padStart(6)}  ${s.was.padEnd(14)} → ${s.token}${s.moved ? '  [변경]' : ''}`));
 if (elevation) console.log(`\n=== Elevation ===\n  ${elevation.scale.length}단계 (재넘버링 반영: ${elevation.renumbered ? '예' : '아니오'})`);
-console.log(`\n=== Color 정본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개 · 참조 스타일 ${canonStyles.length}개`);
+console.log(`\n=== Color 원본 ===\n  HEX 라벨 ${palette.length}개 · 고유 ${paletteUniq.length}개 · 참조 스타일 ${canonStyles.length}개`);
 console.log(`\ndata/foundation-data.json 에 canon 블록 병합 완료`);
