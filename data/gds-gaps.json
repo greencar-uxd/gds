@@ -232,7 +232,19 @@
       "severity": "중간",
       "finding": "그림자·블러 효과가 Elevation_1~6 말고도 9종 더 있습니다. Bottom Sheet 계열만 4종이고 그중 «Bottom Sheet»(3겹)와 «bottom sheet»(1겹)는 대소문자만 다른 별개 스타일입니다.",
       "evidence": "Typography ✅ · Radius · Border ✅ 프레임 변수 조회 — Bottom Sheet · bottom sheet · Bottom Sheet shadow · Bottom Floating Button · Frosted Glass · level/gold/circle-outter · circle-inner · symbol",
-      "fix": "Elevation 체계 안으로 흡수할 것과 별개 효과 그룹으로 뺄 것을 가릅니다. 대소문자 중복 2종은 하나로 합쳐야 합니다."
+      "fix": "Elevation 체계 안으로 흡수할 것과 별개 효과 그룹으로 뺄 것을 가릅니다. 대소문자 중복 2종은 하나로 합쳐야 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — «Elevation 이 아니면 무엇인가»를 네 축으로 갈랐습니다 (tools/build-effects.js).\n· elevation 6 — 표면 높이 스케일 (--gds-elevation-*)\n· component 7 — 컴포넌트 전용 효과. 높이 스케일이 아니라서 Elevation 에 넣으면 안 됩니다.\n· material 1 — Frosted Glass 는 그림자가 아니라 블러입니다. 다른 축입니다.\n· deprecated 2 — 원본이 (X) 로 표시한 것. 정본에서 제외.\n판정은 이름과 값에서 읽히는 것만으로 합니다 — Elevation_N / as-is_·(X) / BACKGROUND_BLUR / 나머지.\n값이 측정된 것 3종을 --gds-effect-* 로 내보냅니다(Bottom Sheet shadow · Bottom Floating Button · Frosted Glass).\n나머지 level/gold/* 3종은 값이 아직 측정되지 않아 «미측정»으로 남깁니다.\n대소문자 충돌 «Bottom Sheet»/«bottom sheet» 는 값이 서로 달라 합칠 수 없습니다 — GAP-31 로 뗐습니다.",
+      "counts": {
+        "total": 16,
+        "elevation": 6,
+        "component": 7,
+        "material": 1,
+        "deprecated": 2,
+        "emitted": 3,
+        "blocked": 2,
+        "unmeasured": 4
+      }
     },
     {
       "id": "GAP-16",
@@ -373,6 +385,17 @@
       "fix": "두 갈래입니다. (1) 스케일 밖 값이 실제 화면 규격이면 스케일에 단계를 늘리거나 가장 가까운 단계로 맞춥니다. (2) 문서 캔버스의 배치 여백(Description area 의 42 · 80 · 190px 등)이면 제품 간격이 아니므로 조사에서 걸러야 합니다. 어느 쪽인지는 항목별로 봐야 합니다.",
       "status": "open",
       "note": "조사 방법의 한계도 함께 적습니다 — 치수 말풍선 17건은 컴포넌트 인스턴스라 라벨 숫자가 metadata 에 나오지 않아 값으로 세지 않았습니다."
+    },
+    {
+      "id": "GAP-31",
+      "area": "엘리베이션",
+      "severity": "중간",
+      "finding": "«Bottom Sheet»(3겹)와 «bottom sheet»(1겹)는 대소문자만 다른 이름인데 값이 서로 다릅니다. 토큰 키가 --gds-effect-bottom-sheet 하나로 겹치므로 둘 다 내보낼 수 없습니다.",
+      "evidence": "data/effects.json caseCollisions — Bottom Sheet «3겹 #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0» vs bottom sheet «#00000026 0/1/2/0»",
+      "fix": "어느 값이 실제 Bottom sheet 의 그림자인지 원본에서 확인하고 하나를 남깁니다. 둘 다 쓰이는 자리가 다르면 이름을 갈라야 합니다(예: bottom-sheet / bottom-sheet-inner). 값이 다르므로 «오타 중복»으로 합칠 수 없습니다.",
+      "status": "open",
+      "blocking": "정해질 때까지 두 토큰 모두 내보내지 않습니다 — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.",
+      "note": "Bottom sheet 는 원본이 아직 🚧 입니다(GAP-28 과 같은 컴포넌트)."
     }
   ],
   "note": "✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16). 등록된 스타일 목록만으로는 안 보이던 것들입니다."
