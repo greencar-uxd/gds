@@ -9,11 +9,58 @@
     "documentedOfDone": 6,
     "wip": 11,
     "notStarted": 8,
-    "doneButUndocumented": []
+    "doneButUndocumented": [],
+    "styleRefs": 1,
+    "styleRefsDangling": 1
   },
+  "styleRefs": [
+    {
+      "component": "bottomSheet",
+      "node": "42073:63438 (Picker ✅ 페이지 안) · Bottom sheet 🚧",
+      "quoted": "Elevation_Bottom sheet 사용",
+      "name": "Elevation_Bottom sheet",
+      "resolved": false,
+      "candidates": [
+        {
+          "name": "as-is_Shadow/(X)Bottom Sheet",
+          "axis": "deprecated",
+          "value": null,
+          "css": null,
+          "blocked": null
+        },
+        {
+          "name": "Bottom Sheet",
+          "axis": "component",
+          "value": "3겹 — #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0",
+          "css": "0px 4px 8px 3px rgba(0, 0, 0, 0.149), 0px 1px 3px 0px rgba(0, 0, 0, 0.302), 0px 0px 6px 0px rgba(0, 0, 0, 0.149)",
+          "blocked": "토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)"
+        },
+        {
+          "name": "bottom sheet",
+          "axis": "component",
+          "value": "#00000026 0/1/2/0",
+          "css": "0px 1px 2px 0px rgba(0, 0, 0, 0.149)",
+          "blocked": "토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)"
+        },
+        {
+          "name": "Bottom Sheet shadow",
+          "axis": "component",
+          "value": "#00000033 0/0/6/0",
+          "css": "0px 0px 6px 0px rgba(0, 0, 0, 0.2)",
+          "blocked": null
+        }
+      ],
+      "live": 3,
+      "deprecated": [
+        "as-is_Shadow/(X)Bottom Sheet"
+      ],
+      "why": "«Elevation_Bottom sheet» 라는 이름의 스타일이 라이브러리에 없습니다. 이름이 겹치는 것 4종이 후보입니다."
+    }
+  ],
   "items": [
     {
       "name": "Buttons",
+      "key": "buttons",
       "sourceName": "Buttons",
       "ko": "버튼",
       "figma": "done",
@@ -160,6 +207,7 @@
     },
     {
       "name": "Modal",
+      "key": "modal",
       "sourceName": "Modal",
       "ko": "모달",
       "figma": "done",
@@ -237,6 +285,7 @@
     },
     {
       "name": "Checkbox",
+      "key": "checkbox",
       "sourceName": "Check box",
       "ko": "체크박스",
       "figma": "done",
@@ -290,6 +339,7 @@
     },
     {
       "name": "Bottom navigation",
+      "key": "bottomNavigation",
       "sourceName": "Bottom navigation",
       "ko": "바텀 네비게이션",
       "figma": "done",
@@ -344,6 +394,7 @@
     },
     {
       "name": "Picker",
+      "key": "picker",
       "sourceName": "Picker",
       "ko": "피커",
       "figma": "done",
@@ -410,6 +461,7 @@
     },
     {
       "name": "Border",
+      "key": "border",
       "sourceName": "Border",
       "ko": "보더",
       "figma": "done",
@@ -454,6 +506,7 @@
     },
     {
       "name": "Bottom sheet",
+      "key": "bottomSheet",
       "sourceName": "Bottom sheet",
       "ko": "바텀시트",
       "figma": "wip",
@@ -471,6 +524,7 @@
     },
     {
       "name": "Input",
+      "key": null,
       "sourceName": "Input",
       "ko": null,
       "figma": "wip",
@@ -488,6 +542,7 @@
     },
     {
       "name": "Switch",
+      "key": null,
       "sourceName": "Switch",
       "ko": null,
       "figma": "none",
@@ -505,6 +560,7 @@
     },
     {
       "name": "Selection box",
+      "key": null,
       "sourceName": "Selection box",
       "ko": null,
       "figma": "wip",
@@ -522,6 +578,7 @@
     },
     {
       "name": "Radio",
+      "key": null,
       "sourceName": "Radio",
       "ko": null,
       "figma": "none",
@@ -539,6 +596,7 @@
     },
     {
       "name": "Accordion",
+      "key": null,
       "sourceName": "Accordion",
       "ko": null,
       "figma": "none",
@@ -556,6 +614,7 @@
     },
     {
       "name": "Tap app bar",
+      "key": null,
       "sourceName": "Tap app bar",
       "ko": null,
       "figma": "wip",
@@ -573,6 +632,7 @@
     },
     {
       "name": "Tap",
+      "key": null,
       "sourceName": "Tap",
       "ko": null,
       "figma": "wip",
@@ -590,6 +650,7 @@
     },
     {
       "name": "Smart key",
+      "key": null,
       "sourceName": "Smart key",
       "ko": null,
       "figma": "wip",
@@ -607,6 +668,7 @@
     },
     {
       "name": "Tip",
+      "key": null,
       "sourceName": "Tip",
       "ko": null,
       "figma": "wip",
@@ -624,6 +686,7 @@
     },
     {
       "name": "Bage",
+      "key": null,
       "sourceName": "Bage",
       "ko": null,
       "figma": "wip",
@@ -641,6 +704,7 @@
     },
     {
       "name": "Process bar",
+      "key": null,
       "sourceName": "Process bar",
       "ko": null,
       "figma": "none",
@@ -658,6 +722,7 @@
     },
     {
       "name": "Toast",
+      "key": null,
       "sourceName": "Toast",
       "ko": null,
       "figma": "wip",
@@ -675,6 +740,7 @@
     },
     {
       "name": "Card",
+      "key": null,
       "sourceName": "Card",
       "ko": null,
       "figma": "none",
@@ -692,6 +758,7 @@
     },
     {
       "name": "Skeleton",
+      "key": null,
       "sourceName": "Skeleton",
       "ko": null,
       "figma": "none",
@@ -709,6 +776,7 @@
     },
     {
       "name": "Loading spinner",
+      "key": null,
       "sourceName": "Loading spinner",
       "ko": null,
       "figma": "none",
@@ -726,6 +794,7 @@
     },
     {
       "name": "Table",
+      "key": null,
       "sourceName": "Table",
       "ko": null,
       "figma": "none",
@@ -743,6 +812,7 @@
     },
     {
       "name": "Pasing",
+      "key": null,
       "sourceName": "Pasing",
       "ko": null,
       "figma": "wip",
@@ -760,6 +830,7 @@
     },
     {
       "name": "Numbering",
+      "key": null,
       "sourceName": "Numbering",
       "ko": null,
       "figma": "wip",

@@ -378,7 +378,10 @@
       "severity": "중간",
       "finding": "Bottom sheet 의 정의·구조·Action 종류가 Bottom sheet 페이지(🚧)가 아니라 Picker ✅ 페이지 안에 들어 있습니다.",
       "evidence": "Picker ✅ 42073:63438 본문 — Bottom Sheet 정의 · Top/Body/Action 구조 · Elevation_Bottom sheet 사용",
-      "fix": "저장소는 Picker ✅ 안의 정의를 Bottom sheet 근거로 삼고, Bottom sheet 페이지가 ✅ 가 되면 대조합니다. GAP-15 의 Bottom Sheet 효과 4종 중 어느 것이 이 \"Elevation_Bottom sheet\" 인지도 함께 확인해야 합니다."
+      "fix": "저장소는 Picker ✅ 안의 정의를 Bottom sheet 근거로 삼고, Bottom sheet 페이지가 ✅ 가 되면 대조합니다. GAP-15 의 Bottom Sheet 효과 4종 중 어느 것이 이 \"Elevation_Bottom sheet\" 인지도 함께 확인해야 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 정의가 어느 페이지에 적혀 있든 근거는 ✅ 이므로, Picker ✅ 안의 Bottom sheet 절을 정본으로 삼고 Components 페이지에 정의·사용조건·구조(Top/Body/Action)·Action 종류까지 실었습니다. 출처는 «Picker ✅ 페이지 안»으로 그대로 밝힙니다. Bottom sheet 페이지가 ✅ 가 되면 대조합니다.",
+      "spinoff": "함께 확인하라던 «Elevation_Bottom sheet 가 4종 중 어느 것인가»는 답이 «넷 다 아님» 이었습니다 — 그런 이름의 스타일이 라이브러리에 아예 없습니다(SD-20). 컴포넌트 본문이 지목한 스타일 이름을 라이브러리와 대조하는 검사를 새로 만들어 잡았습니다(tools/build-components.js styleRefs). 이름이 겹치는 후보 4종(살아있는 것 3종)을 값과 함께 페이지에 싣되 하나를 고르지 않았습니다 — 어느 것인지는 GAP-31 에서 정합니다."
     },
     {
       "id": "GAP-29",
@@ -405,6 +408,7 @@
       "finding": "«Bottom Sheet»(3겹)와 «bottom sheet»(1겹)는 대소문자만 다른 이름인데 값이 서로 다릅니다. 토큰 키가 --gds-effect-bottom-sheet 하나로 겹치므로 둘 다 내보낼 수 없습니다.",
       "evidence": "data/effects.json caseCollisions — Bottom Sheet «3겹 #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0» vs bottom sheet «#00000026 0/1/2/0»",
       "fix": "어느 값이 실제 Bottom sheet 의 그림자인지 원본에서 확인하고 하나를 남깁니다. 둘 다 쓰이는 자리가 다르면 이름을 갈라야 합니다(예: bottom-sheet / bottom-sheet-inner). 값이 다르므로 «오타 중복»으로 합칠 수 없습니다.",
+      "progress": "부분 — GAP-28 을 풀다가 범위가 넓어졌습니다. Bottom sheet 컴포넌트 본문은 «Elevation_Bottom sheet» 를 쓰라고 적는데 그런 이름의 스타일이 없습니다(SD-20). 그래서 정할 것이 «Bottom Sheet vs bottom sheet» 둘 중 하나가 아니라, 살아있는 후보 3종 중 하나입니다 — Bottom Sheet(3겹 0/4/8/3 + 0/1/3/0 + 0/0/6/0) · bottom sheet(1겹 0/1/2/0) · Bottom Sheet shadow(1겹 0/0/6/0). 후보와 값은 Components 페이지 Bottom sheet 절에 실려 있습니다.",
       "status": "open",
       "blocking": "정해질 때까지 두 토큰 모두 내보내지 않습니다 — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.",
       "note": "Bottom sheet 는 원본이 아직 🚧 입니다(GAP-28 과 같은 컴포넌트)."
