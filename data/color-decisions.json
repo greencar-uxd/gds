@@ -377,7 +377,17 @@
         "where": "Bottom sheet 정의 본문 — 엘리베이션 표기",
         "problem": "본문이 «Elevation_Bottom sheet 사용» 이라고 적지만, 그런 이름의 EFFECT 스타일이 라이브러리에 없습니다. Elevation_ 접두어를 가진 것은 Elevation_1~6 뿐입니다.",
         "actual": "이름이 겹치는 스타일 4종이 있습니다 — as-is_Shadow/(X)Bottom Sheet(폐기) · Bottom Sheet(3겹) · bottom sheet(1겹) · Bottom Sheet shadow(1겹). 살아있는 후보는 3종이며, 값이 서로 다릅니다.",
-        "impact": "가리키는 곳에 실물이 없는 참조입니다 — SD-18 과 같은 종류. 어느 것을 쓰라는 뜻인지 정해질 때까지 Bottom sheet 의 엘리베이션 토큰은 나가지 않습니다(GAP-31). 정의·구조 자체는 그대로 정본으로 삼습니다 — GAP-28 해소 근거"
+        "impact": "가리키는 곳에 실물이 없는 참조입니다 — SD-18 과 같은 종류. 본문이 가리키려던 것은 «Bottom Sheet»(3겹)로 확정됐습니다(강민관 2026-08-06, data/effect-decisions.json). 저장소는 그 확정으로 참조를 이어 붙이고, ④ 단계에서 원본 표기를 «Bottom Sheet» 로 고칩니다 — GAP-28 · GAP-31 해소 근거",
+        "resolvedAt": "2026-08-06"
+      },
+      {
+        "id": "SD-21",
+        "node": "라이브러리 EFFECT 스타일",
+        "where": "«bottom sheet» (소문자) 스타일",
+        "problem": "«Bottom Sheet» 와 대소문자만 다른 이름인데 값이 다릅니다 — 1겹 #00000026 0/1/2/0 (정본은 3겹).",
+        "actual": "정본 바텀시트 그림자는 «Bottom Sheet»(3겹)로 확정됐습니다. 이 소문자 스타일이 어느 자리에 쓰이는지는 원본 어디에도 적혀 있지 않습니다.",
+        "impact": "토큰으로 나가지 않습니다. 값이 달라 «오타 중복»으로 합칠 수 없고, 쓰임을 모르므로 새 이름을 지어낼 수도 없습니다. ④ 단계에서 «쓰이는 자리를 확인해 이름을 갈랐다가, 안 쓰이면 폐기» 로 처리할 후보입니다",
+        "styleName": "bottom sheet"
       }
     ]
   },

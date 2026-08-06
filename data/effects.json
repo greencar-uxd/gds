@@ -46,10 +46,57 @@
       "names": [
         "Bottom Sheet",
         "bottom sheet"
-      ]
+      ],
+      "resolved": true,
+      "winner": "Bottom Sheet",
+      "reason": "바텀시트의 실제 그림자는 3겹입니다 (강민관 확정 2026-08-06). --gds-effect-bottom-sheet 는 이 값으로 나갑니다.",
+      "loser": {
+        "name": "bottom sheet",
+        "value": "#00000026 0/1/2/0",
+        "handling": "정본 키를 내주고 토큰으로 나가지 않습니다. 값이 달라 «오타 중복»으로 합칠 수 없고, 어느 자리에 쓰이는지가 원본에 적혀 있지 않아 새 이름을 지어낼 수도 없습니다 — SD-21 로 기록합니다."
+      },
+      "decidedBy": "강민관",
+      "decidedAt": "2026-08-06"
     }
   ],
+  "decisions": {
+    "$description": "효과 스타일 확정 결정. 원본은 고치지 않고 추출 결과 위에 덮어씁니다 — 색·타이포 결정과 같은 방식입니다.",
+    "decidedBy": "강민관",
+    "decidedAt": "2026-08-06",
+    "keyCollisions": [
+      {
+        "key": "bottom-sheet",
+        "names": [
+          "Bottom Sheet",
+          "bottom sheet"
+        ],
+        "winner": "Bottom Sheet",
+        "winnerValue": "3겹 — #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0",
+        "reason": "바텀시트의 실제 그림자는 3겹입니다 (강민관 확정 2026-08-06). --gds-effect-bottom-sheet 는 이 값으로 나갑니다.",
+        "loser": {
+          "name": "bottom sheet",
+          "value": "#00000026 0/1/2/0",
+          "handling": "정본 키를 내주고 토큰으로 나가지 않습니다. 값이 달라 «오타 중복»으로 합칠 수 없고, 어느 자리에 쓰이는지가 원본에 적혀 있지 않아 새 이름을 지어낼 수도 없습니다 — SD-21 로 기록합니다."
+        },
+        "status": "confirmed"
+      }
+    ],
+    "styleRefs": [
+      {
+        "component": "bottomSheet",
+        "quoted": "Elevation_Bottom sheet 사용",
+        "resolvesTo": "Bottom Sheet",
+        "reason": "그 이름의 스타일은 라이브러리에 없습니다(SD-20). 본문이 가리키려던 것은 «Bottom Sheet» 입니다 — 강민관 확정 2026-08-06.",
+        "status": "confirmed"
+      }
+    ]
+  },
   "emitted": [
+    {
+      "key": "bottom-sheet",
+      "name": "Bottom Sheet",
+      "css": "0px 4px 8px 3px rgba(0, 0, 0, 0.149), 0px 1px 3px 0px rgba(0, 0, 0, 0.302), 0px 0px 6px 0px rgba(0, 0, 0, 0.149)"
+    },
     {
       "key": "bottom-sheet-shadow",
       "name": "Bottom Sheet shadow",
@@ -209,8 +256,12 @@
       "css": "0px 4px 8px 3px rgba(0, 0, 0, 0.149), 0px 1px 3px 0px rgba(0, 0, 0, 0.302), 0px 0px 6px 0px rgba(0, 0, 0, 0.149)",
       "key": "bottom-sheet",
       "note": null,
-      "emit": false,
-      "blocked": "토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)"
+      "emit": true,
+      "decided": {
+        "reason": "바텀시트의 실제 그림자는 3겹입니다 (강민관 확정 2026-08-06). --gds-effect-bottom-sheet 는 이 값으로 나갑니다.",
+        "decidedBy": "강민관",
+        "decidedAt": "2026-08-06"
+      }
     },
     {
       "name": "bottom sheet",
@@ -232,7 +283,12 @@
       "key": "bottom-sheet",
       "note": "«Bottom Sheet» 와 대소문자만 다릅니다",
       "emit": false,
-      "blocked": "토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)"
+      "blocked": "«Bottom Sheet» 이 이 키를 씁니다 — 정본 키를 내주고 토큰으로 나가지 않습니다. 값이 달라 «오타 중복»으로 합칠 수 없고, 어느 자리에 쓰이는지가 원본에 적혀 있지 않아 새 이름을 지어낼 수도 없습니다 — SD-21 로 기록합니다.",
+      "decidedAgainst": {
+        "winner": "Bottom Sheet",
+        "decidedBy": "강민관",
+        "decidedAt": "2026-08-06"
+      }
     },
     {
       "name": "Bottom Sheet shadow",
