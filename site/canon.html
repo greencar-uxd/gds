@@ -812,9 +812,8 @@ function layout(){
     return `<div class="sprow" style="grid-template-columns:120px 110px 1fr">
       <div class="tok">${ko}</div>
       <div class="px">${v==null?'—':v+'px'}</div>
-      <div class="muted">${v==null
-        ? '<b>정해지지 않았습니다</b> — 아래 «막힌 토큰» 참고'
-        : '두 기준이 일치합니다'}</div></div>`;
+      <div class="muted">${v==null?'<b>정해지지 않았습니다</b>'
+        :(k==='ios'?'혼자 다른 폭입니다':'AOS 와 Web 은 같은 폭 — 토큰 하나를 함께 씁니다')}</div></div>`;
   }).join('')}</div>`:''}
   ${GRP.map(([g,ko])=>(L[g]||[]).length?`
     <h2>${ko}</h2>
