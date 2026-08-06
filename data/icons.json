@@ -1,0 +1,123 @@
+{
+  "$description": "아이콘 — Foundation 요소인데 규칙이 Guidelines 에, 치수가 컴포넌트 페이지에 흩어져 있던 것을 모은 것입니다.",
+  "generatedFrom": "tools/build-icons.js ← data/gds-library.json (uiuxGuide · components) · data/gds-structure.json",
+  "rule": "근거가 있는 것만 모읍니다. Icon system 페이지가 🚧 이므로 없는 것은 «없음 + 이유»로 남깁니다.",
+  "layerNote": {
+    "belongsTo": "Foundation",
+    "rulesLiveIn": "Guidelines — ✅ UI/UX guide",
+    "why": "아이콘을 가르는 기준이 Foundation 이 아니라 Guidelines 안에 있습니다. Icon system 페이지가 ✅ 가 되면 그때 대조합니다 (GAP-22).",
+    "figmaStatus": "wip",
+    "figmaNote": "Icon system 페이지는 🚧. 분류 기준(Lv.1~3)은 UI/UX guide ✅ 에 있습니다"
+  },
+  "classification": {
+    "source": "42066:27864 (UI/UX guide ✅)",
+    "scope": "마케팅에서 받은 심미적 콘텐츠 그래픽을 제외하고, 사용자 이용 여정(대여~반납) 화면에서 텍스트를 보조하고 UX 흐름을 지원하는 설명형 그래픽 요소.",
+    "levels": [
+      {
+        "lv": 1,
+        "name": "시스템 아이콘",
+        "구조": "단일 정보 구조 / 기능 수행 중심",
+        "예": "뒤로가기 · 메뉴 · 검색 · 알림"
+      },
+      {
+        "lv": 2,
+        "name": "커스텀 아이콘",
+        "구조": "설명 구조 포함(맥락 설명)",
+        "예": "상태 안내 아이콘 · 간단한 상황 표현"
+      },
+      {
+        "lv": 3,
+        "name": "일러스트",
+        "구조": "복합 구조(상황 + 행동 + 흐름)",
+        "예": "촬영 가이드 · 반납 절차 안내"
+      }
+    ],
+    "criteria": {
+      "선택": "이 화면에서 사용자가 무엇을 이해해야 하는가 — 정보 구조로 분류하고 맥락으로 선택",
+      "예외": "같은 외형이라도 정보 구조가 다르면 단계가 달라집니다",
+      "밀도": "밀도는 단계 선택 기준이 아니라 표현 강도 조절 — 빠른 인지는 저·중밀도, 이해 필요는 고밀도"
+    },
+    "principles": [
+      "문맥에 맞는 그래픽 — 꾸밈이 아니라 의미 이해를 돕는 역할",
+      "과도한 그래픽 밀도 자제",
+      "명확하고 단순한 2D 원칙. 3D(입체·아이소메트릭)는 일관성·확장성·유지보수 비효율로 지양",
+      "[이미지 + 텍스트]는 폰트를 임의로 변경하지 않음"
+    ],
+    "caution": "이 체계는 아이콘만이 아니라 그래픽 전체(일러스트 포함)를 가릅니다. Lv.1~2 가 아이콘, Lv.3 은 일러스트입니다."
+  },
+  "measured": [
+    {
+      "component": "checkbox",
+      "where": "본문",
+      "item": "체크아이콘",
+      "value": "9×12 통일",
+      "node": "42066:25441 (Checkbox ✅)"
+    },
+    {
+      "component": "bottomNavigation",
+      "where": "스펙",
+      "item": "아이콘",
+      "value": "32×32",
+      "node": "42073:50821 (Bottom navigation ✅)"
+    },
+    {
+      "component": "bottomNavigation",
+      "where": "스펙",
+      "item": "아이콘-레이블 간격",
+      "value": "4",
+      "node": "42073:50821 (Bottom navigation ✅)"
+    },
+    {
+      "component": "bottomNavigation",
+      "where": "스펙",
+      "item": "아이콘굵기",
+      "value": "1.5",
+      "node": "42073:50821 (Bottom navigation ✅)"
+    },
+    {
+      "component": "bottomNavigation",
+      "where": "상태 «Disabled (미선택)»",
+      "item": "아이콘색",
+      "value": "Gray scale 40",
+      "node": "42073:50821 (Bottom navigation ✅)"
+    },
+    {
+      "component": "bottomNavigation",
+      "where": "상태 «Pressed (선택)»",
+      "item": "아이콘색",
+      "value": "Gray scale 80",
+      "node": "42073:50821 (Bottom navigation ✅)"
+    }
+  ],
+  "iconTokens": [
+    "Components/Checkbox/Icon/Primary",
+    "Components/Checkbox/Icon/Secondary",
+    "Components/Picker/Icon button/Primary"
+  ],
+  "missing": [
+    {
+      "item": "아이콘 그리드",
+      "why": "Icon system 페이지가 🚧 입니다 — 기준 캔버스·여백·정렬 규칙이 원본에 없습니다."
+    },
+    {
+      "item": "아이콘 이름 규칙",
+      "why": "다른 Foundation 요소는 이름 체계가 정본에 있습니다(예: 색 010~100). 아이콘은 없습니다."
+    },
+    {
+      "item": "아이콘 전체 목록",
+      "why": "라이브러리에 published 된 아이콘 컴포넌트 목록을 정본이 정의하지 않습니다."
+    },
+    {
+      "item": "단계별 크기 스케일",
+      "why": "Lv.1~3 은 정보 구조로만 갈리고, 단계마다 몇 px 인지는 정해져 있지 않습니다. 실측치는 컴포넌트마다 따로 있습니다."
+    }
+  ],
+  "counts": {
+    "levels": 3,
+    "principles": 4,
+    "measured": 6,
+    "measuredComponents": 2,
+    "iconTokens": 3,
+    "missing": 4
+  }
+}

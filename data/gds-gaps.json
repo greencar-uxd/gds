@@ -319,7 +319,10 @@
       "severity": "중간",
       "finding": "Icon 은 Foundation 요소인데 Icon system 페이지는 🚧 입니다. 정작 아이콘을 가르는 규칙(Lv.1~3 · 밀도)은 ✅ UI/UX guide 에 있어서 두 곳으로 흩어져 있습니다.",
       "evidence": "Foundation 목차에 Icon 포함 · Icon system (아이콘 시스템) 🚧 · 그래픽 단계 정의는 UI/UX guide ✅",
-      "fix": "저장소는 UI/UX guide 의 3단계 체계를 Icon 영역의 기준으로 삼고, Icon system 페이지가 ✅ 가 되면 대조합니다."
+      "fix": "저장소는 UI/UX guide 의 3단계 체계를 Icon 영역의 기준으로 삼고, Icon system 페이지가 ✅ 가 되면 대조합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Foundation 에 Icon 페이지를 만들어 흩어져 있던 근거를 한 화면에 모았습니다(tools/build-icons.js · data/icons.json). ① 분류 Lv.1~3 과 기준·원칙은 UI/UX guide ✅ 에서 그대로 가져오되 «규칙이 Guidelines 에 있다»는 사실을 페이지에 밝혔습니다. ② 실측 치수 6건은 ✅ 컴포넌트 페이지 본문에서 «아이콘» 이 들어간 항목만 기계로 긁었습니다(Checkbox 체크아이콘 9×12 · Bottom navigation 32×32 · 굵기 1.5 · 레이블 간격 4 · 상태별 색 2건). ③ 아이콘 색 시맨틱 2종은 Bottom navigation ✅ 근거로 이미 확정돼 있습니다.",
+      "residual": "아이콘 «치수» 토큰은 만들지 않았습니다 — 실측치는 컴포넌트별 값이지 단계별 스케일이 아니기 때문입니다. 원본에 없는 4가지(아이콘 그리드 · 이름 규칙 · 전체 목록 · 단계별 크기)는 이유와 함께 페이지에 적었습니다. Icon system 페이지가 ✅ 가 되면 도구가 예외를 던져 대조를 강제합니다."
     },
     {
       "id": "GAP-23",
