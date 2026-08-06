@@ -3,7 +3,7 @@
  * 색 별칭 · 면색/선색 짝 — 같은 값이 여러 이름으로 흩어진 것을 잇습니다 (GAP-5 · GAP-8).
  *
  * 왜 필요한가:
- *   정본 60색 안에 «값이 똑같은데 이름이 둘»인 것이 있습니다.
+ *   원본 60색 안에 «값이 똑같은데 이름이 둘»인 것이 있습니다.
  *   지금은 둘 다 HEX 를 직접 물고 있어서, 한쪽 값이 바뀌면 다른 쪽은 조용히 남습니다.
  *   개발자는 두 변수가 원래 같은 색이었다는 사실을 알 수 없습니다.
  *
@@ -76,7 +76,7 @@ for (const c of VIEW.colors) {
   if (!/ Line$/.test(label)) continue;
   const stem = label.replace(/ Line$/, '');
   const fill = nameSet.get(stem);
-  if (!fill) { linePairs.push({ line: c.name, fill: null, note: `면색 «${stem}» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다.` }); continue; }
+  if (!fill) { linePairs.push({ line: c.name, fill: null, note: `면색 «${stem}» 이 원본에 없습니다 — 짝이 아니라 단독 선색입니다.` }); continue; }
   // 개명으로 그룹이 옮겨진 쪽이 있으면 «전에는 갈려 있었다»는 사실을 함께 남깁니다.
   const moved = [c, fill].filter(x => x.regrouped)
     .map(x => ({ token: x.name, from: x.originalGroup, was: x.originalName, reason: x.renameReason }));
@@ -93,7 +93,7 @@ const together = paired.filter(p => p.sameGroup);
 
 const out = {
   $description: '색 별칭과 면색/선색 짝 — 같은 값이 여러 이름으로 흩어진 것을 잇습니다.',
-  generatedFrom: 'tools/build-color-aliases.js ← build/canon-view.js (정본 60색)',
+  generatedFrom: 'tools/build-color-aliases.js ← build/canon-view.js (원본 60색)',
   rule: '값이 같은 무리에 단계 그룹 소속이 정확히 하나면 그것이 원본이고 나머지는 별칭입니다. 아니면 정하지 않습니다.',
   scaleGroups,
   scaleGroupRule: '숫자 단계 이름(예: Red 040)이 3칸 이상인 그룹을 «단계 그룹»으로 봅니다. 목록을 손으로 적지 않습니다.',
@@ -112,16 +112,16 @@ const out = {
     ...p,
     finding: `«${p.fill}» 과 «${p.line}» 은 한 쌍인데 그룹이 갈려 있습니다 (${p.fillGroup} / ${p.lineGroup}).`,
     precedent: together.length
-      ? `같은 정본 안에 붙어 있는 쌍이 ${together.length}건 있습니다 — ${together.map(t => t.fill).join(' · ')}. 전부 면색과 선색이 한 그룹입니다.`
-      : '정본에 같은 그룹으로 붙어 있는 쌍이 없습니다.',
+      ? `같은 원본 안에 붙어 있는 쌍이 ${together.length}건 있습니다 — ${together.map(t => t.fill).join(' · ')}. 전부 면색과 선색이 한 그룹입니다.`
+      : '원본에 같은 그룹으로 붙어 있는 쌍이 없습니다.',
   })),
 };
 
 // ── 무결성
 for (const d of duplicates.filter(x => x.decidable)) {
-  if (!VIEW.colors.some(c => c.name === d.base.name)) throw new Error(`원본이 정본에 없습니다: ${d.base.name}`);
+  if (!VIEW.colors.some(c => c.name === d.base.name)) throw new Error(`기준 색이 원본에 없습니다: ${d.base.name}`);
   for (const a of d.aliases) {
-    if (!VIEW.colors.some(c => c.name === a.name)) throw new Error(`별칭이 정본에 없습니다: ${a.name}`);
+    if (!VIEW.colors.some(c => c.name === a.name)) throw new Error(`별칭이 원본에 없습니다: ${a.name}`);
   }
 }
 const aliasKeys = duplicates.filter(d => d.decidable).flatMap(d => d.aliases.map(a => a.key));

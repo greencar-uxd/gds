@@ -3,7 +3,7 @@
  * 효과 분류 — Elevation 밖에 흩어져 있던 그림자·블러를 축으로 가릅니다 (GAP-15).
  *
  * 왜 필요한가:
- *   정본 라이브러리의 EFFECT 스타일은 Elevation_1~6 만이 아닙니다.
+ *   원본 라이브러리의 EFFECT 스타일은 Elevation_1~6 만이 아닙니다.
  *   Bottom Sheet 계열 4종 · Frosted Glass · level/gold/* 3종이 체계 밖에 있습니다.
  *   «Elevation 이 아니면 무엇인가»를 정하지 않으면 개발자가 쓸 수 없습니다.
  *
@@ -59,7 +59,7 @@ const toRgba = hex => {
 
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-// 소속 검증 — «GDS 라이브러리에 없으면 정본이 아니다»(강민관 지시)를 효과에도 적용합니다.
+// 소속 검증 — «GDS 라이브러리에 없으면 원본이 아니다»(강민관 지시)를 효과에도 적용합니다.
 // 이름만 보고 담았던 목록에 배제 대상 라이브러리의 스타일이 섞여 있었습니다(2026-08-06).
 const excludedStyles = LIB.effect.filter(e => e.excluded).map(e => ({
   name: e.name, library: e.library, why: e.excludedWhy,
@@ -81,7 +81,7 @@ const items = canonEffects.map(e => {
     key: slug(e.name),
     note: e.caseDuplicate ? `«${e.caseDuplicate}» 와 대소문자만 다릅니다` : null,
     library: e.library || null,
-    // 소속을 확인하지 못한 것은 토큰으로 내보내지 않습니다 — 정본인지 아닌지 모르기 때문입니다.
+    // 소속을 확인하지 못한 것은 토큰으로 내보내지 않습니다 — 원본인지 아닌지 모르기 때문입니다.
     unverified: e.unverified || null,
   };
 });
@@ -102,7 +102,7 @@ for (const i of items) {
     // 겹치는 키에 확정이 있으면 이긴 쪽만 나갑니다. 진 쪽은 키를 내주고 막힙니다.
     i.emit = usable && win.winner === i.name;
     if (!i.emit && i.css) {
-      i.blocked = `«${win.winner}» 이 이 키를 씁니다 — ${win.loser && win.loser.handling ? win.loser.handling : '정본에서 제외'}`;
+      i.blocked = `«${win.winner}» 이 이 키를 씁니다 — ${win.loser && win.loser.handling ? win.loser.handling : '원본에서 제외'}`;
       i.decidedAgainst = { winner: win.winner, decidedBy: DEC.decidedBy, decidedAt: DEC.decidedAt };
     }
     if (i.emit) i.decided = { reason: win.reason, decidedBy: DEC.decidedBy, decidedAt: DEC.decidedAt };
@@ -134,14 +134,14 @@ const caseCollisions = Object.entries(folded).filter(([, g]) => g.length > 1).ma
 
 const byAxis = a => items.filter(i => i.axis === a);
 const out = {
-  $description: '효과 분류 — 정본 EFFECT 스타일을 Elevation / 컴포넌트 / 재질 / 폐기 네 축으로 가른 것입니다.',
+  $description: '효과 분류 — 원본 EFFECT 스타일을 Elevation / 컴포넌트 / 재질 / 폐기 네 축으로 가른 것입니다.',
   generatedFrom: 'tools/build-effects.js ← data/gds-library.json (effect)',
   rule: '이름과 값에서 읽히는 것만으로 판정합니다. Elevation_N=elevation · as-is_/(X)=deprecated · BACKGROUND_BLUR=material · 나머지=component.',
   axes: {
     elevation: '표면의 높이. 6단계 스케일이며 --gds-elevation-* 로 나갑니다.',
     component: '특정 컴포넌트 전용 효과. 높이 스케일이 아니라서 Elevation 에 넣으면 안 됩니다.',
     material: '그림자가 아니라 재질(블러). 다른 축입니다.',
-    deprecated: '원본이 폐기 표시한 것. 정본에서 제외합니다.',
+    deprecated: '원본이 폐기 표시한 것. 토큰에서 제외합니다.',
   },
   counts: {
     total: items.length,
@@ -172,9 +172,9 @@ const out = {
 const sum = out.counts.elevation + out.counts.component + out.counts.material + out.counts.deprecated;
 if (sum !== items.length) throw new Error(`축 합 ${sum} ≠ 전체 ${items.length}`);
 if (out.counts.elevation !== 6) throw new Error(`Elevation 이 6단계가 아닙니다: ${out.counts.elevation}`);
-// 정본에 남은 것은 GDS 소속이거나 «미확인»이어야 합니다. 다른 라이브러리 소속이 남아 있으면 안 됩니다.
+// 원본에 남은 것은 GDS 소속이거나 «미확인»이어야 합니다. 다른 라이브러리 소속이 남아 있으면 안 됩니다.
 for (const i of items) {
-  if (i.library && !/^GDS/.test(i.library)) throw new Error(`배제 대상 라이브러리 스타일이 정본에 남아 있습니다: ${i.name} (${i.library})`);
+  if (i.library && !/^GDS/.test(i.library)) throw new Error(`배제 대상 라이브러리 스타일이 원본에 남아 있습니다: ${i.name} (${i.library})`);
 }
 if (items.some(i => i.unverified && i.emit)) throw new Error('소속 미확인 스타일이 토큰으로 나가고 있습니다');
 

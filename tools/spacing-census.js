@@ -4,7 +4,7 @@
  *
  * 왜 필요한가:
  *   Spacing system ✅ 표에는 Usage 열이 없습니다(열 = Spacing · px · 배수).
- *   그래서 색·타이포와 달리 간격은 «쓰임새 → 값» 표가 정본에 없습니다(GAP-12).
+ *   그래서 색·타이포와 달리 간격은 «쓰임새 → 값» 표가 원본에 없습니다(GAP-12).
  *   대신 원본 ✅ 페이지에는 디자이너가 «Spacing» 이라는 이름의 주석 프레임을
  *   실제 간격 자리마다 깔아 두었습니다. 그 프레임의 «크기»가 곧 간격 값입니다.
  *
@@ -133,7 +133,7 @@ const summary = Object.values(byValue).sort((a, b) => b.count - a.count).map(v =
 const out = {
   $description: '간격 쓰임새 조사 — ✅ 페이지의 «Spacing» 주석 프레임을 기계로 읽은 것입니다. 이름을 지어내지 않았습니다.',
   generatedFrom: 'tools/spacing-census.js ← Figma get_metadata (✅ 페이지)',
-  why: 'Spacing system ✅ 표에 Usage 열이 없어 «쓰임새 → 값» 표가 정본에 없습니다(GAP-12). 원본에서 유일하게 남아 있는 쓰임새 근거가 이 주석 프레임입니다.',
+  why: 'Spacing system ✅ 표에 Usage 열이 없어 «쓰임새 → 값» 표가 원본에 없습니다(GAP-12). 원본에서 유일하게 남아 있는 쓰임새 근거가 이 주석 프레임입니다.',
   method: '주석 프레임의 라벨 숫자(있으면) 또는 짧은 변의 길이를 값으로 보고, 부모·앞뒤 형제 이름을 «어디에» 로 기록합니다.',
   pages: [...new Set(rows.map(r => r.page))].sort(),
   counts: { annotations: rows.length, distinctValues: summary.length,
