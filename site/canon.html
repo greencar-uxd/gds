@@ -1342,7 +1342,36 @@ function wipPages(){
   ${p.docTemplate?'':`<tr><td class="muted">문서화 템플릿 없음</td>
     <td class="muted">작업 메모만 있습니다 — 빈 페이지가 아닙니다.<br>${p.workNotes.slice(0,5).map(n=>`<code>${esc(n.node)}</code> ${esc(n.text.slice(0,120))}`).join('<br>')}</td></tr>`}
   </tbody></table>`).join('')}
-  <div class="note"><p class="muted">${W.rule.map(esc).join('<br>')}</p></div>`;
+  <div class="note"><p class="muted">${W.rule.map(esc).join('<br>')}</p></div>
+  ${notStarted()}`;
+}
+
+/* «시작 전(—)» 으로 세던 8쪽 — 표시만 보고 «없다»고 하지 않기 위해 직접 열어 봤습니다. */
+function notStarted(){
+  const N=C.pages&&C.pages.notStarted; if(!N) return '';
+  const LBL={empty:'정말로 빈 페이지','template-only':'문서 틀만 있음','documented-but-contaminated':'문서 있으나 남의 내용',
+    'spec-outside-template':'틀 밖에 스펙이 있음','screens-only':'화면만 있음'};
+  return `<h2>«시작 전(—)» 으로 세던 ${N.summary.checked}쪽도 열어 봤습니다</h2>
+  <p class="lead" style="font-size:15px">${esc(N.why)}</p>
+  <div class="stat">
+    <div><b>${N.summary.checked}</b><span>확인한 쪽</span></div>
+    <div><b>${N.summary.empty}</b><span>정말로 빈 쪽</span></div>
+    <div><b>${N.summary.checked-N.summary.empty}</b><span>내용이 있던 쪽</span></div>
+    <div><b>${N.summary.documentedButContaminated}</b><span>오염된 문서</span></div>
+  </div>
+  <p class="lead" style="font-size:15px"><b>${esc(N.summary.reading)}</b></p>
+  <table class="ctr"><thead><tr><th>페이지</th><th>상태</th><th>찾은 것</th><th>근거</th></tr></thead><tbody>
+  ${N.pages.map(p=>`<tr><td><b>${esc(p.name)}</b>${p.transcribed?' <span class="badge">옮겨 적음</span>':''}</td>
+    <td class="${p.state==='empty'?'no':''}">${esc(LBL[p.state]||p.state)}</td>
+    <td class="muted">${esc(p.finding)}
+    ${p.contamination?`<br>${p.contamination.map(c=>`<b>${esc(c.what)}</b> — 「${esc(c.text)}」 <code>${esc(c.node)}</code>`).join('<br>')}`:''}
+    ${p.spec?`<br>${p.spec.map(s=>`<b>${esc(s.file)}</b> ${esc(s.kind)} · ${esc(s.hex)} · ${esc(s.size)} · ${s.fps}fps <code>${esc(s.node)}</code>`).join('<br>')}`:''}
+    ${p.toBe?`<br><b>To-be ${esc(p.toBe.state)}</b> — 「${esc(p.toBe.text)}」`:''}
+    ${p.motionNote?`<br>모션 메모 — 「${esc(p.motionNote)}」`:''}</td>
+    <td class="muted"><code>${esc(p.node)}</code>${p.parsed?`<br>${esc(p.parsed)}`:''}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note"><p class="muted">${N.rule.map(esc).join('<br>')}</p>
+  <p class="muted">${esc(N.how)}</p></div>`;
 }
 
 /* ───────── 진행 상태 ───────── */
