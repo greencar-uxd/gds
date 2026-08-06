@@ -1073,6 +1073,16 @@ function comp(){
     <div class="chips">${i.spacing.values.map(v=>`<span class="tok" style="border:1px solid var(--line);border-radius:7px;padding:3px 9px">${v.value}px <span class="muted">×${v.count}</span></span>`).join(' ')}</div>`:''}
   ${i.openMemos?`<div class="note warn"><p><b>✅ 인데 미해결 메모가 남아 있습니다.</b><br>
     ${i.openMemos.map(m=>esc(m)).join('<br>')}</p></div>`:''}
+  ${(K.styleRefs||[]).filter(r=>i.key&&r.component===i.key).map(r=>
+    r.resolved
+    ? `<div class="note"><p><b>본문이 지목한 스타일</b> — «${esc(r.quoted)}» → <code>${esc(r.style)}</code> (${esc(r.axis)})</p>
+       <p class="muted">${esc(r.css||'')}</p></div>`
+    : `<div class="note warn"><p><b>본문이 없는 스타일을 가리킵니다.</b> «${esc(r.quoted)}» — ${esc(r.why)}</p>
+       <p class="muted">살아있는 후보 ${r.live}종 · 값이 서로 다릅니다. 어느 것을 쓰라는 뜻인지 정해질 때까지 토큰을 내보내지 않습니다(GAP-31 · SD-20).</p>
+       <table class="ctr"><thead><tr><th>후보</th><th>축</th><th>값</th></tr></thead><tbody>
+       ${r.candidates.map(c2=>`<tr><td>${c2.axis==='deprecated'?`<span class="muted" style="text-decoration:line-through">${esc(c2.name)}</span>`:`<b>${esc(c2.name)}</b>`}</td>
+         <td class="muted">${esc(c2.axis)}</td><td class="muted">${esc(c2.value||'값 없음')}</td></tr>`).join('')}
+       </tbody></table></div>`).join('')}
   `).join('')}
   ${footer()}`;
 }
