@@ -639,6 +639,11 @@ function color(){
       <p>${esc(p.precedent)}</p>
       <p class="muted">어느 그룹으로 모을지는 사람이 정할 일입니다. 저장소는 사실만 적고 이름을 바꾸지 않았습니다.</p>
     </div>`).join('')}
+    ${AL.linePairs.filter(p=>p.moved).map(p=>`<div class="note">
+      <p><b>GAP-8 해소</b> — ${p.moved.map(m=>`<code>${esc(m.was)}</code> → <code>${esc(m.token)}</code>`).join(' · ')}</p>
+      <p>${esc(p.moved[0].reason||'')}</p>
+      <p class="muted">차기 라이브러리에 반영할 개명입니다. 값은 바뀌지 않았고, 원본 이름은 토큰에 <code>renamedFrom</code> 으로 남습니다.</p>
+    </div>`).join('')}
     ${AL.linePairs.filter(p=>!p.fill).length?`<p class="muted" style="margin-top:16px">짝이 없는 단독 선색 ${AL.linePairs.filter(p=>!p.fill).length}종 —
       ${AL.linePairs.filter(p=>!p.fill).map(p=>esc(p.line)).join(' · ')}. 면색을 지어내지 않았습니다.</p>`:''}
   </div>`:''}
