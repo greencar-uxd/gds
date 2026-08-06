@@ -325,16 +325,12 @@
       "fix": "저장소는 UI/UX guide 의 3단계 체계를 Icon 영역의 기준으로 삼고, Icon system 페이지가 ✅ 가 되면 대조합니다.",
       "status": "resolved",
       "resolution": "해소 — Foundation 에 Icon 페이지를 만들어 세 곳에 흩어진 근거를 한 화면에 모았습니다. ① 분류 Lv.1~3·기준·원칙은 UI/UX guide ✅ 에서, ② 아이콘 목록·이름 규칙·크기 단계는 🚧 Icon system 페이지를 직접 읽어서(42066:25437), ③ 치수 6건은 ✅ 컴포넌트 본문에서 긁어서. 각 항목이 어디서 왔는지 페이지에 그대로 밝힙니다.",
-      "residual": "2026-08-06 — 남은 2건을 레퍼런스로 «메웠습니다». 메웠다고 원본에 생긴 것은 아니라, «원본에 없음»은 그대로 두고 참고 후보를 옆에 답니다(data/icon-reference.json · status proposal).\n① 아이콘 그리드 — 24px 캔버스 · Live area 20×20 · 사방 여백 2px. 출처 Material Design 3(그리드·키라인 수치) · KRDS(키라인의 목적·두께·end cap·slash·stack·대비) · Apple HIG(그리드를 두지 않는 반대 사례).\n② 크기 단계의 용도 — 16 조밀 · 20 조밀 레이아웃 · 24 기본 · 32 강조(Bottom navigation 실측) · 40 주 동작 강조. 이 다섯은 원본 선언 크기와 KRDS 주요 크기가 정확히 같아서 «지어낸 배정»이 아니라 이미 있는 단계에 쓰임새만 붙인 것입니다.\n참고로도 안 메워진 것 3건은 남겼습니다 — 그리드가 원본 파일에 이미 그려져 있는지 · end cap 을 둥글게 할지 각지게 할지(KRDS 와 M3 가 갈림) · 36·50·56 을 살릴지.\n검증 12개가 «참고가 원본으로 둔갑하지 못하게» 지킵니다 — 출처 URL·원문 인용 필수, 원본 건수 대조, 제안 밖 크기 은폐 금지, 치수 토큰 방출 금지.",
+      "residual": "참고로도 원본으로도 안 메워진 것 3가지 — 터치 표적 크기 · 20px 미만 라벨 하한 · 색 대비율 수치. 두 참고에는 있으나 원본에 없는 축이라 «채우지 않고» 없음으로 남깁니다.",
       "revised": "2026-08-06 정정 — 첫 판은 틀렸습니다. Icon system 페이지가 🚧 라는 이유로 열어 보지 않고 «이름 규칙 없음 · 크기 스케일 없음 · 전체 목록 없음»이라고 단정해 배포했습니다. 페이지를 읽어 보니 셋 다 있었습니다 — 이름 규칙 Icon/system/<이름>/<line|fill>/<크기> · 크기 단계 XL 96/L 56/M 40 · 아이콘 184종(노드 1,624개). 등록된 스타일 목록이 아니라 페이지를 읽어야 한다는 지시를 지키지 않은 결과입니다. 철회 3건은 지우지 않고 «정정» 절로 페이지에 남겼습니다.",
       "found": "덤으로 드러난 것 — 아이콘 이름 295개 중 87개가 규칙에서 벗어나 있습니다. 변형이 이름보다 앞(Icon/system/line/alert_off) 63건 · 변형·크기 없음 15건 · 소문자 icon/ 시작 8건 · 그 밖 1건. 저장소가 고치지 않고 유형별로 세어 두었습니다 — 차기 라이브러리 반영 때 정할 일입니다.",
-      "filledByReference": {
-        "at": "2026-08-06",
-        "file": "data/icon-reference.json",
-        "status": "proposal",
-        "sanction": "강민관 2026-08-06 지시 + 원본 Radius 페이지의 «머터리얼, 기타 참고» 메모(43801:47452)",
-        "stillOpen": 3
-      }
+      "revised2": "2026-08-06 두 번째 정정 — 또 틀렸습니다. 첫 정정에서 «페이지를 직접 읽었다»고 했지만 실제로는 Icon/system/* 노드 «이름»만 훑었습니다(tools/parse-icon-page.js 가 문서 프레임 텍스트를 버림). 그래서 «아이콘 그리드 없음 · 크기 용도 배정 없음»이라 단정하고 레퍼런스(M3·KRDS)로 메웠습니다.\n강민관 확인(«그리드 그려져 있고 End cap은 둥글게가 맞아용») 후 페이지를 통째로 다시 읽으니 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인이 있었습니다 — 프레임 24*24 · Live area 20*20 · Square 18*18 · Circle 20*20 · Rectangular 16*20/20*16 · 세이프존 최소 2 · 스트로크 1.2px(허용 오차 ±0) · 코너 2px · 기본 Cap Round / 교차 지점 예외 Butt + 1px offset · 크기별 굵기 40:2 32:1.6 24:1.2 20:1 16:1.\n레퍼런스로 메운 것은 전부 걷어냈고(data/icon-guide.json 이 원본 근거), 참고 자료는 status 를 proposal → comparison 으로 강등해 «원본 문장이 어디서 왔는지» 대조에만 씁니다.",
+      "provenance": "원본 문장 중 06_Off slash · 07_Stack 두 절이 KRDS 원문과 글자 그대로 같습니다(기계 대조, 겹침 100%). 00_Size 두 문장과 01_Layout 은 부분 일치인데, 00_Size 는 원본 오타(«20ox» · «넒은»)가 문장을 끊어 놓은 것이 이유입니다. 스트로크 1.2px · 크기별 굵기 5단계 · End cap 교차 예외 · 세이프존 «최소» 표현은 G car 고유 판단입니다.",
+      "sizeDecision": "00_Size 의 주요 크기(16·20·24·32·40) 밖에 있는 36(5건)·50(1건)·56(1건)은 유지합니다 — 강민관 2026-08-06 «일단 36 50 56은 냅 두시고»."
     },
     {
       "id": "GAP-23",
@@ -431,11 +427,11 @@
       "id": "GAP-32",
       "area": "작업 방식",
       "severity": "높음",
-      "finding": "🚧 페이지를 «내용이 없는 페이지»로 세어 왔습니다. 등록된 스타일·에셋 목록만 보고 페이지를 열지 않은 것이 원인입니다.",
-      "evidence": "Icon system 🚧 — 이름 규칙·아이콘 184종·크기 단계가 전부 있었는데 «없음»으로 배포했습니다(GAP-22 정정). Text field 🚧 — «원본 대기»로 비워 두었는데 정의·유형 4가지·구조·변형 42종이 있었습니다. Elevation system 🚧 — «정의가 없다»고 적었는데 레벨 0~5·dp·그림자 수치·적용 범위가 있었습니다.",
-      "fix": "🚧 페이지를 전수로 직접 읽습니다. get_metadata 로 페이지를 열어 XML 을 저장하고 tools/parse-figma-page.js 로 구조화한 뒤, 채우지 않은 문서화 템플릿(«설명글»·«레벨 값»)은 «내용 있음»으로 세지 않습니다.",
+      "finding": "🚧 페이지를 «내용이 없는 페이지»로 세어 왔습니다. 더 나아가, 페이지를 열었다고 하면서도 노드 «이름»만 훑고 본문 텍스트를 읽지 않은 경우가 있었습니다.",
+      "evidence": "Icon system 🚧 — 이름 규칙·아이콘 184종·크기 단계가 전부 있었는데 «없음»으로 배포했습니다(GAP-22 정정). Text field 🚧 — «원본 대기»로 비워 두었는데 정의·유형 4가지·구조·변형 42종이 있었습니다. Elevation system 🚧 — «정의가 없다»고 적었는데 레벨 0~5·dp·그림자 수치·적용 범위가 있었습니다. Icon system 2차 — «페이지를 직접 읽었다»고 하고도 파서가 Icon/system/* 노드 이름만 모아서, 실제로는 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인을 통째로 놓쳤습니다.",
+      "fix": "🚧 페이지를 전수로 직접 읽되, «읽었다»의 기준을 본문 텍스트로 둡니다. tools/parse-figma-page.js 가 텍스트 노드를 조상 사슬과 함께 전부 저장하므로 페이지별 추출기는 원자료를 다시 볼 수 있습니다. 채우지 않은 문서화 템플릿(«설명글»·«레벨 값»)은 «내용 있음»으로 세지 않습니다.",
       "status": "open",
-      "progress": "진행 — 🚧 19쪽 중 4쪽을 읽었습니다(2026-08-06). Icon system · Elevation system · Radius system · Text field. 읽은 결과는 data/figma-pages/*.json 에 원문 그대로 남기고, 페이지별 판단은 data/<이름>-page.json 으로 따로 냅니다. 남은 15쪽 — Principle · Components overview · Bottom sheet · Smart key · Top app bar · Selection box · Tip · Tap · Bage · Toast · Numbering · Pasing · Search field · Info box · Helper text."
+      "progress": "진행 — 🚧 19쪽 중 4쪽을 읽었습니다(2026-08-06). Icon system · Elevation system · Radius system · Text field. Icon system 은 옛 파서가 놓친 본문을 새 파서로 다시 읽어 data/figma-pages/icon-system-full.json(텍스트 1,356줄)에 남겼습니다. 남은 15쪽 — Principle · Components overview · Bottom sheet · Smart key · Top app bar · Selection box · Tip · Tap · Bage · Toast · Numbering · Pasing · Search field · Info box · Helper text."
     },
     {
       "id": "GAP-33",
@@ -467,6 +463,15 @@
       "status": "resolved",
       "resolution": "해소 — Foundation › Radius 페이지에 세 가지를 나눠 실었습니다(2026-08-06). ① 단계별 쓰임새 라벨(원본), ② 원본이 적어 둔 미결 메모 5건, ③ 외부 인용 프레임 — 무엇이 인용이고 왜 편입하지 않는지 명시. tools/build-radius-page.js.",
       "residual": "문서화 템플릿이 비어 있는 것은 원본 작업입니다. 저장소가 채우지 않습니다."
+    },
+    {
+      "id": "GAP-36",
+      "area": "아이콘",
+      "severity": "중간",
+      "finding": "32px 아이콘의 굵기가 원본 안에서 두 값으로 적혀 있습니다 — 제작 가이드는 1.6, Bottom navigation ✅ 본문은 1.5.",
+      "evidence": "제작 가이드 [32*32] → Icon/system/line_1.6 (44300:44197) · Bottom navigation ✅ 스펙 «아이콘굵기 1.5» (42073:50821)",
+      "fix": "어느 쪽이 맞는지는 디자인팀이 정합니다. 저장소는 양쪽을 나란히 싣고 어긋난다고만 적습니다 — 한쪽으로 맞추지 않습니다.",
+      "status": "open"
     }
   ],
   "note": "✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16). 등록된 스타일 목록만으로는 안 보이던 것들입니다."
