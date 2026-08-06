@@ -1484,6 +1484,48 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     if (WP && NS) {
       // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      // ── 스케일 밖 간격 값 가르기 (GAP-30)
+      const OL = VIEW.pages && VIEW.pages.spacingOutliers;
+      ok('스케일 밖 값을 가른 결과가 있음', !!OL);
+      if (OL) {
+        const SCcnt = VIEW.spacingCensus;
+        ok('가른 총계가 조사 총계와 일치',
+          OL.counts.annotations === SCcnt.counts.annotations
+          && OL.counts.docCanvas + OL.counts.product === OL.counts.offScale,
+          `${OL.counts.docCanvas}+${OL.counts.product}=${OL.counts.offScale}`);
+        ok('가르는 기준이 원자료에서 확인된 이름뿐', (() => {
+          const dir = path.join(ROOT, 'data', 'figma-xml');
+          if (!fs.existsSync(dir)) return false;
+          const all = fs.readdirSync(dir).filter(f => f.endsWith('.xml'))
+            .map(f => fs.readFileSync(path.join(dir, f), 'utf8')).join('\n');
+          return OL.basis.templateContainers.length > 0
+            && OL.basis.templateContainers.every(c => all.includes(`name="${c}"`));
+        })(), `${OL.basis.templateContainers.length}종`);
+        ok('문서 캔버스로 센 것은 전부 틀 이름이 부모',
+          OL.docCanvas.items.every(i => OL.basis.templateContainers.includes(i.parent)));
+        ok('제품 후보는 틀 이름이 부모가 아님',
+          OL.product.items.every(i => !OL.basis.templateContainers.includes(i.parent)));
+        ok('값을 가까운 단계로 «맞추지» 않았음',
+          OL.product.items.every(i => !OL.basis.scale.includes(i.value) && i.deltaPx !== 0));
+        ok('홀수 집계가 실제 값과 일치',
+          OL.counts.oddProduct === OL.product.items.filter(i => i.value % 2 === 1).length);
+        // 이번에 나온 관찰 — 1px 쏠림
+        ok('1px 쏠림이 실제 항목 수와 일치', (() => {
+          const one = OL.product.items.filter(i => Math.abs(i.deltaPx) === 1).length;
+          const b = OL.distance.buckets.find(x => x.deltaPx === 1);
+          return b && b.count === one && new RegExp(`${one}건이 단계에서 정확히 1px`).test(OL.distance.observation);
+        })());
+        ok('관찰이 [추론]·[확인 필요]로 표시됨',
+          /\[추론\]/.test(OL.distance.observation) && /\[확인 필요\]/.test(OL.distance.observation));
+        const g30 = IT.find(i => i.id === 'GAP-30');
+        ok('GAP-30 수치가 가른 결과와 일치',
+          !!g30 && new RegExp(`${OL.counts.docCanvas}건은 문서`).test(g30.finding)
+          && new RegExp(`후보는 ${OL.counts.product}건`).test(g30.finding)
+          && g30.status === 'partial');
+        const htmlO = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+        ok('가른 결과가 Spacing 페이지에 실림', htmlO.includes('스케일 밖') && htmlO.includes('문서 캔버스 여백'));
+      }
+
       // ── 옮겨 적은 것을 원자료로 되짚기
       const VF = VIEW.pages && VIEW.pages.verify;
       ok('원자료 대조 결과가 있음', !!VF && VF.claims.length >= 9);

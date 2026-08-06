@@ -61,6 +61,7 @@ injected.canon.spacingCensus = VIEW.spacingCensus ? {
   summary: VIEW.spacingCensus.summary,
   why: VIEW.spacingCensus.why,
 } : null;
+injected.canon.spacingOutliers = VIEW.pages && VIEW.pages.spacingOutliers || null;
 injected.canon.effects = VIEW.effects || null;
 injected.canon.icons = VIEW.icons || null;
 injected.canon.components = VIEW.components || null;
