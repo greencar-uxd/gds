@@ -734,6 +734,43 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     }
   }
 
+  // ── 효과 분류 ── Elevation 밖 효과가 축으로 갈렸는지, 겹치는 키를 안 내보냈는지.
+  {
+    const EF = VIEW.effects;
+    ok('효과 분류가 있음', !!EF && EF.items.length > 0, EF ? `${EF.items.length}종` : '없음');
+    if (EF) {
+      ok('축 합 = 전체', ['elevation', 'component', 'material', 'deprecated']
+        .reduce((a, k) => a + EF.counts[k], 0) === EF.items.length);
+      ok('Elevation 은 정확히 6단계', EF.counts.elevation === 6, String(EF.counts.elevation));
+      ok('폐기 표시는 정본 토큰으로 안 나감',
+        EF.items.filter(i => i.axis === 'deprecated').every(i => !i.emit));
+      // 키가 겹치면 CSS 변수 하나를 두 값이 덮어씁니다 — 그건 조용한 거짓입니다.
+      const cssE = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+      const emitted = [...cssE.matchAll(/^\s{2}--gds-effect-([a-z0-9-]+):/gm)].map(m => m[1]);
+      ok('내보낸 효과 토큰에 중복 키가 없음', new Set(emitted).size === emitted.length,
+        emitted.join(', '));
+      ok('키가 겹치는 효과는 내보내지 않음',
+        EF.keyCollisions.every(c => !emitted.includes(c.key)),
+        EF.keyCollisions.map(c => c.key).join(', '));
+      ok('막힌 효과마다 이유가 적힘',
+        EF.items.filter(i => i.blocked).every(i => /GAP-31/.test(i.blocked)));
+      ok('값 미측정 효과는 토큰으로 안 나감',
+        EF.items.filter(i => !i.css).every(i => !i.emit));
+      ok('내보낸 토큰 수 = emitted 목록 수', emitted.length === EF.emitted.length,
+        `${emitted.length} / ${EF.emitted.length}`);
+      const JE = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+      ok('DTCG 에 effect 블록과 근거가 있음',
+        !!JE.effect && Object.keys(JE.effect).length === EF.emitted.length
+        && !!JE.$notes.effects && JE.$notes.effects.blocked.length === EF.keyCollisions.length * 2);
+      // 대소문자 충돌이 있으면 GAP 으로 기록돼 있어야 합니다.
+      ok('대소문자 충돌이 GAP 으로 기록됨',
+        EF.caseCollisions.length === 0
+        || VIEW.GAPS.items.some(g => g.id === 'GAP-31' && /대소문자/.test(g.finding)));
+      const idxE = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      ok('효과 분류가 사이트에 실림', idxE.includes('"effects"') && /Elevation 이 아닌 효과/.test(idxE));
+    }
+  }
+
   // ── 컴포넌트 목록 ── «✅ 인데 저장소에 없는 것»이 0인지가 핵심입니다.
   {
     const K = VIEW.components;

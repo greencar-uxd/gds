@@ -134,6 +134,9 @@ module.exports = {
   // 차기 라이브러리에 넣을 텍스트 스타일 21종 — 저장소가 먼저 만들고 원본에 반영합니다.
   typeLib: (() => { const p = path.join(ROOT, 'data', 'typography-library.json');
     return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; })(),
+  // 효과 분류 — Elevation 밖 그림자·블러 (tools/build-effects.js).
+  effects: (() => { const q = path.join(ROOT, 'data', 'effects.json');
+    return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),
   // 컴포넌트 목록 — 구조도 25종 + 실측 (tools/build-components.js).
   components: (() => { const q = path.join(ROOT, 'data', 'components.json');
     return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),

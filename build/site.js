@@ -60,6 +60,7 @@ injected.canon.spacingCensus = VIEW.spacingCensus ? {
   summary: VIEW.spacingCensus.summary,
   why: VIEW.spacingCensus.why,
 } : null;
+injected.canon.effects = VIEW.effects || null;
 injected.canon.components = VIEW.components || null;
 injected.canon.structure = VIEW.structure || null;
 injected.canon.gapSummary = VIEW.GAPS ? {

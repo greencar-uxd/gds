@@ -141,6 +141,16 @@ if (VIEW.layout) {
     }
   }
 }
+// 효과 — Elevation 이 아닌 것들. 키가 겹치는 것은 정해질 때까지 내보내지 않습니다.
+if (VIEW.effects && VIEW.effects.emitted.length) {
+  css += '\n  /* Effect — Elevation 이 아닌 효과 (컴포넌트 전용 · 재질) */\n';
+  for (const e of VIEW.effects.emitted) {
+    css += `  --gds-effect-${e.key}: ${e.css};  /* ${e.name} */\n`;
+  }
+  for (const b of VIEW.effects.items.filter(i => i.blocked)) {
+    css += `  /* --gds-effect-${b.key}: 보류 — ${b.name} · ${b.blocked} */\n`;
+  }
+}
 css += '\n  /* Typography */\n';
 if (FONT) {
   css += `  --gds-font-family: "${FONT.value}", sans-serif;`
@@ -185,6 +195,7 @@ if (VIEW.semantic) for (const t of VIEW.semantic.tokens) {
 if (VIEW.layout) for (const grp of ['screen', 'margin', 'safeArea', 'header']) {
   for (const l of (VIEW.layout[grp] || [])) scss += `$gds-layout-${slug(l.token)}: ${l.value}${l.unit || 'px'};\n`;
 }
+if (VIEW.effects) for (const e of VIEW.effects.emitted) scss += `$gds-effect-${e.key}: ${e.css};\n`;
 scss += '\n';
 if (FONT) scss += `$gds-font-family: "${FONT.value}", sans-serif;\n`;
 if (LH) scss += `$gds-type-line-height: ${LH_CSS};\n`;
@@ -244,6 +255,25 @@ if (VIEW.semantic) {
       $extensions: { gds: { layer: 'semantic', ref: t.ref, evidence: t.evidence } },
     };
   }
+}
+// ── 효과 — Elevation 밖 ──
+if (VIEW.effects) {
+  const EF = VIEW.effects;
+  json.effect = {};
+  for (const e of EF.emitted) {
+    const it = EF.items.find(x => x.key === e.key);
+    json.effect[e.key] = {
+      $value: e.css, $type: it.axis === 'material' ? 'other' : 'shadow',
+      $description: `${e.name} — ${EF.axes[it.axis]}`,
+      $extensions: { gds: { axis: it.axis, source: e.name } },
+    };
+  }
+  json.$notes.effects = {
+    rule: EF.rule, axes: EF.axes, counts: EF.counts,
+    blocked: EF.items.filter(i => i.blocked).map(i => ({ name: i.name, why: i.blocked })),
+    caseCollisions: EF.caseCollisions,
+    unmeasured: EF.counts.unmeasured,
+  };
 }
 // ── 타이포 시맨틱 계층 ── ✅ Type scale 의 Usage 열에서 계산했습니다.
 if (VIEW.typeSemantic) {
