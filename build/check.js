@@ -729,7 +729,31 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       const t = (VIEW.semantic ? VIEW.semantic.tokens : []).filter(x => /^Semantic\/Icon\//.test(x.token));
       return t.length > 0 && t.every(x => /Bottom navigation/.test(x.evidence || ''));
     })());
-    ok('Icon 페이지가 렌더됨', htmlI.includes('무엇을 아이콘이라 부르는가') && htmlI.includes('원본에 아직 없는 것'));
+    ok('Icon 페이지가 렌더됨', htmlI.includes('무엇을 아이콘이라 부르는가') && htmlI.includes('아직 없는 것'));
+
+    // ── 페이지를 직접 읽었는지 (GAP-22 재작업) — 등록 스타일 목록만 보면 안 됩니다.
+    const P = IC.page;
+    ok('Icon system 페이지를 직접 읽음', !!P && P.source.node === '42066:25437');
+    ok('페이지가 🚧 임을 밝힘', /🚧/.test(IC.layerNote.caution || ''));
+    ok('아이콘 목록이 있음', P.counts.icons > 0, String(P.counts.icons));
+    ok('이름 규칙을 지어내지 않고 다수 표기에서 읽음',
+      /다수/.test(P.naming.ruleEvidence || '') && P.naming.conforming > P.naming.nonConforming);
+    ok('규칙 판정 합 = 고유 이름 수',
+      P.naming.conforming + P.naming.nonConforming === P.counts.uniqueNames);
+    ok('어긋난 이름이 유형별로 집계됨',
+      P.naming.buckets.every(b => b.count === b.names.length && (b.ko || '').length > 5)
+      && P.naming.buckets.reduce((n, b) => n + b.count, 0) === P.naming.nonConforming);
+    ok('어긋난 이름을 저장소가 고치지 않음',
+      htmlI.includes('이름을 저장소가 고치지 않았습니다'));
+    ok('두 크기 축을 합치지 않음',
+      /같은 축인지/.test(P.tierVsDeclared.finding || ''));
+    // 틀린 단정을 지우지 않고 철회로 남깁니다 — 무엇을 왜 틀렸는지가 기록에 남아야 합니다.
+    ok('철회한 «없음» 판정이 기록됨',
+      !!IC.correction && IC.correction.retracted.length === 3
+      && IC.correction.retracted.every(r => (r.why || '').length > 10));
+    ok('철회 내용이 페이지에 보임', htmlI.includes('정정 —'));
+    ok('«없음» 목록에 철회한 항목이 남아 있지 않음',
+      IC.missing.every(m => !IC.correction.retracted.some(r => r.item === m.item)));
     ok('Icon 이 Foundation 내비에 있음', /\['icon','Icon'\]/.test(fs.readFileSync(path.join(ROOT, 'site', 'canon.html'), 'utf8')));
   }
 
