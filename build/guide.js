@@ -66,7 +66,9 @@ ${G.componentDefinition}
 
 ## 4. 저장소 반영 상태
 
-이 문서는 \`GAP-21\` 을 메우기 위한 것입니다. 아이콘 분류 기준(Lv. 1~3)은 Foundation 의 **Icon** 항목이 근거로 삼습니다 — Icon system 페이지는 아직 🚧 이라 이 문서가 유일한 기준입니다(\`GAP-22\`).
+이 문서는 \`GAP-21\` 을 메우기 위한 것입니다. 아이콘 분류 기준(Lv. 1~3)은 Foundation 의 **Icon** 항목이 근거로 삼습니다 — Icon system 페이지는 아직 🚧 이라 이 문서가 유일한 기준입니다.
+
+\`GAP-22\` 해소 — 사이트의 **Foundation › Icon** 페이지가 이 분류에 컴포넌트 실측 치수를 붙여 한 화면에 놓습니다(\`tools/build-icons.js\`). 규칙이 Guidelines 에 있다는 사실은 그 페이지에 그대로 밝혀 둡니다.
 `;
 
 fs.writeFileSync(path.join(ROOT, 'docs', 'GDS-uiux-guide.md'), md);

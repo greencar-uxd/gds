@@ -678,6 +678,55 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     })());
   }
 
+  // ── 아이콘 (GAP-22) — 규칙은 Guidelines, 치수는 컴포넌트 페이지. 한 곳에 모으되 출처를 지웁니다.
+  const IC = VIEW.icons;
+  ok('data/icons.json 존재', !!IC);
+  if (IC) {
+    const htmlI = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+    ok('아이콘 분류가 3단계', IC.classification.levels.length === 3);
+    ok('분류 출처가 UI/UX guide 노드', /^\d+:\d+/.test(IC.classification.source),
+      IC.classification.source);
+    ok('분류가 Guidelines 소속임을 명시', /Guidelines/.test(IC.layerNote.rulesLiveIn));
+    ok('Icon 이 Foundation 소속임을 명시', IC.layerNote.belongsTo === 'Foundation');
+    ok('원본 Icon 상태가 아직 🚧', IC.layerNote.figmaStatus !== 'done', IC.layerNote.figmaStatus);
+    ok('분류 내용이 원본과 같음', (() => {
+      const g = VIEW.LIB.pages.uiuxGuide.graphic;
+      return JSON.stringify(IC.classification.levels) === JSON.stringify(g.levels)
+        && JSON.stringify(IC.classification.principles) === JSON.stringify(g['원칙']);
+    })(), '옮겨 적는 과정에서 바뀌면 안 됩니다');
+
+    // 실측 — 손으로 옮기지 않고 ✅ 페이지 본문에서 긁은 것이어야 합니다.
+    ok('실측 항목이 있음', IC.measured.length > 0, String(IC.measured.length));
+    ok('실측 항목이 전부 «아이콘» 항목', IC.measured.every(m => /아이콘|icon/i.test(m.item)));
+    ok('실측 항목마다 출처 노드가 있음', IC.measured.every(m => /\d+:\d+/.test(m.node || '')));
+    ok('실측 값이 원본 본문과 일치', IC.measured.every(m => {
+      const spec = (VIEW.LIB.pages.components || {})[m.component];
+      if (!spec) return false;
+      const pools = [spec, spec['스펙'], ...(spec.states || [])].filter(Boolean);
+      return pools.some(o => String(o[m.item]) === m.value);
+    }));
+    ok('실측을 아이콘 스케일로 둔갑시키지 않음',
+      htmlI.includes('컴포넌트별 값이지 아이콘 스케일이 아닙니다'));
+
+    // 없는 것 — 지어내지 않았다는 사실이 보여야 합니다.
+    ok('원본에 없는 항목이 이유와 함께 기록됨',
+      IC.missing.length > 0 && IC.missing.every(m => (m.why || '').length > 15));
+    // 아이콘 «치수» 토큰은 만들지 않습니다 — 단계별 크기가 원본에 없기 때문입니다.
+    // (--gds-icon-* 중 색 시맨틱은 Bottom navigation ✅ 근거가 있어 정당합니다.)
+    ok('아이콘 치수 토큰을 지어내지 않음', (() => {
+      const cssI = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+      const lines = cssI.split('\n').filter(l => /--gds-icon-/.test(l));
+      // 전부 색 프리미티브를 var() 로 가리키는 시맨틱이어야 합니다. px 값이 있으면 지어낸 것입니다.
+      return lines.every(l => /var\(--gds-color-/.test(l)) && !/--gds-icon-[a-z-]*(size|width|height|stroke)/.test(cssI);
+    })(), '단계별 크기는 원본에 없으므로 토큰으로 내보내면 안 됩니다');
+    ok('아이콘 색 시맨틱이 근거를 가짐', (() => {
+      const t = (VIEW.semantic ? VIEW.semantic.tokens : []).filter(x => /^Semantic\/Icon\//.test(x.token));
+      return t.length > 0 && t.every(x => /Bottom navigation/.test(x.evidence || ''));
+    })());
+    ok('Icon 페이지가 렌더됨', htmlI.includes('무엇을 아이콘이라 부르는가') && htmlI.includes('원본에 아직 없는 것'));
+    ok('Icon 이 Foundation 내비에 있음', /\['icon','Icon'\]/.test(fs.readFileSync(path.join(ROOT, 'site', 'canon.html'), 'utf8')));
+  }
+
   ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
   if (SM) {
     ok('시맨틱 참조가 전부 정본에 실재', VIEW.semanticMissing.length === 0, VIEW.semanticMissing.join(', '));
