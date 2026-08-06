@@ -755,6 +755,62 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     ok('«없음» 목록에 철회한 항목이 남아 있지 않음',
       IC.missing.every(m => !IC.correction.retracted.some(r => r.item === m.item)));
     ok('Icon 이 Foundation 내비에 있음', /\['icon','Icon'\]/.test(fs.readFileSync(path.join(ROOT, 'site', 'canon.html'), 'utf8')));
+
+    // ── 참고로 메운 것 (GAP-22 잔여 2건) ──
+    // 검사의 목적 하나 — «참고»가 «원본»으로 둔갑하지 못하게 하는 것.
+    const RF = IC.reference;
+    ok('참고 자료가 실려 있음', !!RF && RF.status === 'proposal', RF ? RF.status : '없음');
+    if (RF) {
+      const ids = new Set(RF.sources.map(s => s.id));
+      ok('출처마다 URL 과 고른 이유가 있음',
+        RF.sources.every(s => /^https:\/\//.test(s.url || '') && (s.whyThisOne || '').length > 10));
+      ok('그리드 항목마다 원문 인용과 등록된 출처가 있음',
+        RF.grid.items.length > 0
+        && RF.grid.items.every(i => (i.quote || '').length > 5 && ids.has(i.source)),
+        `${RF.grid.items.length}항목`);
+      ok('크기 단계마다 등록된 출처가 있음',
+        RF.sizeUsage.steps.every(s => ids.has(s.source)));
+      // 참고가 «원본 건수»를 지어내지 않았는지 — 페이지 읽기 결과와 대조합니다.
+      ok('크기 단계의 원본 건수가 페이지 읽기와 일치',
+        RF.sizeUsage.steps.every(s => IC.page.declaredSizes[String(s.px)] === s.originalCount),
+        RF.sizeUsage.steps.map(s => `${s.px}:${s.originalCount}`).join(' '));
+      // 제안이 원본 크기를 골라 담고 나머지를 숨기지 않았는지.
+      ok('제안 + 제안 밖 = 원본 선언 크기 전부', (() => {
+        const covered = [...RF.sizeUsage.steps.map(s => s.px), ...RF.sizeUsage.outsideProposal.items.map(s => s.px)]
+          .sort((a, b) => a - b);
+        const all = Object.keys(IC.page.declaredSizes).map(Number).sort((a, b) => a - b);
+        return JSON.stringify(covered) === JSON.stringify(all);
+      })());
+      // 메웠어도 «원본에 없다»가 지워지면 안 됩니다.
+      ok('메운 뒤에도 «원본에 없음» 표시가 남아 있음',
+        IC.missing.length === 2 && IC.missing.every(m => m.stillMissingInSource === true && m.filledWith === 'reference'));
+      // 참고 값이 토큰으로 새 나가지 않았는지 — 이게 핵심입니다.
+      ok('참고 값이 CSS 토큰으로 나가지 않음', (() => {
+        const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+        // --gds-icon-* 중 색 시맨틱 2종은 원본(Bottom navigation ✅)에서 온 것이라 정상입니다.
+        // 참고에서 온 값은 전부 «치수»이므로, px 값을 가진 아이콘 토큰이 하나라도 있으면 샌 것입니다.
+        const dims = [...css.matchAll(/--gds-icon-[a-z0-9-]+:\s*([^;]+);/g)]
+          .filter(m => /\d+\s*px/.test(m[1]));
+        return dims.length === 0;
+      })(), '아이콘 치수 토큰은 여전히 0개여야 합니다 — 색 시맨틱만 원본 근거로 나갑니다');
+      ok('참고 값이 DTCG 토큰으로 나가지 않음', (() => {
+        const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+        return !j.icon && !Object.keys(j).some(k => /^icon/i.test(k));
+      })());
+      // 사이트에서 절이 분리돼 있고 «참고»라고 못박혀 있는지.
+      ok('사이트에 «참고» 절이 따로 있음',
+        htmlI.includes('참고로 메운 것 — 원본이 아닙니다')
+        && htmlI.includes('이 절의 값은 전부 «참고»입니다'));
+      ok('참고를 봐도 되는 근거가 적혀 있음',
+        /강민관 2026-08-06/.test(RF.sanction.byUser || '') && /43801:47452/.test(RF.sanction.byOriginal || ''));
+      // 두 출처가 갈리는 항목을 «하나로 정한 것»처럼 적지 않았는지.
+      ok('출처가 갈리는 항목이 갈린 채로 남아 있음',
+        RF.grid.items.some(i => (i.conflict || '').length > 10)
+        && RF.stillOpen.some(s => /end cap/.test(s)));
+      ok('참고로도 안 메워진 것이 남아 있음', RF.stillOpen.length > 0, `${RF.stillOpen.length}건`);
+      ok('원본과 어긋나는 곳이 «맞춰지지» 않고 미결로 남음',
+        RF.contrasts.some(c => c.decided === false) && RF.contrasts.every(c => (c.reading || '').length > 20));
+    }
   }
 
   ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
