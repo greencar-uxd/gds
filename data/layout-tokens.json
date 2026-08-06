@@ -3,21 +3,10 @@
   "source": "43185:36342 (Layout for ios/aos/web ✅)",
   "checkedAt": "2026-08-05",
   "screen": [
-    { "token": "screen-ios-width", "value": 375, "unit": "px", "platform": "ios", "rule": "두 ✅ 페이지가 일치하고 실무 기준과도 같습니다" },
+    { "token": "screen-ios-width", "value": 375, "unit": "px", "platform": "ios", "rule": "두 ✅ 페이지와 실무 기준이 모두 일치합니다" },
     { "token": "screen-ios-height", "value": 812, "unit": "px", "platform": "ios" },
-    { "token": "screen-web-width", "value": 360, "unit": "px", "platform": "web", "rule": "원본의 «aos/web 360» 행과 실무 기준 «웹 360» 이 겹치는 값입니다" },
-    { "token": "screen-web-height", "value": 800, "unit": "px", "platform": "web" }
-  ],
-  "blocked": [
-    {
-      "token": "screen-aos-width",
-      "reason": "AOS 폭이 정해지지 않았습니다 — 원본은 web 과 묶어 360, 실무는 iOS 와 묶어 375. 정해질 때까지 토큰을 내보내지 않습니다 (GAP-24).",
-      "candidates": [
-        { "value": 360, "basis": "원본 Layout ✅ 43185:36342 — 화면 행이 «aos/web 360×800» 으로 묶여 있습니다" },
-        { "value": 375, "basis": "실무 기준 — 강민관 2026-08-06 «웹은 360, iOS/AOS 는 공통으로 375»" }
-      ],
-      "why": "잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다. Bottom Sheet 키 충돌(GAP-31)과 같은 판단입니다."
-    }
+    { "token": "screen-aos-web-width", "value": 360, "unit": "px", "platform": "aos/web", "rule": "AOS 와 Web 은 같은 폭을 씁니다 — 원본 행 그대로이며 실무 기준도 같습니다 (강민관 2026-08-06 확정)" },
+    { "token": "screen-aos-web-height", "value": 800, "unit": "px", "platform": "aos/web" }
   ],
   "margin": [
     { "token": "margin-side", "value": 20, "unit": "px", "rule": "좌·우 마진은 20px 로 통일합니다" },
@@ -50,17 +39,17 @@
     },
     {
       "axis": "AOS 폭",
-      "status": "open",
+      "status": "resolved",
       "gap": "GAP-24",
-      "finding": "원본은 AOS 를 web 과 묶어 360 으로 적는데, 실무 기준은 AOS 를 iOS 와 묶어 375 로 씁니다.",
-      "evidence": "원본 Layout ✅ 43185:36342 «aos/web 360×800» · 실무 기준 강민관 2026-08-06 «웹은 360, iOS/AOS 는 공통으로 375»",
-      "effect": "AOS 폭 토큰을 내보내지 않습니다(blocked). iOS 375 와 web 360 은 양쪽이 일치하므로 그대로 나갑니다."
+      "finding": "AOS 를 web(360)과 묶을지 iOS(375)와 묶을지 한때 갈렸습니다.",
+      "resolution": "AOS 는 web 과 같은 360 입니다 — 원본 Layout ✅ 의 «aos/web 360×800» 행이 맞습니다. 강민관 확정 2026-08-06. 저장소가 원본과 다르게 가를 이유가 없어졌습니다.",
+      "evidence": "원본 Layout ✅ 43185:36342 «aos/web 360×800 · ios 375×812» · 강민관 2026-08-06 «iOS 375, AOS 랑 Web 은 360»"
     }
   ],
   "platformAxis": {
-    "note": "원본은 플랫폼을 «ios» / «aos+web» 두 축으로 가릅니다. 실무는 «ios+aos» / «web» 으로 가릅니다. 갈리는 지점은 AOS 하나뿐입니다.",
+    "note": "플랫폼은 두 축으로 갈립니다 — iOS 하나, AOS 와 Web 이 같은 축. 원본 Layout ✅ 의 묶음이 그대로 정본입니다.",
     "ios": 375,
-    "web": 360,
-    "aos": null
+    "aos": 360,
+    "web": 360
   }
 }
