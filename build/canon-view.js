@@ -137,6 +137,9 @@ module.exports = {
   // 효과 분류 — Elevation 밖 그림자·블러 (tools/build-effects.js).
   effects: (() => { const q = path.join(ROOT, 'data', 'effects.json');
     return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),
+  // 색 별칭 · 면색/선색 짝 — 값이 겹치는 이름을 이은 것 (tools/build-color-aliases.js).
+  colorAliases: (() => { const q = path.join(ROOT, 'data', 'color-aliases.json');
+    return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),
   // 컴포넌트 목록 — 구조도 25종 + 실측 (tools/build-components.js).
   components: (() => { const q = path.join(ROOT, 'data', 'components.json');
     return fs.existsSync(q) ? JSON.parse(fs.readFileSync(q, 'utf8')) : null; })(),

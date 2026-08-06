@@ -589,6 +589,83 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     })());
   }
 
+  // ── 색 별칭 · 면색/선색 짝 (GAP-5 · GAP-8)
+  const AL = VIEW.colorAliases;
+  ok('data/color-aliases.json 존재', !!AL);
+  if (AL) {
+    const cssA = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+    const jsonA = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
+    const htmlA = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+    // ── 키부터 봅니다. 키가 어긋나면 뒤의 값 검사가 «없는 토큰»을 읽다가 죽어서
+    //    정작 원인인 키 불일치가 보고되지 않습니다. 실제로 그렇게 놓칠 뻔했습니다.
+    const allKeys = AL.duplicates.flatMap(d => d.decidable ? [d.base, ...d.aliases] : d.members);
+    ok('별칭 키가 방출된 토큰 키와 일치', allKeys.every(x => !!jsonA.color[x.key]),
+      allKeys.filter(x => !jsonA.color[x.key]).map(x => x.key).join(', '));
+    // 토큰 키를 두 곳에서 따로 만들면 존재하지 않는 변수를 가리키는 CSS 가 나갑니다 — 실제로 겪었습니다.
+    ok('토큰 키 생성기가 한 곳뿐', (() => {
+      const src = ['build/tokens.js', 'tools/build-color-aliases.js']
+        .map(f => fs.readFileSync(path.join(ROOT, f), 'utf8'));
+      return src.every(s => /require\(.*slug\.js.*\)/.test(s))
+        && src.every(s => !/function slug\s*\(/.test(s));
+    })(), 'build/slug.js 를 쓰지 않고 따로 구현한 곳이 있습니다');
+    const keysOk = allKeys.every(x => !!jsonA.color[x.key]);
+
+    // 값이 겹치는 무리가 실제 정본과 맞아야 합니다 — 손으로 적은 수가 아닙니다.
+    const byHex = {};
+    for (const c of VIEW.colors) (byHex[c.hex.toUpperCase()] = byHex[c.hex.toUpperCase()] || []).push(c);
+    const realDups = Object.values(byHex).filter(g => g.length > 1).length;
+    ok('겹치는 무리 수 = 정본 실제 중복 수', AL.counts.duplicateValues === realDups,
+      `기록 ${AL.counts.duplicateValues} · 실제 ${realDups}`);
+    ok('판정 가능 + 판정 불가 = 전체',
+      AL.counts.decidable + AL.counts.undecidable === AL.duplicates.length);
+    ok('단계 그룹을 손으로 적지 않음 — 이름에서 유도됨', AL.scaleGroups.every(g =>
+      VIEW.colors.filter(c => c.group === g && /\s\d{3}$/.test(c.name)).length >= 3));
+    ok('원본은 반드시 단계 그룹의 칸', AL.duplicates.filter(d => d.decidable)
+      .every(d => AL.scaleGroups.includes(d.base.name.split('/')[0]) && /\s\d{3}$/.test(d.base.name)));
+    ok('별칭은 단계 그룹이 아님 — 스케일 칸을 별칭으로 만들지 않음',
+      AL.duplicates.filter(d => d.decidable).every(d =>
+        d.aliases.every(a => !/\s\d{3}$/.test(a.name))));
+
+    // 값을 두 번 적지 않습니다 — 별칭은 var() 로만 나가야 합니다.
+    ok('별칭 CSS 가 var() 로 원본을 가리킴', AL.duplicates.filter(d => d.decidable).every(d =>
+      d.aliases.every(a => cssA.includes(`--gds-color-${a.key}: var(--gds-color-${d.base.key});`))));
+    ok('별칭 CSS 에 HEX 가 직접 남아 있지 않음', AL.duplicates.filter(d => d.decidable).every(d =>
+      d.aliases.every(a => !new RegExp(`--gds-color-${a.key}:\\s*#`).test(cssA))));
+    ok('별칭 DTCG 가 참조 문법으로 나감', AL.duplicates.filter(d => d.decidable).every(d =>
+      d.aliases.every(a => jsonA.color[a.key] && jsonA.color[a.key].$value === `{color.${d.base.key}}`)));
+    ok('별칭의 실제 색이 원본과 같음', keysOk && AL.duplicates.filter(d => d.decidable)
+      .every(d => jsonA.color[d.base.key].$value.toUpperCase() === d.hex.toUpperCase()
+        && d.aliases.every(a => jsonA.color[a.key].$extensions.gds.resolvedValue.toUpperCase() === d.hex.toUpperCase())));
+
+    // 판정 불가 무리는 묶지 않습니다 — 값을 그대로 두고 서로를 가리키기만 합니다.
+    ok('판정 불가 무리는 별칭으로 묶지 않음', AL.duplicates.filter(d => !d.decidable).every(d =>
+      d.members.every(m => new RegExp(`--gds-color-${m.key}:\\s*#`).test(cssA))));
+    ok('판정 불가 무리가 서로를 가리킴', keysOk && AL.duplicates.filter(d => !d.decidable).every(d =>
+      d.members.every(m => (jsonA.color[m.key].$extensions.gds.sameValueAs || []).length === d.members.length - 1)));
+    ok('판정 불가 사유가 적혀 있음',
+      AL.duplicates.filter(d => !d.decidable).every(d => (d.reason || '').length > 20 && (d.handling || '').length > 20));
+
+    // 면색 / 선색 짝
+    ok('선색마다 면색 존재 여부가 판정됨', AL.linePairs.every(p => 'fill' in p));
+    ok('짝 없는 선색은 면색을 지어내지 않음',
+      AL.linePairs.filter(p => !p.fill).every(p => !VIEW.colors.some(c => c.name === p.line.replace(/ Line$/, ''))));
+    ok('그룹이 갈린 짝이 GAP-8 로 잡힘', AL.counts.linePairsSplit === AL.splitPairs.length);
+    ok('갈린 짝마다 선례가 함께 기록됨', AL.splitPairs.every(p => (p.precedent || '').length > 20));
+    ok('갈린 짝의 이름을 저장소가 바꾸지 않음', AL.splitPairs.every(p =>
+      VIEW.colors.some(c => c.name === p.fill) && VIEW.colors.some(c => c.name === p.line)));
+
+    ok('별칭이 가리키는 CSS 변수가 실재', AL.duplicates.filter(d => d.decidable)
+      .every(d => cssA.includes(`--gds-color-${d.base.key}: `)));
+
+    ok('$notes 에 별칭 기록이 실림', !!(jsonA.$notes && jsonA.$notes.colorAliases));
+    ok('Color 페이지에 «이름 정리» 탭이 있음',
+      htmlA.includes('이름 정리') && htmlA.includes('같은 값을 가진 이름'));
+    ok('별칭 판정이 사이트 데이터에 주입됨', (() => {
+      const m = htmlA.match(/"aliases":\{[^]*?"duplicates"/);
+      return !!m;
+    })());
+  }
+
   ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
   if (SM) {
     ok('시맨틱 참조가 전부 정본에 실재', VIEW.semanticMissing.length === 0, VIEW.semanticMissing.join(', '));

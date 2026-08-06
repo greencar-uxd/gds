@@ -9,13 +9,7 @@ const C = D.canon;
 const OUT = path.join(ROOT, 'dist', 'tokens');
 
 // "Gray Scale/Gray 000" → gray-000  (연속 중복 낱말 제거)
-function slug(s) {
-  const parts = String(s).toLowerCase()
-    .replace(/[^a-z0-9가-힣]+/g, ' ').trim().split(/\s+/);
-  const out = [];
-  for (const p of parts) if (!out.includes(p)) out.push(p);
-  return out.join('-');
-}
+const { slug, colorKey } = require('./slug.js');
 
 // ---------- 색 ----------
 // 확정 결정(data/color-decisions.json)이 적용된 뷰를 씁니다 — 원본 .fig 는 고칠 수 없습니다.
@@ -42,7 +36,7 @@ const STEP_EXC = new Set(VIEW.stepExceptions ? VIEW.stepExceptions.value : []);
 const colors = VIEW.colors.map(s => {
   const [group, name] = s.name.includes('/') ? [s.name.split('/')[0], s.name.split('/').slice(1).join('/')] : ['', s.name];
   return {
-    key: slug(group + ' ' + name), name: s.name, group, hex: s.hex,
+    key: colorKey(s.name), name: s.name, group, hex: s.hex,
     was: s.renamed ? s.originalName : null, isMain: s.isMain,
     stepException: STEP_EXC.has(s.name),
     wasHex: s.overridden ? s.originalHex : null,
@@ -97,6 +91,23 @@ const HEAD = `/* GDS — G car Design System 토큰
  */`;
 
 // ---------- CSS ----------
+// 별칭 — 값이 같은 무리에서 단계 그룹의 칸이 원본이고, 역할 이름은 그것을 가리킵니다 (GAP-5).
+// 값을 두 번 적으면 한쪽만 바뀔 때 조용히 어긋나므로 별칭은 var() 로 원본을 참조합니다.
+const AL = VIEW.colorAliases;
+const aliasOf = {};      // 별칭 키 → { baseKey, baseName, rule }
+const crossRef = {};     // 판정 불가 무리 → 서로를 가리키는 주석
+if (AL) {
+  for (const d of AL.duplicates) {
+    if (d.decidable) {
+      for (const a of d.aliases) aliasOf[a.key] = { baseKey: d.base.key, baseName: d.base.name, rule: d.rule };
+    } else {
+      for (const m of d.members) {
+        crossRef[m.key] = d.members.filter(x => x.key !== m.key).map(x => x.name);
+      }
+    }
+  }
+}
+
 let css = HEAD + '\n:root {\n  /* Color */\n';
 for (const c of colors) {
   const notes = [];
@@ -107,10 +118,14 @@ for (const c of colors) {
   if (c.wasHex) notes.push(`구 값 ${c.wasHex} — 명도 순서 정정`);
   if (c.added) notes.push(`Figma 변수 ${c.sourceName} 편입${c.nameDerived ? ' · 이름은 표기 규칙 적용' : ''}`);
   if (c.alpha != null) notes.push(`알파 ${Math.round(c.alpha * 100)}%`);
-  css += `  --gds-color-${c.key}: ${c.hex};${notes.length ? `  /* ${notes.join(' · ')} */` : ''}\n`;
+  const al = aliasOf[c.key];
+  if (al) notes.unshift(`${al.baseName} 의 별칭 — 값은 원본이 갖습니다`);
+  if (crossRef[c.key]) notes.push(`값이 ${crossRef[c.key].join(' · ')} 와 같습니다 — 원본을 정하지 못해 따로 둡니다(GAP-5)`);
+  const value = al ? `var(--gds-color-${al.baseKey})` : c.hex;
+  css += `  --gds-color-${c.key}: ${value};${notes.length ? `  /* ${notes.join(' · ')} */` : ''}\n`;
 }
 if (VIEW.mainStyle) {
-  css += `  --gds-color-primary-main: var(--gds-color-${slug(VIEW.mainStyle.name.replace('/', ' '))});`
+  css += `  --gds-color-primary-main: var(--gds-color-${colorKey(VIEW.mainStyle.name)});`
     + `  /* = ${VIEW.mainStyle.name} ${VIEW.mainStyle.hex} · 강민관 확정 ${VIEW.DEC.decidedAt} */\n`;
 }
 // 시맨틱 — 프리미티브를 var() 로 참조합니다. 값을 직접 쓰지 않습니다.
@@ -118,7 +133,7 @@ if (VIEW.semantic) {
   css += '\n  /* Semantic — 정본 규칙에서 끌어낸 별칭 */\n';
   for (const t of VIEW.semantic.tokens) {
     const key = slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '));
-    css += `  --gds-${key}: var(--gds-color-${slug(t.ref.replace('/', ' '))});  /* ${t.ref} · ${t.evidence} */\n`;
+    css += `  --gds-${key}: var(--gds-color-${colorKey(t.ref)});  /* ${t.ref} · ${t.evidence} */\n`;
   }
 }
 // 타이포 시맨틱 — ✅ Type scale 의 Usage 열에서 계산. 프리미티브 타이포 변수를 var() 로 참조합니다.
@@ -187,10 +202,22 @@ css += '}\n';
 
 // ---------- SCSS ----------
 let scss = HEAD + '\n';
-for (const c of colors) scss += `$gds-color-${c.key}: ${c.hex};${c.isMain ? '  // 메인 색상' : ''}\n`;
-if (VIEW.mainStyle) scss += `$gds-color-primary-main: $gds-color-${slug(VIEW.mainStyle.name.replace('/', ' '))};\n`;
+// SCSS 변수는 선언 순서를 지킵니다 — 별칭이 원본보다 먼저 나오면 컴파일이 깨집니다.
+const colorPos = {};
+colors.forEach((c, i) => { colorPos[c.key] = i; });
+for (const [k, a] of Object.entries(aliasOf)) {
+  if (colorPos[a.baseKey] > colorPos[k]) {
+    throw new Error(`별칭 ${k} 이 원본 ${a.baseKey} 보다 먼저 선언됩니다 — SCSS 출력 순서를 고치세요`);
+  }
+}
+for (const c of colors) {
+  const al = aliasOf[c.key];
+  scss += `$gds-color-${c.key}: ${al ? `$gds-color-${al.baseKey}` : c.hex};`
+    + `${c.isMain ? '  // 메인 색상' : ''}${al ? `  // ${al.baseName} 의 별칭` : ''}\n`;
+}
+if (VIEW.mainStyle) scss += `$gds-color-primary-main: $gds-color-${colorKey(VIEW.mainStyle.name)};\n`;
 if (VIEW.semantic) for (const t of VIEW.semantic.tokens) {
-  scss += `$gds-${slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '))}: $gds-color-${slug(t.ref.replace('/', ' '))};\n`;
+  scss += `$gds-${slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '))}: $gds-color-${colorKey(t.ref)};\n`;
 }
 if (VIEW.layout) for (const grp of ['screen', 'margin', 'safeArea', 'header']) {
   for (const l of (VIEW.layout[grp] || [])) scss += `$gds-layout-${slug(l.token)}: ${l.value}${l.unit || 'px'};\n`;
@@ -225,11 +252,15 @@ const json = {
   },
 };
 for (const c of colors) {
+  const al = aliasOf[c.key];
   json.color[c.key] = {
-    $value: c.hex, $type: 'color', $description: c.name,
+    // 별칭은 DTCG 참조 문법 {color.<원본>} 으로 나갑니다 — 값을 두 번 적지 않습니다.
+    $value: al ? `{color.${al.baseKey}}` : c.hex, $type: 'color', $description: c.name,
     $extensions: {
       gds: {
         status: 'confirmed',
+        ...(al ? { aliasOf: al.baseName, aliasRule: al.rule, resolvedValue: c.hex } : {}),
+        ...(crossRef[c.key] ? { sameValueAs: crossRef[c.key], sameValueNote: '원본을 정하지 못해 따로 둡니다 (GAP-5)' } : {}),
         ...(c.was ? { renamedFrom: c.was, renamedAt: VIEW.DEC.decidedAt } : {}),
         ...(c.isMain ? { role: 'primary-main' } : {}),
         ...(c.stepException ? { stepException: true } : {}),
@@ -273,6 +304,19 @@ if (VIEW.effects) {
     blocked: EF.items.filter(i => i.blocked).map(i => ({ name: i.name, why: i.blocked })),
     caseCollisions: EF.caseCollisions,
     unmeasured: EF.counts.unmeasured,
+  };
+}
+// ── 색 별칭 · 면색/선색 짝 ── 값이 겹치는 이름을 이은 기록 (GAP-5 · GAP-8).
+if (AL) {
+  json.$notes.colorAliases = {
+    rule: AL.rule,
+    scaleGroups: AL.scaleGroups,
+    counts: AL.counts,
+    aliases: AL.duplicates.filter(d => d.decidable)
+      .flatMap(d => d.aliases.map(a => ({ alias: a.name, base: d.base.name, hex: d.hex }))),
+    undecided: AL.duplicates.filter(d => !d.decidable)
+      .map(d => ({ hex: d.hex, members: d.members.map(m => m.name), reason: d.reason, handling: d.handling })),
+    splitPairs: AL.splitPairs.map(p => ({ fill: p.fill, line: p.line, finding: p.finding, precedent: p.precedent })),
   };
 }
 // ── 타이포 시맨틱 계층 ── ✅ Type scale 의 Usage 열에서 계산했습니다.

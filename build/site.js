@@ -32,6 +32,7 @@ injected.canon.color.figmaSync = VIEW.figmaSync;
 injected.canon.color.basis = VIEW.canonBasis;
 injected.canon.color.library = { name: VIEW.LIB.canonLibrary.name, checkedAt: VIEW.LIB.checkedAt, excluded: VIEW.excludedLibraries };
 injected.canon.color.gaps = VIEW.GAPS ? VIEW.GAPS.items : [];
+injected.canon.color.aliases = VIEW.colorAliases || null;
 injected.canon.color.decisions = {
   decidedBy: VIEW.DEC.decidedBy, decidedAt: VIEW.DEC.decidedAt,
   step: VIEW.DEC.rules.step.value, basis: VIEW.canonBasis && VIEW.canonBasis.value,
