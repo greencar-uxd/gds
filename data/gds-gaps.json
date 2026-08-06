@@ -240,7 +240,7 @@
       "evidence": "Typography ✅ · Radius · Border ✅ 프레임 변수 조회 — Bottom Sheet · bottom sheet · Bottom Sheet shadow · Bottom Floating Button · Frosted Glass · level/gold/circle-outter · circle-inner · symbol",
       "fix": "Elevation 체계 안으로 흡수할 것과 별개 효과 그룹으로 뺄 것을 가릅니다. 대소문자 중복 2종은 하나로 합쳐야 합니다.",
       "status": "resolved",
-      "resolution": "해소 — «Elevation 이 아니면 무엇인가»를 네 축으로 갈랐습니다 (tools/build-effects.js).\n· elevation 6 — 표면 높이 스케일 (--gds-elevation-*)\n· component 7 — 컴포넌트 전용 효과. 높이 스케일이 아니라서 Elevation 에 넣으면 안 됩니다.\n· material 1 — Frosted Glass 는 그림자가 아니라 블러입니다. 다른 축입니다.\n· deprecated 2 — 원본이 (X) 로 표시한 것. 정본에서 제외.\n판정은 이름과 값에서 읽히는 것만으로 합니다 — Elevation_N / as-is_·(X) / BACKGROUND_BLUR / 나머지.\n값이 측정된 것 3종을 --gds-effect-* 로 내보냅니다(Bottom Sheet shadow · Bottom Floating Button · Frosted Glass).\n나머지 level/gold/* 3종은 값이 아직 측정되지 않아 «미측정»으로 남깁니다.\n대소문자 충돌 «Bottom Sheet»/«bottom sheet» 는 값이 서로 달라 합칠 수 없습니다 — GAP-31 로 뗐습니다.",
+      "resolution": "해소 — «Elevation 이 아니면 무엇인가»를 네 축으로 갈랐습니다 (tools/build-effects.js).\n· elevation 6 — 표면 높이 스케일 (--gds-elevation-*)\n· component 5 — 컴포넌트 전용 효과. 높이 스케일이 아니라서 Elevation 에 넣으면 안 됩니다.\n· material 1 — Frosted Glass 는 그림자가 아니라 블러입니다. 다른 축입니다.\n· deprecated 2 — 원본이 (X) 로 표시한 것. 정본에서 제외.\n판정은 이름과 값에서 읽히는 것만으로 합니다 — Elevation_N / as-is_·(X) / BACKGROUND_BLUR / 나머지.",
       "counts": {
         "total": 16,
         "elevation": 6,
@@ -250,7 +250,8 @@
         "emitted": 3,
         "blocked": 2,
         "unmeasured": 4
-      }
+      },
+      "revised": "2026-08-06 — 처음에는 16종으로 갈랐는데, 소속을 대보니 2종(bottom sheet · Bottom Sheet shadow)이 배제 대상 라이브러리에서 섞여 들어온 것이었습니다. 목록을 14종으로 줄이고, Frosted Glass 와 level/gold/* 3종은 어느 라이브러리에서도 찾지 못해 «소속 미확인»으로 두었습니다. 지금 --gds-effect-* 로 나가는 것은 GDS 소속이 확인된 2종뿐입니다 — Bottom Sheet · Bottom Floating Button. 자세한 경위는 GAP-31."
     },
     {
       "id": "GAP-16",
@@ -410,10 +411,10 @@
       "fix": "어느 값이 실제 Bottom sheet 의 그림자인지 원본에서 확인하고 하나를 남깁니다. 둘 다 쓰이는 자리가 다르면 이름을 갈라야 합니다(예: bottom-sheet / bottom-sheet-inner). 값이 다르므로 «오타 중복»으로 합칠 수 없습니다.",
       "progress": "GAP-28 을 풀다가 범위가 «둘 중 하나»에서 «살아있는 셋 중 하나»로 넓어졌습니다 — Bottom sheet 본문이 가리킨 «Elevation_Bottom sheet» 라는 이름의 스타일이 아예 없었기 때문입니다(SD-20).",
       "status": "resolved",
-      "resolution": "해소 — 바텀시트의 실제 그림자는 «Bottom Sheet»(3겹 #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0)입니다. 강민관 확정 2026-08-06. --gds-effect-bottom-sheet 가 이 값으로 나갑니다. Bottom sheet 컴포넌트 본문의 «Elevation_Bottom sheet» 표기도 이 스타일로 이어 붙였습니다. 확정은 data/effect-decisions.json 에 두고, 빌드가 «확정된 값이 원본과 같은가»를 대조합니다 — 원본이 바뀌면 빌드가 멈춥니다.",
-      "residual": "진 쪽 «bottom sheet»(소문자, 1겹 0/1/2/0)는 토큰으로 나가지 않습니다. 값이 달라 합칠 수 없고, 어느 자리에 쓰이는지가 원본에 없어 새 이름을 지어낼 수도 없습니다 — SD-21 로 기록했습니다. ④ 단계에서 «쓰임 확인 후 이름을 가르거나 폐기» 로 처리합니다.",
+      "resolution": "해소 — 그런데 답이 «둘 중 하나를 고르는 것»이 아니었습니다. 소문자 «bottom sheet» 는 애초에 GDS 라이브러리 스타일이 아니라 레거시 3종((사용 X) 그린카 App · 그린카 App v2.0 · G car APP v1.0)의 스타일이 저장소 인벤토리에 섞여 들어온 것이었습니다(search_design_system 소속 조회 2026-08-06). 배제 규칙을 적용해 목록에서 빼자 키 충돌 자체가 사라졌습니다. 남은 «Bottom Sheet»(3겹)가 맞는 값임은 강민관이 확정했고(ED-1), 원본 스타일 설명 «바텀시트만의 별도 값» 과도 같은 방향입니다. --gds-effect-bottom-sheet 가 이 값으로 나갑니다.",
+      "residual": "같은 조회에서 «Bottom Sheet shadow» 도 배제 대상(작업 파일 공유) 소속임이 드러나, 그동안 내보내던 --gds-effect-bottom-sheet-shadow 토큰을 거뒀습니다. Frosted Glass 와 level/gold/* 3종은 어느 라이브러리에서도 찾지 못해 «소속 미확인»으로 두고 토큰을 막았습니다 — 파일 로컬 스타일일 가능성이 큽니다. 확인되면 풀립니다.",
       "blocking": "정해질 때까지 두 토큰 모두 내보내지 않습니다 — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.",
-      "note": "Bottom sheet 는 원본이 아직 🚧 입니다(GAP-28 과 같은 컴포넌트)."
+      "note": "저장소가 스스로 만든 오류였습니다. 효과 스타일을 이름만 보고 담고 소속을 대보지 않았습니다 — 색에는 적용하던 «GDS 라이브러리에 없으면 정본이 아니다» 규칙을 효과에는 적용하지 않았던 것입니다. 이제 빌드가 소속을 검사하고, GDS 밖 스타일이 목록에 남아 있으면 예외를 던집니다."
     }
   ],
   "note": "✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16). 등록된 스타일 목록만으로는 안 보이던 것들입니다."

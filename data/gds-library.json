@@ -4,8 +4,10 @@
   "fileKey": "Gx9UHfQdhSdHzr1j8Kp1Ab",
   "method": "Figma MCP search_design_system 을 GDS 라이브러리 키로 한정해 그룹별 조회 · 값은 data/foundation-data.json 추출본에서 이름으로 대조",
   "canonLibrary": {
-    "name": "GDS (그린카 디자인 시스템)",
-    "key": "lk-5fb74b5ab83ff53f7149c5fcc4bf5216de526f9da336aeaee9a1a168b1d47d74dba3ee117cad7d8060e3f71befc8c9faff4efa63e41e14018e7f743924a5fef3"
+    "name": "GDS(G car Design System)",
+    "key": "lk-5fb74b5ab83ff53f7149c5fcc4bf5216de526f9da336aeaee9a1a168b1d47d74dba3ee117cad7d8060e3f71befc8c9faff4efa63e41e14018e7f743924a5fef3",
+    "previousName": "GDS (그린카 디자인 시스템)",
+    "renameNote": "라이브러리 표시 이름이 GDS(G car Design System) 으로 바뀌어 있습니다(2026-08-06 확인). 키는 같습니다."
   },
   "excludedLibraries": [
     {
@@ -338,70 +340,96 @@
   ],
   "effect": [
     {
-      "name": "Elevation_1"
+      "name": "Elevation_1",
+      "library": "GDS(G car Design System)"
     },
     {
       "name": "Elevation_2",
-      "value": "2겹 — #00000026 0/1/3/1 + #0000004D 0/1/2/0"
+      "value": "2겹 — #00000026 0/1/3/1 + #0000004D 0/1/2/0",
+      "library": "GDS(G car Design System)"
     },
     {
-      "name": "Elevation_3"
+      "name": "Elevation_3",
+      "library": "GDS(G car Design System)"
     },
     {
-      "name": "Elevation_4"
+      "name": "Elevation_4",
+      "library": "GDS(G car Design System)"
     },
     {
-      "name": "Elevation_5"
+      "name": "Elevation_5",
+      "library": "GDS(G car Design System)"
     },
     {
-      "name": "Elevation_6"
+      "name": "Elevation_6",
+      "library": "GDS(G car Design System)"
     },
     {
       "name": "as-is_Shadow/(X)Bottom Sheet",
-      "deprecated": true
+      "deprecated": true,
+      "library": "GDS(G car Design System)"
     },
     {
       "name": "as-is_Shadow/(X)Floating Button",
       "deprecated": true,
-      "value": "#0000000A 0/-4/4/0"
+      "value": "#0000000A 0/-4/4/0",
+      "library": "GDS(G car Design System)"
     },
     {
       "name": "Bottom Sheet",
       "value": "3겹 — #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": "GDS(G car Design System)",
+      "styleDescription": "바텀시트만의 별도 값"
     },
     {
       "name": "bottom sheet",
       "value": "#00000026 0/1/2/0",
       "outsideElevation": true,
-      "caseDuplicate": "Bottom Sheet"
+      "caseDuplicate": "Bottom Sheet",
+      "library": "(사용 X) 그린카 App · 그린카 App v2.0 · G car APP v1.0",
+      "excluded": true,
+      "excludedWhy": "GDS 라이브러리에 published 된 스타일이 아닙니다 — 배제 대상 라이브러리 소속입니다(search_design_system 2026-08-06). 정본 인벤토리에 잘못 섞여 있었습니다."
     },
     {
       "name": "Bottom Sheet shadow",
       "value": "#00000033 0/0/6/0",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": "작업 파일 공유",
+      "excluded": true,
+      "excludedWhy": "GDS 라이브러리에 published 된 스타일이 아닙니다 — 배제 대상 라이브러리 소속입니다(search_design_system 2026-08-06). 정본 인벤토리에 잘못 섞여 있었습니다."
     },
     {
       "name": "Bottom Floating Button",
       "value": "#0000000A 0/-2/2/0",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": "GDS(G car Design System)",
+      "styleDescription": "Floating Button, Bottom Navigation에 사용됨."
     },
     {
       "name": "Frosted Glass",
       "value": "BACKGROUND_BLUR 40",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
     },
     {
       "name": "level/gold/circle-outter",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
     },
     {
       "name": "level/gold/circle-inner",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
     },
     {
       "name": "level/gold/symbol",
-      "outsideElevation": true
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
     }
   ],
   "text": [
@@ -958,5 +986,16 @@
         "note": "✅ 페이지인데 저장소에 없던 유일한 컴포넌트였습니다 — GAP-18 에서 메웠습니다."
       }
     }
+  },
+  "effectProvenance": {
+    "checkedAt": "2026-08-06",
+    "method": "Figma search_design_system 으로 스타일 이름마다 소속 라이브러리를 조회했습니다. 읽기 전용.",
+    "why": "«GDS 라이브러리에 없으면 정본이 아니다»는 규칙을 효과 스타일에도 실제로 대봤습니다 — 이름만 보고 담았던 것을 소속으로 다시 걸렀습니다.",
+    "counts": {
+      "gds": 10,
+      "excluded": 2,
+      "unverified": 4
+    },
+    "note": ".fig 전체 EFFECT 스타일은 40종입니다. 이 목록 16종은 그중 골라 담은 것이었고, 소속을 대보니 2종이 배제 대상 라이브러리에서 흘러들어와 있었습니다."
   }
 }
