@@ -341,9 +341,15 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
     // 원본 결함 기록
     ok('sourceDefects 기록 존재', !!VIEW.sourceDefects && VIEW.sourceDefects.items.length > 0);
     if (VIEW.sourceDefects) {
-      ok('원본 결함마다 노드 ID 가 있음',
-        VIEW.sourceDefects.items.every(d => /\d+:\d+/.test(d.node)),
-        '추적 불가능한 결함 기록은 쓸모가 없습니다');
+      // 캔버스 결함은 노드 ID 로, 라이브러리 스타일 결함은 스타일 이름으로 찾아갑니다.
+      // 주소 없는 결함 기록은 쓸모가 없으므로 둘 중 하나는 반드시 있어야 합니다.
+      ok('원본 결함마다 찾아갈 주소가 있음',
+        VIEW.sourceDefects.items.every(d => /\d+:\d+/.test(d.node) || !!d.styleName),
+        VIEW.sourceDefects.items.filter(d => !/\d+:\d+/.test(d.node) && !d.styleName).map(d => d.id).join(', '));
+      ok('스타일 이름으로 적은 결함은 그 스타일이 실재',
+        VIEW.sourceDefects.items.filter(d => d.styleName).every(d =>
+          !VIEW.effects || VIEW.effects.items.some(e => e.name === d.styleName)),
+        '없는 스타일을 가리키는 결함 기록');
       ok('원본 결함이 결정 안건 페이지에 표시됨', (() => {
         const html = fs.readFileSync(path.join(ROOT, 'dist', 'decisions', 'index.html'), 'utf8');
         return VIEW.sourceDefects.items.every(d => html.includes(d.id));
@@ -921,11 +927,28 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       const emitted = [...cssE.matchAll(/^\s{2}--gds-effect-([a-z0-9-]+):/gm)].map(m => m[1]);
       ok('내보낸 효과 토큰에 중복 키가 없음', new Set(emitted).size === emitted.length,
         emitted.join(', '));
-      ok('키가 겹치는 효과는 내보내지 않음',
-        EF.keyCollisions.every(c => !emitted.includes(c.key)),
-        EF.keyCollisions.map(c => c.key).join(', '));
+      // 키 충돌 — 확정 전에는 둘 다 막고, 확정 뒤에는 «이긴 쪽 하나만» 나가야 합니다.
+      ok('확정 안 된 키 충돌은 내보내지 않음',
+        EF.keyCollisions.filter(c => !c.resolved).every(c => !emitted.includes(c.key)),
+        EF.keyCollisions.filter(c => !c.resolved).map(c => c.key).join(', '));
+      ok('확정된 키 충돌은 이긴 쪽만 내보냄',
+        EF.keyCollisions.filter(c => c.resolved).every(c =>
+          emitted.includes(c.key)
+          && EF.items.filter(i => i.key === c.key && i.emit).length === 1
+          && EF.items.find(i => i.key === c.key && i.emit).name === c.winner));
+      ok('확정된 값이 원본 스타일 값과 같음',
+        EF.keyCollisions.filter(c => c.resolved).every(c => {
+          const w = EF.items.find(i => i.name === c.winner);
+          const t = (JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8')).effect || {})[c.key];
+          return !!w && !!t && t.$value === w.css;
+        }));
+      ok('키 충돌 확정마다 확정자와 날짜가 있음',
+        EF.keyCollisions.filter(c => c.resolved).every(c => !!c.decidedBy && /^\d{4}-\d{2}-\d{2}$/.test(c.decidedAt || '')));
+      ok('진 쪽은 SD 로 기록됨',
+        EF.keyCollisions.filter(c => c.resolved && c.loser).every(c =>
+          (VIEW.sourceDefects.items || []).some(d => d.where && d.where.includes(c.loser.name))));
       ok('막힌 효과마다 이유가 적힘',
-        EF.items.filter(i => i.blocked).every(i => /GAP-31/.test(i.blocked)));
+        EF.items.filter(i => i.blocked).every(i => /GAP-31|씁니다/.test(i.blocked)));
       ok('값 미측정 효과는 토큰으로 안 나감',
         EF.items.filter(i => !i.css).every(i => !i.emit));
       ok('내보낸 토큰 수 = emitted 목록 수', emitted.length === EF.emitted.length,
@@ -933,11 +956,15 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       const JE = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
       ok('DTCG 에 effect 블록과 근거가 있음',
         !!JE.effect && Object.keys(JE.effect).length === EF.emitted.length
-        && !!JE.$notes.effects && JE.$notes.effects.blocked.length === EF.keyCollisions.length * 2);
+        && !!JE.$notes.effects
+        && JE.$notes.effects.blocked.length === EF.items.filter(i => i.blocked).length);
       // 대소문자 충돌이 있으면 GAP 으로 기록돼 있어야 합니다.
       ok('대소문자 충돌이 GAP 으로 기록됨',
         EF.caseCollisions.length === 0
         || VIEW.GAPS.items.some(g => g.id === 'GAP-31' && /대소문자/.test(g.finding)));
+      ok('해소된 키 충돌이 사이트에 확정으로 보임',
+        !EF.keyCollisions.some(c => c.resolved)
+        || fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8').includes('토큰 키가 겹친 것 — 해소'));
       const idxE = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
       ok('효과 분류가 사이트에 실림', idxE.includes('"effects"') && /Elevation 이 아닌 효과/.test(idxE));
     }
