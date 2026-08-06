@@ -63,6 +63,8 @@ const items = layer.items.map(it => {
     : (link ? (link.display || it.name) : it.name);
   return {
     name: link && link.display ? link.display : it.name,
+    // 실측 데이터의 열쇠. 스타일 참조를 이어 붙일 때 이름 철자에 기대지 않기 위해 싣습니다.
+    key: link ? link.key : null,
     sourceName: it.name,
     ko: link ? link.ko : null,
     figma: it.figma,                       // done | wip | none
@@ -80,6 +82,41 @@ const items = layer.items.map(it => {
   };
 });
 
+// ── 스타일 참조 대조 (GAP-28) ────────────────────────────────────────────────
+// 컴포넌트 본문이 «Elevation_Bottom sheet 사용» 처럼 스타일 이름을 지목할 때가 있습니다.
+// 그 이름이 라이브러리에 실재하는지 대봅니다 — 가리키는 곳에 실물이 없는 참조를 잡기 위해서입니다.
+// (Picker ✅ 가 없는 Rubik 서체를 가리켰던 SD-18 과 같은 종류입니다.)
+const EFFECTS = (() => { try { return rd('effects.json'); } catch { return null; } })();
+const fold = s => String(s).toLowerCase().replace(/\s+/g, ' ').trim();
+const styleRefs = [];
+if (EFFECTS) {
+  for (const [key, spec] of Object.entries(LIB.pages.components || {})) {
+    const ref = spec && spec.elevation;
+    if (!ref || typeof ref !== 'string') continue;
+    // 본문 표기에서 스타일 이름만 뽑습니다 — «X 사용» 꼴.
+    const name = ref.replace(/\s*사용\s*$/, '').trim();
+    const exact = EFFECTS.items.find(e => e.name === name);
+    // 못 찾으면 «Elevation_» 접두어를 떼고 이름이 겹치는 것을 후보로 모읍니다.
+    const stem = fold(name.replace(/^Elevation_/i, ''));
+    const candidates = exact ? [] : EFFECTS.items
+      .filter(e => fold(e.name).includes(stem))
+      .map(e => ({ name: e.name, axis: e.axis, value: e.value, css: e.css, blocked: e.blocked || null }));
+    styleRefs.push({
+      component: key,
+      node: spec.node || null,
+      quoted: ref,
+      name,
+      resolved: !!exact,
+      ...(exact ? { style: exact.name, axis: exact.axis, css: exact.css } : {
+        candidates,
+        live: candidates.filter(c => c.axis !== 'deprecated').length,
+        deprecated: candidates.filter(c => c.axis === 'deprecated').map(c => c.name),
+        why: `«${name}» 라는 이름의 스타일이 라이브러리에 없습니다. 이름이 겹치는 것 ${candidates.length}종이 후보입니다.`,
+      }),
+    });
+  }
+}
+
 const done = items.filter(i => i.figma === 'done');
 const out = {
   $description: '컴포넌트 목록 — ✅ [Components] 구조도 25종에 Figma 상태와 저장소 실측 내용을 붙인 것입니다.',
@@ -94,7 +131,10 @@ const out = {
     notStarted: items.filter(i => i.figma === 'none').length,
     // ✅ 인데 저장소에 없는 것 — 이게 0이 아니면 우리 숙제가 남은 것입니다.
     doneButUndocumented: done.filter(i => !i.documented).map(i => i.name),
+    styleRefs: styleRefs.length,
+    styleRefsDangling: styleRefs.filter(r => !r.resolved).length,
   },
+  styleRefs,
   items,
 };
 
@@ -116,4 +156,11 @@ if (out.counts.doneButUndocumented.length) {
 }
 for (const i of items.filter(x => x.documented)) {
   console.log(`   ${i.figma === 'done' ? '✅' : '🚧'} ${i.name.padEnd(20)} ${i.spacing ? `간격주석 ${i.spacing.annotations}건` : ''}`);
+}
+if (styleRefs.length) {
+  console.log(`  본문이 지목한 스타일 ${styleRefs.length}건 — 실재 ${styleRefs.filter(r => r.resolved).length} · 없음 ${out.counts.styleRefsDangling}`);
+  for (const r of styleRefs.filter(x => !x.resolved)) {
+    console.log(`  ⚠ ${r.component} → «${r.name}» 없음. 후보 ${r.candidates.length}종 (살아있는 것 ${r.live})`);
+    for (const c of r.candidates) console.log(`      ${c.axis.padEnd(11)} ${c.name.padEnd(28)} ${c.value || '(값 없음)'}`);
+  }
 }
