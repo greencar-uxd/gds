@@ -1,0 +1,162 @@
+{
+  "$description": "구조도가 «시작 전(—)» 으로 세던 8쪽을 직접 확인한 결과입니다. 🚧 와 마찬가지로 «—» 도 «빈 페이지»가 아니었습니다.",
+  "why": "🚧 19쪽을 다 읽고 나니 «—» 표시도 같은 의심을 받아야 했습니다. 표시만 보고 «없다»고 세는 것이 바로 GAP-32 의 내용입니다.",
+  "readAt": "2026-08-06",
+  "how": "mcp__Figma__get_metadata 로 페이지를 직접 열었습니다. 세 쪽(Skeleton · Process bar · Radio)은 XML 을 저장해 tools/parse-figma-page.js 로 구조화했고(data/figma-pages/*.json), 나머지 다섯 쪽은 응답이 작아 파일로 저장되지 않아 «옮겨 적기»로 남깁니다 — 그 항목은 transcribed: true 이며 근거 노드 ID 를 답니다.",
+  "rule": [
+    "옮겨 적은 항목은 기계가 다시 세지 못합니다. 그래서 transcribed 로 표시하고, 수치는 근거 노드 ID 와 함께만 적습니다.",
+    "«문서 틀만 있고 내용이 없다»와 «빈 페이지»는 다릅니다. 구분해서 적습니다.",
+    "여기서 찾은 오염(남의 문장·끊긴 문장)도 고치지 않습니다."
+  ],
+  "pages": [
+    {
+      "slug": "table",
+      "name": "Table (테이블)",
+      "node": "42562:18899",
+      "state": "empty",
+      "transcribed": true,
+      "finding": "노드가 하나도 없습니다. 원본 63쪽 중 유일하게 «정말로 빈» 페이지입니다.",
+      "evidence": "<canvas id=\"42562:18899\" name=\"Table (테이블)\" …/> — 자식 노드 0"
+    },
+    {
+      "slug": "card",
+      "name": "Card (카드)",
+      "node": "42479:74478",
+      "state": "template-only",
+      "transcribed": true,
+      "finding": "문서화 틀(Detail 1 · Detail 2)만 놓여 있고 본문 자리에 «-» 만 있습니다. 컴포넌트는 있습니다 — mcard_set 변형 15종(42722:52947).",
+      "evidence": "42554:48893 · 42554:48900 이 «-» 텍스트. 변형 예: Property 1=mcard_LP_def(42722:52971) · mcard_T_def(42722:52980) · mcard_kt_def(42722:53098)"
+    },
+    {
+      "slug": "switch",
+      "name": "Switch (스위치)",
+      "node": "42073:65749",
+      "state": "template-only",
+      "transcribed": true,
+      "finding": "문서화 틀 두 벌(42419:38532 · 42553:11689) 모두 본문이 «-» 입니다. 컴포넌트는 있습니다 — Toggle checked=Off/On(42073:65636 · 42073:65639) · account_type_toggle 2종(44665:1867 · 44665:1868) · btn_key_lock 2종(42419:38418 · 42419:38420).",
+      "evidence": "42553:11709 · 42553:11716 이 «-» 텍스트"
+    },
+    {
+      "slug": "accordion",
+      "name": "Accordion (아코디언)",
+      "node": "42066:25442",
+      "state": "documented-but-contaminated",
+      "transcribed": true,
+      "finding": "문서 프레임 Components_Accordion(44370:30114)이 있는데 내용이 남의 것입니다. 정의는 끊겨 있고, [종류] 절은 Tip 문장, Style 절은 Icon checkbox 문장입니다. 🚧 페이지들에서 찾은 것과 같은 오염입니다.",
+      "contamination": [
+        {
+          "what": "정의가 끊김",
+          "text": "Accordion (아코디언)은",
+          "node": "44370:30133"
+        },
+        {
+          "what": "[종류] 절이 Tip 문장",
+          "text": "Tip (팁)은",
+          "node": "44370:30147"
+        },
+        {
+          "what": "Tip 종류 3줄 그대로",
+          "text": "➊ Accent tip (ㅇㅇ) …",
+          "node": "44370:30152"
+        },
+        {
+          "what": "Style 절이 Icon checkbox 문장",
+          "text": "Icon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 …",
+          "node": "44370:30179"
+        },
+        {
+          "what": "본문에 Selection box 라벨이 남음",
+          "text": "Selection box (셀렉션 박스)",
+          "node": "44370:30137"
+        }
+      ],
+      "note": "이 다섯 건은 data/component-pages.json 의 기계 대조에는 들어 있지 않습니다 — 이 페이지 XML 을 파일로 저장하지 못해 파서를 못 돌렸습니다. 다음에 파서에 넣을 자리입니다."
+    },
+    {
+      "slug": "loading-spinner",
+      "name": "Loading spinner(로딩 스피너)",
+      "node": "42554:48781",
+      "state": "spec-outside-template",
+      "transcribed": true,
+      "finding": "문서화 틀은 «-» 로 비어 있는데, 캔버스에 As-is 스펙이 따로 적혀 있습니다. Lottie 두 종의 형태·색·크기·프레임레이트가 다 있습니다.",
+      "spec": [
+        {
+          "file": "lottie_loading.json",
+          "kind": "스피너",
+          "shape": "8개의 막대(Rectangle)가 원형으로 배치",
+          "hex": "#0A3C5C",
+          "rgba": "[0.0392, 0.2353, 0.3608, 1]",
+          "size": "50 × 50px",
+          "fps": 60,
+          "node": "43416:2264",
+          "state": "As-is"
+        },
+        {
+          "file": "lottie_loading_navy_dot.json",
+          "kind": "도트",
+          "shape": "4개의 원(Ellipse)이 순서대로 튀어오르는 애니메이션",
+          "hex": "#0A3C5C",
+          "rgba": "[0.0392, 0.2353, 0.3608, 1]",
+          "size": "500 × 500px",
+          "fps": 30,
+          "node": "43416:2265",
+          "state": "As-is"
+        }
+      ],
+      "toBe": {
+        "state": "미작성",
+        "text": "To-be(변경 스팩 작성해주세요)",
+        "nodes": [
+          "43416:2266",
+          "43416:2268"
+        ]
+      },
+      "workNote": {
+        "text": "**작업 방식 -Json으로 되어 있어서 적정 컬러 변경 값만 전달하면 변경가능. -VSCode 등 에서 일괄 변환 요청",
+        "node": "43416:2270"
+      },
+      "externalLink": {
+        "what": "관련 파일 링크가 Confluence 로 걸려 있습니다",
+        "node": "43416:6437"
+      }
+    },
+    {
+      "slug": "skeleton",
+      "name": "Skeleton (스켈레톤)",
+      "node": "42476:74477",
+      "state": "screens-only",
+      "transcribed": false,
+      "parsed": "data/figma-pages/skeleton.json",
+      "finding": "화면만 있고 문서화 절이 없습니다. 문서 틀도 놓이지 않았습니다."
+    },
+    {
+      "slug": "process-bar",
+      "name": "Process bar (프로그래스 바)",
+      "node": "42441:52342",
+      "state": "screens-only",
+      "transcribed": false,
+      "parsed": "data/figma-pages/process-bar.json",
+      "finding": "화면과 변형은 있고 문서화 절은 없습니다. 다만 모션 메모가 캔버스에 적혀 있습니다 — «after delay 1m/s slow 600m/s slide up 20px».",
+      "motionNote": "after delay 1m/s slow 600m/s slide up 20px"
+    },
+    {
+      "slug": "radio",
+      "name": "Radio (래디오)",
+      "node": "42073:65748",
+      "state": "screens-only",
+      "transcribed": false,
+      "parsed": "data/figma-pages/radio.json",
+      "finding": "화면과 변형 2종은 있고 문서화 절이 없습니다."
+    }
+  ],
+  "summary": {
+    "checked": 8,
+    "empty": 1,
+    "templateOnly": 2,
+    "documentedButContaminated": 1,
+    "specOutsideTemplate": 1,
+    "screensOnly": 3,
+    "reading": "8쪽 중 «정말로 빈» 페이지는 Table 하나뿐입니다. 나머지 7쪽에는 컴포넌트·화면·스펙·오염된 문서 중 하나 이상이 있습니다.",
+    "$note": "이 수치는 손으로 적었다가 build/check.js 의 «요약 수치가 항목과 일치» 검사에 걸려 고쳤습니다(templateOnly 3→2). 손으로 적은 수는 반드시 기계가 대조합니다."
+  }
+}
