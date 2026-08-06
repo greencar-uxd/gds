@@ -965,6 +965,34 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       ok('원본 대기 종은 내용을 지어내지 않음',
         K.items.filter(i => !i.documented).every(i =>
           !i.definition && !i.kinds && !i.specs && !i.states));
+
+      // ── 본문이 지목한 스타일 대조 (GAP-28) — 가리키는 곳에 실물이 있는가.
+      const SR = K.styleRefs || [];
+      const EFF = VIEW.effects;
+      ok('본문의 스타일 참조를 대조함', SR.length > 0, `${SR.length}건`);
+      ok('참조 집계가 실제와 일치',
+        K.counts.styleRefs === SR.length && K.counts.styleRefsDangling === SR.filter(r => !r.resolved).length);
+      ok('«실재»로 판정한 참조는 정말 라이브러리에 있음',
+        SR.filter(r => r.resolved).every(r => EFF.items.some(e => e.name === r.style)));
+      ok('«없음»으로 판정한 참조는 정말 라이브러리에 없음',
+        SR.filter(r => !r.resolved).every(r => !EFF.items.some(e => e.name === r.name)));
+      ok('없는 참조마다 후보를 근거와 함께 제시',
+        SR.filter(r => !r.resolved).every(r => r.candidates.length > 0 && (r.why || '').length > 15));
+      ok('후보가 전부 실재하는 스타일',
+        SR.filter(r => !r.resolved).every(r => r.candidates.every(c => EFF.items.some(e => e.name === c.name))));
+      ok('폐기된 후보를 살아있는 것으로 세지 않음',
+        SR.filter(r => !r.resolved).every(r =>
+          r.live === r.candidates.filter(c => c.axis !== 'deprecated').length));
+      // 후보가 여럿이면 «어느 것인지» 고르지 않습니다 — 저장소가 정답을 아는 척하면 안 됩니다.
+      // (후보 스타일 자체가 토큰으로 나가는 것은 별개입니다. 여기서 막는 것은 «이 컴포넌트가
+      //  쓰는 엘리베이션은 이것» 이라고 단정하는 필드입니다.)
+      ok('후보가 여럿인 참조에서 하나를 고르지 않음',
+        SR.filter(r => !r.resolved && r.live > 1).every(r => !r.style && !r.axis && !r.css));
+      ok('없는 참조가 SD 로 기록됨', SR.filter(r => !r.resolved).every(() =>
+        (VIEW.sourceDefects.items || []).some(d => d.id === 'SD-20' && /Elevation_Bottom sheet/.test(d.problem))));
+      ok('Components 페이지가 없는 참조를 경고로 렌더함',
+        !SR.some(r => !r.resolved)
+        || fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8').includes('본문이 없는 스타일을 가리킵니다'));
       // 페이지는 브라우저에서 그려지므로 정적 HTML 에 앵커가 없습니다 —
       // 주입된 데이터와 템플릿 코드를 봅니다.
       const idx4 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
