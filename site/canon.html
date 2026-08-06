@@ -801,10 +801,21 @@ function layout(){
   ${pmeta({basis:'Layout for ios/aos/web (OS별 레이아웃) ✅ · 43185:36342',tokens:`<code>--gds-layout-*</code> ${all.length}종`})}
   <div class="stat">
     <div><b>${all.length}</b><span>토큰</span></div>
+    <div><b>${(L.blocked||[]).length}</b><span>막힌 토큰</span></div>
     <div><b>${(L.regions||[]).length}</b><span>영역</span></div>
     <div><b>20px</b><span>좌·우·상단 마진</span></div>
-    <div><b>2</b><span>플랫폼 분기 (iOS / AOS·Web)</span></div>
   </div>
+  ${L.platformAxis?`<h2>플랫폼을 어떻게 가르는가</h2>
+  <p class="lead" style="font-size:15px">${esc(L.platformAxis.note)}</p>
+  <div>${[['ios','iOS'],['aos','AOS'],['web','Web']].map(([k,ko])=>{
+    const v=L.platformAxis[k];
+    return `<div class="sprow" style="grid-template-columns:120px 110px 1fr">
+      <div class="tok">${ko}</div>
+      <div class="px">${v==null?'—':v+'px'}</div>
+      <div class="muted">${v==null
+        ? '<b>정해지지 않았습니다</b> — 아래 «막힌 토큰» 참고'
+        : '두 기준이 일치합니다'}</div></div>`;
+  }).join('')}</div>`:''}
   ${GRP.map(([g,ko])=>(L[g]||[]).length?`
     <h2>${ko}</h2>
     <div>${L[g].map(x=>`<div class="sprow" data-copy="--gds-layout-${slug(x.token)}" style="grid-template-columns:230px 90px 1fr;cursor:pointer">
@@ -820,7 +831,24 @@ function layout(){
   ${(L.buttonBehavior||[]).length?`<h2>버튼 동작</h2>
   <div>${L.buttonBehavior.map(b=>`<div class="sprow" style="grid-template-columns:1fr">
     <div class="muted"><b>${esc(typeof b==='string'?b:b.name)}</b>${typeof b==='string'?'':' — '+esc(b['설명']||b.note||'')}</div></div>`).join('')}</div>`:''}
-  ${L.conflict?`<div class="note warn"><p><b>✅ 페이지끼리 어긋납니다.</b> ${esc(typeof L.conflict==='string'?L.conflict:JSON.stringify(L.conflict))}</p></div>`:''}
+  ${(L.blocked||[]).length?`<h2>막힌 토큰 — ${L.blocked.length}종</h2>
+  <p class="lead" style="font-size:15px">값이 정해지지 않은 것은 <b>내보내지 않습니다.</b> 잘못된 값이 나가면 그 값을 쓴 화면을 나중에 전부 되돌려야 하기 때문입니다.</p>
+  <div>${L.blocked.map(b=>`<div class="sprow" style="grid-template-columns:230px 1fr">
+    <div class="tok" style="opacity:.5;text-decoration:line-through">--gds-layout-${slug(b.token)}</div>
+    <div class="muted">${esc(b.reason)}</div></div>
+    ${(b.candidates||[]).map(c=>`<div class="sprow" style="grid-template-columns:230px 90px 1fr">
+      <div class="muted" style="padding-left:16px">후보</div>
+      <div class="px">${c.value}px</div>
+      <div class="muted">${esc(c.basis)}</div></div>`).join('')}`).join('')}</div>`:''}
+  ${(L.conflicts||[]).length?`<h2>✅ 페이지끼리 어긋난 것</h2>
+  <div>${L.conflicts.map(c=>`<div class="note ${c.status==='resolved'?'':'warn'}">
+    <p><b>${esc(c.axis)}</b> — ${c.status==='resolved'?'해소':'미결'}${c.gap?` · ${esc(c.gap)}`:''}</p>
+    <p>${esc(c.finding)}</p>
+    ${c.resolution?`<p>${esc(c.resolution)}</p>`:''}
+    ${c.evidence?`<p class="muted">근거 — ${esc(c.evidence)}</p>`:''}
+    ${c.effect?`<p class="muted">${esc(c.effect)}</p>`:''}
+    ${c.scenario?`<p class="muted">가능 시나리오 — ${esc(c.scenario)}</p>`:''}
+  </div>`).join('')}</div>`:''}
   <p class="muted" style="margin-top:28px">행을 누르면 변수명이 복사됩니다.</p>
   ${footer()}`;
 }
