@@ -1294,7 +1294,55 @@ function comp(){
          <td class="muted">${esc(c2.axis)}</td><td class="muted">${esc(c2.value||'값 없음')}</td></tr>`).join('')}
        </tbody></table></div>`).join('')}
   `).join('')}
+  ${wipPages()}
   ${footer()}`;
+}
+
+/* 🚧 컴포넌트 페이지를 직접 읽은 결과 — 페이지끼리 대조해 «남의 문장»을 기계로 찾았습니다. */
+function wipPages(){
+  const W=C.pages&&C.pages.components; if(!W) return '';
+  return `<h2>🚧 컴포넌트 페이지를 직접 읽었습니다 — ${W.counts.pages}쪽</h2>
+  <p class="lead" style="font-size:15px">«원본 대기»로 비워 두었던 자리입니다. 열어 보니 전부 내용이 있었습니다.</p>
+  <table class="ctr"><thead><tr><th>페이지</th><th>절</th><th>텍스트</th><th>변형</th><th>빈 템플릿</th><th>노드</th></tr></thead><tbody>
+  ${W.pages.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${p.counts.sections}</td><td>${p.counts.texts}</td>
+    <td>${p.counts.variants}</td><td class="${p.counts.templateStubs?'no':''}">${p.counts.templateStubs}</td>
+    <td class="muted"><code>${esc(p.source.node)}</code></td></tr>`).join('')}
+  </tbody></table>
+
+  ${W.naming.items.filter(n=>n.differs).length?`<h3>목차 이름과 페이지 이름이 다른 곳</h3>
+  <table class="ctr"><thead><tr><th>목차</th><th>실제 페이지</th></tr></thead><tbody>
+  ${W.naming.items.filter(n=>n.differs).map(n=>`<tr><td class="muted"><code>${esc(n.inToc)}</code></td>
+    <td><b>${esc(n.pageName)}</b></td></tr>`).join('')}
+  </tbody></table>
+  <p class="muted">${esc(W.naming.why)}</p>`:''}
+
+  ${W.nameMismatch&&W.nameMismatch.count?`<div class="note warn"><p><b>이름 짝이 어긋난 곳 ${W.nameMismatch.count}건.</b> ${esc(W.nameMismatch.why)}</p>
+  <p class="muted">${W.nameMismatch.items.map(n=>`<code>${esc(n.found)}</code> — 영문은 ${esc(n.enBelongsTo)}, 괄호 안 한글은 ${esc(n.koBelongsTo)} 것 (${esc(n.page)} › ${esc(n.section)})`).join('<br>')}</p></div>`:''}
+
+  <h3>남의 문장 ${W.borrowed.count+W.foreignSubjects.count}건 — 고치지 않고 표시만 합니다</h3>
+  <p class="lead" style="font-size:15px">${esc(W.borrowed.why)}</p>
+  <p class="muted">${esc(W.method)}</p>
+  ${W.borrowed.items.length?`<table class="ctr"><thead><tr><th>남아 있는 문장</th><th>어디에</th></tr></thead><tbody>
+  ${W.borrowed.items.map(b=>`<tr><td class="muted">「${esc(b.text.slice(0,140))}」</td>
+    <td class="muted">${[...new Set(b.borrowedBy)].map(esc).join('<br>')}</td></tr>`).join('')}
+  </tbody></table>`:''}
+  ${W.foreignSubjects.items.length?`<h4>주어가 그 페이지의 컴포넌트가 아닌 문장</h4>
+  <table class="ctr"><thead><tr><th>페이지 › 절</th><th>주어</th><th>문장</th></tr></thead><tbody>
+  ${W.foreignSubjects.items.map(f=>`<tr><td class="muted">${esc(f.page)} › ${esc(f.section)}</td>
+    <td><b>${esc(f.subject)}</b></td><td class="muted">${esc(f.text.slice(0,110))}</td></tr>`).join('')}
+  </tbody></table>`:''}
+  ${W.truncated.items.length?`<div class="note warn"><p><b>쓰다 만 문장 ${W.truncated.count}건.</b> ${esc(W.truncated.why)}</p>
+  <p class="muted">${W.truncated.items.map(t=>`${esc(t.page)} › ${esc(t.section)} — 「${esc(t.text)}」`).join('<br>')}</p></div>`:''}
+
+  <h3>페이지별 절</h3>
+  ${W.pages.map(p=>`<h4>${esc(p.name)} <span class="muted"><code>${esc(p.source.node)}</code></span></h4>
+  <table class="ctr"><thead><tr><th>절</th><th>본문</th></tr></thead><tbody>
+  ${p.sections.map(s=>`<tr><td><b>${esc(s.title)}</b><br><span class="muted"><code>${esc(s.node)}</code></span></td>
+    <td class="muted">${esc(s.lead||'—')}${s.rows.length>1?`<br><span style="opacity:.7">${s.rows.slice(1,6).map(r=>esc(r.slice(0,90))).join(' · ')}</span>`:''}</td></tr>`).join('')}
+  ${p.docTemplate?'':`<tr><td class="muted">문서화 템플릿 없음</td>
+    <td class="muted">작업 메모만 있습니다 — 빈 페이지가 아닙니다.<br>${p.workNotes.slice(0,5).map(n=>`<code>${esc(n.node)}</code> ${esc(n.text.slice(0,120))}`).join('<br>')}</td></tr>`}
+  </tbody></table>`).join('')}
+  <div class="note"><p class="muted">${W.rule.map(esc).join('<br>')}</p></div>`;
 }
 
 /* ───────── 진행 상태 ───────── */
