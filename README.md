@@ -263,7 +263,8 @@ Template (템플릿) — 상위 조합 단위
 
 ## Elevation 이 아니면 무엇인가 (2026-08-06)
 
-정본 EFFECT 스타일은 `Elevation_1~6` 만이 아닙니다. **16종** 중 10종이 체계 밖에 있었습니다(`GAP-15`).
+정본 EFFECT 스타일은 `Elevation_1~6` 만이 아닙니다. **14종** 중 8종이 체계 밖에 있습니다(`GAP-15`).
+처음에는 16종으로 셌는데, 소속을 대보니 2종이 배제 대상 라이브러리에서 섞여 들어와 있었습니다(`GAP-31`).
 
 이름과 값에서 **읽히는 것만으로** 네 축으로 갈랐습니다 — `tools/build-effects.js`.
 
@@ -418,7 +419,7 @@ npm run check    # 정본·결정·산출물 기계 대조 (167개 항목)
 | `data/reference-sites.json` | 레퍼런스 디자인 시스템 17곳 + 그린카 공식 사이트 관찰 기록 |
 | `data/spacing-census.json` | ✅ 페이지 간격 주석 192건 조사 (생성물) |
 | `data/components.json` | 컴포넌트 25종 목록 + 실측 7종 (생성물) |
-| `data/effects.json` | 효과 16종 4축 분류 (생성물) |
+| `data/effects.json` | 효과 14종 4축 분류 + 소속 검증 (생성물) |
 | `docs/GDS-uiux-guide.md` | UX 라이팅 규칙 + 그래픽 3단계 (생성물) |
 | `docs/GDS-typo-v0.2.md` | 타이포 정리안 |
 
