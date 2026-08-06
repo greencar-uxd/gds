@@ -749,67 +749,95 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       /같은 축인지/.test(P.tierVsDeclared.finding || ''));
     // 틀린 단정을 지우지 않고 철회로 남깁니다 — 무엇을 왜 틀렸는지가 기록에 남아야 합니다.
     ok('철회한 «없음» 판정이 기록됨',
-      !!IC.correction && IC.correction.retracted.length === 3
-      && IC.correction.retracted.every(r => (r.why || '').length > 10));
+      !!IC.correction && IC.correction.retracted.length === 5
+      && IC.correction.retracted.every(r => (r.why || '').length > 10 && (r.round === 1 || r.round === 2)),
+      `${IC.correction.retracted.length}건 (1차 ${IC.correction.retracted.filter(r => r.round === 1).length} · 2차 ${IC.correction.retracted.filter(r => r.round === 2).length})`);
+    ok('두 번 틀린 경위가 남아 있음',
+      IC.correction.rounds === 2 && /본문/.test(IC.correction.whyWrongTwice || '')
+      && /parse-figma-page/.test(IC.correction.fixedBy || ''));
     ok('철회 내용이 페이지에 보임', htmlI.includes('정정 —'));
     ok('«없음» 목록에 철회한 항목이 남아 있지 않음',
       IC.missing.every(m => !IC.correction.retracted.some(r => r.item === m.item)));
     ok('Icon 이 Foundation 내비에 있음', /\['icon','Icon'\]/.test(fs.readFileSync(path.join(ROOT, 'site', 'canon.html'), 'utf8')));
 
-    // ── 참고로 메운 것 (GAP-22 잔여 2건) ──
-    // 검사의 목적 하나 — «참고»가 «원본»으로 둔갑하지 못하게 하는 것.
+    // ── 원본 제작 가이드라인 (GAP-22 2차 정정) ──
+    // 검사의 목적 — 원본 값이 참고 값으로 덮어쓰이지 않게 하는 것.
+    const GU = IC.guide;
+    ok('원본 제작 가이드라인이 실려 있음', !!GU && GU.counts.sections === 9,
+      GU ? `${GU.counts.sections}절` : '없음');
+    if (GU) {
+      const rawG = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'figma-pages', 'icon-system-full.json'), 'utf8'));
+      const hasText = t => rawG.texts.some(x => x.text.replace(/\s+/g, ' ').trim() === t);
+      ok('절 본문이 원본 텍스트와 글자 그대로 일치',
+        GU.guide.every(g => !g.lead || hasText(g.lead)), '파서가 원본 줄을 그대로 옮겼는지');
+      ok('절마다 근거 노드가 있음', GU.guide.every(g => /^\d+:\d+$/.test(g.node || '')));
+      ok('빈 절이 없음', GU.counts.emptySections === 0);
+      // 값이 참고가 아니라 원본에서 왔는지 — 참고 값과 다른 것이 증거입니다.
+      ok('스트로크가 원본 값 1.2px (KRDS 1.6 · M3 2 와 다름)', GU.values.stroke.value === '1.2px', GU.values.stroke.value);
+      ok('스트로크 근거 문장이 원본에 실재', hasText(GU.values.stroke.why));
+      ok('기본 Cap 이 Round · 예외가 Butt + 1px offset',
+        GU.values.endCap.base === 'Round' && /Butt/.test(GU.values.endCap.exception || ''));
+      ok('키라인 4종이 전부 읽힘',
+        !!GU.values.keyline.frame && !!GU.values.keyline.square
+        && !!GU.values.keyline.circle && !!GU.values.keyline.rectangular);
+      ok('크기별 굵기가 5단계이고 크기 순서와 맞음', (() => {
+        const S = GU.values.sizeStroke;
+        return S.length === 5 && S.every((s, i) => i === 0 || s.stroke <= S[i - 1].stroke);
+      })(), GU.values.sizeStroke.map(s => `${s.px}:${s.stroke}`).join(' '));
+      ok('24px 굵기가 03_Stroke 기준값과 같음',
+        `${(GU.values.sizeStroke.find(s => s.px === 24) || {}).stroke}px` === GU.values.stroke.value);
+      ok('원본 안 모순이 «맞춰지지» 않고 기록됨',
+        GU.internalConflicts.length > 0 && GU.internalConflicts.every(c => c.decided === false));
+      ok('미작성 사용 가이드를 «있음»으로 세지 않음',
+        GU.counts.usageGuidesFilled < GU.counts.usageGuides,
+        `${GU.counts.usageGuidesFilled}/${GU.counts.usageGuides}`);
+      ok('원본 오타를 고치지 않고 셈', GU.typos.length >= 3 && GU.typos.every(t => t.nodes.length > 0));
+      ok('제작 가이드라인이 사이트에 실림',
+        htmlI.includes('제작 가이드라인 — 원본 00_Size ~ 08_Color'));
+    }
+
+    // ── 출처 대조 — 참고는 메우는 용도가 아니라 대조 용도입니다.
     const RF = IC.reference;
-    ok('참고 자료가 실려 있음', !!RF && RF.status === 'proposal', RF ? RF.status : '없음');
-    if (RF) {
+    ok('참고 자료가 대조 상태로 강등됨', !!RF && RF.status === 'comparison', RF ? RF.status : '없음');
+    if (RF && GU) {
       const ids = new Set(RF.sources.map(s => s.id));
+      ok('참고 철회 경위가 기록됨', !!RF.retracted && /본문 텍스트를 읽지 않았/.test(RF.retracted.why || ''));
       ok('출처마다 URL 과 고른 이유가 있음',
         RF.sources.every(s => /^https:\/\//.test(s.url || '') && (s.whyThisOne || '').length > 10));
-      ok('그리드 항목마다 원문 인용과 등록된 출처가 있음',
-        RF.grid.items.length > 0
-        && RF.grid.items.every(i => (i.quote || '').length > 5 && ids.has(i.source)),
-        `${RF.grid.items.length}항목`);
-      ok('크기 단계마다 등록된 출처가 있음',
-        RF.sizeUsage.steps.every(s => ids.has(s.source)));
-      // 참고가 «원본 건수»를 지어내지 않았는지 — 페이지 읽기 결과와 대조합니다.
-      ok('크기 단계의 원본 건수가 페이지 읽기와 일치',
-        RF.sizeUsage.steps.every(s => IC.page.declaredSizes[String(s.px)] === s.originalCount),
-        RF.sizeUsage.steps.map(s => `${s.px}:${s.originalCount}`).join(' '));
-      // 제안이 원본 크기를 골라 담고 나머지를 숨기지 않았는지.
-      ok('제안 + 제안 밖 = 원본 선언 크기 전부', (() => {
-        const covered = [...RF.sizeUsage.steps.map(s => s.px), ...RF.sizeUsage.outsideProposal.items.map(s => s.px)]
-          .sort((a, b) => a - b);
-        const all = Object.keys(IC.page.declaredSizes).map(Number).sort((a, b) => a - b);
-        return JSON.stringify(covered) === JSON.stringify(all);
-      })());
-      // 메웠어도 «원본에 없다»가 지워지면 안 됩니다.
-      ok('메운 뒤에도 «원본에 없음» 표시가 남아 있음',
-        IC.missing.length === 2 && IC.missing.every(m => m.stillMissingInSource === true && m.filledWith === 'reference'));
-      // 참고 값이 토큰으로 새 나가지 않았는지 — 이게 핵심입니다.
-      ok('참고 값이 CSS 토큰으로 나가지 않음', (() => {
+      ok('인용마다 등록된 출처와 원문이 있음',
+        RF.quotes.every(q => ids.has(q.source) && (q.text || '').length > 10), `${RF.quotes.length}건`);
+      ok('출처 대조를 기계가 판정함',
+        GU.provenance.items.length === RF.quotes.length
+        && GU.provenance.items.every(i => ['verbatim', 'partial', 'independent'].includes(i.verdict)));
+      ok('KRDS 원문 그대로인 절이 밝혀짐',
+        GU.provenance.verbatimSections.length > 0 && GU.counts.verbatim > 0,
+        GU.provenance.verbatimSections.join(' · '));
+      ok('참고 값이 원본 값을 덮어쓰지 않음', (() => {
+        // KRDS 는 1.6px, M3 는 2dp. 원본은 1.2px. 하나라도 참고 값이면 샌 것입니다.
+        const v = GU.values.stroke.value;
+        return v !== '1.6px' && v !== '2px' && v !== '2dp';
+      })(), GU.values.stroke.value);
+      ok('원본에 없는 축을 참고로 채우지 않음',
+        IC.missing.length > 0 && IC.missing.every(m => m.filledWith === null && m.stillMissingInSource === true),
+        `${IC.missing.length}가지`);
+      ok('아이콘 치수 토큰이 여전히 0개', (() => {
         const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
-        // --gds-icon-* 중 색 시맨틱 2종은 원본(Bottom navigation ✅)에서 온 것이라 정상입니다.
-        // 참고에서 온 값은 전부 «치수»이므로, px 값을 가진 아이콘 토큰이 하나라도 있으면 샌 것입니다.
-        const dims = [...css.matchAll(/--gds-icon-[a-z0-9-]+:\s*([^;]+);/g)]
-          .filter(m => /\d+\s*px/.test(m[1]));
-        return dims.length === 0;
-      })(), '아이콘 치수 토큰은 여전히 0개여야 합니다 — 색 시맨틱만 원본 근거로 나갑니다');
-      ok('참고 값이 DTCG 토큰으로 나가지 않음', (() => {
-        const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json'), 'utf8'));
-        return !j.icon && !Object.keys(j).some(k => /^icon/i.test(k));
+        return [...css.matchAll(/--gds-icon-[a-z0-9-]+:\s*([^;]+);/g)].filter(m => /\d+\s*px/.test(m[1])).length === 0;
       })());
-      // 사이트에서 절이 분리돼 있고 «참고»라고 못박혀 있는지.
-      ok('사이트에 «참고» 절이 따로 있음',
-        htmlI.includes('참고로 메운 것 — 원본이 아닙니다')
-        && htmlI.includes('이 절의 값은 전부 «참고»입니다'));
-      ok('참고를 봐도 되는 근거가 적혀 있음',
-        /강민관 2026-08-06/.test(RF.sanction.byUser || '') && /43801:47452/.test(RF.sanction.byOriginal || ''));
-      // 두 출처가 갈리는 항목을 «하나로 정한 것»처럼 적지 않았는지.
-      ok('출처가 갈리는 항목이 갈린 채로 남아 있음',
-        RF.grid.items.some(i => (i.conflict || '').length > 10)
-        && RF.stillOpen.some(s => /end cap/.test(s)));
-      ok('참고로도 안 메워진 것이 남아 있음', RF.stillOpen.length > 0, `${RF.stillOpen.length}건`);
-      ok('원본과 어긋나는 곳이 «맞춰지지» 않고 미결로 남음',
-        RF.contrasts.some(c => c.decided === false) && RF.contrasts.every(c => (c.reading || '').length > 20));
+      ok('출처 대조가 사이트에 실림',
+        htmlI.includes('원본 문장은 어디서 왔나 — 출처 대조') && htmlI.includes('G car 고유 판단'));
+      // 00_Size 밖 크기 — 유지 결정을 «정리했다»로 바꿔 적지 않았는지.
+      ok('00_Size 밖 크기가 건수와 함께 남아 있음',
+        IC.sizeGap.offScale.length === 3
+        && IC.sizeGap.offScale.every(o => IC.page.declaredSizes[String(o.px)] === o.count),
+        IC.sizeGap.offScale.map(o => `${o.px}:${o.count}`).join(' '));
+      ok('유지 결정에 근거 문장이 붙어 있음',
+        /강민관/.test(IC.sizeGap.decision.by) && (IC.sizeGap.decision.quote || '').length > 5);
+      ok('유지 결정대로 크기를 지우지 않음', (() => {
+        const all = Object.keys(IC.page.declaredSizes).map(Number).sort((a, b) => a - b);
+        const covered = [...IC.sizeGap.guideSizes, ...IC.sizeGap.offScale.map(o => o.px)].sort((a, b) => a - b);
+        return JSON.stringify(all) === JSON.stringify(covered);
+      })());
     }
   }
 
