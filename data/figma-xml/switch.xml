@@ -1,0 +1,90 @@
+<!-- 범위: Switch (스위치) 42073:65749 중 «문서화 틀 두 벌»과 «컴포넌트 변형» 부분만 담습니다.
+     저장소가 주장하는 것이 이 두 곳뿐이라 화면 목업(42419:38382 · 42557:13478 · 42560:15839 · 42560:16888)은 넣지 않았습니다.
+     get_metadata(fileKey=Gx9UHfQdhSdHzr1j8Kp1Ab, nodeId=42073:65749) 응답에서 그대로 옮겼습니다. -->
+<canvas id="42073:65749" name="Switch (스위치)" x="0" y="0" width="0" height="0">
+  <frame id="42073:65753" name="Frame 71669" x="3011" y="448" width="108" height="168.00001525878906">
+    <frame id="42073:65754" name="Frame 716143" x="0" y="0" width="108" height="48">
+      <text id="42073:65755" name="Switch" x="0" y="0" width="108" height="48" />
+    </frame>
+    <frame id="42073:65635" name="Toggle" x="0" y="72" width="80" height="96.00001525878906">
+      <symbol id="42073:65636" name="checked=Off" x="64" y="40.000003814697266" width="47.99999828344971" height="24.0000080109902" />
+      <symbol id="42073:65639" name="checked=On" x="64" y="80.00000762939453" width="47.99999828344971" height="24.0000080109902" />
+    </frame>
+  </frame>
+  <frame id="42419:38417" name="btn_key_lock_100_set" x="3011" y="649" width="272" height="90">
+    <symbol id="42419:38418" name="Property 1=btn_key_lock_100" x="20" y="20" width="100" height="50" />
+    <symbol id="42419:38420" name="Property 1=btn_key_unlock_100" x="152" y="20" width="100" height="50" />
+  </frame>
+  <instance id="42419:38531" name="타이틀" x="4123" y="145" width="1920" height="341" />
+  <frame id="42419:38532" name="G car Components_Switch" x="4123" y="486" width="1920" height="1080">
+    <rounded-rectangle id="42419:38533" name="Index bg" x="0" y="0" width="253" height="1080" />
+    <frame id="42419:38534" name="Template frame basic" x="0" y="0" width="1920" height="1080">
+      <instance id="42419:38535" name="Index" x="50" y="50" width="203" height="980" />
+      <frame id="42419:38536" name="Content area" x="308" y="50" width="1562" height="980">
+        <instance id="42419:38537" name="Contents" x="0" y="0" width="259" height="980" />
+        <frame id="42419:38538" name="Contents" x="488" y="0" width="1074" height="980">
+          <frame id="42419:38539" name="Discription area" x="0" y="0" width="1074" height="980">
+            <frame id="42419:38540" name="Discription" x="0" y="0" width="1074" height="980">
+              <rounded-rectangle id="42419:38541" name="Discription bg" x="0" y="0" width="1074" height="980" />
+              <frame id="42419:38542" name="Detail area" x="45" y="36" width="984" height="908">
+                <frame id="42419:38543" name="Detail frame" x="0" y="0" width="984" height="908">
+                  <frame id="42419:38544" name="Detail" x="0" y="0" width="984" height="908" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="42553:11689" name="G car Components_Switch" x="4123" y="1566" width="1920" height="1080">
+    <rounded-rectangle id="42553:11690" name="Index bg" x="0" y="0" width="253" height="1080" />
+    <frame id="42553:11691" name="Template frame basic" x="0" y="0" width="1920" height="1080">
+      <instance id="42553:11692" name="Index" x="50" y="50" width="203" height="980" />
+      <frame id="42553:11693" name="Content area" x="308" y="50" width="1562" height="980">
+        <instance id="42553:11694" name="Contents" x="0" y="0" width="259" height="980" />
+        <frame id="42553:11695" name="Contents" x="488" y="0" width="1074" height="980">
+          <frame id="42553:11696" name="Discription area" x="0" y="0" width="1074" height="980">
+            <frame id="42553:11697" name="Discription" x="0" y="0" width="1074" height="980">
+              <rounded-rectangle id="42553:11698" name="Discription bg" x="0" y="0" width="1074" height="980" />
+              <frame id="42553:11699" name="Detail area" x="45" y="36" width="984" height="908">
+                <frame id="42553:11700" name="Detail frame" x="0" y="0" width="984" height="908">
+                  <frame id="42553:11701" name="Detail" x="0" y="0" width="984" height="908">
+                    <frame id="42553:11702" name="Detail" x="0" y="0" width="984" height="908">
+                      <frame id="42553:11703" name="Detail" x="0" y="0" width="984" height="433">
+                        <rounded-rectangle id="42553:11704" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42553:11705" name="Detail 1" x="15" y="15" width="954" height="58">
+                          <frame id="42553:11706" name="Title" x="0" y="0" width="954" height="58">
+                            <frame id="42553:11707" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42553:11708" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42553:11709" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                      <frame id="42553:11710" name="Detail 2" x="0" y="475" width="984" height="433">
+                        <rounded-rectangle id="42553:11711" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42553:11712" name="Frame 1261159407" x="15" y="15" width="954" height="58">
+                          <frame id="42553:11713" name="Group 71916" x="0" y="0" width="954" height="58">
+                            <frame id="42553:11714" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42553:11715" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42553:11716" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="44667:1869" name="account_type_toggle" x="2542" y="2310" width="146" height="64">
+    <symbol id="44665:1868" name="Property 1=corporate" x="78" y="20" width="48" height="24" />
+    <symbol id="44665:1867" name="Property 1=personal" x="20" y="20" width="48" height="24" />
+  </frame>
+</canvas>

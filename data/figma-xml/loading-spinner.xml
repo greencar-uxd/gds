@@ -1,0 +1,74 @@
+<canvas id="42554:48781" name="Loading spinner(로딩 스피너)" x="0" y="0" width="0" height="0">
+  <instance id="42554:48960" name="타이틀" x="0" y="0" width="1920" height="341" />
+  <frame id="42554:48961" name="G car Components_Loading spinner" x="0" y="341" width="1920" height="1080">
+    <rounded-rectangle id="42554:48962" name="Index bg" x="0" y="0" width="253" height="1080" />
+    <frame id="42554:48963" name="Template frame basic" x="0" y="0" width="1920" height="1080">
+      <instance id="42554:48964" name="Index" x="50" y="50" width="203" height="980" />
+      <frame id="42554:48965" name="Content area" x="308" y="50" width="1562" height="980">
+        <instance id="42554:48966" name="Contents" x="0" y="0" width="259" height="980" />
+        <frame id="42554:48967" name="Contents" x="488" y="0" width="1074" height="980">
+          <frame id="42554:48968" name="Discription area" x="0" y="0" width="1074" height="980">
+            <frame id="42554:48969" name="Discription" x="0" y="0" width="1074" height="980">
+              <rounded-rectangle id="42554:48970" name="Discription bg" x="0" y="0" width="1074" height="980" />
+              <frame id="42554:48971" name="Detail area" x="45" y="36" width="984" height="908">
+                <frame id="42554:48972" name="Detail frame" x="0" y="0" width="984" height="908">
+                  <frame id="42554:48973" name="Detail" x="0" y="0" width="984" height="908">
+                    <frame id="42554:48974" name="Detail" x="0" y="0" width="984" height="908">
+                      <frame id="42554:48975" name="Detail" x="0" y="0" width="984" height="433">
+                        <rounded-rectangle id="42554:48976" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42554:48977" name="Detail 1" x="15" y="15" width="954" height="58">
+                          <frame id="42554:48978" name="Title" x="0" y="0" width="954" height="58">
+                            <frame id="42554:48979" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42554:48980" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42554:48981" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                      <frame id="42554:48982" name="Detail 2" x="0" y="475" width="984" height="433">
+                        <rounded-rectangle id="42554:48983" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42554:48984" name="Frame 1261159407" x="15" y="15" width="954" height="58">
+                          <frame id="42554:48985" name="Group 71916" x="0" y="0" width="954" height="58">
+                            <frame id="42554:48986" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42554:48987" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42554:48988" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="42554:49048" name="loading_a" x="-1111" y="0" width="375" height="812">
+    <frame id="42554:49049" name="text" x="0" y="0" width="375" height="812">
+      <frame id="42554:49050" name="최종수정자" x="110" y="465" width="140" height="70" hidden="true">
+        <text id="42554:49051" name="최종수정자" x="0" y="-1" width="140" height="23" />
+        <text id="42554:49052" name="최재호" x="15" y="38" width="110" height="35" />
+      </frame>
+    </frame>
+    <frame id="42554:49053" name="Frame" x="157" y="375" width="61" height="61" />
+  </frame>
+  <frame id="42554:49081" name="loading_b" x="-1111" y="865" width="375" height="812">
+    <frame id="42554:49082" name="text" x="0" y="0" width="375" height="812">
+      <frame id="42554:49083" name="최종수정자" x="110" y="465" width="140" height="70" hidden="true">
+        <text id="42554:49084" name="최종수정자" x="0" y="-1" width="140" height="23" />
+        <text id="42554:49085" name="최재호" x="15" y="38" width="110" height="35" />
+      </frame>
+    </frame>
+    <frame id="42554:49086" name="Frame" x="127" y="345" width="121" height="121" />
+  </frame>
+  <text id="43416:2264" name="As-is lottie_loading.json (스피너) 형태 — 8개의 막대(Rectangle)가 원형으로 배치된 스피너 현재 컬러 RGBA: [0.0392, 0.2353, 0.3608, 1] HEX: #0A3C5C (네이비) 크기 — 50 × 50px / 60fps" x="-713" y="0" width="427" height="182" />
+  <text id="43416:6437" name="관련파일 링크 https://greencar.atlassian.net/wiki/spaces/UXDteam/pages/edit-v2/1724022880#JSON-%ED%8C%8C%EC%9D%BC" x="-1523" y="0" width="344" height="110" />
+  <text id="43416:2266" name="To-be(변경 스팩 작성해주세요) lottie_loading.json (스피너) 형태 — 8개의 막대(Rectangle)가 원형으로 배치된 스피너 현재 컬러 RGBA: [0.0392, 0.2353, 0.3608, 1] HEX: #0A3C5C (네이비) 크기 — 50 × 50px / 60fps" x="-713" y="333" width="427" height="182" />
+  <text id="43416:2268" name="To-be(변경 스팩 작성해주세요) lottie_loading_navy_dot.json (도트) 형태 — 4개의 원(Ellipse)이 순서대로 튀어오르는 애니메이션 현재 컬러 RGBA: [0.0392, 0.2353, 0.3608, 1] HEX: #0A3C5C (네이비) 크기 — 500 × 500px / 30fps" x="-713" y="1136" width="449" height="182" />
+  <text id="43416:2265" name="As-is lottie_loading_navy_dot.json (도트) 형태 — 4개의 원(Ellipse)이 순서대로 튀어오르는 애니메이션 현재 컬러 RGBA: [0.0392, 0.2353, 0.3608, 1] HEX: #0A3C5C (네이비) 크기 — 500 × 500px / 30fps" x="-713" y="865" width="449" height="182" />
+  <rounded-rectangle id="43416:6446" name="Rectangle 6524" x="-1111" y="-210" width="543" height="121" />
+  <text id="43416:2270" name="**작업 방식 -Json으로 되어 있어서 적정 컬러 변경 값만 전달하면 변경가능. -VSCode 등 에서 일괄 변환 요청" x="-1079" y="-182" width="468" height="78" />
+</canvas>
