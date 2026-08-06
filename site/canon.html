@@ -1350,6 +1350,30 @@ function wipPages(){
   ${notStarted()}`;
 }
 
+/* 손으로 옮겨 적은 것을 원자료로 되짚은 결과 — 손으로 적은 수는 반드시 기계가 다시 셉니다. */
+function verifyBlock(){
+  const V=C.pages&&C.pages.verify; if(!V) return '';
+  const K=V.counts;
+  return `<h3>옮겨 적은 것을 원자료로 되짚기</h3>
+  <p class="lead" style="font-size:15px">${esc(V.why)}</p>
+  <div class="stat">
+    <div><b>${K.pagesWithRaw}</b><span>원자료 XML</span></div>
+    <div><b>${K.pagesParsedElsewhere}</b><span>파서 산출물</span></div>
+    <div><b>${K.pagesWithoutEvidence}</b><span>근거 없음</span></div>
+    <div><b>${K.claimsHeld}/${K.claims}</b><span>다시 세어 맞은 진술</span></div>
+    <div><b>${K.corrections}</b><span>이때 나온 정정</span></div>
+  </div>
+  <table class="ctr"><thead><tr><th>쪽</th><th>다시 센 진술</th><th>결과</th></tr></thead><tbody>
+  ${V.claims.map(c=>`<tr><td class="muted"><code>${esc(c.slug)}</code></td>
+    <td>${esc(c.what)}${c.note?`<br><span class="muted"><b>정정.</b> ${esc(c.note)}</span>`:''}</td>
+    <td class="${c.held?'ok':'no'}">${c.held?'맞음':'어긋남'}</td></tr>`).join('')}
+  </tbody></table>
+  ${V.pages.filter(p=>p.scope).length?`<div class="note"><p><b>원자료가 페이지 일부만 담은 쪽 ${K.scoped}건.</b>
+  저장소가 주장하는 곳(문서화 틀 · 변형)만 담았습니다. 화면 목업은 넣지 않았으니 «페이지를 통째로 저장했다»고 세지 않습니다.</p>
+  <p class="muted">${V.pages.filter(p=>p.scope).map(p=>`<code>${esc(p.slug)}</code> — 노드 ${p.nodesInXml}개`).join(' · ')}</p></div>`:''}
+  <div class="note"><p class="muted">${V.rule.map(esc).join('<br>')}</p></div>`;
+}
+
 /* «시작 전(—)» 으로 세던 8쪽 — 표시만 보고 «없다»고 하지 않기 위해 직접 열어 봤습니다. */
 function notStarted(){
   const N=C.pages&&C.pages.notStarted; if(!N) return '';
@@ -1370,10 +1394,12 @@ function notStarted(){
     <td class="muted">${esc(p.finding)}
     ${p.contamination?`<br>${p.contamination.map(c=>`<b>${esc(c.what)}</b> — 「${esc(c.text)}」 <code>${esc(c.node)}</code>`).join('<br>')}`:''}
     ${p.spec?`<br>${p.spec.map(s=>`<b>${esc(s.file)}</b> ${esc(s.kind)} · ${esc(s.hex)} · ${esc(s.size)} · ${s.fps}fps <code>${esc(s.node)}</code>`).join('<br>')}`:''}
-    ${p.toBe?`<br><b>To-be ${esc(p.toBe.state)}</b> — 「${esc(p.toBe.text)}」`:''}
-    ${p.motionNote?`<br>모션 메모 — 「${esc(p.motionNote)}」`:''}</td>
-    <td class="muted"><code>${esc(p.node)}</code>${p.parsed?`<br>${esc(p.parsed)}`:''}</td></tr>`).join('')}
+    ${p.toBe?`<br><b>To-be ${esc(p.toBe.state)}</b> — 「${esc(p.toBe.text)}」${p.toBe.detail?`<br><span style="opacity:.75">${esc(p.toBe.detail)}</span>`:''}`:''}
+    ${p.motionNote?`<br>모션 메모 — 「${esc(p.motionNote)}」`:''}
+    ${p.correction?`<br><b style="color:var(--warn)">정정.</b> ${esc(p.correction)}`:''}</td>
+    <td class="muted"><code>${esc(p.node)}</code>${p.raw?`<br>${esc(p.raw)}`:''}${p.parsed?`<br>${esc(p.parsed)}`:''}</td></tr>`).join('')}
   </tbody></table>
+  ${verifyBlock()}
   <div class="note"><p class="muted">${N.rule.map(esc).join('<br>')}</p>
   <p class="muted">${esc(N.how)}</p></div>`;
 }
