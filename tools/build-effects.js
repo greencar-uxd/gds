@@ -19,6 +19,13 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const LIB = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'gds-library.json'), 'utf8'));
+// 확정 결정 — 원본은 고치지 않고 추출 결과 위에 덮어씁니다 (색·타이포와 같은 방식).
+const DEC = (() => {
+  const p = path.join(ROOT, 'data', 'effect-decisions.json');
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : { keyCollisions: [], styleRefs: [] };
+})();
+const WINNER = {};   // 겹치는 키 → 살릴 이름
+for (const c of (DEC.keyCollisions || [])) if (c.status === 'confirmed') WINNER[c.key] = c;
 
 const classify = e => {
   if (/^Elevation_\d+$/.test(e.name)) return 'elevation';
@@ -76,8 +83,31 @@ for (const i of items) keyCount[i.key] = (keyCount[i.key] || 0) + 1;
 const keyCollisions = Object.entries(keyCount).filter(([, n]) => n > 1)
   .map(([k]) => ({ key: k, names: items.filter(i => i.key === k).map(i => i.name) }));
 for (const i of items) {
-  i.emit = !!i.css && i.axis !== 'elevation' && i.axis !== 'deprecated' && keyCount[i.key] === 1;
-  if (i.css && keyCount[i.key] > 1) i.blocked = '토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)';
+  const usable = !!i.css && i.axis !== 'elevation' && i.axis !== 'deprecated';
+  const win = WINNER[i.key];
+  if (keyCount[i.key] === 1) {
+    i.emit = usable;
+  } else if (win) {
+    // 겹치는 키에 확정이 있으면 이긴 쪽만 나갑니다. 진 쪽은 키를 내주고 막힙니다.
+    i.emit = usable && win.winner === i.name;
+    if (!i.emit && i.css) {
+      i.blocked = `«${win.winner}» 이 이 키를 씁니다 — ${win.loser && win.loser.handling ? win.loser.handling : '정본에서 제외'}`;
+      i.decidedAgainst = { winner: win.winner, decidedBy: DEC.decidedBy, decidedAt: DEC.decidedAt };
+    }
+    if (i.emit) i.decided = { reason: win.reason, decidedBy: DEC.decidedBy, decidedAt: DEC.decidedAt };
+  } else {
+    i.emit = false;
+    if (i.css) i.blocked = '토큰 키가 겹칩니다 — 어느 값을 살릴지 정해질 때까지 내보내지 않습니다 (GAP-31)';
+  }
+}
+// 확정이 실제 스타일을 가리키는지 — 낡은 결정이 조용히 남지 않게 합니다.
+for (const c of Object.values(WINNER)) {
+  if (!items.some(i => i.name === c.winner)) throw new Error(`확정된 이름이 라이브러리에 없습니다: ${c.winner}`);
+  if (c.loser && !items.some(i => i.name === c.loser.name)) throw new Error(`확정에 적힌 이름이 라이브러리에 없습니다: ${c.loser.name}`);
+  const actual = items.find(i => i.name === c.winner);
+  if (c.winnerValue && actual.value !== c.winnerValue) {
+    throw new Error(`확정된 값이 원본과 다릅니다: ${c.winner}\n  결정 ${c.winnerValue}\n  원본 ${actual.value}`);
+  }
 }
 
 // 대소문자만 다른 이름 — 소문자로 접어서 셉니다.
@@ -112,7 +142,13 @@ const out = {
     unmeasured: items.filter(i => !i.css && i.axis !== 'deprecated').map(i => i.name),
   },
   caseCollisions,
-  keyCollisions,
+  keyCollisions: keyCollisions.map(k => {
+    const win = WINNER[k.key];
+    return win
+      ? { ...k, resolved: true, winner: win.winner, reason: win.reason, loser: win.loser, decidedBy: DEC.decidedBy, decidedAt: DEC.decidedAt }
+      : { ...k, resolved: false };
+  }),
+  decisions: DEC,
   emitted: items.filter(i => i.emit).map(i => ({ key: i.key, name: i.name, css: i.css })),
   items,
 };

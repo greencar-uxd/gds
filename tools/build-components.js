@@ -95,7 +95,10 @@ if (EFFECTS) {
     if (!ref || typeof ref !== 'string') continue;
     // 본문 표기에서 스타일 이름만 뽑습니다 — «X 사용» 꼴.
     const name = ref.replace(/\s*사용\s*$/, '').trim();
-    const exact = EFFECTS.items.find(e => e.name === name);
+    // 확정 결정이 «이 표기는 이 스타일을 뜻한다»고 정해 뒀으면 그것을 씁니다.
+    const dec = ((EFFECTS.decisions || {}).styleRefs || [])
+      .find(d => d.status === 'confirmed' && d.component === key && d.quoted === ref);
+    const exact = EFFECTS.items.find(e => e.name === (dec ? dec.resolvesTo : name));
     // 못 찾으면 «Elevation_» 접두어를 떼고 이름이 겹치는 것을 후보로 모읍니다.
     const stem = fold(name.replace(/^Elevation_/i, ''));
     const candidates = exact ? [] : EFFECTS.items
@@ -107,6 +110,9 @@ if (EFFECTS) {
       quoted: ref,
       name,
       resolved: !!exact,
+      // 이름이 그대로 맞은 것과, 결정으로 이어 붙인 것을 구분합니다 — 근거의 종류가 다릅니다.
+      via: exact ? (dec ? 'decision' : 'exact') : null,
+      ...(dec ? { decision: { resolvesTo: dec.resolvesTo, reason: dec.reason } } : {}),
       ...(exact ? { style: exact.name, axis: exact.axis, css: exact.css } : {
         candidates,
         live: candidates.filter(c => c.axis !== 'deprecated').length,
