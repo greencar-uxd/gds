@@ -1,0 +1,3049 @@
+{
+  "$description": "Skeleton (스켈레톤) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42476:74477",
+    "pageName": "Skeleton (스켈레톤)",
+    "figmaStatus": "none",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 1062,
+    "byType": {
+      "canvas": 1,
+      "instance": 253,
+      "frame": 501,
+      "text": 222,
+      "vector": 68,
+      "section": 1,
+      "ellipse": 16
+    },
+    "topLevel": 19,
+    "texts": 222,
+    "namedTexts": 222,
+    "templateStubs": 0,
+    "symbols": 0
+  },
+  "topFrames": [
+    {
+      "type": "instance",
+      "id": "42554:48782",
+      "name": "타이틀",
+      "w": 1920,
+      "h": 341
+    },
+    {
+      "type": "frame",
+      "id": "42554:48783",
+      "name": "G car Components_Skeleton",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "frame",
+      "id": "42814:16467",
+      "name": "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+      "w": 360,
+      "h": 801
+    },
+    {
+      "type": "frame",
+      "id": "42814:16541",
+      "name": "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+      "w": 360,
+      "h": 605
+    },
+    {
+      "type": "frame",
+      "id": "42814:16578",
+      "name": "222ㅐㅑㅕㅐㅑㅕㅐ",
+      "w": 360,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "42814:16583",
+      "name": "222ㅐㅑㅕㅐㅑㅕㅐ",
+      "w": 360,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "42814:16591",
+      "name": "222ㅐㅑㅕㅐㅑㅕㅐ",
+      "w": 360,
+      "h": 800
+    },
+    {
+      "type": "section",
+      "id": "42814:16609",
+      "name": "Section 1",
+      "w": 3470,
+      "h": 4493
+    },
+    {
+      "type": "frame",
+      "id": "42814:17558",
+      "name": "SCR_GA_RV_0101_M01(기본)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42814:17645",
+      "name": "SCR_GA_RV_0101_M01(기본)",
+      "w": 375,
+      "h": 857
+    },
+    {
+      "type": "frame",
+      "id": "42814:17739",
+      "name": "Group 716131",
+      "w": 1080,
+      "h": 2400
+    },
+    {
+      "type": "frame",
+      "id": "42814:17743",
+      "name": "Group 716130",
+      "w": 1080,
+      "h": 2400
+    },
+    {
+      "type": "frame",
+      "id": "42814:17746",
+      "name": "Group 716129",
+      "w": 1080,
+      "h": 2400
+    },
+    {
+      "type": "text",
+      "id": "43416:6441",
+      "name": "@keyframes react-loading-skeleton {   100% {     transform: translateX(100%);   } } .react-loading-skeleton {   --base-color: #ebebeb;   --highlight-color: #f5f5f5;   --animation-duration: 1.5s;   --animation-direction: normal;   --pseudo-element-display: block; /* Enable animation */   background-color: var(--base-color);   width: 100%;   border-radius: 0.25rem;   display: inline-flex;   line-height: 1;   position: relative;   user-select: none;   overflow: hidden; } .react-loading-skeleton::after {   content: &#39; &#39;;   display: var(--pseudo-element-display);   position: absolute;   top: 0;   left: 0;   right: 0;   height: 100%;   background-repeat: no-repeat;   background-image: var(     --custom-highlight-background,     linear-gradient(       90deg,       var(--base-color) 0%,       var(--highlight-color) 50%,       var(--base-color) 100%     )   );   transform: translateX(-100%);   animation-name: react-loading-skeleton;   animation-direction: var(--animation-direction);   animation-duration: var(--animation-duration);   animation-timing-function: ease-in-out;   animation-iteration-count: infinite; } @media (prefers-reduced-motion) {   .react-loading-skeleton {     --pseudo-element-display: none; /* Disable animation */   } }  ",
+      "w": 378,
+      "h": 1160
+    },
+    {
+      "type": "text",
+      "id": "43416:6438",
+      "name": "**프로토타입(Make로 제작) https://www.figma.com/make/XgIMPP6yZIAIAguqpO9U11/Rebuild-Skeleton-UI-Colors?t=0VD75VETK4HzfFeN-1",
+      "w": 347,
+      "h": 130
+    },
+    {
+      "type": "text",
+      "id": "43416:2196",
+      "name": "26.06.17 os별로 컬러랑 스팩이 다름. 컬러: ios=그레이스케일 / aos=네이비 / web=그레이스케일 속도: ios= 1.4s 정도 / aos= 2s 이상",
+      "w": 440,
+      "h": 130
+    },
+    {
+      "type": "text",
+      "id": "43416:6442",
+      "name": "26.06.17 현재 web 스켈레톤 애니메이션 스팩",
+      "w": 267,
+      "h": 52
+    },
+    {
+      "type": "text",
+      "id": "43416:6448",
+      "name": "코드",
+      "w": 34,
+      "h": 26
+    },
+    {
+      "type": "text",
+      "id": "43416:6444",
+      "name": "**작업 방식 -대체 컬러만 정해주면됨 -추후 OS별로 전달 예정, 일관성 확보",
+      "w": 274,
+      "h": 78
+    }
+  ],
+  "componentSets": null,
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [],
+    "count": 0
+  },
+  "texts": [
+    {
+      "id": "42554:48803",
+      "text": "-",
+      "in": [
+        "G car Components_Skeleton",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "Detail",
+        "Detail",
+        "Detail 1"
+      ],
+      "x": 473.5,
+      "y": 16
+    },
+    {
+      "id": "42554:48810",
+      "text": "-",
+      "in": [
+        "G car Components_Skeleton",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "Detail",
+        "Detail 2",
+        "Frame 1261159407"
+      ],
+      "x": 473.5,
+      "y": 16
+    },
+    {
+      "id": "42814:16470",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "42814:16485",
+      "text": "텍스트",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "top_title_sub_box_dot",
+        "Frame 3669"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16490",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "top_title_sub_box_dot",
+        "Frame 3670",
+        "Frame 3002",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42814:16496",
+      "text": "개인정보 수집 이용 안내",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "문의유형",
+        "문의유형",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16503",
+      "text": "문의유형",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "문의유형",
+        "문의유형",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16510",
+      "text": "작성 시 유의사항",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "작성시 유의사항",
+        "문의유형",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16519",
+      "text": "문의내용",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "문의내용",
+        "Frame 3677",
+        "타이틀",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16524",
+      "text": "※ 작성 시, 1000자 이내로 작성해주세요. ※ 문의 내용에 대한 정확한 정보를 입력해주시면 보다 빠른 답변이 가능합니다.",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "문의내용",
+        "Frame 3679",
+        "Group 2860",
+        "Group 2859"
+      ],
+      "x": 30,
+      "y": 10
+    },
+    {
+      "id": "42814:16531",
+      "text": "파일첨부",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "파일첨부",
+        "Frame 3677",
+        "타이틀",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16536",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0701_M01_모바일 문의 유형(최초진입시)",
+        "컨텐츠",
+        "파일첨부",
+        "Frame 2787",
+        "Frame 2963"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16545",
+      "text": "텍스트",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "대여예약 약관동의(필수)"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16549",
+      "text": "약관 모두 동의",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "대여예약 약관동의(필수)",
+        "\b세차클링 회원 약관",
+        "세차클링 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42814:16556",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "Group 2861",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42814:16563",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16568",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42814:16571",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42814:16574",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42814:16576",
+      "text": "[계약안내]",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16577",
+      "text": "본 차량은 그린카에서 서비스가 제공되는 롯데렌탈㈜의 위탁 차량입니다.",
+      "in": [
+        "SCR_GA_RV_0201_M01_예약하기 (왕복)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42814:16587",
+      "text": "검색어를 입력하세요.",
+      "in": [
+        "222ㅐㅑㅕㅐㅑㅕㅐ",
+        "Frame 1",
+        "Group 1"
+      ],
+      "x": 12.999999046325684,
+      "y": 12
+    },
+    {
+      "id": "42814:16595",
+      "text": "보안",
+      "in": [
+        "222ㅐㅑㅕㅐㅑㅕㅐ",
+        "Frame 1",
+        "Group 1"
+      ],
+      "x": 12.000001049073262,
+      "y": 12
+    },
+    {
+      "id": "42814:16601",
+      "text": "1 / 4",
+      "in": [
+        "222ㅐㅑㅕㅐㅑㅕㅐ",
+        "Frame 1",
+        "Frame 2",
+        "Frame 3"
+      ],
+      "x": 72,
+      "y": 0
+    },
+    {
+      "id": "42814:16604",
+      "text": "보안",
+      "in": [
+        "222ㅐㅑㅕㅐㅑㅕㅐ",
+        "Frame 2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16606",
+      "text": "보안",
+      "in": [
+        "222ㅐㅑㅕㅐㅑㅕㅐ",
+        "Frame 716092"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16631",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16637",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16639",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16641",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16643",
+      "text": "7분 간격으로 무료 셔틀이 운행돼요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716108"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:16645",
+      "text": "제주공항 렌터카 셔틀 승차장에서 무료 셔틀을 타고 갈 수 있어요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716110"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:16647",
+      "text": "8~10분만 걸으면 갈 수 있어요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716109"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:16661",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:16663",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:16672",
+      "text": "도보 8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 13,
+      "y": 6
+    },
+    {
+      "id": "42814:16673",
+      "text": "제주 공항에서 가장 가까운 G car",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 12
+    },
+    {
+      "id": "42814:16678",
+      "text": "도보 8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71591",
+        "Frame 716111",
+        "Frame 716110"
+      ],
+      "x": 13,
+      "y": 6
+    },
+    {
+      "id": "42814:16679",
+      "text": "G car 전용 주차장에서 더욱 편리하게",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71591",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 12
+    },
+    {
+      "id": "42814:16684",
+      "text": "도보 10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71592",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 9,
+      "y": 6
+    },
+    {
+      "id": "42814:16685",
+      "text": "초보운전자에게 좋은 주차장 출입구",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71592",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 12
+    },
+    {
+      "id": "42814:16690",
+      "text": "셔틀 10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71594",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 9,
+      "y": 6
+    },
+    {
+      "id": "42814:16691",
+      "text": "무료 셔틀 타고 쾌적하게 이동",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71594",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 12
+    },
+    {
+      "id": "42814:16695",
+      "text": "오늘만 보지 않기",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71593",
+        "Frame 716111"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16722",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716110",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16731",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:16733",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:16741",
+      "text": "집",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 3611",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16745",
+      "text": "회사",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 3611",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16749",
+      "text": "학교",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 3611",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16753",
+      "text": "+",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 3611",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 4,
+      "y": 0
+    },
+    {
+      "id": "42814:16766",
+      "text": "어디서 출발하세요?",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 71656",
+        "Frame 3612"
+      ],
+      "x": 44,
+      "y": 8
+    },
+    {
+      "id": "42814:16771",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "filter_btn",
+        "Group 71679"
+      ],
+      "x": 38,
+      "y": 8
+    },
+    {
+      "id": "42814:16776",
+      "text": "이코노미존",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16780",
+      "text": "신규존",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16784",
+      "text": "KTX/SRT",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16788",
+      "text": "공항",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16792",
+      "text": "KTX/SRT",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:16813",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16826",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16828",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16836",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16838",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16846",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16848",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16857",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16859",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16862",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:16864",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:16871",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:16873",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:16892",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16906",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16908",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16916",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16918",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16926",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16928",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16939",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:16941",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:16948",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:16950",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:16969",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:16983",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16985",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:16993",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:16995",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17003",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17005",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17016",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17018",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17025",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:17027",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:17036",
+      "text": "무료 편도를 이용하실 수 있습니다.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:17043",
+      "text": "지도 앱에서 보고 싶으시다면?",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716116",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:17050",
+      "text": "네이버 지도",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716116",
+        "Frame 716119",
+        "Frame 716119",
+        "Group 716118"
+      ],
+      "x": 10,
+      "y": 68
+    },
+    {
+      "id": "42814:17054",
+      "text": "카카오맵",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716116",
+        "Frame 716119",
+        "Frame 716119",
+        "Group 716117"
+      ],
+      "x": 18,
+      "y": 68
+    },
+    {
+      "id": "42814:17058",
+      "text": "구글 지도",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716116",
+        "Frame 716119",
+        "Frame 716119",
+        "Group 716116"
+      ],
+      "x": 17,
+      "y": 68
+    },
+    {
+      "id": "42814:17083",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17096",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17098",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17106",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17108",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17111",
+      "text": "5",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17113",
+      "text": "2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17120",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17122",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17139",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:17141",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:17168",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17181",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17183",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17191",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17193",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17201",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17203",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17212",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17214",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17217",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17219",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17226",
+      "text": "차량",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:17228",
+      "text": "title",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:17241",
+      "text": "제주공항에서 G car 셔틀 zone까지 셔틀버스 타고 편하게 이동하세요",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "text"
+      ],
+      "x": 52,
+      "y": 0
+    },
+    {
+      "id": "42814:17244",
+      "text": "탑승장소",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:17245",
+      "text": "렌터카하우스 1구역 4번 출입구",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716119"
+      ],
+      "x": 68,
+      "y": 0
+    },
+    {
+      "id": "42814:17247",
+      "text": "운행시간",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716120"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:17248",
+      "text": "06:00~22:40",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716120"
+      ],
+      "x": 68,
+      "y": 0
+    },
+    {
+      "id": "42814:17250",
+      "text": "배차간격",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716121"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42814:17251",
+      "text": "06:00~07:30 [10~15분] 07:30 ~19:30 [7분] 19:30 ~22:40 [10~15분]",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716115",
+        "button",
+        "Frame 716121"
+      ],
+      "x": 68,
+      "y": 0
+    },
+    {
+      "id": "42814:17260",
+      "text": "제주공항 GATE 5로 나와서 횡당보도를 건너세요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716122",
+        "Frame 716124",
+        "Frame 716119"
+      ],
+      "x": 0,
+      "y": 108
+    },
+    {
+      "id": "42814:17262",
+      "text": "1",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716122",
+        "Frame 716124",
+        "Frame 716119",
+        "Frame 716133"
+      ],
+      "x": 5,
+      "y": 1
+    },
+    {
+      "id": "42814:17265",
+      "text": "횡단보도를 건너신 후 오른쪽으로 이동하세요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716122",
+        "Frame 716124",
+        "Frame 716119"
+      ],
+      "x": 0,
+      "y": 108
+    },
+    {
+      "id": "42814:17267",
+      "text": "2",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716122",
+        "Frame 716124",
+        "Frame 716119",
+        "Frame 716134"
+      ],
+      "x": 5,
+      "y": 1
+    },
+    {
+      "id": "42814:17272",
+      "text": "렌터카 하우스 입구를 통해 내부로 들어가세요.",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716123",
+        "Frame 716124",
+        "Frame 716119"
+      ],
+      "x": 0,
+      "y": 108
+    },
+    {
+      "id": "42814:17274",
+      "text": "3",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716123",
+        "Frame 716124",
+        "Frame 716119",
+        "Frame 716135"
+      ],
+      "x": 5,
+      "y": 1
+    },
+    {
+      "id": "42814:17277",
+      "text": "1구역 4번 출입구에서 타요 버스를 타고 출발!",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716123",
+        "Frame 716124",
+        "Frame 716119"
+      ],
+      "x": 0,
+      "y": 108
+    },
+    {
+      "id": "42814:17279",
+      "text": "4",
+      "in": [
+        "Section 1",
+        "SCR_GA_RV_0101_M01(기본)",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "Frame 716125",
+        "Frame 716123",
+        "Frame 716124",
+        "Frame 716119",
+        "Frame 716136"
+      ],
+      "x": 5,
+      "y": 1
+    },
+    {
+      "id": "42814:17286",
+      "text": "Text",
+      "in": [
+        "Section 1"
+      ],
+      "x": 376,
+      "y": 1292
+    },
+    {
+      "id": "42814:17306",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17319",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17321",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17329",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17331",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17339",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17341",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17350",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17352",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17355",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17357",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "Group 716113",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17377",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17389",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17391",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17399",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17401",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17409",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17411",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17420",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17422",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17425",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17427",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "Group 716128",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17440",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17452",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17454",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17462",
+      "text": "8 분",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17464",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17472",
+      "text": "10 분",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17474",
+      "text": "경로 안내",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17485",
+      "text": "GATE 5",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17487",
+      "text": "GATE 2",
+      "in": [
+        "Section 1",
+        "Group 716114",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17510",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17516",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17518",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17520",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17522",
+      "text": "7분 간격으로 무료 셔틀이 운행돼요.",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "Frame 716108"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17524",
+      "text": "제주공항 렌터카 셔틀 승차장에서 무료 셔틀을 타고 갈 수 있어요.",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "Frame 716110"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17526",
+      "text": "10~12분만 걸으면 갈 수 있어요.",
+      "in": [
+        "Section 1",
+        "Group 716106",
+        "Frame 716109"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17539",
+      "text": "25/8/7 -빌리지 명칭 삭제",
+      "in": [
+        "Section 1"
+      ],
+      "x": 1205,
+      "y": 1126
+    },
+    {
+      "id": "42814:17540",
+      "text": "25/8/7 -빌리지 명칭 삭제",
+      "in": [
+        "Section 1"
+      ],
+      "x": 1602,
+      "y": 1121
+    },
+    {
+      "id": "42814:17541",
+      "text": "25/8/7 -빌리지 명칭 삭제",
+      "in": [
+        "Section 1"
+      ],
+      "x": 2423,
+      "y": 1121
+    },
+    {
+      "id": "42814:17551",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "mapMakerSelected",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17557",
+      "text": "text",
+      "in": [
+        "Section 1",
+        "Group 716115",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17578",
+      "text": "text",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17591",
+      "text": "10 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17593",
+      "text": "경로 안내",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716112",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17601",
+      "text": "10 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17603",
+      "text": "경로 안내",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716113",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17611",
+      "text": "10 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17613",
+      "text": "경로 안내",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716114",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17622",
+      "text": "8 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716112"
+      ],
+      "x": 6,
+      "y": 4
+    },
+    {
+      "id": "42814:17624",
+      "text": "경로 안내",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Group 716111",
+        "Frame 716113",
+        "Frame 716111"
+      ],
+      "x": 6,
+      "y": 6
+    },
+    {
+      "id": "42814:17627",
+      "text": "GATE 5",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716128"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17629",
+      "text": "GATE 2",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716128",
+        "Frame 716129"
+      ],
+      "x": 8,
+      "y": 5
+    },
+    {
+      "id": "42814:17636",
+      "text": "차량",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:17638",
+      "text": "title",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:17667",
+      "text": "text",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17673",
+      "text": "text",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Group 716105",
+        "en_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17675",
+      "text": "text",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17677",
+      "text": "text",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "td_list"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42814:17679",
+      "text": "7분 간격으로 무료 셔틀이 운행돼요.",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716108"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17681",
+      "text": "제주공항 렌터카 셔틀 승차장에서 무료 셔틀을 타고 갈 수 있어요.",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716110"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17683",
+      "text": "10~12분만 걸으면 갈 수 있어요.",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716106",
+        "Frame 716109"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "42814:17696",
+      "text": "차량",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42814:17698",
+      "text": "title",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42814:17707",
+      "text": "도보 8 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 13,
+      "y": 6
+    },
+    {
+      "id": "42814:17708",
+      "text": "G car 전용 주차장에서 더욱 편리하게",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 0
+    },
+    {
+      "id": "42814:17710",
+      "text": "바로가기",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590",
+        "Frame 716109"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "42814:17714",
+      "text": "도보 8 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71594",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 13,
+      "y": 6
+    },
+    {
+      "id": "42814:17715",
+      "text": "G car 전용 주차장에서 더욱 쾌적하게",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71594",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 0
+    },
+    {
+      "id": "42814:17717",
+      "text": "바로가기",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71594",
+        "Frame 716109"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "42814:17721",
+      "text": "도보 10 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71591",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 9,
+      "y": 6
+    },
+    {
+      "id": "42814:17722",
+      "text": "초보운전자에게 좋은 넓은 주차장 출입구",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71591",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 0
+    },
+    {
+      "id": "42814:17724",
+      "text": "바로가기",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71591",
+        "Frame 716109"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "42814:17728",
+      "text": "셔틀 10 분",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71592",
+        "Frame 716111",
+        "Frame 716109"
+      ],
+      "x": 9,
+      "y": 6
+    },
+    {
+      "id": "42814:17729",
+      "text": "무료 셔틀로 쾌적하고 편리하게 이동",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71592",
+        "Frame 716111"
+      ],
+      "x": 59,
+      "y": 0
+    },
+    {
+      "id": "42814:17731",
+      "text": "바로가기",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71592",
+        "Frame 716109"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "42814:17734",
+      "text": "오늘만 보지 않기",
+      "in": [
+        "SCR_GA_RV_0101_M01(기본)",
+        "Group 716109",
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71593",
+        "Frame 716111"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43416:6441",
+      "text": "@keyframes react-loading-skeleton {   100% {     transform: translateX(100%);   } } .react-loading-skeleton {   --base-color: #ebebeb;   --highlight-color: #f5f5f5;   --animation-duration: 1.5s;   --animation-direction: normal;   --pseudo-element-display: block; /* Enable animation */   background-color: var(--base-color);   width: 100%;   border-radius: 0.25rem;   display: inline-flex;   line-height: 1;   position: relative;   user-select: none;   overflow: hidden; } .react-loading-skeleton::after {   content: &#39; &#39;;   display: var(--pseudo-element-display);   position: absolute;   top: 0;   left: 0;   right: 0;   height: 100%;   background-repeat: no-repeat;   background-image: var(     --custom-highlight-background,     linear-gradient(       90deg,       var(--base-color) 0%,       var(--highlight-color) 50%,       var(--base-color) 100%     )   );   transform: translateX(-100%);   animation-name: react-loading-skeleton;   animation-direction: var(--animation-direction);   animation-duration: var(--animation-duration);   animation-timing-function: ease-in-out;   animation-iteration-count: infinite; } @media (prefers-reduced-motion) {   .react-loading-skeleton {     --pseudo-element-display: none; /* Disable animation */   } }  ",
+      "in": [],
+      "x": -1580,
+      "y": 129
+    },
+    {
+      "id": "43416:6438",
+      "text": "**프로토타입(Make로 제작) https://www.figma.com/make/XgIMPP6yZIAIAguqpO9U11/Rebuild-Skeleton-UI-Colors?t=0VD75VETK4HzfFeN-1",
+      "in": [],
+      "x": -539,
+      "y": 271
+    },
+    {
+      "id": "43416:2196",
+      "text": "26.06.17 os별로 컬러랑 스팩이 다름. 컬러: ios=그레이스케일 / aos=네이비 / web=그레이스케일 속도: ios= 1.4s 정도 / aos= 2s 이상",
+      "in": [],
+      "x": -539,
+      "y": 85
+    },
+    {
+      "id": "43416:6442",
+      "text": "26.06.17 현재 web 스켈레톤 애니메이션 스팩",
+      "in": [],
+      "x": -1175,
+      "y": 85
+    },
+    {
+      "id": "43416:6448",
+      "text": "코드",
+      "in": [],
+      "x": -1580,
+      "y": 85
+    },
+    {
+      "id": "43416:6444",
+      "text": "**작업 방식 -대체 컬러만 정해주면됨 -추후 OS별로 전달 예정, 일관성 확보",
+      "in": [],
+      "x": -1175,
+      "y": -31
+    }
+  ]
+}
