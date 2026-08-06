@@ -102,17 +102,25 @@ const colors = raw.concat(adopted.map(a => ({
 }))).map(s => {
   const r = renameMap.get(s.name);
   const ov = overrideMap.get(s.name);
+  const finalName = r ? r.to : s.name;
   return {
     ...s,
     hex: ov ? ov.to : s.hex,
     originalHex: ov ? ov.from : null,
     overridden: !!ov,
     overrideReason: ov ? ov.reason : null,
-    name: r ? r.to : s.name,
+    name: finalName,
+    // 그룹·라벨은 «바뀐 이름»에서 다시 뽑습니다.
+    // 그룹을 넘나드는 개명(Badge/ODA → Brand/ODA)이 생기면서 필요해졌습니다 —
+    // 원본 그룹을 그대로 들고 있으면 사이트는 Brand 로 부르면서 데이터는 Badge 로 남습니다.
+    group: finalName.includes('/') ? finalName.split('/')[0] : (s.group || ''),
+    label: finalName.split('/').pop(),
     originalName: s.name,
+    originalGroup: s.name.includes('/') ? s.name.split('/')[0] : (s.group || ''),
     renamed: !!r,
+    regrouped: !!r && r.to.split('/')[0] !== s.name.split('/')[0],
     renameReason: r ? r.reason : null,
-    isMain: DEC.main && DEC.main.status === 'confirmed' && (r ? r.to : s.name) === DEC.main.token,
+    isMain: DEC.main && DEC.main.status === 'confirmed' && finalName === DEC.main.token,
   };
 });
 

@@ -651,8 +651,20 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       AL.linePairs.filter(p => !p.fill).every(p => !VIEW.colors.some(c => c.name === p.line.replace(/ Line$/, ''))));
     ok('그룹이 갈린 짝이 GAP-8 로 잡힘', AL.counts.linePairsSplit === AL.splitPairs.length);
     ok('갈린 짝마다 선례가 함께 기록됨', AL.splitPairs.every(p => (p.precedent || '').length > 20));
-    ok('갈린 짝의 이름을 저장소가 바꾸지 않음', AL.splitPairs.every(p =>
-      VIEW.colors.some(c => c.name === p.fill) && VIEW.colors.some(c => c.name === p.line)));
+    ok('면색/선색 짝이 전부 같은 그룹', AL.counts.linePairsSplit === 0,
+      AL.splitPairs.map(p => `${p.fill}/${p.line}`).join(', '));
+
+    // ── 그룹을 넘나드는 개명 — 그룹·라벨은 «바뀐 이름»에서 다시 뽑아야 합니다.
+    const regrouped = VIEW.colors.filter(c => c.regrouped);
+    ok('모든 색의 그룹이 이름과 일치',
+      VIEW.colors.every(c => !c.name.includes('/') || c.group === c.name.split('/')[0]),
+      VIEW.colors.filter(c => c.name.includes('/') && c.group !== c.name.split('/')[0]).map(c => c.name).join(', '));
+    ok('모든 색의 라벨이 이름과 일치', VIEW.colors.every(c => c.label === c.name.split('/').pop()));
+    ok('그룹을 옮긴 개명마다 근거가 있음', regrouped.every(c => (c.renameReason || '').length > 30));
+    ok('그룹을 옮긴 개명이 원본 이름을 남김', regrouped.every(c =>
+      c.originalName && c.originalGroup && c.originalGroup !== c.group
+      && jsonA.color[require('./slug.js').colorKey(c.name)].$extensions.gds.renamedFrom === c.originalName));
+    ok('옮겨진 짝이 사이트에 해소로 표시됨', !AL.linePairs.some(p => p.moved) || htmlA.includes('GAP-8 해소'));
 
     ok('별칭이 가리키는 CSS 변수가 실재', AL.duplicates.filter(d => d.decidable)
       .every(d => cssA.includes(`--gds-color-${d.base.key}: `)));
