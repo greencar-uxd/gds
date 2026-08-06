@@ -1403,9 +1403,20 @@ function status(){
   <div class="stat">
     <div><b>${G.total}</b><span>찾은 것</span></div>
     <div><b>${G.resolved}</b><span>메운 것</span></div>
-    <div><b>${G.open}</b><span>남은 것</span></div>
+    <div><b>${G.partial}</b><span>부분</span></div>
+    <div><b>${G.strictOpen}</b><span>남은 것</span></div>
     <div><b>0</b><span>손으로 적은 수치</span></div>
-  </div>`:''}
+  </div>
+  ${G.consolidatedAt?`<div class="note"><p><b>${G.consolidatedAt} 에 한꺼번에 정리했습니다.</b>
+  🚧 19쪽과 «시작 전(—)» 8쪽을 전수로 읽고 난 뒤, 읽는 도중 한 건씩 닫지 않고 모아서 처리했습니다.
+  이때 새로 드러난 것이 ${G.addedInSweep}건입니다 — 전수로 읽기 전에는 볼 수 없던 것들입니다.
+  무엇이 바뀌었고 어떤 모순을 «맞추지 않고» 남겼는지는 <a href="decisions/#GAP-37">결정 안건</a>에 그대로 있습니다.</p></div>`:''}
+  ${G.byArea&&G.byArea.length?`<h3>남은 것이 어느 영역에 몰려 있나</h3>
+  <div>${G.byArea.map(([a,n])=>`<div class="sprow" style="grid-template-columns:130px 62px 1fr">
+    <div style="font-weight:600">${esc(a)}</div><div class="muted">${n}건</div>
+    <div style="background:var(--surface2);border-radius:3px;height:9px;align-self:center">
+      <div style="width:${Math.round(n/G.byArea[0][1]*100)}%;height:100%;background:var(--brand);border-radius:3px"></div></div>
+  </div>`).join('')}</div>`:''}`:''}
   <h2>이 문서가 만들어지는 방식</h2>
   <p class="lead" style="font-size:15px">원본 <code>.fig</code> 파일을 직접 디코딩해 값을 읽고, 기계 검증을 통과한 것만 사이트와 토큰 파일로 내보냅니다.
   손으로 옮겨 적는 단계가 없어 원본과 어긋날 수 없습니다.</p>
