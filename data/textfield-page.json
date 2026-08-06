@@ -1,0 +1,517 @@
+{
+  "$description": "Text field 🚧 페이지를 직접 읽은 결과입니다. «원본 대기»로 비워 두었던 자리에 정의·유형·구조·변형이 전부 있었습니다.",
+  "generatedFrom": "tools/build-textfield-page.js ← data/figma-pages/text-field.json",
+  "correction": {
+    "at": "2026-08-06",
+    "what": "Input(Text field)을 «원본이 아직 안 그려서 저장소가 먼저 만들 수 없다»고 적었던 것을 철회합니다.",
+    "howFound": "🚧 라는 표시만 보고 페이지를 열지 않았습니다. 열어 보니 문서화 템플릿이 절반 이상 채워져 있었습니다."
+  },
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42073:65010",
+    "pageName": "Text field (텍스트필드) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "naming": {
+    "inToc": "Input",
+    "pageName": "Text field (텍스트필드) 🚧",
+    "note": "구조도(목차)와 실제 페이지 이름이 다릅니다. 저장소는 페이지 이름을 씁니다."
+  },
+  "definition": "Text Field (텍스트필드)는 사용자가 직접 정보를 입력하는 UI 요소입니다. 아이디, 차량번호, 주민등록번호 등 서비스 이용에 필요한 다양한 정보를 입력받으며, 입력 상태에 따라 시각적 피드백을 제공하여 사용자가 올바르게 입력할 수 있도록 돕습니다.",
+  "types": [
+    {
+      "mark": "➊",
+      "name": "Text field (텍스트필드)",
+      "summary": "한 줄 단위로 단일 정보 입력형"
+    },
+    {
+      "mark": "➋",
+      "name": "Search text field (서치 텍스트필드)",
+      "summary": "검색 기능이 결합된 아이콘 조합형"
+    },
+    {
+      "mark": "➌",
+      "name": "Split text field (스플릿 텍스트필드)",
+      "summary": "특정 기준으로 나뉘어 입력되는 분리형"
+    },
+    {
+      "mark": "➍",
+      "name": "Area text field (영역 텍스트필드)",
+      "summary": "긴 내용 전용의 박스형"
+    }
+  ],
+  "sections": [
+    {
+      "mark": "➊",
+      "title": "[➊ Text field (텍스트필드)]",
+      "desc": "Text field (텍스트필드)는 한 줄로 텍스트를 입력하는 기본 입력형입니다. 아이디, 비밀번호, 인증번호 등 단일 값을 입력할 때 사용하며, 입력 형태에 따라 삭제 버튼, 비밀번호 표시 전환, 타이머 등을 포함할 수 있습니다.",
+      "parts": [
+        "Label (레이블)",
+        "Hint text (힌트 텍스트)",
+        "Background (백그라운드)"
+      ],
+      "spacing": [
+        8,
+        20,
+        12,
+        12
+      ],
+      "spacingLabelled": true
+    },
+    {
+      "mark": "➋",
+      "title": "[➋ Search text field (서치 텍스트필드)]",
+      "desc": "Search text field (서치 텍스트필드)는 검색 기능이 결합된 아이콘 조합형입니다. 입력한 텍스트를 기준으로 검색을 수행하며, 검색 아이콘을 포함해 검색 입력 영역임을 인식할 수 있도록 합니다.",
+      "parts": [
+        "Label (레이블)",
+        "Hint text (힌트 텍스트)",
+        "Background (백그라운드)",
+        "Icon (아이콘)"
+      ],
+      "spacing": [
+        8,
+        20,
+        8,
+        12
+      ],
+      "spacingLabelled": true
+    },
+    {
+      "mark": "➌",
+      "title": "[➌ Split text field (스플릿 텍스트필드)]",
+      "desc": "Split text field (스플릿 텍스트필드)는 하나의 정보를 여러 구간으로 나누어 입력하는 분리형입니다. 주민등록번호, 카드번호, 면허번호처럼 정해진 자릿수나 형식 기준으로 값을 구분해야 할 때 사용하며, 구간별로 드롭다운·마스킹·구분 기호를 포함할 수 있습니다.",
+      "parts": [
+        "Label (레이블)",
+        "Password masking (비밀번호 마스킹)",
+        "Hint text (힌트 텍스트)",
+        "Background (백그라운드)"
+      ],
+      "spacing": [
+        8,
+        20,
+        8,
+        12,
+        12
+      ],
+      "spacingLabelled": true
+    },
+    {
+      "mark": "➍",
+      "title": "[➍ Area text field (영역 텍스트필드)]",
+      "desc": "Split text field (스플릿 텍스트필드)는 하나의 정보를 여러 구간으로 나누어 입력하는 분리형입니다. 주민등록번호, 카드번호, 면허번호처럼 정해진 자릿수나 형식 기준으로 값을 구분해야 할 때 사용하며, 구간별로 드롭다운·마스킹·구분 기호를 포함할 수 있습니다.",
+      "parts": [
+        "Hint text (힌트 텍스트)",
+        "Background (백그라운드)",
+        "Icon button (아이콘 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다."
+      ],
+      "spacing": [
+        12,
+        12
+      ],
+      "spacingLabelled": true
+    }
+  ],
+  "variants": {
+    "total": 42,
+    "axisNames": [
+      "Property 1",
+      "Property 2"
+    ],
+    "kinds": [
+      "Long",
+      "Short",
+      "Id",
+      "Id Search",
+      "Pw",
+      "Certify",
+      "Registration",
+      "Select",
+      "Card",
+      "License",
+      "license",
+      "input_date",
+      "date"
+    ],
+    "states": [
+      "Focus Out",
+      "Typing",
+      "Error",
+      "Default",
+      "Timeout",
+      "date",
+      "focus",
+      "field"
+    ],
+    "readAs": "값으로 미루어 Property 1 = 유형, Property 2 = 상태로 읽었습니다. 원본이 축 이름을 붙여 두지 않았습니다.",
+    "items": [
+      {
+        "id": "42454:19813",
+        "name": "Property 1=Long, Property 2=Focus Out",
+        "w": 335,
+        "h": 120,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19817",
+        "name": "Property 1=Long, Property 2=Typing",
+        "w": 335,
+        "h": 120,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19823",
+        "name": "Property 1=Long, Property 2=Error",
+        "w": 335,
+        "h": 144,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19831",
+        "name": "Property 1=Short, Property 2=Error",
+        "w": 335,
+        "h": 95,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19840",
+        "name": "Property 1=Long, Property 2=Default",
+        "w": 335,
+        "h": 129,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19843",
+        "name": "Property 1=Short, Property 2=Typing",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19846",
+        "name": "Property 1=Short, Property 2=Focus Out",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19849",
+        "name": "Property 1=Short, Property 2=Default",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19188",
+        "name": "Property 1=Id, Property 2=Default",
+        "w": 375,
+        "h": 72,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19202",
+        "name": "Property 1=Id, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19217",
+        "name": "Property 1=Id, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19230",
+        "name": "Property 1=Id, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19245",
+        "name": "Property 1=Id Search, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19257",
+        "name": "Property 1=Id Search, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19269",
+        "name": "Property 1=Id Search, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19280",
+        "name": "Property 1=Pw, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19293",
+        "name": "Property 1=Pw, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19306",
+        "name": "Property 1=Pw, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19317",
+        "name": "Property 1=Pw, Property 2=Error",
+        "w": 375,
+        "h": 116,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19331",
+        "name": "Property 1=Certify, Property 2=Default",
+        "w": 335,
+        "h": 48,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19345",
+        "name": "Property 1=Certify, Property 2=Typing",
+        "w": 335,
+        "h": 48,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19362",
+        "name": "Property 1=Certify, Property 2=Timeout",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19373",
+        "name": "Property 1=Certify, Property 2=Error",
+        "w": 375,
+        "h": 72,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19387",
+        "name": "Property 1=Registration, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19403",
+        "name": "Property 1=Registration, Property 2=Typing",
+        "w": 375,
+        "h": 69,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19419",
+        "name": "Property 1=Registration, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19435",
+        "name": "Property 1=Registration, Property 2=Error",
+        "w": 375,
+        "h": 98,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19451",
+        "name": "Property 1=Select, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19464",
+        "name": "Property 1=Select, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19479",
+        "name": "Property 1=Select, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19492",
+        "name": "Property 1=Select, Property 2=Error",
+        "w": 375,
+        "h": 98,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19508",
+        "name": "Property 1=Card, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19525",
+        "name": "Property 1=Card, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19550",
+        "name": "Property 1=Card, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19571",
+        "name": "Property 1=Card, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19592",
+        "name": "Property 1=License, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19611",
+        "name": "Property 1=license, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19630",
+        "name": "Property 1=license, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19646",
+        "name": "Property 1=License, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19662",
+        "name": "Property 1=input_date, Property 2=date",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19684",
+        "name": "Property 1=date, Property 2=focus",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19708",
+        "name": "Property 1=date, Property 2=field",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      }
+    ]
+  },
+  "tokenNaming": {
+    "note": "Buttons 절이 남아 있어 읽힌 것입니다. Text field 의 값이 아니라 이름 규칙의 실례로만 씁니다.",
+    "examples": [
+      "Components/Buttons/Capsule/Primary",
+      "Components/Buttons/Default/Primary",
+      "Components/Buttons/Default/Secondary",
+      "Components/Buttons/Icon/Primary",
+      "Components/Buttons/Icon/Secondary",
+      "Semantic/Color/Background/Filled/Default",
+      "Semantic/Color/Background/Filled/Disabled",
+      "Semantic/Color/Background/Filled/Pressed",
+      "Semantic/Color/Background/Outlined/Default",
+      "Semantic/Color/Background/Outlined/Disabled",
+      "Semantic/Color/Background/Outlined/Pressed"
+    ],
+    "shape": "Components/<컴포넌트>/<유형>/<위계>  ←  Semantic/Color/Background/<채움>/<상태>"
+  },
+  "defects": [
+    {
+      "id": "TF-1",
+      "what": "➍ Area text field 절의 설명문이 ➌ Split text field 것과 글자 그대로 같습니다",
+      "evidence": "Split text field (스플릿 텍스트필드)는 하나의 정보를 여러 구간으로 나누어 입력하는 분리형입니다. 주민등록번호, 카드번호, 면허번호처럼 정해진 자릿수나 형식 기준으로 값을 구분해야 할 때 사용하며, 구간별로 드롭다운·마스킹·구분 기호를 포함할 수 있습니다.",
+      "why": "복사해 놓고 고쳐 쓰지 않은 것으로 보입니다. Area 유형의 설명은 페이지에 없는 셈입니다.",
+      "fix": "원본에서 고칠 일입니다. 저장소는 ➍ 의 설명을 «없음»으로 둡니다 — 지어내지 않습니다."
+    },
+    {
+      "id": "TF-2",
+      "what": "Style 절이 Buttons 페이지 내용 그대로입니다 (14줄)",
+      "evidence": [
+        "Default button (디폴트 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary·Tertiary)에 관계없이 동일하게 적용합니다. (아래항목도 동일) * 25.05.21(목) 기준: Default button (디폴트 버튼)의 맥시멈 크기 → 높이 60 * 26.06.10(수) 기준: Default button (디폴트 버튼), Default button 안에서 같이 사용되는 Text button → 굵기 Bold",
+        "[토큰 네이밍 예시]  Components/Buttons/Default/Primary Semantic/Color/Background/Filled/Default",
+        "Components/Buttons/Default/Primary"
+      ],
+      "why": "문서화 템플릿을 Buttons 에서 복사해 오면서 Style 절을 바꾸지 않았습니다. Text field 의 스타일 정의는 이 페이지에 아직 없습니다.",
+      "fix": "저장소는 이 문장들을 Text field 의 스타일로 옮겨 적지 않습니다."
+    },
+    {
+      "id": "TF-3",
+      "what": "변형 축 이름이 «Property 1 · Property 2» 로 남아 있습니다",
+      "why": "Figma 기본 이름 그대로라, 어느 축이 «유형»이고 어느 축이 «상태»인지 이름만 봐서는 알 수 없습니다. 값을 보고 유추할 뿐입니다.",
+      "fix": "원본에서 축 이름을 붙이는 일입니다. 저장소는 값으로 미루어 «유형 / 상태»로 읽되 그렇게 읽었다는 사실을 밝힙니다."
+    },
+    {
+      "id": "TF-4",
+      "what": "대소문자만 다른 변형 값이 있습니다 — License / license",
+      "why": "같은 것을 두 가지로 적었습니다. 도구가 다른 값으로 셉니다.",
+      "fix": "원본에서 하나로 맞출 일입니다."
+    },
+    {
+      "id": "TF-5",
+      "what": "상태 축에 상태가 아닌 값이 섞여 있습니다 — date · focus · field",
+      "why": "나머지 Focus Out · Typing · Error · Default · Timeout 과 결이 다릅니다. date 무리만 다른 축을 쓰고 있습니다.",
+      "fix": "원본에서 date 무리의 축을 맞출 일입니다."
+    }
+  ],
+  "stillEmpty": {
+    "why": "템플릿 칸은 있으나 채우지 않았거나 남의 내용이 들어 있는 자리입니다.",
+    "sections": [
+      "Style — Buttons 내용이 그대로",
+      "Usage",
+      "➍ Area text field 의 설명"
+    ],
+    "stubCount": 28
+  },
+  "counts": {
+    "types": 4,
+    "sections": 4,
+    "variants": 42,
+    "kinds": 13,
+    "states": 8,
+    "defects": 5,
+    "buttonLeftovers": 14
+  }
+}

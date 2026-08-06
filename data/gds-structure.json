@@ -20,7 +20,7 @@
       "정의": "각 요소는 서로 종속되지 않고 각자의 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않습니다.",
       "items": [
         { "name": "Color", "figma": "done", "repo": "tokens", "where": "data/gds-library.json fill 60종 → dist/tokens/" },
-        { "name": "Typography", "figma": "done", "repo": "tokens", "where": "정본 21단계 → dist/tokens/" },
+        { "name": "Typography", "figma": "done", "repo": "tokens", "where": "원본 21단계 → dist/tokens/" },
         { "name": "Spacing", "figma": "done", "repo": "tokens", "where": "14단계 → dist/tokens/" },
         { "name": "Icon", "figma": "wip", "repo": "docs", "where": "그래픽 3단계 기준만 — docs/GDS-uiux-guide.md", "note": "Icon system 페이지는 🚧. 분류 기준(Lv.1~3)은 UI/UX guide ✅ 에 있습니다" },
         { "name": "Elevation", "figma": "wip", "repo": "tokens", "where": "Elevation_1~6 → dist/tokens/", "note": "라이브러리에는 EFFECT 스타일로 published 돼 있으나 Elevation system 페이지는 🚧" },

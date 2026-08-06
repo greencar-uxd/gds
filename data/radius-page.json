@@ -1,0 +1,246 @@
+{
+  "$description": "Radius system 🚧 페이지를 직접 읽은 결과입니다. 실사용 스케일 말고도 원본의 미결 메모와 외부 인용 프레임이 있었습니다.",
+  "generatedFrom": "tools/build-radius-page.js ← data/figma-pages/radius-system.json · data/gds-library.json",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42415:11358",
+    "pageName": "Radius system (래디어스 시스템) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "scale": {
+    "steps": [
+      {
+        "px": 4,
+        "usage": "버튼 xsmall",
+        "x": 97,
+        "node": "42764:36978"
+      },
+      {
+        "px": 8,
+        "usage": "버튼 Input info_box",
+        "x": 594,
+        "node": "42764:36977"
+      },
+      {
+        "px": 10,
+        "usage": "(As-is에서) 기본",
+        "x": 1028,
+        "node": "42764:36979"
+      },
+      {
+        "px": 12,
+        "usage": "카드",
+        "x": 1371,
+        "node": "42764:36980"
+      },
+      {
+        "px": 16,
+        "usage": "카드",
+        "x": 1778,
+        "node": "42764:36981"
+      },
+      {
+        "px": 20,
+        "usage": "모달 팝업",
+        "x": 2229,
+        "node": "42764:36976"
+      }
+    ],
+    "note": "머리행이 값, 아래 행이 쓰임새입니다. 이 표는 이미 data/gds-library.json 의 variables.radiusUsage 로 반영돼 있습니다.",
+    "matchesLibrary": true,
+    "libraryScale": [
+      4,
+      8,
+      10,
+      12,
+      16,
+      20
+    ]
+  },
+  "pending": {
+    "why": "원본 캔버스에 디자이너가 적어 둔 미결 메모입니다. 우리가 판단할 것이 아니라 원본의 다음 결정입니다.",
+    "items": [
+      {
+        "note": "정의: 콘텐츠 영역에 10인데 8로 변경 필요",
+        "node": "42764:37059",
+        "at": {
+          "x": 2261,
+          "y": 1254
+        }
+      },
+      {
+        "note": "8 케이스 10케이스 정의",
+        "node": "42764:37063",
+        "at": {
+          "x": 2994,
+          "y": 1129
+        }
+      },
+      {
+        "note": "10 → 8로 변경해야함",
+        "node": "42764:37838",
+        "at": {
+          "x": 1025,
+          "y": 494
+        }
+      },
+      {
+        "note": "10 → 8/12로 변경해야함",
+        "node": "42764:37839",
+        "at": {
+          "x": 1025,
+          "y": 690
+        }
+      },
+      {
+        "note": "10 → 8/12로 변경해야함",
+        "node": "42764:37840",
+        "at": {
+          "x": 1025,
+          "y": 306
+        }
+      }
+    ],
+    "reading": "10 단계를 8 또는 8/12 로 바꾸자는 메모가 여러 곳에 있습니다. 아직 바뀌지 않았으므로 토큰은 10 을 유지합니다."
+  },
+  "externalQuote": {
+    "what": "KRDS(대한민국 정부 디자인 시스템) 형태(Shape) 스타일 가이드를 프레임째 옮겨 붙여 두었습니다.",
+    "evidence": "표준형 스타일은 2px~12px의 래디어스 값을 사용하며, 이는 정부가 주는 신뢰감과 안정감, 친근함을 표현하기 위한 래디어스 값이다. 과하게 둥근 형태로 변형되는 것을 방지하기 위해 래디어스 최대 값을 12px로 설정한다.",
+    "verifiedAgainst": "https://www.krds.go.kr/html/site/style/style_04.html (2026-08-06 대조 — 문장이 원문과 같습니다)",
+    "frame": "스타일가이드_형태",
+    "table": [
+      {
+        "level": "Xsmall",
+        "usage": "컴포넌트 레벨에서 가장 작은 크기로 인디게이터, 뱃지, 프로그레스 바 같은 초소형 크기에 사용한다.",
+        "sizes": [
+          {
+            "container": "8*8",
+            "radius": "4px"
+          },
+          {
+            "container": "12*12",
+            "radius": "4px"
+          },
+          {
+            "container": "16*16",
+            "radius": "8px"
+          }
+        ],
+        "applyComponents": null
+      },
+      {
+        "level": "Small",
+        "usage": "태그, 칩 같은 작은 컴포넌트에서 사용한다.",
+        "sizes": [
+          {
+            "container": "20*20",
+            "radius": "8px"
+          },
+          {
+            "container": "24*24",
+            "radius": "10px"
+          },
+          {
+            "container": "32*32",
+            "radius": "10px"
+          }
+        ],
+        "applyComponents": "Chips Checkbox Radio button Switch Tag"
+      },
+      {
+        "level": "Medium",
+        "usage": "기본이 되는 값으로 주로 버튼, 인풋 등에서 사용한다.",
+        "sizes": [
+          {
+            "container": "40*40",
+            "radius": "12px"
+          },
+          {
+            "container": "48*48",
+            "radius": "12px"
+          },
+          {
+            "container": "56*56",
+            "radius": "14px"
+          },
+          {
+            "container": "64*64",
+            "radius": "14px"
+          }
+        ],
+        "applyComponents": null
+      },
+      {
+        "level": "Large",
+        "usage": "주로 카드와 같은 큰 컴포넌트에 사용한다.",
+        "sizes": [
+          {
+            "container": "72*72",
+            "radius": "16px"
+          },
+          {
+            "container": "80*80",
+            "radius": "16px"
+          }
+        ],
+        "applyComponents": "Card Dialog"
+      },
+      {
+        "level": "Xlarge",
+        "usage": "가장 큰 값으로 주로 배너, 바텀 시트 같은 화면을 차지하는 비율이 큰 컴포넌트에 사용한다.",
+        "sizes": [
+          {
+            "container": "96*96",
+            "radius": "20px"
+          },
+          {
+            "container": "120*120",
+            "radius": "20px (max)"
+          }
+        ],
+        "applyComponents": "Banner Dialog Bottom sheet"
+      }
+    ],
+    "radiiInQuote": [
+      4,
+      8,
+      10,
+      12,
+      14,
+      16,
+      20
+    ],
+    "ruleApplied": "GDS 값으로 편입하지 않습니다. 원본 안에 있다는 사실만 기록합니다 — 우리 스케일의 근거는 Radius 프레임입니다.",
+    "diffVsOurs": {
+      "onlyInQuote": [
+        14
+      ],
+      "onlyInOurs": []
+    },
+    "caution": "KRDS 표준형은 최대 12px 인데 옮겨 적힌 표에는 14·20px 이 있습니다. 원문 그대로가 아니라 값을 바꿔 채운 칸이 섞여 있습니다."
+  },
+  "documentationFrame": {
+    "state": "unfilled",
+    "why": "Text field 문서화 템플릿을 복사해 두고 채우지 않았습니다.",
+    "truncatedSentences": [
+      "Radius system (레디어스 시스템)은",
+      "Radius system (레디어스 시스템)은"
+    ],
+    "borrowedFromTextField": [
+      "➊ Text field (텍스트필드)",
+      "➋ Search text field (서치 텍스트필드)",
+      "➌ Split text field (스플릿 텍스트필드)",
+      "➍ Area text field (영역 텍스트필드)",
+      "Text field (텍스트필드)"
+    ],
+    "stubCount": 7
+  },
+  "counts": {
+    "steps": 6,
+    "pending": 5,
+    "krdsLevels": 5,
+    "krdsRadii": 7,
+    "borrowed": 5
+  }
+}

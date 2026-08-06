@@ -1,0 +1,223 @@
+{
+  "$description": "Elevation system 🚧 페이지를 직접 읽은 결과입니다. 라이브러리 EFFECT 스타일 목록에는 없던 정의·dp·적용 범위가 여기 있습니다.",
+  "generatedFrom": "tools/build-elevation-page.js ← data/figma-pages/elevation-system.json · data/effects.json",
+  "correction": {
+    "at": "2026-08-06",
+    "what": "«Elevation system 페이지가 🚧 라 정의가 없다»고 적었던 것을 철회합니다. 페이지에 레벨 정의·수치·적용 범위가 전부 있습니다.",
+    "howFound": "등록된 스타일 목록이 아니라 페이지를 직접 열었습니다."
+  },
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42316:48471",
+    "pageName": "Elevation system (엘리베이션 시스템) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "definition": "Elevation (엘리베이션)은 UI 요소가 서로 다른 시각적 레벨에 위치하도록 하여, 화면에 깊이감과 계층 구조를 부여하는 개념입니다.",
+  "method": "Elevation (엘리베이션)은 그림자(1) · 딤(2) · 스트로크(3)로 시각적 계층을 표현합니다. 기본적으로는 그림자를 통해 깊이감을 전달하며, 딤과 스트로크는 콘텐츠 특성에 따라 선택적으로 사용해 계층감을 보완합니다.",
+  "methodAxes": [
+    "그림자",
+    "딤 레이어"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "dp": 1,
+      "x": 0,
+      "y": 1,
+      "blur": 2,
+      "spread": 0,
+      "alphaPct": 30,
+      "css": "0px 1px 2px 0px rgba(0, 0, 0, 0.30)",
+      "node": "43117:30347",
+      "labelInSource": "Leverl 1 → 1dp"
+    },
+    {
+      "level": 2,
+      "dp": 4,
+      "x": 0,
+      "y": 1,
+      "blur": 2,
+      "spread": 0,
+      "alphaPct": 30,
+      "css": "0px 1px 2px 0px rgba(0, 0, 0, 0.30)",
+      "node": "43117:30351",
+      "labelInSource": "Leverl 2 → 4dp"
+    },
+    {
+      "level": 3,
+      "dp": 6,
+      "x": 0,
+      "y": 1,
+      "blur": 3,
+      "spread": 0,
+      "alphaPct": 30,
+      "css": "0px 1px 3px 0px rgba(0, 0, 0, 0.30)",
+      "node": "43117:30355",
+      "labelInSource": "Leverl 3 → 6dp"
+    },
+    {
+      "level": 4,
+      "dp": 8,
+      "x": 0,
+      "y": 2,
+      "blur": 3,
+      "spread": 0,
+      "alphaPct": 30,
+      "css": "0px 2px 3px 0px rgba(0, 0, 0, 0.30)",
+      "node": "43117:30362",
+      "labelInSource": "Leverl 4 → 8dp"
+    },
+    {
+      "level": 5,
+      "dp": 12,
+      "x": 0,
+      "y": 4,
+      "blur": 4,
+      "spread": 0,
+      "alphaPct": 30,
+      "css": "0px 4px 4px 0px rgba(0, 0, 0, 0.30)",
+      "node": "43117:30366",
+      "labelInSource": "Leverl 5 → 12dp"
+    }
+  ],
+  "level0": {
+    "level": 0,
+    "dp": 0,
+    "shadow": null,
+    "role": "Background (배경)",
+    "desc": "UI의 가장 기본 배경으로 설정하여, 화면의 일반적인 바탕",
+    "why": "표에 수치 행이 없습니다 — 그림자가 없는 레벨이라 X/Y/Blur 를 적을 것이 없습니다."
+  },
+  "roles": [
+    {
+      "level": 0,
+      "role": "Background (배경)",
+      "desc": "UI의 가장 기본 배경으로 설정하여, 화면의 일반적인 바탕"
+    },
+    {
+      "level": 1,
+      "role": "기본 상호 작용",
+      "desc": "기본 상호작용 요소나 비활성화된 요소에 적용하여 기본 배경보다 약간 더 높게 표현"
+    },
+    {
+      "level": 2,
+      "role": "주요 상호 작용",
+      "desc": "클릭이나 터치와 같은 주요 상호작용 요소에 사용하여 사용자 주목도 강조"
+    },
+    {
+      "level": 3,
+      "role": "주목도 높은 요소",
+      "desc": "상호작용 중에서도 주목받아야 할 요소에 사용하여 시각적 강조"
+    },
+    {
+      "level": 4,
+      "role": "중요한 알림",
+      "desc": "상호작용 중에서도 조금 더 주목받아야 할 요소에 사용하여 시각적 강조"
+    },
+    {
+      "level": 5,
+      "role": "가장 중요한 알림",
+      "desc": "상호작용 중에서도 가장 중요한 알림이나 긴급 메세지에 적용하여, 사용자가 즉각적으로 주목할 수 있도록 최상위 레벨로 설정"
+    }
+  ],
+  "extra": {
+    "value": "0 0 6 0 15%",
+    "css": "0px 0px 6px 0px rgba(0, 0, 0, 0.15)",
+    "node": "43117:30358",
+    "label": "Bottom Sheet 스크롤이 생기는 버튼",
+    "why": "페이지가 «표준 / 별도 지정» 두 칸으로 나눠 그렸고, 이 값은 별도 지정 칸에 있습니다."
+  },
+  "extraCorroborates": true,
+  "applications": [
+    {
+      "target": "Floating Action Button",
+      "level": 1,
+      "dp": 1,
+      "raw": "적용 범위: Floating Action Button  Level 1 (1dp)"
+    },
+    {
+      "target": "Modal / Bottom Sheet",
+      "level": 2,
+      "dp": 4,
+      "raw": "적용범위: Modal / Bottom Sheet  Level 2 (4dp)"
+    }
+  ],
+  "reference": {
+    "citation": "*머터리얼 디자인 시스템 인용: https://m3.material.io/styles/elevation/applying-elevation",
+    "citedText": "머티리얼은 6단계의 높이를 사용하며, 각 단계에는 해당 dp 값이 있습니다. 이 값들은 UI 표면으로부터의 상대적 거리를 0, ​​+1, +2, +3, +4, +5로 나타냅니다. 요소의 정지 상태는 0단계부터 +3단계까지이며, +4단계와 +5단계는 호버링이나 드래그와 같은 사용자 상호작용 상태를 위해 예약되어 있습니다.",
+    "why": "원본이 스스로 밝힌 인용입니다. 우리가 다른 디자인 시스템을 뒤져 온 것이 아닙니다."
+  },
+  "workNote": "26.06.09 -기존 엘리베이션 시스템 정의 완료 -별도 바텀시트 스타일 값 추가 (Blur 6dp) -사용처 정의 -문서화 진행 예정",
+  "conflicts": [
+    {
+      "id": "EP-1",
+      "what": "개수가 다릅니다",
+      "page": "Level 1~5 (5단계) + Level 0(그림자 없음)",
+      "library": "Elevation_1 · Elevation_2 · Elevation_3 · Elevation_4 · Elevation_5 · Elevation_6 (6종)",
+      "why": "페이지는 그림자 있는 레벨을 5단계로 정의했고, 라이브러리에는 EFFECT 스타일이 6종 published 돼 있습니다. 어느 스타일이 어느 레벨인지 원본이 대응표를 적어 두지 않았습니다.",
+      "decided": false
+    },
+    {
+      "id": "EP-2-2",
+      "what": "Elevation_2 의 실측값이 페이지 표와 다릅니다",
+      "page": "0px 1px 2px 0px rgba(0, 0, 0, 0.30) (Level 2 · 4dp)",
+      "library": "0px 1px 3px 1px rgba(0, 0, 0, 0.149), 0px 1px 2px 0px rgba(0, 0, 0, 0.302)",
+      "why": "이름의 숫자만 보고 레벨을 맞춘 비교입니다. 대응표가 없으므로 이 비교 자체가 가정 위에 있습니다. 라이브러리 쪽은 2겹이고 페이지 표는 1겹이라, 같은 것을 다르게 적은 것인지 다른 것인지 원본이 말해 주지 않습니다.",
+      "decided": false
+    }
+  ],
+  "typos": [
+    {
+      "found": "Leverl",
+      "should": "Level",
+      "count": 16,
+      "nodes": [
+        "43117:30347",
+        "43117:30351",
+        "43117:30355",
+        "43117:30362",
+        "43117:30366",
+        "43094:1269",
+        "43094:1272",
+        "43094:1274",
+        "43094:1275",
+        "43094:1276",
+        "43094:1789",
+        "44233:59033",
+        "44233:59037",
+        "44233:59041",
+        "44233:59048",
+        "44233:59052"
+      ]
+    },
+    {
+      "found": "Spreas",
+      "should": "Spread",
+      "count": 4,
+      "nodes": [
+        "43117:30345",
+        "43094:1294",
+        "44233:59587",
+        "44233:59031"
+      ]
+    }
+  ],
+  "stillEmpty": {
+    "why": "페이지에 칸은 있으나 «설명글»·«레벨 값» 문구 그대로 남아 있는 자리입니다. 채워진 것으로 세면 안 됩니다.",
+    "sections": [
+      "[레벨_색상]",
+      "[레벨_딤 레이어]",
+      "[레벨_스트로크]",
+      "Usage — Select · Tip · Modal · Info box"
+    ],
+    "stubCount": 25
+  },
+  "counts": {
+    "levels": 5,
+    "roles": 6,
+    "applications": 2,
+    "conflicts": 2,
+    "typos": 20
+  }
+}

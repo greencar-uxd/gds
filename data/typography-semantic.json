@@ -105,7 +105,7 @@
         "Body 4"
       ],
       "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_body\"",
-      "why": "정본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 정본에 없습니다."
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
     },
     {
       "usage": "Contents_caption",
@@ -115,7 +115,7 @@
         "Caption 2"
       ],
       "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_caption\"",
-      "why": "정본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 정본에 없습니다."
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
     },
     {
       "usage": "Contents_heading",
@@ -127,7 +127,7 @@
         "Heading 4"
       ],
       "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_heading\"",
-      "why": "정본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 정본에 없습니다."
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
     },
     {
       "usage": "Contents_title",
@@ -139,7 +139,7 @@
         "Title 7"
       ],
       "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_title\"",
-      "why": "정본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 정본에 없습니다."
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
     },
     {
       "usage": "Graphic",
@@ -150,7 +150,7 @@
         "Display 3"
       ],
       "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Graphic\"",
-      "why": "정본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 정본에 없습니다."
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
     }
   ],
   "counts": {

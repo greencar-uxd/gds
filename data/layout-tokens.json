@@ -47,7 +47,7 @@
     }
   ],
   "platformAxis": {
-    "note": "플랫폼은 두 축으로 갈립니다 — iOS 하나, AOS 와 Web 이 같은 축. 원본 Layout ✅ 의 묶음이 그대로 정본입니다.",
+    "note": "플랫폼은 두 축으로 갈립니다 — iOS 하나, AOS 와 Web 이 같은 축. 원본 Layout ✅ 의 묶음을 그대로 씁니다.",
     "ios": 375,
     "aos": 360,
     "web": 360

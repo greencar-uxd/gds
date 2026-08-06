@@ -1,6 +1,6 @@
 {
   "$description": "색 별칭과 면색/선색 짝 — 같은 값이 여러 이름으로 흩어진 것을 잇습니다.",
-  "generatedFrom": "tools/build-color-aliases.js ← build/canon-view.js (정본 60색)",
+  "generatedFrom": "tools/build-color-aliases.js ← build/canon-view.js (원본 60색)",
   "rule": "값이 같은 무리에 단계 그룹 소속이 정확히 하나면 그것이 원본이고 나머지는 별칭입니다. 아니면 정하지 않습니다.",
   "scaleGroups": [
     "Primary",
@@ -95,7 +95,7 @@
     {
       "line": "Map Marker/Disabled Line",
       "fill": null,
-      "note": "면색 «Disabled» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+      "note": "면색 «Disabled» 이 원본에 없습니다 — 짝이 아니라 단독 선색입니다."
     },
     {
       "line": "Map Marker/Free Zone Line",
@@ -126,12 +126,12 @@
     {
       "line": "System/Focus Line",
       "fill": null,
-      "note": "면색 «Focus» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+      "note": "면색 «Focus» 이 원본에 없습니다 — 짝이 아니라 단독 선색입니다."
     },
     {
       "line": "System/Input Line",
       "fill": null,
-      "note": "면색 «Input» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+      "note": "면색 «Input» 이 원본에 없습니다 — 짝이 아니라 단독 선색입니다."
     }
   ],
   "splitPairs": []

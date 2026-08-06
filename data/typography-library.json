@@ -1,8 +1,8 @@
 {
   "$description": "차기 GDS 라이브러리에 넣을 텍스트 스타일 정의 21종. 저장소에서 먼저 만들고, 그다음 Figma 원본에 반영합니다.",
-  "generatedFrom": "tools/build-typography-library.js — data/foundation-data.json(정본 21단계) + data/type-decisions.json(확정 결정)",
+  "generatedFrom": "tools/build-typography-library.js — data/foundation-data.json(원본 21단계) + data/type-decisions.json(확정 결정)",
   "checkedAt": "2026-08-05",
-  "problem": "현재 라이브러리 텍스트 스타일은 5종뿐인데 정본은 21단계입니다. 5종은 스타일이 아니라 «그룹»이고 이름에 단계 번호가 빠져 있어서, 같은 이름으로 여러 개가 published 돼 값이 충돌합니다.",
+  "problem": "현재 라이브러리 텍스트 스타일은 5종뿐인데 원본은 21단계입니다. 5종은 스타일이 아니라 «그룹»이고 이름에 단계 번호가 빠져 있어서, 같은 이름으로 여러 개가 published 돼 값이 충돌합니다.",
   "evidence": "그룹별 단계 수와 published 수가 맞아떨어집니다 — Display 3단계/3개 · Body 4단계/4개. Title 은 8단계인데 6개만 published 라 2개가 빠져 있습니다.",
   "namingRule": "noto_sans/<group>/<step> — 굵기는 그룹이 결정하므로(Display·Heading=Bold, Title=Medium, Body·Caption=Regular) 이름에서 뺍니다. 대신 weight 로 싣습니다.",
   "fixes": [

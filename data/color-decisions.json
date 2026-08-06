@@ -19,7 +19,7 @@
   "main": {
     "token": "Primary/Red 040",
     "hex": "#F14950",
-    "note": "정본 ✅ Color system 설명문의 '가독성과 접근성을 고려하여 Red 040을 메인 색상으로 사용합니다' 를 그대로 채택. 강민관 결정 2026-08-04(050 에서 040 으로 정정).",
+    "note": "원본 ✅ Color system 설명문의 '가독성과 접근성을 고려하여 Red 040을 메인 색상으로 사용합니다' 를 그대로 채택. 강민관 결정 2026-08-04(050 에서 040 으로 정정).",
     "accessibility": {
       "contrastOnWhite": 3.62,
       "wcagAA_body": "미달 (4.5:1 기준)",
@@ -108,7 +108,7 @@
     {
       "id": "CQ-9",
       "question": "Dim Layer / Info Box BG 의 알파 단계를 어떻게 토큰화할 것인가",
-      "detail": "원본 변수는 System/Dim Layer · System/Info Box BG 2개인데, 정본 스와치는 Dim layer 01(검정 60%) · Dim layer 02(검정 80%) · Info_Box(검정 60%) 3개입니다. 값은 셋 다 #000000 이고 차이는 불투명도뿐입니다. 원본 설명문에는 25.06.08 기준 Info box bg 를 Dim layer 의 하위로 재분류했다고 적혀 있습니다.",
+      "detail": "원본 변수는 System/Dim Layer · System/Info Box BG 2개인데, 원본 스와치는 Dim layer 01(검정 60%) · Dim layer 02(검정 80%) · Info_Box(검정 60%) 3개입니다. 값은 셋 다 #000000 이고 차이는 불투명도뿐입니다. 원본 설명문에는 25.06.08 기준 Info box bg 를 Dim layer 의 하위로 재분류했다고 적혀 있습니다.",
       "options": [
         "A — 알파를 토큰에 포함: System/Dim Layer 060(#00000099) · System/Dim Layer 080(#000000CC) 2종으로 쪼개고 Info Box BG 는 060 으로 흡수. Map Marker/Shadow(#0000001A) 와 같은 방식이라 일관됩니다.",
         "B — 색 토큰은 #000000 하나만 두고 불투명도는 컴포넌트에서 지정. 토큰 수는 줄지만 60/80 이 어디서 쓰이는지가 시스템에 남지 않습니다.",
@@ -121,14 +121,14 @@
       ],
       "status": "closed",
       "settledTitle": "알파를 토큰에 포함합니다 — System/Dim Layer 060 · 080",
-      "resolution": "A 확정 2026-08-05. System/Dim Layer 060(#00000099) · System/Dim Layer 080(#000000CC) 2종으로 쪼개고, System/Info Box BG 는 060 으로 흡수합니다. 이미 확정된 Map Marker/Shadow(#0000001A)와 같은 8자리 HEX 규칙입니다. 불투명도 값의 근거는 원본 변수가 아니라 정본 스와치 캡션이므로 alphaSource 로 표시했습니다."
+      "resolution": "A 확정 2026-08-05. System/Dim Layer 060(#00000099) · System/Dim Layer 080(#000000CC) 2종으로 쪼개고, System/Info Box BG 는 060 으로 흡수합니다. 이미 확정된 Map Marker/Shadow(#0000001A)와 같은 8자리 HEX 규칙입니다. 불투명도 값의 근거는 원본 변수가 아니라 원본 스와치 캡션이므로 alphaSource 로 표시했습니다."
     },
     {
       "id": "CQ-10",
       "question": "역할 별칭(semantic alias) 계층을 GDS 에 둘 것인가",
-      "detail": "원본에 color/text/bolder(#131416) 라는 변수가 있습니다. 소문자·역할 기반 이름으로, Gray Scale/Primary 같은 원시 색 계층과 이름 규칙이 다릅니다. 현재 GDS 정본 53종은 전부 원시 색이고 역할 별칭은 하나도 없습니다. 이 변수 하나 때문에 계층을 새로 만들지, 아니면 원시 색으로 편입할지 결정이 필요합니다.",
+      "detail": "원본에 color/text/bolder(#131416) 라는 변수가 있습니다. 소문자·역할 기반 이름으로, Gray Scale/Primary 같은 원시 색 계층과 이름 규칙이 다릅니다. 현재 GDS 색 53종은 전부 원시 색이고 역할 별칭은 하나도 없습니다. 이 변수 하나 때문에 계층을 새로 만들지, 아니면 원시 색으로 편입할지 결정이 필요합니다.",
       "options": [
-        "A — 별칭 계층을 만든다: color/text/bolder 같은 역할 토큰을 원시 색을 가리키게 정의. 다만 #131416 은 정본 어떤 원시 색과도 일치하지 않아 원시 색부터 추가해야 합니다.",
+        "A — 별칭 계층을 만든다: color/text/bolder 같은 역할 토큰을 원시 색을 가리키게 정의. 다만 #131416 은 원본 어떤 원시 색과도 일치하지 않아 원시 색부터 추가해야 합니다.",
         "B — 원시 색으로 편입: Gray Scale 에 새 단계로 넣는다. 다만 #131416 은 Gray 100(#000000) 과 Gray 080(#2F2E2E) 사이라 10단위 규칙상 들어갈 자리가 090(현재 결번)입니다.",
         "C — 폐기: 레거시 649 스타일에서 사용 0건이므로 시스템에 넣지 않는다."
       ],
@@ -139,7 +139,7 @@
       "status": "closed",
       "figmaEvidence": "2026-08-05 Buttons 페이지에서 원본이 이미 3계층을 쓰고 있음을 확인했습니다. Components/Buttons/Default/Primary → Semantic/Color/Background/Filled/{Default,Pressed,Disabled} → 프리미티브. 시맨틱 계층을 둘지 여부는 사실상 이미 정해져 있습니다(README 확정 결정: 프리미티브 → 시맨틱 → 컴포넌트 3계층). 남는 판단은 color/text/bolder 한 건을 그 계층에 어떻게 넣을지입니다.",
       "settledTitle": "color/text/bolder 는 폐기합니다 — 시맨틱 계층은 이미 원본에 있습니다",
-      "resolution": "C 확정 2026-08-05. 레거시 649 스타일에서 사용 0건이라 옮길 자리가 없고, 값(#131416)도 정본 어느 단계와도 맞지 않습니다. 시맨틱 계층 자체는 원본 Buttons 페이지에서 이미 쓰고 있는 것을 확인했으므로(Semantic/Color/Background/*), 계층을 새로 만들 이유가 이 변수 하나에는 없습니다."
+      "resolution": "C 확정 2026-08-05. 레거시 649 스타일에서 사용 0건이라 옮길 자리가 없고, 값(#131416)도 원본 어느 단계와도 맞지 않습니다. 시맨틱 계층 자체는 원본 Buttons 페이지에서 이미 쓰고 있는 것을 확인했으므로(Semantic/Color/Background/*), 계층을 새로 만들 이유가 이 변수 하나에는 없습니다."
     }
   ],
   "valueOverrides": [
@@ -162,7 +162,7 @@
       "from": "#E2E2E2",
       "to": "#0000001A",
       "alpha": 0.1,
-      "reason": "GAP-4 — 같은 개념이 FILL 스타일(#E2E2E2 불투명 회색)과 변수(#0000001A 검정 10%) 두 값으로 존재합니다. 그림자는 겹칠 때 밑이 비쳐야 맞으므로 알파 쪽을 정본으로 삼습니다.",
+      "reason": "GAP-4 — 같은 개념이 FILL 스타일(#E2E2E2 불투명 회색)과 변수(#0000001A 검정 10%) 두 값으로 존재합니다. 그림자는 겹칠 때 밑이 비쳐야 맞으므로 알파 쪽을 원본으로 삼습니다.",
       "evidence": "GDS 라이브러리 FILL 스타일 vs 변수 Map marker_Shadow · data/gds-gaps.json GAP-4",
       "status": "confirmed",
       "decidedAt": "2026-08-05"
@@ -171,7 +171,7 @@
   "figmaSync": {
     "checkedAt": "2026-08-05",
     "canonFillStyles": 60,
-    "note": "정본 색은 GDS 라이브러리 FILL 스타일 60종입니다. 이전 기록의 \"Figma 변수 60종 · 정본 53종\"은 틀렸습니다 — get_variable_defs 는 파일 전체가 아니라 호출한 노드가 쓰는 변수만 돌려주고, 정본 53종은 ✅ Color system 페이지의 스와치 그림에서 뽑은 것이라 라이브러리에 있는 7종(Badge/ODA · Map Marker/Active · Brand/ODA Line · System/Dim Layer · System/Info Box BG · System/Input Line · Map Marker/Shadow)이 빠져 있었습니다.",
+    "note": "원본 색은 GDS 라이브러리 FILL 스타일 60종입니다. 이전 기록의 \"Figma 변수 60종 · GDS 53종\"은 틀렸습니다 — get_variable_defs 는 파일 전체가 아니라 호출한 노드가 쓰는 변수만 돌려주고, 그 53종은 ✅ Color system 페이지의 스와치 그림에서 뽑은 것이라 라이브러리에 있는 7종(Badge/ODA · Map Marker/Active · Brand/ODA Line · System/Dim Layer · System/Info Box BG · System/Input Line · Map Marker/Shadow)이 빠져 있었습니다.",
     "corrected": true
   },
   "additions": [
@@ -180,7 +180,7 @@
       "sourceName": "Gcar_logo_text",
       "hex": "#1A1A1A",
       "action": "drop",
-      "reason": "철회 — Gcar_logo_text 는 변수일 뿐 GDS 라이브러리에 published 된 스타일이 아닙니다. 정본에 없는 이름(Brand/G car Logo Text)을 제가 지어낸 것이라 편입을 취소합니다.",
+      "reason": "철회 — Gcar_logo_text 는 변수일 뿐 GDS 라이브러리에 published 된 스타일이 아닙니다. 원본에 없는 이름(Brand/G car Logo Text)을 제가 지어낸 것이라 편입을 취소합니다.",
       "evidence": "Figma search_design_system — GDS 라이브러리 Brand 그룹은 G car Red · G car Gray · L.POINT · L.POINT 2 · T Membership · ODA Line 6종이며 Logo Text 는 없습니다. 레거시 649 스타일에도 사용 0건",
       "status": "confirmed"
     },
@@ -189,7 +189,7 @@
       "sourceName": "Map marker_Shadow",
       "hex": "#0000001A",
       "action": "drop",
-      "reason": "편입 취소 — Map Marker/Shadow 는 이미 GDS 라이브러리 FILL 스타일로 정본에 있습니다(#E2E2E2). 변수 Map marker_Shadow(#0000001A)와 값이 다른 것은 원본 결함(GAP-4)이라 valueOverrides 로 처리합니다.",
+      "reason": "편입 취소 — Map Marker/Shadow 는 이미 GDS 라이브러리 FILL 스타일로 원본에 있습니다(#E2E2E2). 변수 Map marker_Shadow(#0000001A)와 값이 다른 것은 원본 결함(GAP-4)이라 valueOverrides 로 처리합니다.",
       "evidence": "Figma search_design_system — GDS 라이브러리에 Map Marker/Shadow FILL 스타일 존재",
       "status": "confirmed"
     },
@@ -201,7 +201,7 @@
       "target": "Brand/G car Red",
       "targetHex": "#ED1C24",
       "deltaE": 0,
-      "reason": "Brand/G car Red · Primary/Red 050 과 값이 완전히 같은 세 번째 이름입니다. 확정된 통폐합 규칙(mergeBase=canon: 정본에 있는 이름을 기준으로 통폐합)을 그대로 적용해 정본에 추가하지 않고 폐기합니다.",
+      "reason": "Brand/G car Red · Primary/Red 050 과 값이 완전히 같은 세 번째 이름입니다. 확정된 통폐합 규칙(mergeBase=canon: 원본에 있는 이름을 기준으로 통폐합)을 그대로 적용해 GDS 에 추가하지 않고 폐기합니다.",
       "evidence": "Figma get_variable_defs 2026-08-05 · ΔE 0",
       "status": "confirmed"
     },
@@ -281,7 +281,7 @@
         "where": "디자인 시스템(정리중) > 2. Typography",
         "problem": "✅ Typography system 과 전혀 다른 타이포 체계가 같은 파일에 공존",
         "actual": "Large Title/Title/Subtitle/Body/Caption × Bold·Medium·Regular(24단계, 28px 포함) + Rubik Time Picker 50px 3단계. ✅ 페이지는 Display/Title/Heading/Body/Caption 21단계·최대 24px·Noto Sans KR 단일",
-        "impact": "어느 쪽이 정본인지 파일만 봐서는 판단 불가. 저장소는 ✅ 페이지를 정본으로 잡았습니다"
+        "impact": "어느 쪽이 원본인지 파일만 봐서는 판단 불가. 저장소는 ✅ 페이지를 기준으로 잡았습니다"
       },
       {
         "id": "SD-9",
@@ -343,9 +343,9 @@
         "id": "SD-16",
         "node": "43376:18436 · 40299:575",
         "where": "✅ Typography system Type scale 표 / 디자인 시스템(정리중) Time Picker",
-        "problem": "Time picker 숫자의 서체·크기가 두 곳에서 다르게 정의돼 있음 — 정본 표는 Title 1(Noto Sans KR Medium 24px, 용도 Time picker_number), 정리중 페이지와 레거시 스타일은 Rubik 50px 3단계",
+        "problem": "Time picker 숫자의 서체·크기가 두 곳에서 다르게 정의돼 있음 — 원본 표는 Title 1(Noto Sans KR Medium 24px, 용도 Time picker_number), 정리중 페이지와 레거시 스타일은 Rubik 50px 3단계",
         "actual": "실제 시간 선택 화면은 50px 로 렌더",
-        "impact": "TQ-6 에서 서체는 Noto Sans KR, 크기는 정본 Title 1(24px)로 확정했으므로 구현 시 크기 조정이 따라옵니다"
+        "impact": "TQ-6 에서 서체는 Noto Sans KR, 크기는 원본 Title 1(24px)로 확정했으므로 구현 시 크기 조정이 따라옵니다"
       },
       {
         "id": "SD-17",
@@ -395,7 +395,7 @@
     "decidedAt": "2026-08-05",
     "decidedBy": "강민관",
     "value": "GDS (그린카 디자인 시스템) 라이브러리 + ✅ 페이지",
-    "note": "정본은 GDS 라이브러리에 published 된 것과 ✅ 표시된 페이지입니다. 레거시 라이브러리(그린카 App v2.0 · G car APP v1.0 · (사용 X) 그린카 App)와 외부 토큰셋([공유] Foundation)은 판단 근거로 쓰지 않습니다. 이전에 쓰던 색차(ΔE) 기반 통폐합·orphan 묶음 판정은 전제가 레거시였으므로 전량 철회했습니다.",
+    "note": "원본은 GDS 라이브러리에 published 된 것과 ✅ 표시된 페이지입니다. 레거시 라이브러리(그린카 App v2.0 · G car APP v1.0 · (사용 X) 그린카 App)와 외부 토큰셋([공유] Foundation)은 판단 근거로 쓰지 않습니다. 이전에 쓰던 색차(ΔE) 기반 통폐합·orphan 묶음 판정은 전제가 레거시였으므로 전량 철회했습니다.",
     "inventory": "data/gds-library.json"
   },
   "splits": [
