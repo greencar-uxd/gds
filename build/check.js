@@ -548,11 +548,40 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     ok('AOS/Web 하단은 20px', LY.margin.some(m => m.token === 'margin-bottom-android' && m.value === 20));
     ok('홈 인디케이터 34px', LY.safeArea.some(s => s.value === 34));
     ok('화면 영역 3종 기록', (LY.regions || []).length === 3);
-    ok('폭 불일치(360 vs 365)가 기록돼 있음', /GAP-24/.test(LY.conflict || ''));
     const css0 = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
     ok('Layout 토큰이 CSS 로 출력됨',
       ['screen-ios-width', 'margin-side', 'home-indicator-height']
         .every(k => css0.includes(`--gds-layout-${k}:`)));
+
+    // ── 화면 폭 (GAP-24) — 두 기준이 일치하는 축만 내보내고, 갈리는 축은 막습니다.
+    const CF = LY.conflicts || [];
+    const AX = LY.platformAxis || {};
+    ok('폭 충돌이 축별로 기록됨', CF.length === 2, `${CF.length}건`);
+    ok('365 축은 해소됨', CF.some(c => c.axis === '365' && c.status === 'resolved'));
+    ok('365 판정이 SD-19 를 근거로 댐', CF.some(c => /SD-19/.test(c.resolution || '')));
+    ok('365 를 오타로 단정하지 않음 — 시나리오로만 남김',
+      CF.some(c => c.axis === '365' && /단정하지 않/.test(c.scenario || '')));
+    ok('AOS 폭 축은 열려 있고 GAP-24 를 답', CF.some(c => c.status === 'open' && c.gap === 'GAP-24'));
+    ok('플랫폼 축 — iOS 375 · Web 360 · AOS 미정',
+      AX.ios === 375 && AX.web === 360 && AX.aos === null,
+      `ios ${AX.ios} · web ${AX.web} · aos ${AX.aos}`);
+    ok('AOS 폭 토큰이 막혀 있음',
+      (LY.blocked || []).some(b => b.token === 'screen-aos-width' && /GAP-24/.test(b.reason)));
+    ok('막힌 토큰의 후보가 둘 다 근거를 가짐', (LY.blocked || []).every(b =>
+      (b.candidates || []).length >= 2 && b.candidates.every(c => (c.basis || '').length > 10)));
+    // 값이 안 정해졌으면 CSS 에 나가면 안 됩니다 — GAP-31 과 같은 규칙입니다.
+    ok('막힌 토큰은 CSS 로 나가지 않음',
+      (LY.blocked || []).every(b => !css0.includes(`--gds-layout-${b.token}:`)));
+    ok('AOS 를 단정하는 옛 토큰명이 사라짐', !css0.includes('--gds-layout-screen-android-width:'));
+    ok('원본 표기 SD-19 가 Bottom navigation 을 가리킴', (() => {
+      const sd = (VIEW.sourceDefects && VIEW.sourceDefects.items) || [];
+      const d = sd.find(x => x.id === 'SD-19');
+      return !!d && /Bottom navigation/.test(d.where) && /365/.test(d.problem);
+    })());
+    ok('Layout 페이지가 플랫폼 축과 막힌 토큰을 렌더함', (() => {
+      const html = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      return html.includes('플랫폼을 어떻게 가르는가') && html.includes('막힌 토큰');
+    })());
   }
 
   ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
