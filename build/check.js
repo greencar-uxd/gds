@@ -1307,7 +1307,8 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
 
     // ── 🚧 컴포넌트 페이지 5쪽 (Bottom sheet · Search field · Info box · Helper text · Text field)
     const WP = PG.components;
-    ok('🚧 컴포넌트 페이지가 16쪽 읽힘', !!WP && WP.counts.pages === 16,
+    // 🚧 16쪽 + «시작 전» 이지만 문서 프레임이 있는 Accordion 1쪽 = 17쪽
+    ok('컴포넌트 페이지가 17쪽 읽힘', !!WP && WP.counts.pages === 17,
       WP ? `${WP.counts.pages}쪽` : '없음');
     if (WP) {
       ok('페이지마다 근거 노드가 있음', WP.pages.every(pg => /^\d+:\d+$/.test(pg.source.node)));
@@ -1475,16 +1476,53 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     const WP = VIEW.pages && VIEW.pages.components;
     const NS = VIEW.pages && VIEW.pages.notStarted;
     if (WP && NS) {
+      // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
-      const contaminated = WP.borrowed.count + WP.foreignSubjects.count + (acc ? acc.contamination.length : 0);
+      ok('Accordion 이 손 옮겨적기에서 기계 집계로 넘어감',
+        !!acc && acc.transcribed === false && !acc.contamination
+        && WP.pages.some(pg => pg.slug === 'accordion'),
+        acc && String(acc.transcribed));
+      const K = WP.counts;
       const g37 = IT.find(i => i.id === 'GAP-37');
-      ok('GAP-37 의 «18건»이 기계 집계와 일치',
-        !!g37 && new RegExp(`${contaminated}건`).test(g37.finding),
-        `borrowed ${WP.borrowed.count} + foreign ${WP.foreignSubjects.count} + accordion ${acc ? acc.contamination.length : 0} = ${contaminated}`);
+      ok('GAP-37 의 겹친 자리 수가 기계 집계와 일치',
+        !!g37 && new RegExp(`${K.borrowed}종이 ${K.borrowedPlaces}자리`).test(g37.finding),
+        `${K.borrowed}종 / ${K.borrowedPlaces}자리`);
+      ok('GAP-37 의 주어 오염 건수가 기계 집계와 일치',
+        !!g37 && new RegExp(`${K.foreignComponent}건 더`).test(g37.finding), `${K.foreignComponent}건`);
+      ok('GAP-37 이 구조 하위 이름을 오염으로 세지 않음',
+        !!g37 && new RegExp(`${K.foreignStructural}건은 단정하지 않고`).test(g37.note || ''));
       const g38 = IT.find(i => i.id === 'GAP-38');
       ok('GAP-38 의 끊긴 문장 수가 기계 집계와 일치',
-        !!g38 && new RegExp(`${WP.truncated.count + 1}건`).test(g38.finding),
-        `truncated ${WP.truncated.count} + accordion 1`);
+        !!g38 && new RegExp(`${K.truncated}건입니다`).test(g38.finding), `truncated ${K.truncated}`);
+      // 자기 이름 오타는 오염(GAP-37)이 아니라 명명(GAP-19) 쪽입니다.
+      ok('자기 이름 오타가 남의 문장에서 빠져 있음',
+        WP.ownNameTypos.count > 0
+        && !WP.foreignSubjects.items.some(f => f.subject.startsWith('Componenets')),
+        `ownNameTypos ${WP.ownNameTypos.count}`);
+      const g19 = IT.find(i => i.id === 'GAP-19');
+      ok('GAP-19 가 기계가 찾은 오타 노드를 가리킴',
+        !!g19 && WP.ownNameTypos.items.every(t => g19.evidence.includes(t.node)));
+      // 「Tip (팁)은」 — 30자 규칙에 걸려 통째로 빠져 있던 자리
+      // 사이트가 새 집계를 실제로 보여 주는가
+      const htmlW = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+      ok('사이트가 겹친 자리 수를 종/자리로 나눠 표시',
+        htmlW.includes(`"borrowedPlaces":${K.borrowedPlaces}`)
+        && htmlW.includes(`"foreignComponent":${K.foreignComponent}`));
+      ok('사이트에 자기 이름 오타 절이 있음', htmlW.includes('자기 이름의 철자가 틀린 곳'));
+      ok('원자료 XML 이 저장소에 있음',
+        fs.existsSync(path.join(ROOT, 'data', 'figma-xml', 'accordion.xml')));
+      ok('Accordion JSON 의 노드가 원자료 XML 안에 실재함', (() => {
+        const xml = fs.readFileSync(path.join(ROOT, 'data', 'figma-xml', 'accordion.xml'), 'utf8');
+        const cited = [
+          ...WP.borrowed.items.flatMap(b => b.appearsIn.filter(x => x.slug === 'accordion').map(x => x.node)),
+          ...WP.foreignSubjects.items.filter(f => f.page === 'accordion').map(f => f.node),
+          ...WP.truncated.items.filter(t => t.page === 'accordion').map(t => t.node),
+        ];
+        return cited.length >= 5 && cited.every(n => xml.includes(`id="${n}"`));
+      })());
+      ok('짧은 정의 첫 줄도 세어짐',
+        WP.truncated.items.filter(t => t.text === 'Tip (팁)은').length === 5,
+        `${WP.truncated.items.filter(t => t.text === 'Tip (팁)은').length}건`);
       const g39 = IT.find(i => i.id === 'GAP-39');
       ok('GAP-39 가 실제 nameMismatch 를 가리킴',
         !!g39 && WP.nameMismatch.count > 0
