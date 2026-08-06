@@ -14,7 +14,8 @@
     "undecidable": 1,
     "aliasTokens": 3,
     "linePairs": 3,
-    "linePairsSplit": 1
+    "linePairsSplit": 0,
+    "linePairsMoved": 1
   },
   "duplicates": [
     {
@@ -109,10 +110,18 @@
       "line": "Brand/ODA Line",
       "lineHex": "#BF7200",
       "lineGroup": "Brand",
-      "fill": "Badge/ODA",
+      "fill": "Brand/ODA",
       "fillHex": "#ED9A1E",
-      "fillGroup": "Badge",
-      "sameGroup": false
+      "fillGroup": "Brand",
+      "sameGroup": true,
+      "moved": [
+        {
+          "token": "Brand/ODA",
+          "from": "Badge",
+          "was": "Badge/ODA",
+          "reason": "GAP-8 — ODA 는 G car 내부 브랜딩입니다(강민관 확정 2026-08-06). 제휴 브랜드가 아니므로 브랜드 색이 있어야 할 곳은 Brand 그룹이고, 선색 Brand/ODA Line 이 이미 거기 있습니다. 면색과 선색은 한 그룹에 두어야 함께 고쳐집니다 — Map Marker 의 Active·Active Line, Free Zone·Free Zone Line 이 같은 형태입니다. 값 변화 없음."
+        }
+      ]
     },
     {
       "line": "System/Focus Line",
@@ -125,17 +134,5 @@
       "note": "면색 «Input» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
     }
   ],
-  "splitPairs": [
-    {
-      "line": "Brand/ODA Line",
-      "lineHex": "#BF7200",
-      "lineGroup": "Brand",
-      "fill": "Badge/ODA",
-      "fillHex": "#ED9A1E",
-      "fillGroup": "Badge",
-      "sameGroup": false,
-      "finding": "«Badge/ODA» 과 «Brand/ODA Line» 은 한 쌍인데 그룹이 갈려 있습니다 (Badge / Brand).",
-      "precedent": "같은 정본 안에 붙어 있는 쌍이 2건 있습니다 — Map Marker/Active · Map Marker/Free Zone. 전부 면색과 선색이 한 그룹입니다."
-    }
-  ]
+  "splitPairs": []
 }

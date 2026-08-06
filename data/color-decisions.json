@@ -71,6 +71,13 @@
       "hex": "#728A9A",
       "reason": "GAP-7 — Navy 그룹에서 이 단계만 소문자입니다. 확정된 표기 규칙(그룹/이름)에 맞춥니다.",
       "status": "confirmed"
+    },
+    {
+      "from": "Badge/ODA",
+      "to": "Brand/ODA",
+      "hex": "#ED9A1E",
+      "reason": "GAP-8 — ODA 는 G car 내부 브랜딩입니다(강민관 확정 2026-08-06). 제휴 브랜드가 아니므로 브랜드 색이 있어야 할 곳은 Brand 그룹이고, 선색 Brand/ODA Line 이 이미 거기 있습니다. 면색과 선색은 한 그룹에 두어야 함께 고쳐집니다 — Map Marker 의 Active·Active Line, Free Zone·Free Zone Line 이 같은 형태입니다. 값 변화 없음.",
+      "status": "confirmed"
     }
   ],
   "open": [

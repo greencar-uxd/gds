@@ -150,7 +150,9 @@
       "finding": "같은 기능(ODA)의 색이 Badge/ODA 와 Brand/ODA Line 두 그룹으로 갈라져 있습니다.",
       "evidence": "data/color-aliases.json splitPairs — 면색/선색 쌍 3건 중 그룹이 갈린 것은 ODA 하나뿐입니다. Map Marker/Active·Active Line 과 Map Marker/Free Zone·Free Zone Line 은 면색과 선색이 한 그룹에 있습니다.",
       "fix": "뱃지 면색과 선색이므로 Badge 그룹으로 모으거나, 컴포넌트 계층에서 한 쌍으로 묶습니다.",
-      "progress": "부분 — 면색/선색 쌍을 이름 규칙(«X» / «X Line»)으로 기계 검출하게 만들었고, 갈린 쌍 1건과 선례 2건을 Color 페이지에 실었습니다. Brand 그룹에는 선색이 ODA Line 하나뿐이라는 사실도 함께 드러났습니다. 다만 어느 그룹으로 모을지는 값·이름만으로 정할 수 없어(ODA 가 제휴 브랜드라면 Badge/ODA 쪽이 옮겨져야 합니다) 이름은 바꾸지 않았습니다."
+      "status": "resolved",
+      "resolution": "해소 — ODA 는 G car 내부 브랜딩이지 제휴 브랜드가 아닙니다(강민관 확정 2026-08-06). 그래서 면색을 Badge 가 아니라 Brand 로 옮겼습니다: Badge/ODA → Brand/ODA. 선색 Brand/ODA Line 이 이미 Brand 에 있었으므로 한 쌍이 한 그룹에 모였고, Map Marker 의 Active·Active Line / Free Zone·Free Zone Line 과 같은 형태가 됐습니다. 값은 바뀌지 않았습니다(#ED9A1E).",
+      "note": "면색/선색 쌍을 이름 규칙(«X» / «X Line»)으로 기계 검출하게 만들어, 앞으로 새 쌍이 갈리면 자동으로 잡힙니다 — 지금은 3쌍 전부 같은 그룹입니다. 이 개명은 그룹을 넘나드는 첫 사례라, 그룹·라벨을 «바뀐 이름»에서 다시 뽑도록 canon-view 를 고쳤습니다(전에는 원본 그룹이 그대로 남았습니다)."
     },
     {
       "id": "GAP-9",
