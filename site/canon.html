@@ -765,6 +765,25 @@ function elev(){
   <div class="note warn"><p><b>확인이 남은 것</b> — 신규 1단계가 1겹인지 2겹인지는 속성 패널 화면 한 장으로 확인한 것이라
   두 번째 레이어가 있을 가능성을 배제하지 못했습니다. 2~6단계 값은 재넘버링 전 값이 그대로 밀린 것으로 보고 있습니다.
   <code>.fig</code>를 새로 내려받아 <code>npm run extract</code>를 돌리면 원본 값으로 자동 대체됩니다.</p></div>
+  ${C.effects?`<h2>Elevation 이 아닌 효과 — ${C.effects.counts.total-C.effects.counts.elevation}종</h2>
+  <p class="lead" style="font-size:15px">정본 EFFECT 스타일은 <code>Elevation_1~6</code> 만이 아닙니다.
+  나머지를 <b>«무엇인가»</b>로 갈랐습니다 — 이름과 값에서 읽히는 것만으로 판정하고, 지어내지 않습니다.</p>
+  <table class="ctr"><thead><tr><th>이름</th><th>축</th><th>값</th><th>토큰</th></tr></thead><tbody>
+  ${C.effects.items.filter(i=>i.axis!=='elevation').map(i=>`<tr>
+    <td><code>${esc(i.name)}</code></td>
+    <td class="${i.axis==='deprecated'?'no':''}">${esc(i.axis)}</td>
+    <td class="muted">${i.css?`<code>${esc(i.css)}</code>`:'값 미측정'}</td>
+    <td class="${i.emit?'':'no'}">${i.emit?`<code>--gds-effect-${esc(i.key)}</code>`
+      :(i.blocked?'보류':(i.axis==='deprecated'?'제외':'—'))}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note"><p><b>축을 나눈 이유.</b>
+  ${Object.entries(C.effects.axes).map(([k,v])=>`<b>${esc(k)}</b> ${esc(v)}`).join('<br>')}</p></div>
+  ${C.effects.caseCollisions.length?`<div class="note warn"><p><b>대소문자만 다른 이름 ${C.effects.caseCollisions.length}쌍.</b>
+  ${C.effects.caseCollisions.map(c=>`<code>${c.names.map(n=>esc(n)).join('</code> / <code>')}</code> — 값이 ${c.sameValue?'같습니다':'<b>다릅니다</b>'}`).join('<br>')}<br>
+  값이 다르므로 «오타 중복»으로 합칠 수 없습니다. 토큰 키가 겹쳐서
+  <b>정해질 때까지 두 토큰 모두 내보내지 않습니다</b> — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.</p></div>`:''}
+  ${C.effects.counts.unmeasured.length?`<p class="muted"><b>값 미측정 ${C.effects.counts.unmeasured.length}종</b> —
+  ${C.effects.counts.unmeasured.map(n=>`<code>${esc(n)}</code>`).join(' · ')}. 값을 읽지 못했으므로 토큰으로 내보내지 않습니다.</p>`:''}`:''}
   <p class="muted" style="margin-top:24px">카드를 누르면 변수명이 복사됩니다. 출처 — ${esc(E.source||'')}</p>
   ${footer()}`;
 }
