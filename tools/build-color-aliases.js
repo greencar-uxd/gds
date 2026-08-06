@@ -77,10 +77,14 @@ for (const c of VIEW.colors) {
   const stem = label.replace(/ Line$/, '');
   const fill = nameSet.get(stem);
   if (!fill) { linePairs.push({ line: c.name, fill: null, note: `면색 «${stem}» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다.` }); continue; }
+  // 개명으로 그룹이 옮겨진 쪽이 있으면 «전에는 갈려 있었다»는 사실을 함께 남깁니다.
+  const moved = [c, fill].filter(x => x.regrouped)
+    .map(x => ({ token: x.name, from: x.originalGroup, was: x.originalName, reason: x.renameReason }));
   linePairs.push({
     line: c.name, lineHex: c.hex, lineGroup: c.group,
     fill: fill.name, fillHex: fill.hex, fillGroup: fill.group,
     sameGroup: fill.group === c.group,
+    ...(moved.length ? { moved } : {}),
   });
 }
 const paired = linePairs.filter(p => p.fill);
@@ -100,6 +104,7 @@ const out = {
     aliasTokens: duplicates.filter(d => d.decidable).reduce((n, d) => n + d.aliases.length, 0),
     linePairs: paired.length,
     linePairsSplit: split.length,
+    linePairsMoved: paired.filter(p => p.moved).length,
   },
   duplicates,
   linePairs,
@@ -136,3 +141,6 @@ for (const d of duplicates) {
 }
 console.log(`  면색/선색 짝 ${paired.length}건 — 그룹이 갈린 것 ${split.length}건`);
 for (const p of split) console.log(`  ⚠ ${p.fill} (${p.fillGroup}) / ${p.line} (${p.lineGroup})`);
+for (const p of paired.filter(x => x.moved)) {
+  console.log(`  ↪ ${p.fill} / ${p.line} — ${p.moved.map(m => `${m.was} → ${m.token}`).join(' · ')} 로 합쳐짐`);
+}
