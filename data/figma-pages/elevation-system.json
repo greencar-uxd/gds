@@ -1,0 +1,4421 @@
+{
+  "$description": "Elevation system (엘리베이션 시스템) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42316:48471",
+    "pageName": "Elevation system (엘리베이션 시스템) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 1002,
+    "byType": {
+      "canvas": 1,
+      "instance": 181,
+      "frame": 474,
+      "text": 306,
+      "line": 19,
+      "vector": 10,
+      "section": 2,
+      "symbol": 7,
+      "widget": 1,
+      "ellipse": 1
+    },
+    "topLevel": 20,
+    "texts": 306,
+    "namedTexts": 294,
+    "templateStubs": 25,
+    "symbols": 7
+  },
+  "topFrames": [
+    {
+      "type": "instance",
+      "id": "42323:48751",
+      "name": "타이틀",
+      "w": 1920,
+      "h": 341
+    },
+    {
+      "type": "frame",
+      "id": "42326:35954",
+      "name": "G car Foundation_Elevation system",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "frame",
+      "id": "43117:30187",
+      "name": "G car Foundation_Elevation system",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "frame",
+      "id": "42328:66723",
+      "name": "Elevation",
+      "w": 1087,
+      "h": 2929
+    },
+    {
+      "type": "frame",
+      "id": "43094:42287",
+      "name": "신규",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43094:42490",
+      "name": "기존",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43094:1788",
+      "name": "Frame 1261159538",
+      "w": 154,
+      "h": 332
+    },
+    {
+      "type": "text",
+      "id": "43092:27585",
+      "name": "Title  29 Copy 74",
+      "w": 118,
+      "h": 26
+    },
+    {
+      "type": "section",
+      "id": "43094:1787",
+      "name": "Section 1",
+      "w": 840,
+      "h": 722
+    },
+    {
+      "type": "section",
+      "id": "43094:28882",
+      "name": "기존",
+      "w": 2330,
+      "h": 4494
+    },
+    {
+      "type": "frame",
+      "id": "43094:42096",
+      "name": "N0TE",
+      "w": 200,
+      "h": 294
+    },
+    {
+      "type": "text",
+      "id": "43094:42784",
+      "name": "Test",
+      "w": 33,
+      "h": 19
+    },
+    {
+      "type": "frame",
+      "id": "43601:2771",
+      "name": "Example",
+      "w": 375,
+      "h": 996
+    },
+    {
+      "type": "frame",
+      "id": "43672:8836",
+      "name": "Example",
+      "w": 375,
+      "h": 996
+    },
+    {
+      "type": "widget",
+      "id": "43601:2777",
+      "name": "Annotation",
+      "w": 352,
+      "h": 310
+    },
+    {
+      "type": "frame",
+      "id": "43672:8866",
+      "name": "이동하기",
+      "w": 375,
+      "h": 1007
+    },
+    {
+      "type": "frame",
+      "id": "44233:57048",
+      "name": "Foundation_Elevation system",
+      "w": 1920,
+      "h": 6897
+    },
+    {
+      "type": "frame",
+      "id": "44233:59030",
+      "name": "Group 2147227880",
+      "w": 953,
+      "h": 506
+    },
+    {
+      "type": "frame",
+      "id": "44235:4856",
+      "name": "Example",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "44566:35012",
+      "name": "알파값을 써야하는 이유",
+      "w": 1089,
+      "h": 369
+    }
+  ],
+  "componentSets": {
+    "total": 7,
+    "axes": {
+      "Property 1": {
+        "default": 1,
+        "selected_fold": 1,
+        "unfold": 1,
+        "selected": 1,
+        "top_info_freezone": 1,
+        "top_info_oda": 1,
+        "top_info_bookmark": 1
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "43094:28902",
+        "name": "Property 1=default",
+        "w": 70,
+        "h": 40,
+        "in": "recommend_btn"
+      },
+      {
+        "id": "43094:28908",
+        "name": "Property 1=selected_fold",
+        "w": 102,
+        "h": 40,
+        "in": "recommend_btn"
+      },
+      {
+        "id": "43094:28912",
+        "name": "Property 1=unfold",
+        "w": 398,
+        "h": 40,
+        "in": "recommend_btn"
+      },
+      {
+        "id": "43094:28933",
+        "name": "Property 1=selected",
+        "w": 398,
+        "h": 40,
+        "in": "recommend_btn"
+      },
+      {
+        "id": "43094:29006",
+        "name": "Property 1=top_info_freezone",
+        "w": 320,
+        "h": 48,
+        "in": "top_info_box"
+      },
+      {
+        "id": "43094:29011",
+        "name": "Property 1=top_info_oda",
+        "w": 320,
+        "h": 48,
+        "in": "top_info_box"
+      },
+      {
+        "id": "43094:29022",
+        "name": "Property 1=top_info_bookmark",
+        "w": 320,
+        "h": 48,
+        "in": "top_info_box"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Level",
+      "Reference",
+      "Type",
+      "Usage",
+      "레벨 값",
+      "설명",
+      "설명글",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 25
+  },
+  "texts": [
+    {
+      "id": "43117:18573",
+      "text": "머티리얼은 6단계의 높이를 사용하며, 각 단계에는 해당 dp 값이 있습니다. 이 값들은 UI 표면으로부터의 상대적 거리를 0, ​​+1, +2, +3, +4, +5로 나타냅니다. 요소의 정지 상태는 0단계부터 +3단계까지이며, +4단계와 +5단계는 호버링이나 드래그와 같은 사용자 상호작용 상태를 위해 예약되어 있습니다.",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame"
+      ],
+      "x": -30,
+      "y": 419
+    },
+    {
+      "id": "43117:30311",
+      "text": "종류",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Title",
+        "Title"
+      ],
+      "x": 475,
+      "y": 30.5
+    },
+    {
+      "id": "43117:30345",
+      "text": "X Y Blur Spreas Color",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880"
+      ],
+      "x": 24,
+      "y": 433
+    },
+    {
+      "id": "43117:30347",
+      "text": "Leverl 1 → 1dp",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43117:30349",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 62,
+      "y": 230
+    },
+    {
+      "id": "43117:30351",
+      "text": "Leverl 2 → 4dp",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43117:30353",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43117:30355",
+      "text": "Leverl 3 → 6dp",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43117:30357",
+      "text": "0 1 3 0 30%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43117:30358",
+      "text": "0 0 6 0 15%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880"
+      ],
+      "x": 618,
+      "y": 579
+    },
+    {
+      "id": "43117:30362",
+      "text": "Leverl 4 → 8dp",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43117:30364",
+      "text": "0 2 3 0 30%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43117:30366",
+      "text": "Leverl 5 → 12dp",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43117:30368",
+      "text": "0 4 4 0 30%",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43117:30369",
+      "text": "표준",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880"
+      ],
+      "x": 0,
+      "y": 311
+    },
+    {
+      "id": "43117:30370",
+      "text": "별도 지정",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880"
+      ],
+      "x": 0,
+      "y": 582
+    },
+    {
+      "id": "43117:30371",
+      "text": "Bottom Sheet 스크롤이 생기는 버튼",
+      "in": [
+        "G car Foundation_Elevation system",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail",
+        "Group 2147227880"
+      ],
+      "x": 455,
+      "y": 582
+    },
+    {
+      "id": "42328:66724",
+      "text": "Elevation",
+      "in": [
+        "Elevation"
+      ],
+      "x": 40,
+      "y": 39
+    },
+    {
+      "id": "42328:66725",
+      "text": "Elevation 적용 예시",
+      "in": [
+        "Elevation"
+      ],
+      "x": 40,
+      "y": 945
+    },
+    {
+      "id": "42328:66726",
+      "text": "Elevation 영역 확장 예시",
+      "in": [
+        "Elevation"
+      ],
+      "x": 40,
+      "y": 2007
+    },
+    {
+      "id": "42328:66736",
+      "text": "오늘 08:40 ~ 12:40 총 ##일 ##시간 이용",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66737",
+      "text": "4.23 (토) 10:20",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42328:66738",
+      "text": "~4.23 (토) 12:30",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42328:66743",
+      "text": "대여 ~",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "대여 반납",
+        "Frame 1261159532"
+      ],
+      "x": 16,
+      "y": 0
+    },
+    {
+      "id": "42328:66745",
+      "text": "오늘(목) hh:mm",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "대여 반납",
+        "Frame 1261159532",
+        "Frame 1261159533"
+      ],
+      "x": 0,
+      "y": 2.000000238418579
+    },
+    {
+      "id": "42328:66751",
+      "text": "오늘(목) hh:mm",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "대여 반납",
+        "Frame 1261159534",
+        "Frame 1261159535"
+      ],
+      "x": 0,
+      "y": 2.000000476837158
+    },
+    {
+      "id": "42328:66754",
+      "text": "오늘(월)",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 446,
+      "y": 2373.0242223739624
+    },
+    {
+      "id": "42328:66755",
+      "text": "08/09(화)",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 446,
+      "y": 2454.1417388916016
+    },
+    {
+      "id": "42328:66756",
+      "text": "08/10(수)",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 446,
+      "y": 2535.259246826172
+    },
+    {
+      "id": "42328:66757",
+      "text": "08",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 586,
+      "y": 2366.4471130371094
+    },
+    {
+      "id": "42328:66758",
+      "text": "09",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 586,
+      "y": 2447.5646438598633
+    },
+    {
+      "id": "42328:66759",
+      "text": "10",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 586,
+      "y": 2528.682159423828
+    },
+    {
+      "id": "42328:66763",
+      "text": "20",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 687,
+      "y": 2366.4471130371094
+    },
+    {
+      "id": "42328:66764",
+      "text": "30",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 687,
+      "y": 2447.5646438598633
+    },
+    {
+      "id": "42328:66765",
+      "text": "40",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Group 716122"
+      ],
+      "x": 687,
+      "y": 2528.682159423828
+    },
+    {
+      "id": "42328:66772",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Frame 1261159531",
+        "Frame 1261159516",
+        "aleart_bg_contents",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66777",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Frame 1261159531",
+        "Frame 1261159516",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 1261159517",
+        "Frame 3547",
+        "dot"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66781",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "Elevation",
+        "Group 716125",
+        "Group 716123",
+        "Frame 1261159531",
+        "Frame 1261159516",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 1261159517",
+        "Frame 3548",
+        "dot"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66787",
+      "text": "적용 범위: Floating Action Button  Level 1 (1dp)",
+      "in": [
+        "Elevation"
+      ],
+      "x": 149,
+      "y": 1844
+    },
+    {
+      "id": "42328:66788",
+      "text": "적용범위: Modal / Bottom Sheet  Level 2 (4dp)",
+      "in": [
+        "Elevation"
+      ],
+      "x": 703,
+      "y": 1844
+    },
+    {
+      "id": "42328:66789",
+      "text": "*머터리얼 디자인 시스템 인용: https://m3.material.io/styles/elevation/applying-elevation",
+      "in": [
+        "Elevation"
+      ],
+      "x": 40,
+      "y": 109
+    },
+    {
+      "id": "42328:66790",
+      "text": "머티리얼은 6단계의 높이를 사용하며, 각 단계에는 해당 dp 값이 있습니다. 이 값들은 UI 표면으로부터의 상대적 거리를 0, ​​+1, +2, +3, +4, +5로 나타냅니다. 요소의 정지 상태는 0단계부터 +3단계까지이며, +4단계와 +5단계는 호버링이나 드래그와 같은 사용자 상호작용 상태를 위해 예약되어 있습니다.",
+      "in": [
+        "Elevation"
+      ],
+      "x": 40,
+      "y": 421
+    },
+    {
+      "id": "42328:66936",
+      "text": "차량",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "42328:66938",
+      "text": "왕복 예약",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "top app bar_ios"
+      ],
+      "x": 152,
+      "y": 10
+    },
+    {
+      "id": "42328:66948",
+      "text": "어디서 출발하세요?",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Group 71656",
+        "Frame 3612"
+      ],
+      "x": 12,
+      "y": 8
+    },
+    {
+      "id": "42328:66956",
+      "text": "차량",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "filter_btn",
+        "Group 71679"
+      ],
+      "x": 38,
+      "y": 8
+    },
+    {
+      "id": "42328:66961",
+      "text": "이코노미존",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66965",
+      "text": "신규존",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66969",
+      "text": "KTX/SRT",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66973",
+      "text": "공항",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66977",
+      "text": "KTX/SRT",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "Frame 71776",
+        "recommend_btn",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66982",
+      "text": "오늘 08:40 ~ 12:40 총 ##일 ##시간 이용",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "ios adress/time",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42328:66983",
+      "text": "4.23 (토) 10:20",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "ios adress/time",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42328:66984",
+      "text": "~4.23 (토) 12:30",
+      "in": [
+        "Elevation",
+        "Frame 716123",
+        "ios adress/time",
+        "time",
+        "Frame 2950"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "43094:42205",
+      "text": "한남역 1번 출구",
+      "in": [
+        "Elevation",
+        "SCR_GA_RV_0107_M01_준비중인 그린존",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42206",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "Elevation",
+        "SCR_GA_RV_0107_M01_준비중인 그린존",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:1281",
+      "text": "현재 화면으로 변경 후 적용하기",
+      "in": [
+        "Elevation"
+      ],
+      "x": 462,
+      "y": 1484
+    },
+    {
+      "id": "43094:1294",
+      "text": "X Y Blur Spreas Color",
+      "in": [
+        "Elevation",
+        "Group 2147227880"
+      ],
+      "x": 51,
+      "y": 708
+    },
+    {
+      "id": "43094:1269",
+      "text": "Leverl 1 → 1dp",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1289",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 62,
+      "y": 230
+    },
+    {
+      "id": "43094:1272",
+      "text": "Leverl 2 → 4dp",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1290",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43094:1274",
+      "text": "Leverl 3 → 6dp",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1291",
+      "text": "0 1 3 0 30%",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43094:42785",
+      "text": "0 0 6 0 15%",
+      "in": [
+        "Elevation",
+        "Group 2147227880"
+      ],
+      "x": 645,
+      "y": 854
+    },
+    {
+      "id": "43094:1275",
+      "text": "Leverl 4 → 8dp",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1293",
+      "text": "0 2 3 0 30%",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43094:1276",
+      "text": "Leverl 5 → 12dp",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1292",
+      "text": "0 4 4 0 30%",
+      "in": [
+        "Elevation",
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43094:1792",
+      "text": "표준",
+      "in": [
+        "Elevation",
+        "Group 2147227880"
+      ],
+      "x": 27,
+      "y": 586
+    },
+    {
+      "id": "43094:1793",
+      "text": "별도 지정",
+      "in": [
+        "Elevation",
+        "Group 2147227880"
+      ],
+      "x": 27,
+      "y": 857
+    },
+    {
+      "id": "43094:42787",
+      "text": "Bottom Sheet 스크롤이 생기는 버튼",
+      "in": [
+        "Elevation",
+        "Group 2147227880"
+      ],
+      "x": 482,
+      "y": 857
+    },
+    {
+      "id": "43094:42311",
+      "text": "한남역 1번 출구",
+      "in": [
+        "신규",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42312",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "신규",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:42702",
+      "text": "한남역 1번 출구",
+      "in": [
+        "기존",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42703",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "기존",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:1789",
+      "text": "Leverl 3 → 6dp",
+      "in": [
+        "Frame 1261159538"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1791",
+      "text": "0 1 3 0 30%",
+      "in": [
+        "Frame 1261159538"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "43092:27585",
+      "text": "Title  29 Copy 74",
+      "in": [],
+      "x": -1994,
+      "y": 1394
+    },
+    {
+      "id": "43094:1568",
+      "text": "한남역 1번 출구",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1569",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:1705",
+      "text": "한남역 1번 출구",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:1706",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:42115",
+      "text": "한남역 1번 출구",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42116",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "Section 1",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43094:28892",
+      "text": "한남역 1번 출구",
+      "in": [
+        "기존",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:28893",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "기존",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 27
+    },
+    {
+      "id": "43094:28900",
+      "text": "Title  29 Copy 64",
+      "in": [
+        "기존"
+      ],
+      "x": 263,
+      "y": 2731
+    },
+    {
+      "id": "43094:28960",
+      "text": "차량예약",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "bottom_navigation_aos",
+        "차량예약",
+        "Find"
+      ],
+      "x": 12.5,
+      "y": 44
+    },
+    {
+      "id": "43094:28964",
+      "text": "이용내역",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "bottom_navigation_aos",
+        "이용내역",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 44
+    },
+    {
+      "id": "43094:28975",
+      "text": "혜택",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "bottom_navigation_aos",
+        "혜택",
+        "event"
+      ],
+      "x": 19,
+      "y": 44
+    },
+    {
+      "id": "43094:28979",
+      "text": "내정보",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "bottom_navigation_aos",
+        "내정보",
+        "user"
+      ],
+      "x": 18,
+      "y": 44
+    },
+    {
+      "id": "43094:28986",
+      "text": "어디서 출발하세요?",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "Group 71656",
+        "Frame 3612"
+      ],
+      "x": 38,
+      "y": 8.5
+    },
+    {
+      "id": "43094:28991",
+      "text": "차량",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "filter_btn",
+        "Group 71679"
+      ],
+      "x": 38,
+      "y": 8.5
+    },
+    {
+      "id": "43094:28994",
+      "text": "추천",
+      "in": [
+        "기존",
+        "Frame 3482",
+        "Frame 3611",
+        "Frame 3610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:29004",
+      "text": "Title  29 Copy 74",
+      "in": [
+        "기존"
+      ],
+      "x": 253,
+      "y": 1039
+    },
+    {
+      "id": "43094:42098",
+      "text": "계획",
+      "in": [
+        "N0TE",
+        "header"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42100",
+      "text": "26.06.09 -기존 엘리베이션 시스템 정의 완료 -별도 바텀시트 스타일 값 추가 (Blur 6dp) -사용처 정의 -문서화 진행 예정",
+      "in": [
+        "N0TE",
+        "content"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43094:42102",
+      "text": "차세대 그린카",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43094:42103",
+      "text": "06/09/26 16:21 Hours (UTC+09:00)",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43094:42784",
+      "text": "Test",
+      "in": [],
+      "x": -1279,
+      "y": 3040
+    },
+    {
+      "id": "43601:2780",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43601:2781",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43601:2788",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43601:2793",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43601:2798",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43672:8867",
+      "text": "홍길동 님, 오늘도 즐거운 이동하세요!",
+      "in": [
+        "이동하기"
+      ],
+      "x": 20,
+      "y": 111
+    },
+    {
+      "id": "43672:8868",
+      "text": "Greencar Plus+",
+      "in": [
+        "이동하기"
+      ],
+      "x": 50,
+      "y": 1034
+    },
+    {
+      "id": "43672:8869",
+      "text": "원클릭 G car 바로가기",
+      "in": [
+        "이동하기"
+      ],
+      "x": 20,
+      "y": 367
+    },
+    {
+      "id": "43672:8885",
+      "text": "제주 예약",
+      "in": [
+        "이동하기",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 14,
+      "y": 54
+    },
+    {
+      "id": "43672:8888",
+      "text": "KTX / SRT",
+      "in": [
+        "이동하기",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43672:8916",
+      "text": "공항 대여",
+      "in": [
+        "이동하기",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 16,
+      "y": 51
+    },
+    {
+      "id": "43672:8919",
+      "text": "웰케이션",
+      "in": [
+        "이동하기",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43672:8923",
+      "text": "부산 예약",
+      "in": [
+        "이동하기",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43672:8939",
+      "text": "4/12",
+      "in": [
+        "이동하기",
+        "Group 716169",
+        "bn no"
+      ],
+      "x": 12,
+      "y": 4
+    },
+    {
+      "id": "43672:8940",
+      "text": "스마트한 구독 G car 패스",
+      "in": [
+        "이동하기"
+      ],
+      "x": 20,
+      "y": 607
+    },
+    {
+      "id": "43672:8946",
+      "text": "D-245",
+      "in": [
+        "이동하기",
+        "Group 72080"
+      ],
+      "x": 249,
+      "y": 659
+    },
+    {
+      "id": "43672:8947",
+      "text": "후 갱신",
+      "in": [
+        "이동하기",
+        "Group 72080"
+      ],
+      "x": 293,
+      "y": 659
+    },
+    {
+      "id": "43672:8948",
+      "text": "까지",
+      "in": [
+        "이동하기",
+        "Group 72080"
+      ],
+      "x": 322,
+      "y": 659
+    },
+    {
+      "id": "43672:8950",
+      "text": "D-245",
+      "in": [
+        "이동하기",
+        "Group 716108"
+      ],
+      "x": 249,
+      "y": 795
+    },
+    {
+      "id": "43672:8951",
+      "text": "후 해지",
+      "in": [
+        "이동하기",
+        "Group 716108"
+      ],
+      "x": 293,
+      "y": 795
+    },
+    {
+      "id": "43672:8952",
+      "text": "까지",
+      "in": [
+        "이동하기",
+        "Group 716108"
+      ],
+      "x": 322,
+      "y": 795
+    },
+    {
+      "id": "43672:8954",
+      "text": "99,000",
+      "in": [
+        "이동하기",
+        "Group 72082"
+      ],
+      "x": 272,
+      "y": 727
+    },
+    {
+      "id": "43672:8955",
+      "text": "원",
+      "in": [
+        "이동하기",
+        "Group 72082"
+      ],
+      "x": 322,
+      "y": 727
+    },
+    {
+      "id": "43672:8956",
+      "text": "50% 할인",
+      "in": [
+        "이동하기"
+      ],
+      "x": 32,
+      "y": 669
+    },
+    {
+      "id": "43672:8957",
+      "text": "50% 할인",
+      "in": [
+        "이동하기"
+      ],
+      "x": 32,
+      "y": 737
+    },
+    {
+      "id": "43672:8958",
+      "text": "50% 할인",
+      "in": [
+        "이동하기"
+      ],
+      "x": 32,
+      "y": 805
+    },
+    {
+      "id": "43672:8960",
+      "text": "50% 할인",
+      "in": [
+        "이동하기",
+        "Group 72081"
+      ],
+      "x": 84,
+      "y": 649
+    },
+    {
+      "id": "43672:8963",
+      "text": "50% 할인",
+      "in": [
+        "이동하기",
+        "Group 72083"
+      ],
+      "x": 86,
+      "y": 717
+    },
+    {
+      "id": "43672:8966",
+      "text": "50% 할인",
+      "in": [
+        "이동하기",
+        "Group 72085"
+      ],
+      "x": 86,
+      "y": 785
+    },
+    {
+      "id": "43672:8977",
+      "text": "한달 이상 내차처럼 G car M",
+      "in": [
+        "이동하기",
+        "Group 716117"
+      ],
+      "x": 20,
+      "y": 859
+    },
+    {
+      "id": "43672:8981",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1007
+    },
+    {
+      "id": "43672:8982",
+      "text": "월 566,100 원 ~",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1059
+    },
+    {
+      "id": "43672:8983",
+      "text": "170원/km",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1087
+    },
+    {
+      "id": "43672:8984",
+      "text": "큰 네비게이션을 자랑하는 인기 차종!",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1027
+    },
+    {
+      "id": "43672:8986",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 716109"
+      ],
+      "x": 380,
+      "y": 1007
+    },
+    {
+      "id": "43672:8987",
+      "text": "월 566,100 원 ~",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 716109"
+      ],
+      "x": 380,
+      "y": 1059
+    },
+    {
+      "id": "43672:8988",
+      "text": "170원/km",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 716109"
+      ],
+      "x": 380,
+      "y": 1087
+    },
+    {
+      "id": "43672:8989",
+      "text": "큰 네비게이션을 자랑하는 인기 차종!",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 716109"
+      ],
+      "x": 380,
+      "y": 1027
+    },
+    {
+      "id": "43672:8991",
+      "text": "트랙스 크로스오버",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1007
+    },
+    {
+      "id": "43672:8992",
+      "text": "월 603,900 원 ~",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1059
+    },
+    {
+      "id": "43672:8993",
+      "text": "170원/km",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1087
+    },
+    {
+      "id": "43672:8994",
+      "text": "세단과 SUV를 합친 다목적 차량!",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1027
+    },
+    {
+      "id": "43672:8997",
+      "text": "전체보기",
+      "in": [
+        "이동하기",
+        "Group 716117",
+        "Group 716102"
+      ],
+      "x": 294,
+      "y": 863
+    },
+    {
+      "id": "43672:8999",
+      "text": "기업 고객 전용 G car Biz",
+      "in": [
+        "이동하기"
+      ],
+      "x": 22,
+      "y": 1155
+    },
+    {
+      "id": "43672:9003",
+      "text": "업무/복지용으로도 가능",
+      "in": [
+        "이동하기",
+        "menu_greenpass",
+        "Group 716045"
+      ],
+      "x": 40,
+      "y": 1225
+    },
+    {
+      "id": "43672:9004",
+      "text": "우리 회사 전용 G car",
+      "in": [
+        "이동하기",
+        "menu_greenpass",
+        "Group 716045"
+      ],
+      "x": 40,
+      "y": 1205
+    },
+    {
+      "id": "43672:9024",
+      "text": "이용가이드",
+      "in": [
+        "이동하기",
+        "Group 716132",
+        "Group 716084"
+      ],
+      "x": 32,
+      "y": 1413
+    },
+    {
+      "id": "43672:9025",
+      "text": "대여 안내 등",
+      "in": [
+        "이동하기",
+        "Group 716132",
+        "Group 716084"
+      ],
+      "x": 32,
+      "y": 1441
+    },
+    {
+      "id": "43672:9027",
+      "text": "고객센터",
+      "in": [
+        "이동하기",
+        "Group 716132",
+        "Group 716086"
+      ],
+      "x": 203,
+      "y": 1413
+    },
+    {
+      "id": "43672:9028",
+      "text": "헬프 데스크",
+      "in": [
+        "이동하기",
+        "Group 716132",
+        "Group 716086"
+      ],
+      "x": 203,
+      "y": 1441
+    },
+    {
+      "id": "43672:9037",
+      "text": "더욱 다양한 G car Family Apps",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 71984"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43672:9041",
+      "text": "무버스",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 14,
+      "y": 54
+    },
+    {
+      "id": "43672:9048",
+      "text": "세차클링",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43672:9052",
+      "text": "롯데렌터카",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 11,
+      "y": 51
+    },
+    {
+      "id": "43672:9058",
+      "text": "차방정",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43672:9065",
+      "text": "버튼명",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 72008",
+        "약관+area",
+        "약관",
+        "약관"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43672:9067",
+      "text": "버튼명",
+      "in": [
+        "이동하기",
+        "Group 72003",
+        "Frame 72008",
+        "약관+area",
+        "약관",
+        "약관"
+      ],
+      "x": 122,
+      "y": 0
+    },
+    {
+      "id": "43672:9073",
+      "text": "이동하기",
+      "in": [
+        "이동하기",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "홈",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 45
+    },
+    {
+      "id": "43672:9077",
+      "text": "콘텐츠",
+      "in": [
+        "이동하기",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "혜택",
+        "event"
+      ],
+      "x": 18,
+      "y": 45
+    },
+    {
+      "id": "43672:9081",
+      "text": "혜택받기",
+      "in": [
+        "이동하기",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "이용내역",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 44
+    },
+    {
+      "id": "43672:9085",
+      "text": "마이",
+      "in": [
+        "이동하기",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "내정보",
+        "user"
+      ],
+      "x": 23.5,
+      "y": 44
+    },
+    {
+      "id": "43672:9088",
+      "text": "공유 차량 찾기",
+      "in": [
+        "이동하기",
+        "Frame 716144"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43672:9093",
+      "text": "왕복 예약",
+      "in": [
+        "이동하기",
+        "Frame 716144",
+        "Frame 716143",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43672:9094",
+      "text": "G car zone에서 원하는 차량 예약",
+      "in": [
+        "이동하기",
+        "Frame 716144",
+        "Frame 716143",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43672:9100",
+      "text": "편도 핫딜",
+      "in": [
+        "이동하기",
+        "Frame 716144",
+        "Frame 716143",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43672:9101",
+      "text": "대여/주행료 0원",
+      "in": [
+        "이동하기",
+        "Frame 716144",
+        "Frame 716143",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43672:9110",
+      "text": "개인",
+      "in": [
+        "이동하기",
+        "Group 716107",
+        "Group 72065"
+      ],
+      "x": 43,
+      "y": 58
+    },
+    {
+      "id": "43672:9116",
+      "text": "쿠폰",
+      "in": [
+        "이동하기",
+        "Group 716107",
+        "Group 71935",
+        "Group 716101"
+      ],
+      "x": 295.258056640625,
+      "y": 59.32275390625
+    },
+    {
+      "id": "44233:57062",
+      "text": "Glossary",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57063",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "44233:57066",
+      "text": "[정의]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57067",
+      "text": "Elevation (엘리베이션)은 UI 요소가 서로 다른 시각적 레벨에 위치하도록 하여, 화면에 깊이감과 계층 구조를 부여하는 개념입니다.",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44233:57076",
+      "text": "Type",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57077",
+      "text": "Reference",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "44233:57080",
+      "text": "[표현 방법]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57081",
+      "text": "Elevation (엘리베이션)은 그림자(1) · 딤(2) · 스트로크(3)로 시각적 계층을 표현합니다. 기본적으로는 그림자를 통해 깊이감을 전달하며, 딤과 스트로크는 콘텐츠 특성에 따라 선택적으로 사용해 계층감을 보완합니다.",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44233:59009",
+      "text": "➊ 그림자",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44233:59012",
+      "text": "➋ 딤 레이어",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44233:57097",
+      "text": "Level",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57098",
+      "text": "Reference",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44233:57101",
+      "text": "[레벨_그림자]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:57102",
+      "text": "설명글",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44233:57108",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44233:59090",
+      "text": "Level 0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59097",
+      "text": "Level 1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 13.58331298828125,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59099",
+      "text": "Level 2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 14.271255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59101",
+      "text": "Level 3",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59103",
+      "text": "Level 4",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59105",
+      "text": "Level 5",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59107",
+      "text": "12dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882"
+      ],
+      "x": 1323.34765625,
+      "y": 0
+    },
+    {
+      "id": "44233:59109",
+      "text": "0dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882"
+      ],
+      "x": 1323.34765625,
+      "y": 163.73049926757812
+    },
+    {
+      "id": "44233:59110",
+      "text": "6dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "Group 2147227882"
+      ],
+      "x": 1324.34765625,
+      "y": 81.02127838134766
+    },
+    {
+      "id": "44233:59329",
+      "text": "Level 0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716673",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59331",
+      "text": "[Background (배경)]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716673",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59332",
+      "text": "UI의 가장 기본 배경으로 설정하여, 화면의 일반적인 바탕",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716673",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59242",
+      "text": "Level 1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716675",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59244",
+      "text": "[기본 상호 작용]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716675",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59245",
+      "text": "기본 상호작용 요소나 비활성화된 요소에 적용하여 기본 배경보다 약간 더 높게 표현",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716675",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59393",
+      "text": "Level 2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716681",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59395",
+      "text": "[주요 상호 작용]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716681",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59396",
+      "text": "클릭이나 터치와 같은 주요 상호작용 요소에 사용하여 사용자 주목도 강조",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716681",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59408",
+      "text": "Level 3",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716682",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59410",
+      "text": "[주목도 높은 요소]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716682",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59411",
+      "text": "상호작용 중에서도 주목받아야 할 요소에 사용하여 시각적 강조",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716682",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59447",
+      "text": "Level 4",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716683",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59449",
+      "text": "[중요한 알림]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716683",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59450",
+      "text": "상호작용 중에서도 조금 더 주목받아야 할 요소에 사용하여 시각적 강조",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716683",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59462",
+      "text": "Level 5",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716684",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59464",
+      "text": "[가장 중요한 알림]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716684",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59465",
+      "text": "상호작용 중에서도 가장 중요한 알림이나 긴급 메세지에 적용하여, 사용자가 즉각적으로 주목할 수 있도록 최상위 레벨로 설정",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227918",
+        "list",
+        "Group 716684",
+        "Section 5",
+        "Text",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 41
+    },
+    {
+      "id": "44233:59064",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44233:59481",
+      "text": "Level 1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "1",
+        "Text area",
+        "Tag"
+      ],
+      "x": 15.271255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59483",
+      "text": "1dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "1",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 39.0709228515625
+    },
+    {
+      "id": "44233:59499",
+      "text": "Level 2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "2",
+        "Text area",
+        "Tag"
+      ],
+      "x": 14.271255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59500",
+      "text": "4dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "2",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 39.0709228515625
+    },
+    {
+      "id": "44233:59503",
+      "text": "Level 3",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "3",
+        "Text area",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59504",
+      "text": "6dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "3",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 39.0709228515625
+    },
+    {
+      "id": "44233:59507",
+      "text": "Level 4",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "4",
+        "Text area",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59508",
+      "text": "8dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "4",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 39.0709228515625
+    },
+    {
+      "id": "44233:59511",
+      "text": "Level 5",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "5",
+        "Text area",
+        "Tag"
+      ],
+      "x": 13.771255493164062,
+      "y": 5.490618705749512
+    },
+    {
+      "id": "44233:59512",
+      "text": "12dp",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "5",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 39.0709228515625
+    },
+    {
+      "id": "44233:59559",
+      "text": "X",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59488",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 153.8000030517578,
+      "y": 0
+    },
+    {
+      "id": "44233:59489",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 347.6000061035156,
+      "y": 0
+    },
+    {
+      "id": "44233:59490",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 541.4000244140625,
+      "y": 0
+    },
+    {
+      "id": "44233:59491",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 735.2000122070312,
+      "y": 0
+    },
+    {
+      "id": "44233:59492",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 716255",
+        "Section 5",
+        "Text"
+      ],
+      "x": 929,
+      "y": 0
+    },
+    {
+      "id": "44233:59563",
+      "text": "Y",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59564",
+      "text": "1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 153.8000030517578,
+      "y": 0
+    },
+    {
+      "id": "44233:59565",
+      "text": "1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 347.6000061035156,
+      "y": 0
+    },
+    {
+      "id": "44233:59566",
+      "text": "1",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 541.4000244140625,
+      "y": 0
+    },
+    {
+      "id": "44233:59567",
+      "text": "2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 735.2000122070312,
+      "y": 0
+    },
+    {
+      "id": "44233:59568",
+      "text": "4",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227885",
+        "Section 5",
+        "Text"
+      ],
+      "x": 929,
+      "y": 0
+    },
+    {
+      "id": "44233:59575",
+      "text": "Blur",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59576",
+      "text": "2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 153.8000030517578,
+      "y": 0
+    },
+    {
+      "id": "44233:59577",
+      "text": "2",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 347.6000061035156,
+      "y": 0
+    },
+    {
+      "id": "44233:59578",
+      "text": "3",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 541.4000244140625,
+      "y": 0
+    },
+    {
+      "id": "44233:59579",
+      "text": "3",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 735.2000122070312,
+      "y": 0
+    },
+    {
+      "id": "44233:59580",
+      "text": "4",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227886",
+        "Section 5",
+        "Text"
+      ],
+      "x": 929,
+      "y": 0
+    },
+    {
+      "id": "44233:59587",
+      "text": "Spreas",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59588",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 153.8000030517578,
+      "y": 0
+    },
+    {
+      "id": "44233:59589",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 347.6000061035156,
+      "y": 0
+    },
+    {
+      "id": "44233:59590",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 541.4000244140625,
+      "y": 0
+    },
+    {
+      "id": "44233:59591",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 735.2000122070312,
+      "y": 0
+    },
+    {
+      "id": "44233:59592",
+      "text": "0",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227887",
+        "Section 5",
+        "Text"
+      ],
+      "x": 929,
+      "y": 0
+    },
+    {
+      "id": "44233:59599",
+      "text": "Color",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59600",
+      "text": "30%",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 153.8000030517578,
+      "y": 0
+    },
+    {
+      "id": "44233:59601",
+      "text": "30%",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 347.6000061035156,
+      "y": 0
+    },
+    {
+      "id": "44233:59602",
+      "text": "30%",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 541.4000244140625,
+      "y": 0
+    },
+    {
+      "id": "44233:59603",
+      "text": "30%",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 735.2000122070312,
+      "y": 0
+    },
+    {
+      "id": "44233:59604",
+      "text": "30%",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227917",
+        "Group 2147227889",
+        "List",
+        "Group 2147227888",
+        "Section 5",
+        "Text"
+      ],
+      "x": 929,
+      "y": 0
+    },
+    {
+      "id": "44234:4817",
+      "text": "[레벨_색상]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4818",
+      "text": "설명글",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4698",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4832",
+      "text": "[레벨_딤 레이어]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4833",
+      "text": "설명글",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4840",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4844",
+      "text": "[레벨_스트로크]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4845",
+      "text": "설명글",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4852",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4301",
+      "text": "Usage",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4302",
+      "text": "Reference",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44234:4305",
+      "text": "[Select (선택)]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4306",
+      "text": "설명",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4313",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4537",
+      "text": "[Tip (팁)]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4538",
+      "text": "설명",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4545",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4550",
+      "text": "[Modal (모달)]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4551",
+      "text": "설명",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4558",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44234:4589",
+      "text": "[Info box (인포박스)]",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44234:4590",
+      "text": "설명",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44234:4597",
+      "text": "레벨 값",
+      "in": [
+        "Foundation_Elevation system",
+        "Foundation_Elevation system",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227915",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44233:59031",
+      "text": "X Y Blur Spreas Color",
+      "in": [
+        "Group 2147227880"
+      ],
+      "x": 5738,
+      "y": 4300
+    },
+    {
+      "id": "44233:59033",
+      "text": "Leverl 1 → 1dp",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59035",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159536"
+      ],
+      "x": 62,
+      "y": 230
+    },
+    {
+      "id": "44233:59037",
+      "text": "Leverl 2 → 4dp",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59039",
+      "text": "0 1 2 0 30%",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159537"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "44233:59041",
+      "text": "Leverl 3 → 6dp",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59043",
+      "text": "0 1 3 0 30%",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159538"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "44233:59044",
+      "text": "0 0 6 0 15%",
+      "in": [
+        "Group 2147227880"
+      ],
+      "x": 6332,
+      "y": 4446
+    },
+    {
+      "id": "44233:59048",
+      "text": "Leverl 4 → 8dp",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59050",
+      "text": "0 2 3 0 30%",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159539"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "44233:59052",
+      "text": "Leverl 5 → 12dp",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44233:59054",
+      "text": "0 4 4 0 30%",
+      "in": [
+        "Group 2147227880",
+        "Frame 1261159540"
+      ],
+      "x": 62,
+      "y": 232
+    },
+    {
+      "id": "44233:59055",
+      "text": "표준",
+      "in": [
+        "Group 2147227880"
+      ],
+      "x": 5714,
+      "y": 4178
+    },
+    {
+      "id": "44233:59056",
+      "text": "별도 지정",
+      "in": [
+        "Group 2147227880"
+      ],
+      "x": 5714,
+      "y": 4449
+    },
+    {
+      "id": "44233:59057",
+      "text": "Bottom Sheet 스크롤이 생기는 버튼",
+      "in": [
+        "Group 2147227880"
+      ],
+      "x": 6169,
+      "y": 4449
+    },
+    {
+      "id": "44235:4871",
+      "text": "차량",
+      "in": [
+        "Example",
+        "top app bar_ios",
+        "top",
+        "Group 716103"
+      ],
+      "x": 333,
+      "y": 12
+    },
+    {
+      "id": "44235:4873",
+      "text": "왕복 예약",
+      "in": [
+        "Example",
+        "top app bar_ios"
+      ],
+      "x": 156,
+      "y": 10
+    },
+    {
+      "id": "44235:4892",
+      "text": "닫기",
+      "in": [
+        "Example"
+      ],
+      "x": 174,
+      "y": 618
+    },
+    {
+      "id": "44566:35010",
+      "text": "머티리얼은 6단계의 높이를 사용하며, 각 단계에는 해당 dp 값이 있습니다. 이 값들은 UI 표면으로부터의 상대적 거리를 0, ​​+1, +2, +3, +4, +5로 나타냅니다. 요소의 정지 상태는 0단계부터 +3단계까지이며, +4단계와 +5단계는 호버링이나 드래그와 같은 사용자 상호작용 상태를 위해 예약되어 있습니다.",
+      "in": [
+        "알파값을 써야하는 이유"
+      ],
+      "x": 51,
+      "y": 252
+    }
+  ]
+}
