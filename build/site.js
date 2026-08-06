@@ -69,7 +69,16 @@ injected.canon.structure = VIEW.structure || null;
 injected.canon.gapSummary = VIEW.GAPS ? {
   total: VIEW.GAPS.items.length,
   resolved: VIEW.GAPS.items.filter(g => g.status === 'resolved').length,
+  partial: VIEW.GAPS.items.filter(g => g.status === 'partial').length,
   open: VIEW.GAPS.items.filter(g => g.status !== 'resolved').length,
+  strictOpen: VIEW.GAPS.items.filter(g => g.status === 'open').length,
+  consolidatedAt: VIEW.GAPS.consolidatedAt || null,
+  addedInSweep: VIEW.GAPS.items.filter(g => /^GAP-(3[7-9]|4[0-9])$/.test(g.id)).length,
+  byArea: (() => {
+    const m = {};
+    for (const g of VIEW.GAPS.items) if (g.status !== 'resolved') m[g.area] = (m[g.area] || 0) + 1;
+    return Object.entries(m).sort((a, b) => b[1] - a[1]);
+  })(),
 } : null;
 
 const raw = JSON.stringify(injected);

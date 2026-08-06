@@ -1415,7 +1415,12 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     const g32 = VIEW.GAPS.items.find(g => g.id === 'GAP-32');
     ok('«🚧 를 빈 페이지로 셌다»가 GAP 으로 기록됨', !!g32 && g32.status !== 'resolved'
       && /전수/.test(g32.fix || ''));
-    ok('남은 🚧 쪽수가 진행 기록에 있음', !!g32 && /남은 \d+쪽/.test(g32.progress || ''));
+    // 전수 읽기가 끝났으므로 «남은 N쪽»이 아니라 «전수 완료»여야 합니다.
+    ok('🚧 전수 읽기 완료가 진행 기록에 있음',
+      !!g32 && /전수 완료/.test(g32.progress || '') && !/남은 \d+쪽/.test(g32.progress || ''),
+      g32 && g32.status);
+    ok('전수 결과가 «빈 페이지 1쪽»으로 기록됨',
+      !!g32 && /Table/.test(g32.progress || '') && /63쪽/.test(g32.progress || ''));
   }
 
   const GAPS = VIEW.GAPS;
@@ -1423,6 +1428,100 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     GAPS.items.filter(i => i.status === 'resolved').every(i => (i.resolution || '').length > 10));
   ok('해소 건수가 0보다 큼', GAPS.items.filter(i => i.status === 'resolved').length > 0,
     `${GAPS.items.filter(i => i.status === 'resolved').length}/${GAPS.items.length}`);
+
+  // ── [14] GAP 한꺼번에 정리 ────────────────────────────────────────
+  console.log('\n[14] GAP 한꺼번에 정리');
+  {
+    const read = rel => {
+      const q = path.join(ROOT, rel);
+      return fs.existsSync(q) ? fs.readFileSync(q, 'utf8') : null;
+    };
+    const IT = GAPS.items;
+    const ALLOWED = ['open', 'partial', 'resolved'];
+    ok('상태가 세 가지 중 하나로만 적힘',
+      IT.every(i => ALLOWED.includes(i.status)),
+      IT.filter(i => !ALLOWED.includes(i.status)).map(i => `${i.id}=${JSON.stringify(i.status)}`).join(', '));
+    ok('ID 가 GAP-1..N 으로 빠짐없이 이어짐', (() => {
+      const nums = IT.map(i => Number(String(i.id).replace('GAP-', ''))).sort((a, b) => a - b);
+      return nums.length === IT.length && nums.every((n, k) => n === k + 1);
+    })(), `${IT.length}건`);
+    ok('ID 가 중복되지 않음', new Set(IT.map(i => i.id)).size === IT.length);
+    ok('모든 항목에 근거와 메우는 법이 있음',
+      IT.every(i => (i.evidence || '').length > 5 && (i.fix || '').length > 5),
+      IT.filter(i => !(i.evidence || '').length || !(i.fix || '').length).map(i => i.id).join(', '));
+
+    // 정리 기록 자체
+    const CS = GAPS.consolidation;
+    ok('한꺼번에 정리한 기록이 있음', !!CS && !!GAPS.consolidatedAt);
+    ok('정리 기록에 근거 파일이 적힘',
+      !!CS && /component-pages\.json/.test(CS.basis) && /not-started-pages\.json/.test(CS.basis));
+    ok('«겹쳐 보이지만 다른 것»이 기록됨', !!CS && CS.notDuplicated.length >= 3);
+    ok('«맞추지 않고 남긴 모순»이 기록됨', !!CS && CS.contradictionsKept.length >= 3);
+    ok('정리 기록이 가리키는 GAP 이 전부 실재함', (() => {
+      if (!CS) return false;
+      const ids = [...JSON.stringify(CS).matchAll(/GAP-\d+/g)].map(m => m[0]);
+      return ids.length > 0 && ids.every(id => IT.some(i => i.id === id));
+    })());
+
+    // 전수 읽기가 새로 드러낸 8건
+    const SWEEP = IT.filter(i => /^GAP-(3[7-9]|4[0-4])$/.test(i.id));
+    ok('전수 읽기로 추가된 것이 8건', SWEEP.length === 8, `${SWEEP.length}건`);
+    ok('추가된 8건이 모두 미해소', SWEEP.every(i => i.status !== 'resolved'));
+    ok('추가된 8건 모두 근거에 노드 ID 나 파일명이 있음',
+      SWEEP.every(i => /\d+:\d+/.test(i.evidence) || /data\/[\w-]+\.json/.test(i.evidence)),
+      SWEEP.filter(i => !/\d+:\d+/.test(i.evidence) && !/data\/[\w-]+\.json/.test(i.evidence)).map(i => i.id).join(', '));
+
+    // 새 GAP 의 수치가 원자료와 맞는가 — 손으로 적은 수는 반드시 기계가 대조합니다
+    const WP = VIEW.pages && VIEW.pages.components;
+    const NS = VIEW.pages && VIEW.pages.notStarted;
+    if (WP && NS) {
+      const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      const contaminated = WP.borrowed.count + WP.foreignSubjects.count + (acc ? acc.contamination.length : 0);
+      const g37 = IT.find(i => i.id === 'GAP-37');
+      ok('GAP-37 의 «18건»이 기계 집계와 일치',
+        !!g37 && new RegExp(`${contaminated}건`).test(g37.finding),
+        `borrowed ${WP.borrowed.count} + foreign ${WP.foreignSubjects.count} + accordion ${acc ? acc.contamination.length : 0} = ${contaminated}`);
+      const g38 = IT.find(i => i.id === 'GAP-38');
+      ok('GAP-38 의 끊긴 문장 수가 기계 집계와 일치',
+        !!g38 && new RegExp(`${WP.truncated.count + 1}건`).test(g38.finding),
+        `truncated ${WP.truncated.count} + accordion 1`);
+      const g39 = IT.find(i => i.id === 'GAP-39');
+      ok('GAP-39 가 실제 nameMismatch 를 가리킴',
+        !!g39 && WP.nameMismatch.count > 0
+        && g39.evidence.includes(WP.nameMismatch.items[0].node));
+      const g44 = IT.find(i => i.id === 'GAP-44');
+      ok('GAP-44 의 빈 페이지가 not-started 기록과 일치', (() => {
+        const empties = NS.pages.filter(pg => pg.state === 'empty');
+        return !!g44 && empties.length === 1 && g44.evidence.includes(empties[0].node);
+      })());
+    }
+
+    // Lottie 색이 실제로 팔레트 안에 있는 값인가 (GAP-42 의 주장)
+    {
+      const g42 = IT.find(i => i.id === 'GAP-42');
+      const navy60 = VIEW.colors.find(c => c.name === 'Navy/Navy 060');
+      ok('GAP-42 가 지목한 색이 팔레트의 그 토큰과 같은 값',
+        !!g42 && !!navy60 && navy60.hex.toUpperCase() === '#0A3C5C'
+        && g42.finding.includes('#0A3C5C') && g42.finding.includes('Navy/Navy 060'),
+        navy60 && navy60.hex);
+    }
+
+    // 사이트 표시
+    const htmlG = read('dist/decisions/index.html');
+    if (htmlG) {
+      ok('정리 기록이 결정 안건에 실림', htmlG.includes('한꺼번에 정리한 기록'));
+      ok('추가된 8건이 모두 결정 안건에 실림',
+        SWEEP.every(i => htmlG.includes(`id="${i.id}"`)),
+        SWEEP.filter(i => !htmlG.includes(`id="${i.id}"`)).map(i => i.id).join(', '));
+      ok('«부분»이 표시됨', htmlG.includes('>부분<'));
+    }
+    const htmlS = read('dist/index.html');
+    if (htmlS) {
+      ok('정리한 날짜가 사이트 집계에 실림',
+        htmlS.includes(`"consolidatedAt":"${GAPS.consolidatedAt}"`));
+      ok('영역별 남은 건수 집계가 사이트에 실림', /"byArea":\[\[/.test(htmlS));
+    }
+  }
 }
 
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);

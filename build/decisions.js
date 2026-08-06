@@ -32,6 +32,7 @@ const open = []
 const groups = [...new Set(VIEW.colors.map(c => c.name.split('/')[0]))];
 const gapsDone = GAPS ? GAPS.items.filter(g => g.status === 'resolved') : [];
 const gapsOpen = GAPS ? GAPS.items.filter(g => g.status !== 'resolved') : [];
+const gapsPartial = GAPS ? GAPS.items.filter(g => g.status === 'partial') : [];
 const ST = VIEW.structure;
 const TS = VIEW.typeSemantic;
 
@@ -178,21 +179,38 @@ ${GAPS ? `<div class="eyebrow" style="margin-top:40px">Gaps</div>
 <p class="lead">${esc(GAPS.principle)}</p>
 <div class="stats">
 <div class="ok"><b>${gapsDone.length}</b><span>메운 것</span></div>
+<div><b>${gapsPartial.length}</b><span>부분</span></div>
 <div class="hl"><b>${gapsOpen.filter(g => g.severity === '높음').length}</b><span>남은 것 · 높음</span></div>
 <div><b>${gapsOpen.filter(g => g.severity === '중간').length}</b><span>중간</span></div>
 <div><b>${gapsOpen.filter(g => g.severity === '낮음').length}</b><span>낮음</span></div>
 </div>
+${GAPS.consolidation ? `<div class="sync" style="margin-top:18px">
+<h3>한꺼번에 정리한 기록 — ${esc(GAPS.consolidatedAt || '')}</h3>
+<p class="muted">${esc(GAPS.consolidation.why)}</p>
+<p class="muted"><b>근거.</b> <code>${esc(GAPS.consolidation.basis)}</code></p>
+<h4 style="font-size:13px;margin:16px 0 6px">바뀐 것</h4>
+<ul class="muted">${GAPS.consolidation.changed.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+<h4 style="font-size:13px;margin:16px 0 6px">겹쳐 보이지만 다른 것</h4>
+<ul class="muted">${GAPS.consolidation.notDuplicated.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+<h4 style="font-size:13px;margin:16px 0 6px">맞추지 않고 남겨 둔 모순</h4>
+<ul class="muted">${GAPS.consolidation.contradictionsKept.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+<div class="note" style="margin-top:14px"><b>규칙.</b> ${esc(GAPS.consolidation.rule)}</div>
+</div>` : ''}
 ${gapsDone.length ? `<h4 style="font-size:13px;margin:22px 0 6px;color:var(--ok)">✅ 메운 것 ${gapsDone.length}건</h4>
 <table><thead><tr><th>ID</th><th>영역</th><th>무엇이 모자랐나</th><th>어떻게 메웠나</th></tr></thead><tbody>
 ${gapsDone.map(g => `<tr><td><code>${g.id}</code></td><td class="muted">${esc(g.area)}</td><td>${esc(g.finding.slice(0, 90))}…</td><td>${esc(g.resolution)}</td></tr>`).join('')}
 </tbody></table>` : ''}
 <h4 style="font-size:13px;margin:22px 0 6px;color:var(--brand)">남은 것 ${gapsOpen.length}건</h4>
 ${gapsOpen.map(g => `<div class="card" id="${g.id}">
-<div class="meta"><span class="pill id">${g.id}</span><span class="pill ${sev(g.severity)}">${g.severity}</span><span class="pill tag">${esc(g.area)}</span></div>
+<div class="meta"><span class="pill id">${g.id}</span><span class="pill ${sev(g.severity)}">${g.severity}</span><span class="pill tag">${esc(g.area)}</span>${g.status === 'partial' ? '<span class="pill tag">부분</span>' : ''}</div>
 <h3>${esc(g.finding)}</h3>
 <p class="muted"><b>근거.</b> ${esc(g.evidence)}</p>
 <div class="note"><b>메우는 법.</b> ${esc(g.fix)}</div>
 ${g.progress ? `<p class="muted"><b>진행.</b> ${esc(g.progress)}</p>` : ''}
+${g.resolution ? `<p class="muted"><b>부분 해소.</b> ${esc(g.resolution)}</p>` : ''}
+${g.note ? `<p class="muted"><b>덧붙임.</b> ${esc(g.note)}</p>` : ''}
+${g.needsCheck ? `<p class="muted"><b>확인 필요.</b> ${esc(g.needsCheck)}</p>` : ''}
+${g.consolidation ? `<p class="muted"><b>정리.</b> ${esc(g.consolidation)}</p>` : ''}
 </div>`).join('')}
 <div class="sync">
 <h3>계산으로 찾은 것</h3>
