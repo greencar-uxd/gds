@@ -1,0 +1,141 @@
+{
+  "$description": "색 별칭과 면색/선색 짝 — 같은 값이 여러 이름으로 흩어진 것을 잇습니다.",
+  "generatedFrom": "tools/build-color-aliases.js ← build/canon-view.js (정본 60색)",
+  "rule": "값이 같은 무리에 단계 그룹 소속이 정확히 하나면 그것이 원본이고 나머지는 별칭입니다. 아니면 정하지 않습니다.",
+  "scaleGroups": [
+    "Primary",
+    "Gray Scale",
+    "Navy"
+  ],
+  "scaleGroupRule": "숫자 단계 이름(예: Red 040)이 3칸 이상인 그룹을 «단계 그룹»으로 봅니다. 목록을 손으로 적지 않습니다.",
+  "counts": {
+    "duplicateValues": 4,
+    "decidable": 3,
+    "undecidable": 1,
+    "aliasTokens": 3,
+    "linePairs": 3,
+    "linePairsSplit": 1
+  },
+  "duplicates": [
+    {
+      "hex": "#A1B1BB",
+      "decidable": true,
+      "base": {
+        "name": "Navy/Navy 030",
+        "key": "navy-030"
+      },
+      "aliases": [
+        {
+          "name": "Map Marker/Active Line",
+          "key": "map-marker-active-line"
+        }
+      ],
+      "rule": "«Navy» 는 단계 그룹이고 Navy/Navy 030 이 그 안의 한 칸입니다. 역할 이름은 이 칸을 가리키는 별칭입니다."
+    },
+    {
+      "hex": "#ED1C24",
+      "decidable": true,
+      "base": {
+        "name": "Primary/Red 050",
+        "key": "primary-red-050"
+      },
+      "aliases": [
+        {
+          "name": "Brand/G car Red",
+          "key": "brand-g-car-red"
+        }
+      ],
+      "rule": "«Primary» 는 단계 그룹이고 Primary/Red 050 이 그 안의 한 칸입니다. 역할 이름은 이 칸을 가리키는 별칭입니다."
+    },
+    {
+      "hex": "#FD8484",
+      "decidable": false,
+      "members": [
+        {
+          "name": "Badge/Hot Deal",
+          "key": "badge-hot-deal",
+          "group": "Badge"
+        },
+        {
+          "name": "Map Marker/Free Zone",
+          "key": "map-marker-free-zone",
+          "group": "Map Marker"
+        }
+      ],
+      "reason": "단계 그룹에 속한 이름이 없습니다 — 어느 쪽이 원본인지 값과 이름만으로는 정할 수 없습니다.",
+      "handling": "한쪽으로 묶지 않습니다. 두 토큰 모두 값을 그대로 두고, 주석으로 서로를 가리킵니다. 값이 같은 것이 우연일 수 있기 때문입니다."
+    },
+    {
+      "hex": "#FFFFFF",
+      "decidable": true,
+      "base": {
+        "name": "Gray Scale/Gray 000",
+        "key": "gray-scale-000"
+      },
+      "aliases": [
+        {
+          "name": "Map Marker/Active",
+          "key": "map-marker-active"
+        }
+      ],
+      "rule": "«Gray Scale» 는 단계 그룹이고 Gray Scale/Gray 000 이 그 안의 한 칸입니다. 역할 이름은 이 칸을 가리키는 별칭입니다."
+    }
+  ],
+  "linePairs": [
+    {
+      "line": "Map Marker/Active Line",
+      "lineHex": "#A1B1BB",
+      "lineGroup": "Map Marker",
+      "fill": "Map Marker/Active",
+      "fillHex": "#FFFFFF",
+      "fillGroup": "Map Marker",
+      "sameGroup": true
+    },
+    {
+      "line": "Map Marker/Disabled Line",
+      "fill": null,
+      "note": "면색 «Disabled» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+    },
+    {
+      "line": "Map Marker/Free Zone Line",
+      "lineHex": "#EB6565",
+      "lineGroup": "Map Marker",
+      "fill": "Map Marker/Free Zone",
+      "fillHex": "#FD8484",
+      "fillGroup": "Map Marker",
+      "sameGroup": true
+    },
+    {
+      "line": "Brand/ODA Line",
+      "lineHex": "#BF7200",
+      "lineGroup": "Brand",
+      "fill": "Badge/ODA",
+      "fillHex": "#ED9A1E",
+      "fillGroup": "Badge",
+      "sameGroup": false
+    },
+    {
+      "line": "System/Focus Line",
+      "fill": null,
+      "note": "면색 «Focus» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+    },
+    {
+      "line": "System/Input Line",
+      "fill": null,
+      "note": "면색 «Input» 이 정본에 없습니다 — 짝이 아니라 단독 선색입니다."
+    }
+  ],
+  "splitPairs": [
+    {
+      "line": "Brand/ODA Line",
+      "lineHex": "#BF7200",
+      "lineGroup": "Brand",
+      "fill": "Badge/ODA",
+      "fillHex": "#ED9A1E",
+      "fillGroup": "Badge",
+      "sameGroup": false,
+      "finding": "«Badge/ODA» 과 «Brand/ODA Line» 은 한 쌍인데 그룹이 갈려 있습니다 (Badge / Brand).",
+      "precedent": "같은 정본 안에 붙어 있는 쌍이 2건 있습니다 — Map Marker/Active · Map Marker/Free Zone. 전부 면색과 선색이 한 그룹입니다."
+    }
+  ]
+}

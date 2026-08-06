@@ -116,9 +116,12 @@
       "id": "GAP-5",
       "area": "색",
       "severity": "중간",
-      "finding": "같은 값이 두 이름으로 있습니다 — 값이 바뀔 때 한쪽만 바뀌면 조용히 어긋납니다.",
-      "evidence": "computed.duplicateValues",
-      "fix": "의미가 다르면 별칭(시맨틱)으로 연결하고, 같으면 하나로 줄입니다. Map Marker/Active_Line 은 Navy/Navy 030 의 별칭으로 두는 편이 맞습니다."
+      "finding": "같은 값이 두 이름으로 있습니다 — 값이 바뀔 때 한쪽만 바뀌면 조용히 어긋납니다. 정본 60색 안에 값이 겹치는 무리가 4건입니다.",
+      "evidence": "tools/build-color-aliases.js · data/color-aliases.json — #A1B1BB · #ED1C24 · #FD8484 · #FFFFFF",
+      "fix": "의미가 다르면 별칭(시맨틱)으로 연결하고, 같으면 하나로 줄입니다. Map Marker/Active_Line 은 Navy/Navy 030 의 별칭으로 두는 편이 맞습니다.",
+      "status": "resolved",
+      "resolution": "해소 — 값이 같은 무리에 «단계 그룹»(Primary·Gray Scale·Navy) 소속이 정확히 하나면 그것을 원본으로 보고 나머지를 별칭으로 잇습니다. 3무리가 이 규칙으로 판정됐고, 별칭 토큰은 CSS 에서 var() 로, DTCG 에서 {color.*} 참조로 나갑니다 — 값은 이제 한 곳에만 적힙니다. Map Marker/Active Line → Navy/Navy 030 · Map Marker/Active → Gray Scale/Gray 000 · Brand/G car Red → Primary/Red 050.",
+      "residual": "#FD8484(Badge/Hot Deal · Map Marker/Free Zone)는 둘 다 역할 이름이라 원본을 정할 수 없습니다. 묶지 않고 두 토큰 모두 값을 유지하되 주석과 $extensions.gds.sameValueAs 로 서로를 가리킵니다 — 값이 같은 것이 우연일 수 있기 때문입니다."
     },
     {
       "id": "GAP-6",
@@ -145,8 +148,9 @@
       "area": "색",
       "severity": "중간",
       "finding": "같은 기능(ODA)의 색이 Badge/ODA 와 Brand/ODA Line 두 그룹으로 갈라져 있습니다.",
-      "evidence": "라이브러리 FILL 스타일",
-      "fix": "뱃지 면색과 선색이므로 Badge 그룹으로 모으거나, 컴포넌트 계층에서 한 쌍으로 묶습니다."
+      "evidence": "data/color-aliases.json splitPairs — 면색/선색 쌍 3건 중 그룹이 갈린 것은 ODA 하나뿐입니다. Map Marker/Active·Active Line 과 Map Marker/Free Zone·Free Zone Line 은 면색과 선색이 한 그룹에 있습니다.",
+      "fix": "뱃지 면색과 선색이므로 Badge 그룹으로 모으거나, 컴포넌트 계층에서 한 쌍으로 묶습니다.",
+      "progress": "부분 — 면색/선색 쌍을 이름 규칙(«X» / «X Line»)으로 기계 검출하게 만들었고, 갈린 쌍 1건과 선례 2건을 Color 페이지에 실었습니다. Brand 그룹에는 선색이 ODA Line 하나뿐이라는 사실도 함께 드러났습니다. 다만 어느 그룹으로 모을지는 값·이름만으로 정할 수 없어(ODA 가 제휴 브랜드라면 Badge/ODA 쪽이 옮겨져야 합니다) 이름은 바꾸지 않았습니다."
     },
     {
       "id": "GAP-9",
