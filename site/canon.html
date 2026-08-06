@@ -1319,9 +1319,10 @@ function wipPages(){
   ${W.nameMismatch&&W.nameMismatch.count?`<div class="note warn"><p><b>이름 짝이 어긋난 곳 ${W.nameMismatch.count}건.</b> ${esc(W.nameMismatch.why)}</p>
   <p class="muted">${W.nameMismatch.items.map(n=>`<code>${esc(n.found)}</code> — 영문은 ${esc(n.enBelongsTo)}, 괄호 안 한글은 ${esc(n.koBelongsTo)} 것 (${esc(n.page)} › ${esc(n.section)})`).join('<br>')}</p></div>`:''}
 
-  <h3>남의 문장 ${W.borrowed.count+W.foreignSubjects.count}건 — 고치지 않고 표시만 합니다</h3>
-  <p class="lead" style="font-size:15px">${esc(W.borrowed.why)}</p>
+  <h3>남의 문장 — 겹친 문장 ${W.counts.borrowed}종이 ${W.counts.borrowedPlaces}자리 · 주어가 남인 문장 ${W.counts.foreignComponent}건</h3>
+  <p class="lead" style="font-size:15px">${esc(W.borrowed.why)} 고치지 않고 표시만 합니다.</p>
   <p class="muted">${esc(W.method)}</p>
+  <p class="muted">${esc(W.foreignSubjects.caveat)}</p>
   ${W.borrowed.items.length?`<table class="ctr"><thead><tr><th>남아 있는 문장</th><th>어디에</th></tr></thead><tbody>
   ${W.borrowed.items.map(b=>`<tr><td class="muted">「${esc(b.text.slice(0,140))}」</td>
     <td class="muted">${[...new Set(b.borrowedBy)].map(esc).join('<br>')}</td></tr>`).join('')}
@@ -1329,8 +1330,11 @@ function wipPages(){
   ${W.foreignSubjects.items.length?`<h4>주어가 그 페이지의 컴포넌트가 아닌 문장</h4>
   <table class="ctr"><thead><tr><th>페이지 › 절</th><th>주어</th><th>문장</th></tr></thead><tbody>
   ${W.foreignSubjects.items.map(f=>`<tr><td class="muted">${esc(f.page)} › ${esc(f.section)}</td>
-    <td><b>${esc(f.subject)}</b></td><td class="muted">${esc(f.text.slice(0,110))}</td></tr>`).join('')}
+    <td><b>${esc(f.subject)}</b>${f.kind==='structural'?' <span class="muted">(하위 영역 이름 — 단정 안 함)</span>':''}</td>
+    <td class="muted">${esc(f.text.slice(0,110))}</td></tr>`).join('')}
   </tbody></table>`:''}
+  ${W.ownNameTypos&&W.ownNameTypos.count?`<div class="note"><p><b>자기 이름의 철자가 틀린 곳 ${W.ownNameTypos.count}건.</b> ${esc(W.ownNameTypos.why)}</p>
+  <p class="muted">${W.ownNameTypos.items.map(t=>`${esc(t.page)} › ${esc(t.section)} — <code>${esc(t.found)}</code> → ${esc(t.should)} (<code>${esc(t.node)}</code>)`).join('<br>')}</p></div>`:''}
   ${W.truncated.items.length?`<div class="note warn"><p><b>쓰다 만 문장 ${W.truncated.count}건.</b> ${esc(W.truncated.why)}</p>
   <p class="muted">${W.truncated.items.map(t=>`${esc(t.page)} › ${esc(t.section)} — 「${esc(t.text)}」`).join('<br>')}</p></div>`:''}
 
