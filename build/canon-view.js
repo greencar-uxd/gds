@@ -166,6 +166,7 @@ module.exports = {
       textField: load('textfield-page.json'),
       components: load('component-pages.json'),
       notStarted: load('not-started-pages.json'),
+      verify: load('transcribed-verify.json'),
       readSlugs: read.map(f => f.replace(/\.json$/, '')),
     };
   })(),

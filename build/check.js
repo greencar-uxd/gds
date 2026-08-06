@@ -1376,13 +1376,18 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       NS ? `${NS.pages.length}쪽` : '없음');
     if (NS) {
       ok('페이지마다 근거 노드가 있음', NS.pages.every(pg => /^\d+:\d+$/.test(pg.node)));
-      ok('옮겨 적은 항목이 표시돼 있음',
-        NS.pages.every(pg => typeof pg.transcribed === 'boolean')
-        && NS.pages.filter(pg => pg.transcribed).length > 0,
-        `옮겨 적음 ${NS.pages.filter(pg => pg.transcribed).length} / 기계 파싱 ${NS.pages.filter(pg => !pg.transcribed).length}`);
-      ok('기계 파싱한 쪽은 파일이 실재함',
-        NS.pages.filter(pg => !pg.transcribed)
-          .every(pg => pg.parsed && fs.existsSync(path.join(ROOT, pg.parsed))));
+      // 이제 여덟 쪽 모두 원자료가 저장소에 있습니다 — 옮겨 적은 쪽은 0 이어야 합니다.
+      ok('쪽마다 옮겨 적음 여부가 명시됨',
+        NS.pages.every(pg => typeof pg.transcribed === 'boolean'));
+      ok('쪽마다 근거 파일이 실재함',
+        NS.pages.every(pg => {
+          const f = pg.raw || pg.parsed;
+          return f && fs.existsSync(path.join(ROOT, f));
+        }),
+        NS.pages.filter(pg => {
+          const f = pg.raw || pg.parsed;
+          return !f || !fs.existsSync(path.join(ROOT, f));
+        }).map(pg => pg.slug).join(', '));
       // 요약 수치가 항목과 맞는지 — 손으로 적은 수가 아니어야 합니다.
       ok('요약 수치가 항목과 일치', (() => {
         const by = {};
@@ -1404,9 +1409,10 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         return !!ls && ls.spec.length === 2
           && ls.spec.every(sp => /^#[0-9A-F]{6}$/i.test(sp.hex) && sp.fps > 0 && /^\d+:\d+$/.test(sp.node));
       })());
-      ok('To-be 가 «미작성»으로 남아 있음', (() => {
+      // 처음에는 «미작성»으로 적었는데, 원자료를 보니 As-is 복사본이었습니다(정정).
+      ok('To-be 가 채워지지 않은 상태로 남아 있음', (() => {
         const ls = NS.pages.find(pg => pg.slug === 'loading-spinner');
-        return !!ls && ls.toBe.state === '미작성';
+        return !!ls && /작성해주세요/.test(ls.toBe.text) && ls.toBe.nodes.length === 2;
       })(), '저장소가 대신 채우지 않습니다');
       ok('«시작 전» 확인 결과가 사이트에 실림',
         htmlP.includes('«시작 전(—)» 으로 세던') && htmlP.includes('정말로 빈 페이지'));
@@ -1478,6 +1484,42 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     if (WP && NS) {
       // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      // ── 옮겨 적은 것을 원자료로 되짚기
+      const VF = VIEW.pages && VIEW.pages.verify;
+      ok('원자료 대조 결과가 있음', !!VF && VF.claims.length >= 9);
+      if (VF) {
+        ok('손으로 옮겨 적은 쪽이 0', NS.pages.every(pg => pg.transcribed === false),
+          NS.pages.filter(pg => pg.transcribed).map(pg => pg.slug).join(', '));
+        ok('여덟 쪽 모두 근거가 있음', VF.counts.pagesWithoutEvidence === 0,
+          `XML ${VF.counts.pagesWithRaw} · 파서 ${VF.counts.pagesParsedElsewhere}`);
+        ok('다시 센 진술이 전부 성립', VF.counts.claimsHeld === VF.counts.claims,
+          `${VF.counts.claimsHeld}/${VF.counts.claims}`);
+        ok('어긋남이 0', VF.counts.mismatches === 0,
+          VF.mismatches.map(m => `${m.slug}:${m.detail}`).join(' · '));
+        ok('인용한 노드가 원자료에 전부 실재',
+          VF.pages.filter(pg => pg.xml).every(pg => pg.citedAllFound));
+        // 정정을 지우지 않고 남겼는가 — 여기가 핵심입니다.
+        ok('원자료가 뒤집은 진술 2건이 정정으로 남음',
+          VF.counts.corrections === 2
+          && NS.pages.filter(pg => pg.correction).length === 2,
+          `verify ${VF.counts.corrections} · pages ${NS.pages.filter(pg => pg.correction).length}`);
+        ok('Switch 정정 — 두 벌 중 «-» 는 한 벌뿐',
+          (() => {
+            const sw = VF.pages.find(pg => pg.slug === 'switch');
+            return sw && sw.dashSlots.length === 2 && sw.dashSlots.every(id => id.startsWith('42553:'));
+          })());
+        ok('Loading spinner 정정 — To-be 가 «빈 것»이 아니라 «As-is 복사본»',
+          (() => {
+            const ls = NS.pages.find(pg => pg.slug === 'loading-spinner');
+            return ls && /복사/.test(ls.toBe.state + ls.toBe.detail) && !/미작성/.test(ls.toBe.state);
+          })());
+        ok('일부만 담은 원자료가 범위를 밝힘',
+          VF.pages.filter(pg => pg.scope).every(pg => /범위/.test(pg.scope)),
+          `${VF.counts.scoped}건`);
+        const htmlV = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+        ok('되짚은 결과가 사이트에 실림', htmlV.includes('옮겨 적은 것을 원자료로 되짚기'));
+        ok('정정이 사이트에 그대로 보임', htmlV.includes('As-is 를 복사해 두고 안 고침'));
+      }
       ok('Accordion 이 손 옮겨적기에서 기계 집계로 넘어감',
         !!acc && acc.transcribed === false && !acc.contamination
         && WP.pages.some(pg => pg.slug === 'accordion'),
