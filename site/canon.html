@@ -539,6 +539,7 @@ function color(){
   const order=['Primary','Gray Scale','Navy','Badge','Map Marker','Brand','System'];
   const keys=[...new Set([...order.filter(k=>groups[k]),...Object.keys(groups)])];
   const dec=(C.color.decisions||{});
+  const AL=C.color.aliases;
   const main=COLORS.find(c=>c.full===((dec.main||{}).token));
   const ramp=g=>!groups[g]?'':`<div class="ramp">
     <div class="strip">${groups[g].map(c=>`<i style="background:${c.hex}" title="${esc(c.name)} ${c.hex}"></i>`).join('')}</div>
@@ -560,6 +561,7 @@ function color(){
   <div class="tabs">
     <button class="on" data-pane="use">사용 기준</button>
     <button data-pane="tok">토큰 ${COLORS.length}</button>
+    ${AL?`<button data-pane="alias">이름 정리</button>`:''}
   </div>
 
   <div class="pane" data-pane="use">
@@ -602,6 +604,44 @@ function color(){
     </div>`).join('')}
   <p class="muted" style="margin-top:32px">스와치를 누르면 변수명이 복사됩니다. 출처 — <code>${esc(C.color.source)}</code></p>
   </div>
+
+  ${AL?`<div class="pane" data-pane="alias" hidden>
+    <h2>같은 값을 가진 이름 — ${AL.counts.duplicateValues}무리</h2>
+    <p class="lead" style="font-size:15px">값이 똑같은데 이름이 둘이면, 나중에 한쪽만 바뀔 때 <b>조용히 어긋납니다.</b>
+    그래서 한쪽을 원본으로 두고 나머지는 <b>원본을 가리키게</b> 했습니다 — 값은 한 곳에만 적힙니다.</p>
+    <div class="note"><p><b>어떻게 정했나.</b> ${esc(AL.rule)}<br>
+    단계 그룹은 ${AL.scaleGroups.map(g=>`<b>${esc(g)}</b>`).join(' · ')} 입니다 — ${esc(AL.scaleGroupRule)}</p></div>
+    <div>${AL.duplicates.map(d=>d.decidable?`
+      <div class="sprow" style="grid-template-columns:24px 1fr;align-items:start">
+        <div><span class="dot" style="background:${d.hex}"></span></div>
+        <div>
+          <div class="tok">${esc(d.base.name)} <span class="muted">← ${d.aliases.map(a=>esc(a.name)).join(' · ')}</span></div>
+          <div class="muted" style="margin-top:4px">${d.hex} · ${esc(d.rule)}</div>
+          <div class="muted" style="margin-top:4px"><code>--gds-color-${d.aliases[0].key}: var(--gds-color-${d.base.key})</code></div>
+        </div>
+      </div>`:`
+      <div class="note warn">
+        <p><b>${d.hex} — 원본을 정하지 못했습니다.</b> ${d.members.map(m=>esc(m.name)).join(' · ')}</p>
+        <p>${esc(d.reason)}</p>
+        <p class="muted">${esc(d.handling)}</p>
+      </div>`).join('')}</div>
+
+    <h2>면색과 선색 — ${AL.counts.linePairs}쌍</h2>
+    <p class="lead" style="font-size:15px">이름이 «X» 와 «X Line» 인 쌍입니다. 한 쌍은 같은 그룹에 있어야 함께 고쳐집니다.</p>
+    <div>${AL.linePairs.filter(p=>p.fill).map(p=>`
+      <div class="sprow" style="grid-template-columns:1fr 1fr 90px">
+        <div class="tok"><span class="dot" style="background:${p.fillHex}"></span>${esc(p.fill)}</div>
+        <div class="tok"><span class="dot" style="background:${p.lineHex}"></span>${esc(p.line)}</div>
+        <div class="muted">${p.sameGroup?'같은 그룹':'<b>갈림</b>'}</div>
+      </div>`).join('')}</div>
+    ${AL.splitPairs.map(p=>`<div class="note warn">
+      <p><b>GAP-8</b> — ${esc(p.finding)}</p>
+      <p>${esc(p.precedent)}</p>
+      <p class="muted">어느 그룹으로 모을지는 사람이 정할 일입니다. 저장소는 사실만 적고 이름을 바꾸지 않았습니다.</p>
+    </div>`).join('')}
+    ${AL.linePairs.filter(p=>!p.fill).length?`<p class="muted" style="margin-top:16px">짝이 없는 단독 선색 ${AL.linePairs.filter(p=>!p.fill).length}종 —
+      ${AL.linePairs.filter(p=>!p.fill).map(p=>esc(p.line)).join(' · ')}. 면색을 지어내지 않았습니다.</p>`:''}
+  </div>`:''}
   ${footer()}`;
 }
 
