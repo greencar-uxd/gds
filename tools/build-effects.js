@@ -59,7 +59,14 @@ const toRgba = hex => {
 
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-const items = LIB.effect.map(e => {
+// 소속 검증 — «GDS 라이브러리에 없으면 정본이 아니다»(강민관 지시)를 효과에도 적용합니다.
+// 이름만 보고 담았던 목록에 배제 대상 라이브러리의 스타일이 섞여 있었습니다(2026-08-06).
+const excludedStyles = LIB.effect.filter(e => e.excluded).map(e => ({
+  name: e.name, library: e.library, why: e.excludedWhy,
+}));
+const canonEffects = LIB.effect.filter(e => !e.excluded);
+
+const items = canonEffects.map(e => {
   const axis = classify(e);
   const parsed = parseLayers(e.value);
   return {
@@ -73,6 +80,9 @@ const items = LIB.effect.map(e => {
       : (parsed && parsed.kind === 'blur' ? `blur(${parsed.radius}px)` : null),
     key: slug(e.name),
     note: e.caseDuplicate ? `«${e.caseDuplicate}» 와 대소문자만 다릅니다` : null,
+    library: e.library || null,
+    // 소속을 확인하지 못한 것은 토큰으로 내보내지 않습니다 — 정본인지 아닌지 모르기 때문입니다.
+    unverified: e.unverified || null,
   };
 });
 
@@ -83,7 +93,8 @@ for (const i of items) keyCount[i.key] = (keyCount[i.key] || 0) + 1;
 const keyCollisions = Object.entries(keyCount).filter(([, n]) => n > 1)
   .map(([k]) => ({ key: k, names: items.filter(i => i.key === k).map(i => i.name) }));
 for (const i of items) {
-  const usable = !!i.css && i.axis !== 'elevation' && i.axis !== 'deprecated';
+  const usable = !!i.css && i.axis !== 'elevation' && i.axis !== 'deprecated' && !i.unverified;
+  if (i.unverified && i.css) i.blocked = `소속 라이브러리를 확인하지 못했습니다 — ${i.unverified}`;
   const win = WINNER[i.key];
   if (keyCount[i.key] === 1) {
     i.emit = usable;
@@ -134,6 +145,8 @@ const out = {
   },
   counts: {
     total: items.length,
+    excludedFromOtherLibraries: excludedStyles.length,
+    unverified: items.filter(i => i.unverified).length,
     elevation: byAxis('elevation').length,
     component: byAxis('component').length,
     material: byAxis('material').length,
@@ -141,6 +154,8 @@ const out = {
     measured: items.filter(i => i.css).length,
     unmeasured: items.filter(i => !i.css && i.axis !== 'deprecated').map(i => i.name),
   },
+  excludedStyles,
+  unverifiedStyles: items.filter(i => i.unverified).map(i => ({ name: i.name, why: i.unverified })),
   caseCollisions,
   keyCollisions: keyCollisions.map(k => {
     const win = WINNER[k.key];
@@ -157,6 +172,11 @@ const out = {
 const sum = out.counts.elevation + out.counts.component + out.counts.material + out.counts.deprecated;
 if (sum !== items.length) throw new Error(`축 합 ${sum} ≠ 전체 ${items.length}`);
 if (out.counts.elevation !== 6) throw new Error(`Elevation 이 6단계가 아닙니다: ${out.counts.elevation}`);
+// 정본에 남은 것은 GDS 소속이거나 «미확인»이어야 합니다. 다른 라이브러리 소속이 남아 있으면 안 됩니다.
+for (const i of items) {
+  if (i.library && !/^GDS/.test(i.library)) throw new Error(`배제 대상 라이브러리 스타일이 정본에 남아 있습니다: ${i.name} (${i.library})`);
+}
+if (items.some(i => i.unverified && i.emit)) throw new Error('소속 미확인 스타일이 토큰으로 나가고 있습니다');
 
 fs.writeFileSync(path.join(ROOT, 'data', 'effects.json'), JSON.stringify(out, null, 2) + '\n');
 
