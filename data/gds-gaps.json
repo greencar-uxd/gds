@@ -431,7 +431,7 @@
       "evidence": "Icon system 🚧 — 이름 규칙·아이콘 184종·크기 단계가 전부 있었는데 «없음»으로 배포했습니다(GAP-22 정정). Text field 🚧 — «원본 대기»로 비워 두었는데 정의·유형 4가지·구조·변형 42종이 있었습니다. Elevation system 🚧 — «정의가 없다»고 적었는데 레벨 0~5·dp·그림자 수치·적용 범위가 있었습니다. Icon system 2차 — «페이지를 직접 읽었다»고 하고도 파서가 Icon/system/* 노드 이름만 모아서, 실제로는 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인을 통째로 놓쳤습니다.",
       "fix": "🚧 페이지를 전수로 직접 읽되, «읽었다»의 기준을 본문 텍스트로 둡니다. tools/parse-figma-page.js 가 텍스트 노드를 조상 사슬과 함께 전부 저장하므로 페이지별 추출기는 원자료를 다시 볼 수 있습니다. 채우지 않은 문서화 템플릿(«설명글»·«레벨 값»)은 «내용 있음»으로 세지 않습니다.",
       "status": "open",
-      "progress": "진행 — 🚧 19쪽 중 4쪽을 읽었습니다(2026-08-06). Icon system · Elevation system · Radius system · Text field. Icon system 은 옛 파서가 놓친 본문을 새 파서로 다시 읽어 data/figma-pages/icon-system-full.json(텍스트 1,356줄)에 남겼습니다. 남은 15쪽 — Principle · Components overview · Bottom sheet · Smart key · Top app bar · Selection box · Tip · Tap · Bage · Toast · Numbering · Pasing · Search field · Info box · Helper text."
+      "progress": "진행 — 🚧 19쪽 중 8쪽을 읽었습니다(2026-08-06). Icon system · Elevation system · Radius system · Text field · Bottom sheet · Search field · Info box · Helper text. 읽은 원문은 data/figma-pages/*.json 에 그대로 쌓습니다. 남은 11쪽 — Principle · Components overview · Smart key · Top app bar · Selection box · Tip · Tap · Bage · Toast · Numbering · Pasing. GAP 정리는 전수 읽기가 끝난 뒤 한꺼번에 합니다(강민관 2026-08-06)."
     },
     {
       "id": "GAP-33",
