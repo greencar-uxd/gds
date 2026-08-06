@@ -1,0 +1,560 @@
+{
+  "$description": "GAP-30 — 스케일 밖 간격 값을 «문서 캔버스 여백»과 «제품 간격 후보»로 가른 결과입니다.",
+  "why": "메우는 법이 두 갈래인데 어느 쪽인지 안 갈라서 GAP-30 이 멈춰 있었습니다. 가르는 것까지가 저장소 몫이고, 제품 간격 후보를 어떻게 할지(단계를 늘릴지 · 가까운 단계로 맞출지)는 디자인팀이 정합니다.",
+  "rule": [
+    "주석의 부모 프레임 이름이 문서화 틀의 컨테이너면 문서 캔버스 여백입니다 — 제품 간격으로 세지 않습니다.",
+    "틀 이름은 지어내지 않고 원자료 XML(data/figma-xml/*.xml)에 실제로 있는 것만 씁니다.",
+    "값을 가장 가까운 단계로 맞추지 않습니다. 차이만 적습니다.",
+    "애매하면 product-candidate 로 밀지 않고 그대로 둡니다 — 여기서는 틀 이름 대조가 전부입니다."
+  ],
+  "basis": {
+    "scale": [
+      0,
+      2,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      40,
+      44,
+      48,
+      52
+    ],
+    "templateContainers": [
+      "Contents",
+      "Contents area",
+      "Contents text",
+      "Description area",
+      "Detail",
+      "Detail area",
+      "Detail frame",
+      "Index area",
+      "Template frame basic",
+      "Text area"
+    ],
+    "templateEvidence": "data/figma-xml/*.xml 에서 name=\"…\" 으로 확인"
+  },
+  "classifiedAt": "2026-08-06",
+  "docCanvas": {
+    "what": "문서를 캔버스에 배치한 여백입니다. 제품 화면의 간격이 아니므로 스케일을 어긴 것으로 세지 않습니다.",
+    "count": 5,
+    "values": [
+      {
+        "value": 78,
+        "count": 2,
+        "pages": [
+          "Modal ✅"
+        ],
+        "parents": [
+          "Description area"
+        ],
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      },
+      {
+        "value": 42,
+        "count": 1,
+        "pages": [
+          "Buttons ✅"
+        ],
+        "parents": [
+          "Description area"
+        ],
+        "nearestStep": 40,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "value": 190,
+        "count": 1,
+        "pages": [
+          "Buttons ✅"
+        ],
+        "parents": [
+          "Description area"
+        ],
+        "nearestStep": 52,
+        "deltaPx": 138,
+        "odd": false
+      },
+      {
+        "value": 80,
+        "count": 1,
+        "pages": [
+          "Buttons ✅"
+        ],
+        "parents": [
+          "Description area"
+        ],
+        "nearestStep": 52,
+        "deltaPx": 28,
+        "odd": false
+      }
+    ],
+    "items": [
+      {
+        "page": "Buttons ✅",
+        "node": "43864:7392",
+        "value": 42,
+        "axis": "가로",
+        "kind": "말풍선",
+        "parent": "Description area",
+        "before": "Spacing",
+        "after": null,
+        "where": "doc-canvas",
+        "nearestStep": 40,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "page": "Buttons ✅",
+        "node": "43691:9826",
+        "value": 190,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Description area",
+        "before": "Spacing",
+        "after": null,
+        "where": "doc-canvas",
+        "nearestStep": 52,
+        "deltaPx": 138,
+        "odd": false
+      },
+      {
+        "page": "Buttons ✅",
+        "node": "43864:7384",
+        "value": 80,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Description area",
+        "before": "Spacing",
+        "after": null,
+        "where": "doc-canvas",
+        "nearestStep": 52,
+        "deltaPx": 28,
+        "odd": false
+      },
+      {
+        "page": "Modal ✅",
+        "node": "43205:15453",
+        "value": 78,
+        "axis": "가로",
+        "kind": "말풍선",
+        "parent": "Description area",
+        "before": "Spacing",
+        "after": null,
+        "where": "doc-canvas",
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      },
+      {
+        "page": "Modal ✅",
+        "node": "43206:2586",
+        "value": 78,
+        "axis": "가로",
+        "kind": "말풍선",
+        "parent": "Description area",
+        "before": "Spacing",
+        "after": null,
+        "where": "doc-canvas",
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      }
+    ]
+  },
+  "product": {
+    "what": "화면·컴포넌트 안에 찍힌 주석입니다. 이것만 «스케일 밖 제품 간격»으로 셉니다.",
+    "count": 16,
+    "values": [
+      {
+        "value": 19,
+        "count": 3,
+        "pages": [
+          "Bottom navigation ✅"
+        ],
+        "parents": [
+          "Group 2147227874"
+        ],
+        "nearestStep": 20,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "value": 29,
+        "count": 3,
+        "pages": [
+          "Picker ✅"
+        ],
+        "parents": [
+          "Group 2147227857"
+        ],
+        "nearestStep": 28,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "value": 7,
+        "count": 2,
+        "pages": [
+          "Buttons ✅"
+        ],
+        "parents": [
+          "Group 2147227904"
+        ],
+        "nearestStep": 8,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "value": 78,
+        "count": 2,
+        "pages": [
+          "Modal ✅"
+        ],
+        "parents": [
+          "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up"
+        ],
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      },
+      {
+        "value": 50,
+        "count": 2,
+        "pages": [
+          "Picker ✅"
+        ],
+        "parents": [
+          "Group 2147227857"
+        ],
+        "nearestStep": 48,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "value": 13,
+        "count": 2,
+        "pages": [
+          "Picker ✅"
+        ],
+        "parents": [
+          "Group 2147227866"
+        ],
+        "nearestStep": 12,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "value": 31,
+        "count": 1,
+        "pages": [
+          "Checkbox ✅"
+        ],
+        "parents": [
+          "약관 동의_to be"
+        ],
+        "nearestStep": 32,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "value": 34,
+        "count": 1,
+        "pages": [
+          "Modal ✅"
+        ],
+        "parents": [
+          "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up"
+        ],
+        "nearestStep": 32,
+        "deltaPx": 2,
+        "odd": false
+      }
+    ],
+    "items": [
+      {
+        "page": "Checkbox ✅",
+        "node": "42752:35873",
+        "value": 31,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "약관 동의_to be",
+        "before": null,
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 32,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Buttons ✅",
+        "node": "43670:36890",
+        "value": 7,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227904",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 8,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Buttons ✅",
+        "node": "43684:16045",
+        "value": 7,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227904",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 8,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Bottom navigation ✅",
+        "node": "42955:59942",
+        "value": 19,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227874",
+        "before": "Tag",
+        "after": "Frame 2147227731",
+        "where": "product-candidate",
+        "nearestStep": 20,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Bottom navigation ✅",
+        "node": "42955:59964",
+        "value": 19,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227874",
+        "before": "Tag",
+        "after": "Frame 2147227731",
+        "where": "product-candidate",
+        "nearestStep": 20,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Bottom navigation ✅",
+        "node": "42955:59986",
+        "value": 19,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227874",
+        "before": "Tag",
+        "after": "Frame 2147227731",
+        "where": "product-candidate",
+        "nearestStep": 20,
+        "deltaPx": -1,
+        "odd": true
+      },
+      {
+        "page": "Modal ✅",
+        "node": "43205:15032",
+        "value": 78,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+        "before": null,
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      },
+      {
+        "page": "Modal ✅",
+        "node": "43205:15420",
+        "value": 78,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 52,
+        "deltaPx": 26,
+        "odd": false
+      },
+      {
+        "page": "Modal ✅",
+        "node": "43205:15421",
+        "value": 34,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "CM-01: 마케팅 정보 수신 약관 상세 Layer Pop-Up",
+        "before": "Spacing",
+        "after": null,
+        "where": "product-candidate",
+        "nearestStep": 32,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42925:26762",
+        "value": 29,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227857",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 28,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42925:26805",
+        "value": 29,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227857",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 28,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42925:26848",
+        "value": 29,
+        "axis": "가로",
+        "kind": "띠",
+        "parent": "Group 2147227857",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 28,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42925:26892",
+        "value": 50,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Group 2147227857",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 48,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42925:26893",
+        "value": 50,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Group 2147227857",
+        "before": "Spacing",
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 48,
+        "deltaPx": 2,
+        "odd": false
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42936:47722",
+        "value": 13,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Group 2147227866",
+        "before": null,
+        "after": "Spacing",
+        "where": "product-candidate",
+        "nearestStep": 12,
+        "deltaPx": 1,
+        "odd": true
+      },
+      {
+        "page": "Picker ✅",
+        "node": "42936:47723",
+        "value": 13,
+        "axis": "세로",
+        "kind": "띠",
+        "parent": "Group 2147227866",
+        "before": "Group 2147227865",
+        "after": null,
+        "where": "product-candidate",
+        "nearestStep": 12,
+        "deltaPx": 1,
+        "odd": true
+      }
+    ]
+  },
+  "oddValues": {
+    "what": "제품 후보 중 홀수 값 — 원본이 선언한 «2px 기본 단위»를 정면으로 어깁니다.",
+    "count": 11,
+    "values": [
+      7,
+      13,
+      19,
+      29,
+      31
+    ]
+  },
+  "distance": {
+    "what": "제품 간격 후보가 가장 가까운 단계에서 몇 px 떨어져 있는가.",
+    "buckets": [
+      {
+        "deltaPx": 1,
+        "count": 11,
+        "values": [
+          7,
+          13,
+          19,
+          29,
+          31
+        ]
+      },
+      {
+        "deltaPx": 2,
+        "count": 3,
+        "values": [
+          34,
+          50
+        ]
+      },
+      {
+        "deltaPx": "3 이상",
+        "count": 2,
+        "values": [
+          78
+        ]
+      }
+    ],
+    "observation": "[추론] 제품 후보 16건 중 11건이 단계에서 정확히 1px 떨어져 있습니다(19↔20 · 29↔28 · 7↔8 · 13↔12 · 31↔32). 홀수 11건과 그대로 겹칩니다. «스케일에 단계가 모자란다»보다 «주석 값이 1px 어긋나 찍힌다»에 가까워 보이지만, 테두리 1px 을 포함해 잰 것인지 · 실제로 1px 을 의도한 것인지는 원본이 정할 일입니다. [확인 필요] 저장소는 어느 쪽으로도 맞추지 않습니다."
+  },
+  "counts": {
+    "annotations": 192,
+    "offScale": 21,
+    "docCanvas": 5,
+    "product": 16,
+    "oddProduct": 11,
+    "unreadable": 17
+  },
+  "reading": "스케일 밖 21건 중 5건은 문서 캔버스 여백이고, 제품 간격 후보는 16건입니다. 그중 홀수는 11건입니다."
+}
