@@ -34,6 +34,8 @@ const PAGES = [
   { slug: 'smart-key', name: 'Smart key (스마트 키)', owns: /Smart ?key|스마트 ?키/ },
   { slug: 'principle', name: 'Principle (통합 디자인 원칙)', owns: /Principle|디자인 원칙/ },
   { slug: 'components-overview', name: 'Components overview (컴포넌트 오버뷰)', owns: /Components? overview|컴포넌트 ?오버뷰/ },
+  // «시작 전(—)» 표시인데 문서 프레임이 있는 쪽. 표시가 아니라 내용으로 세기 위해 같이 읽습니다.
+  { slug: 'accordion', name: 'Accordion (아코디언)', owns: /Accordion|아코디언/, mark: 'none' },
 ];
 
 // 목차 이름과 실제 페이지 이름이 다른 곳 — 원본이 페이지를 고쳐 부른 흔적입니다.
@@ -51,7 +53,7 @@ const loaded = PAGES.map(p => {
   if (!fs.existsSync(f)) return null;
   return { ...p, page: JSON.parse(fs.readFileSync(f, 'utf8')) };
 }).filter(Boolean);
-if (loaded.length < 16) throw new Error(`읽은 페이지가 너무 적습니다: ${loaded.length}`);
+if (loaded.length < 17) throw new Error(`읽은 페이지가 너무 적습니다: ${loaded.length}`);
 
 /** 페이지를 절로 자릅니다. */
 function sections(page) {
@@ -73,7 +75,11 @@ function sections(page) {
 // 문서 문장의 표지 — ① «Xxx (한글)» 꼴의 컴포넌트 이름을 담고 있거나 ② ➊➋➌➍ 로 시작.
 const BODY_MIN = 30;
 const COMPONENT_NAME = /[A-Z][A-Za-z]+(?: [A-Za-z]+)* ?\([가-힣][가-힣 +?]*\)/;
-const isDoc = t => t.length >= BODY_MIN && (COMPONENT_NAME.test(t) || /^[➊➋➌➍]/.test(t));
+// «Tip (팁)은» 처럼 정의를 여는 짧은 문장 — 30자 규칙에 걸려 통째로 빠져 있었습니다.
+// 이 꼴은 목업의 화면 문구가 될 수 없으므로(컴포넌트 이름 + 주격 조사) 길이와 무관하게 문서 문장입니다.
+const OPENER = /^[A-Z][A-Za-z]+(?: [A-Za-z]+)* ?\([가-힣][가-힣 +?]*\)(은|는|의)$/;
+const isDoc = t => OPENER.test(t)
+  || (t.length >= BODY_MIN && (COMPONENT_NAME.test(t) || /^[➊➋➌➍]/.test(t)));
 
 const corpus = new Map();   // 문장 → [{slug, section, node}]
 for (const L of loaded) {
@@ -103,20 +109,54 @@ for (const [text, where] of corpus) {
   });
 }
 
+/** 문서화된 컴포넌트 페이지의 영문 이름 → slug. 주어가 «실재하는 다른 페이지»인지 가리는 데 씁니다. */
+const EN0 = {};
+for (const L of PAGES) {
+  const m = L.name.match(/^([A-Za-z][A-Za-z ]*?) ?\(/);
+  if (m) EN0[m[1].trim().toLowerCase()] = L.slug;
+}
+
+/** 편집 거리 — 자기 이름의 «오타»와 «남의 이름»을 가르는 데만 씁니다. */
+function edit(a, b) {
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++)
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return d[a.length][b.length];
+}
+
 /** 자기 페이지가 아닌 컴포넌트 이름으로 시작하는 문장 — 템플릿을 복사하고 안 고친 자리. */
 const foreign = [];
+const ownNameTypos = [];
 for (const L of loaded) {
   const secs = sections(L.page);
   // 그 페이지가 스스로 절 제목으로 쓴 이름은 «남»이 아닙니다 — Bottom sheet 의 Body (중단) 같은 하위 영역.
   const ownTitles = secs.map(s => s.title.replace(/^\[|\]$/g, '').replace(/^[➊➋➌➍]\s*/, ''));
   for (const s of secs) {
     for (const r of s.rows) {
-      if (r.text.length < 12) continue;
-      const m = r.text.match(/^([A-Z][A-Za-z ]+ \([가-힣 ]+\))(은|는|의)/);
+      if (r.text.length < 12 && !OPENER.test(r.text)) continue;
+      const m = r.text.match(/^([A-Z][A-Za-z ]+ ?\([가-힣 ]+\))(은|는|의)/);
       if (!m) continue;
       if (L.owns.test(m[1])) continue;
       if (ownTitles.some(t => t === m[1])) continue;
-      foreign.push({ page: L.slug, section: s.title, subject: m[1], text: r.text.slice(0, 160), node: r.node });
+      const en = m[1].replace(/ ?\(.*$/, '').trim();
+      const ko = (m[1].match(/\(([^)]*)\)/) || [, ''])[1].trim();
+      const ownEn = (L.name.match(/^([A-Za-z][A-Za-z ]*?) ?\(/) || [, ''])[1].trim();
+      // ① 자기 이름의 오타 — «Componenets (컴포넌트)» 는 남의 문장이 아니라 철자 문제입니다(GAP-19 쪽).
+      // 이름이 여러 낱말이면 첫 낱말과도 견줍니다 — «Components overview» 쪽의 «Componenets» 를 잡기 위해서.
+      const ownForms = [ownEn, ownEn.split(' ')[0]].filter(Boolean).map(x => x.toLowerCase());
+      if (ownForms.some(f => edit(en.toLowerCase(), f) <= 2)) {
+        ownNameTypos.push({ page: L.slug, section: s.title, found: m[1], should: L.name, node: r.node });
+        continue;
+      }
+      // ② 위치를 가리키는 하위 영역 이름 — Body (중단) 처럼. 남의 컴포넌트라고 단정하지 않습니다.
+      const structural = /^(상단|중단|하단|기본형|좌측|우측)$/.test(ko);
+      foreign.push({
+        page: L.slug, section: s.title, subject: m[1],
+        belongsTo: EN0[en.toLowerCase()] || null,
+        kind: structural ? 'structural' : 'component',
+        text: r.text.slice(0, 160), node: r.node,
+      });
     }
   }
 }
@@ -157,7 +197,9 @@ for (const L of loaded) {
   for (const s of sections(L.page)) {
     for (const r of s.rows) {
       if (!/(은|는|이|가|에서|으로)$/.test(r.text)) continue;
-      if (r.text.length < 10 || r.text.length > 60) continue;
+      if (r.text.length > 60) continue;
+      // 짧은 것은 화면 라벨(«WEB / 페이» · «개인계정 추가»)일 수 있어 컴포넌트 이름 꼴만 셉니다.
+      if (r.text.length < 10 && !OPENER.test(r.text)) continue;
       truncated.push({ page: L.slug, section: s.title, text: r.text, node: r.node });
     }
   }
@@ -220,7 +262,17 @@ const out = {
   foreignSubjects: {
     why: '문장의 주어가 그 페이지의 컴포넌트가 아닌 것입니다. 겹치지 않아도(한 곳에만 있어도) 남의 문장입니다.',
     count: foreign.length,
+    countComponent: foreign.filter(f => f.kind === 'component').length,
+    countStructural: foreign.filter(f => f.kind === 'structural').length,
+    caveat: '주어가 다른 «컴포넌트»인 것(kind=component)이 오염입니다. '
+      + 'Body (중단) 처럼 위치를 가리키는 하위 영역 이름은 kind=structural 로 갈라 두고 단정하지 않습니다. '
+      + '자기 이름의 철자만 틀린 것은 오염이 아니라 오타라서 ownNameTypos 로 뺐습니다.',
     items: foreign,
+  },
+  ownNameTypos: {
+    why: '주어가 그 페이지 자신인데 철자가 틀린 곳입니다. 남의 문장이 아니라 오타라서 따로 셉니다.',
+    count: ownNameTypos.length,
+    items: ownNameTypos,
   },
   nameMismatch: {
     why: '영문 이름과 괄호 안 한글이 서로 다른 컴포넌트인 곳입니다. 복사한 뒤 한쪽만 고친 흔적입니다.',
@@ -234,6 +286,10 @@ const out = {
   },
   counts: {
     pages: loaded.length,
+    borrowedPlaces: borrowed.reduce((n, b) => n + b.appearsIn.length, 0),
+    foreignComponent: foreign.filter(f => f.kind === 'component').length,
+    foreignStructural: foreign.filter(f => f.kind === 'structural').length,
+    ownNameTypos: ownNameTypos.length,
     withDocTemplate: loaded.filter(L => sections(L.page).length > 0).length,
     borrowed: borrowed.length,
     foreign: foreign.length,
