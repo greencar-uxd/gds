@@ -75,43 +75,75 @@ const tierVsDeclared = {
 // 페이지를 읽고 나서 실제로 남은 것만입니다. 처음에 적었던 «이름 규칙 없음 · 크기 없음 · 목록 없음»은
 // 페이지를 안 읽고 단정한 것이라 철회했습니다.
 //
-// 2026-08-06 — 이 둘을 레퍼런스로 «메웠습니다». 메웠다고 «있는 것»이 되지는 않습니다.
-// 원본에 없다는 사실은 그대로 두고, 참고로 채운 후보를 옆에 답니다 (data/icon-reference.json).
+// 2026-08-06 두 번째 정정 — 이 둘도 원본에 있었습니다.
+// 레퍼런스로 «메웠던» 것을 걷어내고, 원본 제작 가이드라인(data/icon-guide.json)으로 대체했습니다.
+// 레퍼런스는 이제 «메우는 것»이 아니라 «원본 문장이 어디서 왔는지 대조하는 것»으로만 씁니다.
 const REF = (() => {
   const p = path.join(ROOT, 'data', 'icon-reference.json');
   return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
 })();
+const GUIDE = (() => {
+  const p = path.join(ROOT, 'data', 'icon-guide.json');
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null;
+})();
+if (!GUIDE) throw new Error('data/icon-guide.json 이 없습니다 — tools/build-icon-guide.js 를 먼저 돌리세요');
 
-const missing = [
+// 원본을 다 읽고도 남은 것. 두 참고에는 있는데 원본에는 없는 축입니다.
+const missing = (GUIDE.notInOriginal ? GUIDE.notInOriginal.items : []).map(i => ({
+  item: i.item,
+  why: i.note || (REF ? (REF.quotes.find(q => q.id === i.quote) || {}).note : null)
+    || '원본 제작 가이드라인 00~08 어디에도 없습니다.',
+  seenIn: i.quote || null,
+  stillMissingInSource: true,
+  filledWith: null,   // 메우지 않습니다 — 원본에 없는 축을 참고로 채우면 그게 오염입니다.
+}));
+
+// ── 00_Size 가 정한 «주요 크기»와 실제 노드가 선언한 크기의 차이.
+// 강민관 2026-08-06 — «일단 36 50 56은 냅 두시고». 정리하지 않고 기록만 합니다.
+const GUIDE_SIZES = GUIDE.values.sizeStroke.map(s => s.px).sort((a, b) => a - b);
+const declaredAll = Object.keys(PAGE.declaredSizes).map(Number).sort((a, b) => a - b);
+const offScale = declaredAll.filter(px => !GUIDE_SIZES.includes(px))
+  .map(px => ({ px, count: PAGE.declaredSizes[String(px)], multipleOf4: px % 4 === 0, multipleOf8: px % 8 === 0 }));
+const sizeGap = {
+  guideSizes: GUIDE_SIZES,
+  declaredSizes: declaredAll,
+  offScale,
+  rule: (GUIDE.guide[0].rows.find(r => /배수/.test(r)) || GUIDE.guide[0].lead || ''),
+  decision: {
+    by: '강민관',
+    at: '2026-08-06',
+    what: '유지 — 정리하지 않습니다',
+    quote: '일단 36 50 56은 냅 두시고',
+    why: '원본 00_Size 의 주요 크기 다섯(16·20·24·32·40) 밖에 있는 크기들입니다. 쓰이는 건수가 적고(각 5·1·1건) 지금 정리할 사안이 아니라는 판단입니다.',
+  },
+};
+
+const retracted = [
+  { item: '아이콘 이름 규칙', why: `있습니다 — 원본이 스스로 «${GUIDE.naming.rule}» 로 선언합니다. 실제 노드도 이 꼴이 ${PAGE.naming.conforming}건으로 다수입니다.`, round: 1 },
+  { item: '아이콘 전체 목록', why: `있습니다 — 아이콘 ${PAGE.counts.icons}종 / Icon/system/* 노드 ${PAGE.counts.nodes}개.`, round: 1 },
+  { item: '단계별 크기 스케일', why: `있습니다 — 문서 프레임에 ${PAGE.sizeTiers.tiers.map(t => `${t.name} ${t.px}px`).join(' · ')}. 다만 컴포넌트 선언 크기와 축이 다릅니다.`, round: 1 },
   {
     item: '아이콘 그리드',
-    why: '기준 캔버스·여백·선 굵기 정렬 규칙이 페이지 metadata 에서 읽히지 않습니다. 실제로 없는지 이미지로만 그려져 있는지는 화면을 봐야 압니다.',
-    filledWith: REF ? 'reference' : null,
-    proposal: REF ? REF.grid.proposal : null,
-    stillMissingInSource: true,
+    why: `있습니다 — 02_Key line shape 절에 프레임 ${GUIDE.values.keyline.frame} · Square ${GUIDE.values.keyline.square} · Circle ${GUIDE.values.keyline.circle} · Rectangular ${GUIDE.values.keyline.rectangular} · 세이프존 여백 ${GUIDE.values.keyline.safeZone}. 01_Layout 이 Live area / Padding / Keyline 구조까지 정의합니다.`,
+    round: 2,
   },
   {
     item: '크기 단계의 용도 배정',
-    why: '어느 자리에 24px 을 쓰고 어느 자리에 16px 을 쓰는지가 원본에 적혀 있지 않습니다. 컴포넌트 실측으로 몇 자리만 알 수 있습니다(Bottom navigation 32 · Checkbox 체크 9×12).',
-    filledWith: REF ? 'reference' : null,
-    proposal: REF ? REF.sizeUsage.proposal : null,
-    stillMissingInSource: true,
+    why: `있습니다 — 00_Size 절이 «${GUIDE.guide[0].lead}» 라고 적고, 크기별 굵기까지 ${GUIDE.values.sizeStroke.map(s => `${s.px}:${s.stroke}`).join(' · ')} 로 배정해 두었습니다.`,
+    round: 2,
   },
-];
-
-const retracted = [
-  { item: '아이콘 이름 규칙', why: `있습니다 — «${PAGE.naming.rule}». 이 꼴이 ${PAGE.naming.conforming}건으로 다수입니다.` },
-  { item: '아이콘 전체 목록', why: `있습니다 — 아이콘 ${PAGE.counts.icons}종 / Icon/system/* 노드 ${PAGE.counts.nodes}개.` },
-  { item: '단계별 크기 스케일', why: `있습니다 — 문서 프레임에 ${PAGE.sizeTiers.tiers.map(t => `${t.name} ${t.px}px`).join(' · ')}. 다만 컴포넌트 선언 크기와 축이 다릅니다.` },
 ];
 
 const out = {
   $description: '아이콘 — Foundation 요소인데 규칙이 Guidelines 에, 목록이 🚧 페이지에, 치수가 컴포넌트 페이지에 흩어져 있던 것을 모은 것입니다.',
-  generatedFrom: 'tools/build-icons.js ← data/figma-pages/icon-system.json · data/gds-library.json · data/gds-structure.json',
+  generatedFrom: 'tools/build-icons.js ← data/icon-guide.json · data/figma-pages/icon-system.json · data/gds-library.json · data/gds-structure.json',
   rule: '근거의 종류를 구분해서 답니다 — ✅ 페이지 / 🚧 페이지 직접 읽기 / 컴포넌트 실측. 없는 것만 «없음»으로 남깁니다.',
   correction: {
     at: '2026-08-06',
-    what: '처음 판에서 «원본에 없다»고 적은 3가지가 전부 틀렸습니다. Icon system 페이지가 🚧 라는 이유로 열어 보지 않고 단정했습니다.',
+    rounds: 2,
+    what: '두 번 틀렸습니다. ① 🚧 라는 이유로 페이지를 열지 않고 «이름 규칙·목록·크기 스케일 없음»이라 단정. ② 열었다고 했지만 실제로는 노드 «이름»만 훑어서 «그리드·크기 용도 없음»이라 단정하고 레퍼런스로 메움.',
+    whyWrongTwice: '첫 번째는 페이지를 안 봐서, 두 번째는 페이지의 «본문»을 안 봐서입니다. 파서(tools/parse-icon-page.js)가 Icon/system/* 노드 이름만 모으고 문서 프레임 텍스트를 버렸습니다.',
+    fixedBy: '페이지를 통째로 다시 읽는 파서(tools/parse-figma-page.js)로 갈아탔습니다. 이제 본문 텍스트 1,356줄이 data/figma-pages/icon-system-full.json 에 그대로 남습니다.',
     retracted,
   },
   layerNote: {
@@ -145,6 +177,8 @@ const out = {
   measured,
   iconTokens,
   missing,
+  sizeGap,
+  guide: GUIDE,
   reference: REF,
   counts: {
     levels: G.graphic.levels.length,
@@ -157,10 +191,12 @@ const out = {
     icons: PAGE.counts.icons,
     namingConforming: PAGE.naming.conforming,
     namingNonConforming: PAGE.naming.nonConforming,
-    referenceItems: REF ? REF.grid.items.length : 0,
-    referenceSteps: REF ? REF.sizeUsage.steps.length : 0,
+    guideSections: GUIDE.counts.sections,
+    sizeStroke: GUIDE.counts.sizeStroke,
+    referenceQuotes: REF ? REF.quotes.length : 0,
     referenceSources: REF ? REF.sources.length : 0,
-    stillOpen: REF ? REF.stillOpen.length : 0,
+    verbatimFromKrds: GUIDE.counts.verbatim,
+    offScaleSizes: offScale.length,
   },
 };
 
@@ -173,45 +209,47 @@ for (const m of measured) {
 if (out.counts.namingConforming + out.counts.namingNonConforming !== PAGE.counts.uniqueNames) {
   throw new Error('이름 규칙 집계가 페이지 읽기 결과와 다릅니다');
 }
+if (offScale.length !== 3) throw new Error(`00_Size 밖 크기가 3개가 아닙니다: ${offScale.map(o => o.px).join('/')}`);
+if (!sizeGap.decision.quote) throw new Error('유지 결정의 근거 문장이 없습니다');
 if (iconItem.figma === 'done') {
   throw new Error('Icon system 페이지가 ✅ 가 됐습니다 — 다시 읽어 대조하세요 (GAP-22)');
 }
 
 // ── 참고 자료가 원본으로 둔갑하지 않도록 하는 규칙 ──
-// 여기서 막지 않으면 «출처 없는 숫자»가 조용히 토큰까지 흘러갑니다.
+// 두 번 틀린 자리입니다. 여기서 막지 않으면 «출처 없는 숫자»가 조용히 토큰까지 흘러갑니다.
 if (REF) {
-  if (REF.status !== 'proposal') throw new Error('참고 자료는 proposal 상태여야 합니다 — 확정은 디자인팀 몫입니다');
+  if (REF.status !== 'comparison') {
+    throw new Error(`참고 자료는 comparison 상태여야 합니다 — 메우는 용도가 아닙니다: ${REF.status}`);
+  }
+  if (!REF.retracted || !REF.retracted.why) throw new Error('참고 자료의 철회 경위가 없습니다');
   const ids = new Set(REF.sources.map(s => s.id));
   for (const s of REF.sources) {
     if (!/^https:\/\//.test(s.url || '')) throw new Error(`출처에 URL 이 없습니다: ${s.name}`);
     if (!(s.whyThisOne || '').length) throw new Error(`출처를 고른 이유가 없습니다: ${s.name}`);
   }
-  for (const i of REF.grid.items) {
-    if (!ids.has(i.source)) throw new Error(`그리드 항목의 출처가 등록되지 않았습니다: ${i.item} → ${i.source}`);
-    if (!(i.quote || '').length) throw new Error(`그리드 항목에 원문 인용이 없습니다: ${i.item}`);
+  for (const q of REF.quotes) {
+    if (!ids.has(q.source)) throw new Error(`인용의 출처가 등록되지 않았습니다: ${q.id}`);
+    if (!(q.text || '').length) throw new Error(`인용문이 비어 있습니다: ${q.id}`);
   }
-  for (const st of REF.sizeUsage.steps) {
-    if (!ids.has(st.source)) throw new Error(`크기 단계의 출처가 등록되지 않았습니다: ${st.px} → ${st.source}`);
-    if (typeof st.originalCount !== 'number') throw new Error(`크기 단계에 원본 선언 건수가 없습니다: ${st.px}`);
-    if (PAGE.declaredSizes[String(st.px)] !== st.originalCount) {
-      throw new Error(`크기 ${st.px} 의 원본 건수가 페이지 읽기와 다릅니다 — 제안 ${st.originalCount} / 페이지 ${PAGE.declaredSizes[String(st.px)]}`);
-    }
+  // 참고 값이 원본 값을 덮어쓰지 않았는지 — 가이드의 값은 전부 원본 노드에서 와야 합니다.
+  const V = GUIDE.values;
+  if (V.stroke.value !== '1.2px') {
+    throw new Error(`스트로크가 원본 값(1.2px)이 아닙니다 — 참고(KRDS 1.6 / M3 2)로 덮어쓰였는지 확인하세요: ${V.stroke.value}`);
   }
-  // 제안한 다섯 단계 + 제안 밖 세 개 = 원본이 선언한 크기 전부여야 합니다. 빠뜨리면 «없는 척»이 됩니다.
-  const covered = [...REF.sizeUsage.steps.map(s => s.px), ...REF.sizeUsage.outsideProposal.items.map(s => s.px)]
-    .sort((a, b) => a - b);
-  const declaredAll = Object.keys(PAGE.declaredSizes).map(Number).sort((a, b) => a - b);
-  if (JSON.stringify(covered) !== JSON.stringify(declaredAll)) {
-    throw new Error(`제안이 원본 선언 크기를 전부 다루지 않습니다 — 다룬 것 ${covered.join('/')} · 원본 ${declaredAll.join('/')}`);
+  if (V.endCap.base !== 'Round') throw new Error(`기본 Cap 이 원본 값(Round)이 아닙니다: ${V.endCap.base}`);
+  // 원본에 없는 축을 참고로 채우지 않았는지.
+  if (missing.some(m => m.filledWith)) {
+    throw new Error(`원본에 없는 축을 참고로 채웠습니다: ${missing.filter(m => m.filledWith).map(m => m.item).join(', ')}`);
   }
-  for (const o of REF.sizeUsage.outsideProposal.items) {
-    if (PAGE.declaredSizes[String(o.px)] !== o.count) {
-      throw new Error(`제안 밖 크기 ${o.px} 의 건수가 페이지 읽기와 다릅니다`);
-    }
-  }
-  // 메웠어도 «원본에 없다»는 사실은 지우지 않습니다.
   if (!missing.every(m => m.stillMissingInSource === true)) {
-    throw new Error('참고로 메운 항목에서 «원본에 없음» 표시가 사라졌습니다');
+    throw new Error('«원본에 없음» 표시가 사라진 항목이 있습니다');
+  }
+  // 출처 대조는 손이 아니라 기계가 판정해야 합니다.
+  if (!GUIDE.provenance || !GUIDE.provenance.items.length) throw new Error('출처 대조 결과가 없습니다');
+  for (const it of GUIDE.provenance.items) {
+    if (!['verbatim', 'partial', 'independent'].includes(it.verdict)) {
+      throw new Error(`출처 대조 판정이 이상합니다: ${it.quote} → ${it.verdict}`);
+    }
   }
 }
 
@@ -221,7 +259,9 @@ console.log('아이콘 → data/icons.json');
 console.log(`  분류 ${out.counts.levels}단계 · 원칙 ${out.counts.principles}개 (출처 ${out.classification.source})`);
 console.log(`  페이지 직접 읽기 — 아이콘 ${out.counts.icons}종 · 이름 규칙 맞는 것 ${out.counts.namingConforming} / 어긋난 것 ${out.counts.namingNonConforming}`);
 console.log(`  실측 ${out.counts.measured}건 / 컴포넌트 ${out.counts.measuredComponents}종 · 관련 토큰 ${out.counts.iconTokens}종`);
+console.log(`  원본 제작 가이드라인 ${out.counts.guideSections}절 · 크기별 굵기 ${out.counts.sizeStroke}단계`);
+console.log(`  00_Size 밖 크기 ${offScale.map(o => `${o.px}(${o.count}건)`).join(' · ')} — ${sizeGap.decision.what} (${sizeGap.decision.by} ${sizeGap.decision.at})`);
 if (REF) {
-  console.log(`  참고로 메움 — 그리드 ${out.counts.referenceItems}항목 · 크기 ${out.counts.referenceSteps}단계 (출처 ${out.counts.referenceSources}곳) · 여전히 미결 ${out.counts.stillOpen}건`);
+  console.log(`  출처 대조(참고 ${out.counts.referenceQuotes}인용 / ${out.counts.referenceSources}곳) — KRDS 원문 그대로 ${out.counts.verbatimFromKrds}절`);
 }
 console.log(`  철회한 «없음» 판정 ${out.counts.retracted}건 · 실제로 없는 것 ${out.counts.missing}가지`);
