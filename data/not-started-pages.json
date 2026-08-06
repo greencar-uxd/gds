@@ -2,7 +2,7 @@
   "$description": "구조도가 «시작 전(—)» 으로 세던 8쪽을 직접 확인한 결과입니다. 🚧 와 마찬가지로 «—» 도 «빈 페이지»가 아니었습니다.",
   "why": "🚧 19쪽을 다 읽고 나니 «—» 표시도 같은 의심을 받아야 했습니다. 표시만 보고 «없다»고 세는 것이 바로 GAP-32 의 내용입니다.",
   "readAt": "2026-08-06",
-  "how": "mcp__Figma__get_metadata 로 페이지를 직접 열었습니다. 세 쪽(Skeleton · Process bar · Radio)은 XML 을 저장해 tools/parse-figma-page.js 로 구조화했고(data/figma-pages/*.json), 나머지 다섯 쪽은 응답이 작아 파일로 저장되지 않아 «옮겨 적기»로 남깁니다 — 그 항목은 transcribed: true 이며 근거 노드 ID 를 답니다.",
+  "how": "mcp__Figma__get_metadata 로 페이지를 열고, 응답 XML 을 data/figma-xml/ 에 그대로 저장합니다. 세 쪽(Skeleton · Process bar · Radio)은 tools/parse-figma-page.js 산출물이 근거이고, 나머지 다섯 쪽은 XML 이 근거입니다. tools/verify-transcribed.js 가 인용 노드와 수치를 원자료에서 다시 셉니다.",
   "rule": [
     "옮겨 적은 항목은 기계가 다시 세지 못합니다. 그래서 transcribed 로 표시하고, 수치는 근거 노드 ID 와 함께만 적습니다.",
     "«문서 틀만 있고 내용이 없다»와 «빈 페이지»는 다릅니다. 구분해서 적습니다.",
@@ -14,27 +14,31 @@
       "name": "Table (테이블)",
       "node": "42562:18899",
       "state": "empty",
-      "transcribed": true,
+      "transcribed": false,
       "finding": "노드가 하나도 없습니다. 원본 63쪽 중 유일하게 «정말로 빈» 페이지입니다.",
-      "evidence": "<canvas id=\"42562:18899\" name=\"Table (테이블)\" …/> — 자식 노드 0"
+      "evidence": "<canvas id=\"42562:18899\" name=\"Table (테이블)\" …/> — 자식 노드 0",
+      "raw": "data/figma-xml/table.xml"
     },
     {
       "slug": "card",
       "name": "Card (카드)",
       "node": "42479:74478",
       "state": "template-only",
-      "transcribed": true,
+      "transcribed": false,
       "finding": "문서화 틀(Detail 1 · Detail 2)만 놓여 있고 본문 자리에 «-» 만 있습니다. 컴포넌트는 있습니다 — mcard_set 변형 15종(42722:52947).",
-      "evidence": "42554:48893 · 42554:48900 이 «-» 텍스트. 변형 예: Property 1=mcard_LP_def(42722:52971) · mcard_T_def(42722:52980) · mcard_kt_def(42722:53098)"
+      "evidence": "42554:48893 · 42554:48900 이 «-» 텍스트. 변형 예: Property 1=mcard_LP_def(42722:52971) · mcard_T_def(42722:52980) · mcard_kt_def(42722:53098)",
+      "raw": "data/figma-xml/card.xml"
     },
     {
       "slug": "switch",
       "name": "Switch (스위치)",
       "node": "42073:65749",
       "state": "template-only",
-      "transcribed": true,
-      "finding": "문서화 틀 두 벌(42419:38532 · 42553:11689) 모두 본문이 «-» 입니다. 컴포넌트는 있습니다 — Toggle checked=Off/On(42073:65636 · 42073:65639) · account_type_toggle 2종(44665:1867 · 44665:1868) · btn_key_lock 2종(42419:38418 · 42419:38420).",
-      "evidence": "42553:11709 · 42553:11716 이 «-» 텍스트"
+      "transcribed": false,
+      "finding": "문서화 틀이 두 벌 놓여 있는데, 뒤의 한 벌(42553:11689)만 본문 자리에 «-» 가 있고 앞의 한 벌(42419:38532)은 Detail(42419:38544)이 아예 비어 있습니다. 컴포넌트는 있습니다 — Toggle checked=Off/On(42073:65636 · 42073:65639) · account_type_toggle 2종(44665:1867 · 44665:1868) · btn_key_lock 2종(42419:38418 · 42419:38420).",
+      "evidence": "42553:11709 · 42553:11716 이 «-» 텍스트. 42419:38532 쪽에는 «-» 조차 없습니다 — 원자료에서 «-» 노드는 이 두 개뿐입니다.",
+      "raw": "data/figma-xml/switch.xml",
+      "correction": "처음에는 «문서화 틀 두 벌 모두 본문이 «-»»라고 적었습니다. 원자료를 다시 세니 틀렸습니다 — 앞의 한 벌은 «-» 도 없는 빈 프레임입니다. tools/verify-transcribed.js 가 잡았습니다."
     },
     {
       "slug": "accordion",
@@ -80,7 +84,7 @@
       "name": "Loading spinner(로딩 스피너)",
       "node": "42554:48781",
       "state": "spec-outside-template",
-      "transcribed": true,
+      "transcribed": false,
       "finding": "문서화 틀은 «-» 로 비어 있는데, 캔버스에 As-is 스펙이 따로 적혀 있습니다. Lottie 두 종의 형태·색·크기·프레임레이트가 다 있습니다.",
       "spec": [
         {
@@ -107,12 +111,13 @@
         }
       ],
       "toBe": {
-        "state": "미작성",
+        "state": "As-is 복사본 그대로",
         "text": "To-be(변경 스팩 작성해주세요)",
         "nodes": [
           "43416:2266",
           "43416:2268"
-        ]
+        ],
+        "detail": "두 자리 다 비어 있지 않습니다. As-is 문구(형태·컬러·크기·fps)가 글자 그대로 복사돼 있고 앞에 «To-be(변경 스팩 작성해주세요)» 만 붙어 있습니다."
       },
       "workNote": {
         "text": "**작업 방식 -Json으로 되어 있어서 적정 컬러 변경 값만 전달하면 변경가능. -VSCode 등 에서 일괄 변환 요청",
@@ -121,7 +126,9 @@
       "externalLink": {
         "what": "관련 파일 링크가 Confluence 로 걸려 있습니다",
         "node": "43416:6437"
-      }
+      },
+      "raw": "data/figma-xml/loading-spinner.xml",
+      "correction": "처음에는 «To-be 미작성»이라고 적었습니다. 원자료를 보니 «비어 있음»이 아니라 «As-is 를 복사해 두고 안 고침»입니다. 둘은 다릅니다 — 뒤엣것이면 값이 바뀌었는지 사람이 알 수 없습니다."
     },
     {
       "slug": "skeleton",
@@ -161,8 +168,9 @@
     "screensOnly": 3,
     "reading": "8쪽 중 «정말로 빈» 페이지는 Table 하나뿐입니다. 나머지 7쪽에는 컴포넌트·화면·스펙·오염된 문서 중 하나 이상이 있습니다.",
     "$note": "이 수치는 손으로 적었다가 build/check.js 의 «요약 수치가 항목과 일치» 검사에 걸려 고쳤습니다(templateOnly 3→2). 손으로 적은 수는 반드시 기계가 대조합니다.",
-    "transcribed": 4,
-    "parsed": 4
+    "transcribed": 0,
+    "parsed": 8,
+    "corrections": 2
   },
-  "$update": "2026-08-06 — Accordion 을 파서에 넣었습니다. 손으로 옮겨 적은 쪽이 5쪽에서 4쪽으로 줄었습니다."
+  "$update": "2026-08-06 — 여덟 쪽 모두 원자료를 저장소에 넣었습니다. 손으로 옮겨 적은 쪽은 0. 그 과정에서 손으로 적었던 진술 2건이 틀린 것으로 드러나 정정했습니다(Switch · Loading spinner)."
 }
