@@ -164,6 +164,7 @@ module.exports = {
       elevation: load('elevation-page.json'),
       radius: load('radius-page.json'),
       textField: load('textfield-page.json'),
+      components: load('component-pages.json'),
       readSlugs: read.map(f => f.replace(/\.json$/, '')),
     };
   })(),

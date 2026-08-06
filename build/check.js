@@ -1305,6 +1305,70 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       ok('Text field 페이지가 렌더됨', htmlP.includes('원본 결함') && htmlP.includes('Split text field'));
     }
 
+    // ── 🚧 컴포넌트 페이지 5쪽 (Bottom sheet · Search field · Info box · Helper text · Text field)
+    const WP = PG.components;
+    ok('🚧 컴포넌트 페이지가 16쪽 읽힘', !!WP && WP.counts.pages === 16,
+      WP ? `${WP.counts.pages}쪽` : '없음');
+    if (WP) {
+      ok('페이지마다 근거 노드가 있음', WP.pages.every(pg => /^\d+:\d+$/.test(pg.source.node)));
+      ok('절 본문이 원본 텍스트와 글자 그대로 일치', WP.pages.every(pg => {
+        const rawp = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'figma-pages', pg.slug + '.json'), 'utf8'));
+        const has = t => rawp.texts.some(x => x.text.replace(/\s+/g, ' ').trim() === t);
+        return pg.sections.every(sec => !sec.lead || has(sec.lead));
+      }), '파서가 원본 줄을 그대로 옮겼는지');
+      ok('남의 문장을 기계로 찾았음', WP.counts.borrowed > 0 && WP.counts.foreign > 0,
+        `겹침 ${WP.counts.borrowed} · 주어 ${WP.counts.foreign}`);
+      ok('남의 문장이 두 곳 이상에 실재',
+        WP.borrowed.items.every(b => new Set(b.appearsIn.map(a => a.slug)).size >= 2));
+      // 원본은 남의 문장을 절의 첫 문장으로 두기도 합니다(Search field 의 [유형] = Top app bar 문장).
+      // 저장소가 할 일은 «고치는 것»이 아니라 «그런 자리를 하나도 빠뜨리지 않고 표시하는 것»입니다.
+      ok('남의 문장이 절 첫 문장으로 있는 자리를 빠짐없이 표시함', (() => {
+        const flagged = new Set(WP.borrowed.items.map(b => `${b.text}`));
+        const owners = new Map(WP.borrowed.items.map(b => [b.text, b.owner]));
+        for (const pg of WP.pages) {
+          for (const sec of pg.sections) {
+            if (!sec.lead) continue;
+            const o = owners.get(sec.lead);
+            if (o && o !== pg.slug && !flagged.has(sec.lead)) return false;
+          }
+        }
+        return true;
+      })(), '원본의 오염을 고치지 않고 세는 것이 목적입니다');
+      ok('남의 문장이 실제로 절 첫 문장으로도 발견됨', (() => {
+        const owners = new Map(WP.borrowed.items.map(b => [b.text, b.owner]));
+        return WP.pages.some(pg => pg.sections.some(sec =>
+          sec.lead && owners.get(sec.lead) && owners.get(sec.lead) !== pg.slug));
+      })(), 'Search field 의 [유형] 이 Top app bar 문장인 것 같은 사례');
+      ok('화면 목업 문구를 남의 문장으로 세지 않음',
+        WP.borrowed.items.every(b => /[A-Z][A-Za-z]/.test(b.text) || /^[➊➋➌➍]/.test(b.text)),
+        '앱 문구가 아니라 문서 문장만');
+      ok('쓰다 만 문장을 이어 쓰지 않음',
+        WP.truncated.items.every(t => !/[.。]$/.test(t.text)));
+      ok('빈 템플릿을 «내용 있음»으로 세지 않음',
+        WP.pages.every(pg => pg.counts.templateStubs >= 0)
+        && WP.pages.some(pg => pg.counts.templateStubs > 0));
+      ok('🚧 컴포넌트 페이지가 사이트에 실림',
+        htmlP.includes('🚧 컴포넌트 페이지를 직접 읽었습니다') && htmlP.includes('남의 문장'));
+      // Bottom sheet — 저장소가 «정의가 Picker ✅ 안에 있다»고 적어 왔는데, 자기 페이지에 정의가 있습니다.
+      const bs = WP.pages.find(pg => pg.slug === 'bottom-sheet');
+      ok('Bottom sheet 정의가 자기 페이지에 있음',
+        !!bs && bs.sections.some(s => s.title === '[정의]' && /Bottom Sheet \(바텀시트\)는/.test(s.lead || '')));
+      ok('목차 이름과 페이지 이름이 다른 곳을 표시함',
+        WP.naming.items.filter(n => n.differs).length >= 3,
+        WP.naming.items.filter(n => n.differs).map(n => `${n.inToc}→${n.pageName}`).join(' · '));
+      ok('이름 짝 어긋남을 기계로 찾음',
+        WP.nameMismatch.count > 0
+        && WP.nameMismatch.count === WP.nameMismatch.items.length
+        && WP.nameMismatch.items.every(n => n.enBelongsTo !== n.koBelongsTo && /^\d+:\d+$/.test(n.node)),
+        WP.nameMismatch.items.map(n => n.found).join(' · '));
+      ok('문서화 템플릿이 없는 페이지도 «빈 페이지»로 세지 않음', (() => {
+        const noTpl = WP.pages.filter(pg => !pg.docTemplate);
+        return noTpl.every(pg => pg.workNotes.length > 0 && pg.counts.texts > 0);
+      })(), `템플릿 있는 쪽 ${WP.counts.withDocTemplate}/${WP.counts.pages}`);
+      ok('Bottom sheet 이 Dim layer 를 쓰지 않는다는 근거가 실림',
+        !!bs && bs.sections.some(s => (s.rows || []).some(r => /Dim layer \(딤 레이어\)를 사용하지 않습니다/.test(r))));
+    }
+
     // ── 방법 자체를 GAP 으로 남겼는지
     const g32 = VIEW.GAPS.items.find(g => g.id === 'GAP-32');
     ok('«🚧 를 빈 페이지로 셌다»가 GAP 으로 기록됨', !!g32 && g32.status !== 'resolved'
