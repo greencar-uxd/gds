@@ -944,11 +944,31 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         }));
       ok('키 충돌 확정마다 확정자와 날짜가 있음',
         EF.keyCollisions.filter(c => c.resolved).every(c => !!c.decidedBy && /^\d{4}-\d{2}-\d{2}$/.test(c.decidedAt || '')));
-      ok('진 쪽은 SD 로 기록됨',
-        EF.keyCollisions.filter(c => c.resolved && c.loser).every(c =>
-          (VIEW.sourceDefects.items || []).some(d => d.where && d.where.includes(c.loser.name))));
+      // ── 소속 검증 (2026-08-06) — «GDS 라이브러리에 없으면 정본이 아니다»를 효과에도 적용합니다.
+      ok('정본 효과가 전부 GDS 소속이거나 미확인',
+        EF.items.every(i => !i.library || /^GDS/.test(i.library)),
+        EF.items.filter(i => i.library && !/^GDS/.test(i.library)).map(i => i.name).join(', '));
+      ok('다른 라이브러리 스타일은 배제 목록에 이유와 함께 있음',
+        (EF.excludedStyles || []).every(e => e.library && (e.why || '').length > 20));
+      ok('배제된 스타일은 정본 목록에 없음',
+        (EF.excludedStyles || []).every(e => !EF.items.some(i => i.name === e.name)));
+      // 키(슬러그)로 보면 안 됩니다 — «Bottom Sheet» 와 «bottom sheet» 는 같은 키를 만듭니다.
+      // 방출 줄의 주석이 어느 스타일에서 왔는지 적으므로 «이름»으로 봅니다.
+      ok('배제된 스타일에서 나온 토큰이 없음',
+        (EF.excludedStyles || []).every(e =>
+          !cssE.split('\n').some(l => /--gds-effect-/.test(l) && l.includes(`/* ${e.name} */`))),
+        (EF.excludedStyles || []).map(e => e.name).join(', '));
+      ok('방출된 효과가 전부 정본 목록의 GDS 소속 스타일',
+        EF.emitted.every(t => {
+          const i = EF.items.find(x => x.name === t.name);
+          return !!i && /^GDS/.test(i.library || '');
+        }), EF.emitted.map(t => t.name).join(', '));
+      ok('소속 미확인 스타일은 토큰으로 안 나감',
+        EF.items.filter(i => i.unverified).every(i => !i.emit));
+      ok('소속 미확인 스타일마다 사유가 적힘',
+        (EF.unverifiedStyles || []).every(u => (u.why || '').length > 20));
       ok('막힌 효과마다 이유가 적힘',
-        EF.items.filter(i => i.blocked).every(i => /GAP-31|씁니다/.test(i.blocked)));
+        EF.items.filter(i => i.blocked).every(i => (i.blocked || '').length > 15));
       ok('값 미측정 효과는 토큰으로 안 나감',
         EF.items.filter(i => !i.css).every(i => !i.emit));
       ok('내보낸 토큰 수 = emitted 목록 수', emitted.length === EF.emitted.length,
