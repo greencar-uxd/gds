@@ -1,0 +1,3295 @@
+{
+  "$description": "Top app bar (탑앱바) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42073:64229",
+    "pageName": "Top app bar (탑앱바) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 703,
+    "byType": {
+      "canvas": 1,
+      "frame": 342,
+      "instance": 108,
+      "text": 185,
+      "symbol": 47,
+      "rectangle": 1,
+      "vector": 17,
+      "ellipse": 1,
+      "widget": 1
+    },
+    "topLevel": 9,
+    "texts": 185,
+    "namedTexts": 185,
+    "templateStubs": 11,
+    "symbols": 47
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42073:64230",
+      "name": "11. Top app bar",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "42945:34223",
+      "name": "UI",
+      "w": 585,
+      "h": 1266
+    },
+    {
+      "type": "frame",
+      "id": "43206:36468",
+      "name": "Components_Top app bar",
+      "w": 1920,
+      "h": 7459
+    },
+    {
+      "type": "widget",
+      "id": "43207:46784",
+      "name": "Annotation",
+      "w": 352,
+      "h": 222
+    },
+    {
+      "type": "frame",
+      "id": "43210:3934",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1662
+    },
+    {
+      "type": "frame",
+      "id": "43233:13121",
+      "name": "top app bar_ios",
+      "w": 805,
+      "h": 1114
+    },
+    {
+      "type": "frame",
+      "id": "43233:13202",
+      "name": "main_header_ios",
+      "w": 826,
+      "h": 137
+    },
+    {
+      "type": "frame",
+      "id": "43893:24468",
+      "name": "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43893:24491",
+      "name": "SCR_GA_OW_0202_T02",
+      "w": 375,
+      "h": 800
+    }
+  ],
+  "componentSets": {
+    "total": 47,
+    "axes": {
+      "Type": {
+        "default": 1,
+        "2btn": 3,
+        "2btn_myinfo": 1,
+        "close_t": 2,
+        "close_only": 2,
+        "txt_btn": 1,
+        "txt_btn_only": 1,
+        "sch": 2,
+        "toss": 1
+      },
+      "State": {
+        "default": 1,
+        "New value": 1,
+        "myinfo": 1,
+        "Default": 5,
+        "logo": 2,
+        "transparent": 1,
+        "sch_focus": 1,
+        "right_arrow": 1,
+        "free_way": 1
+      },
+      "Property 1": {
+        "def": 4,
+        "close_only": 2,
+        "sch": 4,
+        "2btn": 4,
+        "txt_btn": 2,
+        "txt_btn_only": 2,
+        "top app bar ios": 4,
+        "close_t": 2,
+        "Default": 3,
+        "logo+text": 3,
+        "add_arrow": 3
+      },
+      "value": {
+        "default": 10,
+        "focus": 2,
+        "arrow_only": 2,
+        "Default": 4,
+        "right_arrow": 2,
+        "my_info": 2,
+        "free_way": 2
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [
+      {
+        "lower": "default",
+        "forms": [
+          "Default",
+          "default"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "42073:64249",
+        "name": "Type=default, State=default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64256",
+        "name": "Type=2btn, State=New value",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64263",
+        "name": "Type=2btn_myinfo, State=myinfo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64271",
+        "name": "Type=close_t, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64278",
+        "name": "Type=close_t, State=logo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64301",
+        "name": "Type=close_only, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64306",
+        "name": "Type=close_only, State=transparent",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64311",
+        "name": "Type=txt_btn, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64321",
+        "name": "Type=txt_btn_only, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64331",
+        "name": "Type=sch, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64341",
+        "name": "Type=sch, State=sch_focus",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64352",
+        "name": "Type=2btn, State=right_arrow",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64356",
+        "name": "Type=2btn, State=free_way",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64363",
+        "name": "Type=toss, State=logo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "42073:64403",
+        "name": "Property 1=def, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64409",
+        "name": "Property 1=close_only, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64414",
+        "name": "Property 1=sch, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64421",
+        "name": "Property 1=sch, value=focus",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64428",
+        "name": "Property 1=2btn, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64434",
+        "name": "Property 1=def, value=arrow_only",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64443",
+        "name": "Property 1=txt_btn, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64453",
+        "name": "Property 1=txt_btn_only, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64463",
+        "name": "Property 1=top app bar ios, value=right_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64469",
+        "name": "Property 1=close_t, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64475",
+        "name": "Property 1=2btn, value=my_info",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64477",
+        "name": "Property 1=top app bar ios, value=free_way",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "42073:64499",
+        "name": "Property 1=Default",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "42073:64505",
+        "name": "Property 1=logo+text",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "42073:64525",
+        "name": "Property 1=add_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "42073:64539",
+        "name": "Property 1=add_arrow",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      },
+      {
+        "id": "42073:64549",
+        "name": "Property 1=Default",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      },
+      {
+        "id": "42073:64555",
+        "name": "Property 1=logo+text",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      },
+      {
+        "id": "43233:13122",
+        "name": "Property 1=def, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13128",
+        "name": "Property 1=close_only, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13133",
+        "name": "Property 1=sch, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13140",
+        "name": "Property 1=sch, value=focus",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13147",
+        "name": "Property 1=2btn, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13153",
+        "name": "Property 1=def, value=arrow_only",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13162",
+        "name": "Property 1=txt_btn, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13172",
+        "name": "Property 1=txt_btn_only, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13182",
+        "name": "Property 1=top app bar ios, value=right_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13188",
+        "name": "Property 1=close_t, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13194",
+        "name": "Property 1=2btn, value=my_info",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13196",
+        "name": "Property 1=top app bar ios, value=free_way",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43233:13203",
+        "name": "Property 1=Default",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "43233:13209",
+        "name": "Property 1=logo+text",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "43233:13229",
+        "name": "Property 1=add_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Structure",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 11
+  },
+  "texts": [
+    {
+      "id": "42073:64238",
+      "text": "12:30",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "42073:64387",
+      "text": "Title  29 Copy 12",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "1. def"
+      ],
+      "x": 130,
+      "y": 893
+    },
+    {
+      "id": "42073:64389",
+      "text": "Title  29 Copy 13",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "2. 2btn"
+      ],
+      "x": 141,
+      "y": 965
+    },
+    {
+      "id": "42073:64391",
+      "text": "Title  29 Copy 14",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "3. close_t"
+      ],
+      "x": 141,
+      "y": 1346
+    },
+    {
+      "id": "42073:64393",
+      "text": "Title  29 Copy 15",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "4. close_only"
+      ],
+      "x": 141,
+      "y": 1520
+    },
+    {
+      "id": "42073:64395",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 141,
+      "y": 1694
+    },
+    {
+      "id": "42073:64397",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 515,
+      "y": 1694
+    },
+    {
+      "id": "42073:64399",
+      "text": "Title  29 Copy 17",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "6. sch"
+      ],
+      "x": 141,
+      "y": 1868
+    },
+    {
+      "id": "42073:64485",
+      "text": "Title  29 Copy 12",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "1. def"
+      ],
+      "x": 1110,
+      "y": 873
+    },
+    {
+      "id": "42073:64487",
+      "text": "Title  29 Copy 13",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "2. 2btn"
+      ],
+      "x": 1110,
+      "y": 1071
+    },
+    {
+      "id": "42073:64489",
+      "text": "Title  29 Copy 14",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "3. close_t"
+      ],
+      "x": 1110,
+      "y": 1345
+    },
+    {
+      "id": "42073:64491",
+      "text": "Title  29 Copy 15",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "4. close_only"
+      ],
+      "x": 1110,
+      "y": 1519
+    },
+    {
+      "id": "42073:64493",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "5. txt_btn"
+      ],
+      "x": 1110,
+      "y": 1693
+    },
+    {
+      "id": "42073:64495",
+      "text": "Title  29 Copy 17",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "6. sch"
+      ],
+      "x": 1110,
+      "y": 1867
+    },
+    {
+      "id": "42073:64497",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 1506,
+      "y": 1693
+    },
+    {
+      "id": "42073:64536",
+      "text": "Title  29 Copy 18",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 80,
+      "y": 2711
+    },
+    {
+      "id": "42073:64575",
+      "text": "aos",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 80,
+      "y": 655
+    },
+    {
+      "id": "42073:64576",
+      "text": "ios",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 1060,
+      "y": 655
+    },
+    {
+      "id": "42945:34222",
+      "text": "위치 수정 필요",
+      "in": [
+        "UI"
+      ],
+      "x": 29,
+      "y": 138
+    },
+    {
+      "id": "43206:36482",
+      "text": "Glossary",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43206:36483",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43206:36486",
+      "text": "[정의]",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43206:36487",
+      "text": "Top app bar (상단 바)는 현재 전체 화면의 제목 및 추가 액션을 담는 상단 영역으로, 화면 이동·제목 표시·추가 액션가 필요할 때 사용합니다. Left (좌측) · Title (제목) · Right (우측) 슬롯으로 구성되며, Title (제목)은 화면에 따라 추가 액션 중 검색 입력으로 대체될 수 있습니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43207:38128",
+      "text": "셀토스 1.6",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "car info",
+        "Group 716251",
+        "Frame 2826",
+        "Frame 3238"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38131",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "car info",
+        "Group 716251",
+        "Frame 2826",
+        "Frame 3241"
+      ],
+      "x": 0,
+      "y": 6
+    },
+    {
+      "id": "43207:38133",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "car info",
+        "Group 716251",
+        "Frame 2826",
+        "Frame 2841"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38134",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "car info",
+        "Group 716251",
+        "Frame 2826",
+        "Frame 2841"
+      ],
+      "x": 68,
+      "y": 0
+    },
+    {
+      "id": "43207:38135",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "car info",
+        "Group 716251",
+        "Frame 2826",
+        "Frame 2841"
+      ],
+      "x": 81,
+      "y": 0
+    },
+    {
+      "id": "43207:38139",
+      "text": "반납 1일 전입니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "반납시각"
+      ],
+      "x": 119,
+      "y": 0
+    },
+    {
+      "id": "43207:38142",
+      "text": "오늘 12:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "02",
+        "time"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38143",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "car_info_연료정보포함",
+        "02",
+        "time"
+      ],
+      "x": 269,
+      "y": 0
+    },
+    {
+      "id": "43207:38153",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43207:38158",
+      "text": "대여시각",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716244"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38163",
+      "text": "오늘 12:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 2958",
+        "Frame 3180"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43207:38166",
+      "text": "시간",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 2958",
+        "Frame 3115",
+        "R text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38171",
+      "text": "대여시각",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716244"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38175",
+      "text": "오늘 12:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 2958",
+        "Frame 3180"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38178",
+      "text": "시간",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 2958",
+        "Frame 3115",
+        "R text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38182",
+      "text": "오늘 12:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 716245",
+        "Frame 3180"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38185",
+      "text": "시간",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 716245",
+        "Frame 3115",
+        "R text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38189",
+      "text": "오늘 12:00",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 716246",
+        "Frame 3180"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38192",
+      "text": "시간",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "02_대여기간",
+        "Frame 716253",
+        "Frame 716246",
+        "Frame 3115",
+        "R text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38202",
+      "text": "대여시각",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Frame 716245"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43207:38203",
+      "text": "초과 시 주행요금이 부과돼요.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Frame 716245"
+      ],
+      "x": 120,
+      "y": 3
+    },
+    {
+      "id": "43207:38205",
+      "text": "월 1,800km 기준",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Group 716245"
+      ],
+      "x": 283,
+      "y": 32
+    },
+    {
+      "id": "43207:38212",
+      "text": "1,800",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Group 716245"
+      ],
+      "x": 92,
+      "y": 63
+    },
+    {
+      "id": "43207:38213",
+      "text": "3,600",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Group 716245"
+      ],
+      "x": 175,
+      "y": 63
+    },
+    {
+      "id": "43207:38214",
+      "text": "5,400",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716246",
+        "Group 716245"
+      ],
+      "x": 258,
+      "y": 63
+    },
+    {
+      "id": "43207:38218",
+      "text": "현재 주행거리",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716245",
+        "Frame 716253"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38219",
+      "text": "2,360 / 5,400 km",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716245",
+        "Frame 716253"
+      ],
+      "x": 230,
+      "y": 0
+    },
+    {
+      "id": "43207:38221",
+      "text": "남은 주행거리",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716245",
+        "Frame 716254"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38222",
+      "text": "3,040 km 초과",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "Frame 716246",
+        "Frame 716248",
+        "Frame 716245",
+        "Frame 716254"
+      ],
+      "x": 249,
+      "y": 0
+    },
+    {
+      "id": "43207:38227",
+      "text": "대여장소",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "6",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38234",
+      "text": "한남역 1번 출구",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "\bcon",
+        "6",
+        "대여위치",
+        "Frame 3178"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43207:38240",
+      "text": "반납 예정일 7일 전부터 3일 전까지 연장 가능해요.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43207:38243",
+      "text": "처음 예약하시나요?  그린카는 쾌적한 차량 상태를 유지하기 위해 차량 내 흡연을 금지하고 있습니다. 나와 다른 고객 모두를 위한 금연 서약에 지금 동의해주세요.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_CT_0101_M01_OD_메인 (예약완료)_배달 준비 중",
+        "tooltip",
+        "banner_n_enabled"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "43206:36495",
+      "text": "Top app bar (탑앱바)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43206:36500",
+      "text": "Type",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43206:36501",
+      "text": "Reference",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43206:36504",
+      "text": "[유형]",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43206:36505",
+      "text": "Top app bar (탑앱바)는 사용 용도에 따라 다음 3가지 유형으로 나뉩니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43882:24318",
+      "text": "➊ Default (기본형) 화면의 제목과 주요 액션을 표시하는 가장 일반적인 형태로, Left(이동)·Title(제목)·Right(액션) 슬롯을 화면에 따라 조합해 구성됩니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:27657",
+      "text": "➋ Search (검색형) 검색을 입력·수행할 때 사용하며, Title이 검색 입력 필드로 대체된 형태입니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43882:24320",
+      "text": "➌ Brand (브랜드형) 서비스 최상위·홈에서 주로 사용하며, 브랜드 로고(또는 법인명)·알림·프로필로 구성됩니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43206:36514",
+      "text": "Top app bar (탑앱바)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 148.5,
+      "y": 0
+    },
+    {
+      "id": "43206:36515",
+      "text": "화면 최상단에서 이동·검색·브랜드 등 화면별 기능을 담는 영역",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43206:36517",
+      "text": "Default (기본형)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Frame 2147227736"
+      ],
+      "x": 165.5,
+      "y": 0
+    },
+    {
+      "id": "43303:22496",
+      "text": "Search (검색형)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Frame 2147227737"
+      ],
+      "x": 166,
+      "y": 0
+    },
+    {
+      "id": "43303:22534",
+      "text": "Brand (브랜드형)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Frame 2147227738"
+      ],
+      "x": 163,
+      "y": 0
+    },
+    {
+      "id": "43206:36547",
+      "text": "Structure",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43206:36548",
+      "text": "Reference",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:38035",
+      "text": "[➊ Default (기본형)]",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:38036",
+      "text": "Reference",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43206:36552",
+      "text": "Default (기본형) Icon(아이콘) · Label(라벨) · Background(백그라운드)로 구성됩니다. 좌·우 Icon과 중앙 Label이 Background 위에 정렬되며, 좌우 여백과 요소 간 간격은 spacing 토큰을 따릅니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:38306",
+      "text": "구조",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43331:25772",
+      "text": "Icon (아이콘)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43206:36691",
+      "text": "Label (레이블)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:25778",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:24789",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43331:25782",
+      "text": "Structure",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25783",
+      "text": "Reference",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:38038",
+      "text": "[➋ Search (검색형)]",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25787",
+      "text": "Search (검색형) Icon(아이콘) · Hint text(힌트 텍스트) · Text cursor(텍스트 커서) · Background(백그라운드)로 구성됩니다.  좌측 Icon과 검색 입력 영역(Hint text·Text cursor)이 Background 위에 정렬되며, 좌우 여백과 요소 간 간격은 spacing 토큰을 따릅니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25796",
+      "text": "구조 & 스페이싱 값",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43331:25800",
+      "text": "Hint text (힌트 텍스트)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:25804",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:25810",
+      "text": "Icon (아이콘)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:25860",
+      "text": "Text cursor (텍스트 커서)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:24849",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43331:25924",
+      "text": "Structure",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25925",
+      "text": "Reference",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:38040",
+      "text": "[➌ Brand (브랜드형)]",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25929",
+      "text": "Search (검색형) Icon(아이콘) · Label(라벨) · Background(백그라운드)로 구성됩니다.  좌측 Icon(알림) · 중앙 Label(브랜드·법인명) · 우측 Icon(프로필)이 Background 위에 정렬되며, 좌우 여백과 요소 간 간격은 spacing 토큰을 따릅니다.",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43331:25939",
+      "text": "구조",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43331:25943",
+      "text": "Label (레이블)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:25947",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43331:26038",
+      "text": "Icon (아이콘)",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tag",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:24905",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Top app bar",
+        "Components_Top app bar",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43207:46787",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:46788",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:46795",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43207:46800",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43207:46805",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43210:3942",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3945",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3949",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3953",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43210:3954",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43210:3959",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43210:3960",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43210:3965",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3969",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3971",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43210:3973",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3974",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43210:3977",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3979",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3980",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43210:3983",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3985",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3986",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43210:3990",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3993",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3994",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 16
+    },
+    {
+      "id": "43210:3997",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:3998",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 245,
+      "y": 16
+    },
+    {
+      "id": "43210:4001",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:4005",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:4007",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 245,
+      "y": 28
+    },
+    {
+      "id": "43210:4010",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:4014",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43210:4019",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43210:4023",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43210:4026",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43210:4030",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43210:4033",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43210:4036",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43210:4042",
+      "text": "Button",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77,
+      "y": 16
+    },
+    {
+      "id": "43893:24475",
+      "text": "검색 결과가 없어요.",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "fov"
+      ],
+      "x": 114.5,
+      "y": 10
+    },
+    {
+      "id": "43893:24478",
+      "text": "현재 위치: 서울 강남구 테헤란로70길 16",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "gps_btn"
+      ],
+      "x": 12,
+      "y": 8
+    },
+    {
+      "id": "43893:24485",
+      "text": "최근 검색 지역",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "recent list",
+        "최근 이용한 지역",
+        "최근 이용한 지역",
+        "fov"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43893:24496",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525"
+      ],
+      "x": 0,
+      "y": 76
+    },
+    {
+      "id": "43893:24505",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24506",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24507",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24510",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24518",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24519",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24520",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24523",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24531",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24533",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24534",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24535",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24538",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43893:24546",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24548",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24549",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24550",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24553",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24561",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24563",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24564",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24565",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24568",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24576",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24578",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24579",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24580",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24583",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24591",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24593",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24594",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24595",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24598",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24606",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24608",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24609",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24610",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24613",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43893:24621",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24623",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:24624",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43893:24625",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43893:24628",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    }
+  ]
+}

@@ -1,0 +1,3035 @@
+{
+  "$description": "Principle (통합 디자인 원칙) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42066:25419",
+    "pageName": "Principle (통합 디자인 원칙) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 446,
+    "byType": {
+      "canvas": 1,
+      "section": 1,
+      "frame": 225,
+      "instance": 18,
+      "text": 163,
+      "vector": 6,
+      "ellipse": 5,
+      "line": 22,
+      "symbol": 5
+    },
+    "topLevel": 44,
+    "texts": 163,
+    "namedTexts": 162,
+    "templateStubs": 0,
+    "symbols": 5
+  },
+  "topFrames": [
+    {
+      "type": "section",
+      "id": "42066:25459",
+      "name": "reference",
+      "w": 1298,
+      "h": 720
+    },
+    {
+      "type": "frame",
+      "id": "42411:69154",
+      "name": "G car Principle",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "instance",
+      "id": "42411:69345",
+      "name": "타이틀",
+      "w": 1920,
+      "h": 341
+    },
+    {
+      "type": "frame",
+      "id": "43147:27828",
+      "name": "Frame 2147227734",
+      "w": 1920,
+      "h": 4082.545654296875
+    },
+    {
+      "type": "frame",
+      "id": "42411:69423",
+      "name": "G car Principle",
+      "w": 1920,
+      "h": 1441
+    },
+    {
+      "type": "frame",
+      "id": "42411:69502",
+      "name": "Tag",
+      "w": 147.48019409179688,
+      "h": 46.78217697143555
+    },
+    {
+      "type": "frame",
+      "id": "42411:69508",
+      "name": "G car Principle",
+      "w": 1920,
+      "h": 1441
+    },
+    {
+      "type": "text",
+      "id": "42411:69866",
+      "name": "2026.05.06",
+      "w": 129,
+      "h": 29
+    },
+    {
+      "type": "text",
+      "id": "42411:69867",
+      "name": "목적: Figma → Storybook → Code → Amplitude까지 하나의 명명 체계로 꿰뚫는 통합 시스템",
+      "w": 973,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42411:69868",
+      "name": "활용: Figma 네이밍 정의 → OS/Amplitude 활용 시 변환",
+      "w": 579,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42411:69878",
+      "name": "최신 디자인 토큰(Figma Variables) 기반의 명명법 가이드는 토스, 구글 등 대형 서비스 사례를 반영하여 시스템의 확장성과 유지보수 효율을 극대화하는 파운데이션 구조를 제안",
+      "w": 751,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42411:69879",
+      "name": "공통인 것 (원칙 레벨) 슬래시(/)로 계층 구분 단어 내부는 snake_case (소문자 + _) 약어, 한글, 공백, 버전 접미사 금지 \"덜 바뀌는 것 → 자주 바뀌는 것\" 순서 의미적 이름 우선 (수치 직접 노출 최소화)",
+      "w": 751,
+      "h": 210
+    },
+    {
+      "type": "text",
+      "id": "43014:1311",
+      "name": "Foundation 토큰: lowercase → semantic/color/action/primary 실제 사용되는 형태  Figma 컴포넌트: PascalCase → Component/Button/Primary/Medium 폴더 구분을 위한",
+      "w": 824,
+      "h": 175
+    },
+    {
+      "type": "text",
+      "id": "42778:38046",
+      "name": "전체 구조",
+      "w": 130,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38049",
+      "name": "Tier 시스템 (3단계)",
+      "w": 237,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38047",
+      "name": "표준 명명 패턴 — Tier + Category + Role + Scale/State",
+      "w": 591,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38807",
+      "name": "Raw 값 — primitive/color/blue/600",
+      "w": 402,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38810",
+      "name": "Primitive",
+      "w": 110,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38813",
+      "name": "❌",
+      "w": 24,
+      "h": 24
+    },
+    {
+      "type": "text",
+      "id": "42778:38811",
+      "name": "Semantic",
+      "w": 112,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38814",
+      "name": "✅",
+      "w": 24,
+      "h": 24
+    },
+    {
+      "type": "text",
+      "id": "42778:38812",
+      "name": "Component",
+      "w": 140,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38815",
+      "name": "✅",
+      "w": 24,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38808",
+      "name": "의미 부여 — semantic/color/action/primary",
+      "w": 491,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38809",
+      "name": "컴포넌트별 — component/button/primary/bg",
+      "w": 512,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38804",
+      "name": "컴포넌트 직접 사용(유/무)",
+      "w": 260,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38805",
+      "name": "역할",
+      "w": 45,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38806",
+      "name": "Tier",
+      "w": 47,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38048",
+      "name": "Foundation 명명 규칙 치트시트(v.3)",
+      "w": 382,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38835",
+      "name": "Color · Typography · Icon · Space · Radius · Shadow · Motion",
+      "w": 700,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42411:69880",
+      "name": "구분 파운데이션 컴포넌트",
+      "w": 751,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42440:24067",
+      "name": "Description",
+      "w": 751,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38819",
+      "name": "tier",
+      "w": 42,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38826",
+      "name": "primitive semantic component",
+      "w": 130,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42778:38824",
+      "name": "category",
+      "w": 103,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38828",
+      "name": "role",
+      "w": 47,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38831",
+      "name": "scale_or_state",
+      "w": 171,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38827",
+      "name": "color · font · icon space · radius shadow · motion",
+      "w": 199,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42778:38829",
+      "name": "action · text background · border inset · elevation",
+      "w": 235,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42778:38832",
+      "name": "primary · md hover · pressed 2 · full",
+      "w": 177,
+      "h": 105
+    },
+    {
+      "type": "text",
+      "id": "42778:38820",
+      "name": "1",
+      "w": 15,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38825",
+      "name": "2",
+      "w": 15,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38830",
+      "name": "3",
+      "w": 15,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "42778:38833",
+      "name": "4",
+      "w": 15,
+      "h": 35
+    }
+  ],
+  "componentSets": {
+    "total": 5,
+    "axes": {
+      "Property 1": {
+        "go_small": 1,
+        "open_small": 1,
+        "fold_small": 1,
+        "ic_flash_off_title": 1,
+        "ic_flash_on_title": 1
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "42411:69452",
+        "name": "Property 1=go_small",
+        "w": 20,
+        "h": 20,
+        "in": "btn_fold_open_small"
+      },
+      {
+        "id": "42411:69455",
+        "name": "Property 1=open_small",
+        "w": 20.000000238496796,
+        "h": 20.000000238496796,
+        "in": "btn_fold_open_small"
+      },
+      {
+        "id": "42411:69458",
+        "name": "Property 1=fold_small",
+        "w": 20.000000874228135,
+        "h": 20.000000874228135,
+        "in": "btn_fold_open_small"
+      },
+      {
+        "id": "42411:69463",
+        "name": "Property 1=ic_flash_off_title",
+        "w": 24,
+        "h": 24,
+        "in": "btn_flash_off/on"
+      },
+      {
+        "id": "42411:69467",
+        "name": "Property 1=ic_flash_on_title",
+        "w": 24,
+        "h": 24,
+        "in": "btn_flash_off/on"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [],
+    "count": 0
+  },
+  "texts": [
+    {
+      "id": "42411:69169",
+      "text": "kr - light - color - background - primary - hover",
+      "in": [
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Example 1",
+        "Example image"
+      ],
+      "x": 45.756141662597656,
+      "y": 26.33597183227539
+    },
+    {
+      "id": "42411:69285",
+      "text": "Hyphen (하이픈)",
+      "in": [
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Example 1",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797027587890625,
+      "y": 5.252474784851074
+    },
+    {
+      "id": "42411:69103",
+      "text": "디자인 시스템을 만드는 이유",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "Title",
+        "Title"
+      ],
+      "x": 387,
+      "y": 30.5
+    },
+    {
+      "id": "42411:69104",
+      "text": "지카는 차를 빌리는 순간부터 반납까지, 사용자가 &#39;생각할 필요 없이&#39; 흐름을 따라갈 수 있는 서비스를 지향합니다. 이를 위해서는 화면마다 다른 규칙이 아닌, 하나의 약속된 언어가 필요합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail"
+      ],
+      "x": 247,
+      "y": 103
+    },
+    {
+      "id": "42411:69111",
+      "text": "1",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 1",
+        "Frame 71873",
+        "Group 71916",
+        "Group 71917"
+      ],
+      "x": 13,
+      "y": 5
+    },
+    {
+      "id": "42411:69112",
+      "text": "어떤 화면에서도 익숙하게 느껴지는 일관된 경험을 제공합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 1",
+        "Frame 71873"
+      ],
+      "x": 50,
+      "y": 6
+    },
+    {
+      "id": "42411:69118",
+      "text": "2",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 2",
+        "Frame 71874",
+        "Group 2147227716",
+        "Group 71917"
+      ],
+      "x": 13,
+      "y": 5
+    },
+    {
+      "id": "42411:69119",
+      "text": "반복되는 의사결정을 줄여 본질적인 문제에 집중할 수 있게 합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 2",
+        "Frame 71874"
+      ],
+      "x": 50,
+      "y": 6
+    },
+    {
+      "id": "42411:69125",
+      "text": "3",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 3",
+        "Frame 71875",
+        "Group 2147227717",
+        "Group 71917"
+      ],
+      "x": 13,
+      "y": 5
+    },
+    {
+      "id": "42411:69126",
+      "text": "서비스가 확장되어도 지카다운 정체성을 유지합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "Detail 3",
+        "Frame 71875"
+      ],
+      "x": 50,
+      "y": 6
+    },
+    {
+      "id": "42411:69132",
+      "text": "디자인 시스템의 구조",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 413,
+      "y": 30
+    },
+    {
+      "id": "42411:69139",
+      "text": "1",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69140",
+      "text": "[브랜드 핵심 속성]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 0,
+      "y": 50
+    },
+    {
+      "id": "42411:69141",
+      "text": "사용자가 지카에서 느껴야 할 감각",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 0,
+      "y": 88
+    },
+    {
+      "id": "42411:69143",
+      "text": "Clean(간결함) · Comfort(편안함) · Easy(쉽게 읽힘)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 7.5,
+      "y": 141.00001525878906
+    },
+    {
+      "id": "42411:69149",
+      "text": "2",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 1",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69150",
+      "text": "[디자인 시스템 원칙]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 1"
+      ],
+      "x": 0,
+      "y": 45
+    },
+    {
+      "id": "42411:69151",
+      "text": "감각을 구현하기 위해 시스템이 지켜야 할 제작 기준",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 1"
+      ],
+      "x": 7.5,
+      "y": 78
+    },
+    {
+      "id": "42411:69153",
+      "text": "체계적 · 확장 가능한 · 재사용 가능한 · 포용적인",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 1"
+      ],
+      "x": 7.5,
+      "y": 144.00001525878906
+    },
+    {
+      "id": "42411:69303",
+      "text": "핵심 디자인 시스템 원칙(4)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "Title",
+        "Title"
+      ],
+      "x": 391,
+      "y": 30.5
+    },
+    {
+      "id": "42411:69310",
+      "text": "1",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69311",
+      "text": "[Systematic]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 0,
+      "y": 52
+    },
+    {
+      "id": "42411:69312",
+      "text": "체계적인",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 0,
+      "y": 107
+    },
+    {
+      "id": "42411:69314",
+      "text": "어떤 화면에서도 익숙하게 느껴지는 일관된 경험을 제공합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 1",
+        "List item 1"
+      ],
+      "x": 15.5,
+      "y": 164.00003051757812
+    },
+    {
+      "id": "42411:69320",
+      "text": "2",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 2",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69321",
+      "text": "[Scalable]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 2"
+      ],
+      "x": 0,
+      "y": 52
+    },
+    {
+      "id": "42411:69322",
+      "text": "확장 가능한",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 2"
+      ],
+      "x": 0,
+      "y": 107
+    },
+    {
+      "id": "42411:69324",
+      "text": "서비스의 변화와 성장에 유연하게 대응합니다. 새로운 기능이 추가되어도 기존 규칙을 해치지 않는 구조를 지향합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 2",
+        "List item 2"
+      ],
+      "x": 15.5,
+      "y": 164.00003051757812
+    },
+    {
+      "id": "42411:69330",
+      "text": "3",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 3",
+        "List item 3",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69331",
+      "text": "[Reusable]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 3",
+        "List item 3"
+      ],
+      "x": 0,
+      "y": 52
+    },
+    {
+      "id": "42411:69332",
+      "text": "재사용 가능한",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 3",
+        "List item 3"
+      ],
+      "x": 0,
+      "y": 107
+    },
+    {
+      "id": "42411:69334",
+      "text": "한 번 정의된 컴포넌트는 어디서든 같은 방식으로 동작합니다. 반복 작업을 줄이고, 팀이 본질적인 문제에 집중할 수 있게 합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 3",
+        "List item 3"
+      ],
+      "x": 15.5,
+      "y": 164.00003051757812
+    },
+    {
+      "id": "42411:69340",
+      "text": "4",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 4",
+        "List item 4",
+        "List number",
+        "Group 71917"
+      ],
+      "x": 121,
+      "y": 5
+    },
+    {
+      "id": "42411:69341",
+      "text": "[Inclusive]",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 4",
+        "List item 4"
+      ],
+      "x": 0,
+      "y": 52
+    },
+    {
+      "id": "42411:69342",
+      "text": "포용적인",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 4",
+        "List item 4"
+      ],
+      "x": 0,
+      "y": 107
+    },
+    {
+      "id": "42411:69344",
+      "text": "모두가 동등하게 사용할 수 있는 디자인을 지향합니다. 연령, 환경, 상황과 관계없이 누구나 쉽게 접근할 수 있어야 합니다.",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail frame",
+        "Detail",
+        "List item",
+        "List item 4",
+        "List item 4"
+      ],
+      "x": 15.5,
+      "y": 164.00003051757812
+    },
+    {
+      "id": "43147:27690",
+      "text": "논리 구조",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 443,
+      "y": 35.5
+    },
+    {
+      "id": "43147:27691",
+      "text": "데이터(Token)는 lowercase, 타입(Component)은 PascalCase",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 247.5,
+      "y": 90
+    },
+    {
+      "id": "43147:27694",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43147:27698",
+      "text": "semantic/color/action/primary",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:27699",
+      "text": "(토큰 = 데이터 = lowercase)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 264,
+      "y": 0
+    },
+    {
+      "id": "43147:27701",
+      "text": "Component/Button/Primary/Large",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227732"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:27702",
+      "text": "(컴포넌트 = 타입 = PascalCase)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227732"
+      ],
+      "x": 293,
+      "y": 0
+    },
+    {
+      "id": "43147:27709",
+      "text": "시각적 속성 배제",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 416,
+      "y": 35.5
+    },
+    {
+      "id": "43147:27710",
+      "text": "기능·역할 중심 정의",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 247.5,
+      "y": 90
+    },
+    {
+      "id": "43147:27713",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43147:27718",
+      "text": "Component/Button/Primary/Large/Blue ❌",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:27717",
+      "text": "Component/Button/Primary/Large/Default ⭕️",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 349,
+      "y": 0
+    },
+    {
+      "id": "43147:27987",
+      "text": "확장 가능",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 443,
+      "y": 35.5
+    },
+    {
+      "id": "43147:27988",
+      "text": "종류/유형/속성 순으로 정리(좌→우, 덜 바뀌는 것 → 자주 바뀌는 것)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 247.5,
+      "y": 90
+    },
+    {
+      "id": "43147:27991",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43147:27999",
+      "text": "Component/Button/Primary/Large/Default",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28900",
+      "text": "간단형 → 전체형 (Size, State 추가 시 자연스럽게 확장)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 247.5,
+      "y": 230.0909423828125
+    },
+    {
+      "id": "43155:28862",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43155:28871",
+      "text": "Component/Button",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227730",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28873",
+      "text": "└─ Primary └─ Large └─ Default",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227730",
+        "Frame 2147227732"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:28007",
+      "text": "일관성",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 454,
+      "y": 35.5
+    },
+    {
+      "id": "43147:28008",
+      "text": "동일한 표기 규칙 사용 → Figma 폴더구분: 슬래시(/), 네이밍 단어 구분: 언더스코어(_)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 227.5,
+      "y": 90
+    },
+    {
+      "id": "43147:28011",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43147:28017",
+      "text": "디자인 시스템 페이지",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227735",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43175:61940",
+      "text": "컴포넌트 마스터",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227735",
+        "Frame 2147227735"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28824",
+      "text": "Variables",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227735",
+        "Frame 2147227732"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28827",
+      "text": "인스턴스 ID",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227735",
+        "Frame 2147227733"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28830",
+      "text": "Variant 값",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227735",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28835",
+      "text": "Buttons (버튼)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227736",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43175:61946",
+      "text": "Component/Button/Primary",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227736",
+        "Frame 2147227735"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28837",
+      "text": "color/action/primary",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227736",
+        "Frame 2147227732"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28839",
+      "text": "signup_continue_button",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227736",
+        "Frame 2147227733"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28841",
+      "text": "Primary, Large, Default",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227736",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28845",
+      "text": "PascalCase + (한글)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227737",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43175:61952",
+      "text": "PascalCase + /",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227737",
+        "Frame 2147227735"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28847",
+      "text": "lowercase + /",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227737",
+        "Frame 2147227732"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28849",
+      "text": "snake_case · 추적용",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227737",
+        "Frame 2147227733"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43155:28851",
+      "text": "PascalCase · enum(열거)",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227737",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:28024",
+      "text": "명확성",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Title",
+        "Group 71917"
+      ],
+      "x": 454,
+      "y": 35.5
+    },
+    {
+      "id": "43147:28025",
+      "text": "풀네임 표기, 약어 사용 금지",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6"
+      ],
+      "x": 407,
+      "y": 90
+    },
+    {
+      "id": "43147:28028",
+      "text": "예시",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.3818187713623047
+    },
+    {
+      "id": "43147:28035",
+      "text": "button ⭕️",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43147:28036",
+      "text": "btn ❌",
+      "in": [
+        "Frame 2147227734",
+        "G car Principle",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "List item",
+        "Frame 2147227730",
+        "List item 6",
+        "Example",
+        "Frame 2147227729",
+        "Frame 2147227731"
+      ],
+      "x": 108,
+      "y": 0
+    },
+    {
+      "id": "42411:69437",
+      "text": "모두 lowercase + 슬래시(/) /는 폴더 구분을 위한 활용 수치 및 약어()는 이름에 노출 X",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2"
+      ],
+      "x": 32.1318359375,
+      "y": 588
+    },
+    {
+      "id": "42411:69438",
+      "text": "디자인 파일에서 토큰을 표현하는 방식으로 명칭 사용에 주의합니다.",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2"
+      ],
+      "x": 32.1318359375,
+      "y": 554
+    },
+    {
+      "id": "42411:69440",
+      "text": "Local Variable, Local Style (로컬 배리어블, 로컬 스타일)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "43179:62222",
+      "text": "허용 약어 (업계 표준) 사이즈 단위: xs · sm · md · lg · xl · 2xl CSS 단위: bg · fg · px · em · rem",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2"
+      ],
+      "x": 115.1318359375,
+      "y": 680
+    },
+    {
+      "id": "42411:69445",
+      "text": "코드의 React/Swift 컴포넌트와 매핑되는 타입(클래스)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 32,
+      "y": 554
+    },
+    {
+      "id": "42411:69446",
+      "text": "컴포넌트 마스터: PascalCase + 슬래시(/) Component/Button Primary 인스턴스 ID: snake_case (추적용) pay_button, kakao_login Variant 값: PascalCase (enum)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 32,
+      "y": 588
+    },
+    {
+      "id": "42411:69449",
+      "text": "Componenet (컴포넌트)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "42411:69450",
+      "text": "Component/Button/Fold/Open",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 134,
+      "y": 191
+    },
+    {
+      "id": "42411:69461",
+      "text": "Component/Button/Flash",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 152,
+      "y": 390
+    },
+    {
+      "id": "42411:69479",
+      "text": "semantic/color/action/primary",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Example image"
+      ],
+      "x": 145.0662841796875,
+      "y": 18.83597183227539
+    },
+    {
+      "id": "43177:62122",
+      "text": "Component/Button/Primary/Medium",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Example image"
+      ],
+      "x": 145.06658935546875,
+      "y": 18.83597183227539
+    },
+    {
+      "id": "43177:62150",
+      "text": "Slash(슬래시)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797027587890625,
+      "y": 5.252474784851074
+    },
+    {
+      "id": "43177:62163",
+      "text": "Slash(슬래시)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797027587890625,
+      "y": 5.252474784851074
+    },
+    {
+      "id": "43177:62106",
+      "text": "데이터 (토큰)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1"
+      ],
+      "x": 156,
+      "y": 53
+    },
+    {
+      "id": "43177:62151",
+      "text": "타입 (컴포넌트 마스터)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1"
+      ],
+      "x": 156,
+      "y": 232
+    },
+    {
+      "id": "42411:69507",
+      "text": "Underscore(언더 스코어)",
+      "in": [
+        "Tag",
+        "text"
+      ],
+      "x": 7.797027587890625,
+      "y": 5.252474784851074
+    },
+    {
+      "id": "42411:69524",
+      "text": "Curent variant",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 71
+    },
+    {
+      "id": "42411:69525",
+      "text": "Curent variant",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 276
+    },
+    {
+      "id": "42411:69526",
+      "text": "Property 1",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 108
+    },
+    {
+      "id": "42411:69527",
+      "text": "Property 2",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 150
+    },
+    {
+      "id": "42411:69528",
+      "text": "Property 1",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 313
+    },
+    {
+      "id": "42411:69529",
+      "text": "Property 2",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 355
+    },
+    {
+      "id": "42411:69531",
+      "text": "Index",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Group 2147227723"
+      ],
+      "x": 44.999799728393555,
+      "y": 27
+    },
+    {
+      "id": "42411:69538",
+      "text": "Contents",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Group 2147227724"
+      ],
+      "x": 44.999799728393555,
+      "y": 232
+    },
+    {
+      "id": "42411:69545",
+      "text": "Basic",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Example naming"
+      ],
+      "x": 12.181818008422852,
+      "y": 3.240908622741699
+    },
+    {
+      "id": "42411:69549",
+      "text": "Basic",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Example naming"
+      ],
+      "x": 8.681818008422852,
+      "y": 3.240908622741699
+    },
+    {
+      "id": "42411:69553",
+      "text": "Sub",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Example naming"
+      ],
+      "x": 8.681818008422852,
+      "y": 3.240908622741699
+    },
+    {
+      "id": "42411:69557",
+      "text": "Sub",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example Image",
+        "Example naming"
+      ],
+      "x": 12.181818008422852,
+      "y": 3.240908622741699
+    },
+    {
+      "id": "42411:69561",
+      "text": "띄어쓰기로 단어 구분 첫 글자는 대문자 사용 영문 사용",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2"
+      ],
+      "x": 32.1318359375,
+      "y": 614
+    },
+    {
+      "id": "42411:69562",
+      "text": "컴포넌트를 구성하는 property로 아래와 같이 사용합니다.",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2"
+      ],
+      "x": 32.1318359375,
+      "y": 554
+    },
+    {
+      "id": "42411:69564",
+      "text": "Property (프로퍼티)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Exmaple 2-2",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "42411:69570",
+      "text": "Page",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 100
+    },
+    {
+      "id": "42411:69571",
+      "text": "[Guidelines]",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 193
+    },
+    {
+      "id": "42411:69572",
+      "text": "Getting started (시작하기)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 137
+    },
+    {
+      "id": "42411:69573",
+      "text": "Principle (디자인 원칙)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 230
+    },
+    {
+      "id": "42411:69574",
+      "text": "UI/UX guide (UI/UX 가이드)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 267
+    },
+    {
+      "id": "42411:69575",
+      "text": "Layout for ios/aos/web (OS별 레이아웃)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 304
+    },
+    {
+      "id": "42411:69576",
+      "text": "Component overview (컴포넌트 오버뷰)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image"
+      ],
+      "x": 27,
+      "y": 341
+    },
+    {
+      "id": "42411:69583",
+      "text": "File",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image",
+        "Group 2147227722",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "42411:69585",
+      "text": "Assets",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example Image",
+        "Group 2147227722",
+        "Example naming"
+      ],
+      "x": 12.7998046875,
+      "y": 2.3271484375
+    },
+    {
+      "id": "42411:69586",
+      "text": "검색 편의를 위해 영문과 한글을 병기합니다.",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 32,
+      "y": 554
+    },
+    {
+      "id": "42411:69587",
+      "text": "띄어쓰기로 단어 및 이모지 구분 영문표기 (한글) * 단, 영문 첫 글자는 대문자 커뮤니케이션을 위한 주석([이모지] + [영문])활용 (ex) 🔵 As is / 🔴 To be",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1"
+      ],
+      "x": 32,
+      "y": 614
+    },
+    {
+      "id": "42411:69590",
+      "text": "Page (페이지) / Frame (프레임)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 2",
+        "Example 2-1",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "42411:69596",
+      "text": "Detail area",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Example image"
+      ],
+      "x": 128.35263061523438,
+      "y": 9.33597183227539
+    },
+    {
+      "id": "42411:69624",
+      "text": "Spacing (띄어쓰기)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example 1",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797027587890625,
+      "y": 5.252474784851074
+    },
+    {
+      "id": "42411:69627",
+      "text": "Annotation (주석)",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Point",
+        "Frame 1261159402"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42411:69629",
+      "text": "[Version (버전)] 🔵 As is (+ 버전 네이밍) 🔴 To be (+ 버전 네이밍) [Status (상태)] 🚧 WIP(→ working in process) ✅ Done 🟣 Exception case",
+      "in": [
+        "G car Principle",
+        "Template frame sub",
+        "Content area",
+        "Point",
+        "Frame 1261159402"
+      ],
+      "x": 0,
+      "y": 188
+    },
+    {
+      "id": "42411:69866",
+      "text": "2026.05.06",
+      "in": [],
+      "x": 12251,
+      "y": 6130
+    },
+    {
+      "id": "42411:69867",
+      "text": "목적: Figma → Storybook → Code → Amplitude까지 하나의 명명 체계로 꿰뚫는 통합 시스템",
+      "in": [],
+      "x": 15313,
+      "y": 8719
+    },
+    {
+      "id": "42411:69868",
+      "text": "활용: Figma 네이밍 정의 → OS/Amplitude 활용 시 변환",
+      "in": [],
+      "x": 15313,
+      "y": 8785
+    },
+    {
+      "id": "42411:69878",
+      "text": "최신 디자인 토큰(Figma Variables) 기반의 명명법 가이드는 토스, 구글 등 대형 서비스 사례를 반영하여 시스템의 확장성과 유지보수 효율을 극대화하는 파운데이션 구조를 제안",
+      "in": [],
+      "x": 15313,
+      "y": 8930
+    },
+    {
+      "id": "42411:69879",
+      "text": "공통인 것 (원칙 레벨) 슬래시(/)로 계층 구분 단어 내부는 snake_case (소문자 + _) 약어, 한글, 공백, 버전 접미사 금지 \"덜 바뀌는 것 → 자주 바뀌는 것\" 순서 의미적 이름 우선 (수치 직접 노출 최소화)",
+      "in": [],
+      "x": 15313,
+      "y": 9160
+    },
+    {
+      "id": "43014:1311",
+      "text": "Foundation 토큰: lowercase → semantic/color/action/primary 실제 사용되는 형태  Figma 컴포넌트: PascalCase → Component/Button/Primary/Medium 폴더 구분을 위한",
+      "in": [],
+      "x": 14219,
+      "y": 8858
+    },
+    {
+      "id": "42778:38046",
+      "text": "전체 구조",
+      "in": [],
+      "x": 16420,
+      "y": 8876
+    },
+    {
+      "id": "42778:38049",
+      "text": "Tier 시스템 (3단계)",
+      "in": [],
+      "x": 16420,
+      "y": 9425
+    },
+    {
+      "id": "42778:38047",
+      "text": "표준 명명 패턴 — Tier + Category + Role + Scale/State",
+      "in": [],
+      "x": 16420,
+      "y": 8946
+    },
+    {
+      "id": "42778:38807",
+      "text": "Raw 값 — primitive/color/blue/600",
+      "in": [],
+      "x": 16635,
+      "y": 9535
+    },
+    {
+      "id": "42778:38810",
+      "text": "Primitive",
+      "in": [],
+      "x": 16420,
+      "y": 9535
+    },
+    {
+      "id": "42778:38813",
+      "text": "❌",
+      "in": [],
+      "x": 17205,
+      "y": 9535
+    },
+    {
+      "id": "42778:38811",
+      "text": "Semantic",
+      "in": [],
+      "x": 16420,
+      "y": 9586
+    },
+    {
+      "id": "42778:38814",
+      "text": "✅",
+      "in": [],
+      "x": 17205,
+      "y": 9586
+    },
+    {
+      "id": "42778:38815",
+      "text": "✅",
+      "in": [],
+      "x": 17205,
+      "y": 9637
+    },
+    {
+      "id": "42778:38808",
+      "text": "의미 부여 — semantic/color/action/primary",
+      "in": [],
+      "x": 16635,
+      "y": 9586
+    },
+    {
+      "id": "42778:38809",
+      "text": "컴포넌트별 — component/button/primary/bg",
+      "in": [],
+      "x": 16635,
+      "y": 9637
+    },
+    {
+      "id": "42778:38804",
+      "text": "컴포넌트 직접 사용(유/무)",
+      "in": [],
+      "x": 17092,
+      "y": 9480
+    },
+    {
+      "id": "42778:38805",
+      "text": "역할",
+      "in": [],
+      "x": 16635,
+      "y": 9480
+    },
+    {
+      "id": "42778:38806",
+      "text": "Tier",
+      "in": [],
+      "x": 16440,
+      "y": 9480
+    },
+    {
+      "id": "42778:38048",
+      "text": "Foundation 명명 규칙 치트시트(v.3)",
+      "in": [],
+      "x": 16420,
+      "y": 8702
+    },
+    {
+      "id": "42778:38835",
+      "text": "Color · Typography · Icon · Space · Radius · Shadow · Motion",
+      "in": [],
+      "x": 16420,
+      "y": 8759
+    },
+    {
+      "id": "42411:69880",
+      "text": "구분 파운데이션 컴포넌트",
+      "in": [],
+      "x": 15313,
+      "y": 9429
+    },
+    {
+      "id": "42440:24067",
+      "text": "Description",
+      "in": [],
+      "x": 15313,
+      "y": 9600
+    },
+    {
+      "id": "42778:38819",
+      "text": "tier",
+      "in": [],
+      "x": 16418,
+      "y": 9090
+    },
+    {
+      "id": "42778:38826",
+      "text": "primitive semantic component",
+      "in": [],
+      "x": 16418,
+      "y": 9167
+    },
+    {
+      "id": "42778:38824",
+      "text": "category",
+      "in": [],
+      "x": 16658,
+      "y": 9090
+    },
+    {
+      "id": "42778:38828",
+      "text": "role",
+      "in": [],
+      "x": 16917,
+      "y": 9090
+    },
+    {
+      "id": "42778:38831",
+      "text": "scale_or_state",
+      "in": [],
+      "x": 17212,
+      "y": 9090
+    },
+    {
+      "id": "42778:38827",
+      "text": "color · font · icon space · radius shadow · motion",
+      "in": [],
+      "x": 16658,
+      "y": 9167
+    },
+    {
+      "id": "42778:38829",
+      "text": "action · text background · border inset · elevation",
+      "in": [],
+      "x": 16917,
+      "y": 9167
+    },
+    {
+      "id": "42778:38832",
+      "text": "primary · md hover · pressed 2 · full",
+      "in": [],
+      "x": 17212,
+      "y": 9167
+    },
+    {
+      "id": "42778:38820",
+      "text": "1",
+      "in": [],
+      "x": 16418,
+      "y": 9030
+    },
+    {
+      "id": "42778:38825",
+      "text": "2",
+      "in": [],
+      "x": 16658,
+      "y": 9030
+    },
+    {
+      "id": "42778:38830",
+      "text": "3",
+      "in": [],
+      "x": 16917,
+      "y": 9030
+    },
+    {
+      "id": "42778:38833",
+      "text": "4",
+      "in": [],
+      "x": 17212,
+      "y": 9030
+    }
+  ]
+}

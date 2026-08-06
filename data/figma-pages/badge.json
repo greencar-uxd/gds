@@ -1,0 +1,8181 @@
+{
+  "$description": "Bage (뱃지) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42441:14115",
+    "pageName": "Bage (뱃지) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 1857,
+    "byType": {
+      "canvas": 1,
+      "frame": 789,
+      "instance": 457,
+      "symbol": 97,
+      "text": 499,
+      "rectangle": 1,
+      "vector": 10,
+      "widget": 2,
+      "line": 1
+    },
+    "topLevel": 27,
+    "texts": 499,
+    "namedTexts": 499,
+    "templateStubs": 12,
+    "symbols": 97
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42441:53304",
+      "name": "19.Badge & Bullet",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "42553:12330",
+      "name": "SCR_GA_RV_0102_M02",
+      "w": 375,
+      "h": 1095
+    },
+    {
+      "type": "frame",
+      "id": "42553:12477",
+      "name": "SCR_GA_RV_0102_M04",
+      "w": 375,
+      "h": 986
+    },
+    {
+      "type": "frame",
+      "id": "42553:13087",
+      "name": "SCR_GA_RV_0101_M02 지역검색_검색한 지역이 그린존일 때",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "instance",
+      "id": "43651:12107",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "43651:12147",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "43651:12167",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "instance",
+      "id": "43651:12094",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "43651:12087",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "43651:12100",
+      "name": "car_status_down",
+      "w": 65,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "42553:13716",
+      "name": "차량정보+뱃지",
+      "w": 375,
+      "h": 1785
+    },
+    {
+      "type": "frame",
+      "id": "42553:14406",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 2494
+    },
+    {
+      "type": "frame",
+      "id": "42554:37687",
+      "name": "15. Car reservation",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "42575:26398",
+      "name": "SCR_GA_RV_0102_M01",
+      "w": 375,
+      "h": 1314
+    },
+    {
+      "type": "frame",
+      "id": "43207:57315",
+      "name": "Components_Bage",
+      "w": 1920,
+      "h": 6459
+    },
+    {
+      "type": "frame",
+      "id": "43207:58153",
+      "name": "SCR_GA_RV_0102_M02",
+      "w": 375,
+      "h": 1095
+    },
+    {
+      "type": "frame",
+      "id": "43207:58400",
+      "name": "SCR_GA_RV_0102_M02",
+      "w": 375,
+      "h": 1095
+    },
+    {
+      "type": "frame",
+      "id": "43218:52333",
+      "name": "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+      "w": 375,
+      "h": 1289
+    },
+    {
+      "type": "widget",
+      "id": "43218:52550",
+      "name": "Annotation",
+      "w": 352,
+      "h": 178
+    },
+    {
+      "type": "frame",
+      "id": "43222:10373",
+      "name": "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+      "w": 375,
+      "h": 1289
+    },
+    {
+      "type": "instance",
+      "id": "43222:10979",
+      "name": "운행중",
+      "w": 44,
+      "h": 18
+    },
+    {
+      "type": "symbol",
+      "id": "44686:17355",
+      "name": "Badge",
+      "w": 81,
+      "h": 18
+    },
+    {
+      "type": "frame",
+      "id": "43222:10464",
+      "name": "SCR_GA_CT_0101_M03_메인_반납임박",
+      "w": 375,
+      "h": 1373
+    },
+    {
+      "type": "frame",
+      "id": "43222:10553",
+      "name": "SCR_GA_CT_0101_M04_메인_대여초과",
+      "w": 375,
+      "h": 1165
+    },
+    {
+      "type": "instance",
+      "id": "43222:10982",
+      "name": "운행중",
+      "w": 53,
+      "h": 18
+    },
+    {
+      "type": "instance",
+      "id": "43222:10985",
+      "name": "badge_way",
+      "w": 35,
+      "h": 18
+    },
+    {
+      "type": "widget",
+      "id": "43625:58602",
+      "name": "Annotation",
+      "w": 352,
+      "h": 310
+    }
+  ],
+  "componentSets": {
+    "total": 97,
+    "axes": {
+      "badge_list": {
+        "td_list": 1,
+        "plus": 1,
+        "event_list": 1,
+        "sp_list": 1,
+        "nz_list": 1,
+        "nc_list": 1,
+        "ec_list": 1,
+        "fz_list": 1,
+        "en_list": 1,
+        "clean_list": 1,
+        "oda_list": 1,
+        "ow_n": 1,
+        "ow_y": 1
+      },
+      "상태": {
+        "예약취소": 2,
+        "반납완료": 2,
+        "이용완료": 2,
+        "운행중": 2,
+        "%": 1,
+        "예약완료": 2,
+        "반납임박": 2,
+        "대여초과": 2,
+        "예약대기": 2,
+        "묶음예약": 2,
+        "환불완료": 1,
+        "이용중": 1,
+        "연료량": 1,
+        "세차완료": 1,
+        "점검완료": 1
+      },
+      "Property 1": {
+        "round_list": 1,
+        "oneway_list": 1,
+        "핫딜": 1,
+        "Variant4": 1,
+        "sos_list": 1,
+        "oda_list": 1,
+        "caption_round_24": 1,
+        "caption_round_text_24": 1,
+        "caption_oneway_24": 1,
+        "caption_oneway_text_24": 1,
+        "caption_finished_18": 1,
+        "caption_waiting_18": 1,
+        "category_18": 1,
+        "red_category_18": 1,
+        "default": 1,
+        "pressed": 1,
+        "pressed_after": 1,
+        "disable": 1,
+        "gz_pin_list": 1,
+        "ktx_pin_list": 1,
+        "free_pin_list": 1,
+        "oda_pin_list": 1,
+        "btn_알림신청중": 1,
+        "btn_바로 출발하기": 1,
+        "btn_알림신청": 1,
+        "-30min remove btn_sel": 1,
+        "+1 hour add btn_sel": 1,
+        "+30min add btn_sel": 1,
+        "+10min add btn_sel": 1,
+        "-30min remove btn": 1,
+        "+1 hour add btn": 1,
+        "+30min add btn": 1,
+        "+10min add btn": 1,
+        "ios time_btn_sel": 1,
+        "ios time_btn_default": 1,
+        "bar_color_booking": 1,
+        "bar_color_already": 1,
+        "bar_color_doub": 1,
+        "bar_color_emp": 1,
+        "remove day_disable": 1,
+        "remove day_default": 1,
+        "remove day_press": 1,
+        "add day_default": 1,
+        "add day_press": 1,
+        "add day_disable": 1
+      },
+      "checked": {
+        "아쉬워요_on": 1,
+        "평범해요_on": 1,
+        "만족해요_on": 1,
+        "아쉬워요_off": 1,
+        "평범해요_off": 1,
+        "만족해요_off": 1
+      },
+      "type": {
+        "round_list": 1,
+        "oneway_list": 1,
+        "핫딜": 1,
+        "discount_list": 1,
+        "sos_list": 1,
+        "결제예정": 1,
+        "\b영수증발급": 1,
+        "oda_list": 1
+      }
+    },
+    "unparsed": [
+      "Badge"
+    ],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "42441:53339",
+        "name": "badge_list=td_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53341",
+        "name": "badge_list=plus",
+        "w": 37,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53343",
+        "name": "badge_list=event_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53345",
+        "name": "badge_list=sp_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53347",
+        "name": "badge_list=nz_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53349",
+        "name": "badge_list=nc_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53351",
+        "name": "badge_list=ec_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53353",
+        "name": "badge_list=fz_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53355",
+        "name": "badge_list=en_list",
+        "w": 53,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53357",
+        "name": "badge_list=clean_list",
+        "w": 44,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53359",
+        "name": "badge_list=oda_list",
+        "w": 61,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53361",
+        "name": "badge_list=ow_n",
+        "w": 56,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53363",
+        "name": "badge_list=ow_y",
+        "w": 56,
+        "h": 18,
+        "in": "badge_list"
+      },
+      {
+        "id": "42441:53367",
+        "name": "상태=예약취소",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53369",
+        "name": "상태=반납완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53371",
+        "name": "상태=이용완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53373",
+        "name": "상태=운행중",
+        "w": 44,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53375",
+        "name": "상태=%",
+        "w": 51,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53378",
+        "name": "상태=예약완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53380",
+        "name": "상태=반납임박",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53382",
+        "name": "상태=대여초과",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53384",
+        "name": "상태=예약대기",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53386",
+        "name": "상태=묶음예약",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53389",
+        "name": "Property 1=round_list",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53391",
+        "name": "Property 1=oneway_list",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53393",
+        "name": "Property 1=핫딜",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53395",
+        "name": "Property 1=Variant4",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53397",
+        "name": "Property 1=sos_list",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53399",
+        "name": "Property 1=oda_list",
+        "w": 35,
+        "h": 18,
+        "in": "Component 105"
+      },
+      {
+        "id": "42441:53402",
+        "name": "Property 1=caption_round_24",
+        "w": 60,
+        "h": 24,
+        "in": "Component 107"
+      },
+      {
+        "id": "42441:53405",
+        "name": "Property 1=caption_round_text_24",
+        "w": 42,
+        "h": 24,
+        "in": "Component 107"
+      },
+      {
+        "id": "42441:53408",
+        "name": "Property 1=caption_oneway_24",
+        "w": 60,
+        "h": 24,
+        "in": "Component 107"
+      },
+      {
+        "id": "42441:53411",
+        "name": "Property 1=caption_oneway_text_24",
+        "w": 42,
+        "h": 24,
+        "in": "Component 107"
+      },
+      {
+        "id": "42441:53417",
+        "name": "Property 1=caption_finished_18",
+        "w": 53,
+        "h": 18,
+        "in": "Component 109"
+      },
+      {
+        "id": "42441:53419",
+        "name": "Property 1=caption_waiting_18",
+        "w": 53,
+        "h": 18,
+        "in": "Component 109"
+      },
+      {
+        "id": "42441:53443",
+        "name": "Property 1=category_18",
+        "w": 35,
+        "h": 18,
+        "in": "Category"
+      },
+      {
+        "id": "42441:53445",
+        "name": "Property 1=red_category_18",
+        "w": 35,
+        "h": 18,
+        "in": "Category"
+      },
+      {
+        "id": "42441:53464",
+        "name": "checked=아쉬워요_on",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53467",
+        "name": "checked=평범해요_on",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53470",
+        "name": "checked=만족해요_on",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53473",
+        "name": "checked=아쉬워요_off",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53476",
+        "name": "checked=평범해요_off",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53479",
+        "name": "checked=만족해요_off",
+        "w": 91,
+        "h": 90,
+        "in": "Survey_btn"
+      },
+      {
+        "id": "42441:53483",
+        "name": "Property 1=default",
+        "w": 70,
+        "h": 86,
+        "in": "mappin"
+      },
+      {
+        "id": "42441:53492",
+        "name": "Property 1=pressed",
+        "w": 74,
+        "h": 86,
+        "in": "mappin"
+      },
+      {
+        "id": "42441:53501",
+        "name": "Property 1=pressed_after",
+        "w": 74,
+        "h": 86,
+        "in": "mappin"
+      },
+      {
+        "id": "42441:53510",
+        "name": "Property 1=disable",
+        "w": 153,
+        "h": 86,
+        "in": "mappin"
+      },
+      {
+        "id": "42441:53559",
+        "name": "Property 1=gz_pin_list",
+        "w": 20,
+        "h": 20,
+        "in": "badge_pin_list"
+      },
+      {
+        "id": "42441:53564",
+        "name": "Property 1=ktx_pin_list",
+        "w": 20,
+        "h": 20,
+        "in": "badge_pin_list"
+      },
+      {
+        "id": "42441:53569",
+        "name": "Property 1=free_pin_list",
+        "w": 20,
+        "h": 20,
+        "in": "badge_pin_list"
+      },
+      {
+        "id": "42441:53572",
+        "name": "Property 1=oda_pin_list",
+        "w": 20,
+        "h": 20,
+        "in": "badge_pin_list"
+      },
+      {
+        "id": "42441:53584",
+        "name": "Property 1=btn_알림신청중",
+        "w": 116,
+        "h": 34,
+        "in": "Component 114"
+      },
+      {
+        "id": "42441:53587",
+        "name": "Property 1=btn_바로 출발하기",
+        "w": 109,
+        "h": 34,
+        "in": "Component 114"
+      },
+      {
+        "id": "42441:53589",
+        "name": "Property 1=btn_알림신청",
+        "w": 100,
+        "h": 34,
+        "in": "Component 114"
+      },
+      {
+        "id": "42441:53606",
+        "name": "상태=예약취소",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53608",
+        "name": "상태=환불완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53610",
+        "name": "상태=이용완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53612",
+        "name": "상태=운행중",
+        "w": 44,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53614",
+        "name": "상태=이용중",
+        "w": 44,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53616",
+        "name": "상태=연료량",
+        "w": 51,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53619",
+        "name": "상태=예약완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53621",
+        "name": "상태=반납임박",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53623",
+        "name": "상태=대여초과",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53625",
+        "name": "상태=예약대기",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53627",
+        "name": "상태=반납완료",
+        "w": 53,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53629",
+        "name": "상태=세차완료",
+        "w": 65,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53632",
+        "name": "상태=점검완료",
+        "w": 65,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:53635",
+        "name": "상태=묶음예약",
+        "w": 62,
+        "h": 18,
+        "in": "car_status_down"
+      },
+      {
+        "id": "42441:52450",
+        "name": "Property 1=-30min remove btn_sel",
+        "w": 65,
+        "h": 37,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52453",
+        "name": "Property 1=+1 hour add btn_sel",
+        "w": 65,
+        "h": 37,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52456",
+        "name": "Property 1=+30min add btn_sel",
+        "w": 65,
+        "h": 37,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52459",
+        "name": "Property 1=+10min add btn_sel",
+        "w": 65,
+        "h": 37,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52462",
+        "name": "Property 1=-30min remove btn",
+        "w": 65,
+        "h": 40,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52465",
+        "name": "Property 1=+1 hour add btn",
+        "w": 65,
+        "h": 40,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52468",
+        "name": "Property 1=+30min add btn",
+        "w": 65,
+        "h": 40,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52471",
+        "name": "Property 1=+10min add btn",
+        "w": 65,
+        "h": 40,
+        "in": "time btn"
+      },
+      {
+        "id": "42441:52479",
+        "name": "Property 1=ios time_btn_sel",
+        "w": 375,
+        "h": 40,
+        "in": "ios time btn"
+      },
+      {
+        "id": "42441:52484",
+        "name": "Property 1=ios time_btn_default",
+        "w": 375,
+        "h": 40,
+        "in": "ios time btn"
+      },
+      {
+        "id": "42441:52490",
+        "name": "type=round_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52492",
+        "name": "type=oneway_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52494",
+        "name": "type=핫딜",
+        "w": 35,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52496",
+        "name": "type=discount_list",
+        "w": 57,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52498",
+        "name": "type=sos_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52500",
+        "name": "type=결제예정",
+        "w": 53,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52502",
+        "name": "type=\b영수증발급",
+        "w": 62,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52504",
+        "name": "type=oda_list",
+        "w": 35,
+        "h": 18,
+        "in": "badge_way"
+      },
+      {
+        "id": "42441:52508",
+        "name": "Property 1=bar_color_booking",
+        "w": 100,
+        "h": 10,
+        "in": "bar_color"
+      },
+      {
+        "id": "42441:52510",
+        "name": "Property 1=bar_color_already",
+        "w": 100,
+        "h": 10,
+        "in": "bar_color"
+      },
+      {
+        "id": "42441:52512",
+        "name": "Property 1=bar_color_doub",
+        "w": 100,
+        "h": 10,
+        "in": "bar_color"
+      },
+      {
+        "id": "42441:52514",
+        "name": "Property 1=bar_color_emp",
+        "w": 100,
+        "h": 10,
+        "in": "bar_color"
+      },
+      {
+        "id": "42441:52635",
+        "name": "Property 1=remove day_disable",
+        "w": 48,
+        "h": 48,
+        "in": "Component_remove day"
+      },
+      {
+        "id": "42441:52637",
+        "name": "Property 1=remove day_default",
+        "w": 48,
+        "h": 48,
+        "in": "Component_remove day"
+      },
+      {
+        "id": "42441:52639",
+        "name": "Property 1=remove day_press",
+        "w": 48,
+        "h": 48,
+        "in": "Component_remove day"
+      },
+      {
+        "id": "42441:52642",
+        "name": "Property 1=add day_default",
+        "w": 48,
+        "h": 48,
+        "in": "Component_add day"
+      },
+      {
+        "id": "42441:52644",
+        "name": "Property 1=add day_press",
+        "w": 48,
+        "h": 48,
+        "in": "Component_add day"
+      },
+      {
+        "id": "42441:52646",
+        "name": "Property 1=add day_disable",
+        "w": 48,
+        "h": 48,
+        "in": "Component_add day"
+      },
+      {
+        "id": "44686:17355",
+        "name": "Badge",
+        "w": 81,
+        "h": 18,
+        "in": "Bage (뱃지) 🚧"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Structure",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 12
+  },
+  "texts": [
+    {
+      "id": "42441:53421",
+      "text": "예약",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1232
+    },
+    {
+      "id": "42441:53422",
+      "text": "보류, 임박, 초과, 지연",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1267
+    },
+    {
+      "id": "42441:53423",
+      "text": "운행",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1305
+    },
+    {
+      "id": "42441:53424",
+      "text": "완료 & 대기",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1344
+    },
+    {
+      "id": "42441:53425",
+      "text": "예약취소(취소상태)",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1381
+    },
+    {
+      "id": "42441:53426",
+      "text": "예약 종류",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 573,
+      "y": 1420
+    },
+    {
+      "id": "42441:53427",
+      "text": "예약",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 868
+    },
+    {
+      "id": "42441:53428",
+      "text": "보류, 임박, 초과, 지연",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 1005
+    },
+    {
+      "id": "42441:53429",
+      "text": "운행",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 935
+    },
+    {
+      "id": "42441:53430",
+      "text": "완료 & 대기",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 980
+    },
+    {
+      "id": "42441:53431",
+      "text": "예약취소(취소상태)",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 1094
+    },
+    {
+      "id": "42441:53432",
+      "text": "예약 종류",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1738,
+      "y": 1064
+    },
+    {
+      "id": "42441:53433",
+      "text": "Title  29 Copy 51",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 795
+    },
+    {
+      "id": "42441:53434",
+      "text": "Title  29 Copy 53",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 1314
+    },
+    {
+      "id": "42441:53435",
+      "text": "Title  29 Copy 54",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 1567
+    },
+    {
+      "id": "42441:53436",
+      "text": "Title  29 Copy 55",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 1751
+    },
+    {
+      "id": "42441:53437",
+      "text": "Title  29 Copy 56",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 1899
+    },
+    {
+      "id": "42441:53438",
+      "text": "Title  29 Copy 57",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 2181
+    },
+    {
+      "id": "42441:53439",
+      "text": "Title  29 Copy 61",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 352,
+      "y": 2290
+    },
+    {
+      "id": "42441:53440",
+      "text": "Title  29 Copy 58",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 2923
+    },
+    {
+      "id": "42441:53441",
+      "text": "Title  29 Copy 60",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 80,
+      "y": 3409
+    },
+    {
+      "id": "42441:53454",
+      "text": "G car 오다",
+      "in": [
+        "19.Badge & Bullet",
+        "banner_ODA",
+        "banner",
+        "01",
+        "Frame 3452",
+        "Frame 3453"
+      ],
+      "x": 3,
+      "y": 0
+    },
+    {
+      "id": "42441:53461",
+      "text": "normal",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 743.5,
+      "y": 3334
+    },
+    {
+      "id": "42441:53462",
+      "text": "checked",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 743.5,
+      "y": 3457
+    },
+    {
+      "id": "42441:53523",
+      "text": "Text",
+      "in": [
+        "19.Badge & Bullet",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42441:53524",
+      "text": "v1.01",
+      "in": [
+        "19.Badge & Bullet",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 74,
+      "y": 0
+    },
+    {
+      "id": "42441:53525",
+      "text": "24.10.17 카테고리+알림 뱃지 아이콘 형태: 아이콘 상단 + 스몰 레드 뱃지 = 아이콘에 겹쳐서 노출 카테고리 형태: 뱃지 + 스몰 레드뱃지 = 뱃지 우측 바로 붙어서 노출",
+      "in": [
+        "19.Badge & Bullet",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 4,
+      "y": 0
+    },
+    {
+      "id": "42441:53526",
+      "text": "편도 가능 유무 뱃지",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 687,
+      "y": 1033
+    },
+    {
+      "id": "42441:53542",
+      "text": "Stroke",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 98,
+      "y": 29
+    },
+    {
+      "id": "42441:53543",
+      "text": "Opacity",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 98,
+      "y": 115
+    },
+    {
+      "id": "42441:53544",
+      "text": "Drag Animation",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 88,
+      "y": 91
+    },
+    {
+      "id": "42441:53545",
+      "text": "Disabled",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 88,
+      "y": 154
+    },
+    {
+      "id": "42441:53546",
+      "text": "Default",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 88,
+      "y": 6
+    },
+    {
+      "id": "42441:53547",
+      "text": "Stroke",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 98,
+      "y": 172
+    },
+    {
+      "id": "42441:53548",
+      "text": "#BE161D",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 151,
+      "y": 29
+    },
+    {
+      "id": "42441:53549",
+      "text": "50%",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 164,
+      "y": 115
+    },
+    {
+      "id": "42441:53550",
+      "text": "#B3BABF",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 150,
+      "y": 172
+    },
+    {
+      "id": "42441:53551",
+      "text": "Fill",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 98,
+      "y": 50
+    },
+    {
+      "id": "42441:53552",
+      "text": "Fill",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 98,
+      "y": 199
+    },
+    {
+      "id": "42441:53553",
+      "text": "#ED1C24",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 151,
+      "y": 50
+    },
+    {
+      "id": "42441:53554",
+      "text": "#E2E2E2",
+      "in": [
+        "19.Badge & Bullet",
+        "Frame 1261159402"
+      ],
+      "x": 152,
+      "y": 199
+    },
+    {
+      "id": "42441:53592",
+      "text": "Title  29 Copy 35",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1296,
+      "y": 1021
+    },
+    {
+      "id": "42441:53593",
+      "text": "Title  29 Copy 36",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1296,
+      "y": 1254
+    },
+    {
+      "id": "42441:53594",
+      "text": "Title  29 Copy 72",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1296,
+      "y": 1445
+    },
+    {
+      "id": "42441:53595",
+      "text": "Title  29 Copy 37",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1296,
+      "y": 650
+    },
+    {
+      "id": "42441:53596",
+      "text": "Title  29 Copy 75",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1296,
+      "y": 1618
+    },
+    {
+      "id": "42441:53601",
+      "text": "text",
+      "in": [
+        "19.Badge & Bullet",
+        "img",
+        "ODA"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "42441:53640",
+      "text": "차량",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1480,
+      "y": 817
+    },
+    {
+      "id": "42441:53641",
+      "text": "KTX패키지",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1545,
+      "y": 817
+    },
+    {
+      "id": "42441:53642",
+      "text": "KTX",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 1633,
+      "y": 817
+    },
+    {
+      "id": "42441:53646",
+      "text": "정리 필요함 (오른쪽에서 정리)",
+      "in": [
+        "19.Badge & Bullet"
+      ],
+      "x": 945,
+      "y": 1262
+    },
+    {
+      "id": "42553:12342",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12343",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12344",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12347",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12356",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12357",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12358",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12361",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12370",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12372",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12373",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12374",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12377",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42553:12386",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12388",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12389",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12390",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12393",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12402",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12404",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12405",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12406",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12409",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12418",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12420",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12421",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12422",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12425",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12434",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12436",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12437",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12438",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12441",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12450",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12452",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12453",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12454",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12457",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12466",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12468",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12469",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "42553:12470",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12473",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12494",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12495",
+      "text": "서울 성동구 상수동1가 366-1",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12498",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12506",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2760"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12507",
+      "text": "서울 성수동2가 333-16 이마트",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2760"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12510",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12518",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12519",
+      "text": "서울 성동구 성수동2가 333-16",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12522",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12530",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12531",
+      "text": "서울 성동구 성수동1가 656-260",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12534",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12542",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2760"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12543",
+      "text": "서울 성동구 성수동1가 656-335",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2760"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12546",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12554",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12555",
+      "text": "서울 성동구 성수동1가 13-209",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12558",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12566",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12567",
+      "text": "서울 성동구 성수동1가 685-191",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12570",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:12578",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:12579",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:12582",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M04",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:13112",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_RV_0101_M02 지역검색_검색한 지역이 그린존일 때",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:13113",
+      "text": "서울 용산구 한남동 522-44",
+      "in": [
+        "SCR_GA_RV_0101_M02 지역검색_검색한 지역이 그린존일 때",
+        "Bottom Sheet",
+        "Body",
+        "subway list",
+        "text C"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43651:12149",
+      "text": "text",
+      "in": [
+        "car_status_down"
+      ],
+      "x": 19,
+      "y": 2
+    },
+    {
+      "id": "43651:12169",
+      "text": "text",
+      "in": [
+        "car_status_down",
+        "Frame 2147227748"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43651:12089",
+      "text": "text",
+      "in": [
+        "car_status_down",
+        "Frame 2147227747"
+      ],
+      "x": 12,
+      "y": 0
+    },
+    {
+      "id": "43651:12103",
+      "text": "text",
+      "in": [
+        "car_status_down",
+        "Frame 2147227747"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "42553:14415",
+      "text": "* 주행요금은 반납 후 실주행거리에 따라 별도로 청구됩니다.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "Frame 71644",
+        "01"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14418",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "02"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14422",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "42553:14424",
+      "text": "시간",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "02",
+        "대여기간",
+        "R text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14431",
+      "text": "대여유형",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "03",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14436",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "03",
+        "Group 71652",
+        "대여위치"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14439",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "03",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "42553:14442",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "03",
+        "Group 71652",
+        "반납위치"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14445",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "03",
+        "Group 71652",
+        "반납위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "42553:14453",
+      "text": "결제정보",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "1"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14456",
+      "text": "대여요금 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "2",
+        "Frame 3183"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14459",
+      "text": "할인가",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "2",
+        "Frame 3458",
+        "Frame 2752"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14460",
+      "text": "%",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "2",
+        "Frame 3458",
+        "Frame 2752"
+      ],
+      "x": 57,
+      "y": 0
+    },
+    {
+      "id": "42553:14462",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "2",
+        "Frame 3458",
+        "price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14465",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3461"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14466",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3461"
+      ],
+      "x": 56,
+      "y": 0
+    },
+    {
+      "id": "42553:14469",
+      "text": "할인가",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3458",
+        "Frame 2752"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42553:14470",
+      "text": "%",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3458",
+        "Frame 2752"
+      ],
+      "x": 77,
+      "y": 0
+    },
+    {
+      "id": "42553:14472",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3458",
+        "price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14473",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "3",
+        "Frame 3458",
+        "price"
+      ],
+      "x": 46,
+      "y": 0
+    },
+    {
+      "id": "42553:14477",
+      "text": "할인/적립",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "Frame 71647",
+        "4",
+        "Frame 71645"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14483",
+      "text": "999원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "Frame 71647",
+        "4",
+        "Frame 3120",
+        "Frame 71648",
+        "Frame 3533"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14485",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "Frame 71647",
+        "4",
+        "Frame 3120",
+        "Frame 71648",
+        "Frame 3533",
+        "price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14488",
+      "text": "[멤버십] 3월 월간혜택 주중 50% 할인쿠폰...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "9",
+        "Frame 71647",
+        "보유포인트"
+      ],
+      "x": 117,
+      "y": 0
+    },
+    {
+      "id": "42553:14492",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "Frame 3459"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14494",
+      "text": "G포인트",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "전액사용"
+      ],
+      "x": 0,
+      "y": 14
+    },
+    {
+      "id": "42553:14497",
+      "text": "보유 포인트",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "보유포인트"
+      ],
+      "x": 207,
+      "y": 0
+    },
+    {
+      "id": "42553:14498",
+      "text": "1,000,000P",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "보유포인트"
+      ],
+      "x": 269,
+      "y": 0
+    },
+    {
+      "id": "42553:14501",
+      "text": "할인/적립",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "L POINT"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14504",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "L POINT",
+        "Frame 3120",
+        "price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14505",
+      "text": "이메일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "06_포인트",
+        "L POINT",
+        "Frame 3120",
+        "price"
+      ],
+      "x": 55,
+      "y": 0
+    },
+    {
+      "id": "42553:14510",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14516",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14517",
+      "text": "+5,350원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 246,
+      "y": 0
+    },
+    {
+      "id": "42553:14521",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "1",
+        "Frame 3122"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14522",
+      "text": "+5,350원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "1",
+        "Frame 3122"
+      ],
+      "x": 203,
+      "y": 0
+    },
+    {
+      "id": "42553:14526",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "2",
+        "Frame 3123"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14527",
+      "text": "+5,350원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "07_보험료",
+        "list",
+        "2",
+        "Frame 3123"
+      ],
+      "x": 203,
+      "y": 0
+    },
+    {
+      "id": "42553:14530",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "08_최종결제금액"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42553:14532",
+      "text": "할인가",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "08_최종결제금액",
+        "Frame 3021"
+      ],
+      "x": 28,
+      "y": 0
+    },
+    {
+      "id": "42553:14533",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "08_최종결제금액",
+        "Frame 3021"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42553:14537",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "결제수단",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14539",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "결제수단",
+        "결제수단",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14542",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "결제수단",
+        "카드설명"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14545",
+      "text": "텍스트",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "대여예약 약관동의(필수)"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:14549",
+      "text": "약관 모두 동의",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "대여예약 약관동의(필수)",
+        "\b세차클링 회원 약관",
+        "세차클링 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42553:14558",
+      "text": "개인신용정보 제공/조회는 서비스 이용 고객 중 미납요금 발생 대상자만 해당",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "대여예약 약관동의(필수)",
+        "\b세차클링 회원 약관",
+        "필수7",
+        "Frame 2764"
+      ],
+      "x": 77,
+      "y": 0
+    },
+    {
+      "id": "42553:14563",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14568",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42553:14571",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42553:14574",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2779",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42553:14576",
+      "text": "[계약안내]",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14577",
+      "text": "본 차량은 그린카에서 서비스가 제공되는 롯데렌탈㈜의 위탁 차량입니다. 임대차 계약서 보기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "예약전 주의사항",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42553:14580",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "휴차 보상료",
+        "Frame 2990"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:14585",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "차량",
+        "기타",
+        "휴차 보상료",
+        "Frame 2991",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42554:37696",
+      "text": "Time btn",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 783
+    },
+    {
+      "id": "42554:37697",
+      "text": "badge_way",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 1062
+    },
+    {
+      "id": "42554:37698",
+      "text": "Handle",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 1285
+    },
+    {
+      "id": "42554:37699",
+      "text": "add/remove day",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 2378
+    },
+    {
+      "id": "42554:37700",
+      "text": "Button",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 2220
+    },
+    {
+      "id": "42554:37701",
+      "text": "Time track",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 80,
+      "y": 1981
+    },
+    {
+      "id": "42554:37702",
+      "text": "Title  29 Copy 44",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 772,
+      "y": 814
+    },
+    {
+      "id": "42554:37703",
+      "text": "Title  29 Copy 46",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 1612,
+      "y": 814
+    },
+    {
+      "id": "42554:37704",
+      "text": "Title  29 Copy 45",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 772,
+      "y": 881
+    },
+    {
+      "id": "42554:37705",
+      "text": "Title  29 Copy 47",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 1613,
+      "y": 881
+    },
+    {
+      "id": "42554:37707",
+      "text": "aos",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 536,
+      "y": 655
+    },
+    {
+      "id": "42554:37708",
+      "text": "ios",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 1352,
+      "y": 655
+    },
+    {
+      "id": "42554:37722",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "날짜"
+      ],
+      "x": 0,
+      "y": 15
+    },
+    {
+      "id": "42554:37725",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "12:00"
+      ],
+      "x": 74.25,
+      "y": 15
+    },
+    {
+      "id": "42554:37728",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2846"
+      ],
+      "x": 146.5,
+      "y": 15
+    },
+    {
+      "id": "42554:37731",
+      "text": "12시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2847"
+      ],
+      "x": 220.75,
+      "y": 15
+    },
+    {
+      "id": "42554:37734",
+      "text": "23시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2848"
+      ],
+      "x": 293,
+      "y": 15
+    },
+    {
+      "id": "42554:37746",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "날짜"
+      ],
+      "x": 0,
+      "y": 15
+    },
+    {
+      "id": "42554:37749",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "12:00"
+      ],
+      "x": 74.25,
+      "y": 15
+    },
+    {
+      "id": "42554:37752",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2846"
+      ],
+      "x": 146.5,
+      "y": 15
+    },
+    {
+      "id": "42554:37755",
+      "text": "12시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2847"
+      ],
+      "x": 220.75,
+      "y": 15
+    },
+    {
+      "id": "42554:37758",
+      "text": "23시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2848"
+      ],
+      "x": 293,
+      "y": 15
+    },
+    {
+      "id": "42554:37774",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "날짜"
+      ],
+      "x": 0,
+      "y": 15
+    },
+    {
+      "id": "42554:37777",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "12:00"
+      ],
+      "x": 74.25,
+      "y": 15
+    },
+    {
+      "id": "42554:37780",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2846"
+      ],
+      "x": 146.5,
+      "y": 15
+    },
+    {
+      "id": "42554:37783",
+      "text": "12시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2847"
+      ],
+      "x": 220.75,
+      "y": 15
+    },
+    {
+      "id": "42554:37786",
+      "text": "23시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table",
+        "time_track",
+        "Frame 3618",
+        "Group 2848"
+      ],
+      "x": 293,
+      "y": 15
+    },
+    {
+      "id": "42554:37800",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table_op",
+        "time_track",
+        "Frame 3618",
+        "날짜"
+      ],
+      "x": 0,
+      "y": 15
+    },
+    {
+      "id": "42554:37803",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table_op",
+        "time_track",
+        "Frame 3618",
+        "12:00"
+      ],
+      "x": 74.25,
+      "y": 15
+    },
+    {
+      "id": "42554:37806",
+      "text": "오늘",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table_op",
+        "time_track",
+        "Frame 3618",
+        "Group 2846"
+      ],
+      "x": 146.5,
+      "y": 15
+    },
+    {
+      "id": "42554:37809",
+      "text": "12시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table_op",
+        "time_track",
+        "Frame 3618",
+        "Group 2847"
+      ],
+      "x": 220.75,
+      "y": 15
+    },
+    {
+      "id": "42554:37812",
+      "text": "23시",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation",
+        "time_table_op",
+        "time_track",
+        "Frame 3618",
+        "Group 2848"
+      ],
+      "x": 293,
+      "y": 15
+    },
+    {
+      "id": "42554:37816",
+      "text": "설정 시간대/예약 가능 (즉시)",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 552,
+      "y": 1943
+    },
+    {
+      "id": "42554:37817",
+      "text": "핸들을 좌/우로 최대한 움직여도 정보영역은 잘리지 않습니다. 게이지바는 좌/우 최소 30pixel 이상 여백을 주어야 합니다.",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 771,
+      "y": 1711
+    },
+    {
+      "id": "42554:37818",
+      "text": "대여나 반납 핸들을 선택하여 좌/우 드래그를 하더라도 두개의 핸들이 완전히 겹치지 않습니다.  (10분 단위 조정이기 때문에 0분이 될수 없음)  먼저 선택한 바가 제일 위에 표현 됩니다.",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 1172,
+      "y": 1711
+    },
+    {
+      "id": "42554:37819",
+      "text": "이메일",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 552,
+      "y": 1983
+    },
+    {
+      "id": "42554:37820",
+      "text": "이메일",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 552,
+      "y": 2022
+    },
+    {
+      "id": "42554:37821",
+      "text": "이메일",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 552,
+      "y": 2063
+    },
+    {
+      "id": "42554:37828",
+      "text": "add/remove day",
+      "in": [
+        "15. Car reservation",
+        "15. Car reservation"
+      ],
+      "x": 1092,
+      "y": 2381
+    },
+    {
+      "id": "42575:26413",
+      "text": "최근 이용한 G car Zone",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "최근 이용한 지역",
+        "fov"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "42575:26421",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26422",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42575:26425",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42575:26433",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26434",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42575:26437",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42575:26445",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26446",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42575:26449",
+      "text": "999.2km",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42575:26457",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26458",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42575:26461",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "최근 이용한 지역",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42575:26468",
+      "text": "캐스퍼",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "BN 320110",
+        "text",
+        "Frame 3089"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26471",
+      "text": "2시간 무료 시승 이벤트",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "BN 320110",
+        "text"
+      ],
+      "x": 0,
+      "y": 34
+    },
+    {
+      "id": "42575:26474",
+      "text": "02/12",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "BN 320110",
+        "bn no"
+      ],
+      "x": 8,
+      "y": 2.5
+    },
+    {
+      "id": "42575:26476",
+      "text": "G car 이벤트 존",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "그린카 이벤트 존"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42575:26478",
+      "text": "BN AREA",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "그린카 이벤트 존",
+        "BN AREA"
+      ],
+      "x": 130,
+      "y": 88
+    },
+    {
+      "id": "42575:26480",
+      "text": "BN AREA",
+      "in": [
+        "SCR_GA_RV_0102_M01",
+        "con",
+        "recent list",
+        "그린카 이벤트 존",
+        "BN AREA"
+      ],
+      "x": 130,
+      "y": 88
+    },
+    {
+      "id": "43207:57329",
+      "text": "Glossary",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57330",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43207:57333",
+      "text": "[정의]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57334",
+      "text": "Bage (뱃지)는",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43207:57918",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57919",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57920",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:57923",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:57932",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57933",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57934",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:57937",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:57946",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57948",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57949",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57950",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:57953",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43207:57962",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57964",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57965",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57966",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:57969",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:57978",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57980",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57981",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57982",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:57985",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:57994",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57996",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57997",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:57998",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58001",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58010",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58012",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58013",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58014",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58017",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58026",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58028",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58029",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58030",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58033",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58042",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58044",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58045",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58046",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58049",
+      "text": "69.2km",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:57347",
+      "text": "Bage (뱃지)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 69,
+      "y": 4
+    },
+    {
+      "id": "43207:57352",
+      "text": "Type",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57353",
+      "text": "Reference",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:57356",
+      "text": "[유형]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57357",
+      "text": "Input (인풋)은 입력 형태와 목적에 따라 세 가지 유형으로 구분합니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43207:57359",
+      "text": "[1] Text input(텍스트 인풋) 한 줄 단위로 단일 정보를 입력받는 기본 입력 필드입니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text"
+      ],
+      "x": 24,
+      "y": 12
+    },
+    {
+      "id": "43207:57361",
+      "text": "[2] Split text input (스플릿 인풋) 주민등록번호, 카드번호처럼 특정 기준으로 나뉘어 입력되는 분리형 필드입니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text"
+      ],
+      "x": 24,
+      "y": 12
+    },
+    {
+      "id": "43207:57363",
+      "text": "[3] Area text input (영역 텍스트 인풋) 여러 줄 입력이 필요한 경우 사용하는 필드로, 긴 내용의 메시지나 상세 정보 입력에 적용합니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text"
+      ],
+      "x": 24,
+      "y": 12
+    },
+    {
+      "id": "43207:57368",
+      "text": "Text input (텍스트 인풋)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 140,
+      "y": 0
+    },
+    {
+      "id": "43207:57369",
+      "text": "한 줄 단위로 단일 정보 입력형 인풋",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43207:57377",
+      "text": "Split text input (스플릿 인풋)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 124,
+      "y": 0
+    },
+    {
+      "id": "43207:57378",
+      "text": "특정 기준으로 나뉘어 입력되는 분리형 인풋",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43207:57387",
+      "text": "Area text input (영역 텍스트 인풋)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 108.5,
+      "y": 0
+    },
+    {
+      "id": "43207:57388",
+      "text": "긴 내용 전용의 박스형 인풋",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43207:57394",
+      "text": "Type",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57395",
+      "text": "Reference",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:57398",
+      "text": "[유형]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57399",
+      "text": "Text input(텍스트 인풋) 한 줄로 텍스트를 입력하는 기본 인풋 유형입니다. 일반 텍스트, 검색어, 비밀번호, 시간 등 단일 값을 입력할 때 사용하며, 입력 형태에 따라 검색 아이콘, 삭제 버튼, 유효성 오류 메시지 등을 포함할 수 있습니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57406",
+      "text": "Basic text input",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227745",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43207:57407",
+      "text": "Dim layer 2 (딤 레이어 2) 사용",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227745",
+        "Frame 2147227743"
+      ],
+      "x": 0,
+      "y": 42
+    },
+    {
+      "id": "43207:57414",
+      "text": "Basic text input",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227746",
+        "Frame 2147227744",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43207:57415",
+      "text": "Dim layer 2 (딤 레이어 2) 사용",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227746",
+        "Frame 2147227744"
+      ],
+      "x": 0,
+      "y": 42
+    },
+    {
+      "id": "43207:57420",
+      "text": "Type",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57421",
+      "text": "Reference",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:57424",
+      "text": "[유형]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57425",
+      "text": "Split input(스플릿 인풋) 하나의 입력 필드를 여러 구간으로 나누어 입력받는 인풋 유형입니다. 주민등록번호, 이름(국적+성명), 카드번호, 전화번호, 날짜 등 형식이 정해진 값을 구간별로 구분하여 입력할 때 사용합니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57430",
+      "text": "Type",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57431",
+      "text": "Reference",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:57434",
+      "text": "[유형]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57435",
+      "text": "Area input(영역 인풋) 여러 줄의 텍스트를 입력할 수 있는 인풋 유형입니다. 최대 1,000자 이내로 입력이 제한되며, 입력 가능한 최대 글자 수에 따라 박스의 최대 높이가 고정됩니다.  주로 긴 문장이나 상세 내용을 입력할 때 사용하며, 입력 가이드 문구와 유효성 오류 메시지를 함께 표시할 수 있습니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57440",
+      "text": "Structure",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57441",
+      "text": "Reference",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43207:57444",
+      "text": "[구조_Text input (텍스트 인풋)]",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:57445",
+      "text": "Basic alert (기본 알럿) Top (상단) · Body (중단) · Action (하단)으로 구성됩니다. Top (상단)은 케이스에 따라 생략될 수 있습니다.",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43207:57584",
+      "text": "Top (상단)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43207:57588",
+      "text": "Body (중단)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227740",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43207:57592",
+      "text": "Action (하단)",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227741",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43207:57603",
+      "text": "구조 & 스페이싱 값",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43207:57604",
+      "text": "Dim layer 2 (딤 레이어 2) 사용",
+      "in": [
+        "Components_Bage",
+        "Components_Bage",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743"
+      ],
+      "x": 0,
+      "y": 51
+    },
+    {
+      "id": "43207:58165",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58166",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58167",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58170",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58179",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58180",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58181",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58184",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58193",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58195",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58196",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58197",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58200",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43207:58209",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58211",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58212",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58213",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58216",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58225",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58227",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58228",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58229",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58232",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58241",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58243",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58244",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58245",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58248",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58257",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58259",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58260",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58261",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58264",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58273",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58275",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58276",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58277",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58280",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58289",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58291",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58292",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58293",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58296",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58412",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58413",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58414",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58417",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58426",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58427",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58428",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58431",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58440",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58442",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58443",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58444",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58447",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43207:58456",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58458",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58459",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58460",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58463",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58472",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58474",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58475",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58476",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58479",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58488",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58490",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58491",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58492",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58495",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58504",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58506",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58507",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58508",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58511",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58520",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58522",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58523",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58524",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58527",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43207:58536",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58538",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:58539",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43207:58540",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43207:58543",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0102_M02",
+        "Frame 3525",
+        "recent list",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43218:52338",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43218:52344",
+      "text": "반납 2시간 10분 전입니다.",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "01",
+        "반납시각"
+      ],
+      "x": 113.5,
+      "y": 0
+    },
+    {
+      "id": "43218:52347",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52348",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 289,
+      "y": 0
+    },
+    {
+      "id": "43218:52356",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52360",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43218:52367",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52372",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43218:52374",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43218:52380",
+      "text": "주차장이 만차인가요?",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Frame 716137"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43218:52384",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Frame 716137",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52390",
+      "text": "차량확인",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "Frame 3263"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52394",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "Frame 3263",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43218:52400",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52405",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "04"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52408",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "7"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52410",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "7",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43218:52415",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52418",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52421",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M06_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43218:52553",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52554",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43218:52561",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43218:52566",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43218:52571",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43222:10378",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43222:10384",
+      "text": "반납 2시간 10분 전입니다.",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "01",
+        "반납시각"
+      ],
+      "x": 113,
+      "y": 0
+    },
+    {
+      "id": "43222:10387",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10388",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 289,
+      "y": 0
+    },
+    {
+      "id": "43222:10396",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02"
+      ],
+      "x": 20,
+      "y": 0.5
+    },
+    {
+      "id": "43222:10400",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43222:10407",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10412",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43222:10414",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43222:10420",
+      "text": "주차장이 만차인가요?",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Frame 716137"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43222:10424",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "8",
+        "Frame 716137",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10430",
+      "text": "차량확인",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "Frame 3263"
+      ],
+      "x": 0,
+      "y": 0.5
+    },
+    {
+      "id": "43222:10434",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "Frame 3263",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10440",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "5",
+        "Frame 71644",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10445",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "04"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10448",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "7"
+      ],
+      "x": 20,
+      "y": 0.5
+    },
+    {
+      "id": "43222:10450",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "Frame 71576",
+        "7",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10455",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10458",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10461",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M02_메인_운행중(도어제어 후 20분 이후)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10469",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43222:10475",
+      "text": "반납 10분 전입니다.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "7",
+        "반납시각"
+      ],
+      "x": 134.5,
+      "y": 0
+    },
+    {
+      "id": "43222:10478",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "8",
+        "time"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10479",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "8",
+        "time"
+      ],
+      "x": 289,
+      "y": 0
+    },
+    {
+      "id": "43222:10487",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "02"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10491",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43222:10498",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10503",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43222:10505",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43222:10514",
+      "text": "주차장 이용 시 주의사항",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10518",
+      "text": "◼ 반납 후 쓰레기를 가져가주세요.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10519",
+      "text": "◼ 지하 7층 만차 시 지하 3층, 지하 5층, 지하 6층에 반납 후 댓글로 위치를 알려주세요.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43222:10520",
+      "text": "◼ 주차장 내 공간 협소하여 안전운전하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 76
+    },
+    {
+      "id": "43222:10521",
+      "text": "◼ 주차장 만차 시 1899-1313으로 전화주세요.",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 104
+    },
+    {
+      "id": "43222:10523",
+      "text": "주차장이 만차인가요?",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43222:10527",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "03",
+        "Frame 1597912563",
+        "Frame 716136",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10532",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "Frame 71577",
+        "04"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10534",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "Frame 71577",
+        "04",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10537",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "Frame 71577",
+        "7"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10539",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "Frame 71577",
+        "7",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10544",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10547",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10550",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M03_메인_반납임박",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10558",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43222:10564",
+      "text": "반납시간이 10분 초과되었습니다.",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "01",
+        "반납시각"
+      ],
+      "x": 90.5,
+      "y": 0.5
+    },
+    {
+      "id": "43222:10567",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10568",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 289,
+      "y": 0
+    },
+    {
+      "id": "43222:10576",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "02"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10580",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43222:10587",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "4",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43222:10592",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "4",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43222:10594",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "4",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43222:10603",
+      "text": "주차장 이용 시 주의사항",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "4",
+        "Frame 1597912562",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10608",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "Frame 71576",
+        "04"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10610",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "Frame 71576",
+        "04",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10613",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "Frame 71576",
+        "7"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10615",
+      "text": "시간",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "Frame 71576",
+        "7",
+        "button_text"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43222:10620",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10623",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43222:10626",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M04_메인_대여초과",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43625:58605",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43625:58606",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43625:58613",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43625:58618",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43625:58623",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    }
+  ]
+}
