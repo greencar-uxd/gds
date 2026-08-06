@@ -165,6 +165,7 @@ module.exports = {
       radius: load('radius-page.json'),
       textField: load('textfield-page.json'),
       components: load('component-pages.json'),
+      notStarted: load('not-started-pages.json'),
       readSlugs: read.map(f => f.replace(/\.json$/, '')),
     };
   })(),

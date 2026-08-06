@@ -1369,6 +1369,48 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         !!bs && bs.sections.some(s => (s.rows || []).some(r => /Dim layer \(딤 레이어\)를 사용하지 않습니다/.test(r))));
     }
 
+    // ── «시작 전(—)» 8쪽도 확인했는지
+    const NS = PG.notStarted;
+    ok('«시작 전» 8쪽을 확인함', !!NS && NS.summary.checked === 8 && NS.pages.length === 8,
+      NS ? `${NS.pages.length}쪽` : '없음');
+    if (NS) {
+      ok('페이지마다 근거 노드가 있음', NS.pages.every(pg => /^\d+:\d+$/.test(pg.node)));
+      ok('옮겨 적은 항목이 표시돼 있음',
+        NS.pages.every(pg => typeof pg.transcribed === 'boolean')
+        && NS.pages.filter(pg => pg.transcribed).length > 0,
+        `옮겨 적음 ${NS.pages.filter(pg => pg.transcribed).length} / 기계 파싱 ${NS.pages.filter(pg => !pg.transcribed).length}`);
+      ok('기계 파싱한 쪽은 파일이 실재함',
+        NS.pages.filter(pg => !pg.transcribed)
+          .every(pg => pg.parsed && fs.existsSync(path.join(ROOT, pg.parsed))));
+      // 요약 수치가 항목과 맞는지 — 손으로 적은 수가 아니어야 합니다.
+      ok('요약 수치가 항목과 일치', (() => {
+        const by = {};
+        for (const pg of NS.pages) by[pg.state] = (by[pg.state] || 0) + 1;
+        return NS.summary.empty === (by.empty || 0)
+          && NS.summary.templateOnly === (by['template-only'] || 0)
+          && NS.summary.documentedButContaminated === (by['documented-but-contaminated'] || 0)
+          && NS.summary.specOutsideTemplate === (by['spec-outside-template'] || 0)
+          && NS.summary.screensOnly === (by['screens-only'] || 0)
+          && NS.summary.checked === NS.pages.length;
+      })());
+      ok('«정말로 빈» 쪽이 하나뿐임', NS.summary.empty === 1
+        && NS.pages.filter(pg => pg.state === 'empty').map(pg => pg.name)[0] === 'Table (테이블)');
+      ok('오염된 문서에 근거 노드가 붙음',
+        NS.pages.filter(pg => pg.contamination)
+          .every(pg => pg.contamination.every(c => /^\d+:\d+$/.test(c.node) && (c.text || '').length > 3)));
+      ok('Loading spinner 스펙에 값과 노드가 다 있음', (() => {
+        const ls = NS.pages.find(pg => pg.slug === 'loading-spinner');
+        return !!ls && ls.spec.length === 2
+          && ls.spec.every(sp => /^#[0-9A-F]{6}$/i.test(sp.hex) && sp.fps > 0 && /^\d+:\d+$/.test(sp.node));
+      })());
+      ok('To-be 가 «미작성»으로 남아 있음', (() => {
+        const ls = NS.pages.find(pg => pg.slug === 'loading-spinner');
+        return !!ls && ls.toBe.state === '미작성';
+      })(), '저장소가 대신 채우지 않습니다');
+      ok('«시작 전» 확인 결과가 사이트에 실림',
+        htmlP.includes('«시작 전(—)» 으로 세던') && htmlP.includes('정말로 빈 페이지'));
+    }
+
     // ── 방법 자체를 GAP 으로 남겼는지
     const g32 = VIEW.GAPS.items.find(g => g.id === 'GAP-32');
     ok('«🚧 를 빈 페이지로 셌다»가 GAP 으로 기록됨', !!g32 && g32.status !== 'resolved'
