@@ -894,10 +894,14 @@ function elev(){
   </tbody></table>
   <div class="note"><p><b>축을 나눈 이유.</b>
   ${Object.entries(C.effects.axes).map(([k,v])=>`<b>${esc(k)}</b> ${esc(v)}`).join('<br>')}</p></div>
-  ${C.effects.caseCollisions.length?`<div class="note warn"><p><b>대소문자만 다른 이름 ${C.effects.caseCollisions.length}쌍.</b>
-  ${C.effects.caseCollisions.map(c=>`<code>${c.names.map(n=>esc(n)).join('</code> / <code>')}</code> — 값이 ${c.sameValue?'같습니다':'<b>다릅니다</b>'}`).join('<br>')}<br>
-  값이 다르므로 «오타 중복»으로 합칠 수 없습니다. 토큰 키가 겹쳐서
-  <b>정해질 때까지 두 토큰 모두 내보내지 않습니다</b> — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.</p></div>`:''}
+  ${(C.effects.keyCollisions||[]).map(k=>k.resolved
+    ? `<div class="note"><p><b>토큰 키가 겹친 것 — 해소.</b>
+       <code>${k.names.map(n=>esc(n)).join('</code> / <code>')}</code> 가 <code>--gds-effect-${esc(k.key)}</code> 하나를 놓고 겹쳤습니다.</p>
+       <p><b>${esc(k.winner)}</b> 로 확정 — ${esc(k.reason)} (${esc(k.decidedBy)} ${esc(k.decidedAt)})</p>
+       ${k.loser?`<p class="muted">진 쪽 <code>${esc(k.loser.name)}</code> <code>${esc(k.loser.value)}</code> — ${esc(k.loser.handling)}</p>`:''}</div>`
+    : `<div class="note warn"><p><b>토큰 키가 겹칩니다.</b>
+       <code>${k.names.map(n=>esc(n)).join('</code> / <code>')}</code> 가 <code>--gds-effect-${esc(k.key)}</code> 하나를 놓고 겹칩니다.
+       <b>정해질 때까지 둘 다 내보내지 않습니다</b> — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.</p></div>`).join('')}
   ${C.effects.counts.unmeasured.length?`<p class="muted"><b>값 미측정 ${C.effects.counts.unmeasured.length}종</b> —
   ${C.effects.counts.unmeasured.map(n=>`<code>${esc(n)}</code>`).join(' · ')}. 값을 읽지 못했으므로 토큰으로 내보내지 않습니다.</p>`:''}`:''}
   <p class="muted" style="margin-top:24px">카드를 누르면 변수명이 복사됩니다. 출처 — ${esc(E.source||'')}</p>
@@ -1076,6 +1080,7 @@ function comp(){
   ${(K.styleRefs||[]).filter(r=>i.key&&r.component===i.key).map(r=>
     r.resolved
     ? `<div class="note"><p><b>본문이 지목한 스타일</b> — «${esc(r.quoted)}» → <code>${esc(r.style)}</code> (${esc(r.axis)})</p>
+       ${r.via==='decision'?`<p>${esc(r.decision.reason)}</p>`:''}
        <p class="muted">${esc(r.css||'')}</p></div>`
     : `<div class="note warn"><p><b>본문이 없는 스타일을 가리킵니다.</b> «${esc(r.quoted)}» — ${esc(r.why)}</p>
        <p class="muted">살아있는 후보 ${r.live}종 · 값이 서로 다릅니다. 어느 것을 쓰라는 뜻인지 정해질 때까지 토큰을 내보내지 않습니다(GAP-31 · SD-20).</p>
