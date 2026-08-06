@@ -154,11 +154,11 @@ footer{margin-top:var(--s8);padding-top:var(--s5);border-top:1px solid var(--lin
 <button id="th">◐ Theme</button></div>
 <div class="wrap">
 <div class="eyebrow">Decisions</div>
-<h1>정본의 근거 — GDS 라이브러리</h1>
+<h1>원본의 근거 — GDS 라이브러리</h1>
 <p class="lead">${esc(VIEW.canonBasis ? VIEW.canonBasis.note : '')}</p>
 
 <div class="stats">
-<div class="ok"><b>${VIEW.colors.length}</b><span>정본 색</span></div>
+<div class="ok"><b>${VIEW.colors.length}</b><span>원본 색</span></div>
 <div><b>${groups.length}</b><span>그룹</span></div>
 <div class="ok"><b>${settled.length}</b><span>확정 결정</span></div>
 <div class="${open.length ? 'hl' : 'ok'}"><b>${open.length}</b><span>남은 안건</span></div>
@@ -166,7 +166,7 @@ footer{margin-top:var(--s8);padding-top:var(--s5);border-top:1px solid var(--lin
 
 <div class="sync">
 <h3>판단 기준</h3>
-<p class="sub">색 판정 기준은 <b>색차(ΔE)가 아니라 라이브러리 소속</b>입니다. 아래 라이브러리들은 같은 파일에 물려 있지만 정본이 아니므로 판단 근거로 쓰지 않습니다.</p>
+<p class="sub">색 판정 기준은 <b>색차(ΔE)가 아니라 라이브러리 소속</b>입니다. 아래 라이브러리들은 같은 파일에 물려 있지만 원본이 아니므로 판단 근거로 쓰지 않습니다.</p>
 <table><thead><tr><th>라이브러리</th><th>왜 제외하나</th></tr></thead><tbody>
 ${VIEW.excludedLibraries.map(l => `<tr><td><code>${esc(l.name)}</code></td><td class="muted">${esc(l.why)}</td></tr>`).join('')}
 </tbody></table>
@@ -223,13 +223,13 @@ ${TS ? `<div class="eyebrow" style="margin-top:40px">Semantic · Type</div>
 <p class="lead">${esc(TS.rule)} 출처는 ${esc(TS.source)} 입니다 — 손으로 이름을 짓지 않았습니다.</p>
 <div class="sync">
 <h3>토큰 ${TS.tokens.length}종 — 쓰임새가 단계 하나만 가리킴</h3>
-<table><thead><tr><th>토큰</th><th>정본 단계</th><th>차기 라이브러리 이름</th><th>정본 Usage 셀</th></tr></thead><tbody>
+<table><thead><tr><th>토큰</th><th>원본 단계</th><th>차기 라이브러리 이름</th><th>원본 Usage 셀</th></tr></thead><tbody>
 ${TS.tokens.map(t => `<tr><td><code>${esc(t.token)}</code></td><td>${esc(t.refCanon)}</td><td><code>${esc(t.ref)}</code></td><td class="muted">${esc(t.usage)}</td></tr>`).join('')}
 </tbody></table>
 </div>
 <div class="sync">
 <h3>계열 ${TS.families.length}종 — 토큰으로 굳히지 못함</h3>
-<table><thead><tr><th>정본 Usage 셀</th><th>가리키는 단계</th></tr></thead><tbody>
+<table><thead><tr><th>원본 Usage 셀</th><th>가리키는 단계</th></tr></thead><tbody>
 ${TS.families.map(f => `<tr><td><code>${esc(f.usage)}</code></td><td>${f.steps.map(s => esc(s)).join(' · ')}</td></tr>`).join('')}
 </tbody></table>
 <div class="note"><b>왜 남겼나.</b> ${esc(TS.families[0] ? TS.families[0].why : '')}</div>
@@ -255,8 +255,8 @@ ${o.detail ? `<p class="muted">${esc(o.detail)}</p>` : ''}
 </div>`).join('')}
 
 <div class="sync">
-<h3>정본 위에 덮어쓴 것</h3>
-<p class="sub">원본 <code>.fig</code> 는 고치지 않습니다(제1원칙). 아래는 저장소 정본에서만 적용되는 재정의입니다.</p>
+<h3>원본 위에 덮어쓴 것</h3>
+<p class="sub">원본 <code>.fig</code> 는 고치지 않습니다(제1원칙). 아래는 저장소에서만 적용되는 재정의입니다.</p>
 <table><thead><tr><th>종류</th><th>대상</th><th>결과</th><th>사유</th></tr></thead><tbody>
 ${VIEW.renames.map(r => `<tr><td>이름</td><td><code>${esc(r.from)}</code></td><td><code>${esc(r.to)}</code></td><td class="muted">${esc(r.reason)}</td></tr>`).join('')}
 ${VIEW.valueOverrides.map(o => `<tr><td>값</td><td><code>${esc(o.token)}</code> ${o.from}</td><td><code>${o.to}</code></td><td class="muted">${esc(o.reason)}</td></tr>`).join('')}
@@ -292,7 +292,7 @@ ${VIEW.sourceDefects.items.map(d => `<tr><td><code>${d.id}</code></td><td class=
 </div>` : ''}
 
 <footer>
-정본 근거 — <code>data/gds-library.json</code> (GDS 라이브러리 ${LIB.counts.fill}종) · 모자란 곳 <code>data/gds-gaps.json</code><br>
+원본 근거 — <code>data/gds-library.json</code> (GDS 라이브러리 ${LIB.counts.fill}종) · 모자란 곳 <code>data/gds-gaps.json</code><br>
 확정 결정 — <code>data/color-decisions.json</code> · <code>data/type-decisions.json</code> · 대조는 <code>npm run check</code><br>
 .fig 스냅샷 ${EXPORT} · 라이브러리 조회 ${esc(LIB.checkedAt)}
 </footer>

@@ -1,5 +1,5 @@
 'use strict';
-// 정본(canon) → 개발자 배포용 토큰 파일 (CSS / SCSS / JSON)
+// 원본(canon) → 개발자 배포용 토큰 파일 (CSS / SCSS / JSON)
 // 확정되지 않았거나 충돌하는 값은 내보내지 않고, 주석으로 이유를 남깁니다.
 const fs = require('fs');
 const path = require('path');
@@ -15,13 +15,13 @@ const { slug, colorKey } = require('./slug.js');
 // 확정 결정(data/color-decisions.json)이 적용된 뷰를 씁니다 — 원본 .fig 는 고칠 수 없습니다.
 const VIEW = require('./canon-view.js');
 if (VIEW.integrity.missing.length) {
-  throw new Error(`color-decisions.json 이 낡았습니다 — 정본에 없는 이름: ${VIEW.integrity.missing.join(', ')}`);
+  throw new Error(`color-decisions.json 이 낡았습니다 — 원본에 없는 이름: ${VIEW.integrity.missing.join(', ')}`);
 }
 if (VIEW.integrity.hexMismatch.length) {
-  throw new Error(`color-decisions.json 의 HEX 가 정본과 다릅니다: ${VIEW.integrity.hexMismatch.map(h => `${h.from} ${h.hex}≠${h.actual}`).join(', ')}`);
+  throw new Error(`color-decisions.json 의 HEX 가 원본과 다릅니다: ${VIEW.integrity.hexMismatch.map(h => `${h.from} ${h.hex}≠${h.actual}`).join(', ')}`);
 }
 if (VIEW.integrity.overrideMissing.length || VIEW.integrity.overrideStale.length) {
-  throw new Error(`valueOverrides 가 정본과 어긋납니다 — 없는 토큰: ${VIEW.integrity.overrideMissing.join(', ')} · 원본 값 불일치: ${VIEW.integrity.overrideStale.map(o => o.token).join(', ')}`);
+  throw new Error(`valueOverrides 가 원본과 어긋납니다 — 없는 토큰: ${VIEW.integrity.overrideMissing.join(', ')} · 원본 값 불일치: ${VIEW.integrity.overrideStale.map(o => o.token).join(', ')}`);
 }
 if (VIEW.integrity.additionUnknown.length) {
   throw new Error(`additions 가 Figma 변수 스냅샷에 없는 이름을 가리킵니다: ${VIEW.integrity.additionUnknown.join(', ')}`);
@@ -30,7 +30,7 @@ if (VIEW.integrity.additionStale.length) {
   throw new Error(`additions 의 값이 Figma 원본과 다릅니다: ${VIEW.integrity.additionStale.join(', ')}`);
 }
 if (VIEW.integrity.additionCollision.length) {
-  throw new Error(`additions 의 편입 이름이 이미 정본에 있습니다: ${VIEW.integrity.additionCollision.join(', ')}`);
+  throw new Error(`additions 의 편입 이름이 이미 원본에 있습니다: ${VIEW.integrity.additionCollision.join(', ')}`);
 }
 const STEP_EXC = new Set(VIEW.stepExceptions ? VIEW.stepExceptions.value : []);
 const colors = VIEW.colors.map(s => {
@@ -86,7 +86,7 @@ const elevation = E ? E.scale.map(st => ({ key: st.name.replace(/^Elevation_/, '
 
 const HEAD = `/* GDS — G car Design System 토큰
  * 생성: ${D.meta.source} (export ${String(D.meta.exported).slice(0, 10)})
- * 출처: ✅ Foundation 페이지 정본. 레거시 스타일(현황)은 포함하지 않습니다.
+ * 출처: ✅ Foundation 페이지 원본. 레거시 스타일(현황)은 포함하지 않습니다.
  * 자동 생성 파일입니다 — 직접 수정하지 마세요.
  */`;
 
@@ -130,7 +130,7 @@ if (VIEW.mainStyle) {
 }
 // 시맨틱 — 프리미티브를 var() 로 참조합니다. 값을 직접 쓰지 않습니다.
 if (VIEW.semantic) {
-  css += '\n  /* Semantic — 정본 규칙에서 끌어낸 별칭 */\n';
+  css += '\n  /* Semantic — 원본 규칙에서 끌어낸 별칭 */\n';
   for (const t of VIEW.semantic.tokens) {
     const key = slug(t.token.replace(/^Semantic\//, '').replace(/\//g, ' '));
     css += `  --gds-${key}: var(--gds-color-${colorKey(t.ref)});  /* ${t.ref} · ${t.evidence} */\n`;
@@ -169,7 +169,7 @@ if (VIEW.effects && VIEW.effects.emitted.length) {
 css += '\n  /* Typography */\n';
 if (FONT) {
   css += `  --gds-font-family: "${FONT.value}", sans-serif;`
-    + `  /* 정본 폰트 단일 · 강민관 확정 ${TDEC.decidedAt} */\n`;
+    + `  /* GDS 폰트 단일 · 강민관 확정 ${TDEC.decidedAt} */\n`;
 }
 if (LH) css += `  --gds-type-line-height: ${LH_CSS};  /* 행간 = Figma ${LH.value} · 팀 합의 ${TDEC.decidedAt} — 단계별 값을 따로 두지 않습니다 */\n`;
 if (LS) css += `  --gds-type-letter-spacing: ${LS.value === '0' ? '0' : LS.value};  /* 자간 — Figma 변수 typo/letter-spacing/0 · 단계별 값을 따로 두지 않습니다 */\n`;
@@ -242,7 +242,7 @@ for (const e of elevation) scss += `$gds-elevation-${e.key}: ${e.value};\n`;
 
 // ---------- JSON (DTCG 형태) ----------
 const json = {
-  $description: 'GDS 정본 토큰 — ✅ Foundation 페이지 기준',
+  $description: 'GDS 원본 토큰 — ✅ Foundation 페이지 기준',
   color: {}, type: {}, spacing: {}, radius: {}, elevation: {},
   $notes: {
     excluded: [],
@@ -271,9 +271,9 @@ for (const c of colors) {
     },
   };
 }
-// ── 시맨틱 계층 ── 정본 규칙에서 끌어낸 별칭. 프리미티브를 참조만 합니다.
+// ── 시맨틱 계층 ── 원본 규칙에서 끌어낸 별칭. 프리미티브를 참조만 합니다.
 if (VIEW.semanticMissing.length) {
-  throw new Error(`시맨틱 토큰이 정본에 없는 이름을 가리킵니다: ${VIEW.semanticMissing.join(', ')}`);
+  throw new Error(`시맨틱 토큰이 원본에 없는 이름을 가리킵니다: ${VIEW.semanticMissing.join(', ')}`);
 }
 if (VIEW.semantic) {
   json.semantic = {};
@@ -334,7 +334,7 @@ if (VIEW.typeSemantic) {
       $extensions: { gds: { layer: 'semantic', ref: t.refCanon, libraryName: t.ref, usage: t.usage, evidence: t.evidence } },
     };
   }
-  // 계열(family) — 정본이 여러 단계에 같은 쓰임새를 적어 두어 토큰으로 굳히지 못한 것들.
+  // 계열(family) — 원본이 여러 단계에 같은 쓰임새를 적어 두어 토큰으로 굳히지 못한 것들.
   json.$notes.typeSemantic = {
     rule: VIEW.typeSemantic.rule,
     source: VIEW.typeSemantic.source,
@@ -347,7 +347,7 @@ if (VIEW.spacingCensus) {
   const SC = VIEW.spacingCensus;
   json.$notes.spacingSemantic = {
     exists: false,
-    why: '정본에 간격의 쓰임새 이름이 없습니다. Spacing system ✅ 표는 열이 Spacing · px · 배수 셋뿐이고, ✅ 컴포넌트 페이지의 간격 주석에도 이름이 붙어 있지 않습니다.',
+    why: '원본에 간격의 쓰임새 이름이 없습니다. Spacing system ✅ 표는 열이 Spacing · px · 배수 셋뿐이고, ✅ 컴포넌트 페이지의 간격 주석에도 이름이 붙어 있지 않습니다.',
     evidence: `tools/spacing-census.js — ✅ 페이지 ${SC.pages.length}곳 · 주석 ${SC.counts.annotations}건 조사`,
     layerInstead: '간격의 쓰임새 수준 이름은 Layout ✅ 의 Guidelines 토큰이 유일합니다(--gds-layout-*).',
     census: {

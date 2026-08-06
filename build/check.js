@@ -43,9 +43,9 @@ ok('Elevation 스타일 존재', elev.length > 0, `${elev.length}개`);
 const eScale = ((D.canon||{}).elevation||{}).scale || [];
 ok('엘리베이션 2~6단계는 2겹 구조', eScale.filter(s=>s.was).every(s=>s.layers.length>=2));
 
-// R-3: 정본 스케일 안에 20 이 포함되어야 함 (상한 20px)
+// R-3: 원본 스케일 안에 20 이 포함되어야 함 (상한 20px)
 const SCALE = [4, 8, 10, 12, 16, 20];
-ok('R-3 정본 스케일 상한 = 20px', Math.max(...SCALE) === 20);
+ok('R-3 원본 스케일 상한 = 20px', Math.max(...SCALE) === 20);
 
 // ---------- 3. 빌드 산출물 ----------
 console.log('\n[3] dist/index.html');
@@ -78,12 +78,12 @@ for (const f of ['GDS-r3-decision-20260729.md', 'r3-change-list.csv']) {
 }
 
 
-// ---------- 5. 정본 사이트 · 토큰 ----------
-console.log('\n[5] 정본 산출물');
+// ---------- 5. 원본 사이트 · 토큰 ----------
+console.log('\n[5] 원본 산출물');
 const canon = D.canon || {};
-ok('정본 색 스타일 확보', (canon.color && (canon.color.styles||[]).length) > 0, `${(canon.color&&canon.color.styles||[]).length}개`);
-ok('정본 타입 스케일 확보', (canon.typography && canon.typography.scale.length) > 0);
-ok('정본 간격 스케일 확보', (canon.spacing && canon.spacing.scale.length) > 0);
+ok('원본 색 스타일 확보', (canon.color && (canon.color.styles||[]).length) > 0, `${(canon.color&&canon.color.styles||[]).length}개`);
+ok('원본 타입 스케일 확보', (canon.typography && canon.typography.scale.length) > 0);
+ok('원본 간격 스케일 확보', (canon.spacing && canon.spacing.scale.length) > 0);
 for (const f of ['gds.css','gds.scss','gds.tokens.json']) {
   ok(`tokens/${f} 생성됨`, fs.existsSync(path.join(ROOT,'dist','tokens',f)));
 }
@@ -103,12 +103,12 @@ if (fs.existsSync(path.join(ROOT,'dist','decisions','index.html'))) {
   const dh = fs.readFileSync(path.join(ROOT,'dist','decisions','index.html'),'utf8');
   ok('결정 안건 페이지 자기완결', !/<(script|link|img)[^>]+(src|href)="https?:/.test(dh));
   ok('결정 안건 페이지 브라우저 스토리지 미사용', !/localStorage|sessionStorage/.test(dh));
-  ok('정본 사이트에 결정 안건 링크', fs.readFileSync(path.join(ROOT,'dist','index.html'),'utf8').includes('decisions/'));
+  ok('원본 사이트에 결정 안건 링크', fs.readFileSync(path.join(ROOT,'dist','index.html'),'utf8').includes('decisions/'));
 }
 
 // ---------- 6. 감사 문서 ↔ 감사 데이터 대조 ----------
 // 문서에 적힌 숫자가 스크립트 계산값과 어긋나면 실패합니다 (작업 규칙 1).
-console.log('\n[6-2] 정본 폰트');
+console.log('\n[6-2] GDS 폰트');
 {
   const FONT = require('./font.js');
   const pages = ['dist/index.html', 'dist/decisions/index.html']
@@ -117,13 +117,13 @@ console.log('\n[6-2] 정본 폰트');
   for (const f of pages) {
     const html = fs.readFileSync(f, 'utf8');
     const rel = path.relative(ROOT, f);
-    // 본문 폰트 선언이 전부 정본인지 (모노는 코드 표기용이라 예외)
+    // 본문 폰트 선언이 전부 GDS 폰트인지 (모노는 코드 표기용이라 예외)
     // @font-face 안의 선언(패밀리 정의)은 제외하고, 실제 적용 선언만 봅니다
     const applied = html.replace(/@font-face\{[^}]*\}/g, '');
     const decls = [...applied.matchAll(/font-family:\s*([^;}]*)/g)].map(m => m[1].trim())
       .filter(d => !/monospace/i.test(d));
     const bad = [...new Set(decls.filter(d => d !== FONT.STACK))];
-    ok(`${rel} · 본문 폰트 선언 ${decls.length}건이 전부 정본`, bad.length === 0, bad.join(' | '));
+    ok(`${rel} · 본문 폰트 선언 ${decls.length}건이 전부 GDS 폰트`, bad.length === 0, bad.join(' | '));
     ok(`${rel} · @font-face 임베드 ${FONT.WEIGHTS.length}종`,
       (html.match(/@font-face\{font-family:"Noto Sans KR"/g) || []).length === FONT.WEIGHTS.length);
     ok(`${rel} · 외부 폰트 요청 없음`, !/fonts\.googleapis|fonts\.gstatic|cdn\.jsdelivr.*font/i.test(html));
@@ -189,12 +189,12 @@ console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
     }
     ok('명도 역전 없음 (번호가 커질수록 어두움)', bad.length === 0, bad.join(' | '));
   }
-  ok('color-decisions 가 정본과 정합', VIEW.integrity.missing.length === 0 && VIEW.integrity.hexMismatch.length === 0,
+  ok('color-decisions 가 원본과 정합', VIEW.integrity.missing.length === 0 && VIEW.integrity.hexMismatch.length === 0,
     `없는 이름 ${VIEW.integrity.missing.join(',')} · HEX 불일치 ${VIEW.integrity.hexMismatch.length}`);
-  ok('메인 색상 지정됨', !!VIEW.mainStyle, '확정 main 이 정본에 없음');
+  ok('메인 색상 지정됨', !!VIEW.mainStyle, '확정 main 이 원본에 없음');
   ok(`메인 = ${DEC.main.token} ${DEC.main.hex}`, !!VIEW.mainStyle && VIEW.mainStyle.hex.toUpperCase() === DEC.main.hex.toUpperCase());
 
-  // 10단위 규칙 — 정본 스케일형 이름에 3자리 100단위(100 제외)가 남아 있으면 실패
+  // 10단위 규칙 — 원본 스케일형 이름에 3자리 100단위(100 제외)가 남아 있으면 실패
   const badStep = VIEW.colors.filter(c => {
     const m = /\s(\d{2,3})$/.exec(c.name);
     return m && Number(m[1]) > 100;
@@ -209,7 +209,7 @@ console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
   });
   ok(`10단위 밖 단계는 승인된 예외뿐 (승인 ${exc.size}건)`,
     offGrid.every(c => exc.has(c.name)), offGrid.filter(c => !exc.has(c.name)).map(c => c.name).join(', '));
-  for (const name of exc) ok(`예외가 정본에 실제로 존재 — ${name}`, VIEW.colors.some(c => c.name === name));
+  for (const name of exc) ok(`예외가 원본에 실제로 존재 — ${name}`, VIEW.colors.some(c => c.name === name));
   ok('닫힌 결정에 근거(resolution) 기록', VIEW.closedDecisions.every(o => !!o.resolution));
 
   if (fs.existsSync(cssPath)) {
@@ -236,7 +236,7 @@ console.log('\n[7] 확정 결정 (2026-08-04 색·타이포)');
     ok('용도(Usage) 확정됨', !!U);
     if (U) {
       const scale = ((canon.typography || {}).scale || []).map(t => t.token);
-      ok('모든 정본 토큰에 용도 있음', scale.every(t => (U[t] || []).length > 0),
+      ok('모든 원본 토큰에 용도 있음', scale.every(t => (U[t] || []).length > 0),
         scale.filter(t => !(U[t] || []).length).join(', '));
       ok('CSS 에 용도 주석 표기', scale.every(t => U[t].every(u => css.includes(u))));
       const tj = path.join(ROOT, 'dist', 'tokens', 'gds.tokens.json');
@@ -278,12 +278,12 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       'get_variable_defs 는 파일 전체가 아니라 노드가 쓰는 변수만 돌려줍니다');
     ok('스냅샷 count 필드 = 실제 변수 수', FV.count === Object.keys(FV.variables).length);
 
-    // 정본 53종이 Figma 변수의 부분집합인가 (이름 기준)
+    // 원본 53종이 Figma 변수의 부분집합인가 (이름 기준)
     const rawNames = (((D2 => D2)(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foundation-data.json'), 'utf8'))))
       .canon.color.styles).map(s => s.name);
     const notInFigma = rawNames.filter(n => !(n in FV.variables));
-    ok('정본 색이 전부 Figma 변수에 존재', notInFigma.length === 0, notInFigma.join(', '));
-    ok('정본 색 수 = 라이브러리 선언값', VIEW.colors.length === SYNC.canonFillStyles,
+    ok('원본 색이 전부 Figma 변수에 존재', notInFigma.length === 0, notInFigma.join(', '));
+    ok('원본 색 수 = 라이브러리 선언값', VIEW.colors.length === SYNC.canonFillStyles,
       `${VIEW.colors.length} vs ${SYNC.canonFillStyles}`);
 
     // 값 불일치 0건 (Gray 080 은 다중 fill 로 반환되므로 앞자리만 비교)
@@ -293,7 +293,7 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
         .canon.color.styles.find(s => s.name === n) || {}).hex.toUpperCase();
       return fig !== canonHex;
     });
-    ok('정본 색 값이 Figma 원본과 일치', mism.length === 0, mism.join(', '));
+    ok('색 값이 Figma 원본과 일치', mism.length === 0, mism.join(', '));
 
     // 문서화 안 된 변수 = additions 로 전부 처분됐는가
     const undocumented = Object.keys(FV.variables).filter(n => !rawNames.includes(n));
@@ -307,7 +307,7 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
     const unhandled = undocumented.filter(n => !handled.has(n) && !typeHandled.has(n) && !inCanon.has(n));
     ok('문서화 안 된 변수가 전부 처분됨 (색=additions · 그 외=type-decisions)',
       unhandled.length === 0, unhandled.join(', '));
-    ok('처분 합계 = 정본 밖 변수 수', (() => {
+    ok('처분 합계 = 원본 밖 변수 수', (() => {
       const inCanon2 = new Set(VIEW.libFill.map(s => s.name));
       const outside = VIEW.undocumented.filter(n => !inCanon2.has(n));
       return VIEW.additions.length + VIEW.typeHandled.length === outside.length;
@@ -316,18 +316,18 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       new RegExp(`${VIEW.undocumented.length}종`).test(SYNC.note), SYNC.note);
     ok('additions 에 유령 항목 없음', VIEW.integrity.additionUnknown.length === 0, VIEW.integrity.additionUnknown.join(', '));
     ok('additions 값이 Figma 원본과 일치', VIEW.integrity.additionStale.length === 0, VIEW.integrity.additionStale.join(', '));
-    ok('편입 이름이 기존 정본과 충돌하지 않음', VIEW.integrity.additionCollision.length === 0, VIEW.integrity.additionCollision.join(', '));
+    ok('편입 이름이 기존 원본과 충돌하지 않음', VIEW.integrity.additionCollision.length === 0, VIEW.integrity.additionCollision.join(', '));
     ok('보류(defer) 항목은 전부 열린 안건에 묶여 있음',
       VIEW.deferredAdditions.every(a => VIEW.openDecisions.some(o => o.id === a.blockedBy)),
       VIEW.deferredAdditions.map(a => `${a.id}→${a.blockedBy}`).join(', '));
-    ok('폐기(retire) 대상이 정본에 존재',
+    ok('폐기(retire) 대상이 원본에 존재',
       VIEW.retiredAdditions.every(a => VIEW.colors.some(c => c.name === a.target)),
       VIEW.retiredAdditions.map(a => a.target).join(', '));
     ok('편입 색이 토큰에 실제로 출력됨', (() => {
       const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
       return VIEW.adopted.every(a => css.includes(a.hex.toLowerCase()) || css.includes(a.hex.toUpperCase()));
     })());
-    ok('정본 = 라이브러리 − 흡수 + 분리',
+    ok('원본 = 라이브러리 − 흡수 + 분리',
       VIEW.colors.length === VIEW.libFill.length - VIEW.canonRetires.length
         + VIEW.splits.reduce((a, s) => a + s.into.length - 1, 0),
       `${VIEW.colors.length} vs ${VIEW.libFill.length}`);
@@ -367,7 +367,7 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       const names = VIEW.colors.map(c => c.name);
       return names.includes('System/Dim Layer 060') && names.includes('System/Dim Layer 080');
     })());
-    ok('CQ-9 알파가 정본 스와치 근거로 표시됨', (() => {
+    ok('CQ-9 알파가 원본 스와치 근거로 표시됨', (() => {
       const s = VIEW.splits.find(x => x.id === 'SP-1');
       return !!s && s.alphaSource === 'canon-swatch' && /스와치/.test(s.reason);
     })());
@@ -405,7 +405,7 @@ console.log('\n[8] Figma 원본 대조 (2026-08-05 · Full seat 읽기)');
       return T.letterSpacing && /typo\/letter-spacing\/0/.test(T.letterSpacing.evidence)
         && FV.variables['typo/letter-spacing/0'] === T.letterSpacing.value;
     })());
-    ok('정본 기준이 라이브러리로 기록됨',
+    ok('원본 기준이 라이브러리로 기록됨',
       !!VIEW.canonBasis && /GDS \(그린카 디자인 시스템\) 라이브러리/.test(VIEW.canonBasis.value));
     ok('제외 라이브러리가 6개 기록됨', VIEW.excludedLibraries.length === 6,
       String(VIEW.excludedLibraries.length));
@@ -420,13 +420,13 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
   if (fs.existsSync(fp)) {
     const F = JSON.parse(fs.readFileSync(fp, 'utf8'));
     const T2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'type-decisions.json'), 'utf8'));
-    ok('타이포 대조 대상 수 = 정본 단계 수',
+    ok('타이포 대조 대상 수 = 원본 단계 수',
       F.typography.canonTokens === ((canon.typography || {}).scale || []).length,
       `${F.typography.canonTokens} vs ${((canon.typography || {}).scale || []).length}`);
-    ok('타이포 원본/정본 단계 수 동일', F.typography.figmaTokens === F.typography.canonTokens);
+    ok('타이포 Figma 변수 / GDS 단계 수 동일', F.typography.figmaTokens === F.typography.canonTokens);
     ok('타이포 불일치 0건', F.typography.mismatches.length === 0,
       F.typography.mismatches.map(m => `${m.token}.${m.field}`).join(', '));
-    ok('간격 대조 대상 수 = 정본 단계 수',
+    ok('간격 대조 대상 수 = 원본 단계 수',
       F.spacing.canonSteps === ((canon.spacing || {}).scale || []).length);
     ok('간격 값 일치', F.spacing.valuesMatch === true);
     ok('원본 간격 이름 중복이 기록됨', F.spacing.originalDuplicateNames.length > 0);
@@ -446,10 +446,10 @@ console.log('\n[10] 타이포·간격·엘리베이션 원본 대조');
     ok('TQ-6 확정문에 근거와 제목이 있음', !!open6 && !!open6.resolution && !!open6.settledTitle);
     ok('TQ-6 이 Noto Sans KR 단일로 확정됨', !!open6 && /Noto Sans KR 단일/.test(open6.resolution || ''));
     ok('원본 결함 SD-16 기록됨', (DEC2.sourceDefects.items || []).some(d => d.id === 'SD-16'));
-    // TQ-8 — 문서 사이트 서체. 그린카 공식 사이트는 Pretendard/Outfit 이지만 정본을 씁니다.
+    // TQ-8 — 문서 사이트 서체. 그린카 공식 사이트는 Pretendard/Outfit 이지만 원본을 씁니다.
     const open8 = (T2.open || []).find(o => o.id === 'TQ-8');
     ok('TQ-8 (문서 사이트 서체) 확정됨', !!open8 && open8.status === 'closed');
-    ok('TQ-8 이 정본 Noto Sans KR 유지로 확정됨',
+    ok('TQ-8 이 GDS 서체 Noto Sans KR 유지로 확정됨',
       !!open8 && /Noto Sans KR/.test(open8.resolution || '') && /^A —/.test(open8.resolution || ''));
     ok('TQ-8 근거가 그린카 사이트 실측임',
       !!open8 && /getComputedStyle/.test(open8.evidence || ''));
@@ -559,7 +559,7 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       ['screen-ios-width', 'margin-side', 'home-indicator-height']
         .every(k => css0.includes(`--gds-layout-${k}:`)));
 
-    // ── 화면 폭 (GAP-24 해소) — iOS 375 / AOS·Web 360. 원본의 플랫폼 묶음이 그대로 정본입니다.
+    // ── 화면 폭 (GAP-24 해소) — iOS 375 / AOS·Web 360. 원본의 플랫폼 묶음이 그대로 원본입니다.
     const CF = LY.conflicts || [];
     const AX = LY.platformAxis || {};
     ok('폭 충돌이 축별로 기록됨', CF.length === 2, `${CF.length}건`);
@@ -616,11 +616,11 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     })(), 'build/slug.js 를 쓰지 않고 따로 구현한 곳이 있습니다');
     const keysOk = allKeys.every(x => !!jsonA.color[x.key]);
 
-    // 값이 겹치는 무리가 실제 정본과 맞아야 합니다 — 손으로 적은 수가 아닙니다.
+    // 값이 겹치는 무리가 실제 원본과 맞아야 합니다 — 손으로 적은 수가 아닙니다.
     const byHex = {};
     for (const c of VIEW.colors) (byHex[c.hex.toUpperCase()] = byHex[c.hex.toUpperCase()] || []).push(c);
     const realDups = Object.values(byHex).filter(g => g.length > 1).length;
-    ok('겹치는 무리 수 = 정본 실제 중복 수', AL.counts.duplicateValues === realDups,
+    ok('겹치는 무리 수 = 원본 실제 중복 수', AL.counts.duplicateValues === realDups,
       `기록 ${AL.counts.duplicateValues} · 실제 ${realDups}`);
     ok('판정 가능 + 판정 불가 = 전체',
       AL.counts.decidable + AL.counts.undecidable === AL.duplicates.length);
@@ -759,7 +759,7 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
 
   ok('시맨틱 계층 존재', !!SM && SM.tokens.length > 0, SM ? String(SM.tokens.length) : '없음');
   if (SM) {
-    ok('시맨틱 참조가 전부 정본에 실재', VIEW.semanticMissing.length === 0, VIEW.semanticMissing.join(', '));
+    ok('시맨틱 참조가 전부 원본에 실재', VIEW.semanticMissing.length === 0, VIEW.semanticMissing.join(', '));
     ok('시맨틱 토큰마다 근거가 있음', SM.tokens.every(t => (t.evidence || '').length > 10));
     ok('시맨틱 이름이 전부 Semantic/ 네임스페이스', SM.tokens.every(t => /^Semantic\//.test(t.token)));
     ok('딤 레이어 시맨틱이 Modal 근거로 붙음',
@@ -825,8 +825,8 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     const css2 = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
     ok('타이포 시맨틱이 CSS 에서 프리미티브를 var() 로 참조',
       TS.tokens.every(t => new RegExp(`--gds-type-semantic-${t.role}-size:\\s*var\\(--gds-type-`).test(css2)));
-    // TQ-6 근거 — 정본 타이포는 Noto Sans KR 단일이고 Rubik 은 나오지 않습니다.
-    ok('정본 타이포 21단계가 전부 Noto Sans KR',
+    // TQ-6 근거 — 원본 타이포는 Noto Sans KR 단일이고 Rubik 은 나오지 않습니다.
+    ok('원본 타이포 21단계가 전부 Noto Sans KR',
       LIBT.every(s => s.fontFamily === 'Noto Sans KR'), 'TQ-6');
     ok('Time picker 숫자·날짜가 Title 1 · Title 2 로 배정됨',
       TS.tokens.some(t => t.usage === 'Time picker_number' && t.refCanon === 'Title 1')
@@ -838,7 +838,7 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       TS.tokens.every(t => dp.includes(t.token)) && TS.families.every(f => dp.includes(f.usage)));
   }
 
-  // ── 정본 사이트가 새 계층을 싣는지 ── /decisions 에만 있으면 «정본 문서»가 아니라 «작업 기록»입니다.
+  // ── 원본 사이트가 새 계층을 싣는지 ── /decisions 에만 있으면 «원본 문서»가 아니라 «작업 기록»입니다.
   {
     const idx = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
     // 사이트는 브라우저에서 그려집니다 — 문법 오류 하나면 페이지 전체가 빈 화면이 됩니다.
@@ -886,23 +886,23 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     ok('최상위 네비가 2단으로 갈라짐(가로 섹션 + 섹션 내 사이드바)',
       /id="topnav"/.test(idx) && /id="secnav"/.test(idx) && (nm ? /sec:'/.test(nm[1]) : false));
 
-    // ── 크롬 accent 가 «정본에 실재하는 값»인지 ──
+    // ── 크롬 accent 가 «원본에 실재하는 값»인지 ──
     // 어느 색을 쓸지는 강민관이 정합니다(2026-08-06 · Primary 빨강).
-    // 기계가 보는 것은 «지어낸 색이 아니라 정본 단계 그대로인가» 하나입니다.
+    // 기계가 보는 것은 «지어낸 색이 아니라 원본 단계 그대로인가» 하나입니다.
     const hexOf = n => (VIEW.colors.find(c => c.name === n) || {}).hex;
     const acc = idx.match(/--accent:(#[0-9A-Fa-f]{6}); --accent-soft:(#[0-9A-Fa-f]{6})/g) || [];
-    ok('크롬 accent 가 정본 Primary 단계와 같음(라이트/다크)', acc.length === 2
+    ok('크롬 accent 가 원본 Primary 단계와 같음(라이트/다크)', acc.length === 2
       && acc[0] === `--accent:${hexOf('Primary/Red 040')}; --accent-soft:${hexOf('Primary/Red 010')}`
       && acc[1] === `--accent:${hexOf('Primary/Red 030')}; --accent-soft:${hexOf('Primary/Red 080')}`,
       acc.join(' | '));
     ok('라이트 accent 가 메인 색(Primary/Red 040)임',
       !!VIEW.mainStyle && acc[0] === `--accent:${VIEW.mainStyle.hex}; --accent-soft:${hexOf('Primary/Red 010')}`);
-    ok('크롬 색이 전부 정본 단계에서 옴(지어낸 HEX 없음)', (() => {
+    ok('크롬 색이 전부 원본 단계에서 옴(지어낸 HEX 없음)', (() => {
       const declared = [...idx.matchAll(/--accent(?:-soft)?:(#[0-9A-Fa-f]{6})/g)].map(m => m[1].toUpperCase());
       const canon = new Set(VIEW.colors.map(c => c.hex.slice(0, 7).toUpperCase()));
       return declared.length === 4 && declared.every(h => canon.has(h));
     })());
-    // 크롬 CSS 안만 봅니다 — 주입된 데이터에는 정본 색 값이 그대로 들어 있어 전체 검색은 무의미합니다.
+    // 크롬 CSS 안만 봅니다 — 주입된 데이터에는 원본 색 값이 그대로 들어 있어 전체 검색은 무의미합니다.
     const styleBlock = (idx.match(/<style>([\s\S]*?)<\/style>/) || [, ''])[1];
     ok('히어로가 브랜드 그라디언트를 입지 않음',
       !/\.hero\{[^}]*gradient/.test(styleBlock) && !/#B01F24/.test(styleBlock));
@@ -944,7 +944,7 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
       ok('축 합 = 전체', ['elevation', 'component', 'material', 'deprecated']
         .reduce((a, k) => a + EF.counts[k], 0) === EF.items.length);
       ok('Elevation 은 정확히 6단계', EF.counts.elevation === 6, String(EF.counts.elevation));
-      ok('폐기 표시는 정본 토큰으로 안 나감',
+      ok('폐기 표시는 원본 토큰으로 안 나감',
         EF.items.filter(i => i.axis === 'deprecated').every(i => !i.emit));
       // 키가 겹치면 CSS 변수 하나를 두 값이 덮어씁니다 — 그건 조용한 거짓입니다.
       const cssE = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
@@ -968,13 +968,13 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         }));
       ok('키 충돌 확정마다 확정자와 날짜가 있음',
         EF.keyCollisions.filter(c => c.resolved).every(c => !!c.decidedBy && /^\d{4}-\d{2}-\d{2}$/.test(c.decidedAt || '')));
-      // ── 소속 검증 (2026-08-06) — «GDS 라이브러리에 없으면 정본이 아니다»를 효과에도 적용합니다.
-      ok('정본 효과가 전부 GDS 소속이거나 미확인',
+      // ── 소속 검증 (2026-08-06) — «GDS 라이브러리에 없으면 원본이 아니다»를 효과에도 적용합니다.
+      ok('원본 효과가 전부 GDS 소속이거나 미확인',
         EF.items.every(i => !i.library || /^GDS/.test(i.library)),
         EF.items.filter(i => i.library && !/^GDS/.test(i.library)).map(i => i.name).join(', '));
       ok('다른 라이브러리 스타일은 배제 목록에 이유와 함께 있음',
         (EF.excludedStyles || []).every(e => e.library && (e.why || '').length > 20));
-      ok('배제된 스타일은 정본 목록에 없음',
+      ok('배제된 스타일은 원본 목록에 없음',
         (EF.excludedStyles || []).every(e => !EF.items.some(i => i.name === e.name)));
       // 키(슬러그)로 보면 안 됩니다 — «Bottom Sheet» 와 «bottom sheet» 는 같은 키를 만듭니다.
       // 방출 줄의 주석이 어느 스타일에서 왔는지 적으므로 «이름»으로 봅니다.
@@ -982,7 +982,7 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         (EF.excludedStyles || []).every(e =>
           !cssE.split('\n').some(l => /--gds-effect-/.test(l) && l.includes(`/* ${e.name} */`))),
         (EF.excludedStyles || []).map(e => e.name).join(', '));
-      ok('방출된 효과가 전부 정본 목록의 GDS 소속 스타일',
+      ok('방출된 효과가 전부 원본 목록의 GDS 소속 스타일',
         EF.emitted.every(t => {
           const i = EF.items.find(x => x.name === t.name);
           return !!i && /^GDS/.test(i.library || '');
@@ -1095,9 +1095,9 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         SC.summary.reduce((a, x) => a + x.count, 0) === SC.rows.length
         && SC.rows.length === SC.counts.annotations,
         `${SC.summary.reduce((a, x) => a + x.count, 0)} / ${SC.rows.length} / ${SC.counts.annotations}`);
-      // 값 판정이 정본 스케일과 대조되는지
+      // 값 판정이 원본 스케일과 대조되는지
       const scale = VIEW.LIB.pages.spacing.값;
-      ok('스케일 안/밖 판정이 정본 스케일과 일치',
+      ok('스케일 안/밖 판정이 원본 스케일과 일치',
         SC.summary.every(x => x.onScale === scale.includes(x.value)));
       // 라벨을 못 읽은 말풍선은 «값»으로 세지 않았는지 — 세면 라벨 상자 크기가 간격으로 둔갑합니다.
       {
@@ -1123,6 +1123,109 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
           ? VIEW.GAPS.items.some(g => g.id === 'GAP-30' && /스케일에 없는 값/.test(g.finding))
           : true);
     }
+  }
+
+  // ── 🚧 페이지 전수 직접 읽기 (GAP-32) ──
+  // 검사하는 것은 «읽었다»가 아니라 «읽은 것이 원본과 같은가 · 지어낸 것이 섞이지 않았는가»입니다.
+  console.log('\n[13] 🚧 페이지 직접 읽기');
+  {
+    const PG = VIEW.pages || {};
+    const htmlP = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+    const srcP = fs.readFileSync(path.join(ROOT, 'site', 'canon.html'), 'utf8');
+    const raw = s => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'figma-pages', s + '.json'), 'utf8'));
+
+    ok('읽은 페이지가 4쪽 이상', (PG.readSlugs || []).length >= 4, (PG.readSlugs || []).join(', '));
+
+    // ── Elevation
+    const EP = PG.elevation;
+    ok('Elevation 페이지를 직접 읽음', !!EP && EP.source.node === '42316:48471');
+    if (EP) {
+      const rawE = raw('elevation-system');
+      ok('Elevation 레벨 5단계', EP.levels.length === 5, EP.levels.map(l => l.level).join(','));
+      ok('레벨 값이 페이지 텍스트와 글자 그대로 일치', EP.levels.every(l => {
+        const i = rawE.texts.findIndex(t => t.id === l.node);
+        const row = i >= 0 ? (rawE.texts[i + 1] || {}).text : '';
+        return String(row).trim() === `${l.x} ${l.y} ${l.blur} ${l.spread} ${l.alphaPct}%`;
+      }), '파서가 표를 다시 읽어 대조합니다');
+      ok('dp 값이 오름차순', EP.levels.every((l, i, a) => i === 0 || l.dp > a[i - 1].dp),
+        EP.levels.map(l => l.dp).join('<'));
+      ok('Level 0 을 그림자 없음으로 둠', !!EP.level0 && EP.level0.shadow === null);
+      ok('적용 범위가 페이지에서 나옴', EP.applications.length > 0
+        && EP.applications.every(a => rawE.texts.some(t => t.text.trim() === a.raw)));
+      ok('별도 지정 값이 Bottom Sheet 3겹을 뒷받침', EP.extraCorroborates === true);
+      ok('라이브러리와 어긋나는 것을 «맞추지» 않고 적음',
+        EP.conflicts.length > 0 && EP.conflicts.every(c => c.decided === false));
+      ok('레벨 값이 엘리베이션 토큰을 덮어쓰지 않음', (() => {
+        const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+        // 페이지 표는 1겹, 라이브러리 Elevation_2 는 2겹입니다. CSS 가 페이지 값으로 바뀌면 안 됩니다.
+        const l2 = EP.levels.find(l => l.level === 2);
+        return !css.includes(`--gds-elevation-2: ${l2.css};`);
+      })(), '페이지 값은 기록만 하고 토큰으로 내보내지 않습니다');
+      ok('원본 표기 오류를 고치지 않고 셈',
+        EP.typos.some(t => t.found === 'Leverl') && EP.typos.some(t => t.found === 'Spreas'));
+      ok('빈 절을 «내용 있음»으로 세지 않음', EP.stillEmpty.sections.length >= 3 && EP.stillEmpty.stubCount > 0);
+      ok('Elevation 페이지 읽기가 사이트에 실림',
+        htmlP.includes('🚧 Elevation system 페이지를 직접 읽었습니다'));
+    }
+
+    // ── Radius
+    const RP = PG.radius;
+    ok('Radius 페이지를 직접 읽음', !!RP && RP.source.node === '42415:11358');
+    if (RP) {
+      const rawR = raw('radius-system');
+      ok('반경 쓰임새가 페이지 라벨과 일치', RP.scale.steps.every(s =>
+        rawR.texts.some(t => t.id === s.node && +t.text.trim() === s.px)));
+      ok('반경 스케일이 라이브러리와 같음', RP.scale.matchesLibrary === true,
+        `${RP.scale.steps.map(s => s.px).join('/')} vs ${RP.scale.libraryScale.join('/')}`);
+      ok('원본 미결 메모를 판단하지 않고 옮김', RP.pending.items.length > 0
+        && RP.pending.items.every(p => rawR.texts.some(t => t.id === p.node && t.text.trim() === p.note)));
+      ok('미결 메모대로 토큰을 미리 바꾸지 않음', (() => {
+        const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+        return /--gds-radius-10:\s*10px;/.test(css);   // «10 → 8» 메모가 있지만 아직 10 입니다
+      })());
+      ok('외부 인용에 판정 근거가 붙음', /정부가 주는 신뢰감/.test(RP.externalQuote.evidence || '')
+        && /krds\.go\.kr/.test(RP.externalQuote.verifiedAgainst || ''));
+      ok('외부 인용 값을 GDS 스케일로 편입하지 않음',
+        RP.externalQuote.diffVsOurs.onlyInQuote.every(px => !RP.scale.libraryScale.includes(px))
+        && RP.externalQuote.diffVsOurs.onlyInQuote.length > 0,
+        `인용에만 있는 값 ${RP.externalQuote.diffVsOurs.onlyInQuote.join('/')}`);
+      ok('인용 값이 토큰으로 새 나가지 않음', (() => {
+        const css = fs.readFileSync(path.join(ROOT, 'dist', 'tokens', 'gds.css'), 'utf8');
+        return RP.externalQuote.diffVsOurs.onlyInQuote.every(px => !new RegExp(`--gds-radius-${px}\\b`).test(css));
+      })());
+      ok('Radius 페이지 읽기가 사이트에 실림',
+        htmlP.includes('🚧 Radius system 페이지를 직접 읽었습니다') && htmlP.includes('편입하지 않습니다'));
+    }
+
+    // ── Text field
+    const TP = PG.textField;
+    ok('Text field 페이지를 직접 읽음', !!TP && TP.source.node === '42073:65010');
+    if (TP) {
+      const rawT = raw('text-field');
+      ok('유형 4가지가 원본 선언 수와 같음', TP.types.length === 4
+        && rawT.texts.some(t => /4가지 유형으로 구분합니다/.test(t.text)));
+      ok('유형별 구조 요소가 비어 있지 않음', TP.sections.every(s => s.parts.length > 0));
+      ok('변형 수 = 페이지 심볼 수', TP.variants.total === rawT.componentSets.total
+        && TP.variants.items.length === TP.variants.total, String(TP.variants.total));
+      ok('Buttons 문장을 Text field 스타일로 옮겨 적지 않음', (() => {
+        const d = TP.defects.find(x => x.id === 'TF-2');
+        // 결함으로만 기록돼야 하고, 유형·구조 데이터 안에 Buttons 문장이 들어가면 안 됩니다.
+        const body = JSON.stringify({ types: TP.types, sections: TP.sections });
+        return !!d && !/Default button|Capsule button/.test(body);
+      })());
+      ok('대소문자 흔들림을 고치지 않고 셈',
+        TP.defects.some(d => d.id === 'TF-4' && /License/.test(d.what)));
+      ok('원본 결함마다 «고치지 않는다»가 명시됨',
+        TP.defects.length >= 5 && TP.defects.every(d => (d.fix || '').length > 10));
+      ok('Text field 가 Components 내비에 있음', /\['tfield','Text field'\]/.test(srcP));
+      ok('Text field 페이지가 렌더됨', htmlP.includes('원본 결함') && htmlP.includes('Split text field'));
+    }
+
+    // ── 방법 자체를 GAP 으로 남겼는지
+    const g32 = VIEW.GAPS.items.find(g => g.id === 'GAP-32');
+    ok('«🚧 를 빈 페이지로 셌다»가 GAP 으로 기록됨', !!g32 && g32.status !== 'resolved'
+      && /전수/.test(g32.fix || ''));
+    ok('남은 🚧 쪽수가 진행 기록에 있음', !!g32 && /남은 \d+쪽/.test(g32.progress || ''));
   }
 
   const GAPS = VIEW.GAPS;

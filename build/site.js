@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 
-const TEMPLATE = path.join(ROOT, 'site', 'canon.html');       // 정본 사이트 → index.html
+const TEMPLATE = path.join(ROOT, 'site', 'canon.html');       // 원본 사이트 → index.html
 const DATA = path.join(ROOT, 'data', 'foundation-data.json');
 const OUT_DIR = path.join(ROOT, 'dist');
 const OUT = path.join(OUT_DIR, 'index.html');
@@ -16,7 +16,7 @@ const SUBPAGES = [];
 
 const tpl = fs.readFileSync(TEMPLATE, 'utf8');
 
-// 확정 결정을 반영한 정본을 주입합니다 — 사이트가 구 이름(Red 500 등)을 보여주면 안 됩니다.
+// 확정 결정을 반영한 원본을 주입합니다 — 사이트가 구 이름(Red 500 등)을 보여주면 안 됩니다.
 const VIEW = require('./canon-view.js');
 const FONT = require('./font.js');
 const injected = JSON.parse(fs.readFileSync(DATA, 'utf8'));
@@ -48,7 +48,7 @@ if (TDEC_SITE.usage && TDEC_SITE.usage.status === 'confirmed') {
 }
 // 버전 — 레퍼런스 다섯 곳이 전부 제품명 옆에 버전을 답니다(data/reference-sites.json).
 injected.meta.version = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
-// 정본 사이트에도 새 계층을 싣습니다 — /decisions 에만 있으면 «정본 문서»가 아니라 «작업 기록»이 됩니다.
+// 원본 사이트에도 새 계층을 싣습니다 — /decisions 에만 있으면 «원본 문서»가 아니라 «작업 기록»이 됩니다.
 injected.canon.layout = VIEW.layout || null;
 injected.canon.semantic = VIEW.semantic || null;
 injected.canon.typography.semantic = VIEW.typeSemantic || null;
@@ -64,6 +64,7 @@ injected.canon.spacingCensus = VIEW.spacingCensus ? {
 injected.canon.effects = VIEW.effects || null;
 injected.canon.icons = VIEW.icons || null;
 injected.canon.components = VIEW.components || null;
+injected.canon.pages = VIEW.pages || null;
 injected.canon.structure = VIEW.structure || null;
 injected.canon.gapSummary = VIEW.GAPS ? {
   total: VIEW.GAPS.items.length,
@@ -95,5 +96,5 @@ for (const name of SUBPAGES) {
 require('./guide.js');
 require('./decisions.js');
 
-console.log(`  정본 폰트 주입 — ${FONT.FAMILY} ${FONT.WEIGHTS.join('/')} (서브셋 임베드)`);
+console.log(`  GDS 폰트 주입 — ${FONT.FAMILY} ${FONT.WEIGHTS.join('/')} (서브셋 임베드)`);
 console.log(`빌드 완료 → dist/index.html (${Math.round(html.length / 1024)} KB)`);
