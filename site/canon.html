@@ -857,67 +857,107 @@ function icon(){
   ${I.iconTokens.length?`<h2>관련 컴포넌트 토큰 — ${I.iconTokens.length}종</h2>
   <div>${I.iconTokens.map(t=>`<div class="sprow" style="grid-template-columns:1fr"><div class="tok">${esc(t)}</div></div>`).join('')}</div>`:''}
 
+  ${iconGuide()}
+
+  ${I.sizeGap?`<h3>00_Size 의 주요 크기 밖에 있는 크기 ${I.sizeGap.offScale.length}개</h3>
+  <p class="lead" style="font-size:15px">원본이 정한 주요 크기는 ${I.sizeGap.guideSizes.join(' · ')} 입니다.
+  실제 컴포넌트 이름에는 ${I.sizeGap.declaredSizes.join(' · ')} 이 선언돼 있습니다.</p>
+  <table class="ctr"><thead><tr><th>크기</th><th>건수</th><th>4의 배수</th><th>8의 배수</th></tr></thead><tbody>
+  ${I.sizeGap.offScale.map(o=>`<tr><td><b>${o.px}px</b></td><td>${o.count}건</td>
+    <td class="${o.multipleOf4?'':'no'}">${o.multipleOf4?'○':'✕'}</td>
+    <td class="${o.multipleOf8?'':'no'}">${o.multipleOf8?'○':'✕'}</td></tr>`).join('')}
+  </tbody></table>
+  <p class="muted">원본 규칙 — ${esc(I.sizeGap.rule)}</p>
+  <div class="note"><p><b>${esc(I.sizeGap.decision.what)}</b> — ${esc(I.sizeGap.decision.by)} ${esc(I.sizeGap.decision.at)}
+  「${esc(I.sizeGap.decision.quote)}」</p><p class="muted">${esc(I.sizeGap.decision.why)}</p></div>`:''}
+
   <h2>원본에 없는 것 — ${I.missing.length}가지</h2>
-  <p class="lead" style="font-size:15px">페이지를 읽고 <b>남은 것만</b>입니다. 저장소가 지어내지 않았습니다.
-  아래 «참고로 메운 것»에 후보를 실었지만, <b>원본에 없다는 사실은 그대로입니다</b>.</p>
-  <div>${I.missing.map(m=>`<div class="sprow" style="grid-template-columns:200px 1fr;align-items:start">
+  <p class="lead" style="font-size:15px">원본 제작 가이드라인 00~08 을 다 읽고도 남은 것입니다.
+  두 참고에는 있는 축인데 원본에는 없습니다 — <b>참고로 채우지 않았습니다</b>. 원본에 없는 축을 참고로 채우면 그게 오염입니다.</p>
+  <div>${I.missing.map(m=>`<div class="sprow" style="grid-template-columns:220px 1fr;align-items:start">
     <div class="tok" style="opacity:.5">${esc(m.item)}</div>
-    <div><div class="muted">${esc(m.why)}</div>
-    ${m.proposal?`<div class="muted" style="margin-top:4px;font-size:13px">참고 후보 — ${esc(m.proposal)}</div>`:''}</div></div>`).join('')}</div>
+    <div class="muted">${esc(m.why)}</div></div>`).join('')}</div>
   ${iconRef()}
   ${footer()}`;
 }
 
-/* 참고로 메운 것 — 원본이 아닙니다. 이 절 안에만 삽니다. */
+/* 원본 제작 가이드라인 — 레퍼런스가 아니라 원본입니다. */
+function iconGuide(){
+  const G=(C.icons||{}).guide; if(!G) return '';
+  const V=G.values;
+  return `<h2>제작 가이드라인 — 원본 00_Size ~ 08_Color</h2>
+  <div class="note warn"><p><b>두 번 틀렸습니다.</b> ${esc(G.correction.what)}</p>
+  <p class="muted">${esc(G.correction.whyWrong||G.correction.whyWrongTwice||'')}</p>
+  <p class="muted">알게 된 경위 — ${esc(G.correction.howFound)}</p>
+  <p><b>${esc(G.correction.lesson)}</b></p></div>
+  <p class="lead" style="font-size:15px">${esc(G.guidelineLead)}</p>
+
+  <h3>값</h3>
+  <table class="ctr"><thead><tr><th>항목</th><th>값</th><th>근거 노드</th></tr></thead><tbody>
+    <tr><td>프레임(캔버스)</td><td><b>${esc(V.keyline.frame)}</b></td><td class="muted"><code>${esc(G.guide[2].node)}</code></td></tr>
+    <tr><td>Square 키라인</td><td><b>${esc(V.keyline.square)}</b></td><td class="muted">02_Key line shape</td></tr>
+    <tr><td>Circle 키라인</td><td><b>${esc(V.keyline.circle)}</b></td><td class="muted">02_Key line shape</td></tr>
+    <tr><td>Rectangular 키라인</td><td><b>${esc(V.keyline.rectangular)}</b></td><td class="muted">02_Key line shape</td></tr>
+    <tr><td>세이프존 여백</td><td><b>${esc(V.keyline.safeZone)}</b></td><td class="muted">02_Key line shape</td></tr>
+    <tr><td>적용 방식</td><td>${esc(V.keyline.scaling||'—')}</td><td class="muted">02_Key line shape</td></tr>
+    <tr><td>스트로크 두께</td><td><b>${esc(V.stroke.value)}</b> (허용 오차 ${esc(V.stroke.tolerance||'—')})</td><td class="muted"><code>${esc(G.guide[3].node)}</code></td></tr>
+    <tr><td>코너 반경</td><td><b>${esc(V.radius.value)}</b></td><td class="muted"><code>${esc(G.guide[4].node)}</code></td></tr>
+    <tr><td>기본 Cap</td><td><b>${esc(V.endCap.base)}</b></td><td class="muted"><code>${esc(G.guide[5].node)}</code></td></tr>
+    <tr><td>교차 지점 예외</td><td><b>${esc(V.endCap.exception||'—')}</b></td><td class="muted">05_End cap</td></tr>
+  </tbody></table>
+  <p class="muted">End cap — ${esc(V.endCap.confirmedBy)}</p>
+
+  <h3>크기별 스트로크 — 원본이 배정해 둔 것</h3>
+  <table class="ctr"><thead><tr><th>크기</th><th>스트로크</th><th>레이어 이름</th></tr></thead><tbody>
+  ${V.sizeStroke.map(s=>`<tr><td><b>${s.px}×${s.px}</b></td><td>${s.stroke}px</td>
+    <td class="muted"><code>${esc(s.layerName)}</code> · <code>${esc(s.node)}</code></td></tr>`).join('')}
+  </tbody></table>
+  <p class="muted">${esc(V.stroke.why)}</p>
+
+  <h3>절별 본문</h3>
+  <table class="ctr"><thead><tr><th>절</th><th>본문</th></tr></thead><tbody>
+  ${G.guide.map(g=>`<tr><td><b>${esc(g.title)}</b><br><span class="muted"><code>${esc(g.node)}</code></span></td>
+    <td class="muted">${esc(g.lead||'—')}${g.rows.length?`<br><span style="opacity:.7">${g.rows.map(esc).join(' · ')}</span>`:''}</td></tr>`).join('')}
+  </tbody></table>
+
+  ${G.internalConflicts.length?`<h3>원본 안에서 어긋나는 곳</h3>
+  ${G.internalConflicts.map(c=>`<div class="note warn"><p><b>${esc(c.id)} · ${esc(c.what)}</b></p>
+    <p class="muted">가이드 ${esc(c.guide)}<br>실측 ${esc(c.measured)}</p><p>${esc(c.why)}</p></div>`).join('')}`:''}
+
+  ${G.defects.length?G.defects.map(d=>`<div class="note warn"><p><b>${esc(d.id)} · ${esc(d.what)}</b></p>
+    <p>${esc(d.why)}</p><p class="muted">${esc(d.fix)}</p></div>`).join(''):''}
+
+  <div class="note"><p><b>사용 가이드 ${G.counts.usageGuides}절 중 ${G.counts.usageGuidesFilled}절만 작성됐습니다.</b>
+  나머지는 «설명글» 문구 그대로입니다 — 채워진 것으로 세지 않습니다.</p>
+  <p class="muted">${G.usageGuides.map(u=>`${u.filled?'✔':'—'} ${esc(u.title)}`).join(' · ')}</p></div>
+  ${G.typos.length?`<p class="muted">원본 오타 ${G.typos.length}건 — ${G.typos.map(t=>`«${esc(t.found)}»→«${esc(t.should)}» (${esc(t.where)})`).join(' · ')}. 고치지 않고 셉니다.</p>`:''}`;
+}
+
+/* 출처 대조 — 원본 문장이 어디서 왔는지. 메우는 용도가 아닙니다. */
 function iconRef(){
-  const R=(C.icons||{}).reference; if(!R) return '';
+  const R=(C.icons||{}).reference, G=(C.icons||{}).guide; if(!R||!G) return '';
   const src=id=>R.sources.find(s=>s.id===id)||{};
-  const cite=i=>`<span class="muted" style="font-size:12px">— <a href="${esc(src(i.source).url)}" target="_blank" rel="noopener">${esc(src(i.source).name)}</a></span>`;
-  return `<h2>참고로 메운 것 — 원본이 아닙니다</h2>
-  <div class="note warn"><p><b>이 절의 값은 전부 «참고»입니다.</b> 토큰으로 나가지 않고, 확정도 아닙니다(<code>status: ${esc(R.status)}</code>).
-  원본에서 온 값과 섞지 않으려고 절을 따로 뒀습니다.</p>
-  <p class="muted">${R.rule.map(esc).join('<br>')}</p></div>
-  <div class="note"><p><b>왜 참고를 봐도 되는가.</b> ${esc(R.sanction.byUser)}</p>
-  <p class="muted">${esc(R.sanction.byOriginal)}</p></div>
-
-  <h3>출처 ${R.sources.length}곳 (조회 ${esc(R.readAt)})</h3>
-  <table class="ctr"><thead><tr><th>출처</th><th>왜 이 곳인가</th></tr></thead><tbody>
-  ${R.sources.map(s=>`<tr><td><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></td>
-    <td class="muted">${esc(s.whyThisOne)}${s.alreadyQuotedByOriginal?`<br><b>${esc(s.alreadyQuotedByOriginal)}</b>`:''}</td></tr>`).join('')}
+  const P=G.provenance;
+  return `<h2>원본 문장은 어디서 왔나 — 출처 대조</h2>
+  <div class="note"><p><b>철회.</b> ${esc(R.retracted.was)}</p>
+  <p>${esc(R.retracted.why)}</p>
+  <p class="muted">${esc(R.retracted.howFound)} → ${esc(R.retracted.nowUsedFor)}</p></div>
+  <p class="lead" style="font-size:15px">${esc(P.why)}</p>
+  <p class="muted">${esc(P.method)}</p>
+  <table class="ctr"><thead><tr><th>인용</th><th>출처</th><th>가장 가까운 원본 절</th><th>겹침</th><th>판정</th></tr></thead><tbody>
+  ${P.items.map(i=>`<tr><td class="muted">${esc(i.quote)}</td>
+    <td class="muted"><a href="${esc(src(i.source).url)}" target="_blank" rel="noopener">${esc(src(i.source).name)}</a></td>
+    <td class="muted">${esc(i.bestMatch||'—')}</td><td>${Math.round(i.overlapRatio*100)}%</td>
+    <td class="${i.verdict==='verbatim'?'no':''}"><b>${esc(i.verdict)}</b>
+    ${i.brokenByTypo?`<br><span class="muted" style="font-size:12px">원본 오타로 끊김 — ${i.brokenByTypo.map(esc).join(', ')}</span>`:''}</td></tr>`).join('')}
   </tbody></table>
-
-  <h3>① 아이콘 그리드 <span class="badge">참고</span></h3>
-  <p class="lead" style="font-size:15px"><b>${esc(R.grid.proposal)}</b><br>${esc(R.grid.why)}</p>
-  <table class="ctr"><thead><tr><th>항목</th><th>값</th><th>원문</th></tr></thead><tbody>
-  ${R.grid.items.map(i=>`<tr><td>${esc(i.item)}</td><td><b>${esc(i.value)}</b></td>
-    <td class="muted">「${esc(i.quote)}」 ${cite(i)}
-    ${i.alsoIn?`<br>같은 방향 — ${esc(i.alsoIn)}`:''}
-    ${i.matchesOriginal?`<br><b>${esc(i.matchesOriginal)}</b>`:''}
-    ${i.conflict?`<br><b style="color:var(--warn,#e6a23c)">갈림 — ${esc(i.conflict)}</b>`:''}
-    ${i.note?`<br>${esc(i.note)}`:''}</td></tr>`).join('')}
+  <div class="note warn"><p><b>KRDS 원문 그대로인 절 — ${esc(P.verbatimSections.join(' · '))}.</b>
+  원본이 옮겨 적은 것입니다. 우리가 가져다 붙인 것이 아닙니다.</p></div>
+  <h3>G car 고유 판단 ${P.ownJudgements.length}가지</h3>
+  <table class="ctr"><thead><tr><th>무엇</th><th>왜 고유한가</th></tr></thead><tbody>
+  ${P.ownJudgements.map(o=>`<tr><td><b>${esc(o.what)}</b></td><td class="muted">${esc(o.why)}</td></tr>`).join('')}
   </tbody></table>
-
-  <h3>② 크기 단계의 용도 <span class="badge">참고</span></h3>
-  <p class="lead" style="font-size:15px"><b>${esc(R.sizeUsage.proposal)}</b><br>${esc(R.sizeUsage.why)}</p>
-  <table class="ctr"><thead><tr><th>크기</th><th>쓰임새</th><th>원본 선언</th><th>근거</th></tr></thead><tbody>
-  ${R.sizeUsage.steps.map(s=>`<tr><td><b>${s.px}px</b></td><td>${esc(s.role)}</td>
-    <td class="muted">${s.originalCount}건${s.targetSize?`<br>터치 표적 ${s.targetSize}px`:''}</td>
-    <td class="muted">${esc(s.basis)}${s.originalEvidence?`<br><b>${esc(s.originalEvidence)}</b>`:''}
-    ${s.quote?`<br>「${esc(s.quote)}」 ${cite(s)}`:` ${cite(s)}`}
-    ${s.caution?`<br>주의 — ${esc(s.caution)}`:''}</td></tr>`).join('')}
-  </tbody></table>
-  <div class="note"><p><b>제안 밖 ${R.sizeUsage.outsideProposal.items.length}개.</b> ${esc(R.sizeUsage.outsideProposal.why)}</p>
-  <p class="muted">${R.sizeUsage.outsideProposal.items.map(o=>`<b>${o.px}px</b> (${o.count}건) — ${esc(o.note)}`).join('<br>')}</p></div>
-
-  <h3>원본과 참고가 어긋나는 곳</h3>
-  <table class="ctr"><thead><tr><th>항목</th><th>원본</th><th>참고</th><th>읽기</th></tr></thead><tbody>
-  ${R.contrasts.map(c=>`<tr><td>${esc(c.item)}${c.decided?'':' <span class="badge">미결</span>'}</td>
-    <td class="muted">${esc(c.original)}</td><td class="muted">${esc(c.reference)}</td>
-    <td class="muted">${esc(c.reading)}</td></tr>`).join('')}
-  </tbody></table>
-
-  <div class="note warn"><p><b>참고로도 안 메워진 것 ${R.stillOpen.length}가지</b></p>
-  <p class="muted">${R.stillOpen.map(esc).join('<br>')}</p></div>`;
+  <div class="note"><p class="muted">${R.rule.map(esc).join('<br>')}</p></div>`;
 }
 
 /* ───────── 반경 ───────── */
