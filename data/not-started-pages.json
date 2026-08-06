@@ -41,9 +41,13 @@
       "name": "Accordion (아코디언)",
       "node": "42066:25442",
       "state": "documented-but-contaminated",
-      "transcribed": true,
-      "finding": "문서 프레임 Components_Accordion(44370:30114)이 있는데 내용이 남의 것입니다. 정의는 끊겨 있고, [종류] 절은 Tip 문장, Style 절은 Icon checkbox 문장입니다. 🚧 페이지들에서 찾은 것과 같은 오염입니다.",
-      "contamination": [
+      "transcribed": false,
+      "finding": "문서 프레임 Components_Accordion(44370:30114)이 있는데 내용이 남의 것입니다. 정의는 끊겨 있고, [종류] 절은 Tip 문장, Style 자리는 Icon checkbox 문장입니다. 🚧 페이지들에서 찾은 것과 같은 오염입니다.",
+      "note": "처음에는 손으로 5건을 옮겨 적었습니다. 이제 원자료(data/figma-xml/accordion.xml)를 파서에 넣어 기계가 셉니다 — 아래 contamination 은 손으로 적었을 때의 기록이고, 지금 세는 값은 data/component-pages.json 에 있습니다.",
+      "parsed": "data/figma-pages/accordion.json",
+      "machineChecked": "data/component-pages.json — 파서에 넣어 기계가 다시 셌습니다.",
+      "handCountWas": 5,
+      "contaminationHand": [
         {
           "what": "정의가 끊김",
           "text": "Accordion (아코디언)은",
@@ -69,8 +73,7 @@
           "text": "Selection box (셀렉션 박스)",
           "node": "44370:30137"
         }
-      ],
-      "note": "이 다섯 건은 data/component-pages.json 의 기계 대조에는 들어 있지 않습니다 — 이 페이지 XML 을 파일로 저장하지 못해 파서를 못 돌렸습니다. 다음에 파서에 넣을 자리입니다."
+      ]
     },
     {
       "slug": "loading-spinner",
@@ -157,6 +160,9 @@
     "specOutsideTemplate": 1,
     "screensOnly": 3,
     "reading": "8쪽 중 «정말로 빈» 페이지는 Table 하나뿐입니다. 나머지 7쪽에는 컴포넌트·화면·스펙·오염된 문서 중 하나 이상이 있습니다.",
-    "$note": "이 수치는 손으로 적었다가 build/check.js 의 «요약 수치가 항목과 일치» 검사에 걸려 고쳤습니다(templateOnly 3→2). 손으로 적은 수는 반드시 기계가 대조합니다."
-  }
+    "$note": "이 수치는 손으로 적었다가 build/check.js 의 «요약 수치가 항목과 일치» 검사에 걸려 고쳤습니다(templateOnly 3→2). 손으로 적은 수는 반드시 기계가 대조합니다.",
+    "transcribed": 4,
+    "parsed": 4
+  },
+  "$update": "2026-08-06 — Accordion 을 파서에 넣었습니다. 손으로 옮겨 적은 쪽이 5쪽에서 4쪽으로 줄었습니다."
 }

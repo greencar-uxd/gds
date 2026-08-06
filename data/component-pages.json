@@ -1418,6 +1418,54 @@
         }
       ],
       "workNotes": []
+    },
+    {
+      "slug": "accordion",
+      "name": "Accordion (아코디언)",
+      "source": {
+        "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+        "node": "42066:25442",
+        "pageName": "Accordion (아코디언)",
+        "figmaStatus": "none",
+        "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+      },
+      "counts": {
+        "nodes": 233,
+        "texts": 52,
+        "templateStubs": 6,
+        "variants": 0,
+        "sections": 2,
+        "sectionsWithOwnContent": 1
+      },
+      "docTemplate": true,
+      "sections": [
+        {
+          "title": "[정의]",
+          "node": "44370:30132",
+          "lead": "Accordion (아코디언)은",
+          "rowCount": 2,
+          "rows": [
+            "Accordion (아코디언)은",
+            "Selection box (셀렉션 박스)"
+          ]
+        },
+        {
+          "title": "[종류]",
+          "node": "44370:30146",
+          "lead": "Tip (팁)은",
+          "rowCount": 7,
+          "rows": [
+            "Tip (팁)은",
+            "➊ Accent tip (ㅇㅇ) > 상단 헤더 하단에 있는 버전 > 부모인 개체 상단에 같이 떠있는 버전",
+            "➋ Accent box tip? (ㅇㅇ) > 헤더 하단에 배치되어있지만 타이틀+박스인 버전",
+            "➌ Info tip (인포 팁) > 텍스트 + 아이콘(이 아이콘을 누르면 팁이 나오는 형태) 버전",
+            "종류 (2)",
+            "세차/정비 직후라면 이전 대여자 주차위치와 상이할 수 있어요.",
+            "Icon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 색상 스타일과 상태값(Off·On)을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary)에 관계없이 동일하게 적용합니다. (아래항목도 동일)"
+          ]
+        }
+      ],
+      "workNotes": []
     }
   ],
   "naming": {
@@ -1463,7 +1511,7 @@
   },
   "borrowed": {
     "why": "템플릿을 복사하고 고치지 않아 다른 컴포넌트의 문장이 남아 있는 자리입니다. 원본에서 고칠 일입니다.",
-    "count": 6,
+    "count": 7,
     "items": [
       {
         "text": "Top app bar (탑앱바)는 사용 용도에 따라 다음 3가지 유형으로 나뉩니다.",
@@ -1507,6 +1555,45 @@
         "why": "어느 페이지의 문장인지 이름으로는 가릴 수 없습니다 — 두 곳 이상에 같은 문장이 있다는 사실만 기록합니다."
       },
       {
+        "text": "Tip (팁)은",
+        "appearsIn": [
+          {
+            "slug": "info-box",
+            "section": "[종류]",
+            "node": "44370:25258"
+          },
+          {
+            "slug": "helper-text",
+            "section": "[종류]",
+            "node": "44345:65341"
+          },
+          {
+            "slug": "selection-box",
+            "section": "[종류]",
+            "node": "44370:28003"
+          },
+          {
+            "slug": "toast",
+            "section": "[종류]",
+            "node": "44238:24080"
+          },
+          {
+            "slug": "accordion",
+            "section": "[종류]",
+            "node": "44370:30147"
+          }
+        ],
+        "owner": "tip",
+        "borrowedBy": [
+          "info-box › [종류]",
+          "helper-text › [종류]",
+          "selection-box › [종류]",
+          "toast › [종류]",
+          "accordion › [종류]"
+        ],
+        "why": "Tip (팁) 을 가리키는 문장인데 다른 페이지에도 그대로 있습니다."
+      },
+      {
         "text": "➊ Accent tip (ㅇㅇ) > 상단 헤더 하단에 있는 버전 > 부모인 개체 상단에 같이 떠있는 버전",
         "appearsIn": [
           {
@@ -1533,6 +1620,11 @@
             "slug": "numbering",
             "section": "[종류]",
             "node": "44346:73212"
+          },
+          {
+            "slug": "accordion",
+            "section": "[종류]",
+            "node": "44370:30152"
           }
         ],
         "owner": null,
@@ -1541,7 +1633,8 @@
           "helper-text › [종류]",
           "selection-box › [종류]",
           "toast › [종류]",
-          "numbering › [종류]"
+          "numbering › [종류]",
+          "accordion › [종류]"
         ],
         "why": "어느 페이지의 문장인지 이름으로는 가릴 수 없습니다 — 두 곳 이상에 같은 문장이 있다는 사실만 기록합니다."
       },
@@ -1572,6 +1665,11 @@
             "slug": "numbering",
             "section": "[종류]",
             "node": "44346:73214"
+          },
+          {
+            "slug": "accordion",
+            "section": "[종류]",
+            "node": "44370:30154"
           }
         ],
         "owner": null,
@@ -1580,7 +1678,8 @@
           "helper-text › [종류]",
           "selection-box › [종류]",
           "toast › [종류]",
-          "numbering › [종류]"
+          "numbering › [종류]",
+          "accordion › [종류]"
         ],
         "why": "어느 페이지의 문장인지 이름으로는 가릴 수 없습니다 — 두 곳 이상에 같은 문장이 있다는 사실만 기록합니다."
       },
@@ -1611,6 +1710,11 @@
             "slug": "numbering",
             "section": "[종류]",
             "node": "44346:73216"
+          },
+          {
+            "slug": "accordion",
+            "section": "[종류]",
+            "node": "44370:30156"
           }
         ],
         "owner": "tip",
@@ -1619,7 +1723,8 @@
           "helper-text › [종류]",
           "selection-box › [종류]",
           "toast › [종류]",
-          "numbering › [종류]"
+          "numbering › [종류]",
+          "accordion › [종류]"
         ],
         "why": "Tip (팁) 을 가리키는 문장인데 다른 페이지에도 그대로 있습니다."
       },
@@ -1666,19 +1771,44 @@
   },
   "foreignSubjects": {
     "why": "문장의 주어가 그 페이지의 컴포넌트가 아닌 것입니다. 겹치지 않아도(한 곳에만 있어도) 남의 문장입니다.",
-    "count": 7,
+    "count": 13,
+    "countComponent": 12,
+    "countStructural": 1,
+    "caveat": "주어가 다른 «컴포넌트»인 것(kind=component)이 오염입니다. Body (중단) 처럼 위치를 가리키는 하위 영역 이름은 kind=structural 로 갈라 두고 단정하지 않습니다. 자기 이름의 철자만 틀린 것은 오염이 아니라 오타라서 ownNameTypos 로 뺐습니다.",
     "items": [
       {
         "page": "search-field",
         "section": "[유형]",
         "subject": "Top app bar (탑앱바)",
+        "belongsTo": "top-app-bar",
+        "kind": "component",
         "text": "Top app bar (탑앱바)는 사용 용도에 따라 다음 3가지 유형으로 나뉩니다.",
         "node": "43893:37080"
+      },
+      {
+        "page": "info-box",
+        "section": "[종류]",
+        "subject": "Tip (팁)",
+        "belongsTo": "tip",
+        "kind": "component",
+        "text": "Tip (팁)은",
+        "node": "44370:25258"
+      },
+      {
+        "page": "helper-text",
+        "section": "[종류]",
+        "subject": "Tip (팁)",
+        "belongsTo": "tip",
+        "kind": "component",
+        "text": "Tip (팁)은",
+        "node": "44345:65341"
       },
       {
         "page": "text-field",
         "section": "[➊ Default button (디폴트 버튼)]",
         "subject": "Icon button (아이콘 버튼)",
+        "belongsTo": null,
+        "kind": "component",
         "text": "Icon button (아이콘 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
         "node": "43893:25959"
       },
@@ -1686,6 +1816,8 @@
         "page": "text-field",
         "section": "[➊ Default button (디폴트 버튼)]",
         "subject": "Capsule button (캡슐 버튼)",
+        "belongsTo": null,
+        "kind": "component",
         "text": "Capsule button (캡슐 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
         "node": "43893:26021"
       },
@@ -1693,6 +1825,8 @@
         "page": "text-field",
         "section": "[➊ Default button (디폴트 버튼)]",
         "subject": "Icon button (아이콘 버튼)",
+        "belongsTo": null,
+        "kind": "component",
         "text": "Icon button (아이콘 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
         "node": "43893:25230"
       },
@@ -1700,21 +1834,76 @@
         "page": "text-field",
         "section": "[➊ Default button (디폴트 버튼)]",
         "subject": "Capsule button (캡슐 버튼)",
+        "belongsTo": null,
+        "kind": "component",
         "text": "Capsule button (캡슐 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
         "node": "43893:25292"
+      },
+      {
+        "page": "selection-box",
+        "section": "[종류]",
+        "subject": "Tip (팁)",
+        "belongsTo": "tip",
+        "kind": "component",
+        "text": "Tip (팁)은",
+        "node": "44370:28003"
+      },
+      {
+        "page": "toast",
+        "section": "[종류]",
+        "subject": "Tip (팁)",
+        "belongsTo": "tip",
+        "kind": "component",
+        "text": "Tip (팁)은",
+        "node": "44238:24080"
       },
       {
         "page": "badge",
         "section": "[유형]",
         "subject": "Input (인풋)",
+        "belongsTo": null,
+        "kind": "component",
         "text": "Input (인풋)은 입력 형태와 목적에 따라 세 가지 유형으로 구분합니다.",
         "node": "43207:57357"
       },
       {
+        "page": "tab",
+        "section": "[➋ Section tab (섹션 탭)]",
+        "subject": "Body (중단)",
+        "belongsTo": null,
+        "kind": "structural",
+        "text": "Body (중단)은",
+        "node": "43912:28968"
+      },
+      {
+        "page": "accordion",
+        "section": "[종류]",
+        "subject": "Tip (팁)",
+        "belongsTo": "tip",
+        "kind": "component",
+        "text": "Tip (팁)은",
+        "node": "44370:30147"
+      },
+      {
+        "page": "accordion",
+        "section": "[종류]",
+        "subject": "Icon checkbox (아이콘 체크박스)",
+        "belongsTo": null,
+        "kind": "component",
+        "text": "Icon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 색상 스타일과 상태값(Off·On)을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary)에 관계없이 동일하게 적용합니다. (아래항목도 동일)",
+        "node": "44370:30179"
+      }
+    ]
+  },
+  "ownNameTypos": {
+    "why": "주어가 그 페이지 자신인데 철자가 틀린 곳입니다. 남의 문장이 아니라 오타라서 따로 셉니다.",
+    "count": 1,
+    "items": [
+      {
         "page": "components-overview",
         "section": "[정의]",
-        "subject": "Componenets (컴포넌트)",
-        "text": "Componenets (컴포넌트)는 텍스트, 그래픽, 인터랙션이 결합되어 하나의 기능이나 정보를 전달하는 UI의 기본 단위입니다.",
+        "found": "Componenets (컴포넌트)",
+        "should": "Components overview (컴포넌트 오버뷰)",
         "node": "43185:39199"
       }
     ]
@@ -1736,7 +1925,7 @@
   },
   "truncated": {
     "why": "조사로 끝나고 마침표가 없는 문장 — 쓰다 만 자리입니다. 저장소가 이어 쓰지 않습니다.",
-    "count": 7,
+    "count": 13,
     "items": [
       {
         "page": "search-field",
@@ -1745,10 +1934,34 @@
         "node": "43893:36936"
       },
       {
+        "page": "info-box",
+        "section": "[종류]",
+        "text": "Tip (팁)은",
+        "node": "44370:25258"
+      },
+      {
+        "page": "helper-text",
+        "section": "[종류]",
+        "text": "Tip (팁)은",
+        "node": "44345:65341"
+      },
+      {
         "page": "selection-box",
         "section": "[정의]",
         "text": "Selection box (헬퍼 텍스트)는",
         "node": "44370:27989"
+      },
+      {
+        "page": "selection-box",
+        "section": "[종류]",
+        "text": "Tip (팁)은",
+        "node": "44370:28003"
+      },
+      {
+        "page": "toast",
+        "section": "[종류]",
+        "text": "Tip (팁)은",
+        "node": "44238:24080"
       },
       {
         "page": "badge",
@@ -1779,15 +1992,31 @@
         "section": "[정의]",
         "text": "Smart key (스마트키)는",
         "node": "43984:10482"
+      },
+      {
+        "page": "accordion",
+        "section": "[정의]",
+        "text": "Accordion (아코디언)은",
+        "node": "44370:30133"
+      },
+      {
+        "page": "accordion",
+        "section": "[종류]",
+        "text": "Tip (팁)은",
+        "node": "44370:30147"
       }
     ]
   },
   "counts": {
-    "pages": 16,
-    "withDocTemplate": 15,
-    "borrowed": 6,
-    "foreign": 7,
-    "truncated": 7,
+    "pages": 17,
+    "borrowedPlaces": 32,
+    "foreignComponent": 12,
+    "foreignStructural": 1,
+    "ownNameTypos": 1,
+    "withDocTemplate": 16,
+    "borrowed": 7,
+    "foreign": 13,
+    "truncated": 13,
     "nameMismatch": 1
   }
 }
