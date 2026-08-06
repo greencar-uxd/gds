@@ -755,7 +755,8 @@ function space(){
   의 Guidelines 토큰이 유일합니다.</p></div>
   ${C.spacingCensus.counts.unreadable?`<p class="muted"><b>조사의 한계.</b>
   치수 말풍선 ${C.spacingCensus.counts.unreadable}건은 컴포넌트 인스턴스라 라벨 숫자가 메타데이터에 나오지 않습니다 —
-  값으로 세지 않았습니다.</p>`:''}`:''}
+  값으로 세지 않았습니다.</p>`:''}
+  ${outliers()}`:''}
   <p class="muted" style="margin-top:28px">${esc(S.unit||'')} · 출처 — <code>${esc(S.source||'')}</code></p>
   ${footer()}`;
 }
@@ -1348,6 +1349,32 @@ function wipPages(){
   </tbody></table>`).join('')}
   <div class="note"><p class="muted">${W.rule.map(esc).join('<br>')}</p></div>
   ${notStarted()}`;
+}
+
+/* 스케일 밖 값을 «문서 캔버스 여백»과 «제품 간격»으로 가른 결과 (GAP-30). */
+function outliers(){
+  const O=C.spacingOutliers; if(!O) return '';
+  const K=O.counts;
+  return `<h3>스케일 밖 ${K.offScale}건을 갈랐습니다</h3>
+  <p class="lead" style="font-size:15px">${esc(O.why)}</p>
+  <div class="stat">
+    <div><b>${K.offScale}</b><span>스케일 밖</span></div>
+    <div><b>${K.docCanvas}</b><span>문서 캔버스 여백</span></div>
+    <div><b>${K.product}</b><span>제품 간격 후보</span></div>
+    <div><b>${K.oddProduct}</b><span>그중 홀수</span></div>
+  </div>
+  <p class="lead" style="font-size:15px"><b>${esc(O.reading)}</b></p>
+  <table class="ctr"><thead><tr><th>값</th><th>건수</th><th>가장 가까운 단계</th><th>어디에</th></tr></thead><tbody>
+  ${O.product.values.map(g=>`<tr><td><b>${g.value}px</b>${g.odd?' <span class="no">홀수</span>':''}</td>
+    <td>${g.count}건</td>
+    <td class="muted">${g.nearestStep}px <b>${g.deltaPx>0?'+':''}${g.deltaPx}</b></td>
+    <td class="muted">${g.pages.map(esc).join(' · ')}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note warn"><p>${esc(O.distance.observation)}</p></div>
+  ${O.docCanvas.values.length?`<p class="muted"><b>문서 캔버스 여백 ${K.docCanvas}건은 뺐습니다.</b> ${esc(O.docCanvas.what)}
+  — ${O.docCanvas.values.map(g=>`<code>${g.value}px</code>×${g.count}`).join(' · ')}</p>`:''}
+  <div class="note"><p class="muted"><b>가르는 기준.</b> ${O.rule.map(esc).join('<br>')}<br>
+  틀 이름 ${O.basis.templateContainers.length}종 — ${O.basis.templateContainers.map(x=>`<code>${esc(x)}</code>`).join(' · ')}</p></div>`;
 }
 
 /* 손으로 옮겨 적은 것을 원자료로 되짚은 결과 — 손으로 적은 수는 반드시 기계가 다시 셉니다. */
