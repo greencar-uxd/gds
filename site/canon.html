@@ -9,8 +9,8 @@
   --bg:#fff; --surface:#fbfbfc; --surface2:#f2f3f5; --line:#e7e9ec; --line-soft:#f1f2f4;
   --text:#0d0f11; --text2:#5a616a; --text3:#939aa3;
   --brand:#F14950; --brand-deep:#ED1C24; --brand-soft:#FBD2D3; --brand-ink:#8E1116;
-  /* 크롬 accent — 정본 Primary/Red 040(메인 색) · 010 그대로입니다.
-     강민관 확정 2026-08-06. 값은 build/check.js 가 정본과 대조합니다. */
+  /* 크롬 accent — 원본 Primary/Red 040(메인 색) · 010 그대로입니다.
+     강민관 확정 2026-08-06. 값은 build/check.js 가 원본과 대조합니다. */
   --accent:#F14950; --accent-soft:#FBD2D3;
   --ok:#00C88C; --warn:#FF8159;
   --nav:248px; --top:56px; --maxw:1240px;
@@ -145,7 +145,7 @@ p{margin:0 0 var(--s4)}
 .hero .cta a.pri:hover{transform:translateY(-1px);box-shadow:var(--sh2)}
 .hero .cta a.sec{color:var(--text2)}
 .hero .cta a.sec:hover{color:var(--text);background:var(--surface2)}
-/* 정본 색을 얇은 띠 하나로 — 히어로가 색을 «설명»하지 «착용»하지 않습니다. */
+/* 원본 색을 얇은 띠 하나로 — 히어로가 색을 «설명»하지 «착용»하지 않습니다. */
 .heroramp{display:flex;height:6px;border-radius:99px;overflow:hidden;margin:var(--s7) 0 0}
 .heroramp i{flex:1}
 .herostat{display:flex;flex-wrap:wrap;gap:var(--s7);margin-top:var(--s5);
@@ -486,7 +486,7 @@ function start(){
       <div class="vr">--gds-color-primary-main</div></div></div>`:''}
     <div class="sw" data-copy="--gds-font-family">
       <div class="chip" style="height:64px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(--text)">Ag 가</div>
-      <div class="info"><div class="nm">정본 폰트</div>
+      <div class="info"><div class="nm">GDS 폰트</div>
       <div class="hx">${esc((tdec.fontFamily||{}).value||'')} 단일</div>
       <div class="vr">--gds-font-family</div></div></div>
     <div class="sw" data-copy="--gds-type-line-height">
@@ -685,7 +685,7 @@ function type(){
       </div>`).join('')}`).join('')}
   <div class="note"><b>같은 크기·굵기는 용도로 구분합니다.</b> 값이 동일한 네 쌍 — <code>Display 2</code>/<code>Heading 1</code>, <code>Display 3</code>/<code>Heading 3</code>, <code>Body 3</code>/<code>Caption 1</code>, <code>Body 4</code>/<code>Caption 2</code> — 은 쓰이는 자리가 다릅니다. 위 회색 라벨이 그 용도이고, 토큰에도 <code>$extensions.gds.usage</code> 로 실려 있습니다.</div>
   ${C.typography.library?`<h2>차기 라이브러리 — ${C.typography.library.styles.length}종</h2>
-  <p class="lead" style="font-size:15px">현재 Figma 라이브러리에 등록된 텍스트 스타일은 5종인데, 정본 표는 21단계입니다.
+  <p class="lead" style="font-size:15px">현재 Figma 라이브러리에 등록된 텍스트 스타일은 5종인데, 원본 표는 21단계입니다.
   <b>5종은 스타일이 아니라 그룹</b>이었고, 이름에 단계 번호가 빠져 같은 이름이 여러 값으로 발행돼 있었습니다.
   ${esc(C.typography.library.namingRule||'')}</p>
   <table class="ctr"><thead><tr><th>그룹</th><th>단계</th><th>굵기</th><th>현재 이름</th><th>차기 이름</th></tr></thead><tbody>
@@ -738,7 +738,7 @@ function space(){
     <div class="muted">값 유지</div>
   </div>`).join('')}</div>`:''}
   ${C.spacingCensus?`<h2>쓰임새 조사 — 주석 ${C.spacingCensus.counts.annotations}건</h2>
-  <p class="lead" style="font-size:15px">색·타이포에는 «쓰임새 → 값» 표가 정본에 있는데 <b>간격에는 없습니다.</b>
+  <p class="lead" style="font-size:15px">색·타이포에는 «쓰임새 → 값» 표가 원본에 있는데 <b>간격에는 없습니다.</b>
   Spacing 표의 열은 <code>Spacing</code> · <code>px</code> · <code>배수</code> 셋뿐입니다.
   그래서 ✅ 컴포넌트 페이지 ${C.spacingCensus.pages.length}곳에 디자이너가 깔아 둔
   <b>«Spacing» 주석 프레임</b>을 기계로 읽어, 어떤 값이 실제로 얼마나 쓰이는지만 세었습니다.</p>
@@ -750,7 +750,7 @@ function space(){
   <div class="note"><p><b>간격에는 시맨틱 계층을 만들지 않았습니다.</b>
   주석에서 값은 나오지만 <b>쓰임새 이름이 하나도 붙어 있지 않습니다.</b>
   담고 있는 프레임 이름도 대부분 <code>Group 2147227…</code> 같은 자동 이름입니다.
-  없는 이름을 지어내면 그 순간 이 문서는 정본이 아니라 추측이 됩니다.
+  없는 이름을 지어내면 그 순간 이 문서는 원본이 아니라 추측이 됩니다.
   간격의 쓰임새 수준 이름은 <a href="#" data-go="layout" style="color:var(--accent);text-decoration:underline">Layout</a>
   의 Guidelines 토큰이 유일합니다.</p></div>
   ${C.spacingCensus.counts.unreadable?`<p class="muted"><b>조사의 한계.</b>
@@ -881,7 +881,41 @@ function radius(){
   </div>
   <div class="note"><p><b>상한 20px은 2026-07-28 회의에서 확정됐습니다.</b>
   컴포넌트별 배정(어느 컴포넌트가 몇 px을 쓰는지)은 카테고리 매핑이 확정된 뒤 추가합니다.</p></div>
+  ${radiusPage()}
   ${footer()}`;
+}
+
+/* Radius system 🚧 페이지를 직접 읽은 결과. 🚧 는 «미완»이지 «빈 페이지»가 아닙니다. */
+function radiusPage(){
+  const R=C.pages&&C.pages.radius; if(!R) return '';
+  const q=R.externalQuote;
+  return `<h2>🚧 Radius system 페이지를 직접 읽었습니다</h2>
+  <p class="lead" style="font-size:15px">등록된 변수 목록만 보면 «값 7개»가 전부입니다.
+  페이지를 열면 쓰임새 라벨, 원본이 스스로 적어 둔 미결 메모, 그리고 <b>다른 디자인 시스템을 옮겨 붙인 프레임</b>이 함께 있습니다.
+  출처 — <code>${esc(R.source.node)}</code></p>
+  <h3>단계별 쓰임새 — 원본이 붙여 둔 라벨</h3>
+  <table class="ctr"><thead><tr><th>값</th><th>쓰임새</th><th>토큰</th></tr></thead><tbody>
+  ${R.scale.steps.map(s=>`<tr><td><b>${s.px}px</b></td><td>${esc(s.usage)}</td>
+    <td><code>--gds-radius-${s.px}</code></td></tr>`).join('')}
+  </tbody></table>
+  ${R.pending.items.length?`<div class="note warn"><p><b>원본이 «바꿔야 함»으로 적어 둔 것 ${R.pending.items.length}건.</b>
+  ${esc(R.pending.reading)}</p>
+  <p class="muted">${R.pending.items.map(p=>`<code>${esc(p.node)}</code> ${esc(p.note)}`).join('<br>')}</p></div>`:''}
+  <h3>페이지에 붙어 있는 외부 인용 — 편입하지 않습니다</h3>
+  <div class="note warn"><p><b>${esc(q.what)}</b></p>
+  <p class="muted">판정 근거 — 「${esc(q.evidence)}」<br>대조 ${esc(q.verifiedAgainst)}</p>
+  <p>${esc(q.ruleApplied)}</p>
+  <p class="muted">${esc(q.caution)}
+  인용 표의 값 ${q.radiiInQuote.join(' / ')} 중 우리 스케일에 없는 것은 <b>${q.diffVsOurs.onlyInQuote.join(' · ')||'없음'}</b>,
+  우리에게만 있는 것은 <b>${q.diffVsOurs.onlyInOurs.join(' · ')||'없음'}</b>입니다.</p></div>
+  <table class="ctr"><thead><tr><th>레벨</th><th>쓰임새(인용문)</th><th>컨테이너 → 반경</th><th>적용 컴포넌트</th></tr></thead><tbody>
+  ${q.table.map(l=>`<tr><td><b>${esc(l.level)}</b></td><td class="muted">${esc(l.usage||'—')}</td>
+    <td class="muted">${l.sizes.map(s=>`${esc(s.container)} → ${esc(s.radius)}`).join('<br>')||'—'}</td>
+    <td class="muted">${esc(l.applyComponents||'—')}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note"><p><b>문서화 템플릿은 아직 비어 있습니다.</b> ${esc(R.documentationFrame.why)}
+  «${R.documentationFrame.truncatedSentences.map(esc).join('» / «')}» 처럼 문장이 끊겨 있고,
+  Text field 문구 ${R.counts.borrowed}개가 그대로 남아 있습니다.</p></div>`;
 }
 
 
@@ -917,7 +951,7 @@ function elev(){
   두 번째 레이어가 있을 가능성을 배제하지 못했습니다. 2~6단계 값은 재넘버링 전 값이 그대로 밀린 것으로 보고 있습니다.
   <code>.fig</code>를 새로 내려받아 <code>npm run extract</code>를 돌리면 원본 값으로 자동 대체됩니다.</p></div>
   ${C.effects?`<h2>Elevation 이 아닌 효과 — ${C.effects.counts.total-C.effects.counts.elevation}종</h2>
-  <p class="lead" style="font-size:15px">정본 EFFECT 스타일은 <code>Elevation_1~6</code> 만이 아닙니다.
+  <p class="lead" style="font-size:15px">원본 EFFECT 스타일은 <code>Elevation_1~6</code> 만이 아닙니다.
   나머지를 <b>«무엇인가»</b>로 갈랐습니다 — 이름과 값에서 읽히는 것만으로 판정하고, 지어내지 않습니다.</p>
   <table class="ctr"><thead><tr><th>이름</th><th>축</th><th>값</th><th>토큰</th></tr></thead><tbody>
   ${C.effects.items.filter(i=>i.axis!=='elevation').map(i=>`<tr>
@@ -939,8 +973,50 @@ function elev(){
        <b>정해질 때까지 둘 다 내보내지 않습니다</b> — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.</p></div>`).join('')}
   ${C.effects.counts.unmeasured.length?`<p class="muted"><b>값 미측정 ${C.effects.counts.unmeasured.length}종</b> —
   ${C.effects.counts.unmeasured.map(n=>`<code>${esc(n)}</code>`).join(' · ')}. 값을 읽지 못했으므로 토큰으로 내보내지 않습니다.</p>`:''}`:''}
+  ${elevPage()}
   <p class="muted" style="margin-top:24px">카드를 누르면 변수명이 복사됩니다. 출처 — ${esc(E.source||'')}</p>
   ${footer()}`;
+}
+
+/* Elevation system 🚧 페이지를 직접 읽은 결과. 정의·dp·적용 범위가 여기 있었습니다. */
+function elevPage(){
+  const P=C.pages&&C.pages.elevation; if(!P) return '';
+  return `<h2>🚧 Elevation system 페이지를 직접 읽었습니다</h2>
+  <div class="note"><p><b>철회.</b> ${esc(P.correction.what)} ${esc(P.correction.howFound)}</p></div>
+  <p class="lead" style="font-size:15px">${esc(P.definition)}</p>
+  <p class="muted">${esc(P.method)}</p>
+  <h3>레벨 표 — 원본이 적어 둔 값</h3>
+  <table class="ctr"><thead><tr><th>레벨</th><th>dp</th><th>X</th><th>Y</th><th>Blur</th><th>Spread</th><th>알파</th><th>역할</th></tr></thead><tbody>
+  ${P.level0?`<tr><td><b>Level 0</b></td><td>${P.level0.dp}dp</td><td colspan="5" class="muted">그림자 없음 — ${esc(P.level0.why)}</td>
+    <td>${esc(P.level0.role||'—')}</td></tr>`:''}
+  ${P.levels.map(l=>{const r=P.roles.find(x=>x.level===l.level);
+    return `<tr><td><b>Level ${l.level}</b></td><td>${l.dp}dp</td><td>${l.x}</td><td>${l.y}</td><td>${l.blur}</td>
+    <td>${l.spread}</td><td>${l.alphaPct}%</td><td class="muted">${esc(r?r.role:'—')}</td></tr>`;}).join('')}
+  </tbody></table>
+  <div class="elevstage"><div class="elevgrid">
+  ${P.levels.map(l=>`<div class="elevcard" style="box-shadow:${l.css}">
+    <div class="nm">Level ${l.level}</div><div class="meta">${l.dp}dp · ${l.x}/${l.y}/${l.blur}/${l.spread} · ${l.alphaPct}%</div></div>`).join('')}
+  </div></div>
+  ${P.extra?`<div class="note"><p><b>표준 밖 «별도 지정» 1건 — <code>${esc(P.extra.value)}</code>.</b>
+  ${esc(P.extra.label||'')} 자리에 씁니다. ${esc(P.extra.why)}</p>
+  ${P.extraCorroborates?`<p class="muted">이 값은 이미 방출 중인 <code>--gds-effect-bottom-sheet</code> 3겹의 셋째 겹과 같습니다 —
+  페이지가 그 3겹을 뒷받침합니다.</p>`:''}</div>`:''}
+  <h3>적용 범위</h3>
+  <table class="ctr"><thead><tr><th>대상</th><th>레벨</th></tr></thead><tbody>
+  ${P.applications.map(a=>`<tr><td>${esc(a.target||a.raw)}</td>
+    <td>${a.level!=null?`Level ${a.level} (${a.dp}dp)`:'—'}</td></tr>`).join('')}
+  </tbody></table>
+  ${P.conflicts.length?`<h3>라이브러리와 어긋나는 것 ${P.conflicts.length}건 — 맞추지 않고 적습니다</h3>
+  ${P.conflicts.map(c=>`<div class="note warn"><p><b>${esc(c.id)} · ${esc(c.what)}</b></p>
+    <p class="muted">페이지 ${esc(c.page)}<br>라이브러리 ${esc(c.library)}</p>
+    <p>${esc(c.why)}</p></div>`).join('')}`:''}
+  <div class="note"><p><b>원본이 스스로 밝힌 인용.</b> ${esc(P.reference.citation||'')}
+  <br><span class="muted">${esc(P.reference.citedText||'')}</span></p>
+  <p class="muted">${esc(P.reference.why)}</p></div>
+  ${P.workNote?`<p class="muted"><b>원본 작업 메모</b> — ${esc(P.workNote)}</p>`:''}
+  <div class="note"><p><b>아직 비어 있는 절</b> — ${P.stillEmpty.sections.map(esc).join(' · ')}.
+  ${esc(P.stillEmpty.why)}</p>
+  ${P.typos.length?`<p class="muted">원본 표기 오류 — ${P.typos.map(t=>`«${esc(t.found)}» → «${esc(t.should)}» ${t.count}곳`).join(' · ')}. 고치지 않고 셉니다.</p>`:''}</div>`;
 }
 
 /* ───────── 레이아웃 ───────── */
@@ -1025,7 +1101,7 @@ function semantic(){
   </div>
   ${SC?`<h2>색 — ${ct}종</h2>
   <p class="lead" style="font-size:15px">시맨틱은 값을 직접 갖지 않고 프리미티브를 <code>var()</code> 로 가리킵니다.</p>
-  <table class="ctr"><thead><tr><th>토큰</th><th>가리키는 정본 색</th><th>근거</th></tr></thead><tbody>
+  <table class="ctr"><thead><tr><th>토큰</th><th>가리키는 원본 색</th><th>근거</th></tr></thead><tbody>
   ${SC.tokens.map(t=>{const c=COLORS.find(x=>x.full===t.ref);
     return `<tr><td><code>--gds-${slug(t.token.replace(/^Semantic\//,'').replace(/\//g,' '))}</code></td>
     <td>${c?`<span class="dot" style="background:${c.hex}"></span>`:''}${esc(t.ref)}</td>
@@ -1034,18 +1110,18 @@ function semantic(){
   ${ST?`<h2>타이포 — 토큰 ${tt}종</h2>
   <p class="lead" style="font-size:15px">✅ <b>Type scale</b> 표에 붙은 <b>Usage 열</b>을 뒤집어 계산했습니다.
   쓰임새가 단계 하나만 가리킬 때만 토큰이 됩니다.</p>
-  <table class="ctr"><thead><tr><th>토큰</th><th>정본 단계</th><th>차기 라이브러리 이름</th><th>정본 Usage 셀</th></tr></thead><tbody>
+  <table class="ctr"><thead><tr><th>토큰</th><th>원본 단계</th><th>차기 라이브러리 이름</th><th>원본 Usage 셀</th></tr></thead><tbody>
   ${ST.tokens.map(t=>`<tr><td><code>--gds-type-semantic-${esc(t.role)}</code></td>
     <td>${esc(t.refCanon)}</td><td><code>${esc(t.ref)}</code></td>
     <td class="muted">${esc(t.usage)}</td></tr>`).join('')}
   </tbody></table>
   <h2>미확정 계열 ${tf}종</h2>
-  <p class="lead" style="font-size:15px">정본이 <b>여러 단계에 같은 쓰임새</b>를 적어 두었습니다.
-  어느 단계를 고를지에 대한 규칙이 정본에 없으므로 토큰으로 굳히지 않았습니다.</p>
-  <table class="ctr"><thead><tr><th>정본 Usage 셀</th><th>가리키는 단계</th></tr></thead><tbody>
+  <p class="lead" style="font-size:15px">원본이 <b>여러 단계에 같은 쓰임새</b>를 적어 두었습니다.
+  어느 단계를 고를지에 대한 규칙이 원본에 없으므로 토큰으로 굳히지 않았습니다.</p>
+  <table class="ctr"><thead><tr><th>원본 Usage 셀</th><th>가리키는 단계</th></tr></thead><tbody>
   ${ST.families.map(f=>`<tr><td><code>${esc(f.usage)}</code></td><td>${f.steps.map(s=>esc(s)).join(' · ')}</td></tr>`).join('')}
   </tbody></table>
-  <div class="note"><p><b>왜 비워 뒀나.</b> 없는 규칙을 지어내면 그 순간 이 문서는 정본이 아니라 추측이 됩니다.
+  <div class="note"><p><b>왜 비워 뒀나.</b> 없는 규칙을 지어내면 그 순간 이 문서는 원본이 아니라 추측이 됩니다.
   계열은 <code>$notes.typeSemantic.families</code> 로 남겨 두고, 규칙이 정해지면 토큰으로 승격합니다.</p></div>`:''}
   ${footer()}`;
 }
@@ -1082,8 +1158,8 @@ function comp(){
     ? `<div class="note warn"><p><b>✅ 인데 저장소에 없는 것 ${K.counts.doneButUndocumented.length}종</b> —
        ${K.counts.doneButUndocumented.map(n=>esc(n)).join(' · ')}. 우리 숙제입니다.</p></div>`
     : `<div class="note"><p><b>✅ 페이지는 전부 저장소에 있습니다.</b>
-       남은 ${K.counts.wip+K.counts.notStarted}종은 원본이 아직 🚧 이거나 시작 전이라
-       저장소가 먼저 만들 수 없습니다 — 우리 누락이 아닙니다.</p></div>`}
+       남은 ${K.counts.wip+K.counts.notStarted}종 중 일부는 🚧 이지만 <b>페이지에는 내용이 있습니다</b> —
+       Text field 가 그랬습니다. «🚧 = 빈 페이지»로 세지 않고 한 장씩 열어 확인하는 중입니다.</p></div>`}
 
   <h2>목록</h2>
   <table class="ctr"><thead><tr><th>컴포넌트</th><th>Figma</th><th>저장소</th><th>출처</th></tr></thead><tbody>
@@ -1130,8 +1206,8 @@ function comp(){
 /* ───────── 진행 상태 ───────── */
 function status(){
   const rows=[
-    ['색',`${COLORS.length}색 · 7그룹`,'ok','정본 확보'],
-    ['타이포그래피',`${TYPES.length}단계`,'ok','정본 확보'],
+    ['색',`${COLORS.length}색 · 7그룹`,'ok','원본 확보'],
+    ['타이포그래피',`${TYPES.length}단계`,'ok','원본 확보'],
     ['간격',`${SPACE.length}단계`,'ok','토큰명 순차 재정리 완료'],
     ['반경','7단계 · 상한 20px','ok','R-3 확정 반영'],
     ['엘리베이션','6단계 · 재넘버링 반영','ok','1단계 레이어 수만 재확인 필요'],
@@ -1151,7 +1227,7 @@ function status(){
     <div style="font-weight:600">${a}</div><div class="muted" style="text-align:left">${b}</div>
     <div>${badge(s)}</div><div class="muted">${c}</div></div>`).join('')}</div>
   ${G?`<h2>디자인 시스템으로서 모자란 곳 — ${G.total}건 중 ${G.resolved}건 메움</h2>
-  <p class="lead" style="font-size:15px">정본을 옮겨 적는 것이 아니라, <b>✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것</b>이
+  <p class="lead" style="font-size:15px">원본을 옮겨 적는 것이 아니라, <b>✅ 항목이 디자인 시스템으로서 모자란 곳을 찾아 메우는 것</b>이
   이 저장소의 일입니다. 남은 ${G.open}건과 각 건의 근거는 <a href="decisions/">결정 안건</a>에 있습니다.</p>
   <div class="stat">
     <div><b>${G.total}</b><span>찾은 것</span></div>
@@ -1163,7 +1239,7 @@ function status(){
   <p class="lead" style="font-size:15px">원본 <code>.fig</code> 파일을 직접 디코딩해 값을 읽고, 기계 검증을 통과한 것만 사이트와 토큰 파일로 내보냅니다.
   손으로 옮겨 적는 단계가 없어 원본과 어긋날 수 없습니다.</p>
 <pre><code>GDS(Greencar Design System).fig
-   ↓  npm run canon      ✅ 페이지에서 정본 추출
+   ↓  npm run canon      ✅ 페이지에서 원본 추출
    ↓  npm run tokens     CSS / SCSS / JSON 생성
    ↓  npm run build      사이트 생성
    ↓  npm run check      기계 검증 — 실패 시 배포 중단</code></pre>
@@ -1173,7 +1249,7 @@ function status(){
 function footer(){
   return `<footer>
     원본 <code>${esc(D.meta.source)}</code> · export ${String(D.meta.exported).slice(0,10)}<br>
-    ✅ 정의 완료 페이지에서 추출한 정본만 싣습니다. 정리되지 않은 레거시 스타일은 포함하지 않습니다.
+    ✅ 정의 완료 페이지에서 추출한 원본만 싣습니다. 정리되지 않은 레거시 스타일은 포함하지 않습니다.
   </footer>`;
 }
 
@@ -1188,7 +1264,69 @@ function bindTabs(){
     });
   });
 }
-const V={start,color,type,space,icon,radius,elev,layout,semantic,comp,status};
+/* ───────── Text field — 🚧 페이지를 직접 읽은 결과 ───────── */
+function tfield(){
+  const P=C.pages&&C.pages.textField;
+  if(!P) return `<div class="pagehead"><p class="eyebrow">Components</p><h1>Text field</h1>
+    <p class="lead">아직 실리지 않았습니다.</p></div>${footer()}`;
+  const V2=P.variants;
+  return `<div class="pagehead"><p class="eyebrow">Components</p><h1>Text field</h1>
+  <p class="lead">${esc(P.definition)}</p></div>
+  ${pmeta({source:`<code>${esc(P.source.node)}</code> ${esc(P.source.pageName)}`,
+    basis:'🚧 페이지 직접 읽기 — 등록된 컴포넌트 목록이 아니라 페이지 본문',
+    tokens:`유형 ${P.counts.types} · 변형 ${P.counts.variants}종`})}
+  <div class="note"><p><b>철회.</b> ${esc(P.correction.what)} ${esc(P.correction.howFound)}</p></div>
+  <div class="stat">
+    <div><b>${P.counts.types}</b><span>유형</span></div>
+    <div><b>${P.counts.variants}</b><span>변형</span></div>
+    <div><b>${P.counts.kinds}</b><span>Property 1 값</span></div>
+    <div><b>${P.counts.defects}</b><span>원본 결함</span></div>
+  </div>
+  <div class="note"><p><b>이름이 어긋납니다.</b> 구조도(목차)는 <code>${esc(P.naming.inToc)}</code>,
+  실제 페이지는 <code>${esc(P.naming.pageName)}</code> 입니다. ${esc(P.naming.note)}</p></div>
+
+  <h2>유형 ${P.counts.types}가지</h2>
+  <table class="ctr"><thead><tr><th></th><th>이름</th><th>정의</th></tr></thead><tbody>
+  ${P.types.map(t=>`<tr><td>${esc(t.mark)}</td><td><b>${esc(t.name)}</b></td><td class="muted">${esc(t.summary)}</td></tr>`).join('')}
+  </tbody></table>
+
+  <h2>유형별 구조와 스페이싱</h2>
+  <table class="ctr"><thead><tr><th></th><th>구조 요소</th><th>스페이싱 값</th></tr></thead><tbody>
+  ${P.sections.map(s=>`<tr><td><b>${esc(s.mark)}</b></td>
+    <td>${s.parts.map(p=>`<code>${esc(p)}</code>`).join(' · ')}</td>
+    <td class="muted">${s.spacing.join(' · ')||'—'}</td></tr>`).join('')}
+  </tbody></table>
+  <p class="muted">스페이싱 숫자는 페이지의 주석 값을 그대로 옮긴 것입니다.
+  어느 숫자가 어느 사이의 간격인지는 원본이 선으로만 표시해 두어 metadata 로는 읽히지 않습니다 — 짝짓지 않았습니다.</p>
+
+  <h2>변형 ${V2.total}종</h2>
+  <p class="lead" style="font-size:15px">${esc(V2.readAs)}</p>
+  <div class="sprow" style="grid-template-columns:150px 1fr"><div class="tok">Property 1</div>
+    <div class="muted">${V2.kinds.map(k=>esc(k)).join(' · ')}</div></div>
+  <div class="sprow" style="grid-template-columns:150px 1fr"><div class="tok">Property 2</div>
+    <div class="muted">${V2.states.map(k=>esc(k)).join(' · ')}</div></div>
+  <table class="ctr" style="margin-top:16px"><thead><tr><th>변형</th><th>크기</th><th>노드</th></tr></thead><tbody>
+  ${V2.items.map(i=>`<tr><td><code>${esc(i.name)}</code></td><td class="muted">${i.w}×${i.h}</td>
+    <td class="muted"><code>${esc(i.id)}</code></td></tr>`).join('')}
+  </tbody></table>
+
+  <h2>원본 결함 ${P.counts.defects}건 — 고치지 않고 적습니다</h2>
+  ${P.defects.map(d=>`<div class="note warn"><p><b>${esc(d.id)} · ${esc(d.what)}</b></p>
+    <p>${esc(d.why)}</p><p class="muted">${esc(d.fix)}</p>
+    ${d.evidence?`<p class="muted">근거 — ${Array.isArray(d.evidence)?d.evidence.map(e=>`<code>${esc(e)}</code>`).join('<br>'):esc(d.evidence)}</p>`:''}
+  </div>`).join('')}
+
+  <h2>토큰 이름 규칙</h2>
+  <div class="note"><p><b>${esc(P.tokenNaming.shape)}</b></p>
+  <p class="muted">${esc(P.tokenNaming.note)}</p>
+  <p class="muted">${P.tokenNaming.examples.map(e=>`<code>${esc(e)}</code>`).join('<br>')}</p></div>
+
+  <div class="note"><p><b>아직 비어 있는 절</b> — ${P.stillEmpty.sections.map(esc).join(' · ')}.
+  ${esc(P.stillEmpty.why)}</p></div>
+  ${footer()}`;
+}
+
+const V={start,color,type,space,icon,radius,elev,layout,semantic,comp,tfield,status};
 
 /* 2단 네비 — 최상위는 가로(topnav), 사이드바는 «지금 섹션 안»만 그립니다.
    컴포넌트가 25종 들어와도 사이드바 길이가 늘지 않습니다. */
@@ -1198,7 +1336,7 @@ const NAV=[
                              ['icon','Icon'],['radius','Radius'],['elev','Elevation']]},
   {sec:'Semantic',    items:[['semantic','Tokens']]},
   {sec:'Guidelines',  items:[['layout','Layout']]},
-  {sec:'Components',  items:[['comp','Components']]},
+  {sec:'Components',  items:[['comp','Components'],['tfield','Text field']]},
   {sec:'Reference',   items:[['status','Status']]},
 ];
 const SEC_OF={}; NAV.forEach(g=>g.items.forEach(([k])=>SEC_OF[k]=g.sec));
