@@ -121,7 +121,7 @@ const gapText = JSON.stringify(GAPS);
 const carried = [
   { what: 'Button Large 가 문서 56px · 실측 60px 로 갈림', key: PR.button && PR.button.conflict, inGaps: /Large를 56|56px.*60px|60px.*56px/.test(gapText) },
   { what: 'Bottom Sheet 계열 EFFECT 스타일이 여러 값으로 흩어짐', key: PR.elevation && PR.elevation.conflict && PR.elevation.conflict.issue, inGaps: /Bottom ?Sheet.*겹|대소문자/.test(gapText) },
-  { what: 'line-height 가 정본 21토큰 전부 Auto', key: (PR.unresolved || [])[0], inGaps: /line-height|Auto/.test(gapText) },
+  { what: 'line-height 가 원본 21토큰 전부 Auto', key: (PR.unresolved || [])[0], inGaps: /line-height|Auto/.test(gapText) },
   { what: 'coupon COMPONENT_SET 이 신규 GDS 페이지에 미편입', key: (PR.unresolved || [])[3], inGaps: /coupon/i.test(gapText) },
 ];
 for (const c of carried) add('carry-over', c.what, c.inGaps, c.inGaps ? '이미 GAP 에 있음' : 'GAP 에 없음 — 옮겨 적을 자리');
@@ -160,7 +160,7 @@ const out = {
     conflictResolution: 'README.md 폴더 구조 블록 한 곳. main 쪽(site/canon.html · build/canon-view.js)을 취했습니다 — '
       + '브랜치 쪽은 site/template.html 시절 표기라 지금은 맞지 않습니다.',
     dropped: '브랜치가 README 의 data/ 목록에 더하려던 두 줄(foundation-data.json · component-bottom-sheet.json)은 '
-      + '충돌 해소 중 빠졌습니다 — 웹 편집기에 한글을 넣으니 글자가 누락돼(«실측»·«정본» 소실) 되돌렸습니다. '
+      + '충돌 해소 중 빠졌습니다 — 웹 편집기에 한글을 넣으니 낱말이 통째로 누락돼(두 낱말 소실) 되돌렸습니다. '
       + '2026-08-06 README 에 직접 넣어 해소했습니다(figma-xml/ · figma-pages/ 도 같이 적었습니다). [해소]',
     droppedResolved: true,
     branchDeleted: true,
