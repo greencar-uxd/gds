@@ -655,10 +655,14 @@ function color(){
 function pr1(){
   const P=C.pr1; if(!P) return '';
   const K=P.counts;
-  return `<h2>열려 있는 PR — <code>${esc(P.branch)}</code></h2>
+  const done=P.state==='merged';
+  return `<h2>${done?'반영된':'열려 있는'} PR — <code>${esc(P.branch)}</code></h2>
+  ${done?`<p class="lead" style="font-size:15px"><b>${esc(P.merged.at)} merge 됐습니다</b>
+  (<code>${esc(P.merged.mergeCommit)}</code>${P.merged.branchDeleted?' · 브랜치 삭제':''}).
+  아래는 merge 하기 전에 «지금도 맞는가»를 대조한 기록입니다 — 무엇을 보고 넣었는지가 남아야 해서 지우지 않습니다.</p>`:''}
   <p class="lead" style="font-size:15px">${esc(P.why)}</p>
   <div class="stat">
-    <div><b>${K.passed}/${K.checks}</b><span>지금도 맞는 주장</span></div>
+    <div><b>${K.passed}/${K.checks}</b><span>대조 통과</span></div>
     <div><b>${K.staleColorNames}</b><span>개명 전 색 이름</span></div>
     <div><b>${K.carryOverMissing}</b><span>GAP 에 없는 것</span></div>
   </div>
@@ -670,6 +674,8 @@ function pr1(){
   </div>`:''}
   <div class="note"><p><b>merge 판단.</b> ${esc(P.mergeAdvice)}</p></div>
   ${P.mergeImpact?`<div class="note warn"><p><b>정정.</b> ${esc(P.mergeImpact.note)}</p></div>`:''}
+  ${done?`<div class="note"><p><b>충돌 처리.</b> ${esc(P.merged.conflictResolution)}</p>
+  <p class="muted"><b>빠진 것.</b> ${esc(P.merged.dropped)}</p></div>`:''}
   ${P.colors.staleCount?`<h3>옮길 때 바꿔야 할 이름 ${P.colors.staleCount}종</h3>
   <table class="ctr"><thead><tr><th>PR 표기</th><th>지금 이름</th><th>값</th></tr></thead><tbody>
   ${P.colors.rows.filter(r=>!r.stillValid).map(r=>`<tr><td><code>${esc(r.citedName)}</code></td>
