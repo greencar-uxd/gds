@@ -4,8 +4,15 @@
  *
  * 왜 있는가 (2026-08-06):
  *   PR #1 은 8/5 자 브랜치인데 그 뒤로 main 이 크게 움직였습니다.
- *   그대로 merge 하면 12만 줄 넘게 되돌아갑니다 — merge 여부는 사람이 정할 일이고,
- *   저장소가 할 수 있는 것은 «그 안의 주장이 지금도 맞는가»를 기계로 가려 두는 것입니다.
+ *   merge 여부는 사람이 정할 일이고, 저장소가 할 수 있는 것은
+ *   «그 안의 주장이 지금도 맞는가»를 기계로 가려 두는 것입니다.
+ *
+ * 정정 (2026-08-06):
+ *   처음에 «merge 하면 12만 줄이 되돌아간다»고 적었습니다. 틀렸습니다.
+ *   두 점 diff(main FETCH_HEAD)를 보고 판단한 탓입니다 — 그건 «두 트리의 차이»라
+ *   main 에만 있는 것이 전부 삭제로 보입니다. merge 가 실제로 하는 일은
+ *   세 점 diff(main...FETCH_HEAD)이고, 그 값은 6파일 +728줄 · 삭제 0 입니다.
+ *   그래서 mergeBase 를 함께 적고, 되돌아가는 줄이 없다는 것을 수치로 남깁니다.
  *
  * 대조하는 것:
  *   ① 색 토큰 이름이 지금 팔레트에 실재하는가 (그 사이 개명이 있었습니다)
@@ -129,6 +136,7 @@ const out = {
   auditedAt: '2026-08-06',
   branch: 'docs/bottom-sheet-component-20260805',
   mergeAdvice: null,
+  mergeImpact: null,
   colors: { what: '개명 뒤 이름이 어긋난 곳', rows: colorRows, staleCount: stale.length },
   spacing: { rows: spaceRows },
   typography: { rows: typoRows },
@@ -143,12 +151,23 @@ const out = {
     carryOverMissing: carried.filter(c => !c.inGaps).length,
   },
 };
-out.mergeAdvice = `그대로 merge 하면 안 됩니다 — 8/5 자 브랜치라 그 뒤 쌓인 것이 되돌아갑니다. `
-  + `안의 값은 대부분 지금도 맞습니다(검사 ${out.counts.passed}/${out.counts.checks} 통과). `
-  + `색 이름 ${stale.length}종만 개명 전 표기라 옮길 때 바꿔야 하고, `
-  + `GAP 에 아직 없는 것이 ${out.counts.carryOverMissing}건입니다. merge·close 는 사람이 정합니다.`;
+out.mergeImpact = {
+  mergeBase: '3277bbc',
+  filesChanged: 6,
+  insertions: 728,
+  deletions: 0,
+  conflicts: ['README.md'],
+  checksAfterMerge: 551,
+  note: '세 점 diff(main...FETCH_HEAD) 기준입니다. 두 점 diff 로 보면 main 에만 있는 것이 '
+    + '전부 삭제로 보이지만 merge 는 그런 일을 하지 않습니다. 실제로 병합해 검사를 돌려 확인했습니다.',
+};
+out.mergeAdvice = `merge 해도 되돌아가는 것은 없습니다 — 6파일 ${out.mergeImpact.insertions}줄 추가, 삭제 0. `
+  + `README.md 한 곳만 충돌하고, 병합 뒤 검사는 ${out.mergeImpact.checksAfterMerge}개 전부 통과합니다(직접 병합해 돌려 봤습니다). `
+  + `안의 값도 대부분 지금도 맞습니다(대조 ${out.counts.passed}/${out.counts.checks} 통과). `
+  + `색 이름 ${stale.length}종만 개명 전 표기라 옮길 때 바꿔야 합니다. merge·close 는 사람이 정합니다.`;
 
 fs.writeFileSync(path.join(ROOT, 'data', 'pr1-audit.json'), JSON.stringify(out, null, 2) + '\n');
 console.log('PR #1 대조 → data/pr1-audit.json');
+console.log(`  merge 영향 — ${out.mergeImpact.filesChanged}파일 +${out.mergeImpact.insertions} / -${out.mergeImpact.deletions} · 충돌 ${out.mergeImpact.conflicts.join(', ')}`);
 console.log(`  검사 ${out.counts.passed}/${out.counts.checks} 통과 · 개명 전 색 이름 ${stale.length}종 · GAP 에 없는 것 ${out.counts.carryOverMissing}건`);
 for (const f of findings) console.log(`    ${f.ok ? 'OK  ' : 'CHECK'} ${f.what}${f.detail ? ' — ' + f.detail : ''}`);
