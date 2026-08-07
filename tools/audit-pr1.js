@@ -160,8 +160,9 @@ const out = {
     conflictResolution: 'README.md 폴더 구조 블록 한 곳. main 쪽(site/canon.html · build/canon-view.js)을 취했습니다 — '
       + '브랜치 쪽은 site/template.html 시절 표기라 지금은 맞지 않습니다.',
     dropped: '브랜치가 README 의 data/ 목록에 더하려던 두 줄(foundation-data.json · component-bottom-sheet.json)은 '
-      + '충돌 해소 중 빠졌습니다. 웹 편집기에 한글을 넣으니 글자가 누락돼(«실측»·«정본» 소실) 되돌렸습니다. '
-      + '파일은 전부 들어왔고 README 목록 표기만 빠진 것이라 기능에는 영향이 없습니다. [남은 일]',
+      + '충돌 해소 중 빠졌습니다 — 웹 편집기에 한글을 넣으니 글자가 누락돼(«실측»·«정본» 소실) 되돌렸습니다. '
+      + '2026-08-06 README 에 직접 넣어 해소했습니다(figma-xml/ · figma-pages/ 도 같이 적었습니다). [해소]',
+    droppedResolved: true,
     branchDeleted: true,
   } : null,
   mergeAdvice: null,
