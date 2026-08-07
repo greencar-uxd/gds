@@ -1,0 +1,3477 @@
+{
+  "$description": "Tap (탭) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42420:57418",
+    "pageName": "Tap (탭) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 840,
+    "byType": {
+      "canvas": 1,
+      "frame": 375,
+      "instance": 165,
+      "text": 242,
+      "symbol": 38,
+      "vector": 11,
+      "line": 4,
+      "ellipse": 4
+    },
+    "topLevel": 19,
+    "texts": 242,
+    "namedTexts": 242,
+    "templateStubs": 6,
+    "symbols": 38
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42420:57511",
+      "name": " ",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "42560:39355",
+      "name": "Frame 71952",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:12257",
+      "name": "SCR_GA_CA_0202_M01_일반회원 로그인",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43914:25597",
+      "name": "SCR_GA_CA_0202_M01_일반회원 로그인",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:12288",
+      "name": "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43433:378",
+      "name": "SCR_GA_BN_0101_M01",
+      "w": 360,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43433:572",
+      "name": "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+      "w": 360,
+      "h": 1090
+    },
+    {
+      "type": "frame",
+      "id": "43680:471",
+      "name": "Frame 71951",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43743:13821",
+      "name": "Frame 71955",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43680:517",
+      "name": "Frame 71953",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43680:818",
+      "name": "SCR_GA_OW_0202_T01",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43680:1075",
+      "name": "SCR_GA_CI_0801_M01_기본",
+      "w": 360,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43685:782",
+      "name": "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M",
+      "w": 360,
+      "h": 238
+    },
+    {
+      "type": "frame",
+      "id": "43686:801",
+      "name": "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+      "w": 360,
+      "h": 1440
+    },
+    {
+      "type": "frame",
+      "id": "43686:915",
+      "name": "Frame 71954",
+      "w": 375,
+      "h": 986
+    },
+    {
+      "type": "frame",
+      "id": "43912:28642",
+      "name": "Components_Tap",
+      "w": 1920,
+      "h": 7074.5
+    },
+    {
+      "type": "frame",
+      "id": "44090:51862",
+      "name": "Frame 3525",
+      "w": 375,
+      "h": 219
+    },
+    {
+      "type": "frame",
+      "id": "43914:25680",
+      "name": "Example",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "text",
+      "id": "43968:4752",
+      "name": "Q1. 탭 항목이 4개 이상인가?  Yes → Underline No → Q2로   Q2. 전환 시 화면 전체가 바뀌는가?  Yes → Underline No → Q3로   Q3. 탭 간 콘텐츠 성격이 완전히 다른가?  Yes → Underline No → Segment   Q4. 상단 고정이 필요한가?  Yes → Underline No → Segment",
+      "w": 448,
+      "h": 264
+    }
+  ],
+  "componentSets": {
+    "total": 38,
+    "axes": {
+      "Property 1": {
+        "2depth_tab_01": 2,
+        "2depth_tab_02": 2,
+        "New value": 2,
+        "Variant2": 2,
+        "Variant3": 2,
+        "tab_one_depth_2divide_01": 2,
+        "tab_one_depth_2divide_02": 2,
+        "tab_one_depth_2divide_03": 2,
+        "tab_one_depth_lpoint_01": 2,
+        "tab_one_depth_green_02": 2,
+        "tab_one_depth_time_01": 2,
+        "tab_one_depth_time_02": 2,
+        "tab_one_depth_3divide_01": 2,
+        "tab_one_depth_3divide_02": 2,
+        "tab_one_depth_3divide_03": 2,
+        "tab_one_depth_4divide_01": 2,
+        "tab_one_depth_4divide_02": 2,
+        "tab_one_depth_4divide_03": 2,
+        "tab_one_depth_4divide_04": 2
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "42420:57552",
+        "name": "Property 1=2depth_tab_01",
+        "w": 320,
+        "h": 40,
+        "in": "two depth_tab_2divide"
+      },
+      {
+        "id": "42420:57557",
+        "name": "Property 1=2depth_tab_02",
+        "w": 320,
+        "h": 40,
+        "in": "two depth_tab_2divide"
+      },
+      {
+        "id": "42420:57563",
+        "name": "Property 1=New value",
+        "w": 320,
+        "h": 40,
+        "in": "two depth_tab_3divide"
+      },
+      {
+        "id": "42420:57570",
+        "name": "Property 1=Variant2",
+        "w": 320,
+        "h": 40,
+        "in": "two depth_tab_3divide"
+      },
+      {
+        "id": "42420:57577",
+        "name": "Property 1=Variant3",
+        "w": 320,
+        "h": 40,
+        "in": "two depth_tab_3divide"
+      },
+      {
+        "id": "42420:57585",
+        "name": "Property 1=tab_one_depth_2divide_01",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide"
+      },
+      {
+        "id": "42420:57591",
+        "name": "Property 1=tab_one_depth_2divide_02",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide"
+      },
+      {
+        "id": "42420:57597",
+        "name": "Property 1=tab_one_depth_2divide_03",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide"
+      },
+      {
+        "id": "42420:57602",
+        "name": "Property 1=tab_one_depth_lpoint_01",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide_lpoint_green"
+      },
+      {
+        "id": "42420:57608",
+        "name": "Property 1=tab_one_depth_green_02",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide_lpoint_green"
+      },
+      {
+        "id": "42420:57615",
+        "name": "Property 1=tab_one_depth_time_01",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide_time"
+      },
+      {
+        "id": "42420:57626",
+        "name": "Property 1=tab_one_depth_time_02",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_2divide_time"
+      },
+      {
+        "id": "42420:57638",
+        "name": "Property 1=tab_one_depth_3divide_01",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_3divide"
+      },
+      {
+        "id": "42420:57654",
+        "name": "Property 1=tab_one_depth_3divide_02",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_3divide"
+      },
+      {
+        "id": "42420:57670",
+        "name": "Property 1=tab_one_depth_3divide_03",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_3divide"
+      },
+      {
+        "id": "42420:57687",
+        "name": "Property 1=tab_one_depth_4divide_01",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_4divide"
+      },
+      {
+        "id": "42420:57708",
+        "name": "Property 1=tab_one_depth_4divide_02",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_4divide"
+      },
+      {
+        "id": "42420:57729",
+        "name": "Property 1=tab_one_depth_4divide_03",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_4divide"
+      },
+      {
+        "id": "42420:57750",
+        "name": "Property 1=tab_one_depth_4divide_04",
+        "w": 360,
+        "h": 64,
+        "in": "one depth_4divide"
+      },
+      {
+        "id": "42420:57777",
+        "name": "Property 1=tab_one_depth_2divide_01",
+        "w": 375,
+        "h": 64,
+        "in": "tab_one_depth_01"
+      },
+      {
+        "id": "42420:57783",
+        "name": "Property 1=tab_one_depth_2divide_02",
+        "w": 375,
+        "h": 64,
+        "in": "tab_one_depth_01"
+      },
+      {
+        "id": "42420:57789",
+        "name": "Property 1=tab_one_depth_2divide_03",
+        "w": 375,
+        "h": 64,
+        "in": "tab_one_depth_01"
+      },
+      {
+        "id": "42420:57795",
+        "name": "Property 1=tab_one_depth_3divide_01",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_3divide_ios"
+      },
+      {
+        "id": "42420:57811",
+        "name": "Property 1=tab_one_depth_3divide_02",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_3divide_ios"
+      },
+      {
+        "id": "42420:57827",
+        "name": "Property 1=tab_one_depth_3divide_03",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_3divide_ios"
+      },
+      {
+        "id": "42420:57844",
+        "name": "Property 1=tab_one_depth_4divide_01",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_4divide_ios"
+      },
+      {
+        "id": "42420:57865",
+        "name": "Property 1=tab_one_depth_4divide_02",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_4divide_ios"
+      },
+      {
+        "id": "42420:57886",
+        "name": "Property 1=tab_one_depth_4divide_03",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_4divide_ios"
+      },
+      {
+        "id": "42420:57907",
+        "name": "Property 1=tab_one_depth_4divide_04",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_4divide_ios"
+      },
+      {
+        "id": "42420:57929",
+        "name": "Property 1=tab_one_depth_lpoint_01",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_2divide_lpoint_green_ios"
+      },
+      {
+        "id": "42420:57935",
+        "name": "Property 1=tab_one_depth_green_02",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_2divide_lpoint_green_ios"
+      },
+      {
+        "id": "42420:57942",
+        "name": "Property 1=tab_one_depth_time_01",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_2divide_time_ios"
+      },
+      {
+        "id": "42420:57953",
+        "name": "Property 1=tab_one_depth_time_02",
+        "w": 375,
+        "h": 64,
+        "in": "one depth_2divide_time_ios"
+      },
+      {
+        "id": "42420:57965",
+        "name": "Property 1=2depth_tab_01",
+        "w": 335,
+        "h": 40,
+        "in": "two depth_tab_2divide_ios"
+      },
+      {
+        "id": "42420:57970",
+        "name": "Property 1=2depth_tab_02",
+        "w": 335,
+        "h": 40,
+        "in": "two depth_tab_2divide_ios"
+      },
+      {
+        "id": "42420:57976",
+        "name": "Property 1=New value",
+        "w": 335,
+        "h": 40,
+        "in": "two depth_tab_3divide_ios"
+      },
+      {
+        "id": "42420:57983",
+        "name": "Property 1=Variant2",
+        "w": 335,
+        "h": 40,
+        "in": "two depth_tab_3divide_ios"
+      },
+      {
+        "id": "42420:57990",
+        "name": "Property 1=Variant3",
+        "w": 335,
+        "h": 40,
+        "in": "two depth_tab_3divide_ios"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 6
+  },
+  "texts": [
+    {
+      "id": "42420:57521",
+      "text": "탭 이미지 패턴으로 사용할 경우 (개발요청)",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 797,
+      "y": 1031
+    },
+    {
+      "id": "42420:57525",
+      "text": "12:30",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "42420:57541",
+      "text": "list",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3500",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:57542",
+      "text": "text text text",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3500",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 26
+    },
+    {
+      "id": "42420:57547",
+      "text": "list",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3501",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:57548",
+      "text": "text text text",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3501",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 26
+    },
+    {
+      "id": "43926:42822",
+      "text": "12:30",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43926:42837",
+      "text": "list",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3500",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43926:42838",
+      "text": "text text text",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3500",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 26
+    },
+    {
+      "id": "43926:42843",
+      "text": "list",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3501",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43926:42844",
+      "text": "text text text",
+      "in": [
+        " ",
+        "14. Tab",
+        "combine example",
+        "Frame 3498",
+        "Frame 3502",
+        "Frame 3501",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 26
+    },
+    {
+      "id": "42420:57775",
+      "text": "탭 이미지 패턴으로 사용할 경우 (개발요청)",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 1587,
+      "y": 1031
+    },
+    {
+      "id": "42420:57997",
+      "text": "aos",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 536,
+      "y": 655
+    },
+    {
+      "id": "42420:57998",
+      "text": "One Depth / 1Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 723
+    },
+    {
+      "id": "42420:57999",
+      "text": "One Depth / 2Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 985
+    },
+    {
+      "id": "42420:58000",
+      "text": "One Depth / 2Divide (엘포인트, G car 로그인 시 사용)",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 1257
+    },
+    {
+      "id": "42420:58001",
+      "text": "One Depth / 2Divide (대여/반납 시간 설정)",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 1506
+    },
+    {
+      "id": "42420:58002",
+      "text": "One Depth / 3Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 1801
+    },
+    {
+      "id": "42420:58003",
+      "text": "One Depth / 4Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 2159
+    },
+    {
+      "id": "42420:58004",
+      "text": "Two Depth / 2Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 2497
+    },
+    {
+      "id": "42420:58005",
+      "text": "Two Depth / 3Divide",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 2722
+    },
+    {
+      "id": "42420:58006",
+      "text": "combine example",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 80,
+      "y": 3101
+    },
+    {
+      "id": "42420:58007",
+      "text": "ios",
+      "in": [
+        " ",
+        "14. Tab"
+      ],
+      "x": 1352,
+      "y": 655
+    },
+    {
+      "id": "42560:39362",
+      "text": "902graphic@naverc.om",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42560:39364",
+      "text": "●●●●●●●●●●●●●",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42560:39367",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "42560:39370",
+      "text": "아이디 찾기 ㅣ 비밀번호 재설정 ㅣ 회원가입 하기",
+      "in": [
+        "Frame 71952",
+        "Group 71967"
+      ],
+      "x": 20,
+      "y": 451
+    },
+    {
+      "id": "42560:39371",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 495
+    },
+    {
+      "id": "42560:39373",
+      "text": "아이디 로그인",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "42560:39377",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Frame 71952",
+        "Group 71972"
+      ],
+      "x": 215.5,
+      "y": 158
+    },
+    {
+      "id": "42560:39380",
+      "text": "G car 회원",
+      "in": [
+        "Frame 71952",
+        "Group 71971"
+      ],
+      "x": 73,
+      "y": 158
+    },
+    {
+      "id": "42560:39381",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 539
+    },
+    {
+      "id": "42560:39385",
+      "text": "카카오",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 56,
+      "y": 622
+    },
+    {
+      "id": "42560:39386",
+      "text": "네이버",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 169,
+      "y": 622
+    },
+    {
+      "id": "42560:39387",
+      "text": "구글",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 290,
+      "y": 622
+    },
+    {
+      "id": "42560:39392",
+      "text": "또는",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "42560:39397",
+      "text": "Button",
+      "in": [
+        "Frame 71952",
+        "Group 71973",
+        "button",
+        "Frame 71550"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42557:12264",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 30.5,
+      "y": 20
+    },
+    {
+      "id": "42557:12267",
+      "text": "G car 회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20
+    },
+    {
+      "id": "42557:12271",
+      "text": "L.Point 통합회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:12272",
+      "text": "일반회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "42557:12283",
+      "text": "비밀번호 재설정",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 171,
+      "y": 12
+    },
+    {
+      "id": "42557:12285",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 35.5,
+      "y": 0
+    },
+    {
+      "id": "43914:25604",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 30.5,
+      "y": 20
+    },
+    {
+      "id": "43914:25607",
+      "text": "G car 회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20
+    },
+    {
+      "id": "43914:25611",
+      "text": "L.Point 통합회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43914:25612",
+      "text": "일반회원",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "43914:25623",
+      "text": "비밀번호 재설정",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 171,
+      "y": 12
+    },
+    {
+      "id": "43914:25625",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "SCR_GA_CA_0202_M01_일반회원 로그인",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 35.5,
+      "y": 0
+    },
+    {
+      "id": "42557:12295",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 30.5,
+      "y": 20.5
+    },
+    {
+      "id": "42557:12298",
+      "text": "G car 회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20
+    },
+    {
+      "id": "42557:12302",
+      "text": "L.Point 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:12303",
+      "text": "일반회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "42557:12314",
+      "text": "비밀번호 재설정",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 171,
+      "y": 12
+    },
+    {
+      "id": "42557:12316",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (일반회원 로그인)",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 32.5,
+      "y": 0
+    },
+    {
+      "id": "43433:381",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43433:400",
+      "text": "종료",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list01",
+        "img"
+      ],
+      "x": 37,
+      "y": 43
+    },
+    {
+      "id": "43433:402",
+      "text": "그린카 이용만 하면 참여 완료!",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list01",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:404",
+      "text": "2022.05.01 ~ 2022.05.31",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list01",
+        "Frame 2894",
+        "Frame 2893"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:410",
+      "text": "차이카드 유저라면 그린카 99%, 전국 휴게소 할인",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list02",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:412",
+      "text": "2022.05.01 ~ 2022.05.31",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list02",
+        "Frame 2894",
+        "Frame 2893"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:418",
+      "text": "5월, 그린카와 함께하는 혜택 모음.zip",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list03",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:420",
+      "text": "2022.05.01 ~ 2022.05.31",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list03",
+        "Frame 2894",
+        "Frame 2893"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:426",
+      "text": "차이카드 유저라면 그린카 99%, 전국 휴게소 할인",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list04",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:428",
+      "text": "2022.05.01 ~ 2022.05.31",
+      "in": [
+        "SCR_GA_BN_0101_M01",
+        "contents",
+        "Frame 3191",
+        "list04",
+        "Frame 2894",
+        "Frame 2893"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:575",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43433:588",
+      "text": "보유 포인트",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list",
+        "Frame 2948"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:590",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 21,
+      "y": 0
+    },
+    {
+      "id": "43433:595",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list",
+        "Frame 2759",
+        "Frame 2771"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43433:598",
+      "text": "-100P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list",
+        "Frame 2704"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43433:616",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:617",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:619",
+      "text": "-50P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 184,
+      "y": 0
+    },
+    {
+      "id": "43433:620",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 194,
+      "y": 32
+    },
+    {
+      "id": "43433:628",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list02",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:629",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list02",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:630",
+      "text": "유효기간 : ~2022.03.20",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list02",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 60
+    },
+    {
+      "id": "43433:632",
+      "text": "+171",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list02",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 80,
+      "y": 0
+    },
+    {
+      "id": "43433:633",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list02",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 92,
+      "y": 32
+    },
+    {
+      "id": "43433:641",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list03",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:642",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list03",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:643",
+      "text": "유효기간 : ~2022.03.20",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list03",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 60
+    },
+    {
+      "id": "43433:645",
+      "text": "+100P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list03",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 101,
+      "y": 0
+    },
+    {
+      "id": "43433:646",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list03",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 124,
+      "y": 32
+    },
+    {
+      "id": "43433:654",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:655",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:657",
+      "text": "-3,000P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 160,
+      "y": 0
+    },
+    {
+      "id": "43433:658",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list01",
+        "Frame 3628",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 194,
+      "y": 32
+    },
+    {
+      "id": "43433:666",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:667",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:668",
+      "text": "유효기간 : ~2022.03.20",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 60
+    },
+    {
+      "id": "43433:670",
+      "text": "+100P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 101,
+      "y": 0
+    },
+    {
+      "id": "43433:671",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 124,
+      "y": 32
+    },
+    {
+      "id": "43433:679",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43433:680",
+      "text": "2022.04.23",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43433:681",
+      "text": "유효기간 : ~2022.03.20",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2759"
+      ],
+      "x": 20,
+      "y": 60
+    },
+    {
+      "id": "43433:683",
+      "text": "+1000P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 92,
+      "y": 0
+    },
+    {
+      "id": "43433:684",
+      "text": "21P",
+      "in": [
+        "SCR_GA_CI_0601_M01_내 포인트 (기본)",
+        "Frame 2805",
+        "list_set",
+        "list05",
+        "Frame 3627",
+        "list01",
+        "Frame 2760"
+      ],
+      "x": 124,
+      "y": 32
+    },
+    {
+      "id": "43680:478",
+      "text": "L.POINT 아이디를 입력해주세요.",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43680:480",
+      "text": "비밀번호를 입력해주세요.",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43680:483",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "43680:487",
+      "text": "아이디 찾기",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 58,
+      "y": 451
+    },
+    {
+      "id": "43680:488",
+      "text": "ㅣ",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 126,
+      "y": 451
+    },
+    {
+      "id": "43680:489",
+      "text": "ㅣ",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 223,
+      "y": 451
+    },
+    {
+      "id": "43680:490",
+      "text": "비밀번호 찾기",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 139,
+      "y": 451
+    },
+    {
+      "id": "43680:491",
+      "text": "회원가입 하기",
+      "in": [
+        "Frame 71951",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 236,
+      "y": 451
+    },
+    {
+      "id": "43680:492",
+      "text": "또는",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "43680:493",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 20,
+      "y": 495
+    },
+    {
+      "id": "43680:495",
+      "text": "아이디 로그인",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "43680:499",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Frame 71951",
+        "Group 71969"
+      ],
+      "x": 215.5,
+      "y": 158
+    },
+    {
+      "id": "43680:502",
+      "text": "G car 회원",
+      "in": [
+        "Frame 71951",
+        "Group 71970"
+      ],
+      "x": 73,
+      "y": 158
+    },
+    {
+      "id": "43680:503",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 19,
+      "y": 539
+    },
+    {
+      "id": "43680:508",
+      "text": "카카오",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 41,
+      "y": 622
+    },
+    {
+      "id": "43680:509",
+      "text": "네이버",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 127,
+      "y": 622
+    },
+    {
+      "id": "43680:510",
+      "text": "애플",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 218,
+      "y": 622
+    },
+    {
+      "id": "43680:511",
+      "text": "구글",
+      "in": [
+        "Frame 71951"
+      ],
+      "x": 304,
+      "y": 622
+    },
+    {
+      "id": "43743:13828",
+      "text": "L.POINT 아이디를 입력해주세요.",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43743:13830",
+      "text": "비밀번호를 입력해주세요.",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43743:13833",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "43743:13837",
+      "text": "아이디 찾기",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 58,
+      "y": 451
+    },
+    {
+      "id": "43743:13838",
+      "text": "ㅣ",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 126,
+      "y": 451
+    },
+    {
+      "id": "43743:13839",
+      "text": "ㅣ",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 223,
+      "y": 451
+    },
+    {
+      "id": "43743:13840",
+      "text": "비밀번호 찾기",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 139,
+      "y": 451
+    },
+    {
+      "id": "43743:13841",
+      "text": "회원가입 하기",
+      "in": [
+        "Frame 71955",
+        "Group 71967",
+        "Group 71974"
+      ],
+      "x": 236,
+      "y": 451
+    },
+    {
+      "id": "43743:13842",
+      "text": "또는",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "43743:13843",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 20,
+      "y": 484
+    },
+    {
+      "id": "43743:13853",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 19,
+      "y": 539
+    },
+    {
+      "id": "43743:13858",
+      "text": "카카오",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 41,
+      "y": 622
+    },
+    {
+      "id": "43743:13859",
+      "text": "네이버",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 127,
+      "y": 622
+    },
+    {
+      "id": "43743:13860",
+      "text": "애플",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 218,
+      "y": 622
+    },
+    {
+      "id": "43743:13861",
+      "text": "구글",
+      "in": [
+        "Frame 71955"
+      ],
+      "x": 304,
+      "y": 622
+    },
+    {
+      "id": "43680:524",
+      "text": "902graphic@naverc.om",
+      "in": [
+        "Frame 71953",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43680:526",
+      "text": "●●●●●●●●●●●●●",
+      "in": [
+        "Frame 71953",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43680:529",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 71953",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "43680:532",
+      "text": "아이디 찾기 ㅣ 비밀번호 재설정 ㅣ 회원가입 하기",
+      "in": [
+        "Frame 71953",
+        "Group 71967"
+      ],
+      "x": 20,
+      "y": 451
+    },
+    {
+      "id": "43680:533",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 20,
+      "y": 495
+    },
+    {
+      "id": "43680:535",
+      "text": "아이디 로그인",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "43680:539",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Frame 71953",
+        "Group 71972"
+      ],
+      "x": 215.5,
+      "y": 158
+    },
+    {
+      "id": "43680:542",
+      "text": "G car 회원",
+      "in": [
+        "Frame 71953",
+        "Group 71971"
+      ],
+      "x": 73,
+      "y": 158
+    },
+    {
+      "id": "43680:543",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 20,
+      "y": 539
+    },
+    {
+      "id": "43680:547",
+      "text": "카카오",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 56,
+      "y": 622
+    },
+    {
+      "id": "43680:548",
+      "text": "네이버",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 169,
+      "y": 622
+    },
+    {
+      "id": "43680:549",
+      "text": "구글",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 290,
+      "y": 622
+    },
+    {
+      "id": "43680:554",
+      "text": "또는",
+      "in": [
+        "Frame 71953"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "43680:559",
+      "text": "Button",
+      "in": [
+        "Frame 71953",
+        "Group 71973",
+        "button",
+        "Frame 71550"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43680:823",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_OW_0202_T01",
+        "Frame 3525"
+      ],
+      "x": 0,
+      "y": 76
+    },
+    {
+      "id": "43680:1079",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43680:1092",
+      "text": "주차위치",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본",
+        "Group 716120"
+      ],
+      "x": 83.0001449584961,
+      "y": 106
+    },
+    {
+      "id": "43680:1094",
+      "text": "매거진",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 240,
+      "y": 106
+    },
+    {
+      "id": "43680:1095",
+      "text": "총 2건",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 20,
+      "y": 152
+    },
+    {
+      "id": "43680:1097",
+      "text": "튜토리얼",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43680:1098",
+      "text": "탄소중립 참여, 우리 모두 함께!",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 92,
+      "y": 219
+    },
+    {
+      "id": "43680:1100",
+      "text": "신고된 댓글입니다.",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 64,
+      "y": 352
+    },
+    {
+      "id": "43680:1101",
+      "text": "같은 내용 반복",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 44,
+      "y": 376
+    },
+    {
+      "id": "43680:1103",
+      "text": "2025.08.12 08:34",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 272
+    },
+    {
+      "id": "43680:1104",
+      "text": "ㅋㅋㅋ이게 말이되나? 편집자 머리 총 맞았누? 누구나 알만한 내용을 여기서 올리면 어쩌자는거?ㅋㅋㅋ",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 296
+    },
+    {
+      "id": "43680:1111",
+      "text": "튜토리얼",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본",
+        "Frame 71750"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43680:1112",
+      "text": "탄소중립 참여, 우리 모두 함께!",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 92,
+      "y": 486
+    },
+    {
+      "id": "43680:1115",
+      "text": "관리자가 숨긴 댓글입니다.",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 64,
+      "y": 619
+    },
+    {
+      "id": "43680:1117",
+      "text": "2025.08.12 08:34",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 539
+    },
+    {
+      "id": "43680:1118",
+      "text": "ㅋㅋㅋ이게 말이되나? 편집자 머리 총 맞았누? 누구나 알만한 내용을 여기서 올리면 어쩌자는거?ㅋㅋㅋ",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 563
+    },
+    {
+      "id": "43680:1123",
+      "text": "튜토리얼",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본",
+        "Frame 71751"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43680:1124",
+      "text": "탄소중립 참여, 우리 모두 함께!",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 92,
+      "y": 729
+    },
+    {
+      "id": "43680:1125",
+      "text": "2025.08.12 08:34",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 782
+    },
+    {
+      "id": "43680:1126",
+      "text": "ㅋㅋㅋ이게 말이되나? 편집자 머리 총 맞았누? 누구나 알만한 내용을 여기서 올리면 어쩌자는거?ㅋㅋㅋ",
+      "in": [
+        "SCR_GA_CI_0801_M01_기본"
+      ],
+      "x": 32,
+      "y": 806
+    },
+    {
+      "id": "43685:787",
+      "text": "고객센터",
+      "in": [
+        "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M",
+        "Frame 4642",
+        "Group 373"
+      ],
+      "x": 77,
+      "y": 38
+    },
+    {
+      "id": "43685:790",
+      "text": "텍스트",
+      "in": [
+        "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M",
+        "Search_box"
+      ],
+      "x": 24,
+      "y": 14
+    },
+    {
+      "id": "43685:796",
+      "text": "‘세차클링&#39; 검색 결과",
+      "in": [
+        "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M"
+      ],
+      "x": 20,
+      "y": 357
+    },
+    {
+      "id": "43685:800",
+      "text": "9:41",
+      "in": [
+        "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M",
+        "Frame 4"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "43685:813",
+      "text": "요금안내",
+      "in": [
+        "SCR_H_GA_MO_GR_03_그린카_요금안내_기본요금_M",
+        "Navigation"
+      ],
+      "x": 146,
+      "y": 15
+    },
+    {
+      "id": "43686:804",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43686:826",
+      "text": "한남역 1번출구 방면으로 하차",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "\bcontents",
+        "Frame 71644",
+        "photo",
+        "1",
+        "Frame 3003"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43686:830",
+      "text": "순천향대학교병원 셔틀버스를 지나 110m 가량 이동",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "\bcontents",
+        "Frame 71644",
+        "photo",
+        "2",
+        "Frame 3003"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43686:834",
+      "text": "이동 후, 좌회전 후 좌측 한남유수지 공영주차장 내부로 진입",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "\bcontents",
+        "Frame 71644",
+        "photo",
+        "3",
+        "Frame 3003"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43686:838",
+      "text": "진입 후 좌측 계단 통하여 2층으로 이동",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "\bcontents",
+        "Frame 71644",
+        "photo",
+        "4",
+        "Frame 3003"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43686:842",
+      "text": "지상 2층 내 G car Zone 위치",
+      "in": [
+        "SCR_GA_CM_0301_T02_그린존 정보_찾아가는 길",
+        "\bcontents",
+        "Frame 71644",
+        "photo",
+        "5",
+        "Frame 3003"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43686:921",
+      "text": "title",
+      "in": [
+        "Frame 71954",
+        "Frame 72137",
+        "top app bar_ios",
+        "top"
+      ],
+      "x": 154,
+      "y": 16
+    },
+    {
+      "id": "43686:924",
+      "text": "차량에 경고등이 떴나요?",
+      "in": [
+        "Frame 71954"
+      ],
+      "x": 20,
+      "y": 124
+    },
+    {
+      "id": "43686:926",
+      "text": "알아두면 유용한 이용 팁",
+      "in": [
+        "Frame 71954"
+      ],
+      "x": 20,
+      "y": 472
+    },
+    {
+      "id": "43686:927",
+      "text": "최신순 ∙ 조회순",
+      "in": [
+        "Frame 71954"
+      ],
+      "x": 280,
+      "y": 475
+    },
+    {
+      "id": "43686:932",
+      "text": "신규",
+      "in": [
+        "Frame 71954",
+        "Group 72125"
+      ],
+      "x": 32,
+      "y": 418
+    },
+    {
+      "id": "43686:938",
+      "text": "[주의] 어린이 보호구역",
+      "in": [
+        "Frame 71954",
+        "Group 716143"
+      ],
+      "x": 20,
+      "y": 529
+    },
+    {
+      "id": "43686:939",
+      "text": "규정 속도와 범칙금을 알려드려요. 알려드린다니까요?",
+      "in": [
+        "Frame 71954",
+        "Group 716143"
+      ],
+      "x": 20,
+      "y": 554
+    },
+    {
+      "id": "43686:942",
+      "text": "G car 15분 더 무료 이용 방법",
+      "in": [
+        "Frame 71954",
+        "Group 716144"
+      ],
+      "x": 20,
+      "y": 641
+    },
+    {
+      "id": "43686:943",
+      "text": "무료 이용시간 알고 계신가요? 아니 알고 있냐고요 묻잖아요.",
+      "in": [
+        "Frame 71954",
+        "Group 716144"
+      ],
+      "x": 20,
+      "y": 666
+    },
+    {
+      "id": "43686:946",
+      "text": "제목 들어가요.",
+      "in": [
+        "Frame 71954",
+        "Group 716145"
+      ],
+      "x": 20,
+      "y": 753
+    },
+    {
+      "id": "43686:947",
+      "text": "여기는 부제목이 들어갑니다? 분명히 말했어요 제가",
+      "in": [
+        "Frame 71954",
+        "Group 716145"
+      ],
+      "x": 20,
+      "y": 778
+    },
+    {
+      "id": "43686:950",
+      "text": "조기 반납 포인트",
+      "in": [
+        "Frame 71954",
+        "Group 716146"
+      ],
+      "x": 20,
+      "y": 865
+    },
+    {
+      "id": "43686:951",
+      "text": "일찍 반납납한만큼 돌려주는데, 두번 말 안할게요.",
+      "in": [
+        "Frame 71954",
+        "Group 716146"
+      ],
+      "x": 20,
+      "y": 890
+    },
+    {
+      "id": "43686:955",
+      "text": "주의경고등",
+      "in": [
+        "Frame 71954",
+        "Frame 716154"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "43686:958",
+      "text": "상태경고등",
+      "in": [
+        "Frame 71954",
+        "Frame 716156"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "43686:961",
+      "text": "위험경고등",
+      "in": [
+        "Frame 71954",
+        "Frame 716155"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "43686:964",
+      "text": "상태경고등",
+      "in": [
+        "Frame 71954",
+        "Frame 716157"
+      ],
+      "x": 8,
+      "y": 8
+    },
+    {
+      "id": "43686:969",
+      "text": "4/12",
+      "in": [
+        "Frame 71954",
+        "bn no"
+      ],
+      "x": 12,
+      "y": 4
+    },
+    {
+      "id": "43686:971",
+      "text": "가나다라마바사아자차카타파하가는말이고와",
+      "in": [
+        "Frame 71954",
+        "Frame 716162"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43686:972",
+      "text": "가나다라마바사아자차카타파하가는말이고와",
+      "in": [
+        "Frame 71954",
+        "Frame 716162"
+      ],
+      "x": 0,
+      "y": 23
+    },
+    {
+      "id": "43912:28656",
+      "text": "Glossary",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28657",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43912:28660",
+      "text": "[정의]",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28661",
+      "text": "Tab (탭)은 여러 콘텐츠를 한 화면에서 효율적으로 구분해 보여주는 컴포넌트입니다. 각 Tab (탭)의 레이블은 콘텐츠 목록을 나타내며, 사용자가 선택한 탭에 따라 해당 콘텐츠로 전환되어 표시됩니다.",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44090:51818",
+      "text": "탭 1",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example",
+        "Example",
+        "tab",
+        "tab 1"
+      ],
+      "x": 79.5,
+      "y": 20.5
+    },
+    {
+      "id": "44090:51821",
+      "text": "탭 2",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example",
+        "Example",
+        "tab",
+        "tab 2"
+      ],
+      "x": 79.5,
+      "y": 20.5
+    },
+    {
+      "id": "44090:51952",
+      "text": "텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example",
+        "Example",
+        "bottom_sheet_button",
+        "body",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28668",
+      "text": "Tab (탭)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28719",
+      "text": "Type",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28720",
+      "text": "Reference",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:28723",
+      "text": "Tab (탭)은 2가지 종류로 나뉩니다. Page tab (페이지 탭)은 화면 전체 단위에서 콘텐츠를 전환하는 탭이며, Section tab (섹션 탭)은 컴포넌트 내 특정 영역에서만 콘텐츠를 전환하는 탭입니다.",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28728",
+      "text": "➊ Page tab (페이지 탭) 화면 전체의 콘텐츠를 전환하는 탭",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28730",
+      "text": "➋ Section tab (섹션 탭) 컴포넌트 내 특정 영역의 콘텐츠를 전환하는 탭",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44095:56268",
+      "text": "종류 (2)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 2147227710",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44095:56274",
+      "text": "Page tab (페이지 탭)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 139.5,
+      "y": 0
+    },
+    {
+      "id": "44095:56362",
+      "text": "탭 1",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Example",
+        "tab",
+        "tab 1"
+      ],
+      "x": 79.5,
+      "y": 20.5
+    },
+    {
+      "id": "44095:56365",
+      "text": "탭 2",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Example",
+        "tab",
+        "tab 2"
+      ],
+      "x": 79.5,
+      "y": 20.5
+    },
+    {
+      "id": "44095:56297",
+      "text": "Section tab (섹션 탭)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 137,
+      "y": 0
+    },
+    {
+      "id": "44095:56395",
+      "text": "언제 어디서나 간편하게 이용할 수 있는 그린카 카셰어링 서비스는 도심 이동의 새로운 패러다임을 제시합니다.",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Example",
+        "bottom_sheet_button",
+        "body",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28901",
+      "text": "[➊ Page tab (페이지 탭)]",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28902",
+      "text": "Reference",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:28905",
+      "text": "Page tab (페이지 탭)은",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28910",
+      "text": "➊ Title + Icon (타이틀 + 아이콘)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28912",
+      "text": "➋ Title (타이틀)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28914",
+      "text": "➌ Handle (핸들)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28944",
+      "text": "Title (타이틀)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 2147227725",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28953",
+      "text": "Title + Icon (타이틀 + 아이콘)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 2147227877",
+        "Group 2147227892",
+        "Group 2147227883",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28959",
+      "text": "Handle (핸들)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 2147227886",
+        "Group 2147227878",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28964",
+      "text": "[➋ Section tab (섹션 탭)]",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28965",
+      "text": "Reference",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43912:28968",
+      "text": "Body (중단)은",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43912:28973",
+      "text": "➊ Title + Icon (타이틀 + 아이콘)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28975",
+      "text": "➋ Title (타이틀)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28977",
+      "text": "➌ Handle (핸들)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43912:28985",
+      "text": "Text ver.1",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28987",
+      "text": "Text + Image ver.2",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28989",
+      "text": "Action item ver.3",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43912:28995",
+      "text": "Body (중단)",
+      "in": [
+        "Components_Tap",
+        "Components_Tap",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44090:51864",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "Frame 3525"
+      ],
+      "x": 0,
+      "y": 20
+    },
+    {
+      "id": "43914:25723",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 30.5,
+      "y": 20.5
+    },
+    {
+      "id": "43914:25726",
+      "text": "G car 회원",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20.5
+    },
+    {
+      "id": "43914:25730",
+      "text": "L.Point 통합회원",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43914:25731",
+      "text": "일반회원",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "43914:25742",
+      "text": "비밀번호 재설정",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 171,
+      "y": 12
+    },
+    {
+      "id": "43914:25744",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "Example",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 35.5,
+      "y": 0
+    },
+    {
+      "id": "43968:4752",
+      "text": "Q1. 탭 항목이 4개 이상인가?  Yes → Underline No → Q2로   Q2. 전환 시 화면 전체가 바뀌는가?  Yes → Underline No → Q3로   Q3. 탭 간 콘텐츠 성격이 완전히 다른가?  Yes → Underline No → Segment   Q4. 상단 고정이 필요한가?  Yes → Underline No → Segment",
+      "in": [],
+      "x": -637,
+      "y": 3709
+    }
+  ]
+}

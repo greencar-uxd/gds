@@ -1,0 +1,55 @@
+{
+  "$description": "Layout 토큰 — ✅ Layout for ios/aos/web 페이지 본문에서 읽은 값. Guidelines 계층 소속입니다.",
+  "source": "43185:36342 (Layout for ios/aos/web ✅)",
+  "checkedAt": "2026-08-05",
+  "screen": [
+    { "token": "screen-ios-width", "value": 375, "unit": "px", "platform": "ios", "rule": "두 ✅ 페이지와 실무 기준이 모두 일치합니다" },
+    { "token": "screen-ios-height", "value": 812, "unit": "px", "platform": "ios" },
+    { "token": "screen-aos-web-width", "value": 360, "unit": "px", "platform": "aos/web", "rule": "AOS 와 Web 은 같은 폭을 씁니다 — 원본 행 그대로이며 실무 기준도 같습니다 (강민관 2026-08-06 확정)" },
+    { "token": "screen-aos-web-height", "value": 800, "unit": "px", "platform": "aos/web" }
+  ],
+  "margin": [
+    { "token": "margin-side", "value": 20, "unit": "px", "rule": "좌·우 마진은 20px 로 통일합니다" },
+    { "token": "margin-top", "value": 20, "unit": "px", "rule": "상단 마진은 20px 로 통일합니다" },
+    { "token": "margin-bottom-ios", "value": 0, "unit": "px", "platform": "ios", "rule": "iOS 홈 인디케이터의 자동 노출·숨김 동작에 대응해 하단 마진은 0px" },
+    { "token": "margin-bottom-android", "value": 20, "unit": "px", "platform": "aos/web", "rule": "홈 인디케이터가 없는 환경이므로 하단 마진도 20px 유지" }
+  ],
+  "safeArea": [
+    { "token": "home-indicator-height", "value": 34, "unit": "px", "platform": "ios" }
+  ],
+  "header": [
+    { "token": "header-border-width", "value": 1, "unit": "px", "rule": "헤더 영역 하단에는 1px 라인을 기본으로 포함합니다" }
+  ],
+  "regions": [
+    { "name": "Header area", "설명": "화면 상단 고정 영역 — 타이틀 · 뒤로가기 · 메뉴 등 네비게이션 요소가 위치" },
+    { "name": "Contents area", "설명": "헤더와 버튼 사이의 본문 영역 — 서비스의 핵심 정보와 콘텐츠 표시" },
+    { "name": "Buttons area", "설명": "화면 하단 고정 영역 — 주요 액션을 실행하는 버튼이 배치" }
+  ],
+  "buttonBehavior": [
+    { "name": "스티키", "설명": "콘텐츠와 함께 스크롤되어 움직이는 형태" },
+    { "name": "픽스", "설명": "화면의 일정 위치에 고정되어 항상 따라오는 형태" }
+  ],
+  "conflicts": [
+    {
+      "axis": "365",
+      "status": "resolved",
+      "finding": "Bottom navigation ✅ 가 AOS/Web 폭을 365 로 적습니다 — Layout ✅ 의 360 과 다릅니다.",
+      "resolution": "365 는 어느 플랫폼의 기준도 아닙니다. 화면 전체 규격을 정하는 페이지는 Layout ✅ 이고, Bottom navigation 은 그 위에 놓이는 컴포넌트 페이지입니다. 세 후보(360·375·365) 중 365 만 다른 어떤 문서·실무에도 나타나지 않습니다. 원본 표기 오류로 기록합니다 — SD-19.",
+      "scenario": "같은 페이지의 iOS 행이 375 이므로 375 의 오타일 가능성이 있습니다. 확인 수단이 없어 단정하지 않고 시나리오로만 남깁니다."
+    },
+    {
+      "axis": "AOS 폭",
+      "status": "resolved",
+      "gap": "GAP-24",
+      "finding": "AOS 를 web(360)과 묶을지 iOS(375)와 묶을지 한때 갈렸습니다.",
+      "resolution": "AOS 는 web 과 같은 360 입니다 — 원본 Layout ✅ 의 «aos/web 360×800» 행이 맞습니다. 강민관 확정 2026-08-06. 저장소가 원본과 다르게 가를 이유가 없어졌습니다.",
+      "evidence": "원본 Layout ✅ 43185:36342 «aos/web 360×800 · ios 375×812» · 강민관 2026-08-06 «iOS 375, AOS 랑 Web 은 360»"
+    }
+  ],
+  "platformAxis": {
+    "note": "플랫폼은 두 축으로 갈립니다 — iOS 하나, AOS 와 Web 이 같은 축. 원본 Layout ✅ 의 묶음을 그대로 씁니다.",
+    "ios": 375,
+    "aos": 360,
+    "web": 360
+  }
+}

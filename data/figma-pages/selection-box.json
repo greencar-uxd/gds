@@ -1,0 +1,8468 @@
+{
+  "$description": "Selection box (셀렉션 박스) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42420:19379",
+    "pageName": "Selection box (셀렉션 박스) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 1938,
+    "byType": {
+      "canvas": 1,
+      "frame": 898,
+      "instance": 327,
+      "symbol": 81,
+      "text": 615,
+      "rectangle": 4,
+      "vector": 9,
+      "line": 3
+    },
+    "topLevel": 65,
+    "texts": 615,
+    "namedTexts": 615,
+    "templateStubs": 6,
+    "symbols": 81
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42420:43147",
+      "name": "17.Customer",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "43646:39320",
+      "name": "coupon",
+      "w": 1038,
+      "h": 397
+    },
+    {
+      "type": "frame",
+      "id": "42420:44012",
+      "name": "18.Car information",
+      "w": 2000,
+      "h": 4842
+    },
+    {
+      "type": "frame",
+      "id": "42420:45234",
+      "name": "차량 샘플",
+      "w": 494,
+      "h": 104.61176300048828
+    },
+    {
+      "type": "frame",
+      "id": "42553:15393",
+      "name": "SCR_GA_CT_0101_P01_체크박스",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42554:11664",
+      "name": "SCR_GA_CT_0101_P02_매너평가_pressed",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42554:11683",
+      "name": "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+      "w": 375,
+      "h": 982
+    },
+    {
+      "type": "frame",
+      "id": "42554:50680",
+      "name": "SCR_GA_CA_0110_P02_입력",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42972:27549",
+      "name": "SCR_GA_CA_0110_P02_입력",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "text",
+      "id": "42554:50822",
+      "name": "뭔가 카드는 아니지만, 영역을 선택하면 선택이 눌러지는게 셀렉션 박스 셀렉션 박스란 → 어떠한 영역을 누르면 그 영역 자체가 선택되어진다는 걸로 시각적으로 보이게 되는",
+      "w": 522,
+      "h": 88
+    },
+    {
+      "type": "text",
+      "id": "42972:27547",
+      "name": "여기에서의 라인은 20",
+      "w": 134,
+      "h": 22
+    },
+    {
+      "type": "text",
+      "id": "42972:27572",
+      "name": "여기에서의 라인은 20",
+      "w": 134,
+      "h": 22
+    },
+    {
+      "type": "text",
+      "id": "42972:27548",
+      "name": "여기에서의 라인은 10",
+      "w": 134,
+      "h": 22
+    },
+    {
+      "type": "text",
+      "id": "42972:27573",
+      "name": "여기에서의 라인은 10",
+      "w": 134,
+      "h": 22
+    },
+    {
+      "type": "text",
+      "id": "42963:35082",
+      "name": "> 얘는 모양은 셀렉션버튼의 정의처럼 네모 박스 때문에 헷갈릴 수 있겠지만 누르면 즉시 반응 및 연결되는 브랜드 아이콘 버튼 → 즉, 버튼에 해당됨",
+      "w": 336,
+      "h": 66
+    },
+    {
+      "type": "text",
+      "id": "42814:22990",
+      "name": "텍스트 버튼이 아닌, 영역을 눌러도 인터랙션이 가능한 셀렉션 박스와 같은 종류의 개념으로 분류해야 함",
+      "w": 328,
+      "h": 44
+    },
+    {
+      "type": "frame",
+      "id": "42557:14519",
+      "name": "Frame 71952",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42978:28882",
+      "name": "Frame 2147227731",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42560:25414",
+      "name": "SCR_GA_CA_0110_P04",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42560:35824",
+      "name": "Group 716145",
+      "w": 342,
+      "h": 382
+    },
+    {
+      "type": "frame",
+      "id": "42560:35825",
+      "name": "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+      "w": 375,
+      "h": 1125
+    },
+    {
+      "type": "frame",
+      "id": "42560:38261",
+      "name": "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+      "w": 375,
+      "h": 829
+    },
+    {
+      "type": "frame",
+      "id": "42972:27574",
+      "name": "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+      "w": 375,
+      "h": 829
+    },
+    {
+      "type": "text",
+      "id": "42560:39442",
+      "name": "한달 이상 내차처럼 G car M",
+      "w": 186,
+      "h": 24
+    },
+    {
+      "type": "frame",
+      "id": "42560:39445",
+      "name": "Group 71961",
+      "w": 127,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39450",
+      "name": "Group 716109",
+      "w": 127,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39455",
+      "name": "Group 72015",
+      "w": 133,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39461",
+      "name": "Group 716102",
+      "w": 61,
+      "h": 16
+    },
+    {
+      "type": "frame",
+      "id": "42560:39481",
+      "name": "Group 716110",
+      "w": 133,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39488",
+      "name": "Group 72117",
+      "w": 132,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39495",
+      "name": "Group 716111",
+      "w": 132,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39502",
+      "name": "Group 72115",
+      "w": 133,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39509",
+      "name": "Group 72114",
+      "w": 132,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39516",
+      "name": "Group 72119",
+      "w": 121,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39523",
+      "name": "Group 716112",
+      "w": 121,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42560:39530",
+      "name": "Group 72116",
+      "w": 126,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "42646:11949",
+      "name": "SCR_GA_RV_0203_M01_기본",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42814:22954",
+      "name": "SCR_GA_CA_0104_M01_본인인증(통신사)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42963:35028",
+      "name": "Frame 2147227730",
+      "w": 338,
+      "h": 776
+    },
+    {
+      "type": "frame",
+      "id": "42972:27810",
+      "name": "N0TE",
+      "w": 200,
+      "h": 180
+    },
+    {
+      "type": "instance",
+      "id": "42978:29062",
+      "name": "car_info_연료정보포함",
+      "w": 360,
+      "h": 148
+    },
+    {
+      "type": "instance",
+      "id": "42978:29099",
+      "name": "car_selection ios",
+      "w": 375,
+      "h": 149
+    },
+    {
+      "type": "instance",
+      "id": "42978:29161",
+      "name": "ios car_info",
+      "w": 375,
+      "h": 240
+    },
+    {
+      "type": "frame",
+      "id": "42978:29213",
+      "name": "list_1",
+      "w": 335,
+      "h": 100
+    },
+    {
+      "type": "text",
+      "id": "43174:47741",
+      "name": "[Sele outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러 (자유도를 줌) 2배수로 조정 가능",
+      "w": 412,
+      "h": 145
+    },
+    {
+      "type": "frame",
+      "id": "43174:47742",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1662
+    },
+    {
+      "type": "frame",
+      "id": "43646:24990",
+      "name": "Group 716144",
+      "w": 108,
+      "h": 80
+    },
+    {
+      "type": "frame",
+      "id": "43646:25112",
+      "name": "Group 716146",
+      "w": 108,
+      "h": 80
+    },
+    {
+      "type": "frame",
+      "id": "43646:25009",
+      "name": "cupon_already_downloaded",
+      "w": 335,
+      "h": 97
+    },
+    {
+      "type": "frame",
+      "id": "43646:25130",
+      "name": "cupon_already_downloaded",
+      "w": 335,
+      "h": 96
+    },
+    {
+      "type": "frame",
+      "id": "43646:25034",
+      "name": "청결해요 bt",
+      "w": 295,
+      "h": 140
+    },
+    {
+      "type": "frame",
+      "id": "43646:25180",
+      "name": "청결해요 bt",
+      "w": 295,
+      "h": 140
+    },
+    {
+      "type": "frame",
+      "id": "43646:25042",
+      "name": "Group 72049",
+      "w": 335,
+      "h": 80
+    },
+    {
+      "type": "frame",
+      "id": "43646:25144",
+      "name": "Group 716147",
+      "w": 335,
+      "h": 80
+    },
+    {
+      "type": "frame",
+      "id": "43646:38148",
+      "name": "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+      "w": 375,
+      "h": 1951
+    },
+    {
+      "type": "vector",
+      "id": "43646:39303",
+      "name": "Rectangle 6539",
+      "w": 106.66666412353516,
+      "h": 78
+    },
+    {
+      "type": "text",
+      "id": "43646:39304",
+      "name": "카카오",
+      "w": 34,
+      "h": 16
+    },
+    {
+      "type": "text",
+      "id": "43646:39305",
+      "name": "네이버",
+      "w": 34,
+      "h": 16
+    },
+    {
+      "type": "text",
+      "id": "43646:39306",
+      "name": "구글",
+      "w": 23,
+      "h": 16
+    },
+    {
+      "type": "frame",
+      "id": "43646:39515",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1668
+    },
+    {
+      "type": "frame",
+      "id": "43647:7855",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1668
+    },
+    {
+      "type": "frame",
+      "id": "43646:39669",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1662
+    },
+    {
+      "type": "text",
+      "id": "43864:69274",
+      "name": "[Selection box] outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러 (자유도를 줌) 2배수로 조정 가능",
+      "w": 412,
+      "h": 145
+    },
+    {
+      "type": "frame",
+      "id": "43864:69275",
+      "name": "SCR_GA_RV_0201_M02_예약하기 (편도)",
+      "w": 375,
+      "h": 1662
+    },
+    {
+      "type": "frame",
+      "id": "44370:27970",
+      "name": "Components_Selection box",
+      "w": 1920,
+      "h": 3225.646484375
+    }
+  ],
+  "componentSets": {
+    "total": 81,
+    "axes": {
+      "Property 1": {
+        "coupon_download_checked": 2,
+        "coupon_download_checked_press": 2,
+        "coupon_download_press": 2,
+        "coupon_download": 2,
+        "coupon_already_downloaded_press": 2,
+        "coupon_already_downloaded": 2,
+        "식음료": 1,
+        "엔터": 1,
+        "생활기타": 1,
+        "D-completion": 1,
+        "D-completion_02": 1,
+        "D-used": 1,
+        "D-default": 1,
+        "D-soon": 1,
+        "mcard_LP_maxpoint": 1,
+        "mcard_LP_point": 1,
+        "mcard_LP_def": 1,
+        "mcard_T_pressed": 1,
+        "mcard_T_def": 1,
+        "mcard_T_add": 1,
+        "mcard_T_point": 1,
+        "mcard_T_maxpoint": 1,
+        "mcard_T_number": 1,
+        "mcard_kt_maxpoint": 1,
+        "mcard_kt_number": 1,
+        "mcard_kt_point": 1,
+        "mcard_kt_add_pressed": 1,
+        "mcard_kt_add": 1,
+        "mcard_kt_def": 1,
+        "point_view": 1,
+        "point_view_dis": 1,
+        "point_search": 1,
+        "point_search_done": 1,
+        "Variant3": 1,
+        "pass mall_cupon_fold": 1,
+        "pass mall_cupon_open": 1,
+        "car_info_crash": 2,
+        "car_info_without_badge": 1,
+        "car_info_badge": 1,
+        "Variant4": 1,
+        "Variant6": 1,
+        "무료편도 list": 1,
+        "info_common": 1,
+        "Variant8": 1,
+        "info_popup": 1,
+        "운행중": 1,
+        "대여초과": 1,
+        "예약완료": 1,
+        "반납완료": 1,
+        "반납임박": 1,
+        "ios car_selection_caption": 1,
+        "ios car_selection_default": 1,
+        "ios car_selection_oda": 1,
+        "ios car_selection_coperation": 1,
+        "ios car_selection_coperation_caption": 1,
+        "ios car_selection_coperation_one way": 1,
+        "ios car_selection_coperation_one way_text": 1,
+        "car_info_without_num": 1,
+        "car_info_default": 1,
+        "iOS_무료편도 list": 1
+      },
+      "type": {
+        "비율할인": 1,
+        "정액할인": 1,
+        "시간무료": 1,
+        "선착순마감": 1,
+        "타임패스": 1,
+        "패스몰": 1
+      },
+      "Type": {
+        "caption": 1,
+        "default": 1,
+        "oda": 1,
+        "corporation": 1,
+        "corporation_caption": 1,
+        "one way": 1,
+        "one way_text": 1
+      }
+    },
+    "unparsed": [
+      " "
+    ],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "42420:43155",
+        "name": "Property 1=coupon_download_checked",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43177",
+        "name": "Property 1=coupon_download_checked_press",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43199",
+        "name": "Property 1=coupon_download_press",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43216",
+        "name": "Property 1=coupon_download",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43234",
+        "name": "Property 1=coupon_already_downloaded_press",
+        "w": 320,
+        "h": 142,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43250",
+        "name": "Property 1=coupon_already_downloaded",
+        "w": 320,
+        "h": 142,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:43271",
+        "name": "type=비율할인",
+        "w": 53,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43273",
+        "name": "type=정액할인",
+        "w": 53,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43275",
+        "name": "type=시간무료",
+        "w": 53,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43277",
+        "name": "type=선착순마감",
+        "w": 62,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43279",
+        "name": "type=타임패스",
+        "w": 53,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43281",
+        "name": "type=패스몰",
+        "w": 44,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43283",
+        "name": " ",
+        "w": 61,
+        "h": 18,
+        "in": "coupon_status"
+      },
+      {
+        "id": "42420:43289",
+        "name": "Property 1=식음료",
+        "w": 55,
+        "h": 24,
+        "in": "식음료"
+      },
+      {
+        "id": "42420:43291",
+        "name": "Property 1=엔터",
+        "w": 42,
+        "h": 24,
+        "in": "식음료"
+      },
+      {
+        "id": "42420:43293",
+        "name": "Property 1=생활기타",
+        "w": 78,
+        "h": 22,
+        "in": "식음료"
+      },
+      {
+        "id": "42420:43296",
+        "name": "Property 1=D-completion",
+        "w": 53,
+        "h": 18,
+        "in": "D-DAY_badge"
+      },
+      {
+        "id": "42420:43298",
+        "name": "Property 1=D-completion_02",
+        "w": 53,
+        "h": 18,
+        "in": "D-DAY_badge"
+      },
+      {
+        "id": "42420:43300",
+        "name": "Property 1=D-used",
+        "w": 55,
+        "h": 18,
+        "in": "D-DAY_badge"
+      },
+      {
+        "id": "42420:43302",
+        "name": "Property 1=D-default",
+        "w": 38,
+        "h": 18,
+        "in": "D-DAY_badge"
+      },
+      {
+        "id": "42420:43304",
+        "name": "Property 1=D-soon",
+        "w": 33,
+        "h": 18,
+        "in": "D-DAY_badge"
+      },
+      {
+        "id": "42420:43308",
+        "name": "Property 1=mcard_LP_maxpoint",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43322",
+        "name": "Property 1=mcard_LP_point",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43331",
+        "name": "Property 1=mcard_LP_def",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43334",
+        "name": "Property 1=mcard_T_pressed",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43340",
+        "name": "Property 1=mcard_T_def",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43343",
+        "name": "Property 1=mcard_T_add",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43349",
+        "name": "Property 1=mcard_T_point",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43357",
+        "name": "Property 1=mcard_T_maxpoint",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43371",
+        "name": "Property 1=mcard_T_number",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43396",
+        "name": "Property 1=mcard_kt_maxpoint",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43411",
+        "name": "Property 1=mcard_kt_number",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43435",
+        "name": "Property 1=mcard_kt_point",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43444",
+        "name": "Property 1=mcard_kt_add_pressed",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43451",
+        "name": "Property 1=mcard_kt_add",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43458",
+        "name": "Property 1=mcard_kt_def",
+        "w": 320,
+        "h": 180,
+        "in": "mcard_set"
+      },
+      {
+        "id": "42420:43523",
+        "name": "Property 1=point_view",
+        "w": 320,
+        "h": 60,
+        "in": "point_view"
+      },
+      {
+        "id": "42420:43527",
+        "name": "Property 1=point_view_dis",
+        "w": 320,
+        "h": 60,
+        "in": "point_view"
+      },
+      {
+        "id": "42420:43531",
+        "name": "Property 1=point_search",
+        "w": 360,
+        "h": 48,
+        "in": "point_search"
+      },
+      {
+        "id": "42420:43534",
+        "name": "Property 1=point_search_done",
+        "w": 360,
+        "h": 48,
+        "in": "point_search"
+      },
+      {
+        "id": "42420:43537",
+        "name": "Property 1=Variant3",
+        "w": 360,
+        "h": 48,
+        "in": "point_search"
+      },
+      {
+        "id": "42420:43582",
+        "name": "Property 1=pass mall_cupon_fold",
+        "w": 320,
+        "h": 198,
+        "in": "pass mall_cupon"
+      },
+      {
+        "id": "42420:43606",
+        "name": "Property 1=pass mall_cupon_open",
+        "w": 320,
+        "h": 368,
+        "in": "pass mall_cupon"
+      },
+      {
+        "id": "43646:39321",
+        "name": "Property 1=coupon_download_checked",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "43646:39343",
+        "name": "Property 1=coupon_download_checked_press",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "43646:39365",
+        "name": "Property 1=coupon_download_press",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "43646:39382",
+        "name": "Property 1=coupon_download",
+        "w": 320,
+        "h": 162,
+        "in": "coupon"
+      },
+      {
+        "id": "43646:39400",
+        "name": "Property 1=coupon_already_downloaded_press",
+        "w": 320,
+        "h": 142,
+        "in": "coupon"
+      },
+      {
+        "id": "43646:39416",
+        "name": "Property 1=coupon_already_downloaded",
+        "w": 320,
+        "h": 142,
+        "in": "coupon"
+      },
+      {
+        "id": "42420:44035",
+        "name": "Property 1=car_info_crash",
+        "w": 360,
+        "h": 157,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44063",
+        "name": "Property 1=car_info_without_badge",
+        "w": 360,
+        "h": 173,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44093",
+        "name": "Property 1=car_info_badge",
+        "w": 360,
+        "h": 173,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44112",
+        "name": "Property 1=Variant4",
+        "w": 360,
+        "h": 148,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44141",
+        "name": "Property 1=Variant6",
+        "w": 360,
+        "h": 148,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44166",
+        "name": "Property 1=무료편도 list",
+        "w": 360,
+        "h": 240,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44200",
+        "name": "Property 1=info_common",
+        "w": 360,
+        "h": 198,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44223",
+        "name": "Property 1=Variant8",
+        "w": 360,
+        "h": 198,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44254",
+        "name": "Property 1=info_popup",
+        "w": 360,
+        "h": 301,
+        "in": "car_info"
+      },
+      {
+        "id": "42420:44302",
+        "name": "Property 1=운행중",
+        "w": 360,
+        "h": 148,
+        "in": "car_info_연료정보포함"
+      },
+      {
+        "id": "42420:44332",
+        "name": "Property 1=대여초과",
+        "w": 360,
+        "h": 148,
+        "in": "car_info_연료정보포함"
+      },
+      {
+        "id": "42420:44365",
+        "name": "Property 1=예약완료",
+        "w": 360,
+        "h": 148,
+        "in": "car_info_연료정보포함"
+      },
+      {
+        "id": "42420:44397",
+        "name": "Property 1=반납완료",
+        "w": 360,
+        "h": 148,
+        "in": "car_info_연료정보포함"
+      },
+      {
+        "id": "42420:44422",
+        "name": "Property 1=반납임박",
+        "w": 360,
+        "h": 148,
+        "in": "car_info_연료정보포함"
+      },
+      {
+        "id": "42420:44468",
+        "name": "Type=caption",
+        "w": 360,
+        "h": 211,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44505",
+        "name": "Type=default",
+        "w": 360,
+        "h": 196,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44545",
+        "name": "Type=oda",
+        "w": 360,
+        "h": 148,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44582",
+        "name": "Type=corporation",
+        "w": 360,
+        "h": 148,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44619",
+        "name": "Type=corporation_caption",
+        "w": 360,
+        "h": 163,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44656",
+        "name": "Type=one way",
+        "w": 360,
+        "h": 148,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44696",
+        "name": "Type=one way_text",
+        "w": 360,
+        "h": 196,
+        "in": "car_selection"
+      },
+      {
+        "id": "42420:44754",
+        "name": "Property 1=ios car_selection_caption",
+        "w": 375,
+        "h": 219,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:44807",
+        "name": "Property 1=ios car_selection_default",
+        "w": 375,
+        "h": 196,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:44857",
+        "name": "Property 1=ios car_selection_oda",
+        "w": 375,
+        "h": 148,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:44904",
+        "name": "Property 1=ios car_selection_coperation",
+        "w": 375,
+        "h": 148,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:44940",
+        "name": "Property 1=ios car_selection_coperation_caption",
+        "w": 375,
+        "h": 163,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:44976",
+        "name": "Property 1=ios car_selection_coperation_one way",
+        "w": 375,
+        "h": 148,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:45015",
+        "name": "Property 1=ios car_selection_coperation_one way_text",
+        "w": 375,
+        "h": 196,
+        "in": "car_selection ios"
+      },
+      {
+        "id": "42420:45068",
+        "name": "Property 1=car_info_crash",
+        "w": 375,
+        "h": 159,
+        "in": "ios car_info"
+      },
+      {
+        "id": "42420:45095",
+        "name": "Property 1=car_info_without_num",
+        "w": 375,
+        "h": 148,
+        "in": "ios car_info"
+      },
+      {
+        "id": "42420:45113",
+        "name": "Property 1=car_info_default",
+        "w": 375,
+        "h": 148,
+        "in": "ios car_info"
+      },
+      {
+        "id": "42420:45141",
+        "name": "Property 1=iOS_무료편도 list",
+        "w": 375,
+        "h": 240,
+        "in": "ios car_info"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Style",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 6
+  },
+  "texts": [
+    {
+      "id": "42420:43266",
+      "text": "D-DAY 뱃지",
+      "in": [
+        "17.Customer",
+        "17.Customer"
+      ],
+      "x": 1331,
+      "y": 1292
+    },
+    {
+      "id": "42420:43267",
+      "text": "쿠폰종류",
+      "in": [
+        "17.Customer",
+        "17.Customer"
+      ],
+      "x": 1494,
+      "y": 1292
+    },
+    {
+      "id": "42420:43268",
+      "text": "업종분류 (제휴처 태그)",
+      "in": [
+        "17.Customer",
+        "17.Customer"
+      ],
+      "x": 1646,
+      "y": 1292
+    },
+    {
+      "id": "42420:43269",
+      "text": "이벤트",
+      "in": [
+        "17.Customer",
+        "17.Customer"
+      ],
+      "x": 1831,
+      "y": 1292
+    },
+    {
+      "id": "42420:43471",
+      "text": "버튼명",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "Frame 3459"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43473",
+      "text": "G포인트",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "전액사용"
+      ],
+      "x": 0,
+      "y": 14
+    },
+    {
+      "id": "42420:43476",
+      "text": "보유 포인트",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "보유포인트"
+      ],
+      "x": 188,
+      "y": 0
+    },
+    {
+      "id": "42420:43477",
+      "text": "1,000,000",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "보유포인트"
+      ],
+      "x": 250,
+      "y": 0
+    },
+    {
+      "id": "42420:43478",
+      "text": "P",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "보유포인트"
+      ],
+      "x": 312,
+      "y": 0
+    },
+    {
+      "id": "42420:43481",
+      "text": "할인/적립",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "L POINT"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42420:43484",
+      "text": "이메일",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "L POINT",
+        "Frame 3120",
+        "price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43485",
+      "text": "이메일",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "20",
+        "Frame 3541",
+        "L POINT",
+        "Frame 3120",
+        "price"
+      ],
+      "x": 13,
+      "y": 0
+    },
+    {
+      "id": "42420:43508",
+      "text": "버튼명",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "19",
+        "Frame 3537",
+        "point_view_set",
+        "link_btn",
+        "포인트",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43520",
+      "text": "버튼명",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "74",
+        "Frame 3537",
+        "point_view_set",
+        "link_btn",
+        "포인트",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43550",
+      "text": "50% 할인",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43551",
+      "text": "-2,000원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "42420:43554",
+      "text": "17,150",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "discount price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43555",
+      "text": "원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "discount price"
+      ],
+      "x": 63,
+      "y": 1
+    },
+    {
+      "id": "42420:43557",
+      "text": "60%",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "product price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43558",
+      "text": "50,000원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "product price"
+      ],
+      "x": 33,
+      "y": 0.5
+    },
+    {
+      "id": "42420:43569",
+      "text": "50% 할인",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43570",
+      "text": "-2,000원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "42420:43573",
+      "text": "17,150",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "discount price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43574",
+      "text": "원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "discount price"
+      ],
+      "x": 63,
+      "y": 1
+    },
+    {
+      "id": "42420:43576",
+      "text": "60%",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "product price"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:43577",
+      "text": "50,000원",
+      "in": [
+        "17.Customer",
+        "17.Customer",
+        "main_cupon",
+        "Group 71772",
+        "price",
+        "product price"
+      ],
+      "x": 33,
+      "y": 0.5
+    },
+    {
+      "id": "42420:44019",
+      "text": "Title  29 Copy 51",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 203,
+      "y": 632
+    },
+    {
+      "id": "42420:44020",
+      "text": "Title  29 Copy 63",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 243,
+      "y": 2707
+    },
+    {
+      "id": "42420:44021",
+      "text": "Title  29 Copy 52",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 692,
+      "y": 632
+    },
+    {
+      "id": "42420:44022",
+      "text": "Title  29 Copy 70",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 692,
+      "y": 2707
+    },
+    {
+      "id": "42420:44023",
+      "text": "Title  29 Copy 69",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1235,
+      "y": 632
+    },
+    {
+      "id": "42420:44024",
+      "text": "Title  29 Copy 71",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1235,
+      "y": 2707
+    },
+    {
+      "id": "42420:44025",
+      "text": "Title  29 Copy 55",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 1363
+    },
+    {
+      "id": "42420:44026",
+      "text": "Title  29 Copy 67",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 3176
+    },
+    {
+      "id": "42420:44027",
+      "text": "Title  29 Copy 58",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 1786
+    },
+    {
+      "id": "42420:44028",
+      "text": "Title  29 Copy 81",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 2019
+    },
+    {
+      "id": "42420:44029",
+      "text": "Title  29 Copy 56",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 1195
+    },
+    {
+      "id": "42420:44030",
+      "text": "Title  29 Copy 57",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 799
+    },
+    {
+      "id": "42420:44031",
+      "text": "Title  29 Copy 82",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 1013
+    },
+    {
+      "id": "42420:44032",
+      "text": "Title  29 Copy 66",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 3003
+    },
+    {
+      "id": "42420:44033",
+      "text": "Title  29 Copy 68",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1020,
+      "y": 2835
+    },
+    {
+      "id": "42420:44297",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "img",
+        "ODA"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "42420:44461",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "차량정보 기본",
+        "가이드 기본",
+        "car info",
+        "img",
+        "ODA"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "42420:44463",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "차량정보 기본",
+        "가이드 기본",
+        "car info",
+        "img",
+        "예약완료"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "42420:44465",
+      "text": "24",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "차량정보 기본",
+        "가이드 기본",
+        "guide"
+      ],
+      "x": 163,
+      "y": 1596
+    },
+    {
+      "id": "42420:44466",
+      "text": "20",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "차량정보 기본",
+        "가이드 기본",
+        "guide"
+      ],
+      "x": 101,
+      "y": 1662
+    },
+    {
+      "id": "42420:44744",
+      "text": "Title  29 Copy 32",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 3082
+    },
+    {
+      "id": "42420:44745",
+      "text": "Title  29 Copy 34",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 3275
+    },
+    {
+      "id": "42420:44746",
+      "text": "Title  29 Copy 73",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 3459
+    },
+    {
+      "id": "42420:44747",
+      "text": "Title  29 Copy 33",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 2859
+    },
+    {
+      "id": "42420:44748",
+      "text": "Title  29 Copy 74",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 3640
+    },
+    {
+      "id": "42420:44749",
+      "text": "Title  29 Copy 78",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 3851
+    },
+    {
+      "id": "42420:44750",
+      "text": "Title  29 Copy 83",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 1757
+    },
+    {
+      "id": "42420:44751",
+      "text": "Title  29 Copy 80",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 4026
+    },
+    {
+      "id": "42420:44752",
+      "text": "Title  29 Copy 84",
+      "in": [
+        "18.Car information",
+        "18.Car information"
+      ],
+      "x": 1581,
+      "y": 1932
+    },
+    {
+      "id": "42420:45182",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "img",
+        "ODA"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "42420:45184",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "img",
+        "예약완료"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "42420:45187",
+      "text": "이메일",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "img",
+        "%"
+      ],
+      "x": 22,
+      "y": 3
+    },
+    {
+      "id": "42420:45191",
+      "text": "셀토스 1.6 (디젤)",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3238"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:45194",
+      "text": "한남역 1번 출구",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 2840"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "42420:45197",
+      "text": "한남역 1번 출구",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3239"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "42420:45200",
+      "text": "170원/km",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "03_차종선택_오다",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3108"
+      ],
+      "x": 16,
+      "y": 0
+    },
+    {
+      "id": "42420:45209",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "img",
+        "ODA"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "42420:45211",
+      "text": "text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "img",
+        "예약완료"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "42420:45215",
+      "text": "차종명",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3238"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:45218",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 2841"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:45220",
+      "text": "170원/km",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3108"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:45222",
+      "text": "170원/km",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3108"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42420:45225",
+      "text": "100",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "guide"
+      ],
+      "x": 197,
+      "y": 3551
+    },
+    {
+      "id": "42420:45226",
+      "text": "100",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "guide"
+      ],
+      "x": 132,
+      "y": 3617
+    },
+    {
+      "id": "42420:45230",
+      "text": "Text",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42420:45231",
+      "text": "v1.01",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 74,
+      "y": 0
+    },
+    {
+      "id": "42420:45232",
+      "text": "25.05.26 -car_info → 안내 문구 추가 버전 작업",
+      "in": [
+        "18.Car information",
+        "18.Car information",
+        "notification",
+        "Frame 2814",
+        "Frame 3506"
+      ],
+      "x": 4,
+      "y": 0
+    },
+    {
+      "id": "42553:15399",
+      "text": "G car와 함께 이동 전, 아래 내용을 확인해 주세요!",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 3505",
+        "Frame 3501"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42553:15411",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:15412",
+      "text": "-2,000원",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "42553:15414",
+      "text": "금연 서약한 당신을 위해!",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 3531"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:15425",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:15426",
+      "text": "-2,000원",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "42553:15428",
+      "text": "금연 서약한 당신을 위해!",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 3531"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:15439",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42553:15440",
+      "text": "-2,000원",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "42553:15442",
+      "text": "금연 서약한 당신을 위해!",
+      "in": [
+        "SCR_GA_CT_0101_P01_체크박스",
+        "Frame 1261159375",
+        "Frame 1261159375",
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 3531"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:11667",
+      "text": "차량 내부가 청결한가요?",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_pressed",
+        "\btext"
+      ],
+      "x": 20,
+      "y": 50
+    },
+    {
+      "id": "42554:11669",
+      "text": "흡연 흔적이나 쓰레기가 있는지 먼저 확인해 주세요!",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_pressed",
+        "\btext",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:11674",
+      "text": "청결해요",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_pressed",
+        "Frame 3621",
+        "btn",
+        "청결해요 bt"
+      ],
+      "x": 102.5,
+      "y": 84
+    },
+    {
+      "id": "42554:11677",
+      "text": "평범해요",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_pressed",
+        "Frame 3621",
+        "btn",
+        "평범해요bt"
+      ],
+      "x": 102.5,
+      "y": 84
+    },
+    {
+      "id": "42554:11680",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_pressed",
+        "Frame 3621",
+        "btn",
+        "청결하지 못해요bt"
+      ],
+      "x": 80.5,
+      "y": 84
+    },
+    {
+      "id": "42554:11688",
+      "text": "차량이 청결한가요?",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "\btext"
+      ],
+      "x": 20,
+      "y": 18
+    },
+    {
+      "id": "42554:11690",
+      "text": "흡연 흔적이나 쓰레기가 있는지 먼저 확인해 주세요!",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "\btext",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:11699",
+      "text": "이전 대여자에게 감동카드를 보내고 싶어요.",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "Frame 71611",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 16
+    },
+    {
+      "id": "42554:11701",
+      "text": "01. 그린카 사용 만족도는 어떠하신가요?",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "Frame 71610"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:11705",
+      "text": "차종",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "보기 리스트1",
+        "보기1"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "42554:11708",
+      "text": "차종",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "보기 리스트1",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "42554:11711",
+      "text": "차종",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "보기 리스트1",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "42554:11714",
+      "text": "차종",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "보기 리스트1",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "42554:11716",
+      "text": "01. 그린카 사용 만족도는 어떠하신가요?",
+      "in": [
+        "SCR_GA_CT_0101_P02_매너평가_만족해요_checked",
+        "Contents",
+        "설문",
+        "청결에 관한 의견을 보내주세요. (선택)"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:50685",
+      "text": "추천인 아이디를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "42554:50692",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:50693",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42554:50698",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42554:50699",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27554",
+      "text": "추천인 아이디를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "42972:27561",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27562",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27567",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27568",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42554:50822",
+      "text": "뭔가 카드는 아니지만, 영역을 선택하면 선택이 눌러지는게 셀렉션 박스 셀렉션 박스란 → 어떠한 영역을 누르면 그 영역 자체가 선택되어진다는 걸로 시각적으로 보이게 되는",
+      "in": [],
+      "x": -7839,
+      "y": 1163
+    },
+    {
+      "id": "42972:27547",
+      "text": "여기에서의 라인은 20",
+      "in": [],
+      "x": -8714,
+      "y": 1992
+    },
+    {
+      "id": "42972:27572",
+      "text": "여기에서의 라인은 20",
+      "in": [],
+      "x": -2441,
+      "y": 1417
+    },
+    {
+      "id": "42972:27548",
+      "text": "여기에서의 라인은 10",
+      "in": [],
+      "x": -8283,
+      "y": 2014
+    },
+    {
+      "id": "42972:27573",
+      "text": "여기에서의 라인은 10",
+      "in": [],
+      "x": -2010,
+      "y": 1417
+    },
+    {
+      "id": "42963:35082",
+      "text": "> 얘는 모양은 셀렉션버튼의 정의처럼 네모 박스 때문에 헷갈릴 수 있겠지만 누르면 즉시 반응 및 연결되는 브랜드 아이콘 버튼 → 즉, 버튼에 해당됨",
+      "in": [],
+      "x": -6990,
+      "y": 838
+    },
+    {
+      "id": "42814:22990",
+      "text": "텍스트 버튼이 아닌, 영역을 눌러도 인터랙션이 가능한 셀렉션 박스와 같은 종류의 개념으로 분류해야 함",
+      "in": [],
+      "x": -6793,
+      "y": 1232
+    },
+    {
+      "id": "42557:14526",
+      "text": "902graphic@naverc.om",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42557:14528",
+      "text": "●●●●●●●●●●●●●",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42557:14531",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 71952",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "42557:14534",
+      "text": "아이디 찾기 ㅣ 비밀번호 재설정 ㅣ 회원가입 하기",
+      "in": [
+        "Frame 71952",
+        "Group 71967"
+      ],
+      "x": 20,
+      "y": 451
+    },
+    {
+      "id": "42557:14535",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 495
+    },
+    {
+      "id": "42557:14537",
+      "text": "아이디 로그인",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "42557:14541",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Frame 71952",
+        "Group 71972"
+      ],
+      "x": 215.5,
+      "y": 158
+    },
+    {
+      "id": "42557:14544",
+      "text": "G car 회원",
+      "in": [
+        "Frame 71952",
+        "Group 71971"
+      ],
+      "x": 73,
+      "y": 158
+    },
+    {
+      "id": "42557:14545",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 20,
+      "y": 539
+    },
+    {
+      "id": "42557:14549",
+      "text": "카카오",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 56,
+      "y": 622
+    },
+    {
+      "id": "42557:14550",
+      "text": "네이버",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 169,
+      "y": 622
+    },
+    {
+      "id": "42557:14551",
+      "text": "구글",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 290,
+      "y": 622
+    },
+    {
+      "id": "42557:14556",
+      "text": "또는",
+      "in": [
+        "Frame 71952"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "42557:14561",
+      "text": "Button",
+      "in": [
+        "Frame 71952",
+        "Group 71973",
+        "button",
+        "Frame 71550"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42978:28889",
+      "text": "902graphic@naverc.om",
+      "in": [
+        "Frame 2147227731",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 71949"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42978:28891",
+      "text": "●●●●●●●●●●●●●",
+      "in": [
+        "Frame 2147227731",
+        "Group 71967",
+        "Frame 72133",
+        "Frame 7"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "42978:28894",
+      "text": "아이디 저장",
+      "in": [
+        "Frame 2147227731",
+        "Group 71967",
+        "Frame 72133",
+        "Group 71965"
+      ],
+      "x": 26,
+      "y": 132
+    },
+    {
+      "id": "42978:28897",
+      "text": "아이디 찾기 ㅣ 비밀번호 재설정 ㅣ 회원가입 하기",
+      "in": [
+        "Frame 2147227731",
+        "Group 71967"
+      ],
+      "x": 20,
+      "y": 451
+    },
+    {
+      "id": "42978:28898",
+      "text": "기업고객 전용 G car Biz 가입하기",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 20,
+      "y": 495
+    },
+    {
+      "id": "42978:28900",
+      "text": "아이디 로그인",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "42978:28904",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "Frame 2147227731",
+        "Group 71972"
+      ],
+      "x": 215.5,
+      "y": 158
+    },
+    {
+      "id": "42978:28907",
+      "text": "G car 회원",
+      "in": [
+        "Frame 2147227731",
+        "Group 71971"
+      ],
+      "x": 73,
+      "y": 158
+    },
+    {
+      "id": "42978:28908",
+      "text": "3초 만에 빠른 로그인",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 20,
+      "y": 539
+    },
+    {
+      "id": "42978:28912",
+      "text": "카카오",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 56,
+      "y": 622
+    },
+    {
+      "id": "42978:28913",
+      "text": "네이버",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 169,
+      "y": 622
+    },
+    {
+      "id": "42978:28914",
+      "text": "구글",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 290,
+      "y": 622
+    },
+    {
+      "id": "42978:28919",
+      "text": "또는",
+      "in": [
+        "Frame 2147227731"
+      ],
+      "x": 174,
+      "y": 666
+    },
+    {
+      "id": "42978:28924",
+      "text": "Button",
+      "in": [
+        "Frame 2147227731",
+        "Group 71973",
+        "button",
+        "Frame 71550"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42560:25418",
+      "text": "홍길동님, 운전면허증과 결제수단을 등록해주세요.",
+      "in": [
+        "SCR_GA_CA_0110_P04",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "42560:25426",
+      "text": "운전면허증 등록하기",
+      "in": [
+        "SCR_GA_CA_0110_P04",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 66,
+      "y": 18
+    },
+    {
+      "id": "42560:25430",
+      "text": "모바일 운전면허증 등록하기",
+      "in": [
+        "SCR_GA_CA_0110_P04",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 66,
+      "y": 18
+    },
+    {
+      "id": "42560:35659",
+      "text": "무료 편도",
+      "in": [
+        "Group 716145",
+        "Group 716135",
+        "Group 716084"
+      ],
+      "x": -8291,
+      "y": 2288
+    },
+    {
+      "id": "42560:35660",
+      "text": "대여/주행료 0원",
+      "in": [
+        "Group 716145",
+        "Group 716135",
+        "Group 716084"
+      ],
+      "x": -8291,
+      "y": 2316
+    },
+    {
+      "id": "42560:35664",
+      "text": "G car M",
+      "in": [
+        "Group 716145",
+        "Group 716138",
+        "Group 716086"
+      ],
+      "x": -8119.5,
+      "y": 2288
+    },
+    {
+      "id": "42560:35665",
+      "text": "매월 새로운 내차",
+      "in": [
+        "Group 716145",
+        "Group 716138",
+        "Group 716086"
+      ],
+      "x": -8119.5,
+      "y": 2316
+    },
+    {
+      "id": "42560:35698",
+      "text": "제주 예약",
+      "in": [
+        "Group 716145",
+        "coupon",
+        "Group 716136",
+        "text. icon"
+      ],
+      "x": 15,
+      "y": 55
+    },
+    {
+      "id": "42560:35701",
+      "text": "기차역",
+      "in": [
+        "Group 716145",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 10,
+      "y": 55
+    },
+    {
+      "id": "42560:35720",
+      "text": "공항 대여",
+      "in": [
+        "Group 716145",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 17,
+      "y": 51
+    },
+    {
+      "id": "42560:35737",
+      "text": "웰케이션",
+      "in": [
+        "Group 716145",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 10,
+      "y": 54
+    },
+    {
+      "id": "42560:35742",
+      "text": "제주 예약",
+      "in": [
+        "Group 716145",
+        "Group 716144",
+        "Group 72013"
+      ],
+      "x": -8291,
+      "y": 2513
+    },
+    {
+      "id": "42560:35743",
+      "text": "제주 공항/서귀포",
+      "in": [
+        "Group 716145",
+        "Group 716144",
+        "Group 72013"
+      ],
+      "x": -8291,
+      "y": 2531
+    },
+    {
+      "id": "42560:35760",
+      "text": "KTX/SRT",
+      "in": [
+        "Group 716145",
+        "Group 716143",
+        "Group 716087"
+      ],
+      "x": -8175,
+      "y": 2513
+    },
+    {
+      "id": "42560:35761",
+      "text": "기차역에서 대여",
+      "in": [
+        "Group 716145",
+        "Group 716143",
+        "Group 716087"
+      ],
+      "x": -8175,
+      "y": 2531
+    },
+    {
+      "id": "42560:35781",
+      "text": "공항 대여",
+      "in": [
+        "Group 716145",
+        "Group 716142",
+        "Group 716089"
+      ],
+      "x": -8059,
+      "y": 2513
+    },
+    {
+      "id": "42560:35782",
+      "text": "공항 오갈 때 편하게",
+      "in": [
+        "Group 716145",
+        "Group 716142",
+        "Group 716089"
+      ],
+      "x": -8059,
+      "y": 2531
+    },
+    {
+      "id": "42560:35800",
+      "text": "이용가이드",
+      "in": [
+        "Group 716145",
+        "Group 72049",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 18
+    },
+    {
+      "id": "42560:35801",
+      "text": "대여 안내 등",
+      "in": [
+        "Group 716145",
+        "Group 72049",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "42560:35811",
+      "text": "고객센터",
+      "in": [
+        "Group 716145",
+        "Group 72049",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 18
+    },
+    {
+      "id": "42560:35812",
+      "text": "헬프 데스크",
+      "in": [
+        "Group 716145",
+        "Group 72049",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "42560:35830",
+      "text": "G car님",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "profile text list",
+        "Frame 3371",
+        "text C"
+      ],
+      "x": 10,
+      "y": 5
+    },
+    {
+      "id": "42560:35831",
+      "text": "gildonghong@gcar.co.kr",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "profile text list",
+        "Frame 3371",
+        "text C"
+      ],
+      "x": 10,
+      "y": 37
+    },
+    {
+      "id": "42560:35836",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list01",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35838",
+      "text": "운행 전까지 1명 등록 가능합니다.",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list01",
+        "2",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42560:35843",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list02",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35845",
+      "text": "운행 전까지 1명 등록 가능합니다.",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list02",
+        "2",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42560:35850",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list03",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35852",
+      "text": "운행 전까지 1명 등록 가능합니다.",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list03",
+        "2",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42560:35857",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list04",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35863",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list05",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35868",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list06",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35873",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list07",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35878",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list08",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35880",
+      "text": "9.1.0 / 10.0.0",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list08",
+        "2",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42560:35882",
+      "text": "업데이트",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list08",
+        "2",
+        "Frame 3176",
+        "ios / Button_XS_R8_Textonly_Line"
+      ],
+      "x": 5,
+      "y": 4
+    },
+    {
+      "id": "42560:35887",
+      "text": "개인정보",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2853",
+        "list09",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35893",
+      "text": "내 쿠폰",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35897",
+      "text": "11",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910",
+        "Frame 3667",
+        "Frame 2909",
+        "Frame 3665"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35899",
+      "text": "개",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910",
+        "Frame 3667",
+        "Frame 2909",
+        "Frame 3666"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35903",
+      "text": "내 포인트",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35907",
+      "text": "30,000",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910",
+        "Frame 3667",
+        "Frame 2909",
+        "Frame 3665"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35909",
+      "text": "P",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2697",
+        "내 쿠폰",
+        "Frame 2910",
+        "Frame 3667",
+        "Frame 2909",
+        "Frame 3666"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35914",
+      "text": "즐겨찾기",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "즐겨찾기"
+      ],
+      "x": 6.5,
+      "y": 0
+    },
+    {
+      "id": "42560:35915",
+      "text": "11",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "즐겨찾기"
+      ],
+      "x": 21,
+      "y": 30
+    },
+    {
+      "id": "42560:35919",
+      "text": "모바일 문의",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "모바일 문의"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:35920",
+      "text": "5",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "모바일 문의"
+      ],
+      "x": 25,
+      "y": 30
+    },
+    {
+      "id": "42560:35924",
+      "text": "라운G",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "그린댓글"
+      ],
+      "x": 13.5,
+      "y": 0
+    },
+    {
+      "id": "42560:35925",
+      "text": "12",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "그린댓글"
+      ],
+      "x": 21,
+      "y": 30
+    },
+    {
+      "id": "42560:35929",
+      "text": "친구초대",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "친구초대"
+      ],
+      "x": 6.5,
+      "y": 0
+    },
+    {
+      "id": "42560:35930",
+      "text": "3",
+      "in": [
+        "SCR_GA_CI_0101_M02_내정보_메인(법인 소속원)",
+        "Frame 2978",
+        "Frame 2916",
+        "즐겨찾기~친구초대",
+        "친구초대"
+      ],
+      "x": 25,
+      "y": 30
+    },
+    {
+      "id": "42560:38270",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38271",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38274",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42560:38281",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38282",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38285",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42560:38292",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38293",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38296",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42560:38303",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38304",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38307",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42560:38314",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38315",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38318",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42560:38325",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38326",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38329",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42560:38336",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:38337",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42560:38340",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42972:27583",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27584",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27587",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42972:27594",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27595",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27598",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "42972:27605",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27606",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27609",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42972:27616",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27617",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27620",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42972:27627",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27628",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27631",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42972:27638",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27639",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27642",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42972:27649",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27650",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42972:27653",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "42560:39442",
+      "text": "한달 이상 내차처럼 G car M",
+      "in": [],
+      "x": -14653,
+      "y": 2601
+    },
+    {
+      "id": "42560:39446",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "Group 71961"
+      ],
+      "x": -14637,
+      "y": 2749
+    },
+    {
+      "id": "42560:39447",
+      "text": "월 566,100 원 ~",
+      "in": [
+        "Group 71961"
+      ],
+      "x": -14637,
+      "y": 2801
+    },
+    {
+      "id": "42560:39448",
+      "text": "170원/km",
+      "in": [
+        "Group 71961"
+      ],
+      "x": -14637,
+      "y": 2829
+    },
+    {
+      "id": "42560:39449",
+      "text": "큰 네비게이션을 자랑하는 인기 차종!",
+      "in": [
+        "Group 71961"
+      ],
+      "x": -14637,
+      "y": 2769
+    },
+    {
+      "id": "42560:39451",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "Group 716109"
+      ],
+      "x": -14293,
+      "y": 2749
+    },
+    {
+      "id": "42560:39452",
+      "text": "월 566,100 원 ~",
+      "in": [
+        "Group 716109"
+      ],
+      "x": -14293,
+      "y": 2801
+    },
+    {
+      "id": "42560:39453",
+      "text": "170원/km",
+      "in": [
+        "Group 716109"
+      ],
+      "x": -14293,
+      "y": 2829
+    },
+    {
+      "id": "42560:39454",
+      "text": "큰 네비게이션을 자랑하는 인기 차종!",
+      "in": [
+        "Group 716109"
+      ],
+      "x": -14293,
+      "y": 2769
+    },
+    {
+      "id": "42560:39456",
+      "text": "트랙스 크로스오버",
+      "in": [
+        "Group 72015"
+      ],
+      "x": -14465,
+      "y": 2749
+    },
+    {
+      "id": "42560:39457",
+      "text": "월 603,900 원 ~",
+      "in": [
+        "Group 72015"
+      ],
+      "x": -14465,
+      "y": 2801
+    },
+    {
+      "id": "42560:39458",
+      "text": "170원/km",
+      "in": [
+        "Group 72015"
+      ],
+      "x": -14465,
+      "y": 2829
+    },
+    {
+      "id": "42560:39459",
+      "text": "세단과 SUV를 합친 다목적 차량!",
+      "in": [
+        "Group 72015"
+      ],
+      "x": -14465,
+      "y": 2769
+    },
+    {
+      "id": "42560:39462",
+      "text": "전체보기",
+      "in": [
+        "Group 716102"
+      ],
+      "x": -14379,
+      "y": 2605
+    },
+    {
+      "id": "42560:39482",
+      "text": "트랙스 크로스오버",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14637,
+      "y": 3033
+    },
+    {
+      "id": "42560:39483",
+      "text": "월",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14637,
+      "y": 3087
+    },
+    {
+      "id": "42560:39484",
+      "text": "원 ~",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14554,
+      "y": 3085
+    },
+    {
+      "id": "42560:39485",
+      "text": "566,100",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14620,
+      "y": 3085
+    },
+    {
+      "id": "42560:39486",
+      "text": "170원/km",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14637,
+      "y": 3113
+    },
+    {
+      "id": "42560:39487",
+      "text": "세단과 SUV를 합친 다목적 차량!",
+      "in": [
+        "Group 716110"
+      ],
+      "x": -14637,
+      "y": 3053
+    },
+    {
+      "id": "42560:39489",
+      "text": "디 올 뉴 니로(하이브리드)",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13949,
+      "y": 3033
+    },
+    {
+      "id": "42560:39490",
+      "text": "월",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13949,
+      "y": 3087
+    },
+    {
+      "id": "42560:39491",
+      "text": "원 ~",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13866,
+      "y": 3085
+    },
+    {
+      "id": "42560:39492",
+      "text": "775,000",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13932,
+      "y": 3085
+    },
+    {
+      "id": "42560:39493",
+      "text": "170원/km",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13949,
+      "y": 3113
+    },
+    {
+      "id": "42560:39494",
+      "text": "친환경 운전으로 탄소 중립 실천해요!",
+      "in": [
+        "Group 72117"
+      ],
+      "x": -13949,
+      "y": 3053
+    },
+    {
+      "id": "42560:39496",
+      "text": "디 올 뉴 니로(하이브리드)",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13589,
+      "y": 3033
+    },
+    {
+      "id": "42560:39497",
+      "text": "월",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13589,
+      "y": 3087
+    },
+    {
+      "id": "42560:39498",
+      "text": "원 ~",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13506,
+      "y": 3085
+    },
+    {
+      "id": "42560:39499",
+      "text": "775,000",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13572,
+      "y": 3085
+    },
+    {
+      "id": "42560:39500",
+      "text": "170원/km",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13589,
+      "y": 3113
+    },
+    {
+      "id": "42560:39501",
+      "text": "친환경 운전으로 탄소 중립 실천해요!",
+      "in": [
+        "Group 716111"
+      ],
+      "x": -13589,
+      "y": 3053
+    },
+    {
+      "id": "42560:39503",
+      "text": "캐스퍼(터보)",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14293,
+      "y": 3033
+    },
+    {
+      "id": "42560:39504",
+      "text": "월",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14293,
+      "y": 3087
+    },
+    {
+      "id": "42560:39505",
+      "text": "원 ~",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14210,
+      "y": 3085
+    },
+    {
+      "id": "42560:39506",
+      "text": "499,000",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14276,
+      "y": 3085
+    },
+    {
+      "id": "42560:39507",
+      "text": "170원/km",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14293,
+      "y": 3113
+    },
+    {
+      "id": "42560:39508",
+      "text": "컴팩트 디자인에 강력 파워! 반전매력",
+      "in": [
+        "Group 72115"
+      ],
+      "x": -14293,
+      "y": 3053
+    },
+    {
+      "id": "42560:39510",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14465,
+      "y": 3033
+    },
+    {
+      "id": "42560:39511",
+      "text": "월",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14465,
+      "y": 3087
+    },
+    {
+      "id": "42560:39512",
+      "text": "원 ~",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14382,
+      "y": 3085
+    },
+    {
+      "id": "42560:39513",
+      "text": "518,000",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14448,
+      "y": 3085
+    },
+    {
+      "id": "42560:39514",
+      "text": "170원/km",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14465,
+      "y": 3113
+    },
+    {
+      "id": "42560:39515",
+      "text": "큰 네비게이션을 자랑하는 인기 차종!",
+      "in": [
+        "Group 72114"
+      ],
+      "x": -14465,
+      "y": 3053
+    },
+    {
+      "id": "42560:39517",
+      "text": "디 올 뉴 스포티지 1.6T",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13777,
+      "y": 3033
+    },
+    {
+      "id": "42560:39518",
+      "text": "월",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13777,
+      "y": 3087
+    },
+    {
+      "id": "42560:39519",
+      "text": "원 ~",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13694,
+      "y": 3085
+    },
+    {
+      "id": "42560:39520",
+      "text": "609,000",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13760,
+      "y": 3085
+    },
+    {
+      "id": "42560:39521",
+      "text": "170원/km",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13777,
+      "y": 3113
+    },
+    {
+      "id": "42560:39522",
+      "text": "1.6리터 터보 엔진의 힘을 느껴봐!",
+      "in": [
+        "Group 72119"
+      ],
+      "x": -13777,
+      "y": 3053
+    },
+    {
+      "id": "42560:39524",
+      "text": "디 올 뉴 스포티지 1.6T",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13417,
+      "y": 3033
+    },
+    {
+      "id": "42560:39525",
+      "text": "월",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13417,
+      "y": 3087
+    },
+    {
+      "id": "42560:39526",
+      "text": "원 ~",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13334,
+      "y": 3085
+    },
+    {
+      "id": "42560:39527",
+      "text": "609,000",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13400,
+      "y": 3085
+    },
+    {
+      "id": "42560:39528",
+      "text": "170원/km",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13417,
+      "y": 3113
+    },
+    {
+      "id": "42560:39529",
+      "text": "1.6리터 터보 엔진의 힘을 느껴봐!",
+      "in": [
+        "Group 716112"
+      ],
+      "x": -13417,
+      "y": 3053
+    },
+    {
+      "id": "42560:39531",
+      "text": "K5 3세대",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14121,
+      "y": 3033
+    },
+    {
+      "id": "42560:39532",
+      "text": "월",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14121,
+      "y": 3087
+    },
+    {
+      "id": "42560:39533",
+      "text": "원 ~",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14038,
+      "y": 3085
+    },
+    {
+      "id": "42560:39534",
+      "text": "591,000",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14104,
+      "y": 3085
+    },
+    {
+      "id": "42560:39535",
+      "text": "170원/km",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14121,
+      "y": 3113
+    },
+    {
+      "id": "42560:39536",
+      "text": "스포티한 디자인에 연비 효율은 덤!",
+      "in": [
+        "Group 72116"
+      ],
+      "x": -14121,
+      "y": 3053
+    },
+    {
+      "id": "42814:22960",
+      "text": "SKT",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42814:22962",
+      "text": "KT",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42814:22964",
+      "text": "LGU+",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42814:22966",
+      "text": "SKT알뜰폰",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42814:22968",
+      "text": "KT 알뜰폰",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42814:22970",
+      "text": "LGU+알뜰폰",
+      "in": [
+        "SCR_GA_CA_0104_M01_본인인증(통신사)",
+        "\bdim",
+        "bottom_sheet_list",
+        "list"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42972:27812",
+      "text": "Selectionbox",
+      "in": [
+        "N0TE",
+        "header"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27814",
+      "text": "셀렉션 박스는 리스트버튼과 다르게 선택하고 머물러야하는 애들일 경우에 셀렉션박스로 정의",
+      "in": [
+        "N0TE",
+        "content"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42972:27816",
+      "text": "차세대 그린카",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "42972:27817",
+      "text": "05/08/26 14:15 Hours (UTC+09:00)",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "42978:29218",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42978:29219",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "42978:29222",
+      "text": "69.2km",
+      "in": [
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43174:47741",
+      "text": "[Sele outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러 (자유도를 줌) 2배수로 조정 가능",
+      "in": [],
+      "x": 2916,
+      "y": 718
+    },
+    {
+      "id": "43174:47750",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47753",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47757",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47761",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43174:47762",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43174:47767",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43174:47768",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43174:47773",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47777",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47779",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43174:47781",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47782",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43174:47785",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47787",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47788",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43174:47791",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47793",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47794",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43174:47798",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47801",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47802",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 16
+    },
+    {
+      "id": "43174:47805",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47806",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 245,
+      "y": 16
+    },
+    {
+      "id": "43174:47809",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47813",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47815",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 245,
+      "y": 28
+    },
+    {
+      "id": "43174:47818",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47822",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43174:47827",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43174:47831",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43174:47834",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43174:47838",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43174:47841",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43174:47844",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43174:47850",
+      "text": "Button",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77,
+      "y": 16
+    },
+    {
+      "id": "43646:24993",
+      "text": "제주 예약",
+      "in": [
+        "Group 716144",
+        "Group 72013"
+      ],
+      "x": -7726,
+      "y": 4003
+    },
+    {
+      "id": "43646:24994",
+      "text": "제주 공항/서귀포",
+      "in": [
+        "Group 716144",
+        "Group 72013"
+      ],
+      "x": -7726,
+      "y": 4021
+    },
+    {
+      "id": "43646:25115",
+      "text": "제주 예약",
+      "in": [
+        "Group 716146",
+        "Group 72013"
+      ],
+      "x": -7726,
+      "y": 3568
+    },
+    {
+      "id": "43646:25116",
+      "text": "제주 공항/서귀포",
+      "in": [
+        "Group 716146",
+        "Group 72013"
+      ],
+      "x": -7726,
+      "y": 3586
+    },
+    {
+      "id": "43646:25018",
+      "text": "50% 할인",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:25019",
+      "text": "-2,000원",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "43646:25021",
+      "text": "금연 서약한 당신을 위해!",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 3531"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:25139",
+      "text": "50% 할인",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:25140",
+      "text": "-2,000원",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 2946"
+      ],
+      "x": 111,
+      "y": 4
+    },
+    {
+      "id": "43646:25142",
+      "text": "금연 서약한 당신을 위해!",
+      "in": [
+        "cupon_already_downloaded",
+        "Frame 1261159378",
+        "Frame 3528",
+        "Frame 2935",
+        "Frame 3531"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:25036",
+      "text": "청결해요",
+      "in": [
+        "청결해요 bt"
+      ],
+      "x": 102.5,
+      "y": 86.5
+    },
+    {
+      "id": "43646:25182",
+      "text": "청결해요",
+      "in": [
+        "청결해요 bt"
+      ],
+      "x": 102.5,
+      "y": 84
+    },
+    {
+      "id": "43646:25045",
+      "text": "이용가이드",
+      "in": [
+        "Group 72049",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:25046",
+      "text": "대여 안내 등",
+      "in": [
+        "Group 72049",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "43646:25056",
+      "text": "고객센터",
+      "in": [
+        "Group 72049",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:25057",
+      "text": "헬프 데스크",
+      "in": [
+        "Group 72049",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "43646:25147",
+      "text": "이용가이드",
+      "in": [
+        "Group 716147",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 18
+    },
+    {
+      "id": "43646:25148",
+      "text": "대여 안내 등",
+      "in": [
+        "Group 716147",
+        "menu_lottemycar"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "43646:25158",
+      "text": "고객센터",
+      "in": [
+        "Group 716147",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 18
+    },
+    {
+      "id": "43646:25159",
+      "text": "헬프 데스크",
+      "in": [
+        "Group 716147",
+        "menu_lottemycar",
+        "Group 71711",
+        "Group 71710"
+      ],
+      "x": 16,
+      "y": 46
+    },
+    {
+      "id": "43646:38149",
+      "text": "홍길동 님, 오늘도 즐거운 이동하세요!",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인"
+      ],
+      "x": 20,
+      "y": 112
+    },
+    {
+      "id": "43646:38150",
+      "text": "Greencar Plus+",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인"
+      ],
+      "x": 50,
+      "y": 1034
+    },
+    {
+      "id": "43646:38156",
+      "text": "왕복 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43646:38157",
+      "text": "G car zone에서 원하는 차량 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38163",
+      "text": "오다",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716148",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43646:38164",
+      "text": "원하면 언제든, 어디든 오다",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716148",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38173",
+      "text": "묶음 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43646:38174",
+      "text": "G car와 KTX 함께 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38190",
+      "text": "편도 핫딜",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43646:38191",
+      "text": "대여/주행료 0원",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38198",
+      "text": "편도",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 16
+    },
+    {
+      "id": "43646:38199",
+      "text": "목적지에서 반납",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 716143",
+        "Frame 716147",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38203",
+      "text": "묶음 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "묶음예약",
+        "Frame 716150"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:38204",
+      "text": "G car와 KTX 함께 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "묶음예약",
+        "Frame 716150"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43646:38223",
+      "text": "대여시각 1일 29시간 57분전입니다.",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "대여내역 있을 경우",
+        "Group 716133",
+        "Frame 3100"
+      ],
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "43646:38228",
+      "text": "셀토스 1.6 (디젤)",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "대여내역 있을 경우",
+        "Group 716133",
+        "Frame 3100",
+        "진행중인 예약 차량리스트",
+        "text"
+      ],
+      "x": 4,
+      "y": 0
+    },
+    {
+      "id": "43646:38232",
+      "text": "2022.04.23 17:20~",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "대여내역 있을 경우",
+        "Group 716133",
+        "Frame 3100",
+        "진행중인 예약 차량리스트",
+        "text",
+        "Frame 716169"
+      ],
+      "x": 112,
+      "y": 1
+    },
+    {
+      "id": "43646:38235",
+      "text": "원클릭 G car 바로가기",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147"
+      ],
+      "x": 20,
+      "y": 585
+    },
+    {
+      "id": "43646:38251",
+      "text": "제주 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 14,
+      "y": 54
+    },
+    {
+      "id": "43646:38254",
+      "text": "벚꽃 여행",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43646:38258",
+      "text": "강릉 여행",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43646:38270",
+      "text": "KTX/SRT역",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43646:38298",
+      "text": "공항 대여",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716147",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 16,
+      "y": 51
+    },
+    {
+      "id": "43646:38308",
+      "text": "4/12",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "banner_sample_aos",
+        "bn no"
+      ],
+      "x": 12,
+      "y": 4
+    },
+    {
+      "id": "43646:38310",
+      "text": "스마트한 구독 G car 패스",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148"
+      ],
+      "x": 20,
+      "y": 821
+    },
+    {
+      "id": "43646:38316",
+      "text": "D-245",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72080"
+      ],
+      "x": 249,
+      "y": 873
+    },
+    {
+      "id": "43646:38317",
+      "text": "후 갱신",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72080"
+      ],
+      "x": 293,
+      "y": 873
+    },
+    {
+      "id": "43646:38318",
+      "text": "까지",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72080"
+      ],
+      "x": 322,
+      "y": 873
+    },
+    {
+      "id": "43646:38320",
+      "text": "D-245",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 716108"
+      ],
+      "x": 249,
+      "y": 1009
+    },
+    {
+      "id": "43646:38321",
+      "text": "후 해지",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 716108"
+      ],
+      "x": 293,
+      "y": 1009
+    },
+    {
+      "id": "43646:38322",
+      "text": "까지",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 716108"
+      ],
+      "x": 322,
+      "y": 1009
+    },
+    {
+      "id": "43646:38324",
+      "text": "99,000",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72082"
+      ],
+      "x": 272,
+      "y": 941
+    },
+    {
+      "id": "43646:38325",
+      "text": "원",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72082"
+      ],
+      "x": 322,
+      "y": 941
+    },
+    {
+      "id": "43646:38326",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148"
+      ],
+      "x": 32,
+      "y": 883
+    },
+    {
+      "id": "43646:38327",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148"
+      ],
+      "x": 32,
+      "y": 951
+    },
+    {
+      "id": "43646:38328",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148"
+      ],
+      "x": 32,
+      "y": 1019
+    },
+    {
+      "id": "43646:38330",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72081"
+      ],
+      "x": 84,
+      "y": 863
+    },
+    {
+      "id": "43646:38333",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72083"
+      ],
+      "x": 86,
+      "y": 931
+    },
+    {
+      "id": "43646:38336",
+      "text": "50% 할인",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716148",
+        "Group 72085"
+      ],
+      "x": 86,
+      "y": 999
+    },
+    {
+      "id": "43646:38344",
+      "text": "한달 이상 내차처럼 G car M",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인"
+      ],
+      "x": 20,
+      "y": 1069
+    },
+    {
+      "id": "43646:38347",
+      "text": "더 뉴 K3 1.6",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1217
+    },
+    {
+      "id": "43646:38348",
+      "text": "월 566,100 원 ~",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1237
+    },
+    {
+      "id": "43646:38349",
+      "text": "170원/km",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 71961"
+      ],
+      "x": 36,
+      "y": 1265
+    },
+    {
+      "id": "43646:38351",
+      "text": "트랙스 크로스오버",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1217
+    },
+    {
+      "id": "43646:38352",
+      "text": "월 603,900 원 ~",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1237
+    },
+    {
+      "id": "43646:38353",
+      "text": "170원/km",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 72015"
+      ],
+      "x": 208,
+      "y": 1265
+    },
+    {
+      "id": "43646:38356",
+      "text": "기업 고객 전용 G car Biz",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716150"
+      ],
+      "x": 22,
+      "y": 1329
+    },
+    {
+      "id": "43646:38360",
+      "text": "업무/복지용으로도 가능",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716150",
+        "menu_greenpass",
+        "Group 716045"
+      ],
+      "x": 40,
+      "y": 1399
+    },
+    {
+      "id": "43646:38361",
+      "text": "우리 회사 전용 G car",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716150",
+        "menu_greenpass",
+        "Group 716045"
+      ],
+      "x": 40,
+      "y": 1379
+    },
+    {
+      "id": "43646:38377",
+      "text": "G car의 다양한 혜택을 만나보세요",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 72050"
+      ],
+      "x": 40,
+      "y": 1477
+    },
+    {
+      "id": "43646:38383",
+      "text": "이용가이드",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716152",
+        "Group 716084"
+      ],
+      "x": 32,
+      "y": 1579
+    },
+    {
+      "id": "43646:38384",
+      "text": "대여 안내 등",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716152",
+        "Group 716084"
+      ],
+      "x": 32,
+      "y": 1607
+    },
+    {
+      "id": "43646:38386",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716152",
+        "Group 716086"
+      ],
+      "x": 203,
+      "y": 1579
+    },
+    {
+      "id": "43646:38387",
+      "text": "헬프 데스크",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716152",
+        "Group 716086"
+      ],
+      "x": 203,
+      "y": 1607
+    },
+    {
+      "id": "43646:38397",
+      "text": "더욱 다양한 G car Family Apps",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 71984"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:38401",
+      "text": "무버스",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 14,
+      "y": 54
+    },
+    {
+      "id": "43646:38408",
+      "text": "세차클링",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43646:38412",
+      "text": "롯데렌터카",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 11,
+      "y": 51
+    },
+    {
+      "id": "43646:38418",
+      "text": "차방정",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 71984",
+        "Frame 72010",
+        "coupon",
+        "text. icon"
+      ],
+      "x": 9,
+      "y": 54
+    },
+    {
+      "id": "43646:38425",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 72008",
+        "약관+area",
+        "약관",
+        "약관"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:38427",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716151",
+        "Group 72003",
+        "Frame 72008",
+        "약관+area",
+        "약관",
+        "약관"
+      ],
+      "x": 122,
+      "y": 0
+    },
+    {
+      "id": "43646:38433",
+      "text": "이동하기",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "홈",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 45
+    },
+    {
+      "id": "43646:38437",
+      "text": "콘텐츠",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "혜택",
+        "event"
+      ],
+      "x": 18,
+      "y": 45
+    },
+    {
+      "id": "43646:38441",
+      "text": "혜택받기",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "이용내역",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 44
+    },
+    {
+      "id": "43646:38445",
+      "text": "마이",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716108",
+        "bottom_navigation_ios",
+        "내정보",
+        "user"
+      ],
+      "x": 23.5,
+      "y": 44
+    },
+    {
+      "id": "43646:38449",
+      "text": "공유 차량 찾기",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:38455",
+      "text": "왕복 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38456",
+      "text": "G car zone에서 원하는 차량 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38461",
+      "text": "오다",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_오다"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38462",
+      "text": "원하는 장소로 차량 배달",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_오다"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38467",
+      "text": "편도",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38468",
+      "text": "목적지에서 반납",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38473",
+      "text": "편도 핫딜",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38474",
+      "text": "대여/주행료 0원",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38477",
+      "text": "KTX패키지",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_묶음예약"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38478",
+      "text": "G car와 KTX 함께 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159564",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_묶음예약"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38792",
+      "text": "공유 차량 찾기",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:38798",
+      "text": "왕복 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38799",
+      "text": "G car zone에서 원하는 차량 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_왕복예약",
+        "Group 72060"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38804",
+      "text": "오다",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_오다"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38805",
+      "text": "원하는 장소로 차량 배달",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716148",
+        "menu_오다"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38810",
+      "text": "편도",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38811",
+      "text": "목적지에서 반납",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38816",
+      "text": "편도 핫딜",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38817",
+      "text": "대여/주행료 0원",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_편도핫딜"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:38820",
+      "text": "KTX패키지",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_묶음예약"
+      ],
+      "x": 16,
+      "y": 19
+    },
+    {
+      "id": "43646:38821",
+      "text": "G car와 KTX 함께 예약",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Frame 1261159565",
+        "Frame 716144",
+        "Frame 716149",
+        "Frame 716145",
+        "menu_묶음예약"
+      ],
+      "x": 16,
+      "y": 44
+    },
+    {
+      "id": "43646:39146",
+      "text": "쿠폰",
+      "in": [
+        "SCR_GA_ID_0101_M01 기본_KTX 버전 메인",
+        "Group 716107",
+        "Group 71935",
+        "Group 716101"
+      ],
+      "x": 295.258056640625,
+      "y": 59.32275390625
+    },
+    {
+      "id": "43646:39304",
+      "text": "카카오",
+      "in": [],
+      "x": -7370,
+      "y": 3717
+    },
+    {
+      "id": "43646:39305",
+      "text": "네이버",
+      "in": [],
+      "x": -7257,
+      "y": 3717
+    },
+    {
+      "id": "43646:39306",
+      "text": "구글",
+      "in": [],
+      "x": -7136,
+      "y": 3717
+    },
+    {
+      "id": "43646:39523",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39526",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39530",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39534",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43646:39535",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43646:39540",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43646:39541",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43646:39463",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39467",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39839",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716137"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43646:39471",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39472",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43646:39475",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39477",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39478",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43646:39481",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39483",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39484",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43646:39487",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39490",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39491",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 15.5
+    },
+    {
+      "id": "43646:39494",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39495",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 246,
+      "y": 15.5
+    },
+    {
+      "id": "43646:39498",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39502",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39504",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 246,
+      "y": 28
+    },
+    {
+      "id": "43646:39507",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39595",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0.5
+    },
+    {
+      "id": "43646:39600",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39604",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43646:39607",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43646:39611",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39614",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39617",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39623",
+      "text": "최종 요금 확인 후 결제 하기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77.5,
+      "y": 16.5
+    },
+    {
+      "id": "43647:7863",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7866",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7870",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7874",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43647:7875",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43647:7880",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43647:7881",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43647:7886",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7890",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7892",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716137"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43647:7894",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7895",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43647:7898",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7900",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7901",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43647:7904",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7906",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7907",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 248,
+      "y": 28
+    },
+    {
+      "id": "43647:7911",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7914",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7915",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 15.5
+    },
+    {
+      "id": "43647:7918",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7919",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 246,
+      "y": 15.5
+    },
+    {
+      "id": "43647:7922",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7926",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7928",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 246,
+      "y": 28
+    },
+    {
+      "id": "43647:7931",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7935",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0.5
+    },
+    {
+      "id": "43647:7940",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43647:7944",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43647:7947",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43647:7951",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43647:7954",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43647:7957",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43647:7963",
+      "text": "최종 요금 확인 후 결제 하기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77.5,
+      "y": 16.5
+    },
+    {
+      "id": "43646:39677",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39680",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39684",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39688",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43646:39689",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43646:39694",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43646:39695",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43646:39700",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39704",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39706",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43646:39708",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39709",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43646:39712",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39714",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39715",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43646:39718",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39720",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39721",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43646:39725",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39728",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39729",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 16
+    },
+    {
+      "id": "43646:39732",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39733",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 245,
+      "y": 16
+    },
+    {
+      "id": "43646:39736",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39740",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39742",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 245,
+      "y": 28
+    },
+    {
+      "id": "43646:39745",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39749",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43646:39754",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43646:39758",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43646:39761",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43646:39765",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39768",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39771",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43646:39777",
+      "text": "최종 요금 확인 후 결제 하기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77,
+      "y": 16
+    },
+    {
+      "id": "43864:69274",
+      "text": "[Selection box] outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러 (자유도를 줌) 2배수로 조정 가능",
+      "in": [],
+      "x": -2454,
+      "y": 2980
+    },
+    {
+      "id": "43864:69283",
+      "text": "트랙스 크로스오버 트랙스 크로스오버트랙스 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69286",
+      "text": "22년식ㅣ109하6892ㅣ휘발유",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69290",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69294",
+      "text": "이용 시작일",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 3
+    },
+    {
+      "id": "43864:69295",
+      "text": "2025년 12월 18일(목) 13:00111...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43864:69300",
+      "text": "받을 장소",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 12.5,
+      "y": 3
+    },
+    {
+      "id": "43864:69301",
+      "text": "서울 강남구 대치동 937ㅁㄴ이ㅏ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716136",
+        "Frame 716136"
+      ],
+      "x": 73,
+      "y": 0
+    },
+    {
+      "id": "43864:69306",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69310",
+      "text": "기간형 3개월 기간형 3개...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69312",
+      "text": "추천",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716136"
+      ],
+      "x": 8,
+      "y": 1
+    },
+    {
+      "id": "43864:69314",
+      "text": "정해진 사용 기간만큼 더 싸게 이용가리...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69315",
+      "text": "월 615,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716141"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43864:69318",
+      "text": "Light",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69320",
+      "text": "가격이 부담된다면 2주간 가볍게 이용가...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69321",
+      "text": "월 323,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43864:69324",
+      "text": "기간형 6개월 기간형 6개월기간 ...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69326",
+      "text": "정해진 사용 기간만큼 더 싸게 이용해아...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69327",
+      "text": "월 595,000 원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 236,
+      "y": 26
+    },
+    {
+      "id": "43864:69331",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69334",
+      "text": "원하는 장소로 받기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69335",
+      "text": "무료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716138"
+      ],
+      "x": 296,
+      "y": 16
+    },
+    {
+      "id": "43864:69338",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69339",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716140"
+      ],
+      "x": 245,
+      "y": 16
+    },
+    {
+      "id": "43864:69342",
+      "text": "직접 가지러 가기직접 가지러 가기...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69346",
+      "text": "포스코센터포스코센터포스코센터...",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143",
+        "Frame 716136",
+        "Frame 716231",
+        "Frame 716231"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69348",
+      "text": "20,000원 할인",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716143"
+      ],
+      "x": 245,
+      "y": 28
+    },
+    {
+      "id": "43864:69351",
+      "text": "직접 가지러 가기",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "input",
+        "Frame 716142",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69355",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2989"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43864:69360",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "list",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43864:69364",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43864:69367",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "07_보험료",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 14,
+      "y": 0
+    },
+    {
+      "id": "43864:69371",
+      "text": "대여 10회 이상 & 무사고인 경우에 선택 가능해요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43864:69374",
+      "text": "가격이 변경되어 최신 가격으로 업데이트 할게요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43864:69377",
+      "text": "원하는 장소로 받기만 가능한 차량이에요.",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "Frame 716231",
+        "toast_popup",
+        "Frame 71550"
+      ],
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "43864:69383",
+      "text": "Button",
+      "in": [
+        "SCR_GA_RV_0201_M02_예약하기 (편도)",
+        "button_area_ios",
+        "Frame 3680",
+        "button"
+      ],
+      "x": 77,
+      "y": 16
+    },
+    {
+      "id": "44370:27984",
+      "text": "Glossary",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:27985",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "44370:27988",
+      "text": "[정의]",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:27989",
+      "text": "Selection box (헬퍼 텍스트)는",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44370:27993",
+      "text": "Selection box (셀렉션 박스)",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44370:27998",
+      "text": "Type",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:27999",
+      "text": "Reference",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44370:28002",
+      "text": "[종류]",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:28003",
+      "text": "Tip (팁)은",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44370:28008",
+      "text": "➊ Accent tip (ㅇㅇ) > 상단 헤더 하단에 있는 버전 > 부모인 개체 상단에 같이 떠있는 버전",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:28010",
+      "text": "➋ Accent box tip? (ㅇㅇ) > 헤더 하단에 배치되어있지만 타이틀+박스인 버전",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:28012",
+      "text": "➌ Info tip (인포 팁) > 텍스트 + 아이콘(이 아이콘을 누르면 팁이 나오는 형태) 버전",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:28020",
+      "text": "종류 (2)",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227936",
+        "Group 2147227710",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44370:28027",
+      "text": "세차/정비 직후라면 이전 대여자 주차위치와 상이할 수 있어요.",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tip"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "44370:28031",
+      "text": "Style",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:28032",
+      "text": "Reference",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44370:28035",
+      "text": "\bIcon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 색상 스타일과 상태값(Off·On)을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary)에 관계없이 동일하게 적용합니다. (아래항목도 동일)",
+      "in": [
+        "Components_Selection box",
+        "Components_Selection box",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    }
+  ]
+}

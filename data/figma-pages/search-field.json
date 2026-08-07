@@ -1,0 +1,2632 @@
+{
+  "$description": "Search field (서치필드) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "43864:73365",
+    "pageName": "Search field (서치필드) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 601,
+    "byType": {
+      "canvas": 1,
+      "frame": 281,
+      "text": 172,
+      "instance": 146,
+      "vector": 1
+    },
+    "topLevel": 15,
+    "texts": 172,
+    "namedTexts": 172,
+    "templateStubs": 6,
+    "symbols": 0
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "43882:14856",
+      "name": "매거진_필터",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43882:23947",
+      "name": "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43882:23970",
+      "name": "SCR_GA_OW_0202_T02",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "instance",
+      "id": "43956:4750",
+      "name": "top app bar_ios",
+      "w": 375,
+      "h": 44
+    },
+    {
+      "type": "frame",
+      "id": "43956:4774",
+      "name": "top app bar_ios",
+      "w": 375,
+      "h": 44
+    },
+    {
+      "type": "frame",
+      "id": "43956:4777",
+      "name": "Frame 3441",
+      "w": 279,
+      "h": 24
+    },
+    {
+      "type": "frame",
+      "id": "43893:25055",
+      "name": "Group 72125",
+      "w": 335,
+      "h": 40
+    },
+    {
+      "type": "frame",
+      "id": "43893:25065",
+      "name": "Example",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43893:25108",
+      "name": "title_search",
+      "w": 375,
+      "h": 73
+    },
+    {
+      "type": "text",
+      "id": "43893:36916",
+      "name": "Search field (서치 필드)는 형태상 Text field (텍스트필드)와 유사하게 보이지만, 검색을 실행하는 기능을 수행한다는 점에서 별도 컴포넌트로 분류합니다. Text field (텍스트필드)는 입력한 값을 저장·전달하는 데 목적이 있는 반면, Search field (서치 필드)는 입력한 값으로 검색을 즉시 실행하는 액션을 수행합니다. 다만 아이콘이 조합되는 형태적 특징이 Text field (텍스트필드) 유형들과 유사해, Search text field (서치 텍스트필드)라는 이름으로 Text field (텍스트필드) 유형 목록에도 포함합니다. 분리 이유 — 형태는 닮았지만 기능(검색 실행)이 다르다 기능 대비 — Text field(저장·전달) vs Search field(검색 실행)를 명확히 병렬로 동시 포함 이유 — 형태적 유사성 때문에 Text field 유형 목록에도 들어간다는 것까지 한 문단에 정리",
+      "w": 448,
+      "h": 368
+    },
+    {
+      "type": "frame",
+      "id": "43893:36917",
+      "name": "Components_Search field",
+      "w": 1920,
+      "h": 3851
+    },
+    {
+      "type": "frame",
+      "id": "43912:23944",
+      "name": "SCR_GA_RV_0204_M01_프리존 반납_지정",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43956:4431",
+      "name": "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43956:4454",
+      "name": "SCR_GA_OW_0202_T02",
+      "w": 375,
+      "h": 800
+    },
+    {
+      "type": "frame",
+      "id": "43957:4797",
+      "name": "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+      "w": 375,
+      "h": 829
+    }
+  ],
+  "componentSets": null,
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Structure",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 6
+  },
+  "texts": [
+    {
+      "id": "43882:14859",
+      "text": "서울 속 숨은 데이트 명소 3",
+      "in": [
+        "매거진_필터",
+        "Group 716086"
+      ],
+      "x": 142,
+      "y": 725
+    },
+    {
+      "id": "43882:14861",
+      "text": "핫플",
+      "in": [
+        "매거진_필터",
+        "Group 716086",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14864",
+      "text": "벚꽃명소 다 모아봤G",
+      "in": [
+        "매거진_필터",
+        "Group 716088"
+      ],
+      "x": 142,
+      "y": 888
+    },
+    {
+      "id": "43882:14867",
+      "text": "겨울 스포츠 G car와 준비하기",
+      "in": [
+        "매거진_필터",
+        "Group 716089"
+      ],
+      "x": 256,
+      "y": 888
+    },
+    {
+      "id": "43882:14870",
+      "text": "제주도 그린카 라운지",
+      "in": [
+        "매거진_필터",
+        "Group 716090"
+      ],
+      "x": 28,
+      "y": 888
+    },
+    {
+      "id": "43882:14882",
+      "text": "신규",
+      "in": [
+        "매거진_필터",
+        "RV_tab_default"
+      ],
+      "x": 32,
+      "y": 8
+    },
+    {
+      "id": "43882:14886",
+      "text": "신규",
+      "in": [
+        "매거진_필터",
+        "Group 72125"
+      ],
+      "x": 32,
+      "y": 114
+    },
+    {
+      "id": "43882:14887",
+      "text": "최신순 ㅣ 조회순",
+      "in": [
+        "매거진_필터"
+      ],
+      "x": 258,
+      "y": 240
+    },
+    {
+      "id": "43882:14890",
+      "text": "벚꽃명소 다 모아봤G",
+      "in": [
+        "매거진_필터",
+        "Group 716087"
+      ],
+      "x": 256,
+      "y": 725
+    },
+    {
+      "id": "43882:14893",
+      "text": "탄소중립 참여 우리 모두 함께!",
+      "in": [
+        "매거진_필터",
+        "Group 716085"
+      ],
+      "x": 28,
+      "y": 725
+    },
+    {
+      "id": "43882:14898",
+      "text": "벚꽃명소 다 모아봤G",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716080"
+      ],
+      "x": 8,
+      "y": 115
+    },
+    {
+      "id": "43882:14900",
+      "text": "여행",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716080",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14904",
+      "text": "핫플",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716081",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14905",
+      "text": "겨울 스포츠 G car와 준비하기",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716081"
+      ],
+      "x": 122,
+      "y": 115
+    },
+    {
+      "id": "43882:14908",
+      "text": "탄소중립 참여 우리 모두 함께!",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716082"
+      ],
+      "x": 236,
+      "y": 115
+    },
+    {
+      "id": "43882:14910",
+      "text": "튜토리얼",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716082",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14913",
+      "text": "제주도 그린카 라운지",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 71768"
+      ],
+      "x": 8,
+      "y": 278
+    },
+    {
+      "id": "43882:14915",
+      "text": "여행",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 71768",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14918",
+      "text": "수원에 떡볶이 맛집이 숨어있다?",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716085"
+      ],
+      "x": 122,
+      "y": 278
+    },
+    {
+      "id": "43882:14920",
+      "text": "핫플",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716085",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14923",
+      "text": "실시간 정체? 우리가 알려줄게!",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716088"
+      ],
+      "x": 236,
+      "y": 278
+    },
+    {
+      "id": "43882:14925",
+      "text": "안전",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716088",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14928",
+      "text": "오로라를 닮은 별들 보러 갈래?",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716083"
+      ],
+      "x": 8,
+      "y": 441.1219482421875
+    },
+    {
+      "id": "43882:14930",
+      "text": "여행",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716083",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14933",
+      "text": "서울 가볼만한 관광명소",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "High-top sneakers, white background"
+      ],
+      "x": 122,
+      "y": 441.1219482421875
+    },
+    {
+      "id": "43882:14936",
+      "text": "빵순이들 주목할 경기도 빵집",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716086"
+      ],
+      "x": 236,
+      "y": 441.1219482421875
+    },
+    {
+      "id": "43882:14938",
+      "text": "핫플",
+      "in": [
+        "매거진_필터",
+        "Frame 716078",
+        "Frame 716078",
+        "Group 716086",
+        "Frame 71749"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43882:14942",
+      "text": "무료 편도를 이용하실 수 있습니다.",
+      "in": [
+        "매거진_필터",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14951",
+      "text": "조회 기간",
+      "in": [
+        "매거진_필터",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14962",
+      "text": "신규",
+      "in": [
+        "매거진_필터",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "text",
+        "Group 716094",
+        "Group 716093",
+        "Group 716091"
+      ],
+      "x": 15.049180030822754,
+      "y": 90
+    },
+    {
+      "id": "43882:14966",
+      "text": "신규",
+      "in": [
+        "매거진_필터",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "text",
+        "Group 716094",
+        "Group 716093",
+        "Group 716092"
+      ],
+      "x": 186,
+      "y": 90
+    },
+    {
+      "id": "43882:14968",
+      "text": "신규",
+      "in": [
+        "매거진_필터",
+        "bottom_sheet_freeway_ios",
+        "body",
+        "text",
+        "Group 716094",
+        "Group 716093"
+      ],
+      "x": 161,
+      "y": 90
+    },
+    {
+      "id": "43882:14978",
+      "text": "좋아요",
+      "in": [
+        "매거진_필터",
+        "Frame 716096"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "43882:23954",
+      "text": "검색 결과가 없어요.",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "fov"
+      ],
+      "x": 114.5,
+      "y": 10
+    },
+    {
+      "id": "43882:23957",
+      "text": "현재 위치: 서울 강남구 테헤란로70길 16",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "gps_btn"
+      ],
+      "x": 12,
+      "y": 8
+    },
+    {
+      "id": "43882:23964",
+      "text": "최근 검색 지역",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "recent list",
+        "최근 이용한 지역",
+        "최근 이용한 지역",
+        "fov"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43882:23975",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525"
+      ],
+      "x": 0,
+      "y": 76
+    },
+    {
+      "id": "43882:23984",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:23985",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:23986",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:23989",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:23997",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:23998",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:23999",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24002",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24010",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24012",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24013",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24014",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24017",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43882:24025",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24027",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24028",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24029",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24032",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24040",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24042",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24043",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24044",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24047",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24055",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24057",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24058",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24059",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24062",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24070",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24072",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24073",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24074",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24077",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24085",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24087",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24088",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24089",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24092",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43882:24100",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24102",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24103",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43882:24104",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:24107",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4778",
+      "text": "text",
+      "in": [
+        "Frame 3441"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25058",
+      "text": "신규",
+      "in": [
+        "Group 72125"
+      ],
+      "x": 3467,
+      "y": -2164
+    },
+    {
+      "id": "43893:25071",
+      "text": "소속된 법인 이름을 검색해주세요.",
+      "in": [
+        "Example",
+        "contents",
+        "contents",
+        "text"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43893:36916",
+      "text": "Search field (서치 필드)는 형태상 Text field (텍스트필드)와 유사하게 보이지만, 검색을 실행하는 기능을 수행한다는 점에서 별도 컴포넌트로 분류합니다. Text field (텍스트필드)는 입력한 값을 저장·전달하는 데 목적이 있는 반면, Search field (서치 필드)는 입력한 값으로 검색을 즉시 실행하는 액션을 수행합니다. 다만 아이콘이 조합되는 형태적 특징이 Text field (텍스트필드) 유형들과 유사해, Search text field (서치 텍스트필드)라는 이름으로 Text field (텍스트필드) 유형 목록에도 포함합니다. 분리 이유 — 형태는 닮았지만 기능(검색 실행)이 다르다 기능 대비 — Text field(저장·전달) vs Search field(검색 실행)를 명확히 병렬로 동시 포함 이유 — 형태적 유사성 때문에 Text field 유형 목록에도 들어간다는 것까지 한 문단에 정리",
+      "in": [],
+      "x": 3455,
+      "y": -1930
+    },
+    {
+      "id": "43893:36931",
+      "text": "Glossary",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:36932",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43893:36935",
+      "text": "[정의]",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:36936",
+      "text": "Search field (서치필드)는 전체화면에서",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43893:37070",
+      "text": "Search field (서치필드)",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:37075",
+      "text": "Type",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:37076",
+      "text": "Reference",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:37079",
+      "text": "[유형]",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:37080",
+      "text": "Top app bar (탑앱바)는 사용 용도에 따라 다음 3가지 유형으로 나뉩니다.",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43893:37085",
+      "text": "➊ Default (기본형)",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:37087",
+      "text": "➋ Search (검색형)",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:37090",
+      "text": "➌ Brand (브랜드형)",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:37095",
+      "text": "Top app bar (탑앱바)",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 148.5,
+      "y": 0
+    },
+    {
+      "id": "43893:37096",
+      "text": "화면 최상단에서 이동·검색·브랜드 등 화면별 기능을 담는 영역",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43893:37115",
+      "text": "Structure",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:37116",
+      "text": "Reference",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43893:37119",
+      "text": "[구조_Default (기본형)]",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:37120",
+      "text": "Default (기본형) Icon(아이콘) · Label(라벨) · Background(백그라운드)로 구성됩니다. 좌·우 Icon과 중앙 Label이 Background 위에 정렬되며, 좌우 여백과 요소 간 간격은 spacing 토큰을 따릅니다.",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43893:37126",
+      "text": "구조",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:37149",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Search field",
+        "Components_Search field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43956:4438",
+      "text": "검색 결과가 없어요.",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "fov"
+      ],
+      "x": 114.5,
+      "y": 10
+    },
+    {
+      "id": "43956:4441",
+      "text": "현재 위치: 서울 강남구 테헤란로70길 16",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "gps_btn"
+      ],
+      "x": 12,
+      "y": 8
+    },
+    {
+      "id": "43956:4448",
+      "text": "최근 검색 지역",
+      "in": [
+        "SCR_GA_OW_0202_T01_주소 검색 결과 없음",
+        "Frame 3526",
+        "recent list",
+        "최근 이용한 지역",
+        "최근 이용한 지역",
+        "fov"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43956:4459",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525"
+      ],
+      "x": 0,
+      "y": 76
+    },
+    {
+      "id": "43956:4468",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4469",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4470",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4473",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4481",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4482",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4483",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4486",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4494",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4496",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4497",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4498",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4501",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43956:4509",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4511",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4512",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4513",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4516",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_4",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4524",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4526",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4527",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4528",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4531",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_5",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4539",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4541",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4542",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4543",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4546",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_6",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4554",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4556",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4557",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4558",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4561",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_7",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4569",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4571",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4572",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4573",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4576",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43956:4584",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4586",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43956:4587",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759",
+        "Frame 3542",
+        "Frame 3543"
+      ],
+      "x": 30,
+      "y": 0
+    },
+    {
+      "id": "43956:4588",
+      "text": "서울 강남구 대치동 937",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43956:4591",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_OW_0202_T02",
+        "Frame 3525",
+        "Frame 71863",
+        "list_8",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43957:4806",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4807",
+      "text": "인천광역시 중구 운서동 2851",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4810",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_1",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43957:4817",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4818",
+      "text": "서울 송파구 잠실동 294-3",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4821",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_2",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 0,
+      "y": 28
+    },
+    {
+      "id": "43957:4828",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4829",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4832",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43957:4839",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4840",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4843",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43957:4850",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4851",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4854",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43957:4861",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4862",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4865",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    },
+    {
+      "id": "43957:4872",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:4873",
+      "text": "서울 강남구 삼성동 159",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 3524",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43957:4876",
+      "text": "69.2km",
+      "in": [
+        "SCR_GA_RV_0204_M01_프리존 반납_키워드 검색",
+        "recent list",
+        "list_3",
+        "list1",
+        "Frame 2855"
+      ],
+      "x": 1,
+      "y": 28
+    }
+  ]
+}

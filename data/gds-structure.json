@@ -1,0 +1,77 @@
+{
+  "$description": "GDS 문서 계층 — 원본 [Guidelines] ✅ 구조도와 Getting started ✅ 목차를 저장소 뼈대로 옮긴 것. 각 항목의 저장소 반영 상태를 함께 표시합니다.",
+  "source": "42066:27863 (Getting started ✅ 목차) · 43176:109614 ([Guidelines] ✅ 구조도)",
+  "checkedAt": "2026-08-05",
+  "note": "이 4계층은 문서 계층입니다. 토큰 계층(프리미티브 → 시맨틱 → 컴포넌트)과는 별개이며, 두 축이 교차합니다.",
+  "tokenLayers": ["프리미티브", "시맨틱", "컴포넌트"],
+  "layers": [
+    {
+      "id": "L1", "name": "Guidelines", "ko": "가이드라인", "role": "방향성과 기준정의의 토대",
+      "정의": "GDS 전반에 걸쳐 일관된 디자인 방향성을 유지하기 위해 기본적으로 지켜야 할 원칙과 기준을 정의하는 영역",
+      "items": [
+        { "name": "Principle", "figma": "wip", "repo": "none" },
+        { "name": "UI/UX Guide", "figma": "done", "repo": "docs", "where": "docs/GDS-uiux-guide.md · data/gds-library.json pages.uiuxGuide" },
+        { "name": "Layout for ios/aos/web", "figma": "done", "repo": "tokens", "where": "data/layout-tokens.json → dist/tokens/" },
+        { "name": "Component overview", "figma": "wip", "repo": "none" }
+      ]
+    },
+    {
+      "id": "L2", "name": "Foundation", "ko": "파운데이션", "role": "디자인의 기본 재료",
+      "정의": "각 요소는 서로 종속되지 않고 각자의 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않습니다.",
+      "items": [
+        { "name": "Color", "figma": "done", "repo": "tokens", "where": "data/gds-library.json fill 60종 → dist/tokens/" },
+        { "name": "Typography", "figma": "done", "repo": "tokens", "where": "원본 21단계 → dist/tokens/" },
+        { "name": "Spacing", "figma": "done", "repo": "tokens", "where": "14단계 → dist/tokens/" },
+        { "name": "Icon", "figma": "wip", "repo": "docs", "where": "그래픽 3단계 기준만 — docs/GDS-uiux-guide.md", "note": "Icon system 페이지는 🚧. 분류 기준(Lv.1~3)은 UI/UX guide ✅ 에 있습니다" },
+        { "name": "Elevation", "figma": "wip", "repo": "tokens", "where": "Elevation_1~6 → dist/tokens/", "note": "라이브러리에는 EFFECT 스타일로 published 돼 있으나 Elevation system 페이지는 🚧" },
+        { "name": "Radius", "figma": "wip", "repo": "tokens", "where": "xs~full 7단계 → dist/tokens/", "note": "라이브러리 변수로 존재. Radius system 페이지는 🚧" }
+      ],
+      "conflict": "[Foundation] ✅ 본문은 Color·Typography·Spacing·Icon 4개만 적고 있으나, [Guidelines] ✅ 구조도와 Getting started ✅ 목차는 Elevation·Radius 를 포함한 6개입니다. 저장소는 다수 근거인 6개를 따릅니다 (GAP-14)."
+    },
+    {
+      "id": "L3", "name": "Components", "ko": "컴포넌트", "role": "완성형 단위",
+      "정의": "텍스트 · 그래픽 · 인터랙션 요소가 결합되어 하나의 기능 또는 정보를 전달하는 UI 단위",
+      "items": [
+        { "name": "Buttons", "figma": "done", "repo": "measured", "where": "data/component-buttons.json" },
+        { "name": "Modal", "figma": "done", "repo": "measured", "where": "gds-library.json pages.components.modal" },
+        { "name": "Check box", "figma": "done", "repo": "measured", "where": "pages.components.checkbox" },
+        { "name": "Bottom navigation", "figma": "done", "repo": "measured", "where": "pages.components.bottomNavigation" },
+        { "name": "Picker", "figma": "done", "repo": "measured", "where": "pages.components.picker" },
+        { "name": "Border", "figma": "done", "repo": "none" },
+        { "name": "Bottom sheet", "figma": "wip", "repo": "measured", "where": "pages.components.bottomSheet", "note": "정의가 Picker ✅ 안에 있습니다" },
+        { "name": "Input", "figma": "wip", "repo": "none", "note": "목차는 Input, 실제 페이지 이름은 Text field" },
+        { "name": "Switch", "figma": "none", "repo": "none" },
+        { "name": "Selection box", "figma": "wip", "repo": "none" },
+        { "name": "Radio", "figma": "none", "repo": "none" },
+        { "name": "Accordion", "figma": "none", "repo": "none" },
+        { "name": "Tap app bar", "figma": "wip", "repo": "none", "note": "표기 오류 — Top app bar" },
+        { "name": "Tap", "figma": "wip", "repo": "none", "note": "표기 오류 — Tab" },
+        { "name": "Smart key", "figma": "wip", "repo": "none" },
+        { "name": "Tip", "figma": "wip", "repo": "none" },
+        { "name": "Bage", "figma": "wip", "repo": "none", "note": "표기 오류 — Badge" },
+        { "name": "Process bar", "figma": "none", "repo": "none" },
+        { "name": "Toast", "figma": "wip", "repo": "none" },
+        { "name": "Card", "figma": "none", "repo": "none" },
+        { "name": "Skeleton", "figma": "none", "repo": "none" },
+        { "name": "Loading spinner", "figma": "none", "repo": "none" },
+        { "name": "Table", "figma": "none", "repo": "none" },
+        { "name": "Pasing", "figma": "wip", "repo": "none", "note": "표기 오류 — Paging" },
+        { "name": "Numbering", "figma": "wip", "repo": "none" }
+      ]
+    },
+    {
+      "id": "L4", "name": "Template", "ko": "템플릿", "role": "상위 조합 단위",
+      "items": [],
+      "note": "원본에 «설명 추가 예정» 으로만 적혀 있습니다."
+    }
+  ],
+  "documentationRules": {
+    "source": "Getting started ✅ 43176:106899",
+    "rules": [
+      { "구분": "현재 사용 중인 요소", "포함": "포함", "확인위치": "현재 파일" },
+      { "구분": "현재 사용되지 않는 요소", "포함": "제외", "확인위치": "히스토리 파일" },
+      { "구분": "주석 표시", "포함": "As is / To be / 업데이트", "확인위치": "현재 파일" }
+    ],
+    "note": "레거시 라이브러리를 판단 근거에서 빼는 것은 이 규칙을 따른 것입니다."
+  }
+}

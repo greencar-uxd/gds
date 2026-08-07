@@ -1,0 +1,2557 @@
+{
+  "$description": "Smart key (스마트 키) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42073:63439",
+    "pageName": "Smart key (스마트 키) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 2495,
+    "byType": {
+      "canvas": 1,
+      "frame": 532,
+      "instance": 1765,
+      "text": 157,
+      "vector": 10,
+      "symbol": 20,
+      "ellipse": 9,
+      "section": 1
+    },
+    "topLevel": 41,
+    "texts": 157,
+    "namedTexts": 157,
+    "templateStubs": 11,
+    "symbols": 20
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42073:63440",
+      "name": "16. Smartkey / 위젯",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "43984:5423",
+      "name": "SCR_GA_CT_0101_M06_주차위치",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43984:5479",
+      "name": "SCR_GA_CT_0101_M06_주차위치",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43984:6097",
+      "name": "SCR_GA_CT_0601_M01",
+      "w": 375,
+      "h": 1365
+    },
+    {
+      "type": "frame",
+      "id": "43984:6203",
+      "name": "SCR_GA_CT_0601_M01",
+      "w": 375,
+      "h": 1361
+    },
+    {
+      "type": "instance",
+      "id": "43984:6471",
+      "name": "bottom_sheet_smartkey_ios",
+      "w": 375,
+      "h": 310
+    },
+    {
+      "type": "frame",
+      "id": "43984:10463",
+      "name": "Components_Smart key",
+      "w": 1920,
+      "h": 5167
+    },
+    {
+      "type": "frame",
+      "id": "43984:15182",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 818
+    },
+    {
+      "type": "frame",
+      "id": "43984:15300",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 770
+    },
+    {
+      "type": "frame",
+      "id": "43984:22975",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 830
+    },
+    {
+      "type": "frame",
+      "id": "43984:23280",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 787
+    },
+    {
+      "type": "frame",
+      "id": "44014:21976",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 781
+    },
+    {
+      "type": "frame",
+      "id": "44014:22617",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 785
+    },
+    {
+      "type": "frame",
+      "id": "44014:22744",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 789
+    },
+    {
+      "type": "frame",
+      "id": "44014:23138",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "44014:23393",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "44014:22895",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 789
+    },
+    {
+      "type": "frame",
+      "id": "44014:22100",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 798
+    },
+    {
+      "type": "frame",
+      "id": "44014:22450",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 798
+    },
+    {
+      "type": "frame",
+      "id": "43984:23094",
+      "name": "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+      "w": 375,
+      "h": 830
+    },
+    {
+      "type": "frame",
+      "id": "44014:14302",
+      "name": "Bottom sheet_Smart key",
+      "w": 375,
+      "h": 218
+    },
+    {
+      "type": "frame",
+      "id": "44014:21945",
+      "name": "Bottom sheet_Smart key",
+      "w": 375,
+      "h": 227
+    },
+    {
+      "type": "instance",
+      "id": "43984:23250",
+      "name": "btn_smartkey",
+      "w": 50,
+      "h": 50
+    },
+    {
+      "type": "instance",
+      "id": "43984:34490",
+      "name": "icon_doorlock_close",
+      "w": 100,
+      "h": 100
+    },
+    {
+      "type": "frame",
+      "id": "43984:34501",
+      "name": "Bottom Sheet",
+      "w": 375,
+      "h": 199
+    },
+    {
+      "type": "frame",
+      "id": "44007:33698",
+      "name": "lock",
+      "w": 24,
+      "h": 24
+    },
+    {
+      "type": "frame",
+      "id": "44007:33704",
+      "name": "lock-open",
+      "w": 24,
+      "h": 24
+    },
+    {
+      "type": "frame",
+      "id": "44007:15161",
+      "name": "05. Icons",
+      "w": 614,
+      "h": 2206
+    },
+    {
+      "type": "frame",
+      "id": "44007:15554",
+      "name": "tabler icon",
+      "w": 1326,
+      "h": 3461
+    },
+    {
+      "type": "section",
+      "id": "44007:33647",
+      "name": "reference",
+      "w": 1855,
+      "h": 825
+    },
+    {
+      "type": "frame",
+      "id": "44007:33668",
+      "name": "ico_noti",
+      "w": 23.999998092651367,
+      "h": 23.999998092651367
+    },
+    {
+      "type": "frame",
+      "id": "44014:14280",
+      "name": "Smart key",
+      "w": 328,
+      "h": 80.00003051757812
+    },
+    {
+      "type": "frame",
+      "id": "44014:21801",
+      "name": "Description area",
+      "w": 1545,
+      "h": 1048
+    },
+    {
+      "type": "frame",
+      "id": "44772:114061",
+      "name": "bottom_sheet_smartkey_ios",
+      "w": 375,
+      "h": 254
+    },
+    {
+      "type": "instance",
+      "id": "44772:114161",
+      "name": "경적",
+      "w": 100,
+      "h": 68
+    },
+    {
+      "type": "instance",
+      "id": "44772:114162",
+      "name": "비상등",
+      "w": 100,
+      "h": 68
+    },
+    {
+      "type": "frame",
+      "id": "44772:114270",
+      "name": "bottom_sheet_ready_greenzone_ios",
+      "w": 375,
+      "h": 223
+    },
+    {
+      "type": "instance",
+      "id": "44906:45629",
+      "name": "bottom_sheet_smartkey_aos",
+      "w": 360,
+      "h": 324
+    },
+    {
+      "type": "instance",
+      "id": "44906:45637",
+      "name": "bottom_sheet_smartkey_ios",
+      "w": 375,
+      "h": 334
+    },
+    {
+      "type": "symbol",
+      "id": "44936:20429",
+      "name": "bottom_sheet_smartkey_ios",
+      "w": 375,
+      "h": 220
+    },
+    {
+      "type": "frame",
+      "id": "45136:62078",
+      "name": "Example",
+      "w": 375,
+      "h": 812
+    }
+  ],
+  "componentSets": {
+    "total": 20,
+    "axes": {
+      "Property 1": {
+        "ic_flash_on": 1,
+        "ic_flash_on_disabled": 1,
+        "ic_flash_off": 1,
+        "ic_flash_off_disabled": 1,
+        "img_car_main_back": 2,
+        "img_car_sub_Set": 1,
+        "img_car_sub_back_set": 1,
+        "img_car_main_back_set": 1,
+        "img_car_main_set": 1,
+        "ct_tab_off": 1,
+        "ct_tab_on": 1,
+        "logo_tosspay": 1,
+        "logo_kakao": 1,
+        "logo_naverpay": 1,
+        "oda_icon-on": 1,
+        "oda_icon_off": 1,
+        "oda_pin_default": 1,
+        "oda_pin_disable": 1
+      }
+    },
+    "unparsed": [
+      "bottom_sheet_smartkey_ios"
+    ],
+    "caseCollisions": [],
+    "items": [
+      {
+        "id": "42073:63514",
+        "name": "Property 1=ic_flash_on",
+        "w": 50,
+        "h": 50,
+        "in": "icon"
+      },
+      {
+        "id": "42073:63517",
+        "name": "Property 1=ic_flash_on_disabled",
+        "w": 50,
+        "h": 50,
+        "in": "icon"
+      },
+      {
+        "id": "42073:63520",
+        "name": "Property 1=ic_flash_off",
+        "w": 50,
+        "h": 50,
+        "in": "icon"
+      },
+      {
+        "id": "42073:63522",
+        "name": "Property 1=ic_flash_off_disabled",
+        "w": 50,
+        "h": 50,
+        "in": "icon"
+      },
+      {
+        "id": "42073:63525",
+        "name": "Property 1=img_car_main_back",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63530",
+        "name": "Property 1=img_car_sub_Set",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63535",
+        "name": "Property 1=img_car_sub_back_set",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63540",
+        "name": "Property 1=img_car_main_back",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63545",
+        "name": "Property 1=img_car_main_back_set",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63550",
+        "name": "Property 1=img_car_main_set",
+        "w": 230,
+        "h": 50,
+        "in": "Component 80"
+      },
+      {
+        "id": "42073:63556",
+        "name": "Property 1=ct_tab_off",
+        "w": 67,
+        "h": 34,
+        "in": "Component 81"
+      },
+      {
+        "id": "42073:63558",
+        "name": "Property 1=ct_tab_on",
+        "w": 54,
+        "h": 31,
+        "in": "Component 81"
+      },
+      {
+        "id": "44007:15487",
+        "name": "Property 1=logo_tosspay",
+        "w": 74,
+        "h": 24,
+        "in": "logo_pay"
+      },
+      {
+        "id": "44007:15503",
+        "name": "Property 1=logo_kakao",
+        "w": 74,
+        "h": 24,
+        "in": "logo_pay"
+      },
+      {
+        "id": "44007:15510",
+        "name": "Property 1=logo_naverpay",
+        "w": 74,
+        "h": 24,
+        "in": "logo_pay"
+      },
+      {
+        "id": "44007:15518",
+        "name": "Property 1=oda_icon-on",
+        "w": 16,
+        "h": 26,
+        "in": "oda_icon"
+      },
+      {
+        "id": "44007:15523",
+        "name": "Property 1=oda_icon_off",
+        "w": 16,
+        "h": 26,
+        "in": "oda_icon"
+      },
+      {
+        "id": "44007:15529",
+        "name": "Property 1=oda_pin_default",
+        "w": 36,
+        "h": 58,
+        "in": "oda_pin"
+      },
+      {
+        "id": "44007:15536",
+        "name": "Property 1=oda_pin_disable",
+        "w": 36,
+        "h": 58,
+        "in": "oda_pin"
+      },
+      {
+        "id": "44936:20429",
+        "name": "bottom_sheet_smartkey_ios",
+        "w": 375,
+        "h": 220,
+        "in": "Smart key (스마트 키) 🚧"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Structure",
+      "Type",
+      "Usage",
+      "[]",
+      "설명",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 11
+  },
+  "texts": [
+    {
+      "id": "42073:63449",
+      "text": "사고접수",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "floating btn (Quick)",
+        "floating btn",
+        "btn",
+        "5"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42073:63453",
+      "text": "챗봇",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "floating btn (Quick)",
+        "floating btn",
+        "btn",
+        "7"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42073:63458",
+      "text": "1:1 문의",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "floating btn (Quick)",
+        "floating btn",
+        "btn",
+        "3"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42073:63461",
+      "text": "자주 묻는 질문",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "floating btn (Quick)",
+        "floating btn",
+        "btn",
+        "2"
+      ],
+      "x": 0,
+      "y": 18
+    },
+    {
+      "id": "42073:63464",
+      "text": "고객센터",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "floating btn (Quick)",
+        "floating btn",
+        "btn",
+        "1"
+      ],
+      "x": 0,
+      "y": 17
+    },
+    {
+      "id": "42073:63482",
+      "text": "12:30",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "차 잠금 버튼",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "42073:63494",
+      "text": "운행 전에 반드시 차량 사진을 전송해주세요!",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "차 잠금 버튼",
+        "contents",
+        "텍스트"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "42073:63496",
+      "text": "사진을 촬영하지 않은 상태에서 새로운 파손이 확인되면 수리 비용을 청구받을 수 있습니다.",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "차 잠금 버튼",
+        "contents",
+        "텍스트",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42073:63502",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "차 잠금 버튼",
+        "contents",
+        "Frame 3576",
+        "버튼+차량 이동 텍스트",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42073:63508",
+      "text": "Title  29 Copy 50",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1491,
+      "y": 2021
+    },
+    {
+      "id": "42073:63509",
+      "text": "Title  29 Copy 51",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1620,
+      "y": 2021
+    },
+    {
+      "id": "42073:63576",
+      "text": "주차유형 선택 후 입력해주세요.",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "tost01"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "42073:63577",
+      "text": "Title  29 Copy 44",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 794,
+      "y": 1336
+    },
+    {
+      "id": "42073:63578",
+      "text": "Title  29 Copy 52",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 794,
+      "y": 1459
+    },
+    {
+      "id": "42073:63589",
+      "text": "aos",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 536,
+      "y": 655
+    },
+    {
+      "id": "42073:63590",
+      "text": "aos (라이트모드 / 다크모드 공통)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 457,
+      "y": 1239
+    },
+    {
+      "id": "42073:63591",
+      "text": "aos(반납 후 사진전송 시 스마트키 활성화)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 948,
+      "y": 1435
+    },
+    {
+      "id": "42073:63592",
+      "text": "ios(반납 후 사진전송 시 스마트키 활성화)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1351,
+      "y": 1435
+    },
+    {
+      "id": "42073:63593",
+      "text": "aos (라이트모드 / 다크모드 공통)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 377,
+      "y": 1664
+    },
+    {
+      "id": "42073:63594",
+      "text": "ios (라이트모드 / 다크모드 공통)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 763,
+      "y": 1664
+    },
+    {
+      "id": "42073:63595",
+      "text": "ios",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1352,
+      "y": 655
+    },
+    {
+      "id": "42073:63596",
+      "text": "스마트키 차량 제어",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 838
+    },
+    {
+      "id": "42073:63597",
+      "text": "위젯",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 1433
+    },
+    {
+      "id": "42073:63598",
+      "text": "차량외관촬영 탭",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 1732
+    },
+    {
+      "id": "42073:63599",
+      "text": "토스트 팝업",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 1976
+    },
+    {
+      "id": "42073:63600",
+      "text": "floating btn (Quick)",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 2464
+    },
+    {
+      "id": "42073:63601",
+      "text": "스마트키 차량 외관 촬영 이미지",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1032,
+      "y": 2464
+    },
+    {
+      "id": "42073:63602",
+      "text": "반납지 사진 전송 촬영 이미지",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 1032,
+      "y": 2984
+    },
+    {
+      "id": "42073:63603",
+      "text": "차 잠금 버튼",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯"
+      ],
+      "x": 80,
+      "y": 3324
+    },
+    {
+      "id": "42073:63622",
+      "text": "문구를 입력하세요.",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "Group 71918"
+      ],
+      "x": 1483.0000305175781,
+      "y": 1498.0000019073486
+    },
+    {
+      "id": "42073:63627",
+      "text": "문구를 입력하세요.",
+      "in": [
+        "16. Smartkey / 위젯",
+        "16. Smartkey / 위젯",
+        "Group 71919"
+      ],
+      "x": 1071,
+      "y": 1496.0000019073486
+    },
+    {
+      "id": "43984:5431",
+      "text": "차량외관이 잘 보이도록 촬영해주세요.",
+      "in": [
+        "SCR_GA_CT_0101_M06_주차위치"
+      ],
+      "x": 78,
+      "y": 650
+    },
+    {
+      "id": "43984:5456",
+      "text": "전송",
+      "in": [
+        "SCR_GA_CT_0101_M06_주차위치",
+        "Frame 71834"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43984:5459",
+      "text": "전송",
+      "in": [
+        "SCR_GA_CT_0101_M06_주차위치",
+        "Frame 71835"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43984:5490",
+      "text": "발 매트가 잘 보이도록 촬영해주세요.",
+      "in": [
+        "SCR_GA_CT_0101_M06_주차위치"
+      ],
+      "x": 83,
+      "y": 650
+    },
+    {
+      "id": "43984:5512",
+      "text": "전송",
+      "in": [
+        "SCR_GA_CT_0101_M06_주차위치",
+        "Frame 71834"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43984:6107",
+      "text": "반납 위치 확인",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "반납위치 확인",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:6110",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "반납위치 확인",
+        "대여유형",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 2
+    },
+    {
+      "id": "43984:6117",
+      "text": "주차 위치와 차량 상태를 알려주세요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6139",
+      "text": "주차 위치 확인은 다음 대여자가 차량 위치를 찾는 데 큰 도움이 됩니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "43984:6143",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:6147",
+      "text": "gildonghong",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Input",
+        "Frame 2540",
+        "text_area"
+      ],
+      "x": 0,
+      "y": 14
+    },
+    {
+      "id": "43984:6154",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43984:6155",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43984:6160",
+      "text": "지정 반납 장소에 주차했어요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 71657",
+        "Frame 71657"
+      ],
+      "x": 52,
+      "y": 0
+    },
+    {
+      "id": "43984:6164",
+      "text": "반납 전 확인사항",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6168",
+      "text": "모두 확인했어요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "Frame 71645",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43984:6176",
+      "text": "조기반납 포인트 안내",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6180",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "\blist",
+        "Frame 2967"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43984:6183",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "\blist",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43984:6201",
+      "text": "도어제어",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Group 71685",
+        "Frame 71685"
+      ],
+      "x": 6,
+      "y": 2
+    },
+    {
+      "id": "43984:6213",
+      "text": "반납 위치 확인",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "반납위치 확인",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:6216",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "반납위치 확인",
+        "대여유형",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 2
+    },
+    {
+      "id": "43984:6224",
+      "text": "주차 위치와 차량 상태를 알려주세요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6246",
+      "text": "주차 위치 확인은 다음 대여자가 차량 위치를 찾는 데 큰 도움이 됩니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659"
+      ],
+      "x": 20,
+      "y": 116
+    },
+    {
+      "id": "43984:6250",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:6254",
+      "text": "gildonghong",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Input",
+        "Frame 2540",
+        "text_area"
+      ],
+      "x": 0,
+      "y": 14
+    },
+    {
+      "id": "43984:6261",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43984:6262",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 3567",
+        "Frame 3567",
+        "Frame 71659",
+        "Frame 71836",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43984:6266",
+      "text": "지정 반납 장소에 주차했어요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "Frame 71657",
+        "Frame 71657"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6270",
+      "text": "반납 전 확인사항",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6274",
+      "text": "모두 확인했어요!",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "Frame 71645",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43984:6282",
+      "text": "조기반납 포인트 안내",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43984:6286",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "\blist",
+        "Frame 2967"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43984:6289",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0601_M01",
+        "\bcontents",
+        "\b반납하기 전에 꼭 확인",
+        "\blist",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43984:10477",
+      "text": "Glossary",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10478",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43984:10481",
+      "text": "[정의]",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10482",
+      "text": "Smart key (스마트키)는",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43984:10614",
+      "text": "Smart key (스마트 키)",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43984:10623",
+      "text": "Type",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10624",
+      "text": "Reference",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43984:10627",
+      "text": "[유형]",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10628",
+      "text": "Smart key (스마트키)는 사용 용도에 따라 다음 3가지 유형으로 나뉩니다.",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43984:10633",
+      "text": "➊ 유형 이름",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43984:10635",
+      "text": "➋ 유형 이름",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43984:10640",
+      "text": "설명",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 203.5,
+      "y": 0
+    },
+    {
+      "id": "43984:10645",
+      "text": "Structure",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10646",
+      "text": "Reference",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "43984:10649",
+      "text": "[]",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:10650",
+      "text": "유형 이름 (기본형) 설명글",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43984:10656",
+      "text": "구조",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43984:10665",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44238:25753",
+      "text": "애니메이션",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44238:25729",
+      "text": "Usage",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44238:25730",
+      "text": "Reference",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44238:25733",
+      "text": "[]",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44238:25734",
+      "text": "유형 이름 (기본형) 바텀시트에도 활용 / 바닥화면에서도 / 등등",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44238:25740",
+      "text": "상황",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44238:25746",
+      "text": "상황",
+      "in": [
+        "Components_Smart key",
+        "Components_Smart key",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43984:15187",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:15189",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:15258",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:15305",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:15307",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:15375",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:22980",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:22982",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23051",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23285",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23287",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23357",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:21981",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:21983",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22053",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22575",
+      "text": "잠그기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 1,
+      "y": 40
+    },
+    {
+      "id": "44014:22588",
+      "text": "열기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 6.5,
+      "y": 40
+    },
+    {
+      "id": "44014:22622",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22624",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22694",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22706",
+      "text": "잠그기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 1,
+      "y": 40
+    },
+    {
+      "id": "44014:22717",
+      "text": "열기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 6.5,
+      "y": 40
+    },
+    {
+      "id": "44014:22749",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22751",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22821",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22833",
+      "text": "잠그기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 1,
+      "y": 40
+    },
+    {
+      "id": "44014:23143",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23145",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23215",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23227",
+      "text": "잠그기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 1,
+      "y": 40
+    },
+    {
+      "id": "44014:23398",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23400",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23470",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23531",
+      "text": "잠그기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Smart key",
+        "Left",
+        "Frame 2147227917"
+      ],
+      "x": 1,
+      "y": 40
+    },
+    {
+      "id": "44014:22900",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22902",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22972",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:23020",
+      "text": "열기",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Smart key",
+        "Left",
+        "Frame 2147227918"
+      ],
+      "x": 6.5,
+      "y": 40
+    },
+    {
+      "id": "44014:22105",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22107",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22177",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22455",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22457",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:22527",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227915",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23099",
+      "text": "촬영 전, 주변 공간을 먼저 확보해 주세요.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23101",
+      "text": "촬영 공간이 부족할 경우, 차량을 사전에 이동해야 합니다.",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "text",
+        "Frame 3499"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43984:23170",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_CT_0401_M01_차량 공간 확인1/2",
+        "contents",
+        "Frame 3576",
+        "Frame 2147227914",
+        "Frame 3577"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:14306",
+      "text": "Smart key",
+      "in": [
+        "Bottom sheet_Smart key",
+        "bottom_sheet",
+        "Frame 71590"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "44014:21951",
+      "text": "스마트키",
+      "in": [
+        "Bottom sheet_Smart key",
+        "bottom_sheet",
+        "Frame 71590"
+      ],
+      "x": 20,
+      "y": 16
+    },
+    {
+      "id": "44014:22347",
+      "text": "잠그기",
+      "in": [
+        "Bottom sheet_Smart key",
+        "bottom_sheet",
+        "Frame 71590",
+        "Smart key",
+        "Left",
+        "Frame 2147227916"
+      ],
+      "x": 7,
+      "y": 52
+    },
+    {
+      "id": "44014:23254",
+      "text": "잠그기",
+      "in": [
+        "Bottom sheet_Smart key",
+        "bottom_sheet",
+        "Frame 71590",
+        "Smart key",
+        "Left",
+        "Frame 2147227919"
+      ],
+      "x": 7,
+      "y": 52
+    },
+    {
+      "id": "43984:34515",
+      "text": "Smart Key",
+      "in": [
+        "Bottom Sheet",
+        "new스마트키",
+        "Group 716633"
+      ],
+      "x": 158.00462341308594,
+      "y": 10
+    },
+    {
+      "id": "44007:15558",
+      "text": "Description",
+      "in": [
+        "tabler icon",
+        "Preview",
+        "Header"
+      ],
+      "x": -4817.1494140625,
+      "y": 4096.80029296875
+    },
+    {
+      "id": "44007:15559",
+      "text": "Over 1500 free, open source icons designed to make your website or app attractive, visually consistent and simply beautiful.",
+      "in": [
+        "tabler icon",
+        "Preview",
+        "Header"
+      ],
+      "x": -5710,
+      "y": 4185.80078125
+    },
+    {
+      "id": "44007:15561",
+      "text": "ICONS",
+      "in": [
+        "tabler icon",
+        "Preview",
+        "Header",
+        "Logo"
+      ],
+      "x": -5569.12255859375,
+      "y": 4144.63818359375
+    },
+    {
+      "id": "44014:21807",
+      "text": "Components/Buttons/Default/Primary",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44014:21815",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44014:21823",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44014:21831",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44014:21841",
+      "text": "Components/Buttons/Default/Secondary",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44014:21850",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44014:21858",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44014:21866",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44772:114065",
+      "text": "문을 열어 확인해보세요. 반납 후 10분 안에는 문을 다시 열 수 있습니다.",
+      "in": [
+        "bottom_sheet_smartkey_ios",
+        "bottom_sheet",
+        "Frame 71590"
+      ],
+      "x": 20,
+      "y": 24
+    },
+    {
+      "id": "44772:114278",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "bottom_sheet_ready_greenzone_ios",
+        "Body",
+        "준비중",
+        "그린존"
+      ],
+      "x": 40,
+      "y": 0
+    },
+    {
+      "id": "44772:114285",
+      "text": "고객님을 위해 새롭게 준비중인 G car Zone입니다. 조금만 기다려주세요!",
+      "in": [
+        "bottom_sheet_ready_greenzone_ios",
+        "Body",
+        "text",
+        "Frame 3467",
+        "Frame 3466",
+        "서브 텍스트"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44772:114286",
+      "text": "조금만 기다려주세요!",
+      "in": [
+        "bottom_sheet_ready_greenzone_ios",
+        "Body",
+        "text",
+        "Frame 3467",
+        "Frame 3466",
+        "서브 텍스트"
+      ],
+      "x": 0,
+      "y": 32
+    }
+  ]
+}

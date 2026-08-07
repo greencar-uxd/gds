@@ -1,0 +1,142 @@
+{
+  "$description": "아이콘 — 외부 디자인 시스템 원문. 메우기 위한 것이 아니라 «원본 문장이 어디서 왔는지» 대조하기 위한 것입니다.",
+  "status": "comparison",
+  "retracted": {
+    "at": "2026-08-06",
+    "was": "proposal — 원본에 아이콘 그리드와 크기 용도가 없다고 보고 이 파일의 값으로 «메웠습니다».",
+    "why": "틀렸습니다. 원본 Icon system 페이지에 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인이 통째로 있습니다. 첫 번째 정정 때 «페이지를 직접 읽었다»고 했지만 실제로는 Icon/system/* 노드 이름만 훑었고 본문 텍스트를 읽지 않았습니다.",
+    "howFound": "강민관 2026-08-06 — «그리드 그려져 있고 End cap은 둥글게가 맞아용»",
+    "nowUsedFor": "대조. 원본 문장 중 어느 것이 KRDS 원문 그대로이고 어느 것이 G car 고유인지 기계로 갈라 냅니다(tools/build-icon-guide.js 의 provenance)."
+  },
+  "rule": [
+    "이 파일의 값은 GDS 값이 아닙니다. 토큰으로 나가지 않고, 원본 값을 덮어쓰지도 않습니다.",
+    "원본이 이미 정한 것을 여기 값으로 «보정»하지 않습니다 — 다르면 다르다고만 적습니다.",
+    "항목마다 출처 URL 과 원문을 답니다. 출처 없는 값은 넣지 않습니다."
+  ],
+  "readAt": "2026-08-06",
+  "sources": [
+    {
+      "id": "krds-icon",
+      "name": "KRDS (대한민국 정부 디자인 시스템) — 디자인 스타일 › 아이콘",
+      "url": "https://www.krds.go.kr/html/site/style/style_06.html",
+      "whyThisOne": "원본 제작 가이드라인의 여러 문장이 이 페이지 원문과 글자 그대로 같습니다. 원본이 어디서 가져왔는지 밝히기 위한 대조 대상입니다.",
+      "alreadyQuotedByOriginal": "원본 Radius system 페이지도 KRDS 형태 가이드를 프레임째 인용하고 있습니다."
+    },
+    {
+      "id": "m3-designing",
+      "name": "Material Design 3 — Icons › Designing icons",
+      "url": "https://m3.material.io/styles/icons/designing-icons",
+      "whyThisOne": "그리드·키라인 수치를 dp 로 명시한 출처. 원본 값과 어디가 같고 어디가 다른지 재는 자입니다."
+    },
+    {
+      "id": "m3-applying",
+      "name": "Material Design 3 — Icons › Applying icons",
+      "url": "https://m3.material.io/styles/icons/applying-icons",
+      "whyThisOne": "크기별 쓰임새와 터치 표적 크기. 원본에 없는 축(터치 표적)이라 참고로만 답니다."
+    },
+    {
+      "id": "apple-sf",
+      "name": "Apple Human Interface Guidelines — SF Symbols",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
+      "whyThisOne": "그리드를 두지 않는 모델의 사례. 원본이 그리드 모델을 택했다는 사실을 상대적으로 보여 줍니다."
+    }
+  ],
+
+  "quotes": [
+    {
+      "id": "krds-size",
+      "source": "krds-icon",
+      "text": "24px은 대부분의 인터페이스에서 사용되는 기본 사이즈로, 일반적으로 일관된 시각 경험을 제공하기에 적합하다. 32px과 40px은 강조가 필요하거나 넓은 공간에서 사용할 때 적합하다. 아이콘 사이즈는 4px 또는 8px 배수로 설정해 화면 간 시각적 통일성을 유지한다.",
+      "matchOriginal": "00_Size"
+    },
+    {
+      "id": "krds-sizes",
+      "source": "krds-icon",
+      "text": "시스템 아이콘은 24px을 기준 사이즈로 정의하며, 주요 크기로 16px, 20px, 24px, 32px, 40px를 사용한다.",
+      "matchOriginal": "00_Size"
+    },
+    {
+      "id": "krds-layout",
+      "source": "krds-icon",
+      "text": "아이콘은 Live Area(실제 아이콘이 그려지는 영역)와 Padding(주변 여백)으로 구성된다. 키라인은 이 두 영역을 통해 아이콘이 배치되는 기본적인 구조를 제공해, 모든 아이콘이 동일한 비율로 정렬되도록 돕는다.",
+      "matchOriginal": "01_Layout"
+    },
+    {
+      "id": "krds-offslash",
+      "source": "krds-icon",
+      "text": "표준형 스타일은 좌측 상단에서 우측 하단 방향으로 표현하며, 오브제와 슬래시의 여백은 선 두께의 1/2(0.8px)로 사용한다.",
+      "matchOriginal": "06_Off slash"
+    },
+    {
+      "id": "krds-stack",
+      "source": "krds-icon",
+      "text": "표준형 스타일은 좌측에서 우측으로 쌓는 순서를 통일하며 겹쳐진 여백은 1.6px로 사용한다.",
+      "matchOriginal": "07_Stack"
+    },
+    {
+      "id": "krds-stroke",
+      "source": "krds-icon",
+      "text": "24x24px 사이즈의 아이콘 두께로 1.5px~2px 범위를 권장한다. 표준형 스타일에서는 24px 사이즈의 아이콘을 기준으로 두께를 1.6px로 설정",
+      "matchOriginal": null,
+      "note": "원본은 1.2px 로 다르게 정했고 이유까지 적었습니다 — «1.5px 이상은 곡선이 많은 형태(자동차 등)에서 뭉쳐 보이는 착시». G car 고유 판단입니다."
+    },
+    {
+      "id": "krds-endcap",
+      "source": "krds-icon",
+      "text": "표준형 스타일은 end cap의 둥근 형태로 사용한다.",
+      "matchOriginal": null,
+      "note": "원본은 표 칸으로 «기본 Cap = Round · 교차 지점 예외 = Butt + 1px offset» 을 정했습니다. 둥근 형태라는 방향은 같고, 예외 규칙은 원본이 더 자세합니다."
+    },
+    {
+      "id": "m3-canvas",
+      "source": "m3-designing",
+      "text": "Standard icons are displayed as 24dp x 24dp.",
+      "matchOriginal": null,
+      "note": "원본도 24×24 프레임을 기준으로 씁니다 — 문장이 아니라 값이 같습니다."
+    },
+    {
+      "id": "m3-livearea",
+      "source": "m3-designing",
+      "text": "Icon content is limited to the 20dp x 20dp live area, with 2dp of padding around the perimeter",
+      "matchOriginal": null,
+      "note": "원본도 Live area 20*20 · 세이프존 여백 최소 2 로 같습니다."
+    },
+    {
+      "id": "m3-keyline",
+      "source": "m3-designing",
+      "text": "Square height and width, 18dp / Circle diameter, 20dp / Vertical rectangle height, 20dp, and width, 16dp / Horizontal rectangle height, 16dp, and width, 20dp",
+      "matchOriginal": null,
+      "note": "원본 키라인(Square 18*18 · Circle 20*20 · Rectangular 16*20 / 20*16)과 값이 같습니다."
+    },
+    {
+      "id": "m3-target",
+      "source": "m3-applying",
+      "text": "Symbols of 24dp should have a target size of 48dp by default. / A 20dp size symbol can use a target size of 40dp.",
+      "matchOriginal": null,
+      "note": "터치 표적 크기는 원본에 없는 축입니다. 편입하지 않고 «원본에 없는 것»으로 남깁니다."
+    },
+    {
+      "id": "m3-label",
+      "source": "m3-applying",
+      "text": "Other symbols should have an accompanying text label below 20dp to ensure their meaning is clear",
+      "matchOriginal": null,
+      "note": "20px 미만 단독 사용 주의. 원본 [사용 가이드 (7)_텍스트] 가 «매칭된 사이즈만» 이라고만 적고 하한은 말하지 않습니다."
+    },
+    {
+      "id": "apple-noGrid",
+      "source": "apple-sf",
+      "text": "Each symbol is also available in three scales: small, medium (the default), and large. The scales are defined relative to the cap height of the San Francisco system font.",
+      "matchOriginal": null,
+      "note": "그리드 없이 서체 cap height 에 맞추는 모델. 원본은 24×24 그리드 모델을 택했습니다."
+    }
+  ],
+
+  "notInOriginal": {
+    "why": "원본 제작 가이드라인을 다 읽고도 두 참고에는 있는데 원본에는 없는 축입니다. 지어내지 않고 «없음»으로 남깁니다.",
+    "items": [
+      { "item": "터치 표적 크기", "quote": "m3-target" },
+      { "item": "작은 아이콘의 라벨 하한(20px)", "quote": "m3-label" },
+      { "item": "색 대비율 수치", "note": "원본 08_Color 는 «브랜드 컬러 시스템 색상을 활용»이라고만 하고 대비율을 적지 않습니다. KRDS 는 3:1(선명한 화면 모드 7:1)을 씁니다." }
+    ]
+  }
+}

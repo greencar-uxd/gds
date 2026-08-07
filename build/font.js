@@ -1,10 +1,10 @@
 'use strict';
 /**
- * 정본 폰트 주입 — 사이트가 GDS 정본 폰트(Noto Sans KR)로 렌더되도록 강제합니다.
+ * GDS 폰트 주입 — 사이트가 GDS 폰트(Noto Sans KR)로 렌더되도록 강제합니다.
  *
- * 왜 필요한가. 정본 폰트를 Noto Sans KR 단일로 확정했는데(data/type-decisions.json)
- * 사이트가 Pretendard 로 렌더되면 타이포 견본이 정본과 다른 폰트로 보입니다.
- * 문서가 스스로를 반증하는 상태라, 빌드 단계에서 폰트 스택을 정본으로 교체합니다.
+ * 왜 필요한가. GDS 폰트를 Noto Sans KR 단일로 확정했는데(data/type-decisions.json)
+ * 사이트가 Pretendard 로 렌더되면 타이포 견본이 원본과 다른 폰트로 보입니다.
+ * 문서가 스스로를 반증하는 상태라, 빌드 단계에서 폰트 스택을 원본으로 교체합니다.
  *
  * 자기완결 제약. 외부 리소스 참조가 금지돼 있으므로(build/check.js) 웹폰트 CDN 을 쓸 수 없습니다.
  * assets/fonts/ 에 서브셋(사용 문자만) woff2 를 넣어 두고 base64 로 임베드합니다.
@@ -19,7 +19,7 @@ const FAMILY = TDEC.fontFamily.value;
 const FONT_DIR = path.join(ROOT, 'assets', 'fonts');
 const WEIGHTS = [400, 500, 700];
 
-// 정본 폰트 하나만 선언합니다. sans-serif 만 최종 폴백으로 둡니다.
+// GDS 폰트 하나만 선언합니다. sans-serif 만 최종 폴백으로 둡니다.
 const STACK = `"${FAMILY}",sans-serif`;
 
 function faceCss() {
@@ -31,7 +31,7 @@ function faceCss() {
   }).join('\n');
 }
 
-// 본문 폰트 스택 선언(= 모노스페이스가 아닌 font-family) 을 전부 정본으로 바꿉니다.
+// 본문 폰트 스택 선언(= 모노스페이스가 아닌 font-family) 을 전부 원본으로 바꿉니다.
 // 모노(ui-monospace 로 시작하는 선언)는 코드 표기용이라 그대로 둡니다.
 function applyFont(html) {
   let out = html.replace(/font-family:\s*(?!ui-monospace)([^;}]*?)(?=[;}])/g, (m, decl) => {

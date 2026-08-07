@@ -1,0 +1,2538 @@
+{
+  "$description": "Radius system (래디어스 시스템) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42415:11358",
+    "pageName": "Radius system (래디어스 시스템) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 411,
+    "byType": {
+      "canvas": 1,
+      "frame": 223,
+      "instance": 34,
+      "text": 152,
+      "widget": 1
+    },
+    "topLevel": 6,
+    "texts": 152,
+    "namedTexts": 152,
+    "templateStubs": 7,
+    "symbols": 0
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42764:36974",
+      "name": "Radius",
+      "w": 3792,
+      "h": 1446
+    },
+    {
+      "type": "frame",
+      "id": "42764:38009",
+      "name": "스타일가이드_형태",
+      "w": 1016,
+      "h": 2517
+    },
+    {
+      "type": "text",
+      "id": "42768:51447",
+      "name": "사이즈/용도에 따라 구분",
+      "w": 241,
+      "h": 35
+    },
+    {
+      "type": "text",
+      "id": "43801:47452",
+      "name": "-1.스케일 2.내부 규칙(스타일)로 기준으로 사용 방법을 정해야함. -모바일 중심의 디.시 다른거 참고해서 스케일 확인(머터리얼, 기타) -",
+      "w": 488,
+      "h": 104
+    },
+    {
+      "type": "frame",
+      "id": "43882:19126",
+      "name": "Foundation_Radius system",
+      "w": 1920,
+      "h": 2235
+    },
+    {
+      "type": "widget",
+      "id": "44014:25811",
+      "name": "Annotation",
+      "w": 352,
+      "h": 376
+    }
+  ],
+  "componentSets": null,
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Level",
+      "Reference",
+      "Type",
+      "Usage",
+      "[]",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 7
+  },
+  "texts": [
+    {
+      "id": "42764:36976",
+      "text": "20",
+      "in": [
+        "Radius"
+      ],
+      "x": 2229,
+      "y": 47
+    },
+    {
+      "id": "42764:36977",
+      "text": "8",
+      "in": [
+        "Radius"
+      ],
+      "x": 594,
+      "y": 47
+    },
+    {
+      "id": "42764:36978",
+      "text": "4",
+      "in": [
+        "Radius"
+      ],
+      "x": 97,
+      "y": 47
+    },
+    {
+      "id": "42764:36979",
+      "text": "10",
+      "in": [
+        "Radius"
+      ],
+      "x": 1028,
+      "y": 47
+    },
+    {
+      "id": "42764:36980",
+      "text": "12",
+      "in": [
+        "Radius"
+      ],
+      "x": 1371,
+      "y": 47
+    },
+    {
+      "id": "42764:36981",
+      "text": "16",
+      "in": [
+        "Radius"
+      ],
+      "x": 1778,
+      "y": 47
+    },
+    {
+      "id": "42764:36982",
+      "text": "버튼 Input info_box",
+      "in": [
+        "Radius"
+      ],
+      "x": 594,
+      "y": 91
+    },
+    {
+      "id": "42764:36983",
+      "text": "버튼 xsmall",
+      "in": [
+        "Radius"
+      ],
+      "x": 97,
+      "y": 91
+    },
+    {
+      "id": "42764:36984",
+      "text": "(As-is에서) 기본",
+      "in": [
+        "Radius"
+      ],
+      "x": 1028,
+      "y": 91
+    },
+    {
+      "id": "42764:36985",
+      "text": "카드",
+      "in": [
+        "Radius"
+      ],
+      "x": 1371,
+      "y": 91
+    },
+    {
+      "id": "42764:36986",
+      "text": "카드",
+      "in": [
+        "Radius"
+      ],
+      "x": 1778,
+      "y": 91
+    },
+    {
+      "id": "42764:36987",
+      "text": "모달 팝업",
+      "in": [
+        "Radius"
+      ],
+      "x": 2229,
+      "y": 91
+    },
+    {
+      "id": "42764:36997",
+      "text": "모바일 문의 상담시간은 09:00~18:00 입니다.",
+      "in": [
+        "Radius",
+        "Frame 3668",
+        "Frame 3673",
+        "Frame 3671"
+      ],
+      "x": 11,
+      "y": 0
+    },
+    {
+      "id": "42764:37001",
+      "text": "모바일 문의 상담시간은 09:00~18:00 입니다. ㅁㄴㅇㅁㄴㅇㅁㄴㅇㄴㅁㅇㄴㅁㅇ",
+      "in": [
+        "Radius",
+        "Frame 3668",
+        "Frame 3673",
+        "Frame 3672"
+      ],
+      "x": 11,
+      "y": 0
+    },
+    {
+      "id": "42764:37005",
+      "text": "마스터로 승급되었습니다.",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37020",
+      "text": "예약자",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2973"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37021",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2973"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37023",
+      "text": "대여",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2974"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37024",
+      "text": "개인정보 수집/이용",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2974"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37026",
+      "text": "주행거리 리워드",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2975"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37027",
+      "text": "위치기반 서비스 이용약관",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2975"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37033",
+      "text": "마스터로 승급되었습니다.",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37048",
+      "text": "예약자",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2973"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37049",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2973"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37051",
+      "text": "대여",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2974"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37052",
+      "text": "개인정보 수집/이용",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2974"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37054",
+      "text": "주행거리 리워드",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2975"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:37055",
+      "text": "위치기반 서비스 이용약관",
+      "in": [
+        "Radius",
+        "popup",
+        "text",
+        "con",
+        "aleart_bg_contents",
+        "Frame 3542",
+        "Frame 2975"
+      ],
+      "x": 0,
+      "y": 21
+    },
+    {
+      "id": "42764:37059",
+      "text": "정의: 콘텐츠 영역에 10인데 8로 변경 필요",
+      "in": [
+        "Radius"
+      ],
+      "x": 2261,
+      "y": 1254
+    },
+    {
+      "id": "42764:37063",
+      "text": "8 케이스 10케이스 정의",
+      "in": [
+        "Radius"
+      ],
+      "x": 2994,
+      "y": 1129
+    },
+    {
+      "id": "42764:37838",
+      "text": "10 → 8로 변경해야함",
+      "in": [
+        "Radius"
+      ],
+      "x": 1025,
+      "y": 494
+    },
+    {
+      "id": "42764:37839",
+      "text": "10 → 8/12로 변경해야함",
+      "in": [
+        "Radius"
+      ],
+      "x": 1025,
+      "y": 690
+    },
+    {
+      "id": "42764:37840",
+      "text": "10 → 8/12로 변경해야함",
+      "in": [
+        "Radius"
+      ],
+      "x": 1025,
+      "y": 306
+    },
+    {
+      "id": "42764:37812",
+      "text": "Title  29 Copy 74",
+      "in": [
+        "Radius"
+      ],
+      "x": 1025,
+      "y": 364
+    },
+    {
+      "id": "42764:37837",
+      "text": "Title  29 Copy 75",
+      "in": [
+        "Radius"
+      ],
+      "x": 1025,
+      "y": 550
+    },
+    {
+      "id": "42764:37825",
+      "text": "무료 편도",
+      "in": [
+        "Radius",
+        "menu_free"
+      ],
+      "x": 1034.035945892334,
+      "y": 622
+    },
+    {
+      "id": "42764:37826",
+      "text": "대여/주행료 0원",
+      "in": [
+        "Radius",
+        "menu_free"
+      ],
+      "x": 1034.035945892334,
+      "y": 644
+    },
+    {
+      "id": "42764:38014",
+      "text": "래디어스 (radius)",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:38017",
+      "text": "표준형 스타일은 small-medium-large-xlarge 4단계로 구성되며, 각 레벨은 컴포넌트의 사이즈로 구분되된다. 각 레벨은 함께 사용할 빈도가 높은 컴포넌트의 묶음으로 같은 형태의 래디어스(radius) 적용이 필요하다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42764:38018",
+      "text": "표준형 스타일은 2px~12px의 래디어스 값을 사용하며, 이는 정부가 주는 신뢰감과 안정감, 친근함을 표현하기 위한 래디어스 값이다. 과하게 둥근 형태로 변형되는 것을 방지하기 위해 래디어스 최대 값을 12px로 설정한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text"
+      ],
+      "x": 0,
+      "y": 68
+    },
+    {
+      "id": "42764:38024",
+      "text": "xsmall-1",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105794",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38027",
+      "text": "8*8",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105794",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": -8
+    },
+    {
+      "id": "42764:38029",
+      "text": "2px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105794",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38033",
+      "text": "xsmall-2",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105795",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38036",
+      "text": "12*12",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105795",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": -6
+    },
+    {
+      "id": "42764:38038",
+      "text": "2px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105795",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38042",
+      "text": "xsmall-3",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105790",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38045",
+      "text": "16*16",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105790",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": -4
+    },
+    {
+      "id": "42764:38047",
+      "text": "2px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105790",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38051",
+      "text": "small-1",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105793",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38054",
+      "text": "20*20",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105793",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": -2
+    },
+    {
+      "id": "42764:38056",
+      "text": "4px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105793",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38060",
+      "text": "small-2",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105792",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38063",
+      "text": "24*24",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105792",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 0
+    },
+    {
+      "id": "42764:38065",
+      "text": "4px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105792",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38069",
+      "text": "small-3",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105791",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38072",
+      "text": "32*32",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105791",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38074",
+      "text": "4px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105791",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38078",
+      "text": "medium-1",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105788",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38081",
+      "text": "40*40",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105788",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38083",
+      "text": "6px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105788",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38087",
+      "text": "medium-2",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105789",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38090",
+      "text": "48*48",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105789",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38092",
+      "text": "6px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105789",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38096",
+      "text": "medium-3",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105780",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38099",
+      "text": "56*56",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105780",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38101",
+      "text": "8px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105780",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38105",
+      "text": "medium-4",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105787",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38108",
+      "text": "64*64",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105787",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38110",
+      "text": "8px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105787",
+        "Frame 1010106561"
+      ],
+      "x": 20.5,
+      "y": 4
+    },
+    {
+      "id": "42764:38114",
+      "text": "large-1",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105786",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38117",
+      "text": "72*72",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105786",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38119",
+      "text": "10px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105786",
+        "Frame 1010106561"
+      ],
+      "x": 16,
+      "y": 4
+    },
+    {
+      "id": "42764:38123",
+      "text": "large-2",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105785",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38126",
+      "text": "80*80",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105785",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38128",
+      "text": "10px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105785",
+        "Frame 1010106561"
+      ],
+      "x": 16,
+      "y": 4
+    },
+    {
+      "id": "42764:38132",
+      "text": "xlarge-1",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105784",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38135",
+      "text": "96*96",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105784",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38137",
+      "text": "12px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105784",
+        "Frame 1010106561"
+      ],
+      "x": 16,
+      "y": 4
+    },
+    {
+      "id": "42764:38141",
+      "text": "xlarge-2",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105783",
+        "Frame 1010106556"
+      ],
+      "x": 26,
+      "y": 4
+    },
+    {
+      "id": "42764:38144",
+      "text": "120*120",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105783",
+        "Frame 1430105611"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "42764:38146",
+      "text": "12px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "text",
+        "img_area",
+        "Frame 1430105760",
+        "Frame 1430105783",
+        "Frame 1010106561"
+      ],
+      "x": 16,
+      "y": 4
+    },
+    {
+      "id": "42764:38150",
+      "text": "Level",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "title",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 10
+    },
+    {
+      "id": "42764:38152",
+      "text": "Usage",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "title",
+        "Frame 34585"
+      ],
+      "x": 16,
+      "y": 10
+    },
+    {
+      "id": "42764:38154",
+      "text": "Container size",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "title",
+        "Frame 34588"
+      ],
+      "x": 16,
+      "y": 10
+    },
+    {
+      "id": "42764:38156",
+      "text": "Radius size",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "title",
+        "Frame 34586"
+      ],
+      "x": 16,
+      "y": 10
+    },
+    {
+      "id": "42764:38158",
+      "text": "Apply components",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "title",
+        "Frame 34587"
+      ],
+      "x": 16,
+      "y": 10
+    },
+    {
+      "id": "42764:38163",
+      "text": "Xsmall",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38165",
+      "text": "컴포넌트 레벨에서 가장 작은 크기로 인디게이터, 뱃지, 프로그레스 바 같은 초소형 크기에 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38166",
+      "text": "* 온전한 원형의 형태를 사용하는 경우 radius-max token을 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 98
+    },
+    {
+      "id": "42764:38170",
+      "text": "8*8",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38172",
+      "text": "4px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38175",
+      "text": "12*12",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38177",
+      "text": "4px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38180",
+      "text": "16*16",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38182",
+      "text": "8px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38184",
+      "text": "Element",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004905",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38187",
+      "text": "Small",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38189",
+      "text": "태그, 칩 같은 작은 컴포넌트에서 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38193",
+      "text": "20*20",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38195",
+      "text": "8px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38198",
+      "text": "24*24",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38200",
+      "text": "10px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38203",
+      "text": "32*32",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106403",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38205",
+      "text": "10px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 1010106402",
+        "Frame 1010106403",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38207",
+      "text": "Chips Checkbox Radio button Switch Tag",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004916",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38210",
+      "text": "Medium",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38212",
+      "text": "기본이 되는 값으로 주로 버튼, 인풋 등에서 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38216",
+      "text": "40*40",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38218",
+      "text": "12px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38221",
+      "text": "48*48",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38223",
+      "text": "12px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38226",
+      "text": "56*56",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38228",
+      "text": "14px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106402",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38231",
+      "text": "64*64",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106403",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38233",
+      "text": "14px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 1010106402",
+        "Frame 1010106403",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.75
+    },
+    {
+      "id": "42764:38235",
+      "text": "Button Text input Textarea Select Carousel-Number Step indicator Pagination",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004913",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38238",
+      "text": "Large",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38240",
+      "text": "주로 카드와 같은 큰 컴포넌트에 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38244",
+      "text": "72*72",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38246",
+      "text": "16px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38249",
+      "text": "80*80",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38251",
+      "text": "16px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38253",
+      "text": "Card Dialog",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004914",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38256",
+      "text": "Xlarge",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38258",
+      "text": "가장 큰 값으로 주로 배너, 바텀 시트 같은 화면을 차지하는 비율이 큰 컴포넌트에 사용한다.",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42764:38262",
+      "text": "96*96",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.5
+    },
+    {
+      "id": "42764:38264",
+      "text": "20px",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 1010106402",
+        "Frame 1010106400",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.5
+    },
+    {
+      "id": "42764:38267",
+      "text": "120*120",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.5
+    },
+    {
+      "id": "42764:38269",
+      "text": "20px (max)",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 1010106402",
+        "Frame 1010106401",
+        "Frame 34582"
+      ],
+      "x": 16,
+      "y": 12.5
+    },
+    {
+      "id": "42764:38271",
+      "text": "Banner Dialog Bottom sheet",
+      "in": [
+        "스타일가이드_형태",
+        "스타일가이드_형태",
+        "contents",
+        "래디어스 (radius)",
+        "description",
+        "table-display",
+        "heading",
+        "Frame 1000004908",
+        "Frame 1000004915",
+        "Frame 34584"
+      ],
+      "x": 16,
+      "y": 12
+    },
+    {
+      "id": "42768:51447",
+      "text": "사이즈/용도에 따라 구분",
+      "in": [],
+      "x": -1577,
+      "y": 2622
+    },
+    {
+      "id": "43801:47452",
+      "text": "-1.스케일 2.내부 규칙(스타일)로 기준으로 사용 방법을 정해야함. -모바일 중심의 디.시 다른거 참고해서 스케일 확인(머터리얼, 기타) -",
+      "in": [],
+      "x": -585,
+      "y": 2669
+    },
+    {
+      "id": "43882:19140",
+      "text": "Glossary",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:19141",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43882:19144",
+      "text": "[정의]",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:19145",
+      "text": "Radius system (레디어스 시스템)은",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43882:19165",
+      "text": "Type",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:19166",
+      "text": "Reference",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43882:19169",
+      "text": "[]",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:19170",
+      "text": "Radius system (레디어스 시스템)은",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43882:19175",
+      "text": "➊ Text field (텍스트필드)",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43882:19177",
+      "text": "➋ Search text field (서치 텍스트필드)",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43882:19180",
+      "text": "➌ Split text field (스플릿 텍스트필드)",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43882:19182",
+      "text": "➍ Area text field (영역 텍스트필드)",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43882:19187",
+      "text": "Text field (텍스트필드)",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 133,
+      "y": 0
+    },
+    {
+      "id": "43882:19188",
+      "text": "한 줄 단위로 단일 정보 입력형",
+      "in": [
+        "Foundation_Radius system",
+        "Foundation_Radiussystem",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "44014:25814",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:25815",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44014:25822",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "44014:25827",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "44014:25832",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    }
+  ]
+}

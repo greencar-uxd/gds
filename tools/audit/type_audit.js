@@ -1,6 +1,6 @@
 'use strict';
 /**
- * 타이포 감사 — 정본 21단계 스펙 충돌 + 레거시 254 스타일 중복/이름 재사용 진단.
+ * 타이포 감사 — 원본 21단계 스펙 충돌 + 레거시 254 스타일 중복/이름 재사용 진단.
  * 출력: data/type-audit.json, docs/type-collisions.csv
  */
 const fs = require('fs');
@@ -15,7 +15,7 @@ const weightNum = w => (/Bold/i.test(w) ? 700 : /Medium/i.test(w) ? 500 : /Regul
 const styleNum = s => (/Bold/i.test(s) ? 700 : /Medium|Semi/i.test(s) ? 500 : 400);
 
 // ============================================================
-// 1. 정본 — 같은 (size, weight) 를 갖는 토큰 = 개발자가 구분 불가
+// 1. 원본 — 같은 (size, weight) 를 갖는 토큰 = 개발자가 구분 불가
 // ============================================================
 const specKey = t => `${t.size}/${weightNum(t.weight)}`;
 const bySpec = {};
@@ -24,14 +24,14 @@ const specCollisions = Object.entries(bySpec).filter(([, a]) => a.length > 1)
   .map(([k, tokens]) => ({ size: Number(k.split('/')[0]), weight: Number(k.split('/')[1]), tokens }))
   .sort((a, b) => b.size - a.size);
 
-// 2. 정본 — 행간 정의 여부
+// 2. 원본 — 행간 정의 여부
 const lhDefined = canon.filter(t => t.lineHeight && !/auto/i.test(String(t.lineHeight)));
 const lhAuto = canon.filter(t => /auto/i.test(String(t.lineHeight)));
 
-// 3. 정본 — 자간 필드 자체가 없음
+// 3. 원본 — 자간 필드 자체가 없음
 const lsDefined = canon.filter(t => t.letterSpacing != null);
 
-// 4. 정본 — 폰트 패밀리 미지정
+// 4. 원본 — 폰트 패밀리 미지정
 const famDefined = canon.filter(t => t.family != null);
 
 // ============================================================
@@ -48,8 +48,8 @@ const famCaseDup = Object.entries(famNorm).filter(([, a]) => a.length > 1)
   .map(([k, a]) => ({ key: k, variants: a.sort((x, y) => y.count - x.count), total: a.reduce((s, x) => s + x.count, 0) }));
 
 // ============================================================
-// 6. 레거시 — 정본 토큰명 재사용 충돌
-//    같은 토큰 이름인데 정본 스펙과 레거시 스펙이 다름 = 개발자 혼동의 직접 원인
+// 6. 레거시 — 원본 토큰명 재사용 충돌
+//    같은 토큰 이름인데 원본 스펙과 레거시 스펙이 다름 = 개발자 혼동의 직접 원인
 // ============================================================
 const leaf = n => (n.includes('/') ? n.split('/').pop() : n);
 const nameCore = n => leaf(n).split('ㅣ')[0].split('|')[0].trim();
@@ -119,7 +119,7 @@ const result = {
 fs.writeFileSync(path.join(ROOT, 'data', 'type-audit.json'), JSON.stringify(result, null, 2));
 
 const esc = v => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
-let csv = '구분,토큰,정본 스펙,충돌 내용,비고\n';
+let csv = '구분,토큰,원본 스펙,충돌 내용,비고\n';
 for (const c of specCollisions) {
   csv += ['TY-1', esc(c.tokens.join(' = ')), esc(`${c.size}px / ${c.weight}`), esc('크기·굵기가 완전히 동일 — 행간도 Auto 라 구분 근거 없음'), esc('용도 구분을 행간/자간으로 정의하거나 토큰 통합')].join(',') + '\n';
 }
@@ -134,8 +134,8 @@ for (const f of famCaseDup) {
 fs.writeFileSync(path.join(ROOT, 'docs', 'type-collisions.csv'), csv);
 
 console.log('타이포 감사 완료 → data/type-audit.json · docs/type-collisions.csv');
-console.log(`  정본 ${result.canon.tokens}단계 → 고유 스펙 ${result.canon.uniqueSpecs}종 · 완전 동일 ${result.canon.specCollisionGroups}쌍(${result.canon.specCollisionTokens}토큰)`);
-console.log(`  정본 행간 정의 ${result.canon.lineHeightDefined}/${result.canon.tokens} · 자간 ${result.canon.letterSpacingDefined} · 폰트 ${result.canon.familyDefined}`);
+console.log(`  원본 ${result.canon.tokens}단계 → 고유 스펙 ${result.canon.uniqueSpecs}종 · 완전 동일 ${result.canon.specCollisionGroups}쌍(${result.canon.specCollisionTokens}토큰)`);
+console.log(`  원본 행간 정의 ${result.canon.lineHeightDefined}/${result.canon.tokens} · 자간 ${result.canon.letterSpacingDefined} · 폰트 ${result.canon.familyDefined}`);
 console.log(`  레거시 ${result.legacy.styles}개 · 패밀리 ${result.legacy.families}종(대소문자 중복 ${result.legacy.familyCaseDupGroups}묶음) · 토큰명 재사용 충돌 ${result.legacy.tokenNameReuse}건`);
 
 module.exports = result;

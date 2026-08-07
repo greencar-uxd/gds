@@ -1,0 +1,3252 @@
+{
+  "$description": "Components overview (컴포넌트 오버뷰) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42066:25434",
+    "pageName": "Components overview (컴포넌트 오버뷰) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 494,
+    "byType": {
+      "canvas": 1,
+      "section": 1,
+      "frame": 264,
+      "instance": 32,
+      "text": 160,
+      "vector": 13,
+      "ellipse": 23
+    },
+    "topLevel": 2,
+    "texts": 160,
+    "namedTexts": 160,
+    "templateStubs": 24,
+    "symbols": 0
+  },
+  "topFrames": [
+    {
+      "type": "section",
+      "id": "42066:25454",
+      "name": "reference",
+      "w": 1792,
+      "h": 720
+    },
+    {
+      "type": "frame",
+      "id": "43185:39180",
+      "name": "Components Overview",
+      "w": 1920,
+      "h": 10207.4091796875
+    }
+  ],
+  "componentSets": null,
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "설명"
+    ],
+    "count": 24
+  },
+  "texts": [
+    {
+      "id": "43185:39194",
+      "text": "Glossary",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:39195",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:39198",
+      "text": "[정의]",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:39199",
+      "text": "Componenets (컴포넌트)는 텍스트, 그래픽, 인터랙션이 결합되어 하나의 기능이나 정보를 전달하는 UI의 기본 단위입니다.",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43185:39596",
+      "text": "* 아이콘 자체가 의미 설명 역할",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2"
+      ],
+      "x": 1021.8499755859375,
+      "y": 277.234375
+    },
+    {
+      "id": "43185:39597",
+      "text": "* 아이콘 자체가 의미 설명 역할",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2"
+      ],
+      "x": 1021.8499755859375,
+      "y": 692.234375
+    },
+    {
+      "id": "43185:39598",
+      "text": "*기존 마크 표시 오른쪽 상단에 추가로 상태 표시 설명 역할",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2"
+      ],
+      "x": 978.8499755859375,
+      "y": 385
+    },
+    {
+      "id": "43185:39615",
+      "text": "* 단순 위치 표시 기능 역할",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2"
+      ],
+      "x": 1028.8499755859375,
+      "y": 340.234375
+    },
+    {
+      "id": "43185:39623",
+      "text": "컴포넌트",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39625",
+      "text": "커스텀 아이콘",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39627",
+      "text": "커스텀 아이콘",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39629",
+      "text": "시스템 아이콘",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39631",
+      "text": "시스템 아이콘",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39634",
+      "text": "컴포넌트",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example 2",
+        "Tag"
+      ],
+      "x": 12,
+      "y": 5
+    },
+    {
+      "id": "43185:39408",
+      "text": "List overview A~T",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:39409",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:39412",
+      "text": "[주요 컴포넌트 리스트]",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:39413",
+      "text": "지카에서 사용하는 GDS 컴포넌트 25가지를 소개합니다.",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43198:5300",
+      "text": "A",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5301",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5306",
+      "text": "Accordion (아코디언)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 147.5,
+      "y": 0
+    },
+    {
+      "id": "43198:5307",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:9223",
+      "text": "선택형 제3자 제공 동의",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43198:9227",
+      "text": "(선택)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "\b선택약관",
+        "Frame 3126"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:9228",
+      "text": "개인정보 제3자 제공 동의",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "\b선택약관",
+        "Frame 3126"
+      ],
+      "x": 45,
+      "y": 0
+    },
+    {
+      "id": "43198:9236",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "cheackbox",
+        "버튼 세트",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.0009999275207519531,
+      "y": 0
+    },
+    {
+      "id": "43198:9241",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "cheackbox",
+        "버튼 세트",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.0009999275207519531,
+      "y": 0
+    },
+    {
+      "id": "43198:9246",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Accordion",
+        "cheackbox",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.0009999275207519531,
+      "y": 0
+    },
+    {
+      "id": "43185:52233",
+      "text": "B",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:52234",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:52152",
+      "text": "Buttons (버튼)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 169,
+      "y": 0
+    },
+    {
+      "id": "43185:52153",
+      "text": "예약, 결제 등 서비스 내 주요 액션을 실행하는 핵심 UI 요소",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52158",
+      "text": "Bottom sheet (바텀시트)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 136.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52159",
+      "text": "하단에서 올라오는 추가 정보 및 액션 실행용 레이어",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52163",
+      "text": "콘텐츠",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "네이밍 들어가야 함",
+        "Frame 3676"
+      ],
+      "x": 155,
+      "y": 24
+    },
+    {
+      "id": "43185:52169",
+      "text": "Bottom navigation (바텀네비게이션)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 100,
+      "y": 0
+    },
+    {
+      "id": "43185:52170",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:14643",
+      "text": "이동하기",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "bottom_navigation_ios",
+        "홈",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 45
+    },
+    {
+      "id": "43198:14647",
+      "text": "콘텐츠",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "bottom_navigation_ios",
+        "혜택",
+        "event"
+      ],
+      "x": 18,
+      "y": 45
+    },
+    {
+      "id": "43198:14651",
+      "text": "혜택받기",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "bottom_navigation_ios",
+        "이용내역",
+        "used_active"
+      ],
+      "x": 12.5,
+      "y": 44
+    },
+    {
+      "id": "43198:14655",
+      "text": "마이",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "bottom_navigation_ios",
+        "내정보",
+        "user"
+      ],
+      "x": 23.5,
+      "y": 44
+    },
+    {
+      "id": "43185:52098",
+      "text": "Badge (뱃지)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 174,
+      "y": 0
+    },
+    {
+      "id": "43185:52099",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52174",
+      "text": "Border (보더)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 172.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52175",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5266",
+      "text": "C",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5267",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:52116",
+      "text": "Card (카드)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 179,
+      "y": 0
+    },
+    {
+      "id": "43185:52117",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52044",
+      "text": "Check box (체크박스)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 146,
+      "y": 0
+    },
+    {
+      "id": "43185:52045",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:31302",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "To be",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.00099945068359375,
+      "y": 0
+    },
+    {
+      "id": "43198:31307",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "To be",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.00099945068359375,
+      "y": 0
+    },
+    {
+      "id": "43198:31312",
+      "text": "label",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "To be",
+        "checkbox",
+        "label_wrap"
+      ],
+      "x": 0.0009999275207519531,
+      "y": 0
+    },
+    {
+      "id": "43198:5325",
+      "text": "I",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5326",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5331",
+      "text": "Input (인풋)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 178,
+      "y": 0
+    },
+    {
+      "id": "43198:5332",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5345",
+      "text": "L",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5346",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5351",
+      "text": "Loading spinner (로딩스피너)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 121,
+      "y": 0
+    },
+    {
+      "id": "43198:5352",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5355",
+      "text": "M",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5356",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5361",
+      "text": "Modal (모달)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 174.5,
+      "y": 0
+    },
+    {
+      "id": "43198:5362",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5365",
+      "text": "N",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5366",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5371",
+      "text": "Numbering (넘버링)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 151,
+      "y": 0
+    },
+    {
+      "id": "43198:5372",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5271",
+      "text": "P",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5272",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:51875",
+      "text": "Picker (피커)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 174.5,
+      "y": 0
+    },
+    {
+      "id": "43185:51876",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43205:6161",
+      "text": "2024.05",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "@@ calendar_title",
+        "Frame 3444",
+        "Frame 71659"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43205:6168",
+      "text": "일",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6170",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6173",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6175",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6177",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6179",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6182",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "1",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6186",
+      "text": "월",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6188",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6191",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6193",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6195",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6197",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6200",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "2",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6204",
+      "text": "화",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6206",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6209",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6211",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6213",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6215",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6218",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "3",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6222",
+      "text": "수",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6224",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6227",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6229",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6231",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6234",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "4",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6238",
+      "text": "목",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6240",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6243",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6245",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6247",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6250",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "5",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6254",
+      "text": "금",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6256",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6259",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6261",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6263",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6265",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6268",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "6",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6272",
+      "text": "토",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "요일"
+      ],
+      "x": 11.5,
+      "y": 8
+    },
+    {
+      "id": "43205:6274",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6277",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43205:6279",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6281",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6283",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 10,
+      "y": 8
+    },
+    {
+      "id": "43205:6286",
+      "text": "1",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Date picker",
+        "calendar",
+        "Frame 3682",
+        "7",
+        "날짜"
+      ],
+      "x": 14,
+      "y": 8
+    },
+    {
+      "id": "43185:52104",
+      "text": "Process bar (프로세스바)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 135,
+      "y": 0
+    },
+    {
+      "id": "43185:52105",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52140",
+      "text": "Pasing (페이징)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 166,
+      "y": 0
+    },
+    {
+      "id": "43185:52141",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5375",
+      "text": "R",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5376",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43198:5381",
+      "text": "Radio (래디오)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 170,
+      "y": 0
+    },
+    {
+      "id": "43198:5382",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52238",
+      "text": "S",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43185:52239",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:52199",
+      "text": "Switch (스위치)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 165.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52200",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52204",
+      "text": "Selection box (셀렉션박스)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 129.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52205",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52209",
+      "text": "Smart key (스마트키)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 148,
+      "y": 0
+    },
+    {
+      "id": "43185:52210",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52122",
+      "text": "Skeleton (스켈레톤)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 152.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52123",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43198:5261",
+      "text": "T",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43198:5262",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43185:52214",
+      "text": "Tap app bar (탭 앱 바)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 145,
+      "y": 0
+    },
+    {
+      "id": "43185:52215",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52219",
+      "text": "Tap (탭)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 189.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52220",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52224",
+      "text": "Tip (팁)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 191.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52225",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52110",
+      "text": "Toast (토스트)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 170,
+      "y": 0
+    },
+    {
+      "id": "43185:52111",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43185:52134",
+      "text": "Table (테이블)",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 170.5,
+      "y": 0
+    },
+    {
+      "id": "43185:52135",
+      "text": "설명",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Body",
+        "Body area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 32.5,
+      "y": 33
+    },
+    {
+      "id": "43205:6363",
+      "text": "Guide lines",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43205:6364",
+      "text": "UX 라이팅 가이드",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 291,
+      "y": 7
+    },
+    {
+      "id": "43205:6367",
+      "text": "[오토 레이아웃]",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43205:6368",
+      "text": "컴포넌트 정렬은 기본적으로 오토 레이아웃을 기준으로 제작합니다. 오토 레이아웃 적용 시 텍스트 크기가 기준이 되므로, 아이콘과 텍스트를 함께 사용할 경우 텍스트 크기에 맞춰 정렬되어 컴포넌트 내부 스페이싱 값이 4배수로 정확히 맞지 않을 수 있습니다. 이는 예외 상황으로 허용합니다.",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43205:8522",
+      "text": "16",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Group 2147227875",
+        "Group 2147227793",
+        "Example",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797029495239258,
+      "y": 1.5
+    },
+    {
+      "id": "43205:8529",
+      "text": "16",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Group 2147227875",
+        "Group 2147227793",
+        "Example",
+        "Tag",
+        "text"
+      ],
+      "x": 7.797029495239258,
+      "y": 1.5
+    },
+    {
+      "id": "43205:8829",
+      "text": "컴포넌트 내부가 아닌 전체 단위 스페이싱 기준 4배수 적용",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Group 2147227875"
+      ],
+      "x": 512.5,
+      "y": 876.939453125
+    },
+    {
+      "id": "43205:8830",
+      "text": "전체 컴포넌트 기준 스페이싱 값은 4배수를 따르되, 컴포넌트 내부 조합 요소 간의 간격은 예외로 허용",
+      "in": [
+        "Components Overview",
+        "Components Overview",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Group 2147227875"
+      ],
+      "x": 836.5,
+      "y": 876.939453125
+    }
+  ]
+}

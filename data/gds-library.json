@@ -1,0 +1,1001 @@
+{
+  "$description": "GDS 인벤토리 — 원본 Figma 파일의 «GDS (그린카 디자인 시스템)» 라이브러리에 published 된 것만 담습니다. 레거시 라이브러리는 담지 않습니다.",
+  "checkedAt": "2026-08-05",
+  "fileKey": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+  "method": "Figma MCP search_design_system 을 GDS 라이브러리 키로 한정해 그룹별 조회 · 값은 data/foundation-data.json 추출본에서 이름으로 대조",
+  "canonLibrary": {
+    "name": "GDS(G car Design System)",
+    "key": "lk-5fb74b5ab83ff53f7149c5fcc4bf5216de526f9da336aeaee9a1a168b1d47d74dba3ee117cad7d8060e3f71befc8c9faff4efa63e41e14018e7f743924a5fef3",
+    "previousName": "GDS (그린카 디자인 시스템)",
+    "renameNote": "라이브러리 표시 이름이 GDS(G car Design System) 으로 바뀌어 있습니다(2026-08-06 확인). 키는 같습니다."
+  },
+  "excludedLibraries": [
+    {
+      "name": "그린카 App v2.0",
+      "why": "레거시 앱 라이브러리"
+    },
+    {
+      "name": "G car APP v1.0",
+      "why": "레거시 앱 라이브러리"
+    },
+    {
+      "name": "(사용 X) 그린카 App",
+      "why": "이름부터 사용하지 않는 라이브러리"
+    },
+    {
+      "name": "[공유] Foundation",
+      "why": "외부 시맨틱 토큰셋(border/* · fill/* · text/* · bg/*). GDS 소유가 아니라 복제하면 안 됩니다"
+    },
+    {
+      "name": "작업 파일 공유",
+      "why": "작업용 임시"
+    },
+    {
+      "name": "무버스 디자인 (피그마)",
+      "why": "다른 제품 라이브러리"
+    }
+  ],
+  "exclusionRule": "색 판정 기준은 색차(ΔE)가 아니라 라이브러리 소속입니다. GDS 라이브러리에 없으면 원본이 아니고, 레거시 라이브러리의 값·이름은 판단 근거로 쓰지 않습니다 — 강민관 지시 2026-08-05.",
+  "fill": [
+    {
+      "name": "Primary/Red 010",
+      "group": "Primary",
+      "hex": "#FBD2D3"
+    },
+    {
+      "name": "Primary/Red 020",
+      "group": "Primary",
+      "hex": "#F8A4A7"
+    },
+    {
+      "name": "Primary/Red 300",
+      "group": "Primary",
+      "hex": "#F4777C"
+    },
+    {
+      "name": "Primary/Red 400",
+      "group": "Primary",
+      "hex": "#F14950"
+    },
+    {
+      "name": "Primary/Red 500",
+      "group": "Primary",
+      "hex": "#ED1C24"
+    },
+    {
+      "name": "Primary/Red 060",
+      "group": "Primary",
+      "hex": "#BE161D"
+    },
+    {
+      "name": "Primary/Red 070",
+      "group": "Primary",
+      "hex": "#8E1116"
+    },
+    {
+      "name": "Primary/Red 080",
+      "group": "Primary",
+      "hex": "#5F0B0E"
+    },
+    {
+      "name": "Primary/Red 090",
+      "group": "Primary",
+      "hex": "#2F0607"
+    },
+    {
+      "name": "Gray Scale/Gray 000",
+      "group": "Gray Scale",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "Gray Scale/Gray 005",
+      "group": "Gray Scale",
+      "hex": "#F8F8F8"
+    },
+    {
+      "name": "Gray Scale/Gray 010",
+      "group": "Gray Scale",
+      "hex": "#F1F1F1"
+    },
+    {
+      "name": "Gray Scale/Gray 020",
+      "group": "Gray Scale",
+      "hex": "#E2E2E2"
+    },
+    {
+      "name": "Gray Scale/Gray 030",
+      "group": "Gray Scale",
+      "hex": "#D4D4D4"
+    },
+    {
+      "name": "Gray Scale/Gray 040",
+      "group": "Gray Scale",
+      "hex": "#C5C5C5"
+    },
+    {
+      "name": "Gray Scale/Gray 050",
+      "group": "Gray Scale",
+      "hex": "#B7B7B7"
+    },
+    {
+      "name": "Gray Scale/Gray 060",
+      "group": "Gray Scale",
+      "hex": "#898989"
+    },
+    {
+      "name": "Gray Scale/Gray 070",
+      "group": "Gray Scale",
+      "hex": "#5C5C5C"
+    },
+    {
+      "name": "Gray Scale/Gray 080",
+      "group": "Gray Scale",
+      "hex": "#2F2E2E"
+    },
+    {
+      "name": "Gray Scale/Gray 100",
+      "group": "Gray Scale",
+      "hex": "#000000"
+    },
+    {
+      "name": "Navy/Navy 010",
+      "group": "Navy",
+      "hex": "#E8ECEF"
+    },
+    {
+      "name": "Navy/Navy 020",
+      "group": "Navy",
+      "hex": "#D0D8DD"
+    },
+    {
+      "name": "Navy/Navy 030",
+      "group": "Navy",
+      "hex": "#A1B1BB"
+    },
+    {
+      "name": "Navy/navy 040",
+      "group": "Navy",
+      "hex": "#728A9A"
+    },
+    {
+      "name": "Navy/Navy 050",
+      "group": "Navy",
+      "hex": "#436378"
+    },
+    {
+      "name": "Navy/Navy 060",
+      "group": "Navy",
+      "hex": "#0A3C5C"
+    },
+    {
+      "name": "Navy/Navy 070",
+      "group": "Navy",
+      "hex": "#0F2D41"
+    },
+    {
+      "name": "Navy/Navy 080",
+      "group": "Navy",
+      "hex": "#0A1E2B"
+    },
+    {
+      "name": "Navy/Navy 090",
+      "group": "Navy",
+      "hex": "#020609"
+    },
+    {
+      "name": "Navy/Navy 100",
+      "group": "Navy",
+      "hex": "#060809"
+    },
+    {
+      "name": "Badge/Time Deal",
+      "group": "Badge",
+      "hex": "#FF8159"
+    },
+    {
+      "name": "Badge/Bookmark",
+      "group": "Badge",
+      "hex": "#FED500"
+    },
+    {
+      "name": "Badge/Event",
+      "group": "Badge",
+      "hex": "#F8679C"
+    },
+    {
+      "name": "Badge/Hot Deal",
+      "group": "Badge",
+      "hex": "#FD8484"
+    },
+    {
+      "name": "Badge/New Zone",
+      "group": "Badge",
+      "hex": "#FD9F4D"
+    },
+    {
+      "name": "Badge/New Car",
+      "group": "Badge",
+      "hex": "#5B68FE"
+    },
+    {
+      "name": "Badge/Eleccar",
+      "group": "Badge",
+      "hex": "#A87DF9"
+    },
+    {
+      "name": "Badge/Economy",
+      "group": "Badge",
+      "hex": "#C0C259"
+    },
+    {
+      "name": "Badge/Clean",
+      "group": "Badge",
+      "hex": "#59BBF2"
+    },
+    {
+      "name": "Badge/ODA",
+      "group": "Badge",
+      "hex": "#ED9A1E"
+    },
+    {
+      "name": "Map Marker/Active",
+      "group": "Map Marker",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "Map Marker/Active_Line",
+      "group": "Map Marker",
+      "hex": "#A1B1BB"
+    },
+    {
+      "name": "Map Marker/Corporation",
+      "group": "Map Marker",
+      "hex": "#005E97"
+    },
+    {
+      "name": "Map Marker/Disabled Line",
+      "group": "Map Marker",
+      "hex": "#B3BABF"
+    },
+    {
+      "name": "Map Marker/Disabled Text",
+      "group": "Map Marker",
+      "hex": "#BEC3C7"
+    },
+    {
+      "name": "Map Marker/Free Zone",
+      "group": "Map Marker",
+      "hex": "#FD8484"
+    },
+    {
+      "name": "Map Marker/Free Zone Line",
+      "group": "Map Marker",
+      "hex": "#EB6565"
+    },
+    {
+      "name": "Map Marker/Shadow",
+      "group": "Map Marker",
+      "hex": "#E2E2E2"
+    },
+    {
+      "name": "Brand/G car Red",
+      "group": "Brand",
+      "hex": "#ED1C24"
+    },
+    {
+      "name": "Brand/G car Gray",
+      "group": "Brand",
+      "hex": "#3E3A39"
+    },
+    {
+      "name": "Brand/L.POINT",
+      "group": "Brand",
+      "hex": "#009BFA"
+    },
+    {
+      "name": "Brand/L.POINT 2",
+      "group": "Brand",
+      "hex": "#0079C3"
+    },
+    {
+      "name": "Brand/T Membership",
+      "group": "Brand",
+      "hex": "#3617CB"
+    },
+    {
+      "name": "Brand/ODA Line",
+      "group": "Brand",
+      "hex": "#BF7200"
+    },
+    {
+      "name": "System/Alarm",
+      "group": "System",
+      "hex": "#D32828"
+    },
+    {
+      "name": "System/Success",
+      "group": "System",
+      "hex": "#00C88C"
+    },
+    {
+      "name": "System/Focus Line",
+      "group": "System",
+      "hex": "#0029FF"
+    },
+    {
+      "name": "System/Dim Layer",
+      "group": "System",
+      "hex": "#000000"
+    },
+    {
+      "name": "System/Info Box BG",
+      "group": "System",
+      "hex": "#000000"
+    },
+    {
+      "name": "System/Input Line",
+      "group": "System",
+      "hex": "#D9DDDF"
+    }
+  ],
+  "effect": [
+    {
+      "name": "Elevation_1",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Elevation_2",
+      "value": "2겹 — #00000026 0/1/3/1 + #0000004D 0/1/2/0",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Elevation_3",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Elevation_4",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Elevation_5",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Elevation_6",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "as-is_Shadow/(X)Bottom Sheet",
+      "deprecated": true,
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "as-is_Shadow/(X)Floating Button",
+      "deprecated": true,
+      "value": "#0000000A 0/-4/4/0",
+      "library": "GDS(G car Design System)"
+    },
+    {
+      "name": "Bottom Sheet",
+      "value": "3겹 — #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0",
+      "outsideElevation": true,
+      "library": "GDS(G car Design System)",
+      "styleDescription": "바텀시트만의 별도 값"
+    },
+    {
+      "name": "bottom sheet",
+      "value": "#00000026 0/1/2/0",
+      "outsideElevation": true,
+      "caseDuplicate": "Bottom Sheet",
+      "library": "(사용 X) 그린카 App · 그린카 App v2.0 · G car APP v1.0",
+      "excluded": true,
+      "excludedWhy": "GDS 라이브러리에 published 된 스타일이 아닙니다 — 배제 대상 라이브러리 소속입니다(search_design_system 2026-08-06). 원본 인벤토리에 잘못 섞여 있었습니다."
+    },
+    {
+      "name": "Bottom Sheet shadow",
+      "value": "#00000033 0/0/6/0",
+      "outsideElevation": true,
+      "library": "작업 파일 공유",
+      "excluded": true,
+      "excludedWhy": "GDS 라이브러리에 published 된 스타일이 아닙니다 — 배제 대상 라이브러리 소속입니다(search_design_system 2026-08-06). 원본 인벤토리에 잘못 섞여 있었습니다."
+    },
+    {
+      "name": "Bottom Floating Button",
+      "value": "#0000000A 0/-2/2/0",
+      "outsideElevation": true,
+      "library": "GDS(G car Design System)",
+      "styleDescription": "Floating Button, Bottom Navigation에 사용됨."
+    },
+    {
+      "name": "Frosted Glass",
+      "value": "BACKGROUND_BLUR 40",
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
+    },
+    {
+      "name": "level/gold/circle-outter",
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
+    },
+    {
+      "name": "level/gold/circle-inner",
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
+    },
+    {
+      "name": "level/gold/symbol",
+      "outsideElevation": true,
+      "library": null,
+      "unverified": "search_design_system 이 이 이름을 어느 라이브러리에서도 찾지 못했습니다(2026-08-06). 파일 로컬 스타일이라 published 되지 않았을 가능성이 큽니다 — 소속이 확인될 때까지 토큰으로 내보내지 않습니다."
+    }
+  ],
+  "text": [
+    {
+      "name": "noto_sans/display/bold",
+      "duplicatePublished": 3,
+      "observed": [
+        "16px Bold"
+      ]
+    },
+    {
+      "name": "noto_sans/heading/bold",
+      "observed": [
+        "16px Bold"
+      ]
+    },
+    {
+      "name": "noto_sans/title/medium",
+      "duplicatePublished": 6,
+      "observed": [
+        "14px Medium",
+        "16px Medium",
+        "18px Medium"
+      ],
+      "note": "조회한 노드마다 크기가 다릅니다 — 같은 이름의 스타일이 여러 개 published 돼 있습니다"
+    },
+    {
+      "name": "noto_sans/boby/regular",
+      "duplicatePublished": 4,
+      "typo": "boby → body",
+      "observed": [
+        "12px Regular",
+        "14px Regular"
+      ]
+    },
+    {
+      "name": "noto_sans/caption/regular",
+      "observed": [
+        "12px Regular"
+      ]
+    }
+  ],
+  "variables": {
+    "float": [
+      {
+        "name": "Radius/xs",
+        "value": 4,
+        "evidence": "get_variable_defs 42764:36974 (Radius ✅ 프레임)"
+      },
+      {
+        "name": "Radius/sm",
+        "value": 8,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
+      },
+      {
+        "name": "Radius/md",
+        "value": 10,
+        "evidence": "get_variable_defs 42764:36974"
+      },
+      {
+        "name": "Radius/lg",
+        "value": 12,
+        "evidence": "Radius 페이지 스케일 표 라벨 — 4·8·10·12·16·20 순서상 lg 자리"
+      },
+      {
+        "name": "Radius/xl",
+        "value": 16,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
+      },
+      {
+        "name": "Radius/xxl",
+        "value": 20,
+        "evidence": "Buttons ✅ 실측 2026-08-05"
+      },
+      {
+        "name": "Radius/full",
+        "value": "원형",
+        "evidence": "R-1 결정의 7단계 중 마지막. 값은 미실측"
+      }
+    ],
+    "color": [
+      {
+        "name": "Map marker_Shadow",
+        "value": "#0000001A"
+      },
+      {
+        "name": "Gcar_logo_text",
+        "value": "#1A1A1A"
+      },
+      {
+        "name": "Gcar_color",
+        "value": "#ED1C24"
+      },
+      {
+        "name": "typo/letter-spacing/0",
+        "value": "0"
+      }
+    ],
+    "note": "Radius 는 t-shirt size 7단계입니다. 값 6종은 실측·라벨로 확정했고 full 만 미실측입니다. 각 단계의 용도는 Radius 페이지 라벨에 있습니다 — 4 버튼 xsmall · 8 버튼/Input/info_box · 10 (As-is에서) 기본 · 12 카드 · 16 카드 · 20 모달 팝업.",
+    "radiusUsage": {
+      "4": "버튼 xsmall",
+      "8": "버튼 · Input · info_box",
+      "10": "(As-is에서) 기본",
+      "12": "카드",
+      "16": "카드",
+      "20": "모달 팝업"
+    }
+  },
+  "counts": {
+    "fill": 60,
+    "effect": 16,
+    "textNames": 5,
+    "radiusSteps": 7
+  },
+  "effectNote": "Elevation_1~6 외에 그림자·블러 효과가 9종 더 있습니다. Bottom Sheet 계열만 4종이고 그중 둘은 대소문자만 다릅니다.",
+  "pages": {
+    "$description": "✅ 페이지 본문에서 직접 읽은 정의. 등록된 스타일만 봐서는 안 보이는 것들입니다.",
+    "foundation": {
+      "node": "42066:25435",
+      "요소": [
+        "Color",
+        "Typography",
+        "Spacing",
+        "Icon"
+      ],
+      "정의": "디자인 시스템을 구성하는 가장 기본적인 재료. 각 요소는 서로 종속되지 않고 각자의 규칙을 가지며, 단독 배치로는 맥락이 완성되지 않습니다.",
+      "note": "주의 — [Foundation] ✅ 페이지 본문은 \"Color, Typography, Spacing, Icon 등\" 4개만 적고 있는데, [Guidelines] ✅ 구조도는 Elevation·Radius 를 포함한 6개로 그리고 있습니다. 두 ✅ 페이지가 서로 다릅니다(GAP-14)."
+    },
+    "spacing": {
+      "node": "43242:4209",
+      "기본단위": "2px",
+      "표": "Spacing scale · 1 unit = 2px",
+      "행수": 14,
+      "값": [
+        0,
+        2,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        40,
+        44,
+        48,
+        52
+      ],
+      "원본이름중복": [
+        [
+          "Spacing_700",
+          "24px·28px"
+        ],
+        [
+          "Spacing_900",
+          "40px·44px"
+        ],
+        [
+          "Spacing_1000",
+          "48px·52px"
+        ]
+      ]
+    },
+    "layout": {
+      "node": "43185:36342",
+      "화면": {
+        "ios": "375×812",
+        "aos/web": "360×800"
+      },
+      "마진": "좌·우·상단 20px 통일",
+      "하단마진": {
+        "ios": "0px — 홈 인디케이터 자동 노출·숨김 대응",
+        "aos/web": "20px — 홈 인디케이터가 없음"
+      },
+      "헤더": "하단 1px 라인 기본 포함",
+      "홈인디케이터": "34px",
+      "영역": [
+        "Header area",
+        "Contents area",
+        "Buttons area"
+      ],
+      "버튼동작": [
+        "스티키 — 콘텐츠와 함께 스크롤",
+        "픽스 — 화면에 고정"
+      ]
+    },
+    "structure": {
+      "node": "43176:109107 ([Guidelines] ✅) · 43176:107175 (Getting started ✅ 목차)",
+      "$description": "GDS 의 문서 계층. 저장소가 쓰는 \"프리미티브→시맨틱→컴포넌트\" 3계층은 토큰 계층이고, 이건 별개의 문서 계층입니다.",
+      "layers": [
+        {
+          "name": "Guidelines (가이드라인)",
+          "role": "방향성과 기준정의의 토대",
+          "items": [
+            "Principle",
+            "UI/UX Guide",
+            "Layout for ios/aos/web",
+            "Component overview"
+          ],
+          "정의": "GDS 전반에 걸쳐 일관된 디자인 방향성을 유지하기 위해 기본적으로 지켜야 할 원칙과 기준을 정의하는 영역"
+        },
+        {
+          "name": "Foundation (파운데이션)",
+          "role": "디자인의 기본 재료",
+          "items": [
+            "Color",
+            "Typography",
+            "Spacing",
+            "Icon",
+            "Elevation",
+            "Radius"
+          ]
+        },
+        {
+          "name": "Components (컴포넌트)",
+          "role": "완성형 단위",
+          "items": [
+            "Buttons",
+            "Bottom sheet",
+            "Input",
+            "Bottom navigation",
+            "Border",
+            "Picker",
+            "Modal",
+            "Check box",
+            "Switch",
+            "Selection box",
+            "Radio",
+            "Accordion",
+            "Tap app bar",
+            "Tap",
+            "Smart key",
+            "Tip",
+            "Bage",
+            "Process bar",
+            "Toast",
+            "Card",
+            "Skeleton",
+            "Loading spinner",
+            "Table",
+            "Pasing",
+            "Numbering"
+          ]
+        },
+        {
+          "name": "Template (템플릿)",
+          "role": "상위 조합 단위",
+          "items": [],
+          "note": "원본에 \"설명 추가 예정\""
+        }
+      ]
+    },
+    "documentationRules": {
+      "node": "43176:107175 (Getting started ✅)",
+      "목적": "컴포넌트·파운데이션 항목을 문서화할 때 일관된 형식과 구조를 유지하기 위한 표준 작성법",
+      "범위": [
+        {
+          "구분": "현재 사용 중인 요소",
+          "포함여부": "포함",
+          "확인위치": "현재 파일"
+        },
+        {
+          "구분": "현재 사용되지 않는 요소",
+          "포함여부": "제외",
+          "확인위치": "히스토리 파일"
+        },
+        {
+          "구분": "주석 표시",
+          "포함여부": "As is / To be / 업데이트",
+          "확인위치": "현재 파일"
+        }
+      ],
+      "소통": "Plugins 의 [Annotation] 메모장 — 우선순위(High/Medium/Low)와 체크박스로 수정 필요 표시",
+      "note": "\"현재 사용되지 않는 요소는 제외하고 히스토리 파일에서 확인한다\"가 원본 문서의 규칙입니다. 레거시를 판단 근거에서 빼는 것이 이 저장소만의 방침이 아니라 원본 규칙이라는 뜻입니다."
+    },
+    "uiuxGuide": {
+      "node": "42066:27864 (UI/UX guide ✅)",
+      "$description": "GDS 전체 UI 가이드 원칙. 저장소에 한 줄도 안 들어와 있습니다.",
+      "uxWriting": {
+        "어투": "구어체·비격식체를 쓰되 프리미엄 카셰어링이라는 브랜드 방향성에 맞춰 정중하게. 정도 표현(너무·몹시·매우)은 오남용 금지. 표준 한국어 맞춤법 준수.",
+        "헤더타이틀": "항상 페이지 타이틀 표기. \"~하기\" 또는 명사형(탭 메뉴는 명사형). 하위 페이지가 다수면 상위 페이지 타이틀. 다수 타이틀 표시 금지.",
+        "문장형타이틀": "하오체. 행동 유도 페이지에서 3줄 이상 금지. 길어지면 쉼표·들여쓰기로 두 줄 분리. 한 페이지에 행동 유도는 하나만. 끝에 마침표 금지(물음표·느낌표는 가능).",
+        "본문": "부제목 설명이나 본문은 항상 마침표. 단 부제목이 \"~하기\"·\"~기\"·\"~음\"으로 끝나면 마침표 없음. 내용이 다르면 구분점·들여쓰기로 행 구분.",
+        "플레이스홀더": "입력할 텍스트가 무엇인지 알 수 있어야 함. 숫자는 필요한 자릿수를 알 수 있어야 함.",
+        "알림버튼": "행동 유도 알림은 타이틀과 버튼명의 연관성 필요. 단순 안내의 버튼은 명사형. 결과 메시지는 구어체. 버튼이 2개 이상이면 표기 형식 동일(\"~하기\"면 둘 다 \"~하기\")."
+      },
+      "graphic": {
+        "정의": "마케팅에서 받은 심미적 콘텐츠 그래픽을 제외하고, 사용자 이용 여정(대여~반납) 화면에서 텍스트를 보조하고 UX 흐름을 지원하는 설명형 그래픽 요소.",
+        "levels": [
+          {
+            "lv": 1,
+            "name": "시스템 아이콘",
+            "구조": "단일 정보 구조 / 기능 수행 중심",
+            "예": "뒤로가기 · 메뉴 · 검색 · 알림"
+          },
+          {
+            "lv": 2,
+            "name": "커스텀 아이콘",
+            "구조": "설명 구조 포함(맥락 설명)",
+            "예": "상태 안내 아이콘 · 간단한 상황 표현"
+          },
+          {
+            "lv": 3,
+            "name": "일러스트",
+            "구조": "복합 구조(상황 + 행동 + 흐름)",
+            "예": "촬영 가이드 · 반납 절차 안내"
+          }
+        ],
+        "기준": {
+          "선택": "이 화면에서 사용자가 무엇을 이해해야 하는가 — 정보 구조로 분류하고 맥락으로 선택",
+          "예외": "같은 외형이라도 정보 구조가 다르면 단계가 달라집니다",
+          "밀도": "밀도는 단계 선택 기준이 아니라 표현 강도 조절 — 빠른 인지는 저·중밀도, 이해 필요는 고밀도"
+        },
+        "원칙": [
+          "문맥에 맞는 그래픽 — 꾸밈이 아니라 의미 이해를 돕는 역할",
+          "과도한 그래픽 밀도 자제",
+          "명확하고 단순한 2D 원칙. 3D(입체·아이소메트릭)는 일관성·확장성·유지보수 비효율로 지양",
+          "[이미지 + 텍스트]는 폰트를 임의로 변경하지 않음"
+        ]
+      },
+      "componentDefinition": "컴포넌트는 텍스트·그래픽·인터랙션 요소가 결합되어 하나의 기능 또는 정보를 전달하는 UI 단위. 카드·리스트 등은 컴포넌트이며 그래픽 분류 대상이 아닙니다."
+    },
+    "colorSystem": {
+      "node": "42066:25436 (Color system ✅)",
+      "정의": "Color 는 사용자에게 정보를 전달하는 가장 직관적인 시각 언어. 시선을 이끌고 기능과 메시지를 명확히 전달하며 서비스 전반에 일관된 인상을 유지합니다.",
+      "브랜드속성": [
+        "Clean",
+        "Comfort",
+        "Easy"
+      ],
+      "roles": [
+        {
+          "role": "Primary (프라이머리)",
+          "scale": "Red scale",
+          "rule": "Red 050 이 브랜드 색상에 가장 가깝지만 가독성과 접근성을 고려해 Red 040 을 메인으로 사용. Text color 50 은 강조용 문구."
+        },
+        {
+          "role": "Secondary (세컨더리)",
+          "scale": "Gray scale",
+          "rule": "배경 · 라인 · 텍스트 등 보조 역할로 Primary 를 지지. **텍스트는 모두 Gray scale 로 쓰는 것이 원칙.**"
+        },
+        {
+          "role": "Tertiary (터셔리)",
+          "scale": "Navy scale",
+          "rule": "리브랜딩 이전 Greencar 의 Secondary. 현재는 뱃지 · 지도 핀처럼 **색 자체가 정보인 요소에 한해** 기존 그대로 쓰고, 그 외 폰트 · 컴포넌트는 Gray scale 로 정의."
+        },
+        {
+          "role": "Badge (뱃지)",
+          "rule": "혜택 및 프로모션 영역. 주로 Tag 등 시각적 구분이 필요할 때."
+        },
+        {
+          "role": "Map marker (맵 마커)",
+          "rule": "차량 예약 시 지도 내 G car Zone 위치 표시. G car Zone 외 구역 안내에도 사용."
+        },
+        {
+          "role": "Brand (브랜드)",
+          "rule": "G car Official Brand Color 및 제휴 브랜드 관련 색."
+        },
+        {
+          "role": "System (시스템)",
+          "rule": "모달 배경 Dim 처리 및 성공 · 주의 · 에러 등 상태 표현. 25.06.08 기준 Info box bg 를 Dim layer 의 상위 카테고리로 수정."
+        }
+      ],
+      "note": "Primary / Secondary / Tertiary 라는 역할 축과 용도 규칙이 ✅ 본문에 있습니다. 저장소는 그룹 이름(Primary·Gray Scale·Navy…)만 갖고 있고 이 축이 없었습니다."
+    },
+    "components": {
+      "$description": "✅ 컴포넌트 페이지 본문에서 읽은 정의·스펙. 등록된 스타일에는 없는 내용입니다.",
+      "modal": {
+        "node": "42419:35762 (Modal ✅)",
+        "정의": "현재 화면 위에 Dim layer 와 함께 표시되는 컴포넌트. 사용자의 확인·선택이나 중요한 정보 전달이 필요할 때 강제성을 높이기 위해 사용합니다.",
+        "종류": [
+          {
+            "name": "Alert Modal (알럿 모달)",
+            "목적": "단순 정보 전달",
+            "버튼": "확인 하나",
+            "variants": [
+              {
+                "name": "Basic alert (기본 알럿)",
+                "dim": "Dim layer 1"
+              },
+              {
+                "name": "Full-screen alert (풀스크린 알럿)",
+                "dim": "Dim layer 2",
+                "note": "화면 전체를 덮어 강제성을 높이고 내용에 포커싱"
+              }
+            ]
+          },
+          {
+            "name": "Confirm Modal (컨펌 모달)",
+            "목적": "사용자의 선택이 필요한 경우",
+            "버튼": "확인 · 취소",
+            "variants": [
+              {
+                "name": "Basic confirm (기본 컨펌)",
+                "note": "Body 에 다양한 콘텐츠를 자유롭게 조합"
+              }
+            ]
+          }
+        ],
+        "구조": "Top (상단) · Body (중단) · Action (하단). Top 은 케이스에 따라 생략 가능.",
+        "치수": {
+          "텍스트박스": "327px",
+          "딤내부마진": "24px",
+          "이전값": "312px"
+        },
+        "typeVariants": [
+          "default",
+          "default + title",
+          "vertical two",
+          "horizontal two",
+          "three button",
+          "one text",
+          "scroll",
+          "two text",
+          "contents",
+          "contents + two button",
+          "date picker"
+        ],
+        "중요": "Dim layer 1 = 기본 알럿 · Dim layer 2 = 풀스크린 알럿. CQ-9 에서 나눈 System/Dim Layer 060·080 의 용도가 여기서 확인됩니다."
+      },
+      "checkbox": {
+        "node": "42066:25441 (Checkbox ✅)",
+        "종류": [
+          {
+            "name": "Icon checkbox (아이콘 체크박스)",
+            "box": "24×24 고정"
+          },
+          {
+            "name": "Capsule checkbox (캡슐 체크박스)",
+            "box": "16×16 고정"
+          }
+        ],
+        "체크아이콘": "9×12 통일",
+        "형태": [
+          "basic — 배경 없는 체크",
+          "round — 배경 있는 체크",
+          "with text"
+        ],
+        "tokens": [
+          "Components/Checkbox/Icon/Primary",
+          "Components/Checkbox/Icon/Secondary",
+          "Components/Checkbox/Capsule/Primary",
+          "Components/Checkbox/Capsule/Secondary"
+        ],
+        "미해결메모": [
+          "\"이 화면에는 체크박스라고 해야할지 선택박스라고 해야할지 → 템플릿으로 들어가기\"",
+          "\"캡슐버튼처럼 백그라운드가 늘어나는걸 with 텍스트라고 하면 안될 것 같다 … s m l 이런식으로 값을 정하고,\""
+        ]
+      },
+      "bottomNavigation": {
+        "node": "42073:50821 (Bottom navigation ✅)",
+        "크기": {
+          "ios": "375×70",
+          "aos/web": "365×70"
+        },
+        "구성": [
+          "Icon (아이콘)",
+          "Background (백그라운드)",
+          "Elevation (엘리베이션)",
+          "Label (레이블)"
+        ],
+        "스펙": {
+          "높이": 70,
+          "상단여백": 20,
+          "아이콘": "32×32",
+          "아이콘-레이블 간격": 4,
+          "아이콘굵기": 1.5,
+          "텍스트스케일": "Caption 2"
+        },
+        "states": [
+          {
+            "name": "Disabled (미선택)",
+            "아이콘색": "Gray scale 40",
+            "텍스트색": "Gray scale 40"
+          },
+          {
+            "name": "Pressed (선택)",
+            "아이콘색": "Gray scale 80",
+            "텍스트색": "Gray scale 80"
+          }
+        ],
+        "메뉴": [
+          "이동하기",
+          "콘텐츠",
+          "혜택받기",
+          "마이"
+        ],
+        "미해결메모": [
+          "\"Bottom navigation 컬러 업데이트 필요\" — ✅ 인데 Annotation 이 남아 있습니다"
+        ]
+      },
+      "picker": {
+        "node": "42073:63438 (Picker ✅)",
+        "종류": [
+          {
+            "name": "Time picker (타임피커)",
+            "설명": "시간 값을 스크롤 방식으로 선택"
+          },
+          {
+            "name": "Calendar picker (데이트피커)",
+            "설명": "날짜 값을 달력 형태로 선택"
+          }
+        ],
+        "서체": "원문 — \"숫자에 해당되는 부분은 Typography system (타이포그래피 시스템) 에 지정되어있는 Rubik 서체 사용\"",
+        "하위컴포넌트": {
+          "name": "Picker icon button (피커 아이콘 버튼)",
+          "설명": "피커 내에서만 사용되는 하위 컴포넌트",
+          "token": "Components/Picker/Icon button/Primary"
+        }
+      },
+      "bottomSheet": {
+        "node": "42073:63438 (Picker ✅ 페이지 안) · Bottom sheet 🚧",
+        "정의": "화면 하단에서 올라오는 레이어 형태의 컴포넌트. 현재 화면을 벗어나지 않고 추가 정보 확인·선택·액션 실행이 필요할 때 사용합니다.",
+        "사용조건": "전체 화면으로 넘어가는 Pasing (페이징) 없이 현재 화면 안에서 조작을 끝낼 수 있을 경우",
+        "구조": "Top (상단) · Body (중단) · Action (하단)",
+        "top": "바텀시트 최상단. 콘텐츠 맥락·목적에 따라 유연하게 변경 — 닫기 버튼 · 타이틀 텍스트 · 새로고침 아이콘 조합, 케이스에 따라 핸들 형태로 대체.",
+        "action": "최하단 고정. 단일 버튼 또는 복수 버튼. 종류 3 — Button · Button + Text button.",
+        "elevation": "Elevation_Bottom sheet 사용",
+        "note": "Bottom sheet 는 별도 페이지가 🚧 인데 정의와 구조는 Picker ✅ 안에 들어 있습니다."
+      },
+      "border": {
+        "node": "42066:28717 (Border ✅)",
+        "정의": "영역을 나누는 선. 단독 선인 Line 과, Line 에 배경을 더한 Divider 두 가지입니다.",
+        "종류": [
+          {
+            "name": "Line (라인)",
+            "정의": "영역 구분 또는 입력 영역을 나타내는 단독 선",
+            "두께": "1px",
+            "폭": "소속된 영역의 가로 길이 100% 적용",
+            "쓰는 곳": [
+              "Header area (헤더 영역)",
+              "Input text field (인풋 텍스트 필드)",
+              "Contents area (콘텐츠 영역) 내 컴포넌트"
+            ]
+          },
+          {
+            "name": "Divider (디바이더)",
+            "정의": "Line (라인)과 Background (백그라운드)가 조합된 형태",
+            "폭": "Device width",
+            "높이": "8px — Divider 의 구성요소인 Line 을 같이 포함한 전체 높이값"
+          }
+        ],
+        "컬러": [
+          {
+            "value": "Gray scale 20",
+            "쓰임": "강조 및 소속되어 사용되어야 하는 경우"
+          },
+          {
+            "value": "Gray scale 10",
+            "쓰임": "강조 없이 영역 구분이 필요한 경우"
+          }
+        ],
+        "note": "✅ 페이지인데 저장소에 없던 유일한 컴포넌트였습니다 — GAP-18 에서 메웠습니다."
+      }
+    }
+  },
+  "effectProvenance": {
+    "checkedAt": "2026-08-06",
+    "method": "Figma search_design_system 으로 스타일 이름마다 소속 라이브러리를 조회했습니다. 읽기 전용.",
+    "why": "«GDS 라이브러리에 없으면 원본이 아니다»는 규칙을 효과 스타일에도 실제로 대봤습니다 — 이름만 보고 담았던 것을 소속으로 다시 걸렀습니다.",
+    "counts": {
+      "gds": 10,
+      "excluded": 2,
+      "unverified": 4
+    },
+    "note": ".fig 전체 EFFECT 스타일은 40종입니다. 이 목록 16종은 그중 골라 담은 것이었고, 소속을 대보니 2종이 배제 대상 라이브러리에서 흘러들어와 있었습니다."
+  }
+}

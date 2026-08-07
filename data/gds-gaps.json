@@ -1,0 +1,640 @@
+{
+  "$description": "원본(GDS 라이브러리 + ✅ 페이지)을 디자인 시스템으로서 평가한 결과. 원본을 고치자는 게 아니라, 저장소에서 어떻게 메울지 정하기 위한 목록입니다.",
+  "checkedAt": "2026-08-06",
+  "basis": "data/gds-library.json",
+  "principle": "제1원칙 — 원본 .fig 는 고치지 않습니다. 여기 적힌 것은 저장소에서 해소하고, 원본 반영 여부는 디자인팀이 따로 판단합니다.",
+  "computed": {
+    "duplicateValues": [
+      {
+        "hex": "#ED1C24",
+        "names": [
+          "Primary/Red 500",
+          "Brand/G car Red"
+        ]
+      },
+      {
+        "hex": "#FFFFFF",
+        "names": [
+          "Gray Scale/Gray 000",
+          "Map Marker/Active"
+        ]
+      },
+      {
+        "hex": "#E2E2E2",
+        "names": [
+          "Gray Scale/Gray 020",
+          "Map Marker/Shadow"
+        ]
+      },
+      {
+        "hex": "#000000",
+        "names": [
+          "Gray Scale/Gray 100",
+          "System/Dim Layer",
+          "System/Info Box BG"
+        ]
+      },
+      {
+        "hex": "#A1B1BB",
+        "names": [
+          "Navy/Navy 030",
+          "Map Marker/Active_Line"
+        ]
+      },
+      {
+        "hex": "#FD8484",
+        "names": [
+          "Badge/Hot Deal",
+          "Map Marker/Free Zone"
+        ]
+      }
+    ],
+    "caseInconsistent": [
+      "Navy/navy 040"
+    ],
+    "luminanceInversion": [
+      {
+        "group": "Navy",
+        "pair": [
+          "Navy/Navy 090",
+          "Navy/Navy 100"
+        ],
+        "detail": "Navy/Navy 100 이 Navy/Navy 090 보다 밝습니다"
+      },
+      {
+        "group": "Primary",
+        "pair": [
+          "Primary/Red 090",
+          "Primary/Red 300"
+        ],
+        "detail": "Primary/Red 300 이 Primary/Red 090 보다 밝습니다"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "GAP-1",
+      "area": "타이포",
+      "severity": "높음",
+      "finding": "라이브러리 텍스트 스타일이 5종뿐인데 ✅ Typography system 표는 21단계입니다. 게다가 같은 이름이 조회한 노드마다 다른 크기를 돌려줍니다 — noto_sans/title/medium 이 14 · 16 · 18px 세 가지.",
+      "evidence": "GDS 라이브러리 TEXT 스타일 5종 · get_variable_defs 를 Border ✅ / Radius / Typography ✅ 세 프레임에서 호출한 결과가 서로 다름",
+      "fix": "저장소는 ✅ 표 21단계를 그대로 유지하고, 라이브러리 4종을 21단계 중 어디에 해당하는지 매핑표로 남깁니다. 라이브러리 확장은 디자인팀 작업으로 분리합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 라이브러리 5종은 스타일이 아니라 «그룹»이었습니다. 그룹별 단계 수와 published 수가 맞아떨어집니다(Display 3단계/3개 · Body 4단계/4개). 이름에 단계 번호가 빠져 같은 이름이 여러 값으로 published 된 것입니다. data/typography-library.json 에 차기 라이브러리용 21종을 noto_sans/<group>/<step> 규칙으로 정의했고, 토큰마다 libraryName 으로 실립니다."
+    },
+    {
+      "id": "GAP-2",
+      "area": "타이포",
+      "severity": "중간",
+      "finding": "같은 이름의 텍스트 스타일이 여러 건 published 돼 있습니다 — title/medium 6건, boby/regular 4건, display/bold 3건. 값도 서로 다릅니다(title/medium 이 16px 과 18px 두 가지).",
+      "evidence": "search_design_system 결과에서 같은 name 에 style key 가 여러 개",
+      "fix": "저장소는 이름당 하나만 원본으로 싣고, 어느 값을 택했는지 근거를 남깁니다.",
+      "status": "resolved",
+      "resolution": "해소 — 같은 이름 중복 published 의 원인이 이름 규칙이었음을 확인하고, 21종을 고유 이름으로 정의했습니다. Title 은 8단계인데 6개만 published 라 2개가 빠져 있다는 것도 계산으로 드러났습니다."
+    },
+    {
+      "id": "GAP-3",
+      "area": "타이포",
+      "severity": "낮음",
+      "finding": "스타일 이름 오타 — noto_sans/boby/regular (body).",
+      "evidence": "GDS 라이브러리 TEXT 스타일명",
+      "fix": "저장소는 body 로 적고 원본 이름을 함께 기록합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 차기 라이브러리 이름은 noto_sans/body/1~4 입니다. 원본 오타 boby 는 typo 필드에 남겼습니다."
+    },
+    {
+      "id": "GAP-4",
+      "area": "색",
+      "severity": "높음",
+      "finding": "Map Marker/Shadow 가 두 값으로 존재합니다 — FILL 스타일은 #E2E2E2(불투명 회색), 변수 Map marker_Shadow 는 #0000001A(검정 10%).",
+      "evidence": "라이브러리 FILL 스타일 vs COLOR 변수",
+      "fix": "그림자는 알파여야 겹침에서 맞습니다. 변수 쪽(#0000001A)을 원본으로 삼고 FILL 스타일은 대체 대상으로 표시합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Map Marker/Shadow 를 valueOverrides 로 #E2E2E2 → #0000001A 로 교체했습니다. 그림자가 알파라 겹칠 때 밑이 비칩니다."
+    },
+    {
+      "id": "GAP-5",
+      "area": "색",
+      "severity": "중간",
+      "finding": "같은 값이 두 이름으로 있습니다 — 값이 바뀔 때 한쪽만 바뀌면 조용히 어긋납니다. 원본 60색 안에 값이 겹치는 무리가 4건입니다.",
+      "evidence": "tools/build-color-aliases.js · data/color-aliases.json — #A1B1BB · #ED1C24 · #FD8484 · #FFFFFF",
+      "fix": "의미가 다르면 별칭(시맨틱)으로 연결하고, 같으면 하나로 줄입니다. Map Marker/Active_Line 은 Navy/Navy 030 의 별칭으로 두는 편이 맞습니다.",
+      "status": "resolved",
+      "resolution": "해소 — 값이 같은 무리에 «단계 그룹»(Primary·Gray Scale·Navy) 소속이 정확히 하나면 그것을 원본으로 보고 나머지를 별칭으로 잇습니다. 3무리가 이 규칙으로 판정됐고, 별칭 토큰은 CSS 에서 var() 로, DTCG 에서 {color.*} 참조로 나갑니다 — 값은 이제 한 곳에만 적힙니다. Map Marker/Active Line → Navy/Navy 030 · Map Marker/Active → Gray Scale/Gray 000 · Brand/G car Red → Primary/Red 050.",
+      "residual": "#FD8484(Badge/Hot Deal · Map Marker/Free Zone)는 둘 다 역할 이름이라 원본을 정할 수 없습니다. 묶지 않고 두 토큰 모두 값을 유지하되 주석과 $extensions.gds.sameValueAs 로 서로를 가리킵니다 — 값이 같은 것이 우연일 수 있기 때문입니다."
+    },
+    {
+      "id": "GAP-6",
+      "area": "색",
+      "severity": "중간",
+      "finding": "System/Dim Layer 와 System/Info Box BG 가 둘 다 #000000 이고 불투명도가 토큰 어디에도 없습니다. 개발자가 값을 알 수 없습니다.",
+      "evidence": "라이브러리 FILL 스타일 2종 · ✅ 스와치 캡션은 60% · 80%",
+      "fix": "CQ-9 확정대로 System/Dim Layer 060 · 080 으로 나누고 8자리 HEX 로 내보냅니다.",
+      "status": "resolved",
+      "resolution": "해소 — CQ-9 splits 로 System/Dim Layer 060(#00000099) · 080(#000000CC) 으로 나누고 8자리 HEX 로 내보냅니다."
+    },
+    {
+      "id": "GAP-7",
+      "area": "색",
+      "severity": "낮음",
+      "finding": "Navy 그룹에서 navy 040 만 소문자입니다.",
+      "evidence": "computed.caseInconsistent",
+      "fix": "저장소는 Navy 040 으로 통일하고 원본 이름을 renames 에 남깁니다.",
+      "status": "resolved",
+      "resolution": "해소 — renames 로 Navy/navy 040 → Navy/Navy 040 통일. 원본 이름은 originalName 에 남습니다."
+    },
+    {
+      "id": "GAP-8",
+      "area": "색",
+      "severity": "중간",
+      "finding": "같은 기능(ODA)의 색이 Badge/ODA 와 Brand/ODA Line 두 그룹으로 갈라져 있습니다.",
+      "evidence": "data/color-aliases.json splitPairs — 면색/선색 쌍 3건 중 그룹이 갈린 것은 ODA 하나뿐입니다. Map Marker/Active·Active Line 과 Map Marker/Free Zone·Free Zone Line 은 면색과 선색이 한 그룹에 있습니다.",
+      "fix": "뱃지 면색과 선색이므로 Badge 그룹으로 모으거나, 컴포넌트 계층에서 한 쌍으로 묶습니다.",
+      "status": "resolved",
+      "resolution": "해소 — ODA 는 G car 내부 브랜딩이지 제휴 브랜드가 아닙니다(강민관 확정 2026-08-06). 그래서 면색을 Badge 가 아니라 Brand 로 옮겼습니다: Badge/ODA → Brand/ODA. 선색 Brand/ODA Line 이 이미 Brand 에 있었으므로 한 쌍이 한 그룹에 모였고, Map Marker 의 Active·Active Line / Free Zone·Free Zone Line 과 같은 형태가 됐습니다. 값은 바뀌지 않았습니다(#ED9A1E).",
+      "note": "면색/선색 쌍을 이름 규칙(«X» / «X Line»)으로 기계 검출하게 만들어, 앞으로 새 쌍이 갈리면 자동으로 잡힙니다 — 지금은 3쌍 전부 같은 그룹입니다. 이 개명은 그룹을 넘나드는 첫 사례라, 그룹·라벨을 «바뀐 이름»에서 다시 뽑도록 canon-view 를 고쳤습니다(전에는 원본 그룹이 그대로 남았습니다)."
+    },
+    {
+      "id": "GAP-9",
+      "area": "엘리베이션",
+      "severity": "중간",
+      "finding": "폐기 표시된 스타일이 published 상태로 남아 있습니다 — as-is_Shadow/(X)Bottom Sheet · (X)Floating Button. 라이브러리를 쓰는 사람에게 그대로 노출됩니다.",
+      "evidence": "라이브러리 EFFECT 스타일",
+      "fix": "저장소에서 제외하고 폐기 목록으로만 기록합니다.",
+      "status": "resolved",
+      "resolution": "해소 — as-is_Shadow/(X)… 2종은 원본 60종에서 제외했고 data/gds-library.json 의 effect 에 deprecated 로만 기록합니다."
+    },
+    {
+      "id": "GAP-10",
+      "area": "엘리베이션",
+      "severity": "낮음",
+      "finding": "Frosted Glass(배경 블러 40) 와 Bottom Floating Button 효과가 Elevation 체계 밖에 따로 있습니다.",
+      "evidence": "Border ✅ 페이지 변수 조회",
+      "fix": "그림자 체계와 별개인 효과 그룹으로 이름을 정리합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 그림자 체계 밖 효과를 축으로 갈라 이름을 정리했습니다(tools/build-effects.js: elevation / component / material / deprecated). Frosted Glass 는 그림자가 아니라 블러라 material 축, Bottom Floating Button 은 component 축입니다. 2026-08-06 Elevation system 🚧 페이지를 직접 읽어 보니 원본도 같은 구분을 씁니다 — 레벨 표를 «표준»과 «별도 지정» 두 칸으로 나눠 그려 두었고, 별도 지정 칸의 값 0/0/6/0 15% 가 우리가 이미 내보내던 --gds-effect-bottom-sheet 3겹의 셋째 겹과 같습니다. 우리 분류가 원본의 분류와 어긋나지 않는다는 뒷받침입니다."
+    },
+    {
+      "id": "GAP-11",
+      "area": "반경",
+      "severity": "중간",
+      "finding": "라이브러리 Radius 는 xs·sm·md·lg·xl·xxl·full 7단계(t-shirt size)인데 저장소는 숫자 스케일로 만들어 뒀습니다. 단계 수는 7로 같습니다.",
+      "evidence": "라이브러리 FLOAT 변수 7종 · R-1 결정(4/8/10/12/16/20/원형)",
+      "fix": "원본 이름을 t-shirt size 로 맞추고 숫자는 값으로 둡니다. xs·md·lg·full 값은 아직 실측이 필요합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 값 실측 완료. xs=4 · sm=8 · md=10 · lg=12 · xl=16 · xxl=20 · full=원형. R-1 의 7단계(4/8/10/12/16/20/원형)와 값·개수가 정확히 같습니다. 저장소 이름을 t-shirt size 로 맞춥니다. full 값만 미실측."
+    },
+    {
+      "id": "GAP-12",
+      "area": "계층",
+      "severity": "높음",
+      "finding": "변수화가 색과 반경에만 돼 있고 간격·타이포는 표와 스타일로만 존재합니다. 프리미티브→시맨틱→컴포넌트 3계층이 색에서만 성립합니다.",
+      "evidence": "라이브러리 변수 컬렉션 — Collection(color) · semantic(float/Radius)",
+      "fix": "저장소 토큰은 네 영역 모두 같은 3계층으로 내보내고, 라이브러리에 없는 계층은 저장소가 정의한 것으로 표시합니다.",
+      "progress": "부분 해소 — 색은 프리미티브 60 + 시맨틱 11, 타이포는 프리미티브 21 + 시맨틱 8(계열 5는 미확정), Layout 10 이 Guidelines 계층으로 들어왔습니다. 남은 것은 간격의 시맨틱 계층입니다 — Spacing system ✅(43242:4209) 표는 Spacing / px / 배수 세 열뿐이고 Usage 열이 없어, 원본에 간격의 쓰임새 이름이 존재하지 않습니다. 없는 것을 지어내지 않고 남겨 둡니다.",
+      "typeSemantic": {
+        "source": "Typography system ✅ 42066:25472 · Type scale 표 21행 Usage 열",
+        "tokens": 8,
+        "families": 5,
+        "note": "쓰임새가 한 단계만 가리키면 토큰, 여러 단계를 가리키면 계열로 남깁니다 — data/typography-semantic.json"
+      },
+      "spacingSemantic": {
+        "finding": "Spacing system ✅ 표에 Usage 열이 없습니다 (열 = Spacing · px · 배수).",
+        "evidence": "44090:19455 List — Section 1 머리행 텍스트 \"Spacing\" / \"px\" / \"배수 (1unit=2px)\"",
+        "onlyUsageLevel": "Layout for ios/aos/web ✅ 의 마진·헤더·세이프에어리어 10종이 유일한 쓰임새 이름입니다.",
+        "status": "open"
+      },
+      "status": "resolved",
+      "resolution": "해소 — 3계층이 어디까지 성립하는지를 «조사로» 확정했습니다.\n· 색   프리미티브 60 + 시맨틱 11\n· 타이포 프리미티브 21 + 시맨틱 8 (계열 5는 원본에 선택 규칙이 없어 미확정)\n· 간격  프리미티브 14 + Guidelines 10 (Layout ✅). 시맨틱 계층은 «없음»으로 확정합니다.\n간격에 시맨틱이 없는 것은 우리가 안 만든 게 아니라 원본에 근거가 없기 때문입니다. 그 사실을 tools/spacing-census.js 로 입증했습니다 — ✅ 컴포넌트 페이지 5곳의 «Spacing» 주석 프레임 192건을 기계로 읽었는데, 값은 나오지만 «쓰임새 이름»이 붙은 것은 하나도 없습니다. 담고 있는 프레임 이름도 대부분 Group 2147227xxx 같은 자동 이름입니다. 이름 없는 것에 이름을 지어내지 않습니다.\n조사 결과는 data/spacing-census.json 이며, 여기서 새 결함 GAP-30 이 나왔습니다.",
+      "evidenceCounts": {
+        "annotations": 192,
+        "pages": 5,
+        "onScale": 171,
+        "offScale": 21,
+        "unreadableCallouts": 17
+      }
+    },
+    {
+      "id": "GAP-13",
+      "area": "레이아웃",
+      "severity": "높음",
+      "finding": "✅ Layout for ios/aos/web 페이지의 내용이 저장소에 통째로 없습니다. 화면 크기·마진·헤더 라인·홈 인디케이터·버튼 영역 동작이 전부 정의돼 있는데 토큰으로도 문서로도 안 들어와 있습니다.",
+      "evidence": "get_metadata 43185:36342 — iOS 375×812 · AOS/Web 360×800 · 마진 20px 통일 · iOS 하단 0px · 헤더 하단 1px 라인 · 홈 인디케이터 34px · 버튼 스티키/픽스",
+      "fix": "Layout 은 Foundation 이 아니라 **Guidelines** 계층 소속입니다([Guidelines] ✅ 구조도 기준). Guidelines 영역을 저장소에 만들고 화면 크기·마진·안전영역을 토큰으로 내보냅니다. 값은 data/gds-library.json 의 pages.layout 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/layout-tokens.json 신설. 화면 크기 4 · 마진 4 · 안전영역 1 · 헤더 1 = 토큰 10개를 dist/tokens 로 내보냅니다(--gds-layout-*). 영역 3종과 버튼 동작 2종도 기록."
+    },
+    {
+      "id": "GAP-14",
+      "area": "계층",
+      "severity": "높음",
+      "finding": "Foundation 구성 요소를 두 ✅ 페이지가 다르게 적고 있습니다 — [Foundation] 본문은 \"Color · Typography · Spacing · Icon\" 4개, [Guidelines] 구조도는 \"Color · Typography · Spacing · Icon · Elevation · Radius\" 6개. 어느 쪽이든 저장소에는 Icon 이 없습니다.",
+      "evidence": "get_metadata 42066:25435 (Foundation 본문) vs 43176:109107 (Guidelines 구조도) vs 43176:107194 (Getting started 목차 — 6개)",
+      "fix": "목차와 구조도가 둘 다 6개이므로 6개를 기준으로 삼고, [Foundation] 본문 쪽을 원본 결함으로 기록합니다. Icon 은 원본이 🚧 라 저장소에서는 빈칸으로 표시합니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/gds-structure.json 에서 Foundation 을 6요소로 확정했습니다(다수 근거: [Guidelines] 구조도 + Getting started 목차). [Foundation] 본문의 4개 표기는 conflict 로 남겨 뒀습니다."
+    },
+    {
+      "id": "GAP-15",
+      "area": "엘리베이션",
+      "severity": "중간",
+      "finding": "그림자·블러 효과가 Elevation_1~6 말고도 9종 더 있습니다. Bottom Sheet 계열만 4종이고 그중 «Bottom Sheet»(3겹)와 «bottom sheet»(1겹)는 대소문자만 다른 별개 스타일입니다.",
+      "evidence": "Typography ✅ · Radius · Border ✅ 프레임 변수 조회 — Bottom Sheet · bottom sheet · Bottom Sheet shadow · Bottom Floating Button · Frosted Glass · level/gold/circle-outter · circle-inner · symbol",
+      "fix": "Elevation 체계 안으로 흡수할 것과 별개 효과 그룹으로 뺄 것을 가릅니다. 대소문자 중복 2종은 하나로 합쳐야 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — «Elevation 이 아니면 무엇인가»를 네 축으로 갈랐습니다 (tools/build-effects.js).\n· elevation 6 — 표면 높이 스케일 (--gds-elevation-*)\n· component 5 — 컴포넌트 전용 효과. 높이 스케일이 아니라서 Elevation 에 넣으면 안 됩니다.\n· material 1 — Frosted Glass 는 그림자가 아니라 블러입니다. 다른 축입니다.\n· deprecated 2 — 원본이 (X) 로 표시한 것. 토큰에서 제외.\n판정은 이름과 값에서 읽히는 것만으로 합니다 — Elevation_N / as-is_·(X) / BACKGROUND_BLUR / 나머지.",
+      "counts": {
+        "total": 16,
+        "elevation": 6,
+        "component": 7,
+        "material": 1,
+        "deprecated": 2,
+        "emitted": 3,
+        "blocked": 2,
+        "unmeasured": 4
+      },
+      "revised": "2026-08-06 — 처음에는 16종으로 갈랐는데, 소속을 대보니 2종(bottom sheet · Bottom Sheet shadow)이 배제 대상 라이브러리에서 섞여 들어온 것이었습니다. 목록을 14종으로 줄이고, Frosted Glass 와 level/gold/* 3종은 어느 라이브러리에서도 찾지 못해 «소속 미확인»으로 두었습니다. 지금 --gds-effect-* 로 나가는 것은 GDS 소속이 확인된 2종뿐입니다 — Bottom Sheet · Bottom Floating Button. 자세한 경위는 GAP-31."
+    },
+    {
+      "id": "GAP-16",
+      "area": "간격",
+      "severity": "낮음",
+      "finding": "간격 스케일이 2px 배수인데 배수 열에 구멍이 있습니다 — 3X(6px)와 18X(36px)가 없습니다.",
+      "evidence": "✅ Spacing scale 표 배수 열 0·1·2·4·6·8·10·12·14·16·20·22·24·26",
+      "fix": "의도한 건너뜀인지 누락인지 확인이 필요합니다. 의도라면 \"왜 없는지\"를 문서에 남겨야 합니다.",
+      "status": "open"
+    },
+    {
+      "id": "GAP-17",
+      "area": "구조",
+      "severity": "높음",
+      "finding": "GDS 는 Guidelines → Foundation → Components → Template 4계층으로 설계돼 있는데 저장소에는 이 구조가 없습니다. 저장소가 쓰는 \"프리미티브 → 시맨틱 → 컴포넌트\" 3계층은 토큰 계층이라 별개입니다.",
+      "evidence": "[Guidelines] ✅ 구조도 43176:109614 · Getting started ✅ 목차 43176:107181",
+      "fix": "저장소 구성을 4계층에 맞추고, 토큰 3계층과 문서 4계층을 각각 무엇인지 명시해 섞이지 않게 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — data/gds-structure.json 신설. Guidelines → Foundation → Components → Template 4계층에 35개 항목을 넣고 각 항목의 Figma 상태(done/wip/none)와 저장소 반영 상태(tokens/docs/measured/none)를 표시합니다."
+    },
+    {
+      "id": "GAP-18",
+      "area": "구조",
+      "severity": "중간",
+      "finding": "Components 목차는 25개인데 저장소가 실측한 것은 Buttons 1개뿐입니다.",
+      "evidence": "Getting started ✅ 목차 43176:107203 — Buttons · Bottom sheet · Input · Bottom navigation · Border · Picker · Modal · Check box · Switch · Selection box · Radio · Accordion · Tap app bar · Tap · Smart key · Tip · Bage · Process bar · Toast · Card · Skeleton · Loading spinner · Table · Pasing · Numbering",
+      "fix": "✅ 표시된 컴포넌트부터 순서대로 실측합니다 — Modal · Checkbox · Bottom navigation · Picker · Border 가 ✅ 입니다.",
+      "status": "resolved",
+      "resolution": "해소 — «25종 중 6종»이 무엇을 세는 수였는지 갈랐습니다.\n구조도 25종의 Figma 상태는 ✅ 6 · 🚧 11 · — 8 입니다. 즉 원본이 완성한 컴포넌트가 6종뿐입니다.\n그 6종을 전부 저장소에 실측해 넣었습니다(✅ 중 6/6). 마지막 하나였던 Border ✅ 는 ✅ 인데 저장소에 없던 유일한 컴포넌트였고, 이번에 Line/Divider 정의·두께·폭·컬러 쓰임까지 읽어 넣었습니다. 🚧 인 Bottom sheet 도 Picker ✅ 안에서 읽은 만큼 함께 싣습니다(실측 7종).\n남은 19종은 원본이 아직 🚧 이거나 시작 전이라 저장소가 먼저 만들 수 없습니다 — 우리 누락이 아닙니다. tools/build-components.js 가 «✅ 인데 저장소에 없는 것»을 매번 세고, 0이 아니면 check 가 실패합니다.\n사이트에 Components 섹션을 새로 만들어 25종 목록과 실측 7종의 구조·치수·상태·컬러·간격 주석을 실었습니다.",
+      "counts": {
+        "structure": 25,
+        "figmaDone": 6,
+        "documented": 7,
+        "documentedOfDone": 6,
+        "waitingOnSource": 19
+      },
+      "consolidation": "이번 정리에서 근거 보강 — 그때는 ✅ 6종만 실측했다는 뜻이었고, 지금은 25종 중 24종을 직접 읽었습니다(✅ 6 · 🚧 11 · — 8 중 Table 제외 7). 남은 것은 노드가 없는 Table 한 쪽뿐입니다."
+    },
+    {
+      "id": "GAP-19",
+      "area": "명명",
+      "severity": "낮음",
+      "finding": "이름 표기가 세 곳에서 어긋납니다 — ① 목차 오타 Bage(Badge) · Pasing(Paging) · Tap(Tab) · Tap app bar(Top app bar), ② 목차 이름과 페이지 이름이 다른 곳 Input↔Text field · Numbering↔Inline number, ③ 본문 오타 Componenets(Components).",
+      "evidence": "data/component-pages.json › naming 6건 · ownNameTypos 1건(«Componenets (컴포넌트)» 43185:39199) — 둘 다 기계 대조.",
+      "fix": "저장소는 바른 표기로 적고 원본 표기를 함께 남깁니다.",
+      "status": "partial",
+      "resolution": "부분 해소 — ①②는 저장소가 바른 표기를 쓰고 목차 표기를 나란히 남기는 것으로 처리했습니다(Components 페이지 «목차 이름과 페이지 이름이 다른 곳» 표). ③ Componenets 는 이번 전수 읽기에서 새로 나온 것이라 이번에 추가했습니다.",
+      "consolidation": "이번 정리에서 갱신 — 처음 적을 때 들어 있던 «Getting stared(started)» 는 근거 노드 ID 없이 손으로 적은 항목이라 뺐습니다. 지금 자료로는 Getting started 로만 확인되며, 원본에서 다시 확인해야 합니다(아래 확인필요). 2026-08-06 — «Componenets» 를 손으로 적지 않고 기계가 찾도록 파서에 넣었습니다(자기 이름과 편집 거리 2 이내면 오타로 가릅니다).",
+      "needsCheck": "Getting started 목차 제목의 철자 — 근거 노드 ID 를 확보하지 못했습니다."
+    },
+    {
+      "id": "GAP-20",
+      "area": "프로세스",
+      "severity": "낮음",
+      "finding": "원본 문서화 규칙은 \"현재 사용되지 않는 요소는 제외하고 히스토리 파일에서 확인\" 인데, 히스토리 파일이 어디인지 저장소에 기록돼 있지 않습니다.",
+      "evidence": "Getting started ✅ 문서화 범위 표 43176:106899",
+      "fix": "히스토리 파일 위치를 확인해 기록합니다. 레거시 라이브러리를 배제하는 근거가 이 규칙이므로 출처가 필요합니다.",
+      "status": "open"
+    },
+    {
+      "id": "GAP-21",
+      "area": "가이드",
+      "severity": "높음",
+      "finding": "✅ UI/UX guide 의 내용이 저장소에 한 줄도 없습니다. UX 라이팅 규칙 6종(어투·헤더 타이틀·문장형 타이틀·본문·플레이스홀더·알림 버튼)과 그래픽 3단계 체계가 전부 여기 있습니다.",
+      "evidence": "get_metadata 42066:27864 — 어투/타이틀/마침표/플레이스홀더/버튼명 규칙 · 그래픽 Lv.1 시스템 아이콘 · Lv.2 커스텀 아이콘 · Lv.3 일러스트 + 선택·예외·밀도 기준",
+      "fix": "Guidelines 계층에 UI/UX Guide 를 만들고 규칙을 그대로 싣습니다. 값은 data/gds-library.json 의 pages.uiuxGuide 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — docs/GDS-uiux-guide.md 생성(build/guide.js). UX 라이팅 6항목 · 그래픽 3단계 · 기준 3가지 · 원칙 4개를 데이터에서 뽑아 씁니다."
+    },
+    {
+      "id": "GAP-22",
+      "area": "아이콘",
+      "severity": "중간",
+      "finding": "Icon 은 Foundation 요소인데 Icon system 페이지는 🚧 입니다. 정작 아이콘을 가르는 규칙(Lv.1~3 · 밀도)은 ✅ UI/UX guide 에 있어서 두 곳으로 흩어져 있습니다.",
+      "evidence": "Foundation 목차에 Icon 포함 · Icon system (아이콘 시스템) 🚧 · 그래픽 단계 정의는 UI/UX guide ✅",
+      "fix": "저장소는 UI/UX guide 의 3단계 체계를 Icon 영역의 기준으로 삼고, Icon system 페이지가 ✅ 가 되면 대조합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Foundation 에 Icon 페이지를 만들어 세 곳에 흩어진 근거를 한 화면에 모았습니다. ① 분류 Lv.1~3·기준·원칙은 UI/UX guide ✅ 에서, ② 아이콘 목록·이름 규칙·크기 단계는 🚧 Icon system 페이지를 직접 읽어서(42066:25437), ③ 치수 6건은 ✅ 컴포넌트 본문에서 긁어서. 각 항목이 어디서 왔는지 페이지에 그대로 밝힙니다.",
+      "residual": "참고로도 원본으로도 안 메워진 것 3가지 — 터치 표적 크기 · 20px 미만 라벨 하한 · 색 대비율 수치. 두 참고에는 있으나 원본에 없는 축이라 «채우지 않고» 없음으로 남깁니다.",
+      "revised": "2026-08-06 정정 — 첫 판은 틀렸습니다. Icon system 페이지가 🚧 라는 이유로 열어 보지 않고 «이름 규칙 없음 · 크기 스케일 없음 · 전체 목록 없음»이라고 단정해 배포했습니다. 페이지를 읽어 보니 셋 다 있었습니다 — 이름 규칙 Icon/system/<이름>/<line|fill>/<크기> · 크기 단계 XL 96/L 56/M 40 · 아이콘 184종(노드 1,624개). 등록된 스타일 목록이 아니라 페이지를 읽어야 한다는 지시를 지키지 않은 결과입니다. 철회 3건은 지우지 않고 «정정» 절로 페이지에 남겼습니다.",
+      "found": "덤으로 드러난 것 — 아이콘 이름 295개 중 87개가 규칙에서 벗어나 있습니다. 변형이 이름보다 앞(Icon/system/line/alert_off) 63건 · 변형·크기 없음 15건 · 소문자 icon/ 시작 8건 · 그 밖 1건. 저장소가 고치지 않고 유형별로 세어 두었습니다 — 차기 라이브러리 반영 때 정할 일입니다.",
+      "revised2": "2026-08-06 두 번째 정정 — 또 틀렸습니다. 첫 정정에서 «페이지를 직접 읽었다»고 했지만 실제로는 Icon/system/* 노드 «이름»만 훑었습니다(tools/parse-icon-page.js 가 문서 프레임 텍스트를 버림). 그래서 «아이콘 그리드 없음 · 크기 용도 배정 없음»이라 단정하고 레퍼런스(M3·KRDS)로 메웠습니다.\n강민관 확인(«그리드 그려져 있고 End cap은 둥글게가 맞아용») 후 페이지를 통째로 다시 읽으니 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인이 있었습니다 — 프레임 24*24 · Live area 20*20 · Square 18*18 · Circle 20*20 · Rectangular 16*20/20*16 · 세이프존 최소 2 · 스트로크 1.2px(허용 오차 ±0) · 코너 2px · 기본 Cap Round / 교차 지점 예외 Butt + 1px offset · 크기별 굵기 40:2 32:1.6 24:1.2 20:1 16:1.\n레퍼런스로 메운 것은 전부 걷어냈고(data/icon-guide.json 이 원본 근거), 참고 자료는 status 를 proposal → comparison 으로 강등해 «원본 문장이 어디서 왔는지» 대조에만 씁니다.",
+      "provenance": "원본 문장 중 06_Off slash · 07_Stack 두 절이 KRDS 원문과 글자 그대로 같습니다(기계 대조, 겹침 100%). 00_Size 두 문장과 01_Layout 은 부분 일치인데, 00_Size 는 원본 오타(«20ox» · «넒은»)가 문장을 끊어 놓은 것이 이유입니다. 스트로크 1.2px · 크기별 굵기 5단계 · End cap 교차 예외 · 세이프존 «최소» 표현은 G car 고유 판단입니다.",
+      "sizeDecision": "00_Size 의 주요 크기(16·20·24·32·40) 밖에 있는 36(5건)·50(1건)·56(1건)은 유지합니다 — 강민관 2026-08-06 «일단 36 50 56은 냅 두시고»."
+    },
+    {
+      "id": "GAP-23",
+      "area": "색",
+      "severity": "높음",
+      "finding": "✅ Color system 본문이 정의하는 역할 축(Primary=Red · Secondary=Gray · Tertiary=Navy)과 용도 규칙이 저장소에 없습니다. 특히 \"텍스트는 모두 Gray scale 로 쓰는 것이 원칙\"과 \"Navy 는 색 자체가 정보인 요소에만\" 이 두 규칙은 시맨틱 계층의 근거인데 빠져 있었습니다.",
+      "evidence": "get_metadata 42066:25436 — Primary/Secondary/Tertiary 정의 · Gray scale_Text 원칙 · Tertiary 사용 제한 · Badge/Map marker/Brand/System 용도",
+      "fix": "색 그룹에 역할(role)과 용도 규칙을 붙이고, 시맨틱 토큰을 이 규칙에서 끌어냅니다(GAP-12 와 함께 해소). 값은 data/gds-library.json 의 pages.colorSystem 에 담았습니다.",
+      "status": "resolved",
+      "resolution": "해소 — color-decisions.json 에 roles(역할 축 7종)와 semantic(시맨틱 토큰 11종)을 추가했습니다. 시맨틱 토큰마다 evidence 로 ✅ 페이지 근거를 답니다."
+    },
+    {
+      "id": "GAP-24",
+      "area": "레이아웃",
+      "severity": "중간",
+      "finding": "✅ 페이지끼리 AOS/Web 화면 폭이 다릅니다 — Layout 페이지는 360, Bottom navigation 페이지는 365.",
+      "evidence": "원본 Layout ✅ 43185:36342 \"aos/web 360×800 · ios 375×812\" vs Bottom navigation ✅ 42073:50821 \"365×70\"",
+      "fix": "어느 쪽이 맞는지 확인해 하나로 맞추고, 저장소는 확정값 하나만 싣습니다.",
+      "status": "resolved",
+      "resolution": "해소 — 화면 폭은 iOS 375 / AOS·Web 360 입니다. 원본 Layout ✅ 의 묶음을 그대로 쓰며(강민관 확정 2026-08-06), 토큰은 screen-ios-* 와 screen-aos-web-* 두 벌만 나갑니다. Bottom navigation ✅ 의 365 는 어느 기준에도 없는 값이라 원본 표기 오류로 기록했습니다(SD-19) — 같은 페이지 iOS 행이 375 이므로 375 의 오타일 가능성이 있으나 확인 수단이 없어 단정하지 않습니다.",
+      "note": "중간에 «AOS 를 iOS 와 묶어 375 로 쓴다»는 실무 기준이 나와 AOS 폭 토큰을 한때 막았습니다. 곧바로 정정돼(AOS·Web 360) 막힘을 풀었습니다 — 확정되지 않은 값을 내보내지 않은 덕에 되돌릴 것이 없었습니다."
+    },
+    {
+      "id": "GAP-25",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "finding": "✅ 로 표시된 페이지에 미해결 메모가 남아 있습니다. Checkbox 는 명명이 안 정해졌고(체크박스 vs 선택박스, with text vs s/m/l), Bottom navigation 에는 \"컬러 업데이트 필요\" Annotation 이 붙어 있습니다.",
+      "evidence": "Checkbox ✅ 본문 메모 2건 · Bottom navigation ✅ Annotation 1건",
+      "fix": "✅ 의 기준을 정합니다 — 미해결 메모가 있으면 ✅ 가 아니거나, ✅ 는 \"구조 확정\"이고 명명·색은 별도 상태라는 뜻인지 명시해야 합니다.",
+      "progress": "부분 — 미해결 메모가 남은 ✅ 컴포넌트는 이제 Components 페이지에서 해당 컴포넌트 바로 아래에 경고로 보입니다(Checkbox 2건 · Bottom navigation 1건). 메모 자체의 처분은 원본 작업이라 여기서 닫지 않습니다.",
+      "status": "partial"
+    },
+    {
+      "id": "GAP-26",
+      "area": "컴포넌트",
+      "severity": "낮음",
+      "finding": "컴포넌트 본문이 색을 두 자리 축약으로 씁니다 — «Gray scale 40» · «Gray 30» · «navy 40» · «red 50». 토큰 이름은 세 자리(«Gray Scale/Gray 040»)라 문서를 읽고 토큰을 찾으려면 매번 사람이 변환해야 했습니다.",
+      "evidence": "data/color-shorthand.json — 축약 8종(12건)이 팔레트의 7개 토큰을 가리킵니다. ✅ 실측(components.json)과 🚧 원문(figma-pages/*.json) 양쪽에서 기계로 긁었습니다.",
+      "fix": "문서 표기와 토큰명을 잇는 대조표를 저장소에 둡니다. 값 자체는 원본과 맞습니다.",
+      "status": "resolved",
+      "resolution": "해소 — 대조표를 만들었습니다(tools/build-color-shorthand.js). 원본 문장은 고치지 않고 축약을 그대로 둔 채 옆에 토큰 이름과 값을 답니다. 두 자리→세 자리 규칙은 «앞에 0 을 붙인다» 하나뿐이고, 그 결과가 팔레트에 실재할 때만 이었다고 셉니다 — 못 이은 것 0종. 가르는 김에 하나 더 나왔습니다: 같은 토큰(Gray Scale/Gray 020)을 «Gray 20»과 «Gray scale 20» 두 표기로 씁니다."
+    },
+    {
+      "id": "GAP-27",
+      "area": "타이포",
+      "severity": "높음",
+      "finding": "확정한 TQ-6(서체 Noto Sans KR 단일)과 ✅ Picker 페이지 본문이 어긋납니다. 본문은 \"숫자에 해당되는 부분은 Typography system 에 지정되어있는 Rubik 서체 사용\"이라고 명시합니다.",
+      "evidence": "get_metadata 42073:63438 (Picker ✅) · TQ-6 확정 2026-08-05",
+      "fix": "결정은 유지하되 원본 본문과 어긋난다는 사실을 남깁니다. Typography system ✅ 표 21단계에는 Rubik 이 없으므로, 본문이 가리키는 \"Typography system 에 지정된 Rubik\"이 무엇인지 확인이 필요합니다.",
+      "status": "resolved",
+      "resolution": "해소 — Typography system ✅(42066:25472) 본문을 직접 읽어 확인했습니다. 페이지에 \"Rubik\"은 한 번도 나오지 않고(레이어 이름 3,492개 중 0건), 본문은 \"[Noto Sans KR]\"과 \"한글·영문·숫자의 일관된 어우러짐과 명확한 정보 위계 전달을 위해 Noto Sans KR을 지카 서체로 사용합니다\"라고 적습니다. Type scale 표의 Usage 열은 오히려 Title 1(24/Medium)=Time picker_number, Title 2(22/Medium)=Time picker_date 로 숫자 영역을 Noto Sans KR 단계에 배정합니다. 따라서 TQ-6(Noto Sans KR 단일)은 그대로 서고, Picker 본문의 Rubik 문장은 원본이 가리키는 곳에 실물이 없는 낡은 참조입니다 — SD-18 로 기록합니다."
+    },
+    {
+      "id": "GAP-28",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "finding": "Bottom sheet 의 정의·구조·Action 종류가 Bottom sheet 페이지(🚧)가 아니라 Picker ✅ 페이지 안에 들어 있습니다.",
+      "evidence": "Picker ✅ 42073:63438 본문 — Bottom Sheet 정의 · Top/Body/Action 구조 · Elevation_Bottom sheet 사용",
+      "fix": "저장소는 Picker ✅ 안의 정의를 Bottom sheet 근거로 삼고, Bottom sheet 페이지가 ✅ 가 되면 대조합니다. GAP-15 의 Bottom Sheet 효과 4종 중 어느 것이 이 \"Elevation_Bottom sheet\" 인지도 함께 확인해야 합니다.",
+      "status": "resolved",
+      "resolution": "해소 — 정의가 어느 페이지에 적혀 있든 근거는 ✅ 이므로, Picker ✅ 안의 Bottom sheet 절을 원본으로 삼고 Components 페이지에 정의·사용조건·구조(Top/Body/Action)·Action 종류까지 실었습니다. 출처는 «Picker ✅ 페이지 안»으로 그대로 밝힙니다. Bottom sheet 페이지가 ✅ 가 되면 대조합니다.",
+      "spinoff": "함께 확인하라던 «Elevation_Bottom sheet 가 4종 중 어느 것인가»는 답이 «넷 다 아님» 이었습니다 — 그런 이름의 스타일이 라이브러리에 아예 없습니다(SD-20). 컴포넌트 본문이 지목한 스타일 이름을 라이브러리와 대조하는 검사를 새로 만들어 잡았습니다(tools/build-components.js styleRefs). 이름이 겹치는 후보 4종(살아있는 것 3종)을 값과 함께 페이지에 싣되 하나를 고르지 않았습니다 — 어느 것인지는 GAP-31 에서 정합니다."
+    },
+    {
+      "id": "GAP-29",
+      "area": "타이포",
+      "severity": "중간",
+      "finding": "Title 그룹이 원본 8단계인데 라이브러리에는 6개만 published 돼 있습니다 — 2개가 빠져 있습니다.",
+      "evidence": "search_design_system — noto_sans/title/medium 의 style key 6개 · 원본 Title 1~8",
+      "fix": "차기 라이브러리에 Title 8단계를 전부 넣습니다. 어느 2개가 빠졌는지는 라이브러리 반영 시점에 확인합니다.",
+      "status": "resolved",
+      "resolution": "철회 — 사실이 아니었습니다. 2026-08-06 다시 조회하니 noto_sans/title/medium 의 style key 가 8개로 Title 8단계와 맞아떨어집니다. 빠진 것이 없습니다. 앞의 «6개»는 검색 결과를 다 못 본 수였습니다. 서로 다른 질의 두 번으로 같은 키 8개를 확인했고 data/typography-library.json 에 키를 실었습니다.",
+      "retracted": {
+        "claim": "Title 그룹이 원본 8단계인데 라이브러리에는 6개만 published 돼 있습니다 — 2개가 빠져 있습니다.",
+        "why": "search_design_system 결과를 다 보지 않고 세었습니다. GAP-32 가 경계하는 것과 같은 실수입니다 — 부분만 보고 «없다»고 센 것.",
+        "correctedAt": "2026-08-06"
+      }
+    },
+    {
+      "id": "GAP-30",
+      "area": "간격",
+      "severity": "중간",
+      "finding": "✅ 컴포넌트 페이지의 간격 주석 192건 중 21건이 Spacing 스케일에 없는 값입니다. 가르고 보니 5건은 문서를 캔버스에 배치한 여백이고, 제품 간격 후보는 16건입니다. 그중 11건이 홀수라 «2px 기본 단위» 선언을 정면으로 어깁니다.",
+      "evidence": "tools/classify-spacing.js · data/spacing-outliers.json — 주석의 부모 프레임 이름이 문서화 틀의 컨테이너인지로 갈랐습니다. 틀 이름은 지어내지 않고 원자료 XML(data/figma-xml/*.xml)에 실제로 있는 10종만 씁니다.",
+      "fix": "남은 몫은 디자인팀입니다 — 1px 차이가 측정 방식(테두리 포함)인지 의도인지 정하면 16건이 한꺼번에 정리됩니다. 저장소는 어느 쪽으로도 맞추지 않고 양쪽을 나란히 싣습니다.",
+      "status": "partial",
+      "note": "조사 방법의 한계도 함께 적습니다 — 치수 말풍선 17건은 컴포넌트 인스턴스라 라벨 숫자가 metadata 에 나오지 않아 값으로 세지 않았습니다.",
+      "resolution": "부분 해소 — 두 갈래를 갈랐습니다. (2) 문서 캔버스 여백 5건은 제품 간격이 아니므로 조사에서 뺐습니다. (1) 제품 간격 후보 16건은 값과 «가장 가까운 단계와의 차이»를 나란히 실었습니다 — 맞추지는 않았습니다.",
+      "observation": "[추론] 제품 후보 16건 중 11건이 단계에서 정확히 1px 떨어져 있습니다(19↔20 · 29↔28 · 7↔8 · 13↔12 · 31↔32). 홀수 11건과 그대로 겹칩니다. «스케일에 단계가 모자란다»보다 «주석 값이 1px 어긋나 찍힌다»에 가까워 보이지만, 테두리 1px 을 포함해 잰 것인지 · 실제로 1px 을 의도한 것인지는 원본이 정할 일입니다. [확인 필요] 저장소는 어느 쪽으로도 맞추지 않습니다.",
+      "consolidation": "2026-08-06 — 갈랐더니 새 사실이 나왔습니다: 제품 후보 16건 중 11건이 단계에서 정확히 1px 떨어져 있습니다. «스케일에 단계가 모자란다»는 진단이 흔들립니다. 어느 쪽인지는 원본이 정합니다."
+    },
+    {
+      "id": "GAP-31",
+      "area": "엘리베이션",
+      "severity": "중간",
+      "finding": "«Bottom Sheet»(3겹)와 «bottom sheet»(1겹)는 대소문자만 다른 이름인데 값이 서로 다릅니다. 토큰 키가 --gds-effect-bottom-sheet 하나로 겹치므로 둘 다 내보낼 수 없습니다.",
+      "evidence": "data/effects.json caseCollisions — Bottom Sheet «3겹 #00000026 0/4/8/3 + #0000004D 0/1/3/0 + #00000026 0/0/6/0» vs bottom sheet «#00000026 0/1/2/0»",
+      "fix": "어느 값이 실제 Bottom sheet 의 그림자인지 원본에서 확인하고 하나를 남깁니다. 둘 다 쓰이는 자리가 다르면 이름을 갈라야 합니다(예: bottom-sheet / bottom-sheet-inner). 값이 다르므로 «오타 중복»으로 합칠 수 없습니다.",
+      "progress": "GAP-28 을 풀다가 범위가 «둘 중 하나»에서 «살아있는 셋 중 하나»로 넓어졌습니다 — Bottom sheet 본문이 가리킨 «Elevation_Bottom sheet» 라는 이름의 스타일이 아예 없었기 때문입니다(SD-20).",
+      "status": "resolved",
+      "resolution": "해소 — 그런데 답이 «둘 중 하나를 고르는 것»이 아니었습니다. 소문자 «bottom sheet» 는 애초에 GDS 라이브러리 스타일이 아니라 레거시 3종((사용 X) 그린카 App · 그린카 App v2.0 · G car APP v1.0)의 스타일이 저장소 인벤토리에 섞여 들어온 것이었습니다(search_design_system 소속 조회 2026-08-06). 배제 규칙을 적용해 목록에서 빼자 키 충돌 자체가 사라졌습니다. 남은 «Bottom Sheet»(3겹)가 맞는 값임은 강민관이 확정했고(ED-1), 원본 스타일 설명 «바텀시트만의 별도 값» 과도 같은 방향입니다. --gds-effect-bottom-sheet 가 이 값으로 나갑니다.",
+      "residual": "같은 조회에서 «Bottom Sheet shadow» 도 배제 대상(작업 파일 공유) 소속임이 드러나, 그동안 내보내던 --gds-effect-bottom-sheet-shadow 토큰을 거뒀습니다. Frosted Glass 와 level/gold/* 3종은 어느 라이브러리에서도 찾지 못해 «소속 미확인»으로 두고 토큰을 막았습니다 — 파일 로컬 스타일일 가능성이 큽니다. 확인되면 풀립니다.",
+      "blocking": "정해질 때까지 두 토큰 모두 내보내지 않습니다 — 잘못된 값이 나가는 것보다 안 나가는 편이 낫습니다.",
+      "note": "저장소가 스스로 만든 오류였습니다. 효과 스타일을 이름만 보고 담고 소속을 대보지 않았습니다 — 색에는 적용하던 «GDS 라이브러리에 없으면 원본이 아니다» 규칙을 효과에는 적용하지 않았던 것입니다. 이제 빌드가 소속을 검사하고, GDS 밖 스타일이 목록에 남아 있으면 예외를 던집니다."
+    },
+    {
+      "id": "GAP-32",
+      "area": "작업 방식",
+      "severity": "높음",
+      "finding": "🚧 페이지를 «내용이 없는 페이지»로 세어 왔습니다. 더 나아가, 페이지를 열었다고 하면서도 노드 «이름»만 훑고 본문 텍스트를 읽지 않은 경우가 있었습니다.",
+      "evidence": "Icon system 🚧 — 이름 규칙·아이콘 184종·크기 단계가 전부 있었는데 «없음»으로 배포했습니다(GAP-22 정정). Text field 🚧 — «원본 대기»로 비워 두었는데 정의·유형 4가지·구조·변형 42종이 있었습니다. Elevation system 🚧 — «정의가 없다»고 적었는데 레벨 0~5·dp·그림자 수치·적용 범위가 있었습니다. Icon system 2차 — «페이지를 직접 읽었다»고 하고도 파서가 Icon/system/* 노드 이름만 모아서, 실제로는 00_Size ~ 08_Color 여덟 절짜리 제작 가이드라인을 통째로 놓쳤습니다.",
+      "fix": "🚧 페이지를 전수로 직접 읽되, «읽었다»의 기준을 본문 텍스트로 둡니다. tools/parse-figma-page.js 가 텍스트 노드를 조상 사슬과 함께 전부 저장하므로 페이지별 추출기는 원자료를 다시 볼 수 있습니다. 채우지 않은 문서화 템플릿(«설명글»·«레벨 값»)은 «내용 있음»으로 세지 않습니다.",
+      "status": "partial",
+      "progress": "전수 완료 — 🚧 19쪽과 «시작 전(—)» 8쪽을 모두 직접 읽었습니다(2026-08-06). 표시가 «없음»을 뜻하지 않는다는 것이 두 번 확인됐습니다: 🚧 19쪽 중 빈 페이지는 0쪽, «—» 8쪽 중 1쪽(Table)뿐입니다. 63쪽 전체에서 노드가 하나도 없는 페이지는 Table 하나입니다. 읽은 원문은 data/figma-pages/*.json 에, 대조 결과는 data/component-pages.json · data/not-started-pages.json 에 쌓았습니다. 2026-08-06 추가 — 손으로 옮겨 적던 5쪽의 원자료를 저장소에 넣어(data/figma-xml/) 손 옮겨적기를 0으로 만들었습니다. 그 과정에서 손으로 적었던 진술 2건이 틀린 것으로 드러났습니다(Switch 문서 틀 · Loading spinner To-be). tools/verify-transcribed.js 가 매번 다시 셉니다.",
+      "consolidation": "이번 정리에서 갱신 — «남은 11쪽»이 0쪽이 됐고, «—» 8쪽까지 범위를 넓혔습니다. 규칙 자체(«읽었다»의 기준은 본문 텍스트)는 앞으로도 지켜야 하므로 닫지 않고 partial 로 둡니다."
+    },
+    {
+      "id": "GAP-33",
+      "area": "엘리베이션",
+      "severity": "높음",
+      "finding": "Elevation system 🚧 페이지가 그림자 레벨을 Level 0~5(그림자 있는 것 5단계)로 정의하는데, 라이브러리에는 EFFECT 스타일이 Elevation_1~6 여섯 종 published 돼 있습니다. 어느 스타일이 어느 레벨인지 대응표가 원본에 없습니다.",
+      "evidence": "페이지 42316:48471 — Level 1 1dp 0/1/2/0 30% · Level 2 4dp 0/1/2/0 30% · Level 3 6dp 0/1/3/0 30% · Level 4 8dp 0/2/3/0 30% · Level 5 12dp 0/4/4/0 30%. 라이브러리 — Elevation_1~6. 값이 실측된 것은 Elevation_2 뿐이고 그 값(2겹)은 페이지 표(1겹)와 다릅니다.",
+      "fix": "대응표는 디자인팀이 정할 일입니다. 저장소는 페이지 값과 라이브러리 값을 나란히 싣고 어긋난다는 사실만 표시합니다 — 이름의 숫자만 보고 짝지어 값을 덮어쓰지 않습니다.",
+      "status": "open"
+    },
+    {
+      "id": "GAP-34",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "finding": "Text field(목차 이름 Input) 페이지에 문서화가 절반 이상 채워져 있는데 저장소는 «원본 대기»로 비워 두고 있었습니다. 페이지 자체에도 결함이 5건 있습니다.",
+      "evidence": "TF-1 ➍ Area 절 설명문이 ➌ Split 것과 글자 그대로 같음 · TF-2 Style 절이 Buttons 페이지 내용 그대로(29줄) · TF-3 변형 축 이름이 Property 1/2 그대로 · TF-4 License/license 대소문자 흔들림 · TF-5 상태 축에 date·field·focus 가 섞임.",
+      "fix": "저장소는 페이지에 있는 것(정의·유형 4가지·유형별 구조·스페이싱·변형 42종)을 그대로 싣고, 결함 5건은 고치지 않고 표시합니다. Style 절의 Buttons 문장은 Text field 의 스타일로 옮겨 적지 않습니다 — 남의 문장입니다.",
+      "status": "resolved",
+      "resolution": "해소 — Components › Text field 페이지를 만들어 원본 내용을 전부 실었습니다(2026-08-06). 정의 · 유형 4가지(Text/Search/Split/Area) · 유형별 구조 요소와 스페이싱 값 · 변형 42종(유형 13 × 상태 8) · 원본 결함 5건. 어느 것이 원본 문장이고 어느 것이 남의 문장인지 페이지에 그대로 밝혔습니다. tools/build-textfield-page.js.",
+      "residual": "유형별 스페이싱 숫자가 어느 요소 사이의 간격인지는 원본이 선으로만 표시해 두어 metadata 로 읽히지 않습니다. 짝짓지 않고 값만 실었습니다."
+    },
+    {
+      "id": "GAP-35",
+      "area": "반경",
+      "severity": "중간",
+      "finding": "Radius system 🚧 페이지에 KRDS(대한민국 정부 디자인 시스템) 형태 가이드가 프레임째 붙어 있습니다. 문서화 템플릿은 Text field 것을 복사한 채 비어 있고, 원본이 스스로 «10을 8 또는 8/12로 바꿔야 함»이라는 미결 메모를 5곳에 적어 두었습니다.",
+      "evidence": "프레임 «스타일가이드_형태» — 「표준형 스타일은 2px~12px의 래디어스 값을 사용하며, 이는 정부가 주는 신뢰감과 안정감, 친근함을 표현하기 위한 래디어스 값이다」가 https://www.krds.go.kr/html/site/style/style_04.html 원문과 같습니다(2026-08-06 대조). 다만 옮겨 적힌 표에는 KRDS 표준형에 없는 14·20px 이 섞여 있습니다.",
+      "fix": "인용 값을 GDS 스케일로 편입하지 않습니다. 우리 스케일의 근거는 Radius 프레임(4/8/10/12/16/20 + 원형)이며, 인용 프레임은 «원본 안에 붙어 있다»는 사실로만 기록합니다. 미결 메모도 원본의 다음 결정이라 토큰을 미리 바꾸지 않습니다 — 10 단계를 그대로 둡니다.",
+      "status": "resolved",
+      "resolution": "해소 — Foundation › Radius 페이지에 세 가지를 나눠 실었습니다(2026-08-06). ① 단계별 쓰임새 라벨(원본), ② 원본이 적어 둔 미결 메모 5건, ③ 외부 인용 프레임 — 무엇이 인용이고 왜 편입하지 않는지 명시. tools/build-radius-page.js.",
+      "residual": "문서화 템플릿이 비어 있는 것은 원본 작업입니다. 저장소가 채우지 않습니다."
+    },
+    {
+      "id": "GAP-36",
+      "area": "아이콘",
+      "severity": "중간",
+      "finding": "32px 아이콘의 굵기가 원본 안에서 두 값으로 적혀 있습니다 — 제작 가이드는 1.6, Bottom navigation ✅ 본문은 1.5.",
+      "evidence": "제작 가이드 [32*32] → Icon/system/line_1.6 (44300:44197) · Bottom navigation ✅ 스펙 «아이콘굵기 1.5» (42073:50821)",
+      "fix": "어느 쪽이 맞는지는 디자인팀이 정합니다. 저장소는 양쪽을 나란히 싣고 어긋난다고만 적습니다 — 한쪽으로 맞추지 않습니다.",
+      "status": "open"
+    },
+    {
+      "id": "GAP-37",
+      "area": "컴포넌트",
+      "severity": "높음",
+      "status": "open",
+      "finding": "문서화 템플릿을 복사하고 주어를 고치지 않은 자리입니다. 같은 문장 7종이 32자리에 겹쳐 있고, 그 밖에 주어가 다른 컴포넌트인 문장이 12건 더 있습니다. 문서만 읽으면 어느 컴포넌트 이야기인지 알 수 없습니다. 가장 넓게 번진 것은 Tip 의 [종류]로 여섯 쪽에 그대로 있습니다.",
+      "evidence": "data/component-pages.json — borrowed 7종/32자리 · foreignSubjects 중 kind=component 12건. 예 — Search field [유형] 43893:37080 이 Top app bar 문장, Text field 43893:25959 가 Buttons 문장, Accordion [종류] 44370:30147 이 Tip 문장.",
+      "fix": "원본에서 고칠 일입니다. 저장소는 고치지 않고 어느 문장이 어디 것인지 기계로 대조해 표시만 합니다(Components › 남의 문장 절). 이 자리들은 «문서가 있다»로 세지 않습니다.",
+      "note": "탐지 기준 — 30자 이상이면서 «Xxx (한글)» 꼴을 담거나 ➊➋➌➍ 로 시작하는 문장, 그리고 «Xxx (한글)은» 꼴의 정의 첫 줄. 앱 목업 안의 화면 문구가 여러 쪽에 겹치는 것은 오염이 아니라 제품 문구라서 제외합니다. 주어가 Body (중단) 처럼 위치를 가리키는 하위 영역 이름인 것 1건은 단정하지 않고 따로 셉니다.",
+      "consolidation": "2026-08-06 재집계 — Accordion 을 파서에 넣고 «Xxx (한글)은» 꼴의 짧은 정의 첫 줄까지 세도록 넓혔습니다. 그 전에는 「Tip (팁)은」 이 다섯 쪽에 그대로 있는데도 30자 규칙에 걸려 한 건도 안 잡혔습니다."
+    },
+    {
+      "id": "GAP-38",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "status": "open",
+      "finding": "정의 문장이 조사에서 끊긴 자리가 13건입니다 — 「Bage (뱃지)는」 「Tip (팁)은」 처럼 주어만 적히고 서술이 없습니다. 문서 틀은 채워졌지만 정의가 없는 상태라 «작성됨»으로 셀 수 없습니다.",
+      "evidence": "data/component-pages.json › truncated 13건. 예 — search-field 43893:36936 · badge 43207:57334 · smart-key 43984:10482 · accordion 44370:30133 · 「Tip (팁)은」 5쪽(44370:25258 등).",
+      "fix": "저장소가 이어 쓰지 않습니다 — 없는 정의를 지어내면 원본과 어긋납니다. 끊긴 자리를 그대로 표시하고 원본 작성을 기다립니다.",
+      "consolidation": "2026-08-06 재집계 — 8건에서 13건으로 늘었습니다. 길이 하한 10자에 걸려 「Tip (팁)은」 5건이 빠져 있었습니다."
+    },
+    {
+      "id": "GAP-39",
+      "area": "명명",
+      "severity": "중간",
+      "status": "open",
+      "finding": "영문 이름과 괄호 안 한글이 서로 다른 컴포넌트인 자리가 있습니다 — 「Selection box (헬퍼 텍스트)는」. 복사한 뒤 한쪽만 고친 흔적이라 이름만으로는 어느 컴포넌트인지 가릴 수 없습니다.",
+      "evidence": "data/component-pages.json › nameMismatch — selection-box [정의] 44370:27989. 영문은 selection-box, 괄호 안 한글은 helper-text 것.",
+      "fix": "어느 쪽이 맞는지는 원본이 정합니다. 저장소는 양쪽을 나란히 적고 어긋난다고만 표시합니다.",
+      "note": "GAP-19(목차 오타)와 다릅니다 — 저건 목차 표기, 이건 본문 안 이름 짝입니다."
+    },
+    {
+      "id": "GAP-40",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "status": "open",
+      "finding": "컴포넌트 실물은 라이브러리에 있는데 문서 본문이 «-» 인 페이지가 2쪽입니다 — Card · Switch. 문서화 틀은 놓였고 값 자리에 «-» 만 있습니다. 쓰는 사람은 변형이 몇 종인지, 언제 어느 것을 쓰는지 알 수 없습니다.",
+      "evidence": "Card 42479:74478 — 본문 «-» 42554:48893 · 42554:48900, 컴포넌트는 mcard_set 변형 15종(42722:52947). Switch 42073:65749 — 문서화 틀 두 벌(42419:38532 · 42553:11689) 모두 «-» (42553:11709 · 42553:11716), 컴포넌트는 Toggle 2종 · account_type_toggle 2종 · btn_key_lock 2종.",
+      "fix": "저장소가 변형 목록은 실측해 실을 수 있지만 «언제 쓰는가»는 원본이 정할 일입니다. 변형만 싣고 용도는 비운 채로 표시합니다."
+    },
+    {
+      "id": "GAP-41",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "status": "open",
+      "finding": "Loading spinner 는 스펙이 문서화 틀 «밖» 캔버스에 적혀 있습니다. 틀 안은 «-» 라서 문서로는 «빈 페이지»로 보이는데 실제로는 Lottie 두 종의 형태·색·크기·프레임레이트가 다 있습니다. To-be 는 As-is 문구가 그대로 복사된 채 «변경 스팩 작성해주세요» 만 앞에 붙어 있습니다.",
+      "evidence": "42554:48781 — lottie_loading.json 50×50px 60fps(43416:2264) · lottie_loading_navy_dot.json 500×500px 30fps(43416:2265). To-be 43416:2266 · 43416:2268 은 각각 위 두 문구의 복사본. 관련 파일 링크는 Confluence 로 걸려 있습니다(43416:6437). 원자료 data/figma-xml/loading-spinner.xml.",
+      "fix": "저장소는 As-is 스펙을 그대로 싣고 To-be 가 비었다고 표시합니다. 틀 밖에 적힌 스펙도 «내용 있음»으로 세되, 출처가 틀 밖이라는 것을 밝힙니다.",
+      "note": "두 Lottie 의 크기가 50 과 500 으로 10배 차이인데 같은 목적입니다 — 의도인지 실수인지는 원본이 정할 일입니다(확인 필요).",
+      "consolidation": "2026-08-06 정정 — 처음에는 «To-be 미작성»이라고 적었습니다. 원자료를 저장소에 넣고 다시 세니 «비어 있음»이 아니라 «As-is 를 복사해 두고 안 고침»이었습니다. 뒤엣것이 더 나쁩니다 — 값이 바뀌었는지 사람이 알 수 없습니다."
+    },
+    {
+      "id": "GAP-42",
+      "area": "색",
+      "severity": "중간",
+      "status": "open",
+      "finding": "Lottie 파일 안에 색이 토큰이 아니라 생 RGBA 로 박혀 있습니다 — [0.0392, 0.2353, 0.3608, 1] = #0A3C5C. 이 값은 팔레트의 Navy/Navy 060 과 같은 색인데 이름으로 이어져 있지 않아, Navy 060 이 바뀌어도 따라오지 않습니다. 원본의 작업 메모도 «VSCode 등에서 일괄 변환 요청» 이라 손으로 바꾸는 것을 전제합니다.",
+      "evidence": "Loading spinner 42554:48781 — 43416:2264 · 43416:2265 의 색 값. 작업 방식 메모 43416:2270. 팔레트 대조 — Navy/Navy 060 = #0A3C5C (data/color-decisions.json).",
+      "fix": "저장소는 Lottie 색이 어느 토큰과 같은 값인지 대조표로 잇습니다. 파일 자체를 고치는 것은 원본·개발 쪽 일입니다."
+    },
+    {
+      "id": "GAP-43",
+      "area": "모션",
+      "severity": "중간",
+      "status": "open",
+      "finding": "모션 규격을 담는 Foundation 자리가 없습니다. 실제 수치는 페이지마다 흩어져 있습니다 — Process bar 캔버스에 «after delay 1m/s slow 600m/s slide up 20px», Loading spinner 에 60fps · 30fps. 단위 표기(«m/s»)도 서로 다르고 어느 것이 기준인지 정해진 곳이 없습니다.",
+      "evidence": "Process bar 42441:52342 — 모션 메모. Loading spinner 42554:48781 — fps 2종. 구조도(data/gds-structure.json) Foundation 계층에 Motion 항목 없음.",
+      "fix": "Foundation 에 Motion 을 둘지는 디자인팀이 정합니다. 저장소는 흩어진 수치를 한곳에 모아 «어디서 나왔는지»와 함께 싣습니다 — 값을 통일하지 않습니다.",
+      "note": "«1m/s»·«600m/s» 는 밀리초(ms)를 뜻하는 표기로 보이나 원문 그대로 옮깁니다(확인 필요)."
+    },
+    {
+      "id": "GAP-44",
+      "area": "구조",
+      "severity": "낮음",
+      "status": "open",
+      "finding": "목차에 있는 Table 페이지에 노드가 하나도 없습니다. 63쪽 전체에서 유일하게 «정말로 빈» 페이지입니다.",
+      "evidence": "42562:18899 — 자식 노드 0. 전수 읽기 결과 data/not-started-pages.json › table.",
+      "fix": "저장소가 만들 수 있는 것이 없습니다. 목록에 «원본에 아직 없음»으로 남겨 두고, 다른 27쪽과 구분해 셉니다.",
+      "note": "이 한 건이 GAP-32 의 반례입니다 — 표시만 보고 «없다»고 세면 안 되지만, 실제로 없는 것도 하나는 있었습니다."
+    },
+    {
+      "id": "GAP-45",
+      "area": "컴포넌트",
+      "severity": "중간",
+      "status": "open",
+      "finding": "Button Large 의 높이가 두 값으로 적혀 있습니다 — 문서는 56px, 컴포넌트 실측은 60px. PR #1 이 8/5 에 재어 남긴 것입니다.",
+      "evidence": "PR #1 브랜치의 data/component-bottom-sheet.json › button.conflict (data/pr1-bottom-sheet.json 에 사본 보존). 근거 노드 40341:37627 «3. Button / Large».",
+      "fix": "어느 쪽이 맞는지는 디자인팀이 정합니다. 저장소는 양쪽을 나란히 싣고 맞추지 않습니다.",
+      "note": "[확인 필요] 저장소가 두 수치를 스스로 재지 못했습니다 — 지금 data/component-buttons.json 에는 Large 높이가 없습니다. PR 의 진술이 유일한 출처입니다.",
+      "source": "PR #1 (docs/bottom-sheet-component-20260805)"
+    },
+    {
+      "id": "GAP-46",
+      "area": "타이포",
+      "severity": "중간",
+      "status": "open",
+      "finding": "line-height 를 코드로 옮길 기준이 없습니다. 21단계가 전부 Auto 라 Figma 안에서는 문제가 없지만, 웹·앱 구현값이 정해져 있지 않습니다.",
+      "evidence": "data/typography-library.json — 21단계 lineHeight 가 전부 «Auto». PR #1 › unresolved[0] 도 같은 것을 지적합니다.",
+      "fix": "Auto 를 무엇으로 옮길지(폰트 기본 배수냐 · 단계별 고정값이냐)를 정해야 코드 토큰이 나옵니다. 저장소는 숫자를 지어내지 않습니다.",
+      "note": "TQ-7(«Auto» 로 간다)은 이미 확정된 결정입니다 — 그것을 다시 여는 것이 아니라, «Auto 를 코드에서 어떻게 쓸 것인가»가 비어 있다는 뜻입니다.",
+      "source": "PR #1 (docs/bottom-sheet-component-20260805)"
+    },
+    {
+      "id": "GAP-47",
+      "area": "구조",
+      "severity": "낮음",
+      "status": "open",
+      "finding": "coupon COMPONENT_SET(변형 6종)이 레거시 페이지에만 있고 신규 GDS 페이지에는 편입돼 있지 않습니다. Bottom sheet 예시가 이 컴포넌트를 쓰는데 GDS 목차에는 없습니다.",
+      "evidence": "PR #1 › unresolved[3] · coupon.componentSet 6957:66723. 구조도 25종(data/components.json)에 coupon 없음.",
+      "fix": "신규 페이지로 옮길지 여부는 디자인팀이 정합니다. 저장소는 «쓰이는데 목차에 없다»는 사실만 표시합니다.",
+      "source": "PR #1 (docs/bottom-sheet-component-20260805)"
+    }
+  ],
+  "note": "전수 읽기(🚧 19쪽 + «—» 8쪽)를 마치고 한꺼번에 정리했습니다 — 자세한 것은 consolidation 을 보세요. 이전 note: ✅ 페이지 본문까지 읽어 4건을 추가했습니다(GAP-13~16).",
+  "consolidatedAt": "2026-08-06",
+  "consolidation": {
+    "why": "🚧 19쪽과 «시작 전(—)» 8쪽을 전수로 읽고 나서 한꺼번에 정리했습니다(강민관 2026-08-06 «Gap은 나중에 한꺼번에 처리해볼까?»). 읽는 도중에 한 건씩 닫으면 같은 것을 여러 번 적거나 이미 지난 사실을 남기게 됩니다.",
+    "basis": "data/figma-pages/*.json(원문) · data/component-pages.json(16쪽 기계 대조) · data/not-started-pages.json(8쪽)",
+    "changed": [
+      "status 가 비어 있던 6건(GAP-16 · 19 · 20 · 25 · 26 · 29)에 open 을 명시했습니다. 이제 상태는 open · partial · resolved 셋뿐입니다.",
+      "GAP-32 — «남은 11쪽»이 0쪽이 됐습니다. 방법 규칙은 계속 지켜야 하므로 partial 로 둡니다.",
+      "GAP-19 — 근거 없는 «Getting stared» 항목을 빼고, 새로 나온 «Componenets» 오타를 넣었습니다. partial.",
+      "GAP-18 — 실측 범위가 ✅ 6종에서 25종 중 24종으로 늘어난 것을 해소 문구에 덧붙였습니다.",
+      "새로 8건(GAP-37~44)을 추가했습니다. 전부 전수 읽기 전에는 볼 수 없던 것입니다.",
+      "GAP-37 · GAP-38 — Accordion 을 파서에 넣고 탐지 기준을 넓혀 재집계했습니다(18→44 · 8→13). 손으로 세던 5건이 기계 집계로 바뀌었습니다.",
+      "GAP-41 — «To-be 미작성»을 «As-is 복사본»으로 정정했습니다. 원자료를 넣고 나서야 드러났습니다.",
+      "GAP-30 — 스케일 밖 21건을 문서 캔버스 여백 5 · 제품 간격 후보 16 로 갈랐습니다. partial.",
+      "GAP-26 — 색 축약 표기 대조표를 만들어 해소했습니다.",
+      "GAP-29 — 철회. Title published 는 6이 아니라 8이고 빠진 것이 없습니다. 부분만 보고 센 수였습니다.",
+      "PR #1 을 기계로 대조하고(tools/audit-pr1.js) 거기서만 있던 것 3건을 GAP-45~47 로 옮겨 적었습니다. PR 자체는 건드리지 않았습니다."
+    ],
+    "notDuplicated": [
+      "GAP-37(남의 문장)과 GAP-38(끊긴 문장)은 다릅니다 — 앞은 남의 내용이 있는 것, 뒤는 내용이 없는 것입니다.",
+      "GAP-19(목차 표기)와 GAP-39(본문 이름 짝)는 다릅니다 — 어긋난 자리가 목차냐 본문이냐가 다릅니다.",
+      "GAP-40(문서 본문이 «-»)과 GAP-41(스펙이 틀 밖에 있음)은 다릅니다 — 앞은 내용이 없고, 뒤는 있는데 틀 밖에 있습니다."
+    ],
+    "contradictionsKept": [
+      "GAP-33 — Elevation 페이지 Level 0~5 와 라이브러리 Elevation_1~6 의 대응표가 원본에 없습니다. 이름의 숫자로 짝짓지 않고 나란히 싣습니다.",
+      "GAP-36 — 32px 아이콘 굵기가 제작 가이드 1.6 · Bottom navigation 본문 1.5 로 갈립니다. 한쪽으로 맞추지 않습니다.",
+      "GAP-41 — Lottie 두 종의 크기가 50 과 500 으로 10배 차이입니다. 의도 여부는 원본이 정합니다."
+    ],
+    "rule": "원본을 고치는 항목은 여기서 닫지 않습니다. 저장소가 할 수 있는 것(표시 · 대조 · 나란히 싣기)까지만 하고 resolved 로 세지 않습니다."
+  }
+}

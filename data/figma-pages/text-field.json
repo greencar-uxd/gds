@@ -1,0 +1,6045 @@
+{
+  "$description": "Text field (텍스트필드) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42073:65010",
+    "pageName": "Text field (텍스트필드) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 1795,
+    "byType": {
+      "canvas": 1,
+      "frame": 933,
+      "symbol": 42,
+      "instance": 364,
+      "text": 367,
+      "section": 1,
+      "ellipse": 34,
+      "vector": 49,
+      "widget": 3,
+      "rectangle": 1
+    },
+    "topLevel": 33,
+    "texts": 367,
+    "namedTexts": 367,
+    "templateStubs": 28,
+    "symbols": 42
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42454:19812",
+      "name": "Area",
+      "w": 718,
+      "h": 635
+    },
+    {
+      "type": "frame",
+      "id": "42454:19187",
+      "name": "Text",
+      "w": 3439,
+      "h": 419
+    },
+    {
+      "type": "frame",
+      "id": "42557:10604",
+      "name": "SCR_GA_CA_0105_M01 기본 (그린카 일반계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:10618",
+      "name": "SCR_GA_CA_0105_M01 기본 (그린카 소셜계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:10630",
+      "name": "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+      "w": 375,
+      "h": 1021
+    },
+    {
+      "type": "frame",
+      "id": "42557:10668",
+      "name": "SCR_GA_CA_0105_M01 에러 (그린카 소셜계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:10683",
+      "name": "SSCR_GA_CA_0105_M02 기본 (그린카 법인소속원 계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:10696",
+      "name": "SCR_GA_CA_0105_M02 정보입력 후 (그린카 법인소속원 계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:10709",
+      "name": "SCR_GA_CA_0105_M02 정보입력 후 (그린카 법인소속원 계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:11497",
+      "name": "SCR_GA_CA_0201_M01_기본",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:11527",
+      "name": "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42557:20620",
+      "name": "SCR_GA_RV_0101_M01(선택)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "42560:23760",
+      "name": "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+      "w": 375,
+      "h": 1444
+    },
+    {
+      "type": "frame",
+      "id": "42629:20796",
+      "name": "SCR_GA_RV_0206_T09",
+      "w": 375,
+      "h": 1214
+    },
+    {
+      "type": "section",
+      "id": "43142:29669",
+      "name": "업데이트 사항",
+      "w": 4335,
+      "h": 4046
+    },
+    {
+      "type": "frame",
+      "id": "43207:49584",
+      "name": "Components_Text field",
+      "w": 1920,
+      "h": 12791.5
+    },
+    {
+      "type": "instance",
+      "id": "43882:18570",
+      "name": "Area",
+      "w": 335,
+      "h": 864
+    },
+    {
+      "type": "widget",
+      "id": "43207:50513",
+      "name": "Annotation",
+      "w": 352,
+      "h": 156
+    },
+    {
+      "type": "frame",
+      "id": "43213:28187",
+      "name": "Group 72125",
+      "w": 335,
+      "h": 40
+    },
+    {
+      "type": "frame",
+      "id": "43213:28191",
+      "name": "Group 716093",
+      "w": 327,
+      "h": 40
+    },
+    {
+      "type": "instance",
+      "id": "43225:44725",
+      "name": "Area",
+      "w": 335,
+      "h": 109
+    },
+    {
+      "type": "instance",
+      "id": "43225:44771",
+      "name": "Area",
+      "w": 335,
+      "h": 129
+    },
+    {
+      "type": "frame",
+      "id": "43225:44729",
+      "name": "01",
+      "w": 375,
+      "h": 172
+    },
+    {
+      "type": "frame",
+      "id": "43852:16551",
+      "name": "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43852:16583",
+      "name": "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+      "w": 375,
+      "h": 983
+    },
+    {
+      "type": "frame",
+      "id": "43882:20230",
+      "name": "SCR_GA_RV_0206_T06",
+      "w": 375,
+      "h": 1186
+    },
+    {
+      "type": "frame",
+      "id": "43882:22965",
+      "name": "Frame 3541",
+      "w": 375,
+      "h": 108
+    },
+    {
+      "type": "frame",
+      "id": "43882:22987",
+      "name": "SCR_GA_RV_0207_M02",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "widget",
+      "id": "43882:24275",
+      "name": "Annotation",
+      "w": 352,
+      "h": 200
+    },
+    {
+      "type": "widget",
+      "id": "43893:25016",
+      "name": "Annotation",
+      "w": 352,
+      "h": 200
+    },
+    {
+      "type": "frame",
+      "id": "43893:25138",
+      "name": "Contents",
+      "w": 1545,
+      "h": 3860
+    },
+    {
+      "type": "frame",
+      "id": "43957:20927",
+      "name": "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+      "w": 375,
+      "h": 2067
+    },
+    {
+      "type": "frame",
+      "id": "43957:21783",
+      "name": "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+      "w": 360,
+      "h": 967
+    }
+  ],
+  "componentSets": {
+    "total": 42,
+    "axes": {
+      "Property 1": {
+        "Long": 4,
+        "Short": 4,
+        "Id": 4,
+        "Id Search": 3,
+        "Pw": 4,
+        "Certify": 4,
+        "Registration": 4,
+        "Select": 4,
+        "Card": 4,
+        "License": 2,
+        "license": 2,
+        "input_date": 1,
+        "date": 2
+      },
+      "Property 2": {
+        "Focus Out": 9,
+        "Typing": 10,
+        "Error": 9,
+        "Default": 10,
+        "Timeout": 1,
+        "date": 1,
+        "focus": 1,
+        "field": 1
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [
+      {
+        "lower": "license",
+        "forms": [
+          "License",
+          "license"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "42454:19813",
+        "name": "Property 1=Long, Property 2=Focus Out",
+        "w": 335,
+        "h": 120,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19817",
+        "name": "Property 1=Long, Property 2=Typing",
+        "w": 335,
+        "h": 120,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19823",
+        "name": "Property 1=Long, Property 2=Error",
+        "w": 335,
+        "h": 144,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19831",
+        "name": "Property 1=Short, Property 2=Error",
+        "w": 335,
+        "h": 95,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19840",
+        "name": "Property 1=Long, Property 2=Default",
+        "w": 335,
+        "h": 129,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19843",
+        "name": "Property 1=Short, Property 2=Typing",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19846",
+        "name": "Property 1=Short, Property 2=Focus Out",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19849",
+        "name": "Property 1=Short, Property 2=Default",
+        "w": 335,
+        "h": 71,
+        "in": "Area"
+      },
+      {
+        "id": "42454:19188",
+        "name": "Property 1=Id, Property 2=Default",
+        "w": 375,
+        "h": 72,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19202",
+        "name": "Property 1=Id, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19217",
+        "name": "Property 1=Id, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19230",
+        "name": "Property 1=Id, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19245",
+        "name": "Property 1=Id Search, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19257",
+        "name": "Property 1=Id Search, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19269",
+        "name": "Property 1=Id Search, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19280",
+        "name": "Property 1=Pw, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19293",
+        "name": "Property 1=Pw, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19306",
+        "name": "Property 1=Pw, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19317",
+        "name": "Property 1=Pw, Property 2=Error",
+        "w": 375,
+        "h": 116,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19331",
+        "name": "Property 1=Certify, Property 2=Default",
+        "w": 335,
+        "h": 48,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19345",
+        "name": "Property 1=Certify, Property 2=Typing",
+        "w": 335,
+        "h": 48,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19362",
+        "name": "Property 1=Certify, Property 2=Timeout",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19373",
+        "name": "Property 1=Certify, Property 2=Error",
+        "w": 375,
+        "h": 72,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19387",
+        "name": "Property 1=Registration, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19403",
+        "name": "Property 1=Registration, Property 2=Typing",
+        "w": 375,
+        "h": 69,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19419",
+        "name": "Property 1=Registration, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19435",
+        "name": "Property 1=Registration, Property 2=Error",
+        "w": 375,
+        "h": 98,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19451",
+        "name": "Property 1=Select, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19464",
+        "name": "Property 1=Select, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19479",
+        "name": "Property 1=Select, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19492",
+        "name": "Property 1=Select, Property 2=Error",
+        "w": 375,
+        "h": 98,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19508",
+        "name": "Property 1=Card, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19525",
+        "name": "Property 1=Card, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19550",
+        "name": "Property 1=Card, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19571",
+        "name": "Property 1=Card, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19592",
+        "name": "Property 1=License, Property 2=Default",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19611",
+        "name": "Property 1=license, Property 2=Typing",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19630",
+        "name": "Property 1=license, Property 2=Focus Out",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19646",
+        "name": "Property 1=License, Property 2=Error",
+        "w": 375,
+        "h": 97,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19662",
+        "name": "Property 1=input_date, Property 2=date",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19684",
+        "name": "Property 1=date, Property 2=focus",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      },
+      {
+        "id": "42454:19708",
+        "name": "Property 1=date, Property 2=field",
+        "w": 375,
+        "h": 73,
+        "in": "Text"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Structure",
+      "Style",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 28
+  },
+  "texts": [
+    {
+      "id": "42557:10610",
+      "text": "소속 : 그린컴퍼니",
+      "in": [
+        "SCR_GA_CA_0105_M01 기본 (그린카 일반계정)",
+        "contents",
+        "input",
+        "소속"
+      ],
+      "x": 234,
+      "y": 0
+    },
+    {
+      "id": "42557:10612",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M01 기본 (그린카 일반계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10624",
+      "text": "소속 : 그린컴퍼니",
+      "in": [
+        "SCR_GA_CA_0105_M01 기본 (그린카 소셜계정)",
+        "contents",
+        "input",
+        "소속"
+      ],
+      "x": 234,
+      "y": 0
+    },
+    {
+      "id": "42557:10626",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M01 기본 (그린카 소셜계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10637",
+      "text": "소속 : 그린컴퍼니",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "input",
+        "소속"
+      ],
+      "x": 234,
+      "y": 0
+    },
+    {
+      "id": "42557:10639",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10645",
+      "text": "gildonghong@naver.com",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "keyword",
+        "list",
+        "Frame 2758"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42557:10649",
+      "text": "gildonghong@gmail.com",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "keyword",
+        "list",
+        "Frame 2758"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42557:10653",
+      "text": "gildonghong@hanmail.com",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "keyword",
+        "list",
+        "Frame 2758"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42557:10657",
+      "text": "gildonghong@daum.net",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "keyword",
+        "list",
+        "Frame 2758"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42557:10661",
+      "text": "gildonghong@nate.com",
+      "in": [
+        "SCR_GA_CA_0105_M01 정보입력 후 (그린카 소셜계정)",
+        "contents",
+        "contents",
+        "keyword",
+        "list",
+        "Frame 2758"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "42557:10674",
+      "text": "소속 : 그린컴퍼니",
+      "in": [
+        "SCR_GA_CA_0105_M01 에러 (그린카 소셜계정)",
+        "contents",
+        "input",
+        "소속"
+      ],
+      "x": 234,
+      "y": 0
+    },
+    {
+      "id": "42557:10676",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M01 에러 (그린카 소셜계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10689",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SSCR_GA_CA_0105_M02 기본 (그린카 법인소속원 계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10702",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M02 정보입력 후 (그린카 법인소속원 계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:10715",
+      "text": "G car에서 사용하실 계정 정보를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M02 정보입력 후 (그린카 법인소속원 계정)",
+        "contents",
+        "input",
+        "Frame 3507"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:11504",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 31.5,
+      "y": 22
+    },
+    {
+      "id": "42557:11507",
+      "text": "G car 회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20
+    },
+    {
+      "id": "42557:11510",
+      "text": "L.Point 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:11511",
+      "text": "일반회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "42557:11522",
+      "text": "비밀번호 찾기",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 177.5,
+      "y": 12
+    },
+    {
+      "id": "42557:11524",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "SCR_GA_CA_0201_M01_기본",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 25.5,
+      "y": 0
+    },
+    {
+      "id": "42557:11534",
+      "text": "L.POINT 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 1"
+      ],
+      "x": 31.5,
+      "y": 22
+    },
+    {
+      "id": "42557:11537",
+      "text": "G car 회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "tab",
+        "tab 2"
+      ],
+      "x": 57.5,
+      "y": 20
+    },
+    {
+      "id": "42557:11540",
+      "text": "L.Point 통합회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42557:11541",
+      "text": "일반회원",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "tab_one_depth_05_lpoint",
+        "tab_one_depth_02"
+      ],
+      "x": 187.5,
+      "y": 0
+    },
+    {
+      "id": "42557:11552",
+      "text": "비밀번호 찾기",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_find_id_pwd"
+      ],
+      "x": 177.5,
+      "y": 12
+    },
+    {
+      "id": "42557:11554",
+      "text": "아직 계정이 없으신가요?",
+      "in": [
+        "SCR_GA_CA_0201_M01_정보 입력 후 (L.POINT 통합회원 로그인)",
+        "contents",
+        "title_search",
+        "컨텐츠",
+        "Frame 3505",
+        "link_join_lpoint"
+      ],
+      "x": 25.5,
+      "y": 0
+    },
+    {
+      "id": "42560:23771",
+      "text": "2022.05.01 17:05",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23774",
+      "text": "G car 오다 서비스 예약이 완료되었습니다. 차량 배달 준비가 완료되면 안내드릴게요. 잠시만 기다려주세요.",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 3688",
+        "Frame 2845"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23784",
+      "text": "2022.05.01 20:01",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23787",
+      "text": "고객님의 차량이 지정한 배달 위치로 안전하게 배달중입니다. 주차장에 도착하면 메시지로 안내드리며, 요청하신주차장에 주차가 어려운 경우 별도로 연락드릴 수 있습니다.",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 3688",
+        "Frame 2845"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23797",
+      "text": "2022.05.01 20:16",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23800",
+      "text": "배달이 늦어져서 죄송합니다. 도로교통 사정에 따라 예정 시간보다 배달이 늦어지고 있습니다. 안전운행을 하면서도 최대한 약속 드린 시간에 배달할 수 있도록 노력하겠습니다. 이용에 불편을 드려 죄송합니다.",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 3688",
+        "Frame 2845"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23810",
+      "text": "2022.05.01 17:30",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 2894"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23813",
+      "text": "고객님의 차량이 지정하신 배달 위치로 배달 완료되었습니다. 차량 위치와 내용을 확인해주세요. 차량이 일찍 도착한 경우, 차량을 바로 이용할 수 있습니다.",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 3688",
+        "Frame 2845"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42560:23816",
+      "text": "기사가 도착 완료 후 남긴 차량 위치 내용",
+      "in": [
+        "SCR_GA_CS_0702_M01_오다_모바일 문의_배달 완료_정보 없는 버전",
+        "\bcon",
+        "list_02",
+        "1",
+        "Frame 3689",
+        "Frame 2845"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20810",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\bcard",
+        "Frame 3538",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20813",
+      "text": "비밀번호 등록/수정",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\bcard",
+        "Frame 3538",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Right",
+        "Frame 3536"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "42629:20821",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\bcard",
+        "Frame 3538",
+        "point_view_set",
+        "link_btn",
+        "포인트",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20826",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20827",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형"
+      ],
+      "x": 0,
+      "y": 36
+    },
+    {
+      "id": "42629:20831",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20834",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20837",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20840",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20843",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20844",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형"
+      ],
+      "x": 0,
+      "y": 36
+    },
+    {
+      "id": "42629:20848",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20851",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20854",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20857",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20860",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2967"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20864",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20865",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42629:20869",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20872",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20875",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "42629:20878",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T09",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43142:29672",
+      "text": "Input 형태 업데이트 필요",
+      "in": [
+        "업데이트 사항",
+        " "
+      ],
+      "x": 36,
+      "y": 24
+    },
+    {
+      "id": "43142:33528",
+      "text": "추천인 아이디를 입력해주세요.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43142:33535",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33536",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43142:33541",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33542",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43142:33795",
+      "text": "추천인 아이디를 입력해주세요.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43142:33887",
+      "text": "label-text",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33890",
+      "text": "아이디 입력",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Input",
+        "text_area"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43142:33896",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43142:33897",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43142:33661",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33662",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43142:33667",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33668",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43149:19498",
+      "text": "추천인 아이디를 입력해주세요.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43149:19632",
+      "text": "label-text",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43149:19636",
+      "text": "gildonghong",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "input",
+        "Input",
+        "Frame 2540",
+        "text_area"
+      ],
+      "x": 12,
+      "y": 12.5
+    },
+    {
+      "id": "43149:19518",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43149:19519",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43149:19524",
+      "text": "(사)한국그린서비스협회",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43149:19525",
+      "text": "서울 성동구 용답동 235-10 승산빌딩 6층",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CA_0110_P02_입력",
+        "contents",
+        "list",
+        "list",
+        "Frame 2759"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43142:33901",
+      "text": "label-text",
+      "in": [
+        "업데이트 사항",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43142:33904",
+      "text": "아이디 입력",
+      "in": [
+        "업데이트 사항",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Input",
+        "text_area"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43142:33910",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "업데이트 사항",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43142:33911",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "업데이트 사항",
+        "컴포넌트/인풋/텍스트인풋/디폴트",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43142:33912",
+      "text": "디테치 한거 → 원래거는 스페이싱 좌우 20이 들어가있는 형태인데 지금 화면에 넣으려면 좌우 스페이싱이 생략된 이 디테치한 컴포넌트가 들어가도 괜찮은지",
+      "in": [
+        "업데이트 사항"
+      ],
+      "x": 2249,
+      "y": 574
+    },
+    {
+      "id": "43149:19478",
+      "text": "label-text",
+      "in": [
+        "업데이트 사항",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43149:19482",
+      "text": "gildonghong",
+      "in": [
+        "업데이트 사항",
+        "Input",
+        "Frame 2540",
+        "text_area"
+      ],
+      "x": 12,
+      "y": 12.5
+    },
+    {
+      "id": "43207:49598",
+      "text": "Glossary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:49599",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "43207:49602",
+      "text": "[정의]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:49603",
+      "text": "Text Field (텍스트필드)는 사용자가 직접 정보를 입력하는 UI 요소입니다. 아이디, 차량번호, 주민등록번호 등 서비스 이용에 필요한 다양한 정보를 입력받으며, 입력 상태에 따라 시각적 피드백을 제공하여 사용자가 올바르게 입력할 수 있도록 돕습니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43864:72592",
+      "text": "변경할 이메일 주소를 입력해주세요.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227748",
+        "Example",
+        "contents",
+        "title_search",
+        "Frame 2918"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43207:49607",
+      "text": "Text field (텍스트필드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43207:49612",
+      "text": "Type",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:49613",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:49616",
+      "text": "[유형]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:49617",
+      "text": "Text field (텍스트필드)는 입력 형태와 목적에 따라 4가지 유형으로 구분합니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "43864:72706",
+      "text": "➊ Text field (텍스트필드) 한 줄 단위로 단일 정보 입력형",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43864:72708",
+      "text": "➋ Search text field (서치 텍스트필드) 검색 기능이 결합된 아이콘 조합형",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43864:72710",
+      "text": "➌ Split text field (스플릿 텍스트필드) 특정 기준으로 나뉘어 입력되는 분리형",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43864:72713",
+      "text": "➍ Area text field (영역 텍스트필드) 긴 내용 전용의 박스형",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44100:60650",
+      "text": "종류(4)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 2147227710",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43207:49626",
+      "text": "Text field (텍스트필드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 133,
+      "y": 0
+    },
+    {
+      "id": "43839:28348",
+      "text": "Search field (서치 텍스트필드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 109.5,
+      "y": 0
+    },
+    {
+      "id": "43207:50349",
+      "text": "Split text field (스플릿 텍스트필드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 96,
+      "y": 0
+    },
+    {
+      "id": "43207:50354",
+      "text": "Area text field (영역 텍스트필드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Example area",
+        "Title",
+        "Frame 2147227735"
+      ],
+      "x": 102,
+      "y": 0
+    },
+    {
+      "id": "43207:50813",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:50814",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43873:73558",
+      "text": "[➊ Text field (텍스트필드)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43873:73559",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43207:50817",
+      "text": "[유형]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:50818",
+      "text": "Text field (텍스트필드)는 한 줄로 텍스트를 입력하는 기본 입력형입니다. 아이디, 비밀번호, 인증번호 등 단일 값을 입력할 때 사용하며, 입력 형태에 따라 삭제 버튼, 비밀번호 표시 전환, 타이머 등을 포함할 수 있습니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43879:10501",
+      "text": "구조",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43879:10509",
+      "text": "Label (레이블)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716269",
+        "text"
+      ],
+      "x": 99,
+      "y": 4
+    },
+    {
+      "id": "43879:10505",
+      "text": "Hint text (힌트 텍스트)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716270",
+        "text"
+      ],
+      "x": 139,
+      "y": 4
+    },
+    {
+      "id": "43879:10786",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716271",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43879:10712",
+      "text": "8",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:10725",
+      "text": "20",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:10791",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43879:10995",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:11003",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:13235",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43879:13236",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43879:13238",
+      "text": "[➋ Search text field (서치 텍스트필드)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43879:13239",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43879:13242",
+      "text": "[유형]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43879:13243",
+      "text": "Search text field (서치 텍스트필드)는 검색 기능이 결합된 아이콘 조합형입니다. 입력한 텍스트를 기준으로 검색을 수행하며, 검색 아이콘을 포함해 검색 입력 영역임을 인식할 수 있도록 합니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43879:13249",
+      "text": "구조",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43879:13253",
+      "text": "Label (레이블)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716269",
+        "text"
+      ],
+      "x": 99,
+      "y": 4
+    },
+    {
+      "id": "43879:13258",
+      "text": "Hint text (힌트 텍스트)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716270",
+        "text"
+      ],
+      "x": 139,
+      "y": 4
+    },
+    {
+      "id": "43879:13262",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716271",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43882:14112",
+      "text": "Icon (아이콘)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716272",
+        "text"
+      ],
+      "x": 92,
+      "y": 4
+    },
+    {
+      "id": "43879:13266",
+      "text": "8",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:13279",
+      "text": "20",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:13284",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43879:13344",
+      "text": "8",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43879:13337",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:13863",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:13864",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43882:13866",
+      "text": "[➌ Split text field (스플릿 텍스트필드)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:13867",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43882:13870",
+      "text": "[유형]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:13871",
+      "text": "Split text field (스플릿 텍스트필드)는 하나의 정보를 여러 구간으로 나누어 입력하는 분리형입니다. 주민등록번호, 카드번호, 면허번호처럼 정해진 자릿수나 형식 기준으로 값을 구분해야 할 때 사용하며, 구간별로 드롭다운·마스킹·구분 기호를 포함할 수 있습니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:13877",
+      "text": "구조",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43882:13882",
+      "text": "Label (레이블)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716269",
+        "text"
+      ],
+      "x": 99,
+      "y": 4
+    },
+    {
+      "id": "43882:14108",
+      "text": "Password masking (비밀번호 마스킹)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716272",
+        "text"
+      ],
+      "x": 216,
+      "y": 4
+    },
+    {
+      "id": "43882:13886",
+      "text": "Hint text (힌트 텍스트)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716270",
+        "text"
+      ],
+      "x": 139,
+      "y": 4
+    },
+    {
+      "id": "43882:13890",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716271",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43882:13894",
+      "text": "8",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:13907",
+      "text": "20",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:13912",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43882:14033",
+      "text": "8",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:14040",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:14278",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:14282",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14283",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43882:14285",
+      "text": "[➍ Area text field (영역 텍스트필드)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14286",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43882:14289",
+      "text": "[유형]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14290",
+      "text": "Split text field (스플릿 텍스트필드)는 하나의 정보를 여러 구간으로 나누어 입력하는 분리형입니다. 주민등록번호, 카드번호, 면허번호처럼 정해진 자릿수나 형식 기준으로 값을 구분해야 할 때 사용하며, 구간별로 드롭다운·마스킹·구분 기호를 포함할 수 있습니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:14296",
+      "text": "구조",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43882:14309",
+      "text": "Hint text (힌트 텍스트)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716270",
+        "text"
+      ],
+      "x": 139,
+      "y": 4
+    },
+    {
+      "id": "43882:14313",
+      "text": "Background (백그라운드)",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Group 716271",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43882:14317",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:14330",
+      "text": "12",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Spacing",
+        "text"
+      ],
+      "x": 4,
+      "y": 2
+    },
+    {
+      "id": "43882:14335",
+      "text": "스페이싱 값",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25870",
+      "text": "Style",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25871",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:25874",
+      "text": "Default button (디폴트 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary·Tertiary)에 관계없이 동일하게 적용합니다. (아래항목도 동일) * 25.05.21(목) 기준: Default button (디폴트 버튼)의 맥시멈 크기 → 높이 60 * 26.06.10(수) 기준: Default button (디폴트 버튼), Default button 안에서 같이 사용되는 Text button → 굵기 Bold",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25879",
+      "text": "[토큰 네이밍 예시]  Components/Buttons/Default/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:25886",
+      "text": "Components/Buttons/Default/Primary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25894",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25902",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25910",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25920",
+      "text": "Components/Buttons/Default/Secondary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25929",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25937",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25945",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25954",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25955",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:25958",
+      "text": "[➊ Default button (디폴트 버튼)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25959",
+      "text": "Icon button (아이콘 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25964",
+      "text": "[토큰 네이밍 예시]  Components/Buttons/Icon/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:25971",
+      "text": "Components/Buttons/Icon/Primary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25980",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25984",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25988",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25994",
+      "text": "Components/Buttons/Icon/Secondary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:26003",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26007",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26011",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26016",
+      "text": "Structure",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:26017",
+      "text": "Reference",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:26020",
+      "text": "[➊ Default button (디폴트 버튼)]",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:26021",
+      "text": "Capsule button (캡슐 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:26026",
+      "text": "[토큰 네이밍 예시] Components/Buttons/Capsule/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:26033",
+      "text": "Components/Buttons/Capsule/Primary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:26042",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26048",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26054",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26062",
+      "text": "Components/Buttons/Capsule/Primary",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:26071",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26077",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:26083",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Components_Text field",
+        "Components_Text field",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43207:50516",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:50517",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43207:50524",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43207:50529",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43207:50534",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43213:28190",
+      "text": "신규",
+      "in": [
+        "Group 72125"
+      ],
+      "x": 8750,
+      "y": 8569
+    },
+    {
+      "id": "43213:28194",
+      "text": "신규",
+      "in": [
+        "Group 716093",
+        "Group 716091"
+      ],
+      "x": 8757.048828125,
+      "y": 8639
+    },
+    {
+      "id": "43213:28198",
+      "text": "신규",
+      "in": [
+        "Group 716093",
+        "Group 716092"
+      ],
+      "x": 8928,
+      "y": 8639
+    },
+    {
+      "id": "43213:28200",
+      "text": "신규",
+      "in": [
+        "Group 716093"
+      ],
+      "x": 8903,
+      "y": 8639
+    },
+    {
+      "id": "43225:44835",
+      "text": "text",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "img",
+        "Frame 2147227747",
+        "운행중"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43225:44837",
+      "text": "text",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "img",
+        "Frame 2147227747",
+        "운행중"
+      ],
+      "x": 8,
+      "y": 1.5
+    },
+    {
+      "id": "43225:44840",
+      "text": "text",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "img",
+        "Frame 2147227747",
+        "운행중"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43225:44789",
+      "text": "셀토스 1.6",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3238"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43225:44794",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 2841",
+        "Frame 2841"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43225:44797",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 2841",
+        "Frame 2841",
+        "Frame 71642"
+      ],
+      "x": 22,
+      "y": 0
+    },
+    {
+      "id": "43225:44799",
+      "text": "170원/km",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3108"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43225:44801",
+      "text": "170원/km",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3108"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43225:44805",
+      "text": "서울 강남구 대치동 905-19",
+      "in": [
+        "01",
+        "car_info_연료정보포함",
+        "car info",
+        "text",
+        "Frame 2826",
+        "Frame 3241"
+      ],
+      "x": 0,
+      "y": 6
+    },
+    {
+      "id": "43225:44733",
+      "text": "반납 2시간 10분 전입니다.",
+      "in": [
+        "01",
+        "반납시각"
+      ],
+      "x": 113.5,
+      "y": 0
+    },
+    {
+      "id": "43852:16556",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3353"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43852:16562",
+      "text": "신고사유 (필수)",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3355",
+        "Group 2864"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43852:16568",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트1",
+        "보기1"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16571",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트1",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16575",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트2",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16578",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 전)",
+        "Frame 3264",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트2",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16588",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3353"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43852:16594",
+      "text": "신고사유 (필수)",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3355",
+        "Group 2864"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43852:16600",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트1",
+        "보기1"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16603",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트1",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16607",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트2",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16610",
+      "text": "차종",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 3355",
+        "Frame 3588",
+        "보기 리스트2",
+        "보기2"
+      ],
+      "x": 32,
+      "y": 2
+    },
+    {
+      "id": "43852:16615",
+      "text": "동의를 거부할 수 있으며, 거부시에는 신규 서비스 및 이벤트 혜택 안내를 받으실 수 없습니다.",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43852:16617",
+      "text": "이용목적",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43852:16618",
+      "text": "장애 신고 접수 및 조치를 위한 개인정보 수집",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43852:16620",
+      "text": "수집항목",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2775"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43852:16621",
+      "text": "이름, 휴대폰번호 , 신고 사유",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2775"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43852:16623",
+      "text": "보유기간",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2774"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43852:16624",
+      "text": "접수 처리 후 3 개월간 별도 보관 후 파기",
+      "in": [
+        "SCR_GA_ER_0202_M01_장애신고 접수(입력 후)",
+        "Frame 3265",
+        "Frame 71641",
+        "Frame 2813",
+        "Frame 2774"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43882:20244",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\bcard",
+        "Frame 3537",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20247",
+      "text": "비밀번호 등록/수정",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\bcard",
+        "Frame 3537",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Right",
+        "Frame 3536"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43882:20255",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\bcard",
+        "Frame 3537",
+        "point_view_set",
+        "link_btn",
+        "포인트",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20260",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20261",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형"
+      ],
+      "x": 0,
+      "y": 36
+    },
+    {
+      "id": "43882:20265",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20268",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20271",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20274",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "할인형",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20277",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20278",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형"
+      ],
+      "x": 0,
+      "y": 36
+    },
+    {
+      "id": "43882:20282",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20285",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20288",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20291",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20294",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "\b상세내용",
+        "적립형",
+        "Frame 3556",
+        "Frame 2967"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20298",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20299",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:20303",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20306",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20309",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:20312",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_RV_0206_T06",
+        "contents",
+        "이용안내",
+        "Frame 3547",
+        "Frame 3556",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43882:22969",
+      "text": "버튼명",
+      "in": [
+        "Frame 3541",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:22972",
+      "text": "비밀번호 등록/수정",
+      "in": [
+        "Frame 3541",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Right",
+        "Frame 3536"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43882:22998",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_RV_0207_M02",
+        "contents",
+        "Frame 3560",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Left"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:23001",
+      "text": "비밀번호 등록/수정",
+      "in": [
+        "SCR_GA_RV_0207_M02",
+        "contents",
+        "Frame 3560",
+        "Frame 3540",
+        "link_btn_t point_pwd",
+        "link_btn",
+        "Right",
+        "Frame 3536"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43882:24278",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24279",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:24286",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43882:24291",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43882:24296",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43893:25019",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25020",
+      "text": "Message",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Frame"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25027",
+      "text": "High priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "High"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43893:25032",
+      "text": "Medium priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Medium"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43893:25037",
+      "text": "Low priority",
+      "in": [
+        "Annotation",
+        "Widget",
+        "Controls",
+        "Priority",
+        "Low"
+      ],
+      "x": 22,
+      "y": 4
+    },
+    {
+      "id": "43893:25141",
+      "text": "Style",
+      "in": [
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25142",
+      "text": "Reference",
+      "in": [
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:25145",
+      "text": "Default button (디폴트 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary·Tertiary)에 관계없이 동일하게 적용합니다. (아래항목도 동일) * 25.05.21(목) 기준: Default button (디폴트 버튼)의 맥시멈 크기 → 높이 60 * 26.06.10(수) 기준: Default button (디폴트 버튼), Default button 안에서 같이 사용되는 Text button → 굵기 Bold",
+      "in": [
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25150",
+      "text": "[토큰 네이밍 예시]  Components/Buttons/Default/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:25157",
+      "text": "Components/Buttons/Default/Primary",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25165",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25173",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25181",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25191",
+      "text": "Components/Buttons/Default/Secondary",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25200",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25208",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25216",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25225",
+      "text": "Structure",
+      "in": [
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25226",
+      "text": "Reference",
+      "in": [
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:25229",
+      "text": "[➊ Default button (디폴트 버튼)]",
+      "in": [
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25230",
+      "text": "Icon button (아이콘 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
+      "in": [
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25235",
+      "text": "[토큰 네이밍 예시]  Components/Buttons/Icon/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:25242",
+      "text": "Components/Buttons/Icon/Primary",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25251",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25255",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25259",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25265",
+      "text": "Components/Buttons/Icon/Secondary",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25274",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25278",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25282",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25287",
+      "text": "Structure",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25288",
+      "text": "Reference",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 107,
+      "y": 4.5
+    },
+    {
+      "id": "43893:25291",
+      "text": "[➊ Default button (디폴트 버튼)]",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25292",
+      "text": "Capsule button (캡슐 버튼)의 위계(Primary·Secondary·Tertiary)별 Background (백그라운드) 스타일과 상태값을 정의합니다.",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43893:25297",
+      "text": "[토큰 네이밍 예시] Components/Buttons/Capsule/Primary Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "43893:25304",
+      "text": "Components/Buttons/Capsule/Primary",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25313",
+      "text": "Semantic/Color/Background/Filled/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25319",
+      "text": "Semantic/Color/Background/Filled/Pressed",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25325",
+      "text": "Semantic/Color/Background/Filled/Disabled",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25333",
+      "text": "Components/Buttons/Capsule/Primary",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Title",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43893:25342",
+      "text": "Semantic/Color/Background/Outlined/Default",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25348",
+      "text": "Semantic/Color/Background/Outlined/Pressed",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43893:25354",
+      "text": "Semantic/Color/Background/Outlined/Disabled",
+      "in": [
+        "Contents",
+        "Contents",
+        "Contents",
+        "Description area",
+        "Style",
+        "Style",
+        "Style area",
+        "Style",
+        "Style",
+        "Style area",
+        "Tag"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "43957:20936",
+      "text": "G car Biz 관리자 계정은 G car 예약이 불가하며, G car 예약을 위해서는 G car Biz 소속원으로 별도의 가입이 필요합니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "top info",
+        "Frame 2858"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20969",
+      "text": "이용방법",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "SCR_GA_CS_0503_M01_biz_image",
+        "타이틀"
+      ],
+      "x": 167.33203125,
+      "y": 4
+    },
+    {
+      "id": "43957:20970",
+      "text": "이용방법",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "SCR_GA_CS_0503_M01_biz_image"
+      ],
+      "x": 20,
+      "y": 54
+    },
+    {
+      "id": "43957:20974",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20976",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20977",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:20984",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20986",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20987",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:20993",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:20995",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43957:20996",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:21000",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "Frame 2787",
+        "Frame 2963"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21007",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21009",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21010",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:21016",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21018",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43957:21019",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:21022",
+      "text": "인증번호가 일치하지 않습니다. 이미 사용중인 휴대전화입니다. / 인증에러입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21023",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:21028",
+      "text": "잘못된 이메일 형식입니다",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 71616",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21029",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 71616",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43957:21033",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21037",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43957:21040",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43957:21043",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43957:21786",
+      "text": "12:30",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43957:21801",
+      "text": "차량을 원하는 곳까지 가져다 드릴게요",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "Frame 3519"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21804",
+      "text": "배송",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "progress",
+        "text"
+      ],
+      "x": 148,
+      "y": -2
+    },
+    {
+      "id": "43957:21805",
+      "text": "요청",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "progress",
+        "text"
+      ],
+      "x": 227,
+      "y": -2
+    },
+    {
+      "id": "43957:21806",
+      "text": "일정",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "progress",
+        "text"
+      ],
+      "x": 70,
+      "y": -2
+    },
+    {
+      "id": "43957:21807",
+      "text": "확인",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "progress",
+        "text"
+      ],
+      "x": 297,
+      "y": -2
+    },
+    {
+      "id": "43957:21808",
+      "text": "차량",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "Frame 716113",
+        "progress",
+        "text"
+      ],
+      "x": 0,
+      "y": -2
+    },
+    {
+      "id": "43957:21823",
+      "text": "모닝 어반",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21825",
+      "text": "000,000원",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71660"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43957:21826",
+      "text": "10%",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71660"
+      ],
+      "x": 60,
+      "y": 2
+    },
+    {
+      "id": "43957:21827",
+      "text": "000,000원",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71660"
+      ],
+      "x": 89,
+      "y": 0
+    },
+    {
+      "id": "43957:21829",
+      "text": "이용시작일",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71661"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21830",
+      "text": ": YYYY.MM.DD(요일)",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71661"
+      ],
+      "x": 60,
+      "y": 0
+    },
+    {
+      "id": "43957:21832",
+      "text": "배송장소",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71662"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21833",
+      "text": ": 선택 전",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "input",
+        "car info",
+        "all",
+        "Frame 71662"
+      ],
+      "x": 49,
+      "y": 0
+    },
+    {
+      "id": "43957:21837",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "title"
+      ],
+      "x": 20,
+      "y": 24
+    },
+    {
+      "id": "43957:21842",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "Frame 71649",
+        "0",
+        "Frame 3119"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21849",
+      "text": "상세주소(입력)",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "Frame 71649",
+        "법인 단체 주소",
+        "법인/단체 주소",
+        "input_s"
+      ],
+      "x": 0,
+      "y": 12
+    },
+    {
+      "id": "43957:21854",
+      "text": "자차면책보험료 5만원",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "1",
+        "Frame 3122"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21859",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "유의사항",
+        "\blist",
+        "Frame 2963"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21861",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "유의사항",
+        "\blist",
+        "Frame 2964"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43957:21864",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "contents",
+        "유의사항",
+        "\blist",
+        "Frame 2966"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43957:21867",
+      "text": "문의전화",
+      "in": [
+        "SCR_GA_BN_0305_M01_마스터카드 인증_카드번호 입력 전",
+        "Frame 716119"
+      ],
+      "x": 7,
+      "y": 1
+    }
+  ]
+}

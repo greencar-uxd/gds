@@ -1,0 +1,357 @@
+<canvas id="42066:25442" name="Accordion (아코디언)" x="0" y="0" width="0" height="0">
+  <frame id="42066:28374" name="SCR_GA_CA_0103_M01: L.Point 회원가입" x="-665" y="0" width="375" height="1351">
+    <instance id="42066:28375" name="Status Bar iOS iPhone/Light" x="0" y="0" width="375" height="44" />
+    <instance id="42066:28376" name="top app bar_ios" x="0" y="44" width="375" height="44" />
+    <frame id="42066:28377" name="Frame 716139" x="0" y="88" width="375" height="1113">
+      <frame id="42066:28378" name="G car 회원가입" x="20" y="32" width="335" height="1049">
+        <frame id="42066:28379" name="G Car 회원 약관" x="0" y="0" width="335" height="188">
+          <frame id="42066:28380" name="그린카 회원 약관" x="0" y="0" width="335" height="28">
+            <instance id="42066:28381" name="checkbox" x="0" y="2" width="24" height="24" />
+            <text id="42066:28382" name="G car 회원 약관" x="32" y="0" width="131" height="28" />
+          </frame>
+          <instance id="42066:28383" name="필수약관" x="0" y="44" width="335" height="24" />
+          <instance id="42066:28384" name="필수약관" x="0" y="84" width="335" height="24" />
+          <instance id="42066:28385" name="필수약관" x="0" y="124" width="335" height="24" />
+          <instance id="42066:28386" name="필수약관" x="0" y="164" width="335" height="24" />
+        </frame>
+        <frame id="42066:28387" name="마케팅 정보 수신 동의" x="0" y="212" width="335" height="284">
+          <frame id="42066:28388" name="마케팅 정보 수신 동의" x="0" y="0" width="335" height="108">
+            <frame id="42066:28389" name="그린카 회원 약관" x="0" y="0" width="335" height="28">
+              <instance id="42066:28390" name="checkbox" x="0" y="2" width="24" height="24" />
+              <text id="42066:28391" name="마케팅 정보 수신 동의" x="32" y="0" width="180" height="28" />
+            </frame>
+            <frame id="42066:28392" name="Frame 3688" x="0" y="44" width="335" height="90" hidden="true">
+              <instance id="42066:28393" name="선택약관" x="0" y="0" width="335" height="24" />
+              <frame id="42066:28394" name="Frame 3471" x="0" y="32" width="320" height="16">
+                <text id="42066:28395" name="전체 동의 시 1,000p 및 혜택 제공" x="32" y="0" width="255" height="16" />
+              </frame>
+              <frame id="42066:28396" name="cheackbox" x="0" y="56" width="320" height="34">
+                <frame id="42066:28397" name="버튼 세트" x="32" y="0" width="288" height="34">
+                  <instance id="42066:28398" name="checkbox" x="0" y="0" width="85.0009994506836" height="34" />
+                  <instance id="42066:28399" name="checkbox" x="89.0009994506836" y="0" width="85.0009994506836" height="34" />
+                  <instance id="42066:28400" name="checkbox" x="178.0019989013672" y="0" width="73.0009994506836" height="34" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="42066:28401" name="Frame 2813" x="0" y="150" width="320" height="176" hidden="true">
+              <text id="42066:28402" name="동의를 거부할 수 있으며, 거부시에는 신규 서비스 및 이벤트 혜택 안내를 받으실 수 없습니다." x="32" y="0" width="288" height="32" />
+              <frame id="42066:28403" name="Frame 2776" x="32" y="40" width="288" height="40">
+                <text id="42066:28404" name="이용목적" x="0" y="0" width="57" height="16" />
+                <text id="42066:28405" name="G car 신규 서비스/상품 및 이벤트 안내" x="0" y="24" width="214" height="16" />
+              </frame>
+              <frame id="42066:28406" name="Frame 2775" x="32" y="88" width="288" height="40">
+                <text id="42066:28407" name="수집항목" x="0" y="0" width="45" height="16" />
+                <text id="42066:28408" name="성명, 이메일, 휴대폰 번호" x="0" y="24" width="126" height="16" />
+              </frame>
+              <frame id="42066:28409" name="Frame 2774" x="32" y="136" width="288" height="40">
+                <text id="42066:28410" name="보유기간" x="0" y="0" width="45" height="16" />
+                <text id="42066:28411" name="회원 탈퇴 시 또는 본인의 수집/이용 동의 철회 요청 시" x="0" y="24" width="261" height="16" />
+              </frame>
+            </frame>
+            <frame id="42066:28412" name="Frame 716138" x="0" y="36" width="335" height="16">
+              <text id="42066:28413" name="전체 동의 시 2,000p 및 혜택 제공" x="32" y="0" width="271" height="16" />
+            </frame>
+            <frame id="42066:28414" name="Frame 3687" x="0" y="60" width="335" height="48">
+              <instance id="42066:28415" name="선택약관" x="0" y="0" width="335" height="48" />
+              <frame id="42066:28416" name="Frame 3471" x="0" y="32" width="320" height="16" hidden="true">
+                <text id="42066:28417" name="전체 동의 시 1,000p 및 혜택 제공" x="32" y="0" width="255" height="16" />
+              </frame>
+              <frame id="42066:28418" name="cheackbox" x="0" y="56" width="320" height="34" hidden="true">
+                <frame id="42066:28419" name="버튼 세트" x="32" y="0" width="288" height="34">
+                  <instance id="42066:28420" name="checkbox" x="0" y="0" width="85.0009994506836" height="34" />
+                  <instance id="42066:28421" name="checkbox" x="89.0009994506836" y="0" width="85.0009994506836" height="34" />
+                  <instance id="42066:28422" name="checkbox" x="178.0019989013672" y="0" width="73.0009994506836" height="34" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+          <instance id="42066:28423" name="약관 동의_to be" x="0" y="124" width="335" height="160" />
+        </frame>
+        <frame id="42066:28424" name="선택형 제3자 제공 동의" x="0" y="520" width="335" height="156">
+          <frame id="42066:28425" name="그린카 회원 약관" x="0" y="0" width="335" height="28">
+            <instance id="42066:28426" name="checkbox" x="0" y="2" width="24" height="24" />
+            <text id="42066:28427" name="선택형 제3자 제공 동의" x="32" y="0" width="191" height="28" />
+          </frame>
+          <frame id="42066:28428" name="선택약관" x="0" y="44" width="335" height="24">
+            <instance id="42066:28429" name="checkbox" x="0" y="0" width="24" height="24" />
+            <frame id="42066:28430" name="Frame 3126" x="32" y="0" width="271" height="24">
+              <text id="42066:28431" name="(선택)" x="0" y="0" width="41" height="24" />
+              <text id="42066:28432" name="개인정보 제3자 제공 동의" x="45" y="0" width="226" height="24" />
+            </frame>
+            <instance id="42066:28433" name="ico_list_next_arrow" x="335" y="5.245328793535009e-7" width="24.00000104907332" height="24.000001049073262" />
+          </frame>
+          <frame id="42066:28434" name="cheackbox" x="0" y="84" width="335" height="72">
+            <frame id="42066:28435" name="Frame 71572" x="32" y="0" width="303" height="72">
+              <frame id="42066:28436" name="Frame 71570" x="0" y="0" width="303" height="34">
+                <instance id="42066:28437" name="checkbox" x="0" y="0" width="120.0009994506836" height="34" />
+                <instance id="42066:28438" name="checkbox" x="124.0009994506836" y="0" width="146.00100708007812" height="34" />
+              </frame>
+              <frame id="42066:28439" name="Frame 71571" x="0" y="38" width="303" height="34">
+                <instance id="42066:28440" name="checkbox" x="0" y="0" width="146.00100708007812" height="34" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+        <frame id="42066:28441" name="L.Point 회원약관" x="0" y="700" width="335" height="349">
+          <instance id="42066:28442" name="line_list" x="0" y="0" width="335" height="1" />
+          <frame id="42066:28443" name="앨포인트회원약관" x="0" y="17" width="335" height="332">
+            <frame id="42066:28444" name="Frame 3479" x="0" y="0" width="335" height="332">
+              <frame id="42066:28445" name="그린카 회원 약관" x="0" y="0" width="335" height="28">
+                <instance id="42066:28446" name="checkbox" x="0" y="2" width="24" height="24" />
+                <text id="42066:28447" name="L.POINT 회원 약관" x="32" y="0" width="161" height="28" />
+              </frame>
+              <instance id="42066:28448" name="필수약관" x="0" y="44" width="335" height="24" />
+              <instance id="42066:28449" name="필수약관" x="0" y="84" width="335" height="24" />
+              <instance id="42066:28450" name="필수약관" x="0" y="124" width="335" height="24" />
+              <frame id="42066:28451" name="Frame 3480" x="0" y="164" width="335" height="128">
+                <instance id="42066:28452" name="필수약관" x="0" y="0" width="335" height="24" />
+                <frame id="42066:28453" name="전체 동의 혜택 제공" x="0" y="32" width="335" height="16">
+                  <frame id="42066:28454" name="Frame 2764" x="0" y="0" width="320" height="16">
+                    <text id="42066:28455" name="전체 동의 시 할인 혜택 알림 제공" x="32" y="0" width="234" height="16" />
+                  </frame>
+                </frame>
+                <frame id="42066:28456" name="cheackbox" x="0" y="56" width="320" height="72">
+                  <frame id="42066:28457" name="버튼 세트" x="32" y="0" width="288" height="72">
+                    <instance id="42066:28458" name="checkbox" x="0" y="0" width="85.0009994506836" height="34" />
+                    <instance id="42066:28459" name="checkbox" x="89.0009994506836" y="0" width="73.0009994506836" height="34" />
+                    <instance id="42066:28460" name="checkbox" x="166.0019989013672" y="0" width="67.0009994506836" height="34" />
+                    <instance id="42066:28461" name="checkbox" x="0" y="38" width="66.0009994506836" height="34" />
+                  </frame>
+                </frame>
+              </frame>
+              <instance id="42066:28462" name="선택약관" x="0" y="308" width="335" height="24" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <instance id="42066:28463" name="button_area_ios" x="0" y="1201" width="375" height="150" />
+  </frame>
+  <text id="43077:13373" name="이렇게 밑으로 내려서 볼 수 있는 형태를 아코디언" x="-245" y="645" width="300" height="22" />
+  <rounded-rectangle id="43078:2630" name="Rectangle 1557" x="-699" y="621" width="431" height="203" />
+  <frame id="43079:6976" name="SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)" x="-1074" y="0" width="375" height="1459">
+    <frame id="43079:6977" name="그린카계정" x="0" y="88" width="375" height="109">
+      <frame id="43079:6978" name="Group 2856" x="20" y="24" width="335" height="85">
+        <frame id="43079:6979" name="Group 2709" x="20" y="24" width="335" height="60">
+          <frame id="43079:6980" name="Frame 3654" x="20" y="24" width="335" height="60">
+            <frame id="43079:6981" name="Frame 3651" x="0" y="0" width="110" height="16">
+              <text id="43079:6982" name="G car Biz 소속원 계정" x="0" y="0" width="110" height="16" />
+            </frame>
+            <frame id="43079:6983" name="Frame 3653" x="0" y="16" width="335" height="44">
+              <frame id="43079:6984" name="Frame 3652" x="0" y="0" width="263" height="44">
+                <text id="43079:6985" name="오늘 10:10 ~ 12:10" x="0" y="10" width="162" height="24" />
+              </frame>
+              <instance id="43079:6986" name="dis_sel_btn" x="263" y="2" width="72" height="40" />
+            </frame>
+          </frame>
+        </frame>
+        <rounded-rectangle id="43079:6987" name="line" x="20" y="108" width="335" height="1" />
+      </frame>
+    </frame>
+    <frame id="43079:6988" name="그린카계정" x="0" y="197" width="375" height="109">
+      <frame id="43079:6989" name="Group 2856" x="20" y="24" width="335" height="85">
+        <frame id="43079:6990" name="Group 2709" x="20" y="24" width="335" height="60">
+          <frame id="43079:6991" name="Frame 3654" x="20" y="24" width="335" height="60">
+            <frame id="43079:6992" name="Frame 3651" x="0" y="0" width="47" height="16">
+              <text id="43079:6993" name="개인 계정" x="0" y="0" width="47" height="16" />
+            </frame>
+            <frame id="43079:6994" name="Frame 3653" x="0" y="16" width="335" height="44">
+              <frame id="43079:6995" name="Frame 3652" x="0" y="0" width="263" height="44">
+                <text id="43079:6996" name="오늘 10:10 ~ 12:10" x="0" y="10" width="192" height="24" />
+              </frame>
+              <instance id="43079:6997" name="dis_sel_btn" x="263" y="2" width="72" height="40" />
+            </frame>
+          </frame>
+        </frame>
+        <rounded-rectangle id="43079:6998" name="line" x="20" y="108" width="335" height="1" />
+      </frame>
+    </frame>
+    <instance id="43079:6999" name="full_home_btn" x="0" y="1425" width="375" height="34" />
+    <instance id="43079:7000" name="Status Bar iOS iPhone/Light" x="0" y="0" width="375" height="44" />
+    <instance id="43079:7001" name="top app bar_ios" x="0" y="44" width="375" height="44" />
+    <frame id="43079:7002" name="Frame 71935" x="0" y="306" width="375" height="1610">
+      <instance id="43079:7003" name="section" x="0" y="0" width="375" height="8" />
+      <frame id="43079:7004" name="Frame 71589" x="0" y="8" width="375" height="96">
+        <frame id="43079:7005" name="Frame 2981" x="20" y="24" width="335" height="72">
+          <text id="43079:7006" name="혜택 알림" x="0" y="0" width="63" height="24" />
+          <text id="43079:7007" name="차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고" x="0" y="32" width="335" height="40" />
+        </frame>
+      </frame>
+      <instance id="43079:7008" name="ios_약관동의 확장" x="0" y="104" width="375" height="1506" />
+    </frame>
+  </frame>
+  <frame id="43882:23644" name="SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스" x="-665" y="1660" width="375" height="812">
+    <instance id="43882:23645" name="section" x="0" y="180" width="375" height="8" />
+    <text id="43882:23646" name="버튼명" x="20" y="154" width="121" height="16" />
+    <text id="43882:23647" name="버튼명" x="20" y="419" width="94" height="16" />
+    <instance id="43882:23648" name="section" x="0" y="384" width="375" height="8" />
+    <instance id="43882:23649" name="section" x="0" y="445" width="375" height="8" />
+    <instance id="43882:23650" name="section" x="0" y="653" width="375" height="8" />
+    <frame id="43882:23651" name="4" x="0" y="188" width="375" height="196">
+      <frame id="43882:23652" name="Group 71652" x="20" y="20" width="335" height="60">
+        <frame id="43882:23653" name="대여유형" x="20" y="20" width="335" height="24">
+          <frame id="43882:23654" name="L text" x="0" y="0" width="102" height="24">
+            <text id="43882:23655" name="반납 장소" x="0" y="0" width="63" height="24" />
+            <instance id="43882:23656" name="badge_way" x="67" y="3" width="35" height="18" />
+          </frame>
+        </frame>
+        <frame id="43882:23657" name="대여위치" x="20" y="60" width="335" height="20">
+          <frame id="43882:23658" name="Frame 3176" x="0" y="0" width="89" height="20">
+            <instance id="43882:23659" name="Component 112" x="0" y="0" width="20" height="20" />
+            <text id="43882:23660" name="한남역 1번 출구" x="24" y="0" width="65" height="20" />
+          </frame>
+          <frame id="43882:23661" name="Frame 716136" x="178" y="0" width="157" height="20">
+            <text id="43882:23662" name="대여 위치" x="115" y="0" width="26" height="20" />
+            <instance id="43882:23663" name="btn_ico_list_arrow_16" x="141" y="2" width="16" height="16" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="43882:23664" name="대여유형" x="20" y="96" width="335" height="24">
+        <frame id="43882:23665" name="R text" x="228" y="0" width="107" height="24">
+          <instance id="43882:23666" name="text button" x="0" y="0" width="107" height="24" />
+        </frame>
+      </frame>
+      <frame id="43882:23667" name="Frame 1597912562" x="20" y="136" width="335" height="40">
+        <frame id="43882:23668" name="Frame 1597912563" x="12" y="10" width="311" height="20">
+          <frame id="43882:23669" name="Frame 716136" x="0" y="0" width="159" height="20">
+            <instance id="43882:23670" name="ico_exclamation_20" x="0" y="2" width="16" height="16" />
+            <text id="43882:23671" name="주차장 이용 시 주의사항" x="20" y="0" width="139" height="20" />
+          </frame>
+          <instance id="43882:23672" name="btn_ico_list_arrow_16" x="311" y="5.563651939155534e-7" width="20.000000874227794" height="20.00000087422768" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="43882:23673" name="223" x="0" y="453" width="375" height="200">
+      <frame id="43882:23674" name="Group 71652" x="20" y="20" width="335" height="60">
+        <frame id="43882:23675" name="대여유형" x="20" y="20" width="335" height="24">
+          <frame id="43882:23676" name="L text" x="0" y="0" width="102" height="24">
+            <text id="43882:23677" name="반납 장소" x="0" y="0" width="63" height="24" />
+            <instance id="43882:23678" name="badge_way" x="67" y="3" width="35" height="18" />
+          </frame>
+        </frame>
+        <frame id="43882:23679" name="대여위치" x="20" y="60" width="335" height="20">
+          <frame id="43882:23680" name="Frame 3176" x="0" y="0" width="195" height="20">
+            <instance id="43882:23681" name="pin_small" x="0" y="0" width="20" height="20" />
+            <text id="43882:23682" name="한남역 1번 출구" x="24" y="0" width="171" height="20" />
+          </frame>
+          <frame id="43882:23683" name="Frame 716136" x="178" y="0" width="157" height="20">
+            <text id="43882:23684" name="대여 위치" x="115" y="0" width="26" height="20" />
+            <instance id="43882:23685" name="btn_ico_list_arrow_16" x="141" y="2" width="16" height="16" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="43882:23686" name="대여유형" x="20" y="96" width="335" height="24">
+        <frame id="43882:23687" name="R text" x="228" y="0" width="107" height="24">
+          <instance id="43882:23688" name="text button" x="0" y="0" width="107" height="24" />
+        </frame>
+      </frame>
+      <frame id="43882:23689" name="Frame 716137" x="20" y="136" width="335" height="44">
+        <text id="43882:23690" name="주차장이 만차인가요?" x="12" y="12" width="126" height="20" />
+        <frame id="43882:23691" name="Frame 716138" x="237" y="12" width="86" height="20">
+          <instance id="43882:23692" name="ico_call" x="0" y="2" width="16" height="16" />
+          <frame id="43882:23693" name="Frame 716136" x="18" y="0" width="68" height="20">
+            <text id="43882:23694" name="고객센터" x="0" y="0" width="52" height="20" />
+            <instance id="43882:23695" name="btn_ico_list_arrow_16" x="52" y="2" width="16" height="16" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="44370:30114" name="Components_Accordion" x="965" y="0" width="1920" height="3225.646484375">
+    <frame id="44370:30115" name="Components_Accordion" x="0" y="0" width="1920" height="341">
+      <instance id="44370:30116" name="타이틀" x="0" y="0" width="1920" height="341" />
+    </frame>
+    <frame id="44370:30117" name="Components_Accordion" x="0" y="341" width="1920" height="2884.646484375">
+      <frame id="44370:30118" name="Background graphic" x="-392.2354736328125" y="-972.72802734375" width="2227.3233669854453" height="2051.456170292342" />
+      <frame id="44370:30122" name="Contents" x="50" y="0" width="1820" height="2884.646484375">
+        <instance id="44370:30123" name="Index area" x="0" y="0" width="235" height="1188" />
+        <frame id="44370:30124" name="Contents area" x="275" y="0" width="1545" height="2884.646484375">
+          <frame id="44370:30125" name="Contents" x="0" y="0" width="1545" height="1278">
+            <frame id="44370:30126" name="Text area" x="0" y="50" width="1545" height="143">
+              <frame id="44370:30127" name="Title+ Description" x="0" y="0" width="134" height="27">
+                <text id="44370:30128" name="Glossary" x="0" y="0" width="134" height="27" />
+                <text id="44370:30129" name="지카 디자인 시스템 문서화 템플릿" x="249" y="7" width="196" height="13" hidden="true" />
+              </frame>
+              <frame id="44370:30130" name="Contents text" x="0" y="51" width="1545" height="92">
+                <frame id="44370:30131" name="Frame 2147227734" x="0" y="20" width="153" height="52">
+                  <text id="44370:30132" name="[정의]" x="0" y="0" width="38" height="13" />
+                  <text id="44370:30133" name="Accordion (아코디언)은" x="0" y="29" width="153" height="23" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="44370:30134" name="Description area" x="0" y="217" width="1545" height="1011">
+              <frame id="44370:30135" name="Frame 2147227729" x="329" y="478" width="312" height="26">
+                <frame id="44370:30136" name="text" x="0" y="0" width="157" height="26">
+                  <text id="44370:30137" name="Selection box (셀렉션 박스)" x="8" y="4" width="141" height="18" />
+                </frame>
+                <vector id="44370:30138" name="Vector 368" x="157" y="12.999999046325684" width="155" height="0.0000018483565327187534" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="44370:30139" name="Contents" x="0" y="1278" width="1545" height="702">
+            <frame id="44370:30140" name="Text area" x="0" y="50" width="1545" height="339">
+              <frame id="44370:30141" name="Title+ Description" x="0" y="0" width="75" height="27">
+                <text id="44370:30142" name="Type" x="0" y="0" width="75" height="27" />
+                <text id="44370:30143" name="Reference" x="175" y="4.5" width="196" height="18" hidden="true" />
+              </frame>
+              <frame id="44370:30144" name="Contents text" x="0" y="51" width="1545" height="288">
+                <frame id="44370:30145" name="Frame 2147227734" x="0" y="20" width="1525" height="248">
+                  <text id="44370:30146" name="[종류]" x="0" y="0" width="38" height="13" />
+                  <text id="44370:30147" name="Tip (팁)은" x="0" y="29" width="1525" height="23" />
+                  <frame id="44370:30148" name="List text" x="0" y="68" width="1525" height="180">
+                    <frame id="44370:30149" name="Frame 2147227913" x="24" y="24" width="1477" height="132">
+                      <frame id="44370:30150" name="Body area" x="0" y="0" width="1477" height="132">
+                        <frame id="44370:30151" name="Body Text" x="0" y="0" width="478.3333435058594" height="132">
+                          <text id="44370:30152" name="➊ Accent tip (ㅇㅇ) &gt; 상단 헤더 하단에 있는 버전 &gt; 부모인 개체 상단에 같이 떠있는 버전" x="24" y="20" width="430.3333435058594" height="92" />
+                        </frame>
+                        <frame id="44370:30153" name="Body Text" x="499.3333435058594" y="0" width="478.33331298828125" height="109">
+                          <text id="44370:30154" name="➋ Accent box tip? (ㅇㅇ) &gt; 헤더 하단에 배치되어있지만 타이틀+박스인 버전" x="24" y="20" width="430.33331298828125" height="69" />
+                        </frame>
+                        <frame id="44370:30155" name="Body Text" x="998.6666259765625" y="0" width="478.33331298828125" height="109">
+                          <text id="44370:30156" name="➌ Info tip (인포 팁) &gt; 텍스트 + 아이콘(이 아이콘을 누르면 팁이 나오는 형태) 버전" x="24" y="20" width="430.33331298828125" height="69" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+            <frame id="44370:30157" name="Description area" x="0" y="413" width="1545" height="239">
+              <frame id="44370:30158" name="Frame 2147227936" x="717" y="50" width="111" height="32">
+                <frame id="44370:30159" name="Group 2147227710" x="0" y="0" width="111" height="32">
+                  <frame id="44370:30160" name="Frame 2147227743" x="0" y="0" width="111" height="32">
+                    <frame id="44370:30161" name="Frame 2147227742" x="0" y="0" width="111" height="32">
+                      <frame id="44370:30162" name="Frame 2147227739" x="0" y="0" width="111" height="32">
+                        <frame id="44370:30163" name="Tag" x="0" y="0" width="111" height="32">
+                          <text id="44370:30164" name="종류 (2)" x="30" y="7" width="51" height="18" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="44370:30165" name="Tip" x="612" y="152" width="321" height="17">
+                <frame id="44370:30166" name="Icon/system/line/info" x="0" y="0.5" width="16" height="16" />
+                <text id="44370:30171" name="세차/정비 직후라면 이전 대여자 주차위치와 상이할 수 있어요." x="18" y="0" width="303" height="17" />
+              </frame>
+            </frame>
+          </frame>
+          <frame id="44370:30172" name="Contents" x="0" y="1980" width="1545" height="904.646484375">
+            <frame id="44370:30173" name="Text area" x="0" y="50" width="1545" height="160">
+              <frame id="44370:30174" name="Title+ Description" x="0" y="0" width="77" height="27">
+                <text id="44370:30175" name="Style" x="0" y="0" width="77" height="27" />
+                <text id="44370:30176" name="Reference" x="175" y="4.5" width="196" height="18" hidden="true" />
+              </frame>
+              <frame id="44370:30177" name="Contents text" x="0" y="51" width="1545" height="109">
+                <frame id="44370:30178" name="Frame 2147227734" x="0" y="20" width="673" height="69">
+                  <text id="44370:30179" name="Icon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 색상 스타일과 상태값(Off·On)을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary)에 관계없이 동일하게 적용합니다. (아래항목도 동일)" x="0" y="0" width="673" height="69" />
+                </frame>
+              </frame>
+            </frame>
+            <frame id="44370:30180" name="Description area" x="0" y="234" width="1545" height="620.646484375" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+</canvas>

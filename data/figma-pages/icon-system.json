@@ -1,0 +1,1570 @@
+{
+  "$description": "Icon system 페이지를 직접 읽은 것. 등록된 스타일 목록이 아니라 페이지 내용입니다.",
+  "source": {
+    "fileKey": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42066:25437",
+    "page": "Icon system (아이콘 시스템) 🚧"
+  },
+  "readAt": "2026-08-06",
+  "method": "Figma MCP get_metadata 로 페이지 전체를 읽고 tools/parse-icon-page.js 로 파싱. 읽기 전용.",
+  "caution": "페이지 표시는 🚧 입니다. 확정된 규격이 아니라 «작업 중인 원본 내용»으로 읽어야 합니다.",
+  "sizeTiers": {
+    "source": "42066:26405 «5. Icon» 문서 프레임",
+    "tiers": [
+      {
+        "name": "Extra Large",
+        "px": 96
+      },
+      {
+        "name": "Large",
+        "px": 56
+      },
+      {
+        "name": "Medium",
+        "px": 40
+      }
+    ],
+    "note": "문서 프레임이 적어 둔 단계입니다. 아래 «선언된 크기»와 겹치지 않습니다 — 같은 축이 아닐 수 있습니다."
+  },
+  "naming": {
+    "rule": "Icon/system/<이름>/<line|fill>/<크기>",
+    "ruleEvidence": "이 꼴을 따르는 이름이 208건으로 가장 많습니다 — 규칙을 지어낸 것이 아니라 다수 표기에서 읽어낸 것입니다.",
+    "conforming": 208,
+    "nonConforming": 87,
+    "buckets": [
+      {
+        "kind": "variantBeforeName",
+        "ko": "변형(line·fill)이 이름보다 앞 — 규칙은 «이름/변형/크기»",
+        "count": 63,
+        "names": [
+          "Icon/system/line/alert_off",
+          "Icon/system/line/alert_on",
+          "Icon/system/line/alert_point",
+          "Icon/system/line/battery_high",
+          "Icon/system/line/battery_low",
+          "Icon/system/line/battery_medium",
+          "Icon/system/line/benefit",
+          "Icon/system/line/bluetooth",
+          "Icon/system/line/book_mark_off",
+          "Icon/system/line/calender",
+          "Icon/system/line/call",
+          "Icon/system/line/camera",
+          "Icon/system/line/camera_plus",
+          "Icon/system/line/card",
+          "Icon/system/line/cctv",
+          "Icon/system/line/change",
+          "Icon/system/line/chat",
+          "Icon/system/line/check",
+          "Icon/system/line/chevron_down",
+          "Icon/system/line/chevron_left",
+          "Icon/system/line/chevron_right",
+          "Icon/system/line/chevron_up",
+          "Icon/system/line/close",
+          "Icon/system/line/company",
+          "Icon/system/line/complete",
+          "Icon/system/line/contents",
+          "Icon/system/line/copy",
+          "Icon/system/line/coupon",
+          "Icon/system/line/download",
+          "Icon/system/line/eye_off",
+          "Icon/system/line/eye_on",
+          "Icon/system/line/flash",
+          "Icon/system/line/fuel",
+          "Icon/system/line/gps",
+          "Icon/system/line/help",
+          "Icon/system/line/horn",
+          "Icon/system/line/id_face",
+          "Icon/system/line/id_finger_print",
+          "Icon/system/line/id_ocr",
+          "Icon/system/line/info",
+          "Icon/system/line/like_off",
+          "Icon/system/line/lock",
+          "Icon/system/line/logo",
+          "Icon/system/line/media",
+          "Icon/system/line/noti",
+          "Icon/system/line/phone",
+          "Icon/system/line/pin",
+          "Icon/system/line/point",
+          "Icon/system/line/rating_bad",
+          "Icon/system/line/rating_happy",
+          "Icon/system/line/rating_neutral",
+          "Icon/system/line/scrap",
+          "Icon/system/line/search",
+          "Icon/system/line/share",
+          "Icon/system/line/time",
+          "Icon/system/line/trash",
+          "Icon/system/line/unflash",
+          "Icon/system/line/unlock",
+          "Icon/system/line/urgent",
+          "Icon/system/line/user",
+          "Icon/system/line/warning",
+          "Icon/system/line/zoom_in",
+          "Icon/system/line/zoom_out"
+        ]
+      },
+      {
+        "kind": "noVariantNoSize",
+        "ko": "변형과 크기가 없음",
+        "count": 15,
+        "names": [
+          "Icon/system/change",
+          "Icon/system/close",
+          "Icon/system/file",
+          "Icon/system/flash",
+          "Icon/system/horn",
+          "Icon/system/line_1",
+          "Icon/system/line_1.2",
+          "Icon/system/line_1.6",
+          "Icon/system/line_2",
+          "Icon/system/lock",
+          "Icon/system/right",
+          "Icon/system/time",
+          "Icon/system/unflash",
+          "Icon/system/unlock",
+          "Icon/system/zoom_out"
+        ]
+      },
+      {
+        "kind": "lowercasePrefix",
+        "ko": "소문자 «icon/» 으로 시작 — 규칙은 «Icon/»",
+        "count": 8,
+        "names": [
+          "icon/system/car",
+          "icon/system/car_trunk",
+          "icon/system/emergency_lights",
+          "icon/system/line/car",
+          "icon/system/line/car_accident",
+          "icon/system/line/car_trunk",
+          "icon/system/line/emergency_lights",
+          "icon/system/pin"
+        ]
+      },
+      {
+        "kind": "other",
+        "ko": "그 밖의 어긋남",
+        "count": 1,
+        "names": [
+          "Icon/system/battery/line/_low_24"
+        ]
+      }
+    ]
+  },
+  "icons": [
+    {
+      "name": " number_background_circle",
+      "line": [],
+      "fill": [
+        20
+      ]
+    },
+    {
+      "name": " number_double_background_circle",
+      "line": [],
+      "fill": [
+        20
+      ]
+    },
+    {
+      "name": " number_single_background_circle",
+      "line": [],
+      "fill": [
+        20
+      ]
+    },
+    {
+      "name": "alert_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "alert_on",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "alert_point",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_left",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_left_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_left_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_right",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_right_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_down_right_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_left",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_left_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_left_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_right",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_right_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_right_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_up",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_up_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "arrows_up_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "battery_high",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "battery_low",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "battery_medium",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "benefit",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "bluetooth",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "book_mark_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "book_mark_on",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "calender",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "call",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "call_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "camera",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "camera_plus",
+      "line": [
+        16,
+        20,
+        24,
+        32,
+        40
+      ],
+      "fill": [
+        16,
+        20,
+        24,
+        32,
+        40
+      ]
+    },
+    {
+      "name": "camera_switch",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "cancle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_accident",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_confirm",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_electric",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_gas",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_info",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_left",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_park",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_photo",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "car_trunk",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "card",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "cctv",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "check",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "check_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "check_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_down",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_down_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_down_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_down_left",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_down_right",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_left",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_left_background_circle",
+      "line": [
+        24,
+        36
+      ],
+      "fill": [
+        36
+      ]
+    },
+    {
+      "name": "chevron_left_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_right",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_right_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_right_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_up",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_up_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "chevron_up_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "close",
+      "line": [
+        24,
+        50
+      ],
+      "fill": []
+    },
+    {
+      "name": "close_background_circle",
+      "line": [
+        24
+      ],
+      "fill": [
+        16,
+        20,
+        24,
+        32,
+        40
+      ]
+    },
+    {
+      "name": "close_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "coment",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "company",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "complete",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "contents",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "copy",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "coupon",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "down_left_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "down_left_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "down_right_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "down_right_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "download",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "emergency_light",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "emotion_bad",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "emotion_happy",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "emotion_neutral",
+      "line": [
+        16,
+        20,
+        24,
+        32,
+        40
+      ],
+      "fill": []
+    },
+    {
+      "name": "eye_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "eye_on",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "file",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "filter",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "flash",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "flash_background_circle",
+      "line": [
+        24
+      ],
+      "fill": [
+        36
+      ]
+    },
+    {
+      "name": "gps",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "hand",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "hand_click",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "hand_move",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "hand_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "hand_stop",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "help",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "help_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "help_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "home",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "horn",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "id_face",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "id_finger_print",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "id_ocr",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "info_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "info_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "like_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "like_on",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "link",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "loader",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "lock",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "lock_check",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "lock_uncheck",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "logo",
+      "line": [],
+      "fill": [
+        24
+      ]
+    },
+    {
+      "name": "logout",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "media",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "menu",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "noti",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_0_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_0_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_1_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_1_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_2_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_2_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_3_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_3_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_4_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_4_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_5_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_5_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_6_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_6_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_7_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_7_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_8_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_8_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_9_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "number_9_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "pc",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "phone",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "photo",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "pin",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "plus",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "plus_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "plus_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "point",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "reflect",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "refresh",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "refuel",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "rotate",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "scrap_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "scrap_on",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "search",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "send",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "setting",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "share",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "support_call",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "support_chat",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "switch_horizontal",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "switch_vertical",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "thumbs_down",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "thumbs_up",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "time",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "tool",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "tracking",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "trash",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "unflash",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "unflash_background_circle",
+      "line": [
+        24
+      ],
+      "fill": [
+        36
+      ]
+    },
+    {
+      "name": "unlock",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "upload_background_circle",
+      "line": [],
+      "fill": [
+        56
+      ]
+    },
+    {
+      "name": "urgent",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "user",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "user_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "user_plus",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "volume_off",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "volume_up",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "warning_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "warning_background_square",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "warning_background_triangle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "zoom_in",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "zoom_in_background_circle",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "zoom_out",
+      "line": [
+        24
+      ],
+      "fill": []
+    },
+    {
+      "name": "zoom_out_background_circle",
+      "line": [
+        24
+      ],
+      "fill": [
+        36
+      ]
+    }
+  ],
+  "declaredSizes": {
+    "16": 4,
+    "20": 7,
+    "24": 182,
+    "32": 4,
+    "36": 5,
+    "40": 4,
+    "50": 1,
+    "56": 1
+  },
+  "bigFrames": [
+    {
+      "node": "44090:38751",
+      "name": "Foundation_Icon system",
+      "w": 1920,
+      "h": 13477
+    },
+    {
+      "node": "44596:44105",
+      "name": "Icons_사용 ver",
+      "w": 1800,
+      "h": 6193
+    },
+    {
+      "node": "44381:19964",
+      "name": "Icons_제작 가이드 ver (백업용)",
+      "w": 1800,
+      "h": 6180
+    },
+    {
+      "node": "44605:5082",
+      "name": "Icons_사용 ver",
+      "w": 1800,
+      "h": 6154
+    },
+    {
+      "node": "42400:54996",
+      "name": "06. Map Marker",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "node": "44381:24522",
+      "name": "Icons_적용",
+      "w": 1800,
+      "h": 2569
+    },
+    {
+      "node": "44664:11117",
+      "name": "Icons_기존 사용 ver",
+      "w": 1800,
+      "h": 1656
+    },
+    {
+      "node": "42326:38668",
+      "name": "Spectral",
+      "w": 2102,
+      "h": 1332
+    },
+    {
+      "node": "42066:26931",
+      "name": "05. Icons",
+      "w": 614,
+      "h": 2206
+    },
+    {
+      "node": "44299:24004",
+      "name": "test area",
+      "w": 1814,
+      "h": 721
+    },
+    {
+      "node": "42066:26405",
+      "name": "5. Icon",
+      "w": 1152,
+      "h": 1009
+    },
+    {
+      "node": "44275:5903",
+      "name": "SCR_GA_CT_0101_M02: 스마트키_예약 완료",
+      "w": 375,
+      "h": 1515
+    },
+    {
+      "node": "44377:17824",
+      "name": "List",
+      "w": 1423,
+      "h": 326
+    }
+  ],
+  "counts": {
+    "nodes": 1624,
+    "uniqueNames": 295,
+    "icons": 184,
+    "conforming": 208,
+    "nonConforming": 87,
+    "sizeTiers": 3
+  }
+}

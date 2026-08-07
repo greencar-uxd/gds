@@ -1,0 +1,89 @@
+{
+  "$description": "타이포·간격·엘리베이션을 Figma 원본과 대조한 결과. 색 대조(data/figma-variables.json)와 같은 성격입니다.",
+  "checkedAt": "2026-08-05",
+  "method": "Figma MCP get_metadata · get_screenshot 로 ✅ Foundation 페이지의 정의 표를 직접 읽어 대조. 읽기 전용.",
+  "typography": {
+    "source": "Typography system (타이포 시스템) ✅ · Type scale 표 43376:18436",
+    "figmaTokens": 21,
+    "canonTokens": 21,
+    "mismatches": [],
+    "lineHeight": "Auto (21행 전부) — 확정 결정과 일치",
+    "fontFamily": "Noto Sans KR — 확정 결정과 일치",
+    "gridNote": "표 머리 표기: 2px grid / 굵기로 위계 표현",
+    "verdict": "완전 일치"
+  },
+  "spacing": {
+    "source": "Spacing system (스페이싱 시스템) ✅ · Spacing scale 표 44090:19455",
+    "unit": "1 unit = 2px",
+    "figmaRows": 14,
+    "canonSteps": 14,
+    "valuesMatch": true,
+    "originalDuplicateNames": [
+      {
+        "name": "Spacing_700",
+        "count": 2,
+        "values": [
+          24,
+          28
+        ]
+      },
+      {
+        "name": "Spacing_900",
+        "count": 2,
+        "values": [
+          40,
+          44
+        ]
+      },
+      {
+        "name": "Spacing_1000",
+        "count": 2,
+        "values": [
+          48,
+          52
+        ]
+      }
+    ],
+    "verdict": "값 전부 일치 — 이름 중복 3건은 저장소에서 순차 재정리로 해소"
+  },
+  "elevation": {
+    "source": "디자인 시스템 > Elevation 40917:27916 (Material 인용 개념도)",
+    "figmaLevels": [
+      {
+        "level": "Level 0",
+        "dp": 0
+      },
+      {
+        "level": "Level 1",
+        "dp": 1,
+        "note": "map_floting_shadow"
+      },
+      {
+        "level": "Level 2",
+        "dp": 4
+      },
+      {
+        "level": "Level 3",
+        "dp": 6
+      },
+      {
+        "level": "Level 4",
+        "dp": 8
+      },
+      {
+        "level": "Level 5",
+        "dp": 12
+      }
+    ],
+    "canonSteps": [
+      "Elevation_1",
+      "Elevation_2",
+      "Elevation_3",
+      "Elevation_4",
+      "Elevation_5",
+      "Elevation_6"
+    ],
+    "verdict": "체계 상이 — 원본 문서는 Level 0~5(0-based) 개념도, 저장소는 Elevation_1~6(그림자 스타일 실측). 값 대조 불가",
+    "openFromHandoff": "Elevation_1 레이어 수는 이 페이지로도 확인되지 않음 (여전히 미확인)"
+  }
+}

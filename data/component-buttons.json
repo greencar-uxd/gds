@@ -1,0 +1,167 @@
+{
+  "$description": "Buttons ✅ 페이지(42066:25440) 원본 실측. 제1원칙에 따라 원본은 읽기만 했습니다.",
+  "checkedAt": "2026-08-05",
+  "source": {
+    "page": "Buttons (버튼) ✅ · 42066:25440",
+    "document": "Components_Buttons · 43684:15337 (1920×39206)"
+  },
+  "method": "Figma MCP get_metadata(텍스트 649개) · get_screenshot · get_variable_defs. 읽기 전용.",
+  "types": [
+    {
+      "no": 1,
+      "id": "default",
+      "name": "Default button (디폴트 버튼)",
+      "node": "43684:15748",
+      "definition": "화면 내 가장 중요한 주요 액션을 실행하는 버튼. 예약 진행·결제 확인 등 주요 의사결정 상황에 사용",
+      "roles": [
+        "Label (레이블)",
+        "Background (백그라운드)"
+      ],
+      "hierarchy": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "no": 2,
+      "id": "icon",
+      "name": "Icon button (아이콘 버튼)",
+      "node": "43864:69679",
+      "definition": "시스템 아이콘으로 특정 액션을 실행. 보통 다른 컴포넌트에 소속되나 로고 아이콘은 예외",
+      "variants": [
+        "In-container (소속형)",
+        "Standalone (단독형)"
+      ]
+    },
+    {
+      "no": 3,
+      "id": "text",
+      "name": "Text button (텍스트 버튼)",
+      "node": "43684:16374",
+      "definition": "Background 없이 낮은 우선순위의 액션을 실행. 시각적 강조 없이 보조 역할",
+      "variants": [
+        "Text button",
+        "Underline text button (밑줄)",
+        "Icon text button (아이콘+텍스트)"
+      ]
+    },
+    {
+      "no": 4,
+      "id": "fab",
+      "name": "Floating action button (플로팅 액션 버튼)",
+      "node": "43684:16455",
+      "definition": "화면 위에 고정되어 부가 기능에 빠르게 진입. 하단 콘텐츠와 시각적 분리를 위해 Elevation 1 적용",
+      "dependsOn": [
+        "Elevation_1",
+        "System/Dim Layer"
+      ],
+      "rule": "Elevation 1 이 기본 적용이므로 Stroke 를 추가로 쓰지 않습니다 (함께 쓰면 강조 과도)",
+      "variants": [
+        "Icon",
+        "FAB menu (메뉴형)",
+        "Icon + Text",
+        "(4형태)"
+      ]
+    },
+    {
+      "no": 5,
+      "id": "capsule",
+      "name": "Capsule button (캡슐 버튼)",
+      "node": "43684:30184",
+      "definition": "선택·필터링 등 보조 액션. 형태가 Check box 와 비슷해도 사용 상황으로 구분 — 옵션 탐색·필터링용",
+      "roles": [
+        "Label (라벨)",
+        "Background (백그라운드)"
+      ]
+    },
+    {
+      "no": 6,
+      "id": "split",
+      "name": "Split button (스플릿 버튼)",
+      "node": "43691:9566",
+      "definition": "Left action · Right action · Line 세 가지로 구성",
+      "note": "Line 의 세로 높이는 텍스트 높이값(18)과 동일하게 적용"
+    },
+    {
+      "no": 7,
+      "id": "list",
+      "name": "List button (리스트 버튼)",
+      "node": "43852:13305"
+    },
+    {
+      "no": 8,
+      "id": "thumbnail",
+      "name": "Thumbnail button (썸네일 버튼)",
+      "node": "44675:11190"
+    }
+  ],
+  "tokenNames": {
+    "$note": "Style 섹션에서 원본이 직접 쓰는 토큰 이름. 프리미티브 → 시맨틱 → 컴포넌트 3계층 구조가 원본에 이미 존재합니다.",
+    "component": [
+      "Components/Buttons/Default/Primary",
+      "Components/Buttons/Default/Secondary",
+      "Components/Buttons/Capsule/Primary",
+      "Components/Buttons/Capsule/Secondary",
+      "Components/Buttons/Capsule_Number/Tertiary",
+      "Components/Buttons/Icon/Primary",
+      "Components/Buttons/Icon/Secondary",
+      "Components/Buttons/Thumbnail",
+      "Components/Buttons/Thumbnail/Empty",
+      "Components/Buttons/Thumbnail/Filled"
+    ],
+    "semantic": [
+      "Semantic/Color/Background/Filled/Default",
+      "Semantic/Color/Background/Filled/Pressed",
+      "Semantic/Color/Background/Filled/Disabled",
+      "Semantic/Color/Background/Outlined/Default",
+      "Semantic/Color/Background/Outlined/Pressed",
+      "Semantic/Color/Background/Outlined/Disabled",
+      "Semantic/Color/Background/Fill/Default"
+    ],
+    "mapping": {
+      "Components/Buttons/Default/Primary": [
+        "Semantic/Color/Background/Filled/Default",
+        "Semantic/Color/Background/Filled/Pressed",
+        "Semantic/Color/Background/Filled/Disabled"
+      ],
+      "Components/Buttons/Default/Secondary": [
+        "Semantic/Color/Background/Outlined/Default",
+        "Semantic/Color/Background/Outlined/Pressed",
+        "Semantic/Color/Background/Outlined/Disabled"
+      ]
+    }
+  },
+  "findings": {
+    "radiusVariables": {
+      "$note": "원본에 이름 붙은 반경 변수가 존재합니다. 저장소는 숫자 스케일(4/8/10/12/16/20/full)이라 이름 체계가 다릅니다.",
+      "observed": {
+        "Radius/sm": 8,
+        "Radius/xl": 16,
+        "Radius/xxl": 20
+      },
+      "incomplete": "이 페이지에서 관측된 것만. md·lg 등 나머지는 미확인"
+    },
+    "elevationVerified": {
+      "$note": "Elevation_2 변수값이 저장소 값과 정확히 일치 — 지금까지 추론이던 것이 팩트로 확인됐습니다.",
+      "token": "Elevation_2",
+      "figma": "DROP_SHADOW #00000026 (0,1) r3 s1 + DROP_SHADOW #0000004D (0,1) r2 s0",
+      "repo": "0/1/3/1 a0.15 + 0/1/2/0 a0.3",
+      "match": true,
+      "layers": 2,
+      "stillUnknown": "Elevation_1 의 레이어 수는 이 페이지에도 나오지 않습니다"
+    },
+    "lineHeightConflict": {
+      "$note": "행간을 Auto 로 확정했는데, 원본 타이포 변수는 세 가지 방식이 공존합니다.",
+      "samples": {
+        "noto_sans/title/medium": "lineHeight 100",
+        "noto_sans/heading/bold": "lineHeight 100",
+        "Text styles/Body 2 | 16px R": "lineHeight 24 (고정 px)",
+        "Text styles/Caption 1 | 12px R": "lineHeight 16 (고정 px)",
+        "Noto Sans/Caption 2ㅣ10px R": "lineHeight 1.5 (배수)"
+      },
+      "blocks": "TQ-7"
+    }
+  },
+  "variablesUsed": 77
+}

@@ -1,0 +1,2673 @@
+{
+  "$description": "Pasing (페이징) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "43077:20275",
+    "pageName": "Pasing (페이징) 🚧",
+    "figmaStatus": "wip",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 621,
+    "byType": {
+      "canvas": 1,
+      "text": 160,
+      "frame": 295,
+      "instance": 130,
+      "vector": 2,
+      "symbol": 32,
+      "section": 1
+    },
+    "topLevel": 14,
+    "texts": 160,
+    "namedTexts": 160,
+    "templateStubs": 0,
+    "symbols": 32
+  },
+  "topFrames": [
+    {
+      "type": "text",
+      "id": "43077:20276",
+      "name": "기존 페이징 인터렉션 [히 → 상] 수정 페이징 인터렉션 [우 - > 좌] => 기존에서 사용하고 있는 인터렉션은 페이징과는 맞지 않은 인터렉션임으로",
+      "w": 161,
+      "h": 160
+    },
+    {
+      "type": "text",
+      "id": "43078:3192",
+      "name": "예시 [고객센터 화면] 고객센터 페이징은 현재 하 → 상 페이징안에서 또 페이징이 있을 경우도 발생 [마이 페이지] > 약관 및 정책 > 세부 항목들 모두 하 → 상",
+      "w": 310,
+      "h": 140
+    },
+    {
+      "type": "frame",
+      "id": "43077:20277",
+      "name": "N0TE",
+      "w": 200,
+      "h": 275
+    },
+    {
+      "type": "frame",
+      "id": "43077:20286",
+      "name": "N0TE",
+      "w": 200,
+      "h": 335
+    },
+    {
+      "type": "instance",
+      "id": "43078:3114",
+      "name": "타이틀",
+      "w": 1920,
+      "h": 341
+    },
+    {
+      "type": "frame",
+      "id": "43078:3115",
+      "name": "G car Components_Pasing",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "frame",
+      "id": "43079:3411",
+      "name": "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+      "w": 375,
+      "h": 1381
+    },
+    {
+      "type": "frame",
+      "id": "43079:3676",
+      "name": "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43079:7177",
+      "name": "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+      "w": 375,
+      "h": 2067
+    },
+    {
+      "type": "frame",
+      "id": "43079:7679",
+      "name": "SCR_GA_CA_0105_M01 기본 (그린카 소셜계정)",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "43083:29179",
+      "name": "G car Components_Pasing",
+      "w": 1920,
+      "h": 1441
+    },
+    {
+      "type": "frame",
+      "id": "43083:29899",
+      "name": "11. Top app bar",
+      "w": 2000,
+      "h": 3800
+    },
+    {
+      "type": "frame",
+      "id": "43083:31010",
+      "name": "G car Layout Guide",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "type": "section",
+      "id": "43083:31347",
+      "name": "업데이트 사항",
+      "w": 3248,
+      "h": 3275
+    }
+  ],
+  "componentSets": {
+    "total": 32,
+    "axes": {
+      "Type": {
+        "default": 1,
+        "2btn": 3,
+        "2btn_myinfo": 1,
+        "close_t": 2,
+        "close_only": 2,
+        "txt_btn": 1,
+        "txt_btn_only": 1,
+        "sch": 2,
+        "toss": 1
+      },
+      "State": {
+        "default": 1,
+        "New value": 1,
+        "myinfo": 1,
+        "Default": 5,
+        "logo": 2,
+        "transparent": 1,
+        "sch_focus": 1,
+        "right_arrow": 1,
+        "free_way": 1
+      },
+      "Property 1": {
+        "def": 2,
+        "close_only": 1,
+        "sch": 2,
+        "2btn": 2,
+        "txt_btn": 1,
+        "txt_btn_only": 1,
+        "top app bar ios": 2,
+        "close_t": 1,
+        "Default": 2,
+        "logo+text": 2,
+        "add_arrow": 2
+      },
+      "value": {
+        "default": 5,
+        "focus": 1,
+        "arrow_only": 1,
+        "Default": 2,
+        "right_arrow": 1,
+        "my_info": 1,
+        "free_way": 1
+      }
+    },
+    "unparsed": [],
+    "caseCollisions": [
+      {
+        "lower": "default",
+        "forms": [
+          "Default",
+          "default"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "43083:29918",
+        "name": "Type=default, State=default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29925",
+        "name": "Type=2btn, State=New value",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29932",
+        "name": "Type=2btn_myinfo, State=myinfo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29940",
+        "name": "Type=close_t, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29947",
+        "name": "Type=close_t, State=logo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29970",
+        "name": "Type=close_only, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29975",
+        "name": "Type=close_only, State=transparent",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29980",
+        "name": "Type=txt_btn, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:29990",
+        "name": "Type=txt_btn_only, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30000",
+        "name": "Type=sch, State=Default",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30010",
+        "name": "Type=sch, State=sch_focus",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30021",
+        "name": "Type=2btn, State=right_arrow",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30025",
+        "name": "Type=2btn, State=free_way",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30032",
+        "name": "Type=toss, State=logo",
+        "w": 360,
+        "h": 56,
+        "in": "top app bar_aos"
+      },
+      {
+        "id": "43083:30072",
+        "name": "Property 1=def, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30078",
+        "name": "Property 1=close_only, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30083",
+        "name": "Property 1=sch, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30090",
+        "name": "Property 1=sch, value=focus",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30097",
+        "name": "Property 1=2btn, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30103",
+        "name": "Property 1=def, value=arrow_only",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30112",
+        "name": "Property 1=txt_btn, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30122",
+        "name": "Property 1=txt_btn_only, value=Default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30132",
+        "name": "Property 1=top app bar ios, value=right_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30138",
+        "name": "Property 1=close_t, value=default",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30144",
+        "name": "Property 1=2btn, value=my_info",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30146",
+        "name": "Property 1=top app bar ios, value=free_way",
+        "w": 375,
+        "h": 44,
+        "in": "top app bar_ios"
+      },
+      {
+        "id": "43083:30168",
+        "name": "Property 1=Default",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "43083:30174",
+        "name": "Property 1=logo+text",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "43083:30194",
+        "name": "Property 1=add_arrow",
+        "w": 375,
+        "h": 44,
+        "in": "main_header_ios"
+      },
+      {
+        "id": "43083:30208",
+        "name": "Property 1=add_arrow",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      },
+      {
+        "id": "43083:30218",
+        "name": "Property 1=Default",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      },
+      {
+        "id": "43083:30224",
+        "name": "Property 1=logo+text",
+        "w": 360,
+        "h": 56,
+        "in": "main_header_aos"
+      }
+    ]
+  },
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [],
+    "count": 0
+  },
+  "texts": [
+    {
+      "id": "43077:20276",
+      "text": "기존 페이징 인터렉션 [히 → 상] 수정 페이징 인터렉션 [우 - > 좌] => 기존에서 사용하고 있는 인터렉션은 페이징과는 맞지 않은 인터렉션임으로",
+      "in": [],
+      "x": -552,
+      "y": -130
+    },
+    {
+      "id": "43078:3192",
+      "text": "예시 [고객센터 화면] 고객센터 페이징은 현재 하 → 상 페이징안에서 또 페이징이 있을 경우도 발생 [마이 페이지] > 약관 및 정책 > 세부 항목들 모두 하 → 상",
+      "in": [],
+      "x": -552,
+      "y": 90
+    },
+    {
+      "id": "43077:20279",
+      "text": "Pasing (페이징)",
+      "in": [
+        "N0TE",
+        "header"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43077:20281",
+      "text": "→ 세부 상세페이지로 들어가지 않는 단순한 화면안에서의 조작이 가능한 경우는 바텀시트로만 사용 (해당 페이지 내용안에서만 조작을 해야하는 경우일 때) → 세부 상세페이지로 들어가야하는 경우에는 페이징으로 넘어가서 사용",
+      "in": [
+        "N0TE",
+        "content"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43077:20283",
+      "text": "차세대 그린카",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43077:20284",
+      "text": "05/08/26 14:15 Hours (UTC+09:00)",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43077:20288",
+      "text": "Pasing (페이징)",
+      "in": [
+        "N0TE",
+        "header"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43077:20290",
+      "text": "구조 → 탭 앱 바와 컨텐츠 영역 2가지로만 구성이 되어있는 형태 => 탭 앱 바를 같이 사용하는 조합 방식임으로, 처음에 들어갈 때는 탭 앱 바 왼쪽 아이콘이 [x]이거였다면 => 그 안에서 더 상세페이지로 딥하게 들어갈 경우에는 [< ]이걸로",
+      "in": [
+        "N0TE",
+        "content"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43077:20292",
+      "text": "차세대 그린카",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43077:20293",
+      "text": "05/08/26 14:15 Hours (UTC+09:00)",
+      "in": [
+        "N0TE",
+        "meta data"
+      ],
+      "x": 0,
+      "y": 16
+    },
+    {
+      "id": "43078:3130",
+      "text": "Pasing (페이징)",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43079:3416",
+      "text": "16:00 서울 경기지역 호우주의보 - 빗길 운전 조심하세요.",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "top info"
+      ],
+      "x": 30,
+      "y": 9
+    },
+    {
+      "id": "43079:3422",
+      "text": "대여시각 29분 전입니다.",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "01",
+        "반납시각"
+      ],
+      "x": 120,
+      "y": 0
+    },
+    {
+      "id": "43079:3425",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3426",
+      "text": "4/23 (토) 14:00",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "02",
+        "time"
+      ],
+      "x": 289,
+      "y": 0
+    },
+    {
+      "id": "43079:3432",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "02"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3436",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "02",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43079:3440",
+      "text": "대여기간",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "6"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3444",
+      "text": "오늘 12:00",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "6",
+        "대여기간",
+        "L text"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43079:3450",
+      "text": "대여장소",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "03",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3457",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "03",
+        "대여위치",
+        "Frame 3177"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43079:3464",
+      "text": "이전 대여자 주차위치",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "7",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3468",
+      "text": "주차위치 보러가기",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "7",
+        "Frame 1597912563",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3469",
+      "text": "세차/정비 직후라면 이전 대여자 주차위치와 상이할 수 있어요.",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "7"
+      ],
+      "x": 20,
+      "y": 96
+    },
+    {
+      "id": "43079:3471",
+      "text": "주차위치를 찾기 어려우신가요?",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "7",
+        "Frame 716136"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43079:3475",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "7",
+        "Frame 716136",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3481",
+      "text": "반납장소",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "5",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3488",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "5",
+        "대여위치",
+        "Frame 3177"
+      ],
+      "x": 28,
+      "y": 2
+    },
+    {
+      "id": "43079:3493",
+      "text": "차량확인",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "Frame 71644",
+        "Frame 3263"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3497",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "Frame 71644",
+        "Frame 3263",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "43079:3503",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "Frame 71644",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3507",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "Frame 71644",
+        "04"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3512",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3515",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3518",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인 (예약완료 대여시각 30분 전)",
+        "\bcon",
+        "04-1",
+        "결제수단"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3681",
+      "text": "세차하시고 사진을 등록하시면 심사를 거쳐 월 4회까지 그린포인트를 드립니다.",
+      "in": [
+        "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+        "\bcontents",
+        "메인 텍스트"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:3693",
+      "text": "이전 대여자가 남긴 주차 위치 확인하기",
+      "in": [
+        "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+        "\bcontents",
+        "9",
+        "Frame 1261159376",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:3700",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+        "\bcontents",
+        "9",
+        "Frame 1261159376",
+        "대여위치",
+        "Frame 3177"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43079:3707",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+        "\bcontents",
+        "10",
+        "Frame 2814",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:3710",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CT_0101_P04_스마트키(차량위치안내)",
+        "\bcontents",
+        "10",
+        "Frame 2814",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7186",
+      "text": "G car Biz 관리자 계정은 G car 예약이 불가하며, G car 예약을 위해서는 G car Biz 소속원으로 별도의 가입이 필요합니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "top info",
+        "Frame 2858"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7219",
+      "text": "이용방법",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "SCR_GA_CS_0503_M01_biz_image",
+        "타이틀"
+      ],
+      "x": 167.33203125,
+      "y": 4
+    },
+    {
+      "id": "43079:7220",
+      "text": "이용방법",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "SCR_GA_CS_0503_M01_biz_image"
+      ],
+      "x": 20,
+      "y": 54
+    },
+    {
+      "id": "43079:7224",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7226",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7227",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7234",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7236",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7237",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7243",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7245",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43079:7246",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7250",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 아이디",
+        "Frame 2787",
+        "Frame 2963"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7257",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7259",
+      "text": "*모든 항목은 필수입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7260",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 2989",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7266",
+      "text": "label-text",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Input",
+        "title"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7268",
+      "text": "이미 등록된 아이디입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 4
+    },
+    {
+      "id": "43079:7269",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "법인/단체명",
+        "input_default_a",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7272",
+      "text": "인증번호가 일치하지 않습니다. 이미 사용중인 휴대전화입니다. / 인증에러입니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7273",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "관리자 연락처",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7278",
+      "text": "잘못된 이메일 형식입니다",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 71616",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7279",
+      "text": "연속된 3자리 이상 문자는 사용할 수 없습니다.",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "법인/단체정보입력",
+        "Frame 71616",
+        "Help text"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "43079:7283",
+      "text": "보험료",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2989"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7287",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7290",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7293",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CS_0503_M01_롯데렌탈 비즈카 법인 관리자 가입",
+        "contents",
+        "이용안내",
+        "Frame 2779",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7683",
+      "text": "변경할 이메일 주소를 입력해주세요.",
+      "in": [
+        "SCR_GA_CA_0105_M01 기본 (그린카 소셜계정)",
+        "contents",
+        "title_search",
+        "Frame 2918"
+      ],
+      "x": 20,
+      "y": 32
+    },
+    {
+      "id": "43084:21865",
+      "text": "Tapp app bar가 들어가는 형태",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail"
+      ],
+      "x": 118,
+      "y": 336
+    },
+    {
+      "id": "43083:29203",
+      "text": "구조",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Example naming"
+      ],
+      "x": 12.799999237060547,
+      "y": 2.327272653579712
+    },
+    {
+      "id": "43083:29208",
+      "text": "구조",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Title"
+      ],
+      "x": 460,
+      "y": 16
+    },
+    {
+      "id": "43079:7768",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "text"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7770",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "1"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7771",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "1"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7775",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "1",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7778",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "1",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7781",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "1",
+        "Frame 3556",
+        "Frame 3557"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7783",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "2"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7784",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "2"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7788",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "2",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7791",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "2",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7793",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "3"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7797",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "\b보험료안내",
+        "3",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7799",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7800",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7804",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7807",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7810",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타",
+        "Frame 3556",
+        "Frame 2964"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7813",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타",
+        "Frame 3556",
+        "Frame 2965"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7815",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "기타",
+        "Frame 3668"
+      ],
+      "x": 10,
+      "y": 10
+    },
+    {
+      "id": "43079:7821",
+      "text": "보험료는 포인트/쿠폰 사용 제외",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "top info",
+        "Frame 2858"
+      ],
+      "x": 12,
+      "y": 0
+    },
+    {
+      "id": "43079:7826",
+      "text": "무료편도/시승이벤트 상품은 보험료 무료이나 사고발생 시 자차면책료 30만원 책정",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "SCR_GA_RV_0208_M01",
+        "\bcontents",
+        "top info",
+        "Frame 2859"
+      ],
+      "x": 12,
+      "y": 0
+    },
+    {
+      "id": "43084:19003",
+      "text": "Header area (헤더 영역)",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43084:21870",
+      "text": "Contents area (콘텐츠 영역)",
+      "in": [
+        "G car Components_Pasing",
+        "Template frame sub",
+        "Content area",
+        "Discription area",
+        "Detail area",
+        "Detail",
+        "Frame 2147227730",
+        "text"
+      ],
+      "x": 8,
+      "y": 2
+    },
+    {
+      "id": "43083:29907",
+      "text": "12:30",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "Android / Status Bar",
+        "time"
+      ],
+      "x": 14,
+      "y": 4
+    },
+    {
+      "id": "43083:30056",
+      "text": "Title  29 Copy 12",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "1. def"
+      ],
+      "x": 130,
+      "y": 893
+    },
+    {
+      "id": "43083:30058",
+      "text": "Title  29 Copy 13",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "2. 2btn"
+      ],
+      "x": 141,
+      "y": 965
+    },
+    {
+      "id": "43083:30060",
+      "text": "Title  29 Copy 14",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "3. close_t"
+      ],
+      "x": 141,
+      "y": 1346
+    },
+    {
+      "id": "43083:30062",
+      "text": "Title  29 Copy 15",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "4. close_only"
+      ],
+      "x": 141,
+      "y": 1520
+    },
+    {
+      "id": "43083:30064",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 141,
+      "y": 1694
+    },
+    {
+      "id": "43083:30066",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 515,
+      "y": 1694
+    },
+    {
+      "id": "43083:30068",
+      "text": "Title  29 Copy 17",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "6. sch"
+      ],
+      "x": 141,
+      "y": 1868
+    },
+    {
+      "id": "43083:30154",
+      "text": "Title  29 Copy 12",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "1. def"
+      ],
+      "x": 1110,
+      "y": 873
+    },
+    {
+      "id": "43083:30156",
+      "text": "Title  29 Copy 13",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "2. 2btn"
+      ],
+      "x": 1110,
+      "y": 1071
+    },
+    {
+      "id": "43083:30158",
+      "text": "Title  29 Copy 14",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "3. close_t"
+      ],
+      "x": 1110,
+      "y": 1345
+    },
+    {
+      "id": "43083:30160",
+      "text": "Title  29 Copy 15",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "4. close_only"
+      ],
+      "x": 1110,
+      "y": 1519
+    },
+    {
+      "id": "43083:30162",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "5. txt_btn"
+      ],
+      "x": 1110,
+      "y": 1693
+    },
+    {
+      "id": "43083:30164",
+      "text": "Title  29 Copy 17",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "텍스트 그룹",
+        "6. sch"
+      ],
+      "x": 1110,
+      "y": 1867
+    },
+    {
+      "id": "43083:30166",
+      "text": "Title  29 Copy 16",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar",
+        "5. txt_btn"
+      ],
+      "x": 1506,
+      "y": 1693
+    },
+    {
+      "id": "43083:30205",
+      "text": "Title  29 Copy 18",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 80,
+      "y": 2711
+    },
+    {
+      "id": "43083:30244",
+      "text": "aos",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 80,
+      "y": 655
+    },
+    {
+      "id": "43083:30245",
+      "text": "ios",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 1060,
+      "y": 655
+    },
+    {
+      "id": "43083:30275",
+      "text": "*w108로 변경해야함->기존 사이즈여야함",
+      "in": [
+        "11. Top app bar",
+        "11. Top app bar"
+      ],
+      "x": 413,
+      "y": 2602
+    },
+    {
+      "id": "43083:31018",
+      "text": "Layout structure (레이아웃 구조)",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Point",
+        "Frame 1261159402"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43083:31019",
+      "text": "Header area 화면 상단 고정 영역 (타이틀, 뒤로가기, 메뉴 등 네비게이션 요소가 위치) Contents area 헤더와 버튼 사이의 본문 영역 (서비스의 핵심 정보와 콘텐츠 표시) Buttons area 화면 하단 고정 영역 (주요 액션을 실행하는 버튼이 배치)",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Point",
+        "Frame 1261159402"
+      ],
+      "x": 0,
+      "y": 50
+    },
+    {
+      "id": "43083:31033",
+      "text": "ios",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Ios",
+        "Title"
+      ],
+      "x": 211.5,
+      "y": 16
+    },
+    {
+      "id": "43083:31038",
+      "text": "Header area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Ios",
+        "Example image",
+        "ios",
+        "Group 71938"
+      ],
+      "x": 97,
+      "y": 7.5
+    },
+    {
+      "id": "43083:31041",
+      "text": "Contents area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Ios",
+        "Example image",
+        "ios",
+        "Group 71939"
+      ],
+      "x": 90,
+      "y": 291.5
+    },
+    {
+      "id": "43083:31043",
+      "text": "Buttons area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Ios",
+        "Example image",
+        "ios"
+      ],
+      "x": 96,
+      "y": 585.5
+    },
+    {
+      "id": "43083:31045",
+      "text": "375*812",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Ios",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43083:31052",
+      "text": "aos / web",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Aos / Web",
+        "Title"
+      ],
+      "x": 182.5,
+      "y": 16
+    },
+    {
+      "id": "43083:31058",
+      "text": "Header area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Aos / Web",
+        "Example image",
+        "aos"
+      ],
+      "x": 91,
+      "y": 15
+    },
+    {
+      "id": "43083:31059",
+      "text": "Contents area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Aos / Web",
+        "Example image",
+        "aos"
+      ],
+      "x": 84,
+      "y": 310
+    },
+    {
+      "id": "43083:31060",
+      "text": "Buttons area",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Aos / Web",
+        "Example image",
+        "aos"
+      ],
+      "x": 90,
+      "y": 583
+    },
+    {
+      "id": "43083:31062",
+      "text": "360*800",
+      "in": [
+        "G car Layout Guide",
+        "Template frame basic",
+        "Content area",
+        "Contents",
+        "Discription area",
+        "Discription",
+        "Detail area",
+        "Detail",
+        "Example image",
+        "Aos / Web",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "43083:31371",
+      "text": "Pasing에 해당되는 화면들의 인터렉션 및 탭 앱 바 조합으로 모두 수정해놓기",
+      "in": [
+        "업데이트 사항",
+        " "
+      ],
+      "x": 36,
+      "y": 24
+    },
+    {
+      "id": "43079:7615",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "아이디",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7617",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "아이디",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7623",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "비밀번호",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7625",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "비밀번호",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7633",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7635",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7643",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7645",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7653",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7655",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7661",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7663",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7669",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3641"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7671",
+      "text": "버튼명",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_CI_1001_M01_그린카 일반계정 (소셜계정 포함)",
+        "Frame 3644",
+        "이메일",
+        "아이디",
+        "일반",
+        "Frame 3125"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7834",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702"
+      ],
+      "x": -20,
+      "y": 0
+    },
+    {
+      "id": "43079:7835",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7837",
+      "text": "회원 영구정지 및 페널티 20만원+발생 실비 청구",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702",
+        "Frame 3556"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7840",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7843",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7846",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3557"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7850",
+      "text": "자세히보기",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "01",
+        "Frame 3546",
+        "accordion"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7855",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "02",
+        "Frame 3702"
+      ],
+      "x": -20,
+      "y": 0
+    },
+    {
+      "id": "43079:7856",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "02",
+        "Frame 3702"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7860",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "02",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7864",
+      "text": "자세히보기",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "02",
+        "Frame 3703",
+        "accordion"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7869",
+      "text": "최초 T멤버십 사용 시 T멤버십 앱에서 비밀번호를 설정 후 사용 가능합니다.",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702"
+      ],
+      "x": -20,
+      "y": 0
+    },
+    {
+      "id": "43079:7870",
+      "text": "그린카 회원 이용약관",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43079:7874",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7877",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3561"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7880",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 2963"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7883",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3557"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7886",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3558"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7889",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3559"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "43079:7892",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "업데이트 사항",
+        "SCR_GA_RV_0211_M01_예약 전 주의사항_기본",
+        "\bcontents",
+        "03",
+        "Frame 3702",
+        "Frame 3556",
+        "Frame 3560"
+      ],
+      "x": 18,
+      "y": 0
+    }
+  ]
+}

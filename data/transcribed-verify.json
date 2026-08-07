@@ -1,0 +1,255 @@
+{
+  "$description": "손으로 옮겨 적은 «시작 전(—)» 쪽을 원자료 XML 과 대조한 결과입니다. 손으로 적은 수는 반드시 기계가 다시 셉니다.",
+  "why": "GAP-32 — 표시만 보고 세지 않기로 했으면, 옮겨 적은 것도 원자료로 되짚을 수 있어야 합니다.",
+  "rule": [
+    "어긋나면 조용히 맞추지 않고 mismatches 에 남깁니다.",
+    "XML 이 페이지 일부만 담은 쪽은 scope 에 그 범위를 밝힙니다 — «전부 읽었다»로 세지 않습니다.",
+    "여기서 드러난 정정은 지우지 않고 note 로 남깁니다."
+  ],
+  "verifiedAt": "2026-08-06",
+  "pages": [
+    {
+      "slug": "table",
+      "node": "42562:18899",
+      "xml": "data/figma-xml/table.xml",
+      "scope": null,
+      "nodesInXml": 1,
+      "citedNodes": 1,
+      "citedAllFound": true,
+      "emptyCanvas": true,
+      "dashSlots": [],
+      "variants": []
+    },
+    {
+      "slug": "card",
+      "node": "42479:74478",
+      "xml": "data/figma-xml/card.xml",
+      "scope": "범위: Card (카드) 42479:74478 중 «문서화 틀»과 «컴포넌트 변형» 부분만 담습니다.\n     저장소가 주장하는 것이 이 두 곳뿐이라 화면 목업(42722:29152)은 넣지 않았습니다.\n     get_metadata(fileKey=Gx9UHfQdhSdHzr1j8Kp1Ab, nodeId=42479:74478) 응답에서 그대로 옮겼습니다.",
+      "nodesInXml": 46,
+      "citedNodes": 7,
+      "citedAllFound": true,
+      "emptyCanvas": false,
+      "dashSlots": [
+        "42554:48893",
+        "42554:48900"
+      ],
+      "variants": [
+        {
+          "id": "42722:52948",
+          "name": "Property 1=mcard_LP_maxpoint"
+        },
+        {
+          "id": "42722:52962",
+          "name": "Property 1=mcard_LP_point"
+        },
+        {
+          "id": "42722:52971",
+          "name": "Property 1=mcard_LP_def"
+        },
+        {
+          "id": "42722:52974",
+          "name": "Property 1=mcard_T_pressed"
+        },
+        {
+          "id": "42722:52980",
+          "name": "Property 1=mcard_T_def"
+        },
+        {
+          "id": "42722:52983",
+          "name": "Property 1=mcard_T_add"
+        },
+        {
+          "id": "42722:52989",
+          "name": "Property 1=mcard_T_point"
+        },
+        {
+          "id": "42722:52997",
+          "name": "Property 1=mcard_T_maxpoint"
+        },
+        {
+          "id": "42722:53011",
+          "name": "Property 1=mcard_T_number"
+        },
+        {
+          "id": "42722:53036",
+          "name": "Property 1=mcard_kt_maxpoint"
+        },
+        {
+          "id": "42722:53051",
+          "name": "Property 1=mcard_kt_number"
+        },
+        {
+          "id": "42722:53075",
+          "name": "Property 1=mcard_kt_point"
+        },
+        {
+          "id": "42722:53084",
+          "name": "Property 1=mcard_kt_add_pressed"
+        },
+        {
+          "id": "42722:53091",
+          "name": "Property 1=mcard_kt_add"
+        },
+        {
+          "id": "42722:53098",
+          "name": "Property 1=mcard_kt_def"
+        }
+      ]
+    },
+    {
+      "slug": "switch",
+      "node": "42073:65749",
+      "xml": "data/figma-xml/switch.xml",
+      "scope": "범위: Switch (스위치) 42073:65749 중 «문서화 틀 두 벌»과 «컴포넌트 변형» 부분만 담습니다.\n     저장소가 주장하는 것이 이 두 곳뿐이라 화면 목업(42419:38382 · 42557:13478 · 42560:15839 · 42560:16888)은 넣지 않았습니다.\n     get_metadata(fileKey=Gx9UHfQdhSdHzr1j8Kp1Ab, nodeId=42073:65749) 응답에서 그대로 옮겼습니다.",
+      "nodesInXml": 55,
+      "citedNodes": 12,
+      "citedAllFound": true,
+      "emptyCanvas": false,
+      "dashSlots": [
+        "42553:11709",
+        "42553:11716"
+      ],
+      "variants": [
+        {
+          "id": "42073:65636",
+          "name": "checked=Off"
+        },
+        {
+          "id": "42073:65639",
+          "name": "checked=On"
+        },
+        {
+          "id": "42419:38418",
+          "name": "Property 1=btn_key_lock_100"
+        },
+        {
+          "id": "42419:38420",
+          "name": "Property 1=btn_key_unlock_100"
+        },
+        {
+          "id": "44665:1868",
+          "name": "Property 1=corporate"
+        },
+        {
+          "id": "44665:1867",
+          "name": "Property 1=personal"
+        }
+      ]
+    },
+    {
+      "slug": "accordion",
+      "node": "42066:25442",
+      "xml": "data/figma-xml/accordion.xml",
+      "scope": null,
+      "nodesInXml": 238,
+      "citedNodes": 7,
+      "citedAllFound": true,
+      "emptyCanvas": false,
+      "dashSlots": [],
+      "variants": []
+    },
+    {
+      "slug": "loading-spinner",
+      "node": "42554:48781",
+      "xml": "data/figma-xml/loading-spinner.xml",
+      "scope": null,
+      "nodesInXml": 49,
+      "citedNodes": 7,
+      "citedAllFound": true,
+      "emptyCanvas": false,
+      "dashSlots": [
+        "42554:48981",
+        "42554:48988"
+      ],
+      "variants": []
+    },
+    {
+      "slug": "skeleton",
+      "node": "42476:74477",
+      "xml": null,
+      "parsedElsewhere": "data/figma-pages/skeleton.json",
+      "note": "원자료 XML 대신 파서 산출물이 근거입니다"
+    },
+    {
+      "slug": "process-bar",
+      "node": "42441:52342",
+      "xml": null,
+      "parsedElsewhere": "data/figma-pages/process-bar.json",
+      "note": "원자료 XML 대신 파서 산출물이 근거입니다"
+    },
+    {
+      "slug": "radio",
+      "node": "42073:65748",
+      "xml": null,
+      "parsedElsewhere": "data/figma-pages/radio.json",
+      "note": "원자료 XML 대신 파서 산출물이 근거입니다"
+    }
+  ],
+  "claims": [
+    {
+      "slug": "table",
+      "what": "노드가 하나도 없는 빈 페이지",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "card",
+      "what": "문서화 틀 두 자리가 «-»",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "card",
+      "what": "mcard_set 변형 15종",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "switch",
+      "what": "문서화 틀 두 벌 중 «-» 가 있는 것은 한 벌뿐",
+      "held": true,
+      "note": "처음에는 «두 벌 모두 «-»»라고 적었습니다. 다시 세니 앞의 한 벌(42419:38532)은 Detail(42419:38544)이 아예 비어 있어 «-» 조차 없습니다. 손으로 적은 쪽이 틀렸습니다."
+    },
+    {
+      "slug": "switch",
+      "what": "변형 6종 — Toggle 2 · btn_key_lock 2 · account_type 2",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "loading-spinner",
+      "what": "문서화 틀 두 자리가 «-»",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "loading-spinner",
+      "what": "To-be 두 자리가 «작성해주세요» 상태로 As-is 문구를 그대로 안고 있음",
+      "held": true,
+      "note": "처음에는 «To-be 미작성»이라고만 적었습니다. 다시 보니 비어 있는 것이 아니라 As-is 문구가 그대로 복사돼 있고 앞에 «To-be(변경 스팩 작성해주세요)» 만 붙어 있습니다. «비었다»와 «As-is 를 복사해 두고 안 고쳤다»는 다릅니다 — 뒤엣것이 맞습니다."
+    },
+    {
+      "slug": "loading-spinner",
+      "what": "As-is 두 종의 크기·프레임레이트가 50×50/60fps · 500×500/30fps",
+      "held": true,
+      "note": null
+    },
+    {
+      "slug": "loading-spinner",
+      "what": "색이 #0A3C5C 한 값으로만 적힘",
+      "held": true,
+      "note": null
+    }
+  ],
+  "mismatches": [],
+  "counts": {
+    "pagesWithRaw": 5,
+    "pagesParsedElsewhere": 3,
+    "pagesWithoutEvidence": 0,
+    "scoped": 2,
+    "claims": 9,
+    "claimsHeld": 9,
+    "corrections": 2,
+    "mismatches": 0
+  }
+}

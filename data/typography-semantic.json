@@ -1,0 +1,161 @@
+{
+  "$description": "타이포 시맨틱 계층 — ✅ Typography system 의 Usage 열에서 계산. 손으로 적지 않았습니다.",
+  "generatedFrom": "tools/build-typography-semantic.js ← data/typography-library.json",
+  "source": "Typography system (타이포 시스템) ✅ · 42066:25472 · Type scale 표 21행 Usage 열",
+  "rule": "쓰임새가 한 단계만 가리키면 시맨틱 토큰, 여러 단계를 가리키면 계열(family)로 남깁니다.",
+  "status": "confirmed",
+  "tokens": [
+    {
+      "usage": "Badge_label",
+      "role": "badge-label",
+      "steps": [
+        "Title 8"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Badge_label\"",
+      "token": "Semantic/type/badge-label",
+      "ref": "noto_sans/title/8",
+      "refCanon": "Title 8"
+    },
+    {
+      "usage": "Bottom navigation_label",
+      "role": "bottom-navigation-label",
+      "steps": [
+        "Title 7"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Bottom navigation_label\"",
+      "token": "Semantic/type/bottom-navigation-label",
+      "ref": "noto_sans/title/7",
+      "refCanon": "Title 7"
+    },
+    {
+      "usage": "Bottom sheet",
+      "role": "bottom-sheet",
+      "steps": [
+        "Title 5"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Bottom sheet\"",
+      "token": "Semantic/type/bottom-sheet",
+      "ref": "noto_sans/title/5",
+      "refCanon": "Title 5"
+    },
+    {
+      "usage": "Button_label",
+      "role": "button-label",
+      "steps": [
+        "Title 5"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Button_label\"",
+      "token": "Semantic/type/button-label",
+      "ref": "noto_sans/title/5",
+      "refCanon": "Title 5"
+    },
+    {
+      "usage": "Modal",
+      "role": "modal",
+      "steps": [
+        "Title 3"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Modal\"",
+      "token": "Semantic/type/modal",
+      "ref": "noto_sans/title/3",
+      "refCanon": "Title 3"
+    },
+    {
+      "usage": "Time picker_date",
+      "role": "time-picker-date",
+      "steps": [
+        "Title 2"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Time picker_date\"",
+      "token": "Semantic/type/time-picker-date",
+      "ref": "noto_sans/title/2",
+      "refCanon": "Title 2"
+    },
+    {
+      "usage": "Time picker_number",
+      "role": "time-picker-number",
+      "steps": [
+        "Title 1"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Time picker_number\"",
+      "token": "Semantic/type/time-picker-number",
+      "ref": "noto_sans/title/1",
+      "refCanon": "Title 1"
+    },
+    {
+      "usage": "Top app bar",
+      "role": "top-app-bar",
+      "steps": [
+        "Title 5"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Top app bar\"",
+      "token": "Semantic/type/top-app-bar",
+      "ref": "noto_sans/title/5",
+      "refCanon": "Title 5"
+    }
+  ],
+  "families": [
+    {
+      "usage": "Contents_body",
+      "role": "contents-body",
+      "steps": [
+        "Body 1",
+        "Body 2",
+        "Body 3",
+        "Body 4"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_body\"",
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
+    },
+    {
+      "usage": "Contents_caption",
+      "role": "contents-caption",
+      "steps": [
+        "Caption 1",
+        "Caption 2"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_caption\"",
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
+    },
+    {
+      "usage": "Contents_heading",
+      "role": "contents-heading",
+      "steps": [
+        "Heading 1",
+        "Heading 2",
+        "Heading 3",
+        "Heading 4"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_heading\"",
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
+    },
+    {
+      "usage": "Contents_title",
+      "role": "contents-title",
+      "steps": [
+        "Title 3",
+        "Title 4",
+        "Title 6",
+        "Title 7"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Contents_title\"",
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
+    },
+    {
+      "usage": "Graphic",
+      "role": "graphic",
+      "steps": [
+        "Display 1",
+        "Display 2",
+        "Display 3"
+      ],
+      "evidence": "Typography system ✅ 42066:25472 · Type scale 표 Usage 열 \"Graphic\"",
+      "why": "원본 Usage 가 여러 단계에 같은 쓰임새를 적어 두어, 단계를 고르는 규칙이 원본에 없습니다."
+    }
+  ],
+  "counts": {
+    "usages": 13,
+    "tokens": 8,
+    "families": 5
+  }
+}

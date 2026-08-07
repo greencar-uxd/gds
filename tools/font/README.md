@@ -1,8 +1,8 @@
-# 정본 폰트 서브셋 — assets/fonts/
+# GDS 폰트 서브셋 — assets/fonts/
 
-GDS 정본 폰트는 **Noto Sans KR 단일**입니다 (`data/type-decisions.json`, 강민관 2026-08-04).
+GDS 폰트는 **Noto Sans KR 단일**입니다 (`data/type-decisions.json`, 강민관 2026-08-04).
 
-사이트가 다른 폰트로 렌더되면 타이포 견본이 정본과 다른 글꼴로 보입니다 — 문서가 스스로를 반증하는 상태가 됩니다. 그래서 `build/font.js` 가 빌드 단계에서 **모든 페이지의 본문 폰트 선언을 정본으로 교체**하고, 서브셋 woff2 를 base64 로 임베드합니다.
+사이트가 다른 폰트로 렌더되면 타이포 견본이 원본과 다른 글꼴로 보입니다 — 문서가 스스로를 반증하는 상태가 됩니다. 그래서 `build/font.js` 가 빌드 단계에서 **모든 페이지의 본문 폰트 선언을 GDS 폰트로 교체**하고, 서브셋 woff2 를 base64 로 임베드합니다.
 
 ## 왜 서브셋인가
 
@@ -37,7 +37,7 @@ pip install fonttools brotli --break-system-packages
 cd <저장소 루트>
 node -e '
 const fs=require("fs");let t="";
-for(const f of ["dist/index.html","dist/diagnostics.html","dist/decisions/index.html","dist/haptic/index.html"])
+for(const f of ["dist/index.html","dist/diagnostics.html","dist/decisions/index.html"])
   t+=fs.readFileSync(f,"utf8");
 const cur=new Set([...fs.readFileSync("assets/fonts/coverage.txt","utf8")]);
 for(const c of t) cur.add(c);
@@ -66,5 +66,5 @@ Noto Sans KR — SIL Open Font License 1.1. 서브셋·임베드·재배포가 �
 
 ## 주의
 
-- `build/font.js` 는 `font-family` 선언 중 **모노스페이스가 아닌 것을 전부** 정본으로 바꿉니다. 코드 표기용 `ui-monospace, ... monospace` 선언은 그대로 둡니다.
-- 사이트 소스(`site/*.html`)의 폰트 선언은 그대로 둬도 됩니다 — 빌드가 덮어씁니다. 다만 혼동을 줄이려면 소스도 정본으로 맞춰 두는 편이 낫습니다.
+- `build/font.js` 는 `font-family` 선언 중 **모노스페이스가 아닌 것을 전부** 원본으로 바꿉니다. 코드 표기용 `ui-monospace, ... monospace` 선언은 그대로 둡니다.
+- 사이트 소스(`site/*.html`)의 폰트 선언은 그대로 둬도 됩니다 — 빌드가 덮어씁니다. 다만 혼동을 줄이려면 소스도 GDS 폰트로 맞춰 두는 편이 낫습니다.

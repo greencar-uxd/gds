@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "component": "Bottom sheet",
+    "variant": "Notice (안내형)",
+    "measured": "2026-08-05",
+    "method": "Figma MCP (get_metadata / get_screenshot / get_design_context / get_variable_defs, use_figma getLocalTextStylesAsync)",
+    "figmaFile": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "seat": "Full (Greencar plan) — 이전 세션의 View 전용 제약이 해소된 상태에서 측정",
+    "sources": {
+      "bottomSheet": "43207:45522  Components_Bottom sheet",
+      "structure": "43214:28439  Structure",
+      "top": "43210:27836  ➊ Top (상단)",
+      "body": "43912:24111  ➋ Body (중단)",
+      "action": "43214:29167  ➌ Action (하단)",
+      "detents": "43331:27247  Detents",
+      "usage": "43912:54015  Usage guidelines",
+      "variant": "43914:20923  Variant",
+      "example": "43912:21198  bottom_sheet_button (375×265 인스턴스)",
+      "coupon": "6957:66723  coupon COMPONENT_SET (6 variant)",
+      "button": "40341:37627  3. Button / Large",
+      "layout": "23243:79353  13. Layout"
+    }
+  },
+
+  "structure": {
+    "note": "Top·Body·Action 3분할. Top과 Action은 케이스에 따라 생략 가능.",
+    "top": {
+      "types": ["Title + Icon", "Title", "Handle"],
+      "colorHeaderExists": false,
+      "height": 56,
+      "paddingX": 20,
+      "closeIcon": { "size": 24, "align": "left" },
+      "divider": { "width": 1, "hex": "#E2E2E2", "canonStyle": "Gray Scale/Gray 020" }
+    },
+    "body": { "types": ["Text", "Text + Image", "Action item"], "paddingX": 20, "paddingTop": 24 },
+    "action": {
+      "types": ["Button", "Button + Text button"],
+      "position": "시트 최하단 고정",
+      "buttonGap": 16,
+      "paddingBottom": 24
+    },
+    "dimLayer": {
+      "used": false,
+      "rule": "바텀시트는 Dim layer를 사용하지 않는다. 강제성이 필요하면 Modal을 사용한다."
+    },
+    "variants": ["Notice (안내형)", "입력형", "Select (선택형)", "Image (이미지형)"]
+  },
+
+  "spacing": {
+    "note": "값은 전부 canon.spacing 스케일(1 unit = 2px) 안에 있다.",
+    "items": [
+      { "gap": "sheet.paddingX",   "px": 20, "token": "Spacing_600" },
+      { "gap": "top.height",       "px": 56, "token": null, "note": "높이는 spacing 토큰 대상 아님" },
+      { "gap": "top→body",         "px": 24, "token": "Spacing_700" },
+      { "gap": "lead→coupon",      "px": 16, "token": "Spacing_500" },
+      { "gap": "body→action",      "px": 32, "token": "Spacing_900" },
+      { "gap": "action→sheetEnd",  "px": 24, "token": "Spacing_700" },
+      { "gap": "button↔button",    "px": 16, "token": "Spacing_500" },
+      { "gap": "coupon.paddingY",  "px": 16, "token": "Spacing_500" },
+      { "gap": "coupon.paddingX",  "px": 20, "token": "Spacing_600" },
+      { "gap": "coupon.section",   "px": 16, "token": "Spacing_500" },
+      { "gap": "coupon.textBlock", "px": 8,  "token": "Spacing_300" },
+      { "gap": "coupon.descLine",  "px": 4,  "token": "Spacing_200" }
+    ]
+  },
+
+  "radius": {
+    "note": "R-3(상한 20px) 준수. 값은 전부 semantic 변수 컬렉션 안에 있다.",
+    "items": [
+      { "target": "sheet.top",   "px": 20,   "token": "Radius/xxl" },
+      { "target": "coupon",      "px": 16,   "token": "Radius/xl" },
+      { "target": "button",      "px": 8,    "token": "Radius/sm" },
+      { "target": "tag/badge",   "px": 9999, "token": "Radius/full" }
+    ]
+  },
+
+  "typography": {
+    "note": "사이즈·웨이트는 전부 canon.typography(21토큰) 안에 있다. line-height는 정본이 전부 Auto라 웹 구현값을 별도 명시했다.",
+    "items": [
+      { "target": "sheet.title",     "size": 16, "weight": 500, "canonToken": "Title 5" },
+      { "target": "body.lead",       "size": 16, "weight": 400, "canonToken": "Body 1" },
+      { "target": "coupon.tag",      "size": 10, "weight": 500, "canonToken": "Title 8" },
+      { "target": "coupon.title",    "size": 16, "weight": 500, "canonToken": "Title 5" },
+      { "target": "coupon.desc",     "size": 12, "weight": 400, "canonToken": "Body 3" },
+      { "target": "coupon.period",   "size": 14, "weight": 400, "canonToken": "Body 2" },
+      { "target": "coupon.dday",     "size": 10, "weight": 500, "canonToken": "Title 8" },
+      { "target": "button.label",    "size": 16, "weight": 700, "canonToken": "Display 3", "unresolved": "16/700 정본이 Display 3·Heading 3 둘 다라 어느 쪽인지 미확인" }
+    ]
+  },
+
+  "color": {
+    "note": "사용 색 전부 canon.color.palette(57색) 안에 있다.",
+    "items": [
+      { "target": "cta.bg",          "hex": "#F14950", "canonStyle": "Primary/Red 400" },
+      { "target": "cta.pressed",     "hex": "#ED1C24", "canonStyle": "Primary/Red 500" },
+      { "target": "coupon.tag.bg",   "hex": "#ED1C24", "canonStyle": "Primary/Red 500" },
+      { "target": "sheet.bg",        "hex": "#FFFFFF", "canonStyle": "Gray Scale/Gray 000" },
+      { "target": "sheet.text",      "hex": "#2F2E2E", "canonStyle": "Gray Scale/Gray 080" },
+      { "target": "top.divider",     "hex": "#E2E2E2", "canonStyle": "Gray Scale/Gray 020" },
+      { "target": "coupon.text",     "hex": "#0F2D41", "canonStyle": "Navy/Navy 070" },
+      { "target": "coupon.sub",      "hex": "#728A9A", "canonStyle": "Navy/navy 040" },
+      { "target": "coupon.border",   "hex": "#D0D8DD", "canonStyle": "Navy/Navy 020" },
+      { "target": "dday.default",    "hex": "#0A3C5C", "canonStyle": "Navy/Navy 060" },
+      { "target": "dday.soon",       "hex": "#D32828", "canonStyle": "System/Alarm" }
+    ]
+  },
+
+  "elevation": {
+    "styleName": "Bottom Sheet",
+    "styleId": "43190:24225",
+    "layers": [
+      { "type": "DROP_SHADOW", "x": 0, "y": 4, "blur": 8, "spread": 3, "hex": "#000000", "alpha": 0.15 },
+      { "type": "DROP_SHADOW", "x": 0, "y": 1, "blur": 3, "spread": 0, "hex": "#000000", "alpha": 0.30 },
+      { "type": "DROP_SHADOW", "x": 0, "y": 0, "blur": 6, "spread": 0, "hex": "#000000", "alpha": 0.15 }
+    ],
+    "conflict": {
+      "issue": "'Bottom Sheet' 계열 EFFECT 스타일이 4종 값으로 9개 흩어져 있다",
+      "found": [
+        { "name": "Bottom Sheet",                  "ids": ["43190:24225"], "layers": 3, "alpha": [0.15, 0.30, 0.15] },
+        { "name": "bottom sheet",                  "ids": ["10887:220894", "42165:31672", "42410:54528"], "layers": 1, "alpha": [0.15] },
+        { "name": "Bottom Sheet shadow",           "ids": ["2696:16646", "40008:43668", "41321:26837"], "layers": 1, "alpha": [0.20] },
+        { "name": "as-is_Shadow/(X)Bottom Sheet",  "ids": ["1776:12288"], "layers": 1, "alpha": [0.08] }
+      ],
+      "e2Note": "E-2(그림자 불투명도 15%) 대비 — 3겹 중 2겹은 15%지만 2번째 겹이 30%다. 0.20/0.08 계열은 E-2 밖."
+    }
+  },
+
+  "coupon": {
+    "componentSet": "6957:66723",
+    "variants": 6,
+    "hasLeftColorBar": false,
+    "hasQuantityBadge": false,
+    "structure": ["status tag (pill)", "title", "description", "condition", "period + D-DAY badge", "download icon 32 (리스트 전용)"],
+    "periodFormat": "YYYY.MM.DD ~ YYYY.MM.DD",
+    "box": { "radius": 16, "border": 1, "paddingY": 16, "paddingX": 20 }
+  },
+
+  "button": {
+    "size": "Large",
+    "height": 60,
+    "radius": 8,
+    "label": { "size": 16, "weight": 700 },
+    "variants": {
+      "Primary":   { "bg": "#F14950", "border": null,      "label": "#FFFFFF" },
+      "Secondary": { "bg": "#FFFFFF", "border": "#C5C5C5", "label": "#2F2E2E" },
+      "Tertiary":  { "bg": "#009BFA", "border": null,      "label": "#FFFFFF" }
+    },
+    "conflict": "3. Button 문서는 Large를 56px로 표기하나 컴포넌트 실측은 60px"
+  },
+
+  "unresolved": [
+    "line-height — canon.typography 21토큰 전부 Auto. 웹/앱 구현 기준 없음",
+    "grid/컬럼 — Grid Style 0개, layoutGrid 0개. 좌우 20 마진은 13. Layout 문서와 실측이 일치하나 컬럼 정의는 없음",
+    "16/700 정본이 Display 3·Heading 3 둘 다라 버튼 라벨 매핑이 확정되지 않음",
+    "coupon COMPONENT_SET이 신규 GDS 페이지에 미편입 (레거시 페이지에만 존재)"
+  ]
+}

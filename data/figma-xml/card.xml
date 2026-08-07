@@ -1,0 +1,69 @@
+<!-- 범위: Card (카드) 42479:74478 중 «문서화 틀»과 «컴포넌트 변형» 부분만 담습니다.
+     저장소가 주장하는 것이 이 두 곳뿐이라 화면 목업(42722:29152)은 넣지 않았습니다.
+     get_metadata(fileKey=Gx9UHfQdhSdHzr1j8Kp1Ab, nodeId=42479:74478) 응답에서 그대로 옮겼습니다. -->
+<canvas id="42479:74478" name="Card (카드)" x="0" y="0" width="0" height="0">
+  <instance id="42554:48872" name="타이틀" x="0" y="0" width="1920" height="341" />
+  <frame id="42554:48873" name="G car Components_Card" x="0" y="341" width="1920" height="1080">
+    <rounded-rectangle id="42554:48874" name="Index bg" x="0" y="0" width="253" height="1080" />
+    <frame id="42554:48875" name="Template frame basic" x="0" y="0" width="1920" height="1080">
+      <instance id="42554:48876" name="Index" x="50" y="50" width="203" height="980" />
+      <frame id="42554:48877" name="Content area" x="308" y="50" width="1562" height="980">
+        <instance id="42554:48878" name="Contents" x="0" y="0" width="259" height="980" />
+        <frame id="42554:48879" name="Contents" x="488" y="0" width="1074" height="980">
+          <frame id="42554:48880" name="Discription area" x="0" y="0" width="1074" height="980">
+            <frame id="42554:48881" name="Discription" x="0" y="0" width="1074" height="980">
+              <rounded-rectangle id="42554:48882" name="Discription bg" x="0" y="0" width="1074" height="980" />
+              <frame id="42554:48883" name="Detail area" x="45" y="36" width="984" height="908">
+                <frame id="42554:48884" name="Detail frame" x="0" y="0" width="984" height="908">
+                  <frame id="42554:48885" name="Detail" x="0" y="0" width="984" height="908">
+                    <frame id="42554:48886" name="Detail" x="0" y="0" width="984" height="908">
+                      <frame id="42554:48887" name="Detail" x="0" y="0" width="984" height="433">
+                        <rounded-rectangle id="42554:48888" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42554:48889" name="Detail 1" x="15" y="15" width="954" height="58">
+                          <frame id="42554:48890" name="Title" x="0" y="0" width="954" height="58">
+                            <frame id="42554:48891" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42554:48892" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42554:48893" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                      <frame id="42554:48894" name="Detail 2" x="0" y="475" width="984" height="433">
+                        <rounded-rectangle id="42554:48895" name="Detail bg" x="0" y="0" width="984" height="433" />
+                        <frame id="42554:48896" name="Frame 1261159407" x="15" y="15" width="954" height="58">
+                          <frame id="42554:48897" name="Group 71916" x="0" y="0" width="954" height="58">
+                            <frame id="42554:48898" name="Group 71917" x="0" y="0" width="954" height="58">
+                              <rounded-rectangle id="42554:48899" name="Rectangle 1556" x="0" y="0" width="954" height="58" />
+                            </frame>
+                          </frame>
+                          <text id="42554:48900" name="-" x="473.5" y="16" width="7" height="26" />
+                        </frame>
+                      </frame>
+                    </frame>
+                  </frame>
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="42722:52947" name="mcard_set" x="-2046" y="0" width="1147" height="1272">
+    <symbol id="42722:52948" name="Property 1=mcard_LP_maxpoint" x="764" y="220" width="320" height="180" />
+    <symbol id="42722:52962" name="Property 1=mcard_LP_point" x="764" y="420" width="320" height="180" />
+    <symbol id="42722:52971" name="Property 1=mcard_LP_def" x="764" y="20" width="320" height="180" />
+    <symbol id="42722:52974" name="Property 1=mcard_T_pressed" x="392" y="1020" width="320" height="180" />
+    <symbol id="42722:52980" name="Property 1=mcard_T_def" x="392" y="20" width="320" height="180" />
+    <symbol id="42722:52983" name="Property 1=mcard_T_add" x="392" y="220" width="320" height="180" />
+    <symbol id="42722:52989" name="Property 1=mcard_T_point" x="392" y="420" width="320" height="180" />
+    <symbol id="42722:52997" name="Property 1=mcard_T_maxpoint" x="392" y="620" width="320" height="180" />
+    <symbol id="42722:53011" name="Property 1=mcard_T_number" x="392" y="820" width="320" height="180" />
+    <symbol id="42722:53036" name="Property 1=mcard_kt_maxpoint" x="20" y="620" width="320" height="180" />
+    <symbol id="42722:53051" name="Property 1=mcard_kt_number" x="20" y="820" width="320" height="180" />
+    <symbol id="42722:53075" name="Property 1=mcard_kt_point" x="20" y="420" width="320" height="180" />
+    <symbol id="42722:53084" name="Property 1=mcard_kt_add_pressed" x="20" y="1020" width="320" height="180" />
+    <symbol id="42722:53091" name="Property 1=mcard_kt_add" x="20" y="220" width="320" height="180" />
+    <symbol id="42722:53098" name="Property 1=mcard_kt_def" x="20" y="20" width="320" height="180" />
+  </frame>
+</canvas>

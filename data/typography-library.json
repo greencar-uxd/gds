@@ -1,0 +1,425 @@
+{
+  "$description": "차기 GDS 라이브러리에 넣을 텍스트 스타일 정의 21종. 저장소에서 먼저 만들고, 그다음 Figma 원본에 반영합니다.",
+  "generatedFrom": "tools/build-typography-library.js — data/foundation-data.json(원본 21단계) + data/type-decisions.json(확정 결정)",
+  "checkedAt": "2026-08-05",
+  "problem": "현재 라이브러리 텍스트 스타일은 5종뿐인데 원본은 21단계입니다. 5종은 스타일이 아니라 «그룹»이고 이름에 단계 번호가 빠져 있어서, 같은 이름으로 여러 개가 published 돼 값이 충돌합니다.",
+  "evidence": "그룹별 단계 수와 published 수가 맞아떨어집니다 — Display 3단계/3개 · Body 4단계/4개. Title 은 8단계인데 6개만 published 라 2개가 빠져 있습니다.",
+  "namingRule": "noto_sans/<group>/<step> — 굵기는 그룹이 결정하므로(Display·Heading=Bold, Title=Medium, Body·Caption=Regular) 이름에서 뺍니다. 대신 weight 로 싣습니다.",
+  "fixes": [
+    "boby → body 오타 정정 (GAP-3)",
+    "이름에 단계 번호를 넣어 21종을 고유하게 만듭니다 (GAP-1 · GAP-2)",
+    "행간은 Auto, 자간은 0 — 확정 결정 그대로"
+  ],
+  "groups": [
+    {
+      "group": "Display",
+      "slug": "display",
+      "steps": 3,
+      "weight": 700,
+      "weightWord": "bold",
+      "currentLibraryName": "noto_sans/display/bold",
+      "currentPublished": 3,
+      "missing": 0
+    },
+    {
+      "group": "Title",
+      "slug": "title",
+      "steps": 8,
+      "weight": 500,
+      "weightWord": "medium",
+      "currentLibraryName": "noto_sans/title/medium",
+      "currentPublished": 8,
+      "missing": 0,
+      "publishedKeys": [
+        "2da9bc7f26d7e36f41cea42711812e36d64902a5",
+        "04a10ac5d94978812986a9926e2332e6e726fbf2",
+        "6d8265deb6c0614c1522d368d507eb93e14be0a4",
+        "08662424e9467300ec9d5d04696ff68b27dcb11e",
+        "8d44cabc65a8d903582151ac1955113da6610aea",
+        "0e7b2790f4e4a18553819353596591ee9a56c56a",
+        "56ae789b3391c5a49884e277ee7eda3fcb13ad6e",
+        "178664baebb2282b87c6d31b13feaee1e250efaa"
+      ],
+      "correction": "처음에는 published 6개로 세어 «2개가 빠졌다»고 적었습니다(GAP-29). 다시 조회하니 style key 가 8개로 8단계와 맞아떨어집니다 — 빠진 것이 없습니다. 앞의 6은 검색 결과를 다 못 본 수였습니다. 2026-08-06 재조회, 두 번 다른 질의로 같은 키 8개 확인."
+    },
+    {
+      "group": "Heading",
+      "slug": "heading",
+      "steps": 4,
+      "weight": 700,
+      "weightWord": "bold",
+      "currentLibraryName": "noto_sans/heading/bold",
+      "currentPublished": null,
+      "missing": null
+    },
+    {
+      "group": "Body",
+      "slug": "body",
+      "steps": 4,
+      "weight": 400,
+      "weightWord": "regular",
+      "currentLibraryName": "noto_sans/boby/regular",
+      "currentPublished": 4,
+      "missing": 0,
+      "typo": "boby → body"
+    },
+    {
+      "group": "Caption",
+      "slug": "caption",
+      "steps": 2,
+      "weight": 400,
+      "weightWord": "regular",
+      "currentLibraryName": "noto_sans/caption/regular",
+      "currentPublished": null,
+      "missing": null
+    }
+  ],
+  "styles": [
+    {
+      "name": "noto_sans/display/1",
+      "canonToken": "Display 1",
+      "group": "Display",
+      "step": 1,
+      "fontFamily": "Noto Sans KR",
+      "size": 24,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Graphic"
+      ],
+      "currentLibraryName": "noto_sans/display/bold"
+    },
+    {
+      "name": "noto_sans/display/2",
+      "canonToken": "Display 2",
+      "group": "Display",
+      "step": 2,
+      "fontFamily": "Noto Sans KR",
+      "size": 20,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Graphic"
+      ],
+      "currentLibraryName": "noto_sans/display/bold"
+    },
+    {
+      "name": "noto_sans/display/3",
+      "canonToken": "Display 3",
+      "group": "Display",
+      "step": 3,
+      "fontFamily": "Noto Sans KR",
+      "size": 16,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Graphic"
+      ],
+      "currentLibraryName": "noto_sans/display/bold"
+    },
+    {
+      "name": "noto_sans/title/1",
+      "canonToken": "Title 1",
+      "group": "Title",
+      "step": 1,
+      "fontFamily": "Noto Sans KR",
+      "size": 24,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Time picker_number"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/2",
+      "canonToken": "Title 2",
+      "group": "Title",
+      "step": 2,
+      "fontFamily": "Noto Sans KR",
+      "size": 22,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Time picker_date"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/3",
+      "canonToken": "Title 3",
+      "group": "Title",
+      "step": 3,
+      "fontFamily": "Noto Sans KR",
+      "size": 20,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_title",
+        "Modal"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/4",
+      "canonToken": "Title 4",
+      "group": "Title",
+      "step": 4,
+      "fontFamily": "Noto Sans KR",
+      "size": 18,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_title"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/5",
+      "canonToken": "Title 5",
+      "group": "Title",
+      "step": 5,
+      "fontFamily": "Noto Sans KR",
+      "size": 16,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Top app bar",
+        "Button_label",
+        "Bottom sheet"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/6",
+      "canonToken": "Title 6",
+      "group": "Title",
+      "step": 6,
+      "fontFamily": "Noto Sans KR",
+      "size": 14,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_title"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/7",
+      "canonToken": "Title 7",
+      "group": "Title",
+      "step": 7,
+      "fontFamily": "Noto Sans KR",
+      "size": 12,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_title",
+        "Bottom navigation_label"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/title/8",
+      "canonToken": "Title 8",
+      "group": "Title",
+      "step": 8,
+      "fontFamily": "Noto Sans KR",
+      "size": 10,
+      "weight": 500,
+      "weightWord": "medium",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Badge_label"
+      ],
+      "currentLibraryName": "noto_sans/title/medium"
+    },
+    {
+      "name": "noto_sans/heading/1",
+      "canonToken": "Heading 1",
+      "group": "Heading",
+      "step": 1,
+      "fontFamily": "Noto Sans KR",
+      "size": 20,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_heading"
+      ],
+      "currentLibraryName": "noto_sans/heading/bold"
+    },
+    {
+      "name": "noto_sans/heading/2",
+      "canonToken": "Heading 2",
+      "group": "Heading",
+      "step": 2,
+      "fontFamily": "Noto Sans KR",
+      "size": 18,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_heading"
+      ],
+      "currentLibraryName": "noto_sans/heading/bold"
+    },
+    {
+      "name": "noto_sans/heading/3",
+      "canonToken": "Heading 3",
+      "group": "Heading",
+      "step": 3,
+      "fontFamily": "Noto Sans KR",
+      "size": 16,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_heading"
+      ],
+      "currentLibraryName": "noto_sans/heading/bold"
+    },
+    {
+      "name": "noto_sans/heading/4",
+      "canonToken": "Heading 4",
+      "group": "Heading",
+      "step": 4,
+      "fontFamily": "Noto Sans KR",
+      "size": 14,
+      "weight": 700,
+      "weightWord": "bold",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_heading"
+      ],
+      "currentLibraryName": "noto_sans/heading/bold"
+    },
+    {
+      "name": "noto_sans/body/1",
+      "canonToken": "Body 1",
+      "group": "Body",
+      "step": 1,
+      "fontFamily": "Noto Sans KR",
+      "size": 16,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_body"
+      ],
+      "currentLibraryName": "noto_sans/boby/regular"
+    },
+    {
+      "name": "noto_sans/body/2",
+      "canonToken": "Body 2",
+      "group": "Body",
+      "step": 2,
+      "fontFamily": "Noto Sans KR",
+      "size": 14,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_body"
+      ],
+      "currentLibraryName": "noto_sans/boby/regular"
+    },
+    {
+      "name": "noto_sans/body/3",
+      "canonToken": "Body 3",
+      "group": "Body",
+      "step": 3,
+      "fontFamily": "Noto Sans KR",
+      "size": 12,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_body"
+      ],
+      "currentLibraryName": "noto_sans/boby/regular"
+    },
+    {
+      "name": "noto_sans/body/4",
+      "canonToken": "Body 4",
+      "group": "Body",
+      "step": 4,
+      "fontFamily": "Noto Sans KR",
+      "size": 10,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_body"
+      ],
+      "currentLibraryName": "noto_sans/boby/regular"
+    },
+    {
+      "name": "noto_sans/caption/1",
+      "canonToken": "Caption 1",
+      "group": "Caption",
+      "step": 1,
+      "fontFamily": "Noto Sans KR",
+      "size": 12,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_caption"
+      ],
+      "currentLibraryName": "noto_sans/caption/regular"
+    },
+    {
+      "name": "noto_sans/caption/2",
+      "canonToken": "Caption 2",
+      "group": "Caption",
+      "step": 2,
+      "fontFamily": "Noto Sans KR",
+      "size": 10,
+      "weight": 400,
+      "weightWord": "regular",
+      "lineHeight": "Auto",
+      "letterSpacing": "0",
+      "usage": [
+        "Contents_caption"
+      ],
+      "currentLibraryName": "noto_sans/caption/regular"
+    }
+  ],
+  "counts": {
+    "groups": 5,
+    "styles": 21,
+    "canonSteps": 21
+  },
+  "$update": "2026-08-06 — Title published 수를 다시 셌습니다(6→8). GAP-29 의 «2개가 빠졌다»는 철회합니다."
+}

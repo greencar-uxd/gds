@@ -1,0 +1,828 @@
+{
+  "$description": "Accordion (아코디언) 페이지를 MCP get_metadata 로 직접 읽은 결과입니다. 노드 이름을 그대로 옮겼고 오타도 고치지 않았습니다.",
+  "source": {
+    "file": "Gx9UHfQdhSdHzr1j8Kp1Ab",
+    "node": "42066:25442",
+    "pageName": "Accordion (아코디언)",
+    "figmaStatus": "none",
+    "how": "mcp__Figma__get_metadata(fileKey, nodeId) → XML 저장 → tools/parse-figma-page.js"
+  },
+  "readAt": "2026-08-06",
+  "counts": {
+    "nodes": 233,
+    "byType": {
+      "canvas": 1,
+      "frame": 121,
+      "instance": 58,
+      "text": 52,
+      "vector": 1
+    },
+    "topLevel": 5,
+    "texts": 52,
+    "namedTexts": 52,
+    "templateStubs": 6,
+    "symbols": 0
+  },
+  "topFrames": [
+    {
+      "type": "frame",
+      "id": "42066:28374",
+      "name": "SCR_GA_CA_0103_M01: L.Point 회원가입",
+      "w": 375,
+      "h": 1351
+    },
+    {
+      "type": "text",
+      "id": "43077:13373",
+      "name": "이렇게 밑으로 내려서 볼 수 있는 형태를 아코디언",
+      "w": 300,
+      "h": 22
+    },
+    {
+      "type": "frame",
+      "id": "43079:6976",
+      "name": "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+      "w": 375,
+      "h": 1459
+    },
+    {
+      "type": "frame",
+      "id": "43882:23644",
+      "name": "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+      "w": 375,
+      "h": 812
+    },
+    {
+      "type": "frame",
+      "id": "44370:30114",
+      "name": "Components_Accordion",
+      "w": 1920,
+      "h": 3225.646484375
+    }
+  ],
+  "componentSets": null,
+  "templateStubs": {
+    "why": "문서화 템플릿을 복사만 하고 채우지 않은 자리입니다. «내용 있음»으로 세면 안 됩니다.",
+    "items": [
+      "Glossary",
+      "Reference",
+      "Style",
+      "Type",
+      "지카 디자인 시스템 문서화 템플릿"
+    ],
+    "count": 6
+  },
+  "texts": [
+    {
+      "id": "42066:28382",
+      "text": "G car 회원 약관",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "G Car 회원 약관",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28391",
+      "text": "마케팅 정보 수신 동의",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28395",
+      "text": "전체 동의 시 1,000p 및 혜택 제공",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 3688",
+        "Frame 3471"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28402",
+      "text": "동의를 거부할 수 있으며, 거부시에는 신규 서비스 및 이벤트 혜택 안내를 받으실 수 없습니다.",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28404",
+      "text": "이용목적",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42066:28405",
+      "text": "G car 신규 서비스/상품 및 이벤트 안내",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2776"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "42066:28407",
+      "text": "수집항목",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2775"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42066:28408",
+      "text": "성명, 이메일, 휴대폰 번호",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2775"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "42066:28410",
+      "text": "보유기간",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2774"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42066:28411",
+      "text": "회원 탈퇴 시 또는 본인의 수집/이용 동의 철회 요청 시",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 2813",
+        "Frame 2774"
+      ],
+      "x": 0,
+      "y": 24
+    },
+    {
+      "id": "42066:28413",
+      "text": "전체 동의 시 2,000p 및 혜택 제공",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 716138"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28417",
+      "text": "전체 동의 시 1,000p 및 혜택 제공",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "마케팅 정보 수신 동의",
+        "마케팅 정보 수신 동의",
+        "Frame 3687",
+        "Frame 3471"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28427",
+      "text": "선택형 제3자 제공 동의",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "선택형 제3자 제공 동의",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28431",
+      "text": "(선택)",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "선택형 제3자 제공 동의",
+        "선택약관",
+        "Frame 3126"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "42066:28432",
+      "text": "개인정보 제3자 제공 동의",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "선택형 제3자 제공 동의",
+        "선택약관",
+        "Frame 3126"
+      ],
+      "x": 45,
+      "y": 0
+    },
+    {
+      "id": "42066:28447",
+      "text": "L.POINT 회원 약관",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "L.Point 회원약관",
+        "앨포인트회원약관",
+        "Frame 3479",
+        "그린카 회원 약관"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "42066:28455",
+      "text": "전체 동의 시 할인 혜택 알림 제공",
+      "in": [
+        "SCR_GA_CA_0103_M01: L.Point 회원가입",
+        "Frame 716139",
+        "G car 회원가입",
+        "L.Point 회원약관",
+        "앨포인트회원약관",
+        "Frame 3479",
+        "Frame 3480",
+        "전체 동의 혜택 제공",
+        "Frame 2764"
+      ],
+      "x": 32,
+      "y": 0
+    },
+    {
+      "id": "43077:13373",
+      "text": "이렇게 밑으로 내려서 볼 수 있는 형태를 아코디언",
+      "in": [],
+      "x": -245,
+      "y": 645
+    },
+    {
+      "id": "43079:6982",
+      "text": "G car Biz 소속원 계정",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "그린카계정",
+        "Group 2856",
+        "Group 2709",
+        "Frame 3654",
+        "Frame 3651"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:6985",
+      "text": "오늘 10:10 ~ 12:10",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "그린카계정",
+        "Group 2856",
+        "Group 2709",
+        "Frame 3654",
+        "Frame 3653",
+        "Frame 3652"
+      ],
+      "x": 0,
+      "y": 10
+    },
+    {
+      "id": "43079:6993",
+      "text": "개인 계정",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "그린카계정",
+        "Group 2856",
+        "Group 2709",
+        "Frame 3654",
+        "Frame 3651"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:6996",
+      "text": "오늘 10:10 ~ 12:10",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "그린카계정",
+        "Group 2856",
+        "Group 2709",
+        "Frame 3654",
+        "Frame 3653",
+        "Frame 3652"
+      ],
+      "x": 0,
+      "y": 10
+    },
+    {
+      "id": "43079:7006",
+      "text": "혜택 알림",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "Frame 71935",
+        "Frame 71589",
+        "Frame 2981"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43079:7007",
+      "text": "차량내 흡연, 반려동물 캐리어 미탑승 적발 제3자 및 동반 운전자 단독 운행 대여기간 내 자동차 사고/파손 미신고",
+      "in": [
+        "SCR_GA_CI_0201_M01_내정보_설정(아코디언 펼쳤을 경우)",
+        "Frame 71935",
+        "Frame 71589",
+        "Frame 2981"
+      ],
+      "x": 0,
+      "y": 32
+    },
+    {
+      "id": "43882:23646",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스"
+      ],
+      "x": 20,
+      "y": 154
+    },
+    {
+      "id": "43882:23647",
+      "text": "버튼명",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스"
+      ],
+      "x": 20,
+      "y": 419
+    },
+    {
+      "id": "43882:23655",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "4",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:23660",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "4",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43882:23662",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "4",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43882:23671",
+      "text": "주차장 이용 시 주의사항",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "4",
+        "Frame 1597912562",
+        "Frame 1597912563",
+        "Frame 716136"
+      ],
+      "x": 20,
+      "y": 0
+    },
+    {
+      "id": "43882:23677",
+      "text": "반납 장소",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "223",
+        "Group 71652",
+        "대여유형",
+        "L text"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "43882:23682",
+      "text": "한남역 1번 출구",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "223",
+        "Group 71652",
+        "대여위치",
+        "Frame 3176"
+      ],
+      "x": 24,
+      "y": 0
+    },
+    {
+      "id": "43882:23684",
+      "text": "대여 위치",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "223",
+        "Group 71652",
+        "대여위치",
+        "Frame 716136"
+      ],
+      "x": 115,
+      "y": 0
+    },
+    {
+      "id": "43882:23690",
+      "text": "주차장이 만차인가요?",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "223",
+        "Frame 716137"
+      ],
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "43882:23694",
+      "text": "고객센터",
+      "in": [
+        "SCR_GA_CT_0101_M01_메인_차량제어 편도 그린존/프리존 케이스",
+        "223",
+        "Frame 716137",
+        "Frame 716138",
+        "Frame 716136"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30128",
+      "text": "Glossary",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30129",
+      "text": "지카 디자인 시스템 문서화 템플릿",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 249,
+      "y": 7
+    },
+    {
+      "id": "44370:30132",
+      "text": "[정의]",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30133",
+      "text": "Accordion (아코디언)은",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44370:30137",
+      "text": "Selection box (셀렉션 박스)",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227729",
+        "text"
+      ],
+      "x": 8,
+      "y": 4
+    },
+    {
+      "id": "44370:30142",
+      "text": "Type",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30143",
+      "text": "Reference",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44370:30146",
+      "text": "[종류]",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30147",
+      "text": "Tip (팁)은",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 29
+    },
+    {
+      "id": "44370:30152",
+      "text": "➊ Accent tip (ㅇㅇ) > 상단 헤더 하단에 있는 버전 > 부모인 개체 상단에 같이 떠있는 버전",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:30154",
+      "text": "➋ Accent box tip? (ㅇㅇ) > 헤더 하단에 배치되어있지만 타이틀+박스인 버전",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:30156",
+      "text": "➌ Info tip (인포 팁) > 텍스트 + 아이콘(이 아이콘을 누르면 팁이 나오는 형태) 버전",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734",
+        "List text",
+        "Frame 2147227913",
+        "Body area",
+        "Body Text"
+      ],
+      "x": 24,
+      "y": 20
+    },
+    {
+      "id": "44370:30164",
+      "text": "종류 (2)",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Frame 2147227936",
+        "Group 2147227710",
+        "Frame 2147227743",
+        "Frame 2147227742",
+        "Frame 2147227739",
+        "Tag"
+      ],
+      "x": 30,
+      "y": 7
+    },
+    {
+      "id": "44370:30171",
+      "text": "세차/정비 직후라면 이전 대여자 주차위치와 상이할 수 있어요.",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Description area",
+        "Tip"
+      ],
+      "x": 18,
+      "y": 0
+    },
+    {
+      "id": "44370:30175",
+      "text": "Style",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "44370:30176",
+      "text": "Reference",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Title+ Description"
+      ],
+      "x": 175,
+      "y": 4.5
+    },
+    {
+      "id": "44370:30179",
+      "text": "Icon checkbox (아이콘 체크박스)의 위계(Primary·Secondary)별 색상 스타일과 상태값(Off·On)을 정의합니다. * 단, Disabled 상태의 색상은 위계(Primary·Secondary)에 관계없이 동일하게 적용합니다. (아래항목도 동일)",
+      "in": [
+        "Components_Accordion",
+        "Components_Accordion",
+        "Contents",
+        "Contents area",
+        "Contents",
+        "Text area",
+        "Contents text",
+        "Frame 2147227734"
+      ],
+      "x": 0,
+      "y": 0
+    }
+  ]
+}
