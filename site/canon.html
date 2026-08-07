@@ -662,7 +662,14 @@ function pr1(){
     <div><b>${K.staleColorNames}</b><span>개명 전 색 이름</span></div>
     <div><b>${K.carryOverMissing}</b><span>GAP 에 없는 것</span></div>
   </div>
-  <div class="note warn"><p><b>merge 판단.</b> ${esc(P.mergeAdvice)}</p></div>
+  ${P.mergeImpact?`<div class="stat" style="margin-top:-8px">
+    <div><b>+${P.mergeImpact.insertions}</b><span>추가되는 줄</span></div>
+    <div><b>${P.mergeImpact.deletions}</b><span>지워지는 줄</span></div>
+    <div><b>${P.mergeImpact.conflicts.length}</b><span>충돌 파일</span></div>
+    <div><b>${P.mergeImpact.checksAfterMerge}</b><span>병합 뒤 검사</span></div>
+  </div>`:''}
+  <div class="note"><p><b>merge 판단.</b> ${esc(P.mergeAdvice)}</p></div>
+  ${P.mergeImpact?`<div class="note warn"><p><b>정정.</b> ${esc(P.mergeImpact.note)}</p></div>`:''}
   ${P.colors.staleCount?`<h3>옮길 때 바꿔야 할 이름 ${P.colors.staleCount}종</h3>
   <table class="ctr"><thead><tr><th>PR 표기</th><th>지금 이름</th><th>값</th></tr></thead><tbody>
   ${P.colors.rows.filter(r=>!r.stillValid).map(r=>`<tr><td><code>${esc(r.citedName)}</code></td>
