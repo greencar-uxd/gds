@@ -1,0 +1,95 @@
+<!-- 범위: Bottom sheet (바텀시트) 페이지의 Structure 절(43214:28439)만 담습니다.
+     PR #1 이 주장하는 구조·간격 수치가 원본과 맞는지 대조하는 데만 씁니다 — 페이지 전체가 아닙니다.
+     get_metadata(fileKey=Gx9UHfQdhSdHzr1j8Kp1Ab, nodeId=43214:28439) 응답에서 그대로 옮겼습니다. -->
+<frame id="43214:28439" name="Contents" x="0" y="2530" width="1545" height="1523">
+  <frame id="43214:28440" name="Text area" x="0" y="50" width="1545" height="235">
+    <frame id="43214:28441" name="Title+ Description" x="0" y="0" width="143" height="27">
+      <text id="43214:28442" name="Structure" x="0" y="0" width="143" height="27" />
+      <text id="43214:28443" name="Reference" x="175" y="4.5" width="196" height="18" hidden="true" />
+    </frame>
+    <frame id="43214:28444" name="Contents text" x="0" y="51" width="1545" height="184">
+      <frame id="43214:28445" name="Frame 2147227734" x="0" y="20" width="914" height="23">
+        <text id="43214:28447" name="Bottom Sheet (바텀시트)는 Top (상단) · Body (중단) · Action (하단)으로 구성됩니다. Top (상단)과 Action (하단)은 케이스에 따라 생략될 수 있습니다." x="0" y="0" width="914" height="23" />
+      </frame>
+      <frame id="43912:24418" name="List text" x="0" y="53" width="1525" height="111">
+        <frame id="43912:24419" name="Frame 2147227913" x="24" y="24" width="1477" height="63">
+          <frame id="43912:24420" name="Body area" x="0" y="0" width="1477" height="63">
+            <frame id="43912:24421" name="Body Text" x="0" y="0" width="478.3333435058594" height="63">
+              <text id="43912:24422" name="➊ Top (상단)" x="24" y="20" width="420" height="23" />
+            </frame>
+            <frame id="43912:24430" name="Body Text" x="499.3333435058594" y="0" width="478.33331298828125" height="63">
+              <text id="43912:24431" name="➋ Body (중단)" x="24" y="20" width="420" height="23" />
+            </frame>
+            <frame id="43912:24423" name="Body Text" x="998.6666259765625" y="0" width="478.33331298828125" height="63">
+              <text id="43912:24424" name="➌ Action (하단)" x="24" y="20" width="420" height="23" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <frame id="43214:28448" name="Description area" x="0" y="309" width="1545" height="1164">
+    <frame id="43912:22515" name="Example" x="585" y="219" width="375" height="812">
+      <instance id="43912:22516" name="Status Bar iOS iPhone/Light" x="0" y="0" width="375" height="44" />
+      <instance id="43912:22517" name="bottom_sheet_button" x="0" y="547" width="375" height="265" />
+      <frame id="43912:22518" name="Group 2147227891" x="0" y="547" width="375" height="265">
+        <frame id="43912:22519" name="Spacing" x="0" y="788" width="375" height="24" />
+        <frame id="43912:22520" name="Spacing" x="0" y="696" width="375" height="32" />
+        <frame id="43912:22521" name="Spacing" x="0" y="603" width="375" height="24" />
+        <frame id="43912:22522" name="Spacing" x="355" y="547" width="20" height="265">
+          <frame id="43912:22523" name="Group 2147227721" x="-11" y="-28" width="42" height="156" />
+          <frame id="43912:22544" name="Group 2147227722" x="-11" y="92" width="42" height="156" />
+          <frame id="43912:22565" name="Group 2147227723" x="-11" y="212" width="42" height="156" />
+        </frame>
+        <frame id="43912:22586" name="Spacing" x="20" y="547" width="20" height="265">
+          <frame id="43912:22587" name="Group 2147227721" x="-11" y="-28" width="42" height="156" />
+          <frame id="43912:22608" name="Group 2147227722" x="-11" y="92" width="42" height="156" />
+          <frame id="43912:22629" name="Group 2147227723" x="-11" y="212" width="42" height="156" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="43214:28583" name="Frame 2147227729" x="371" y="782" width="224" height="26">
+      <frame id="43214:28584" name="text" x="0" y="0" width="69" height="26">
+        <text id="43214:28585" name="Top (상단)" x="8" y="4" width="53" height="18" />
+      </frame>
+      <vector id="43214:28586" name="Vector 368" x="69" y="12.999999046325684" width="155" height="0.0000018483565327187534" />
+    </frame>
+    <frame id="43214:28587" name="Frame 2147227740" x="371" y="871" width="224" height="26">
+      <frame id="43214:28588" name="text" x="0" y="0" width="77" height="26">
+        <text id="43214:28589" name="Body (중단)" x="8" y="4" width="61" height="18" />
+      </frame>
+      <vector id="43214:28590" name="Vector 368" x="77" y="12.999999046325684" width="147" height="0.0000017529573597130366" />
+    </frame>
+    <frame id="43214:28591" name="Frame 2147227741" x="363" y="967" width="254" height="26">
+      <frame id="43214:28592" name="text" x="0" y="0" width="84" height="26">
+        <text id="43214:28593" name="Action (하단)" x="8" y="4" width="68" height="18" />
+      </frame>
+      <vector id="43214:28594" name="Vector 368" x="84" y="12.999999046325684" width="170" height="0.0000020272300389478914" />
+    </frame>
+    <instance id="43214:28595" name="Spacing" x="970" y="823" width="33.4554443359375" height="22.910648345947266" />
+    <instance id="43214:28596" name="Spacing" x="970" y="1012" width="33.4554443359375" height="22.910648345947266" />
+    <instance id="43214:28597" name="Spacing" x="939" y="1047" width="23" height="32.4554443359375" />
+    <frame id="43214:28598" name="Spacing" x="970" y="919" width="33.4554443359375" height="31.910892486572266">
+      <frame id="43214:28599" name="Tag" x="0" y="0" width="4.455445766448975" height="31.910892486572266">
+        <frame id="43214:28600" name="line" x="4.455445766448975" y="31.910892486572266" width="4.455445766448975" height="31.910892486572266">
+          <ellipse id="43214:28601" name="Ellipse 546" x="0" y="0" width="4.455445766448975" height="4.455445766448975" />
+          <vector id="43214:28602" name="Vector 367" x="2.227722406387329" y="27.455446243286133" width="0.0000010053622645500582" height="23" />
+          <ellipse id="43214:28603" name="Ellipse 545" x="0" y="27.455446243286133" width="4.455445766448975" height="4.455445766448975" />
+        </frame>
+      </frame>
+      <frame id="43214:28604" name="text" x="10.455446243286133" y="4.955446243286133" width="23" height="22">
+        <text id="43214:28605" name="32" x="4" y="2" width="15" height="18" />
+      </frame>
+    </frame>
+    <frame id="43214:28606" name="Frame 2147227743" x="674" y="83" width="197" height="74">
+      <frame id="43214:28607" name="Frame 2147227742" x="13" y="0" width="171" height="32">
+        <frame id="43214:28608" name="Frame 2147227739" x="0" y="0" width="171" height="32">
+          <frame id="43214:28609" name="Tag" x="0" y="0" width="171" height="32">
+            <text id="43214:28610" name="구조 &amp; 스페이싱 값" x="30" y="7" width="111" height="18" />
+          </frame>
+        </frame>
+      </frame>
+      <text id="43214:28611" name="Elevation_Bottom sheet 사용" x="0" y="51" width="197" height="23" />
+    </frame>
+  </frame>
+</frame>
