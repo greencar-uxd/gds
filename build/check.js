@@ -1484,6 +1484,67 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     if (WP && NS) {
       // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      // ── 색 축약 표기 대조표 (GAP-26)
+      const SH = VIEW.pages && VIEW.pages.colorShorthand;
+      ok('색 축약 대조표가 있음', !!SH && SH.rows.length > 0);
+      if (SH) {
+        // 축약 → 토큰이 실제로 팔레트에 있는 이름인가
+        ok('이은 토큰이 전부 팔레트에 실재',
+          SH.rows.filter(r => r.resolved).every(r => VIEW.colors.some(c => c.name === r.token)),
+          SH.rows.filter(r => r.resolved && !VIEW.colors.some(c => c.name === r.token)).map(r => r.token).join(', '));
+        ok('이은 값이 팔레트 값과 같음',
+          SH.rows.filter(r => r.resolved).every(r => {
+            const c = VIEW.colors.find(x => x.name === r.token);
+            return c && c.hex.toUpperCase() === String(r.hex).toUpperCase();
+          }));
+        // «앞에 0 을 붙인다» 규칙을 실제로 지켰는가 — 지어낸 매핑이 없어야 합니다.
+        ok('두 자리→세 자리가 규칙 그대로',
+          SH.rows.filter(r => r.resolved).every(r => {
+            const two = (r.found.match(/(\d{2})$/) || [])[1];
+            return two && new RegExp(`0${two}$`).test(r.token);
+          }));
+        ok('못 이은 표기를 지우지 않고 셈',
+          SH.counts.unresolved === SH.unresolved.items.length
+          && SH.counts.distinct === SH.rows.length);
+        // 원본 문장을 고치지 않았는가 — 원문 파일에 축약이 그대로 남아 있어야 합니다.
+        ok('원본 문장의 축약이 그대로 남아 있음', (() => {
+          const dir = path.join(ROOT, 'data', 'figma-pages');
+          const all = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+            .map(f => fs.readFileSync(path.join(dir, f), 'utf8')).join('\n');
+          const fromPages = SH.rows.filter(r => r.where.some(w => w.startsWith('figma-pages/')));
+          return fromPages.length > 0 && fromPages.every(r => all.includes(r.found));
+        })());
+        ok('같은 토큰의 표기 갈림이 기록됨',
+          SH.multiSpelling.count === SH.multiSpelling.items.length
+          && SH.multiSpelling.items.every(m => m.spellings.length > 1));
+        const g26 = IT.find(i => i.id === 'GAP-26');
+        ok('GAP-26 이 해소로 기록되고 수치가 일치',
+          !!g26 && g26.status === 'resolved'
+          && new RegExp(`축약 ${SH.counts.distinct}종\\(${SH.counts.occurrences}건\\)`).test(g26.evidence));
+        const htmlS2 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+        ok('대조표가 Color 페이지에 실림', htmlS2.includes('본문 표기 ↔ 토큰 이름'));
+      }
+
+      // ── Title published 재조회 (GAP-29 철회)
+      {
+        const TL = VIEW.typeLib;
+        const title = TL && TL.groups.find(x => x.group === 'Title');
+        ok('Title published 가 8단계와 맞음',
+          !!title && title.currentPublished === title.steps && title.missing === 0,
+          title && `${title.currentPublished}/${title.steps}`);
+        ok('Title style key 8개가 중복 없이 실림',
+          !!title && Array.isArray(title.publishedKeys)
+          && title.publishedKeys.length === 8
+          && new Set(title.publishedKeys).size === 8
+          && title.publishedKeys.every(k => /^[0-9a-f]{40}$/.test(k)));
+        const g29 = IT.find(i => i.id === 'GAP-29');
+        ok('GAP-29 가 철회로 기록됨',
+          !!g29 && g29.status === 'resolved' && !!g29.retracted
+          && /6/.test(g29.retracted.claim) && /철회/.test(g29.resolution));
+        ok('철회 사유가 «부분만 보고 셌다»로 남음',
+          !!g29 && /다 보지 않고/.test(g29.retracted.why));
+      }
+
       // ── 스케일 밖 간격 값 가르기 (GAP-30)
       const OL = VIEW.pages && VIEW.pages.spacingOutliers;
       ok('스케일 밖 값을 가른 결과가 있음', !!OL);

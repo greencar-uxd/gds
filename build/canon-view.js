@@ -168,6 +168,7 @@ module.exports = {
       notStarted: load('not-started-pages.json'),
       verify: load('transcribed-verify.json'),
       spacingOutliers: load('spacing-outliers.json'),
+      colorShorthand: load('color-shorthand.json'),
       readSlugs: read.map(f => f.replace(/\.json$/, '')),
     };
   })(),
