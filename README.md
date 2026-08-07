@@ -32,6 +32,8 @@
 - 원본 `.fig` 자체의 오류는 **지금은 고치지 않고 기록**합니다
   (`data/color-decisions.json` 의 `sourceDefects`, 노드 ID 포함). ④ 단계에서 함께 반영합니다.
 - Figma 는 **현재 읽기 전용으로만** 씁니다 — 변수 조회, 스크린샷, 변경 감지.
+  **권한이 없어서가 아니라 그렇게 정했기 때문입니다.** GDS 파일이 있는 Greencar 플랜은 `Full` 시트입니다
+  (`data/figma-access.json`, 2026-08-06 `whoami` 확인). 원본에 쓰는 것은 ④ 단계의 일입니다.
 
 ---
 
@@ -442,6 +444,10 @@ tools/figdec/     자체 제작 .fig 디코더 (외부 의존성 0)
   census_radius.js  반경 전역 census
 
 data/             추출된 측정 데이터 (커밋 대상)
+  foundation-data.json         .fig 실측 + 정본(canon)
+  component-bottom-sheet.json  Bottom sheet · coupon · Large 버튼 실측 스펙 (Figma MCP 조회)
+  figma-xml/                   get_metadata 응답 원본 — 손으로 옮겨 적지 않기 위한 근거
+  figma-pages/                 페이지 파서 산출물 (tools/parse-figma-page.js)
 site/canon.html     사이트 템플릿 — __DATA__ 자리에 JSON 이 주입됩니다
 build/canon-view.js 원본(GDS 라이브러리) + 확정 결정을 합친 단일 뷰
 build/site.js       canon.html + data → dist/index.html
