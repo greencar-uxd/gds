@@ -6,6 +6,8 @@
  *   PR #1 은 8/5 자 브랜치인데 그 뒤로 main 이 크게 움직였습니다.
  *   merge 여부는 사람이 정할 일이고, 저장소가 할 수 있는 것은
  *   «그 안의 주장이 지금도 맞는가»를 기계로 가려 두는 것입니다.
+ *   2026-08-06 강민관 판단으로 merge 됐습니다(78434c1). merge 뒤에는 «들어왔는가»를 함께 봅니다 —
+ *   대조 기록은 지우지 않습니다. 무엇을 보고 merge 했는지가 남아야 합니다.
  *
  * 정정 (2026-08-06):
  *   처음에 «merge 하면 12만 줄이 되돌아간다»고 적었습니다. 틀렸습니다.
@@ -124,8 +126,24 @@ const carried = [
 ];
 for (const c of carried) add('carry-over', c.what, c.inGaps, c.inGaps ? '이미 GAP 에 있음' : 'GAP 에 없음 — 옮겨 적을 자리');
 
+/** merge 뒤에는 «들어왔는가»를 대신 봅니다 — 대조는 끝났고 이제 남는 건 반영 여부입니다. */
+const MERGED = fs.existsSync(path.join(ROOT, 'data', 'component-bottom-sheet.json'));
+if (MERGED) {
+  const checkSrc = fs.readFileSync(path.join(ROOT, 'build', 'check.js'), 'utf8');
+  add('merged', 'PR 이 넣은 스펙 파일이 저장소에 있음', MERGED, 'data/component-bottom-sheet.json');
+  add('merged', 'PR 이 넣은 문서가 저장소에 있음',
+    fs.existsSync(path.join(ROOT, 'docs', 'GDS-bottomsheet-component-20260805.md')));
+  add('merged', 'PR 이 넣은 배포용 산출물이 저장소에 있음',
+    fs.existsSync(path.join(ROOT, 'docs', 'assets', 'braze-bottom-sheet-notice.html'))
+    && fs.existsSync(path.join(ROOT, 'docs', 'assets', 'bottom-sheet-spacing.png')));
+  add('merged', 'PR 이 넣은 검사 블록이 살아 있음',
+    checkSrc.includes('component-bottom-sheet') && /베이스 HTML/.test(checkSrc));
+}
+
 const out = {
-  $description: 'PR #1(docs/bottom-sheet-component-20260805)의 주장을 지금 저장소와 대조한 결과입니다. PR 을 merge 하거나 닫지 않습니다.',
+  $description: MERGED
+    ? 'PR #1(docs/bottom-sheet-component-20260805)을 지금 저장소와 대조한 기록입니다. 2026-08-06 merge 되어 닫혔습니다.'
+    : 'PR #1(docs/bottom-sheet-component-20260805)의 주장을 지금 저장소와 대조한 결과입니다. PR 을 merge 하거나 닫지 않습니다.',
   why: 'PR 이 8/5 자라 그 뒤 바뀐 것과 어긋날 수 있습니다. merge 여부는 사람이 정하고, '
     + '저장소는 «그 안의 어느 주장이 지금도 맞는가»만 기계로 가려 둡니다.',
   rule: [
@@ -135,6 +153,17 @@ const out = {
   ],
   auditedAt: '2026-08-06',
   branch: 'docs/bottom-sheet-component-20260805',
+  state: MERGED ? 'merged' : 'open',
+  merged: MERGED ? {
+    at: '2026-08-06',
+    mergeCommit: '78434c1',
+    conflictResolution: 'README.md 폴더 구조 블록 한 곳. main 쪽(site/canon.html · build/canon-view.js)을 취했습니다 — '
+      + '브랜치 쪽은 site/template.html 시절 표기라 지금은 맞지 않습니다.',
+    dropped: '브랜치가 README 의 data/ 목록에 더하려던 두 줄(foundation-data.json · component-bottom-sheet.json)은 '
+      + '충돌 해소 중 빠졌습니다. 웹 편집기에 한글을 넣으니 글자가 누락돼(«실측»·«정본» 소실) 되돌렸습니다. '
+      + '파일은 전부 들어왔고 README 목록 표기만 빠진 것이라 기능에는 영향이 없습니다. [남은 일]',
+    branchDeleted: true,
+  } : null,
   mergeAdvice: null,
   mergeImpact: null,
   colors: { what: '개명 뒤 이름이 어긋난 곳', rows: colorRows, staleCount: stale.length },
@@ -161,13 +190,17 @@ out.mergeImpact = {
   note: '세 점 diff(main...FETCH_HEAD) 기준입니다. 두 점 diff 로 보면 main 에만 있는 것이 '
     + '전부 삭제로 보이지만 merge 는 그런 일을 하지 않습니다. 실제로 병합해 검사를 돌려 확인했습니다.',
 };
-out.mergeAdvice = `merge 해도 되돌아가는 것은 없습니다 — 6파일 ${out.mergeImpact.insertions}줄 추가, 삭제 0. `
-  + `README.md 한 곳만 충돌하고, 병합 뒤 검사는 ${out.mergeImpact.checksAfterMerge}개 전부 통과합니다(직접 병합해 돌려 봤습니다). `
-  + `안의 값도 대부분 지금도 맞습니다(대조 ${out.counts.passed}/${out.counts.checks} 통과). `
-  + `색 이름 ${stale.length}종만 개명 전 표기라 옮길 때 바꿔야 합니다. merge·close 는 사람이 정합니다.`;
+out.mergeAdvice = MERGED
+  ? `merge 완료 — 6파일 ${out.mergeImpact.insertions}줄 추가, 삭제 0. README.md 한 곳만 충돌했고 main 쪽을 취했습니다. `
+    + `대조는 ${out.counts.passed}/${out.counts.checks} 통과였고, 색 이름 ${stale.length}종은 개명 전 표기라 `
+    + `스펙 파일 안에 그대로 남아 있습니다 — 값은 같으니 급하지 않지만 언젠가 손봐야 합니다. 브랜치는 삭제했습니다.`
+  : `merge 해도 되돌아가는 것은 없습니다 — 6파일 ${out.mergeImpact.insertions}줄 추가, 삭제 0. `
+    + `README.md 한 곳만 충돌하고, 병합 뒤 검사는 ${out.mergeImpact.checksAfterMerge}개 전부 통과합니다(직접 병합해 돌려 봤습니다). `
+    + `안의 값도 대부분 지금도 맞습니다(대조 ${out.counts.passed}/${out.counts.checks} 통과). `
+    + `색 이름 ${stale.length}종만 개명 전 표기라 옮길 때 바꿔야 합니다. merge·close 는 사람이 정합니다.`;
 
 fs.writeFileSync(path.join(ROOT, 'data', 'pr1-audit.json'), JSON.stringify(out, null, 2) + '\n');
-console.log('PR #1 대조 → data/pr1-audit.json');
+console.log(`PR #1 대조 → data/pr1-audit.json  [${out.state}]`);
 console.log(`  merge 영향 — ${out.mergeImpact.filesChanged}파일 +${out.mergeImpact.insertions} / -${out.mergeImpact.deletions} · 충돌 ${out.mergeImpact.conflicts.join(', ')}`);
 console.log(`  검사 ${out.counts.passed}/${out.counts.checks} 통과 · 개명 전 색 이름 ${stale.length}종 · GAP 에 없는 것 ${out.counts.carryOverMissing}건`);
 for (const f of findings) console.log(`    ${f.ok ? 'OK  ' : 'CHECK'} ${f.what}${f.detail ? ' — ' + f.detail : ''}`);
