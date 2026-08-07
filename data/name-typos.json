@@ -1,0 +1,156 @@
+{
+  "$description": "GAP-19 — 원본 이름의 영문 오타. 저장소는 바른 표기를 쓰고 원본 표기를 나란히 남깁니다.",
+  "why": "오타 «판정»은 사람이 하고, «어디에 있고 지금도 있는가»는 기계가 확인합니다. 손으로 적은 목록만 두면 원본이 고쳐져도 낡은 채로 남습니다.",
+  "rule": [
+    "짝(found → should)은 사람이 적습니다. 사전으로 자동 판별하지 않습니다.",
+    "적은 found 가 원본 데이터에 실재하는지는 기계가 확인합니다 — 사라지면 검사가 실패합니다.",
+    "짝을 적지 않은 이름은 건드리지 않습니다. 지어내지 않습니다.",
+    "원본을 고치지 않습니다. 저장소가 바른 표기를 쓰고 원본 표기를 함께 실을 뿐입니다."
+  ],
+  "builtAt": "2026-08-06",
+  "correction": "GAP-19 정리 때 «Getting stared» 를 «근거 노드 ID 가 없다»며 뺐습니다. 근거는 data/foundation-data.json 페이지 목록(42066:27863)에 처음부터 있었고, gds-structure.json 만 보고 없다고 결론지은 것이 잘못이었습니다. 되살렸습니다.",
+  "items": [
+    {
+      "found": "Getting stared",
+      "should": "Getting started",
+      "what": "페이지 제목",
+      "foundInPages": [
+        {
+          "node": "42066:27863",
+          "name": "Getting stared (시작하기) ✅",
+          "mark": "done"
+        }
+      ],
+      "foundInToc": [],
+      "foundInBody": [],
+      "stillPresent": true,
+      "evidence": "data/foundation-data.json › pages 42066:27863"
+    },
+    {
+      "found": "Bage",
+      "should": "Badge",
+      "what": "페이지 제목",
+      "foundInPages": [
+        {
+          "node": "42441:14115",
+          "name": "Bage (뱃지) 🚧",
+          "mark": "wip"
+        }
+      ],
+      "foundInToc": [
+        "Bage"
+      ],
+      "foundInBody": [
+        {
+          "page": "badge",
+          "node": "43207:57334",
+          "text": "Bage (뱃지)는"
+        },
+        {
+          "page": "badge",
+          "node": "43207:57347",
+          "text": "Bage (뱃지)"
+        }
+      ],
+      "stillPresent": true,
+      "evidence": "data/foundation-data.json › pages 42441:14115"
+    },
+    {
+      "found": "Pasing",
+      "should": "Paging",
+      "what": "페이지 제목",
+      "foundInPages": [
+        {
+          "node": "43077:20275",
+          "name": "Pasing (페이징) 🚧",
+          "mark": "wip"
+        }
+      ],
+      "foundInToc": [
+        "Pasing"
+      ],
+      "foundInBody": [
+        {
+          "page": "bottom-sheet",
+          "node": "43207:45708",
+          "text": "\bBottom Sheet (바텀시트)는 전체 화면으로 넘어가는 Pasing (페이징) 없이, 현재 화면 안에"
+        },
+        {
+          "page": "components-overview",
+          "node": "43185:52140",
+          "text": "Pasing (페이징)"
+        },
+        {
+          "page": "paging",
+          "node": "43077:20279",
+          "text": "Pasing (페이징)"
+        }
+      ],
+      "stillPresent": true,
+      "evidence": "data/foundation-data.json › pages 43077:20275"
+    },
+    {
+      "found": "Tap (탭)",
+      "should": "Tab (탭)",
+      "what": "페이지 제목 — Tap app bar 의 Tap 과는 다른 낱말입니다",
+      "foundInPages": [
+        {
+          "node": "42420:57418",
+          "name": "Tap (탭) 🚧",
+          "mark": "wip"
+        }
+      ],
+      "foundInToc": [],
+      "foundInBody": [
+        {
+          "page": "components-overview",
+          "node": "43185:52219",
+          "text": "Tap (탭)"
+        }
+      ],
+      "stillPresent": true,
+      "evidence": "data/foundation-data.json › pages 42420:57418"
+    },
+    {
+      "found": "Tap app bar",
+      "should": "Top app bar",
+      "what": "구조도 목차",
+      "foundInPages": [],
+      "foundInToc": [
+        "Tap app bar"
+      ],
+      "foundInBody": [
+        {
+          "page": "components-overview",
+          "node": "43185:52214",
+          "text": "Tap app bar (탭 앱 바)"
+        }
+      ],
+      "stillPresent": true,
+      "evidence": "data/figma-pages/components-overview.json › 43185:52214"
+    },
+    {
+      "found": "Componenets",
+      "should": "Components",
+      "what": "본문 — Components overview 정의",
+      "foundInPages": [],
+      "foundInToc": [],
+      "foundInBody": [
+        {
+          "page": "components-overview",
+          "node": "43185:39199",
+          "text": "Componenets (컴포넌트)는 텍스트, 그래픽, 인터랙션이 결합되어 하나의 기능이나 정보를 전달하는 U"
+        }
+      ],
+      "stillPresent": true,
+      "evidence": "data/figma-pages/components-overview.json › 43185:39199"
+    }
+  ],
+  "counts": {
+    "pairs": 6,
+    "stillPresent": 6,
+    "gone": 0,
+    "withNodeId": 4
+  },
+  "reading": "오타 6건 중 6건이 원본에 지금도 있습니다(그중 4건은 페이지 노드 ID 로 짚입니다)."
+}

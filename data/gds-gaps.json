@@ -296,13 +296,18 @@
       "id": "GAP-19",
       "area": "명명",
       "severity": "낮음",
-      "finding": "이름 표기가 세 곳에서 어긋납니다 — ① 목차 오타 Bage(Badge) · Pasing(Paging) · Tap(Tab) · Tap app bar(Top app bar), ② 목차 이름과 페이지 이름이 다른 곳 Input↔Text field · Numbering↔Inline number, ③ 본문 오타 Componenets(Components).",
-      "evidence": "data/component-pages.json › naming 6건 · ownNameTypos 1건(«Componenets (컴포넌트)» 43185:39199) — 둘 다 기계 대조.",
+      "finding": "이름 표기가 세 곳에서 어긋납니다 — ① 페이지·목차 오타 Getting stared(started) · Bage(Badge) · Pasing(Paging) · Tap(Tab) · Tap app bar(Top app bar), ② 목차 이름과 페이지 이름이 다른 곳 Input↔Text field · Numbering↔Inline number, ③ 본문 오타 Componenets(Components).",
+      "evidence": "data/name-typos.json — 6쌍 전부 원본 데이터에 실재함을 기계가 확인(페이지 노드 4건 · 본문 노드 2건). data/component-pages.json › naming 6건 · ownNameTypos 1건(«Componenets (컴포넌트)» 43185:39199) 도 기계 대조.",
       "fix": "저장소는 바른 표기로 적고 원본 표기를 함께 남깁니다.",
-      "status": "partial",
-      "resolution": "부분 해소 — ①②는 저장소가 바른 표기를 쓰고 목차 표기를 나란히 남기는 것으로 처리했습니다(Components 페이지 «목차 이름과 페이지 이름이 다른 곳» 표). ③ Componenets 는 이번 전수 읽기에서 새로 나온 것이라 이번에 추가했습니다.",
-      "consolidation": "이번 정리에서 갱신 — 처음 적을 때 들어 있던 «Getting stared(started)» 는 근거 노드 ID 없이 손으로 적은 항목이라 뺐습니다. 지금 자료로는 Getting started 로만 확인되며, 원본에서 다시 확인해야 합니다(아래 확인필요). 2026-08-06 — «Componenets» 를 손으로 적지 않고 기계가 찾도록 파서에 넣었습니다(자기 이름과 편집 거리 2 이내면 오타로 가릅니다).",
-      "needsCheck": "Getting started 목차 제목의 철자 — 근거 노드 ID 를 확보하지 못했습니다."
+      "status": "resolved",
+      "resolution": "해소 — ①③은 tools/find-name-typos.js 가 (틀린 꼴 → 바른 꼴) 짝마다 원본 데이터에 지금도 있는지 확인해 data/name-typos.json 으로 남깁니다. 원본이 고쳐지면 found 가 사라져 검사가 실패하므로 낡은 목록이 남지 않습니다. ②는 저장소가 바른 표기를 쓰고 목차 표기를 나란히 남기는 것으로 처리했습니다(Components 페이지 «목차 이름과 페이지 이름이 다른 곳» 표).",
+      "consolidation": "이번 정리에서 갱신 — 2026-08-06 «Componenets» 를 손으로 적지 않고 기계가 찾도록 파서에 넣었습니다(자기 이름과 편집 거리 2 이내면 오타로 가릅니다). 같은 날 «Getting stared» 를 잘못 뺀 것을 되살렸습니다(correction 참고).",
+      "correction": {
+        "claim": "«Getting stared(started)» 는 근거 노드 ID 없이 손으로 적은 항목이라 뺐습니다.",
+        "why": "근거는 data/foundation-data.json 페이지 목록(42066:27863, «Getting stared (시작하기) ✅»)에 처음부터 있었습니다. gds-structure.json 한 곳만 찾아보고 없다고 결론지은 제 잘못입니다. 손으로 적은 항목이 미덥지 않으면 지울 것이 아니라 기계가 찾을 자리를 먼저 봤어야 합니다.",
+        "correctedAt": "2026-08-06",
+        "how": "tools/find-name-typos.js 로 되살렸고, 근거가 실재하는지 검사가 대조합니다."
+      }
     },
     {
       "id": "GAP-20",

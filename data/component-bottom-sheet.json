@@ -75,7 +75,7 @@
   },
 
   "typography": {
-    "note": "사이즈·웨이트는 전부 canon.typography(21토큰) 안에 있다. line-height는 정본이 전부 Auto라 웹 구현값을 별도 명시했다.",
+    "note": "사이즈·웨이트는 전부 canon.typography(21토큰) 안에 있다. line-height는 원본이 전부 Auto라 웹 구현값을 별도 명시했다.",
     "items": [
       { "target": "sheet.title",     "size": 16, "weight": 500, "canonToken": "Title 5" },
       { "target": "body.lead",       "size": 16, "weight": 400, "canonToken": "Body 1" },
@@ -84,7 +84,7 @@
       { "target": "coupon.desc",     "size": 12, "weight": 400, "canonToken": "Body 3" },
       { "target": "coupon.period",   "size": 14, "weight": 400, "canonToken": "Body 2" },
       { "target": "coupon.dday",     "size": 10, "weight": 500, "canonToken": "Title 8" },
-      { "target": "button.label",    "size": 16, "weight": 700, "canonToken": "Display 3", "unresolved": "16/700 정본이 Display 3·Heading 3 둘 다라 어느 쪽인지 미확인" }
+      { "target": "button.label",    "size": 16, "weight": 700, "canonToken": "Display 3", "unresolved": "16/700 원본이 Display 3·Heading 3 둘 다라 어느 쪽인지 미확인" }
     ]
   },
 
@@ -151,7 +151,7 @@
   "unresolved": [
     "line-height — canon.typography 21토큰 전부 Auto. 웹/앱 구현 기준 없음",
     "grid/컬럼 — Grid Style 0개, layoutGrid 0개. 좌우 20 마진은 13. Layout 문서와 실측이 일치하나 컬럼 정의는 없음",
-    "16/700 정본이 Display 3·Heading 3 둘 다라 버튼 라벨 매핑이 확정되지 않음",
+    "16/700 원본이 Display 3·Heading 3 둘 다라 버튼 라벨 매핑이 확정되지 않음",
     "coupon COMPONENT_SET이 신규 GDS 페이지에 미편입 (레거시 페이지에만 존재)"
   ]
 }
