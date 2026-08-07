@@ -1631,6 +1631,51 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
         ok('대조표가 Color 페이지에 실림', htmlS2.includes('본문 표기 ↔ 토큰 이름'));
       }
 
+      // ── 원본 이름의 영문 오타 (GAP-19)
+      const NT = VIEW.pages && VIEW.pages.nameTypos;
+      ok('이름 오타 목록이 있음', !!NT && NT.items.length > 0);
+      if (NT) {
+        // 손으로 적은 짝이 원본 데이터에 지금도 실재하는가 — 사라지면 낡은 목록입니다.
+        ok('적은 오타가 전부 원본 데이터에 실재',
+          NT.items.every(i => i.stillPresent),
+          NT.items.filter(i => !i.stillPresent).map(i => i.found).join(', '));
+        // 짚은 노드가 실제 그 이름을 담고 있는가 — 노드 ID 를 지어내지 않았는지.
+        const PGS = VIEW.pages && VIEW.pages.components;
+        ok('페이지 노드가 실제로 그 오타를 담고 있음', (() => {
+          const fd = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foundation-data.json'), 'utf8'));
+          return NT.items.every(i => i.foundInPages.every(p => {
+            const pg = fd.pages.find(x => x.id === p.node);
+            return pg && pg.name.includes(i.found);
+          }));
+        })());
+        ok('본문 노드가 실제로 그 오타를 담고 있음', (() => {
+          const dir = path.join(ROOT, 'data', 'figma-pages');
+          const all = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+            .map(f => fs.readFileSync(path.join(dir, f), 'utf8')).join('\n');
+          const body = NT.items.filter(i => i.foundInBody.length);
+          return body.length > 0 && body.every(i => all.includes(i.found));
+        })());
+        // 바른 표기를 오타로 잘못 적지 않았는가 — found 와 should 가 달라야 합니다.
+        ok('틀린 꼴과 바른 꼴이 서로 다름', NT.items.every(i => i.found !== i.should));
+        ok('셈이 목록과 일치',
+          NT.counts.pairs === NT.items.length
+          && NT.counts.stillPresent === NT.items.filter(i => i.stillPresent).length
+          && NT.counts.withNodeId === NT.items.filter(i => i.foundInPages.length > 0).length);
+        // 잘못 뺀 항목이 되살아났는가 — 이것이 이 도구가 생긴 이유입니다.
+        const gs = NT.items.find(i => i.found === 'Getting stared');
+        ok('잘못 뺐던 «Getting stared» 가 되살아남',
+          !!gs && gs.stillPresent && gs.foundInPages.some(p => p.node === '42066:27863'));
+        ok('원본을 고치지 않는다는 규칙이 남아 있음',
+          NT.rule.some(r => /원본을 고치지 않습니다/.test(r)));
+        const g19 = IT.find(i => i.id === 'GAP-19');
+        ok('GAP-19 가 해소로 기록됨', !!g19 && g19.status === 'resolved' && !g19.needsCheck);
+        ok('GAP-19 에 제 잘못이 정정으로 남음',
+          !!g19 && !!g19.correction && /gds-structure\.json/.test(g19.correction.why)
+          && /42066:27863/.test(g19.correction.why));
+        const htmlNT = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+        ok('오타 표가 페이지에 실림', htmlNT.includes('원본 이름의 영문 오타'));
+      }
+
       // ── Title published 재조회 (GAP-29 철회)
       {
         const TL = VIEW.typeLib;
@@ -1814,9 +1859,9 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
 }
 
 // ---------- 8. 컴포넌트 스펙 대조 (Bottom sheet) ----------
-// 실측 스펙의 색·간격·타이포·반경이 정본 밖으로 새지 않는지 봅니다.
+// 실측 스펙의 색·간격·타이포·반경이 원본 밖으로 새지 않는지 봅니다.
 // 측정 방식이 다르므로(.fig 추출이 아니라 Figma MCP 직접 조회) 값 자체는 검증하지 않고,
-// "정본 안에 있는가"만 기계로 확인합니다.
+// "원본 안에 있는가"만 기계로 확인합니다.
 console.log('\n[8] data/component-bottom-sheet.json');
 const CS_PATH = path.join(ROOT, 'data', 'component-bottom-sheet.json');
 ok('스펙 파일 존재', fs.existsSync(CS_PATH));
@@ -1826,21 +1871,21 @@ if (fs.existsSync(CS_PATH)) {
   // 색 — canon.color.palette 안에 있어야 합니다
   const palette = new Set(((canon.color || {}).palette) || []);
   const badColor = (C.color.items || []).filter(i => !palette.has(i.hex));
-  ok('모든 색이 정본 팔레트 안', badColor.length === 0,
+  ok('모든 색이 원본 팔레트 안', badColor.length === 0,
     badColor.map(i => `${i.target}=${i.hex}`).join(', '));
 
-  // 색 이름이 정본 스타일명과 일치하는지
+  // 색 이름이 원본 스타일명과 일치하는지
   const styleByHex = {};
   for (const s of ((canon.color || {}).styles) || []) (styleByHex[s.hex] ||= []).push(s.name);
   const badName = (C.color.items || []).filter(i => !(styleByHex[i.hex] || []).includes(i.canonStyle));
-  ok('색 → 정본 스타일명 매핑 정확', badName.length === 0,
+  ok('색 → 원본 스타일명 매핑 정확', badName.length === 0,
     badName.map(i => `${i.hex}→${i.canonStyle}`).join(', '));
 
   // 간격 — canon.spacing 토큰이 실제로 그 px 인지
   const spByToken = {};
   for (const s of ((canon.spacing || {}).scale) || []) spByToken[s.token] = s.px;
   const badSpacing = (C.spacing.items || []).filter(i => i.token && spByToken[i.token] !== i.px);
-  ok('간격 → 정본 토큰 px 일치', badSpacing.length === 0,
+  ok('간격 → 원본 토큰 px 일치', badSpacing.length === 0,
     badSpacing.map(i => `${i.token}≠${i.px}`).join(', '));
 
   // 타이포 — canon.typography 에 같은 size/weight 토큰이 있어야 합니다
@@ -1850,7 +1895,7 @@ if (fs.existsSync(CS_PATH)) {
     const t = typo.find(x => x.token === i.canonToken);
     return !t || t.size !== i.size || wNum(t.weight) !== i.weight;
   });
-  ok('타이포 → 정본 토큰 size/weight 일치', badTypo.length === 0,
+  ok('타이포 → 원본 토큰 size/weight 일치', badTypo.length === 0,
     badTypo.map(i => `${i.target}:${i.canonToken}`).join(', '));
 
   // 반경 — R-3 상한 20px (원형 제외)
@@ -1883,10 +1928,35 @@ if (fs.existsSync(CS_PATH)) {
   if (fs.existsSync(bp)) {
     const html = fs.readFileSync(bp, 'utf8');
     const used = [...new Set((html.match(/#[0-9A-Fa-f]{6}/g) || []).map(h => h.toUpperCase()))];
-    const allow = new Set([...palette, '#F7F9FA']); // #F7F9FA = :active 배경, 정본 편입 대상
+    const allow = new Set([...palette, '#F7F9FA']); // #F7F9FA = :active 배경, 원본 편입 대상
     const stray = used.filter(h => !allow.has(h));
-    ok('베이스 HTML 색이 정본 팔레트 안', stray.length === 0, stray.join(', '));
+    ok('베이스 HTML 색이 원본 팔레트 안', stray.length === 0, stray.join(', '));
   }
+}
+
+// ---------- 15. 용어 ----------
+// 원본(Figma 파일)을 가리키는 낱말을 «원본» 하나로 정했는데, 옛 낱말이 두 번 되살아났습니다.
+// 사람 눈이 아니라 검사가 지킵니다. 옛 낱말은 코드포인트로 적습니다 — 이 파일 자신이 걸리지 않도록.
+console.log('\n[15] 용어 — 정한 낱말이 되돌아오지 않는지');
+{
+  const BANNED = String.fromCharCode(0xC815, 0xBCF8);   // 옛 낱말
+  const SKIP = new Set(['node_modules', '.git', 'dist', 'fonts']);
+  const EXT = /\.(js|json|md|html|css|yml|yaml)$/;
+  const hits = [];
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (SKIP.has(e.name)) continue;
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(p); continue; }
+      if (!EXT.test(e.name)) continue;
+      const txt = fs.readFileSync(p, 'utf8');
+      if (!txt.includes(BANNED)) continue;
+      txt.split('\n').forEach((line, i) => {
+        if (line.includes(BANNED)) hits.push(`${path.relative(ROOT, p)}:${i + 1}`);
+      });
+    }
+  })(ROOT);
+  ok('옛 낱말이 아니라 «원본»으로 적혀 있음', hits.length === 0, hits.slice(0, 8).join(' · '));
 }
 
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);

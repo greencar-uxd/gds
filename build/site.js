@@ -63,6 +63,7 @@ injected.canon.spacingCensus = VIEW.spacingCensus ? {
 } : null;
 injected.canon.spacingOutliers = VIEW.pages && VIEW.pages.spacingOutliers || null;
 injected.canon.colorShorthand = VIEW.pages && VIEW.pages.colorShorthand || null;
+injected.canon.nameTypos = VIEW.pages && VIEW.pages.nameTypos || null;
 injected.canon.pr1 = VIEW.pages && VIEW.pages.pr1 || null;
 injected.canon.effects = VIEW.effects || null;
 injected.canon.icons = VIEW.icons || null;
