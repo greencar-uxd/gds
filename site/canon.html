@@ -647,7 +647,31 @@ function color(){
     ${AL.linePairs.filter(p=>!p.fill).length?`<p class="muted" style="margin-top:16px">짝이 없는 단독 선색 ${AL.linePairs.filter(p=>!p.fill).length}종 —
       ${AL.linePairs.filter(p=>!p.fill).map(p=>esc(p.line)).join(' · ')}. 면색을 지어내지 않았습니다.</p>`:''}
   </div>`:''}
+  ${shorthand()}
   ${footer()}`;
+}
+
+/* 본문의 축약 표기와 토큰 이름을 잇는 대조표 (GAP-26). 원본 문장은 고치지 않습니다. */
+function shorthand(){
+  const S=C.colorShorthand; if(!S) return '';
+  const K=S.counts;
+  return `<div class="sectionline"><h2>본문 표기 ↔ 토큰 이름</h2><span class="muted">GAP-26</span></div>
+  <p class="lead" style="font-size:15px">${esc(S.why)}</p>
+  <div class="stat">
+    <div><b>${K.distinct}</b><span>축약 표기</span></div>
+    <div><b>${K.occurrences}</b><span>나온 자리</span></div>
+    <div><b>${K.tokensReferenced}</b><span>가리키는 토큰</span></div>
+    <div><b>${K.unresolved}</b><span>못 이은 것</span></div>
+  </div>
+  <table class="ctr"><thead><tr><th>본문 표기</th><th>토큰 이름</th><th>값</th><th>나온 곳</th></tr></thead><tbody>
+  ${S.rows.map(r=>`<tr><td><code>${esc(r.found)}</code></td>
+    <td class="${r.resolved?'':'no'}">${r.token?`<span class="dot" style="background:${esc(r.hex)}"></span> <b>${esc(r.token)}</b>`:'못 이음'}</td>
+    <td class="muted">${esc(r.hex||'—')}</td>
+    <td class="muted">${r.where.map(esc).join('<br>')} <span style="opacity:.6">×${r.count}</span></td></tr>`).join('')}
+  </tbody></table>
+  ${S.multiSpelling.count?`<div class="note warn"><p><b>같은 토큰을 여러 표기로 쓴 곳 ${S.multiSpelling.count}건.</b> ${esc(S.multiSpelling.what)}</p>
+  <p class="muted">${S.multiSpelling.items.map(m=>`<b>${esc(m.token)}</b> ← ${m.spellings.map(x=>`<code>${esc(x)}</code>`).join(' · ')}`).join('<br>')}</p></div>`:''}
+  <div class="note"><p class="muted">${S.rule.map(esc).join('<br>')}</p></div>`;
 }
 
 
