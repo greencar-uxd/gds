@@ -689,6 +689,26 @@ function pr1(){
   <div class="note"><p class="muted">${P.rule.map(esc).join('<br>')}</p></div>`;
 }
 
+/* 원본 이름의 영문 오타 (GAP-19). 판정은 사람이, 실재 확인은 기계가 합니다. */
+function nameTypos(){
+  const N=C.nameTypos; if(!N) return '';
+  const K=N.counts;
+  const where=i=>i.foundInPages.length?i.foundInPages.map(p=>`<code>${esc(p.node)}</code> ${esc(p.name)}`).join('<br>')
+    :i.foundInBody.length?i.foundInBody.map(b=>`<code>${esc(b.node)}</code> <span class="muted">${esc(b.page)}</span>`).join('<br>')
+    :i.foundInToc.length?i.foundInToc.map(t=>`<span class="muted">목차</span> ${esc(t)}`).join('<br>')
+    :'<span class="muted">원본에 없음</span>';
+  return `<h3>원본 이름의 영문 오타 ${K.stillPresent}건</h3>
+  <p class="lead" style="font-size:15px">${esc(N.why)}</p>
+  <table class="ctr"><thead><tr><th>원본 표기</th><th>바른 표기</th><th>어디</th><th>근거</th></tr></thead><tbody>
+  ${N.items.map(i=>`<tr><td class="${i.stillPresent?'no':'muted'}"><code>${esc(i.found)}</code></td>
+    <td><b>${esc(i.should)}</b></td>
+    <td class="muted">${esc(i.what)}</td>
+    <td class="muted">${where(i)}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note warn"><p><b>정정.</b> ${esc(N.correction)}</p></div>
+  <div class="note"><p class="muted">${N.rule.map(esc).join('<br>')}</p></div>`;
+}
+
 /* 본문의 축약 표기와 토큰 이름을 잇는 대조표 (GAP-26). 원본 문장은 고치지 않습니다. */
 function shorthand(){
   const S=C.colorShorthand; if(!S) return '';
@@ -1378,6 +1398,8 @@ function wipPages(){
     <td><b>${esc(n.pageName)}</b></td></tr>`).join('')}
   </tbody></table>
   <p class="muted">${esc(W.naming.why)}</p>`:''}
+
+  ${nameTypos()}
 
   ${W.nameMismatch&&W.nameMismatch.count?`<div class="note warn"><p><b>이름 짝이 어긋난 곳 ${W.nameMismatch.count}건.</b> ${esc(W.nameMismatch.why)}</p>
   <p class="muted">${W.nameMismatch.items.map(n=>`<code>${esc(n.found)}</code> — 영문은 ${esc(n.enBelongsTo)}, 괄호 안 한글은 ${esc(n.koBelongsTo)} 것 (${esc(n.page)} › ${esc(n.section)})`).join('<br>')}</p></div>`:''}
