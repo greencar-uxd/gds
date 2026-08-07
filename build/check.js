@@ -1521,8 +1521,15 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
           fromPR.length === 3 && fromPR.every(i => i.status === 'open'), `${fromPR.length}건`);
         ok('스스로 재지 못한 수치는 «확인 필요»로 표시',
           (() => { const g45 = IT.find(i => i.id === 'GAP-45'); return !!g45 && /\[확인 필요\]/.test(g45.note || ''); })());
-        // merge 판단이 «하지 말라»로 남아 있는가 — 되돌아갈 양이 크기 때문입니다.
-        ok('merge 판단이 기록됨', /merge 하면 안 됩니다/.test(PR1.mergeAdvice));
+        // merge 영향은 세 점 diff 로 재야 합니다 — 두 점으로 보면 삭제가 부풀려집니다(2026-08-06 정정).
+        ok('merge 영향이 세 점 diff 로 기록됨',
+          !!PR1.mergeImpact && PR1.mergeImpact.deletions === 0
+          && PR1.mergeImpact.insertions === 728 && PR1.mergeImpact.filesChanged === 6,
+          PR1.mergeImpact && `+${PR1.mergeImpact.insertions}/-${PR1.mergeImpact.deletions}`);
+        ok('merge 뒤 검사 수를 실제로 돌려 적음',
+          !!PR1.mergeImpact && PR1.mergeImpact.checksAfterMerge > pass);
+        ok('두 점 diff 로 판단한 것이 정정으로 남음',
+          /두 점 diff/.test(PR1.mergeImpact.note || ''));
         ok('PR 을 건드리지 않았음 — 브랜치가 그대로', PR1.rule.some(r => /건드리지 않습니다/.test(r)));
         const htmlP1 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
         ok('PR 대조가 Status 에 실림', htmlP1.includes('열려 있는 PR'));
