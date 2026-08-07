@@ -447,6 +447,7 @@ build/canon-view.js 원본(GDS 라이브러리) + 확정 결정을 합친 단일
 build/site.js       canon.html + data → dist/index.html
 build/check.js      기계 검증
 docs/               결정 기록·측정 결과
+  assets/                  베이스 HTML·도면 등 배포용 산출물
 .github/workflows/  push → 빌드 → 검증 → Pages 배포
 ```
 
@@ -559,6 +560,11 @@ Components/Buttons/Default/Secondary
 아직 이 저장소에 없습니다. `tokens/`가 들어오면 각 섹션에 「원본」 축이 추가됩니다.
 
 **반경·엘리베이션만** 회의 결정이 반영된 원본입니다.
+
+**컴포넌트 스펙** — `data/component-bottom-sheet.json`은 `.fig` 추출이 아니라 **Figma MCP 직접 조회**로
+측정한 값입니다. `npm run extract` 로는 재현되지 않습니다. 대신 `npm run check`의 `[6]` 블록이
+이 스펙의 색·간격·타이포·반경이 **정본(`canon`) 안에 있는지**를 기계로 대조합니다.
+자세한 경위는 `docs/GDS-bottomsheet-component-20260805.md`.
 
 ---
 

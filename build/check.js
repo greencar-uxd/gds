@@ -1758,5 +1758,81 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
   }
 }
 
+// ---------- 8. 컴포넌트 스펙 대조 (Bottom sheet) ----------
+// 실측 스펙의 색·간격·타이포·반경이 정본 밖으로 새지 않는지 봅니다.
+// 측정 방식이 다르므로(.fig 추출이 아니라 Figma MCP 직접 조회) 값 자체는 검증하지 않고,
+// "정본 안에 있는가"만 기계로 확인합니다.
+console.log('\n[8] data/component-bottom-sheet.json');
+const CS_PATH = path.join(ROOT, 'data', 'component-bottom-sheet.json');
+ok('스펙 파일 존재', fs.existsSync(CS_PATH));
+if (fs.existsSync(CS_PATH)) {
+  const C = JSON.parse(fs.readFileSync(CS_PATH, 'utf8'));
+
+  // 색 — canon.color.palette 안에 있어야 합니다
+  const palette = new Set(((canon.color || {}).palette) || []);
+  const badColor = (C.color.items || []).filter(i => !palette.has(i.hex));
+  ok('모든 색이 정본 팔레트 안', badColor.length === 0,
+    badColor.map(i => `${i.target}=${i.hex}`).join(', '));
+
+  // 색 이름이 정본 스타일명과 일치하는지
+  const styleByHex = {};
+  for (const s of ((canon.color || {}).styles) || []) (styleByHex[s.hex] ||= []).push(s.name);
+  const badName = (C.color.items || []).filter(i => !(styleByHex[i.hex] || []).includes(i.canonStyle));
+  ok('색 → 정본 스타일명 매핑 정확', badName.length === 0,
+    badName.map(i => `${i.hex}→${i.canonStyle}`).join(', '));
+
+  // 간격 — canon.spacing 토큰이 실제로 그 px 인지
+  const spByToken = {};
+  for (const s of ((canon.spacing || {}).scale) || []) spByToken[s.token] = s.px;
+  const badSpacing = (C.spacing.items || []).filter(i => i.token && spByToken[i.token] !== i.px);
+  ok('간격 → 정본 토큰 px 일치', badSpacing.length === 0,
+    badSpacing.map(i => `${i.token}≠${i.px}`).join(', '));
+
+  // 타이포 — canon.typography 에 같은 size/weight 토큰이 있어야 합니다
+  const typo = ((canon.typography || {}).scale) || [];
+  const wNum = w => Number(String(w).replace(/\D/g, '')); // "Medium(500)" → 500
+  const badTypo = (C.typography.items || []).filter(i => {
+    const t = typo.find(x => x.token === i.canonToken);
+    return !t || t.size !== i.size || wNum(t.weight) !== i.weight;
+  });
+  ok('타이포 → 정본 토큰 size/weight 일치', badTypo.length === 0,
+    badTypo.map(i => `${i.target}:${i.canonToken}`).join(', '));
+
+  // 반경 — R-3 상한 20px (원형 제외)
+  const radii = (C.radius.items || []).filter(r => r.token !== 'Radius/full').map(r => r.px);
+  ok('반경 R-3 상한 20px 준수', Math.max(...radii) <= 20, `최대 ${Math.max(...radii)}`);
+  const RSCALE = { 'Radius/xs': 4, 'Radius/sm': 8, 'Radius/md': 10, 'Radius/lg': 12, 'Radius/xl': 16, 'Radius/xxl': 20 };
+  const badRadius = (C.radius.items || []).filter(r => r.token in RSCALE && RSCALE[r.token] !== r.px);
+  ok('반경 → 토큰 px 일치', badRadius.length === 0, badRadius.map(r => `${r.token}≠${r.px}`).join(', '));
+
+  // Elevation — 스펙에 적어둔 겹 수가 실제 EFFECT 스타일과 같은지
+  const bs = D.effects.find(e => e.id === C.elevation.styleId);
+  ok('Bottom Sheet EFFECT 스타일 존재', !!bs, C.elevation.styleId);
+  if (bs) ok('Bottom Sheet 3겹', bs.layers.length === C.elevation.layers.length, `${bs.layers.length}겹`);
+
+  // 규칙 — 바텀시트는 Dim layer 미사용
+  ok('Dim layer 미사용 규칙 기록', C.structure.dimLayer.used === false);
+  // Top 에 컬러 헤더 타입이 없다는 사실이 유지되는지
+  ok('Top 종류 3종 · 컬러 헤더 없음',
+    C.structure.top.types.length === 3 && C.structure.top.colorHeaderExists === false);
+
+  // 부속 산출물
+  for (const f of ['braze-bottom-sheet-notice.html', 'bottom-sheet-spacing.png']) {
+    ok(`docs/assets/${f} 존재`, fs.existsSync(path.join(ROOT, 'docs', 'assets', f)));
+  }
+  ok('docs/GDS-bottomsheet-component-20260805.md 존재',
+    fs.existsSync(path.join(ROOT, 'docs', 'GDS-bottomsheet-component-20260805.md')));
+
+  // 베이스 HTML 이 스펙과 같은 색을 쓰는지 (팔레트 밖 색 유입 차단)
+  const bp = path.join(ROOT, 'docs', 'assets', 'braze-bottom-sheet-notice.html');
+  if (fs.existsSync(bp)) {
+    const html = fs.readFileSync(bp, 'utf8');
+    const used = [...new Set((html.match(/#[0-9A-Fa-f]{6}/g) || []).map(h => h.toUpperCase()))];
+    const allow = new Set([...palette, '#F7F9FA']); // #F7F9FA = :active 배경, 정본 편입 대상
+    const stray = used.filter(h => !allow.has(h));
+    ok('베이스 HTML 색이 정본 팔레트 안', stray.length === 0, stray.join(', '));
+  }
+}
+
 console.log(`\n${fail === 0 ? '통과' : '실패'} — ${pass + fail}개 항목 중 ${pass}개 일치, ${fail}개 불일치`);
 process.exit(fail === 0 ? 0 : 1);
