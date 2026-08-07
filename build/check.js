@@ -1484,6 +1484,37 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     if (WP && NS) {
       // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      // ── Figma 접근 권한 — «없다»와 «안 한다»를 섞어 적지 않기
+      const AC = VIEW.pages && VIEW.pages.access;
+      ok('Figma 시트 확인 결과가 있음', !!AC && Array.isArray(AC.plans) && AC.plans.length >= 2);
+      if (AC) {
+        const gds = AC.plans.find(p => p.holdsGdsFile);
+        ok('GDS 파일이 있는 플랜이 Full 시트로 기록됨',
+          !!gds && gds.seat === 'Full' && gds.name === 'Greencar', gds && gds.seat);
+        ok('View 시트가 GDS 와 무관한 팀으로 갈려 있음',
+          AC.plans.filter(p => p.seat === 'View').every(p => p.holdsGdsFile === false));
+        // 옛 주장을 지우지 않고 정정으로 남겼는가
+        ok('옛 «View 시트» 주장이 정정으로 남음',
+          !!AC.corrects && /View 시트/.test(AC.corrects.claim)
+          && AC.corrects.where.includes('GDS-r3-decision-20260729.md'));
+        ok('정정한 문서에 실제로 정정이 달려 있음', (() => {
+          const d = path.join(ROOT, AC.corrects.where.split(' ')[0]);
+          if (!fs.existsSync(d)) return false;
+          const r = fs.readFileSync(d, 'utf8');
+          return /\[2026-08-06 정정\]/.test(r) && /Full/.test(r);
+        })());
+        // 권한이 있다고 해서 규칙이 풀리는 것이 아님 — 이게 핵심입니다.
+        ok('Full 시트여도 use_figma 금지가 유지됨',
+          AC.whatThisDoesNotChange.some(x => /use_figma/.test(x) && /호출하지 않습니다/.test(x)));
+        ok('README 가 «권한이 없어서가 아니라»를 밝힘', (() => {
+          const rm = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
+          return /권한이 없어서가 아니라/.test(rm) && /Full/.test(rm);
+        })());
+        // 공개 저장소라 개인 식별 정보는 싣지 않습니다.
+        ok('개인 식별 정보가 실리지 않음',
+          !/@|handle/i.test(JSON.stringify(AC.plans)) && !/lotte\.net/.test(JSON.stringify(AC)));
+      }
+
       // ── 열려 있는 PR 대조 (PR #1)
       const PR1 = VIEW.pages && VIEW.pages.pr1;
       ok('PR 대조 결과가 있음', !!PR1 && PR1.findings.length >= 10);
@@ -1534,8 +1565,15 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
           fs.readFileSync(path.join(ROOT, 'build', 'check.js'), 'utf8').includes('component-bottom-sheet'));
         // 충돌을 어떻게 풀었고 무엇이 빠졌는지 — 지우지 않고 남깁니다.
         ok('충돌 처리 방식이 기록됨', /README\.md/.test(PR1.merged.conflictResolution));
-        ok('충돌 해소 중 빠진 것이 «남은 일»로 남음',
-          /\[남은 일\]/.test(PR1.merged.dropped || ''));
+        // 빠진 것이 해소됐으면 README 에 실제로 들어가 있어야 합니다 — 말로만 «해소»라고 적지 못하게.
+        ok('충돌 해소 중 빠진 것의 처분이 기록됨',
+          /\[남은 일\]|\[해소\]/.test(PR1.merged.dropped || ''));
+        ok('«해소»라고 적었으면 README 에 실제로 들어가 있음', (() => {
+          if (!PR1.merged.droppedResolved) return true;
+          const rm = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
+          return rm.includes('foundation-data.json') && rm.includes('component-bottom-sheet.json')
+            && rm.includes('figma-xml/') && rm.includes('figma-pages/');
+        })());
         ok('대조 기록을 merge 뒤에도 지우지 않음',
           PR1.findings.length >= 12 && PR1.colors.rows.length > 0);
         // merge 영향은 세 점 diff 로 재야 합니다 — 두 점으로 보면 삭제가 부풀려집니다(2026-08-06 정정).
