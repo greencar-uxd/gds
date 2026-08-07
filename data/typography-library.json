@@ -28,8 +28,19 @@
       "weight": 500,
       "weightWord": "medium",
       "currentLibraryName": "noto_sans/title/medium",
-      "currentPublished": 6,
-      "missing": 2
+      "currentPublished": 8,
+      "missing": 0,
+      "publishedKeys": [
+        "2da9bc7f26d7e36f41cea42711812e36d64902a5",
+        "04a10ac5d94978812986a9926e2332e6e726fbf2",
+        "6d8265deb6c0614c1522d368d507eb93e14be0a4",
+        "08662424e9467300ec9d5d04696ff68b27dcb11e",
+        "8d44cabc65a8d903582151ac1955113da6610aea",
+        "0e7b2790f4e4a18553819353596591ee9a56c56a",
+        "56ae789b3391c5a49884e277ee7eda3fcb13ad6e",
+        "178664baebb2282b87c6d31b13feaee1e250efaa"
+      ],
+      "correction": "처음에는 published 6개로 세어 «2개가 빠졌다»고 적었습니다(GAP-29). 다시 조회하니 style key 가 8개로 8단계와 맞아떨어집니다 — 빠진 것이 없습니다. 앞의 6은 검색 결과를 다 못 본 수였습니다. 2026-08-06 재조회, 두 번 다른 질의로 같은 키 8개 확인."
     },
     {
       "group": "Heading",
@@ -409,5 +420,6 @@
     "groups": 5,
     "styles": 21,
     "canonSteps": 21
-  }
+  },
+  "$update": "2026-08-06 — Title published 수를 다시 셌습니다(6→8). GAP-29 의 «2개가 빠졌다»는 철회합니다."
 }

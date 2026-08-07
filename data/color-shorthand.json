@@ -1,0 +1,185 @@
+{
+  "$description": "GAP-26 — 원본 본문의 색 축약 표기와 토큰 이름을 잇는 대조표입니다. 원본 문장은 고치지 않습니다.",
+  "why": "본문은 두 자리(«Gray scale 40»), 토큰은 세 자리(«Gray Scale/Gray 040»)입니다. 값은 맞는데 표기가 달라서 문서를 읽고 토큰을 찾으려면 매번 사람이 변환해야 했습니다.",
+  "rule": [
+    "두 자리 → 세 자리는 «앞에 0 을 붙인다» 하나뿐이고, 그 결과가 팔레트에 실재할 때만 이었다고 셉니다.",
+    "세 자리로 이미 적힌 것(Red 500 등)은 축약이 아니므로 잡지 않습니다.",
+    "원본 문장을 고치지 않습니다 — 축약을 그대로 두고 옆에 토큰 이름을 답니다.",
+    "못 이은 표기는 지우지 않고 unresolved 로 남깁니다."
+  ],
+  "builtAt": "2026-08-06",
+  "basis": "data/figma-pages/*.json(원문) · data/components.json(✅ 실측) · 팔레트는 build/canon-view.js 의 확정 60색",
+  "rows": [
+    {
+      "found": "Gray scale 10",
+      "token": "Gray Scale/Gray 010",
+      "hex": "#F1F1F1",
+      "resolved": true,
+      "count": 1,
+      "where": [
+        "components.json.items[5].colors[1].value"
+      ],
+      "examples": [
+        {
+          "node": null,
+          "context": "Gray scale 10"
+        }
+      ]
+    },
+    {
+      "found": "Gray 20",
+      "token": "Gray Scale/Gray 020",
+      "hex": "#E2E2E2",
+      "resolved": true,
+      "count": 2,
+      "where": [
+        "figma-pages/selection-box"
+      ],
+      "examples": [
+        {
+          "node": "43174:47741",
+          "context": "lt → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러"
+        },
+        {
+          "node": "43864:69274",
+          "context": "lt → Gray 30 Disabled → Fill: Gray 20 pressed 일 때 outline → 어떠한 컬러"
+        }
+      ]
+    },
+    {
+      "found": "Gray scale 20",
+      "token": "Gray Scale/Gray 020",
+      "hex": "#E2E2E2",
+      "resolved": true,
+      "count": 1,
+      "where": [
+        "components.json.items[5].colors[0].value"
+      ],
+      "examples": [
+        {
+          "node": null,
+          "context": "Gray scale 20"
+        }
+      ]
+    },
+    {
+      "found": "Gray 30",
+      "token": "Gray Scale/Gray 030",
+      "hex": "#D4D4D4",
+      "resolved": true,
+      "count": 2,
+      "where": [
+        "figma-pages/selection-box"
+      ],
+      "examples": [
+        {
+          "node": "43174:47741",
+          "context": "Sele outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pres"
+        },
+        {
+          "node": "43864:69274",
+          "context": "box] outline 버전이 추가 Default → Gray 30 Disabled → Fill: Gray 20 pres"
+        }
+      ]
+    },
+    {
+      "found": "Gray scale 40",
+      "token": "Gray Scale/Gray 040",
+      "hex": "#C5C5C5",
+      "resolved": true,
+      "count": 2,
+      "where": [
+        "components.json.items[3].states[0].아이콘색",
+        "components.json.items[3].states[0].텍스트색"
+      ],
+      "examples": [
+        {
+          "node": null,
+          "context": "Gray scale 40"
+        },
+        {
+          "node": null,
+          "context": "Gray scale 40"
+        }
+      ]
+    },
+    {
+      "found": "Gray scale 80",
+      "token": "Gray Scale/Gray 080",
+      "hex": "#2F2E2E",
+      "resolved": true,
+      "count": 2,
+      "where": [
+        "components.json.items[3].states[1].아이콘색",
+        "components.json.items[3].states[1].텍스트색"
+      ],
+      "examples": [
+        {
+          "node": null,
+          "context": "Gray scale 80"
+        },
+        {
+          "node": null,
+          "context": "Gray scale 80"
+        }
+      ]
+    },
+    {
+      "found": "navy 40",
+      "token": "Navy/Navy 040",
+      "hex": "#728A9A",
+      "resolved": true,
+      "count": 1,
+      "where": [
+        "figma-pages/helper-text"
+      ],
+      "examples": [
+        {
+          "node": "44359:49404",
+          "context": "틀 개념(강조 역할): red 50 기본_바디 개념: navy 40 L point: L point blue"
+        }
+      ]
+    },
+    {
+      "found": "red 50",
+      "token": "Primary/Red 050",
+      "hex": "#ED1C24",
+      "resolved": true,
+      "count": 1,
+      "where": [
+        "figma-pages/helper-text"
+      ],
+      "examples": [
+        {
+          "node": "44359:49404",
+          "context": "기본_타이틀 개념(강조 역할): red 50 기본_바디 개념: navy 40 L point: L"
+        }
+      ]
+    }
+  ],
+  "unresolved": {
+    "count": 0,
+    "items": []
+  },
+  "multiSpelling": {
+    "what": "같은 토큰을 가리키는 표기가 여러 가지인 곳 — 대소문자·띄어쓰기까지 제각각입니다.",
+    "count": 1,
+    "items": [
+      {
+        "token": "Gray Scale/Gray 020",
+        "spellings": [
+          "Gray 20",
+          "Gray scale 20"
+        ]
+      }
+    ]
+  },
+  "counts": {
+    "occurrences": 12,
+    "distinct": 8,
+    "resolved": 8,
+    "unresolved": 0,
+    "tokensReferenced": 7
+  },
+  "reading": "축약 표기 8종(12건)이 팔레트의 7개 토큰을 가리킵니다. 못 이은 것은 0종입니다."
+}
