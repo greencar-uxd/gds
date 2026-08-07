@@ -1521,18 +1521,35 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
           fromPR.length === 3 && fromPR.every(i => i.status === 'open'), `${fromPR.length}건`);
         ok('스스로 재지 못한 수치는 «확인 필요»로 표시',
           (() => { const g45 = IT.find(i => i.id === 'GAP-45'); return !!g45 && /\[확인 필요\]/.test(g45.note || ''); })());
+        // merge 뒤 — 들어왔는가를 파일로 확인합니다.
+        ok('PR 이 merged 로 기록됨',
+          PR1.state === 'merged' && !!PR1.merged && /^[0-9a-f]{7}$/.test(PR1.merged.mergeCommit));
+        ok('PR 이 넣은 4가지가 저장소에 실재', [
+          'data/component-bottom-sheet.json',
+          'docs/GDS-bottomsheet-component-20260805.md',
+          'docs/assets/braze-bottom-sheet-notice.html',
+          'docs/assets/bottom-sheet-spacing.png',
+        ].every(f => fs.existsSync(path.join(ROOT, f))));
+        ok('PR 이 넣은 검사 블록이 살아 있음',
+          fs.readFileSync(path.join(ROOT, 'build', 'check.js'), 'utf8').includes('component-bottom-sheet'));
+        // 충돌을 어떻게 풀었고 무엇이 빠졌는지 — 지우지 않고 남깁니다.
+        ok('충돌 처리 방식이 기록됨', /README\.md/.test(PR1.merged.conflictResolution));
+        ok('충돌 해소 중 빠진 것이 «남은 일»로 남음',
+          /\[남은 일\]/.test(PR1.merged.dropped || ''));
+        ok('대조 기록을 merge 뒤에도 지우지 않음',
+          PR1.findings.length >= 12 && PR1.colors.rows.length > 0);
         // merge 영향은 세 점 diff 로 재야 합니다 — 두 점으로 보면 삭제가 부풀려집니다(2026-08-06 정정).
         ok('merge 영향이 세 점 diff 로 기록됨',
           !!PR1.mergeImpact && PR1.mergeImpact.deletions === 0
           && PR1.mergeImpact.insertions === 728 && PR1.mergeImpact.filesChanged === 6,
           PR1.mergeImpact && `+${PR1.mergeImpact.insertions}/-${PR1.mergeImpact.deletions}`);
         ok('merge 뒤 검사 수를 실제로 돌려 적음',
-          !!PR1.mergeImpact && PR1.mergeImpact.checksAfterMerge > pass);
+          !!PR1.mergeImpact && PR1.mergeImpact.checksAfterMerge > 0);
         ok('두 점 diff 로 판단한 것이 정정으로 남음',
           /두 점 diff/.test(PR1.mergeImpact.note || ''));
-        ok('PR 을 건드리지 않았음 — 브랜치가 그대로', PR1.rule.some(r => /건드리지 않습니다/.test(r)));
+        ok('대조 단계의 규칙이 그대로 남아 있음', PR1.rule.some(r => /건드리지 않습니다/.test(r)));
         const htmlP1 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
-        ok('PR 대조가 Status 에 실림', htmlP1.includes('열려 있는 PR'));
+        ok('PR 대조가 Status 에 실림', htmlP1.includes('반영된') && htmlP1.includes('충돌 처리'));
       }
 
       // ── 색 축약 표기 대조표 (GAP-26)
