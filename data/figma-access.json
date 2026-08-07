@@ -1,0 +1,35 @@
+{
+  "$description": "Figma 접근 권한을 조회로 확인한 결과입니다. 「권한이 없어서 못 한다」와 「안 하기로 정했다」는 다르기 때문에 사실을 못 박아 둡니다.",
+  "why": "저장소와 핸드오프 문서가 오래 「View 시트라 원본 수정 권한이 없다」고 적어 왔습니다. 확인해 보니 GDS 파일이 있는 Greencar 플랜은 Full 시트입니다. View 는 관계없는 다른 팀 쪽이었고, 줄을 잘못 읽은 것입니다. 이 오해가 남아 있으면 「자동화가 권한의 벽에 막혀 있다」는 틀린 그림이 계속됩니다.",
+  "checkedAt": "2026-08-06",
+  "method": "mcp__Figma__whoami. 개인 식별 정보(핸들·이메일)는 이 저장소가 공개라 싣지 않습니다 — 플랜·시트만 남깁니다.",
+  "plans": [
+    {
+      "name": "Greencar",
+      "tier": "pro",
+      "seat": "Full",
+      "holdsGdsFile": true,
+      "note": "GDS(G car Design System) 파일이 있는 플랜입니다."
+    },
+    {
+      "name": "차세대's Starter team",
+      "tier": "starter",
+      "seat": "View",
+      "holdsGdsFile": false,
+      "note": "GDS 와 무관한 별개 팀입니다. 예전에 이 줄을 보고 「View 시트」라고 적었습니다."
+    }
+  ],
+  "corrects": {
+    "claim": "원본 수정 권한 없음 — whoami 재확인: UXD·Greencar 모두 View 시트",
+    "where": "docs/GDS-r3-decision-20260729.md (2026-07-29)",
+    "why": "Greencar 플랜은 Full 입니다. View 는 다른 팀 줄이었습니다.",
+    "correctedAt": "2026-08-06",
+    "byWhom": "강민관 지적 → whoami 로 확인"
+  },
+  "whatThisDoesNotChange": [
+    "use_figma 는 여전히 호출하지 않습니다. 권한이 없어서가 아니라 제1원칙의 ④단계(원본 반영)를 아직 하지 않기로 했기 때문입니다.",
+    "원본 .fig 는 고치지 않습니다. 저장소에서 차기 라이브러리를 먼저 만들고, 반영 순서는 ② → ③ → ④ 입니다.",
+    "읽기는 지금처럼 get_metadata · get_variable_defs · search_design_system · get_screenshot 만 씁니다."
+  ],
+  "reading": "권한은 있습니다. 안 하는 것은 규칙이지 벽이 아닙니다 — 이 둘을 섞어 적지 않습니다."
+}
