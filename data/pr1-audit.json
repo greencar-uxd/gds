@@ -1,0 +1,370 @@
+{
+  "$description": "PR #1(docs/bottom-sheet-component-20260805)의 주장을 지금 저장소와 대조한 결과입니다. PR 을 merge 하거나 닫지 않습니다.",
+  "why": "PR 이 8/5 자라 그 뒤 바뀐 것과 어긋날 수 있습니다. merge 여부는 사람이 정하고, 저장소는 «그 안의 어느 주장이 지금도 맞는가»만 기계로 가려 둡니다.",
+  "rule": [
+    "PR 브랜치를 건드리지 않습니다 — 읽기만 합니다.",
+    "개명된 이름을 조용히 바꿔치지 않습니다. 옛 이름과 지금 이름을 나란히 적습니다.",
+    "원본과 대조할 수 없는 주장은 «맞다»로 세지 않습니다."
+  ],
+  "auditedAt": "2026-08-06",
+  "branch": "docs/bottom-sheet-component-20260805",
+  "mergeAdvice": "그대로 merge 하면 안 됩니다 — 8/5 자 브랜치라 그 뒤 쌓인 것이 되돌아갑니다. 안의 값은 대부분 지금도 맞습니다(검사 11/12 통과). 색 이름 3종만 개명 전 표기라 옮길 때 바꿔야 하고, GAP 에 아직 없는 것이 0건입니다. merge·close 는 사람이 정합니다.",
+  "colors": {
+    "what": "개명 뒤 이름이 어긋난 곳",
+    "rows": [
+      {
+        "target": "cta.bg",
+        "citedName": "Primary/Red 400",
+        "citedHex": "#F14950",
+        "stillValid": false,
+        "renamedTo": "Primary/Red 040",
+        "currentHex": "#F14950",
+        "hexUnchanged": true
+      },
+      {
+        "target": "coupon.tag.bg",
+        "citedName": "Primary/Red 500",
+        "citedHex": "#ED1C24",
+        "stillValid": false,
+        "renamedTo": "Primary/Red 050",
+        "currentHex": "#ED1C24",
+        "hexUnchanged": true
+      },
+      {
+        "target": "sheet.bg",
+        "citedName": "Gray Scale/Gray 000",
+        "citedHex": "#FFFFFF",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#FFFFFF",
+        "hexUnchanged": true
+      },
+      {
+        "target": "sheet.text",
+        "citedName": "Gray Scale/Gray 080",
+        "citedHex": "#2F2E2E",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#2F2E2E",
+        "hexUnchanged": true
+      },
+      {
+        "target": "top.divider",
+        "citedName": "Gray Scale/Gray 020",
+        "citedHex": "#E2E2E2",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#E2E2E2",
+        "hexUnchanged": true
+      },
+      {
+        "target": "coupon.text",
+        "citedName": "Navy/Navy 070",
+        "citedHex": "#0F2D41",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#0F2D41",
+        "hexUnchanged": true
+      },
+      {
+        "target": "coupon.sub",
+        "citedName": "Navy/navy 040",
+        "citedHex": "#728A9A",
+        "stillValid": false,
+        "renamedTo": "Navy/Navy 040",
+        "currentHex": "#728A9A",
+        "hexUnchanged": true
+      },
+      {
+        "target": "coupon.border",
+        "citedName": "Navy/Navy 020",
+        "citedHex": "#D0D8DD",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#D0D8DD",
+        "hexUnchanged": true
+      },
+      {
+        "target": "dday.default",
+        "citedName": "Navy/Navy 060",
+        "citedHex": "#0A3C5C",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#0A3C5C",
+        "hexUnchanged": true
+      },
+      {
+        "target": "dday.soon",
+        "citedName": "System/Alarm",
+        "citedHex": "#D32828",
+        "stillValid": true,
+        "renamedTo": null,
+        "currentHex": "#D32828",
+        "hexUnchanged": true
+      }
+    ],
+    "staleCount": 3
+  },
+  "spacing": {
+    "rows": [
+      {
+        "gap": "sheet.paddingX",
+        "px": 20,
+        "token": "Spacing_600",
+        "exists": true,
+        "tokenPx": 20,
+        "pxMatches": true
+      },
+      {
+        "gap": "top→body",
+        "px": 24,
+        "token": "Spacing_700",
+        "exists": true,
+        "tokenPx": 24,
+        "pxMatches": true
+      },
+      {
+        "gap": "lead→coupon",
+        "px": 16,
+        "token": "Spacing_500",
+        "exists": true,
+        "tokenPx": 16,
+        "pxMatches": true
+      },
+      {
+        "gap": "body→action",
+        "px": 32,
+        "token": "Spacing_900",
+        "exists": true,
+        "tokenPx": 32,
+        "pxMatches": true
+      },
+      {
+        "gap": "action→sheetEnd",
+        "px": 24,
+        "token": "Spacing_700",
+        "exists": true,
+        "tokenPx": 24,
+        "pxMatches": true
+      },
+      {
+        "gap": "button↔button",
+        "px": 16,
+        "token": "Spacing_500",
+        "exists": true,
+        "tokenPx": 16,
+        "pxMatches": true
+      },
+      {
+        "gap": "coupon.paddingY",
+        "px": 16,
+        "token": "Spacing_500",
+        "exists": true,
+        "tokenPx": 16,
+        "pxMatches": true
+      },
+      {
+        "gap": "coupon.paddingX",
+        "px": 20,
+        "token": "Spacing_600",
+        "exists": true,
+        "tokenPx": 20,
+        "pxMatches": true
+      },
+      {
+        "gap": "coupon.section",
+        "px": 16,
+        "token": "Spacing_500",
+        "exists": true,
+        "tokenPx": 16,
+        "pxMatches": true
+      },
+      {
+        "gap": "coupon.textBlock",
+        "px": 8,
+        "token": "Spacing_300",
+        "exists": true,
+        "tokenPx": 8,
+        "pxMatches": true
+      },
+      {
+        "gap": "coupon.descLine",
+        "px": 4,
+        "token": "Spacing_200",
+        "exists": true,
+        "tokenPx": 4,
+        "pxMatches": true
+      }
+    ]
+  },
+  "typography": {
+    "rows": [
+      {
+        "target": "sheet.title",
+        "token": "Title 5",
+        "exists": true
+      },
+      {
+        "target": "body.lead",
+        "token": "Body 1",
+        "exists": true
+      },
+      {
+        "target": "coupon.tag",
+        "token": "Title 8",
+        "exists": true
+      },
+      {
+        "target": "coupon.title",
+        "token": "Title 5",
+        "exists": true
+      },
+      {
+        "target": "coupon.desc",
+        "token": "Body 3",
+        "exists": true
+      },
+      {
+        "target": "coupon.period",
+        "token": "Body 2",
+        "exists": true
+      },
+      {
+        "target": "coupon.dday",
+        "token": "Title 8",
+        "exists": true
+      },
+      {
+        "target": "button.label",
+        "token": "Display 3",
+        "exists": true
+      }
+    ]
+  },
+  "structure": {
+    "rows": [
+      {
+        "what": "좌우 여백 20px",
+        "px": 20,
+        "foundInRaw": true
+      },
+      {
+        "what": "Top→Body 24px",
+        "px": 24,
+        "foundInRaw": true
+      },
+      {
+        "what": "Body→Action 32px",
+        "px": 32,
+        "foundInRaw": true
+      }
+    ],
+    "raw": "data/figma-xml/bottom-sheet-structure.xml"
+  },
+  "carryOver": {
+    "what": "PR 이 적어 둔 모순·미해결 중 GAP 목록에 아직 없는 것",
+    "items": [
+      {
+        "what": "Button Large 가 문서 56px · 실측 60px 로 갈림",
+        "key": "3. Button 문서는 Large를 56px로 표기하나 컴포넌트 실측은 60px",
+        "inGaps": true
+      },
+      {
+        "what": "Bottom Sheet 계열 EFFECT 스타일이 여러 값으로 흩어짐",
+        "key": "'Bottom Sheet' 계열 EFFECT 스타일이 4종 값으로 9개 흩어져 있다",
+        "inGaps": true
+      },
+      {
+        "what": "line-height 가 정본 21토큰 전부 Auto",
+        "key": "line-height — canon.typography 21토큰 전부 Auto. 웹/앱 구현 기준 없음",
+        "inGaps": true
+      },
+      {
+        "what": "coupon COMPONENT_SET 이 신규 GDS 페이지에 미편입",
+        "key": "coupon COMPONENT_SET이 신규 GDS 페이지에 미편입 (레거시 페이지에만 존재)",
+        "inGaps": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "color",
+      "what": "인용한 색 이름이 지금 팔레트에 그대로 있는가",
+      "ok": false,
+      "detail": "3/10종이 개명 전 이름"
+    },
+    {
+      "kind": "color",
+      "what": "개명된 것도 값(HEX)은 그대로인가",
+      "ok": true,
+      "detail": "Primary/Red 400→Primary/Red 040, Primary/Red 500→Primary/Red 050, Navy/navy 040→Navy/Navy 040"
+    },
+    {
+      "kind": "spacing",
+      "what": "간격 토큰이 지금 스케일에 실재",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "spacing",
+      "what": "토큰이 가리키는 px 가 PR 이 적은 값과 같음",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "typography",
+      "what": "타이포 토큰이 지금 21단계에 실재",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "structure",
+      "what": "원본 Structure 절에 PR 이 말한 간격 프레임이 있음",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "structure",
+      "what": "3분할(Top·Body·Action)이 원본 문장에 있음",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "structure",
+      "what": "«Elevation_Bottom sheet 사용» 메모가 원본에 있음",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "kind": "carry-over",
+      "what": "Button Large 가 문서 56px · 실측 60px 로 갈림",
+      "ok": true,
+      "detail": "이미 GAP 에 있음"
+    },
+    {
+      "kind": "carry-over",
+      "what": "Bottom Sheet 계열 EFFECT 스타일이 여러 값으로 흩어짐",
+      "ok": true,
+      "detail": "이미 GAP 에 있음"
+    },
+    {
+      "kind": "carry-over",
+      "what": "line-height 가 정본 21토큰 전부 Auto",
+      "ok": true,
+      "detail": "이미 GAP 에 있음"
+    },
+    {
+      "kind": "carry-over",
+      "what": "coupon COMPONENT_SET 이 신규 GDS 페이지에 미편입",
+      "ok": true,
+      "detail": "이미 GAP 에 있음"
+    }
+  ],
+  "counts": {
+    "checks": 12,
+    "passed": 11,
+    "failed": 1,
+    "staleColorNames": 3,
+    "carryOverMissing": 0
+  }
+}
