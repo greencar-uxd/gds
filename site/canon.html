@@ -651,6 +651,31 @@ function color(){
   ${footer()}`;
 }
 
+/* 열려 있는 PR 을 지금 저장소와 대조한 결과 — merge 여부는 사람이 정합니다. */
+function pr1(){
+  const P=C.pr1; if(!P) return '';
+  const K=P.counts;
+  return `<h2>열려 있는 PR — <code>${esc(P.branch)}</code></h2>
+  <p class="lead" style="font-size:15px">${esc(P.why)}</p>
+  <div class="stat">
+    <div><b>${K.passed}/${K.checks}</b><span>지금도 맞는 주장</span></div>
+    <div><b>${K.staleColorNames}</b><span>개명 전 색 이름</span></div>
+    <div><b>${K.carryOverMissing}</b><span>GAP 에 없는 것</span></div>
+  </div>
+  <div class="note warn"><p><b>merge 판단.</b> ${esc(P.mergeAdvice)}</p></div>
+  ${P.colors.staleCount?`<h3>옮길 때 바꿔야 할 이름 ${P.colors.staleCount}종</h3>
+  <table class="ctr"><thead><tr><th>PR 표기</th><th>지금 이름</th><th>값</th></tr></thead><tbody>
+  ${P.colors.rows.filter(r=>!r.stillValid).map(r=>`<tr><td><code>${esc(r.citedName)}</code></td>
+    <td><b>${esc(r.renamedTo||'—')}</b></td>
+    <td class="muted">${esc(r.currentHex||'—')} ${r.hexUnchanged?'<span class="ok">값 그대로</span>':'<span class="no">값도 다름</span>'}</td></tr>`).join('')}
+  </tbody></table>`:''}
+  <table class="ctr"><thead><tr><th>대조한 것</th><th>결과</th></tr></thead><tbody>
+  ${P.findings.map(f=>`<tr><td>${esc(f.what)}${f.detail?`<br><span class="muted">${esc(f.detail)}</span>`:''}</td>
+    <td class="${f.ok?'ok':'no'}">${f.ok?'맞음':'확인 필요'}</td></tr>`).join('')}
+  </tbody></table>
+  <div class="note"><p class="muted">${P.rule.map(esc).join('<br>')}</p></div>`;
+}
+
 /* 본문의 축약 표기와 토큰 이름을 잇는 대조표 (GAP-26). 원본 문장은 고치지 않습니다. */
 function shorthand(){
   const S=C.colorShorthand; if(!S) return '';
@@ -1498,6 +1523,7 @@ function status(){
     <div style="background:var(--surface2);border-radius:3px;height:9px;align-self:center">
       <div style="width:${Math.round(n/G.byArea[0][1]*100)}%;height:100%;background:var(--brand);border-radius:3px"></div></div>
   </div>`).join('')}</div>`:''}`:''}
+  ${pr1()}
   <h2>이 문서가 만들어지는 방식</h2>
   <p class="lead" style="font-size:15px">원본 <code>.fig</code> 파일을 직접 디코딩해 값을 읽고, 기계 검증을 통과한 것만 사이트와 토큰 파일로 내보냅니다.
   손으로 옮겨 적는 단계가 없어 원본과 어긋날 수 없습니다.</p>
