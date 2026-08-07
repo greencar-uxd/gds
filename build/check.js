@@ -1484,6 +1484,50 @@ console.log('\n[12] 메운 것 — 구조 · Layout · 시맨틱 · 가이드');
     if (WP && NS) {
       // Accordion 은 이제 파서에 들어갔습니다 — 손으로 센 수를 더하지 않습니다.
       const acc = NS.pages.find(pg => pg.slug === 'accordion');
+      // ── 열려 있는 PR 대조 (PR #1)
+      const PR1 = VIEW.pages && VIEW.pages.pr1;
+      ok('PR 대조 결과가 있음', !!PR1 && PR1.findings.length >= 10);
+      if (PR1) {
+        ok('PR 사본이 저장소에 그대로 있음',
+          fs.existsSync(path.join(ROOT, 'data', 'pr1-bottom-sheet.json')));
+        // 개명된 이름을 조용히 바꿔치지 않았는가 — 옛 이름이 그대로 남아 있어야 합니다.
+        const staleRows = PR1.colors.rows.filter(r => !r.stillValid);
+        ok('개명 전 이름을 지우지 않고 나란히 적음',
+          staleRows.length > 0 && staleRows.every(r => r.citedName && r.renamedTo && r.citedName !== r.renamedTo),
+          `${staleRows.length}종`);
+        ok('개명 전 이름이 지금 팔레트에 정말로 없음',
+          staleRows.every(r => !VIEW.colors.some(c => c.name === r.citedName)));
+        ok('개명 뒤 이름은 팔레트에 있고 값이 같음',
+          staleRows.every(r => {
+            const c = VIEW.colors.find(x => x.name === r.renamedTo);
+            return c && c.hex === r.currentHex && r.hexUnchanged;
+          }));
+        // 구조 수치는 원자료에서 다시 셌는가
+        ok('PR 의 간격 주장이 원자료 프레임과 맞음',
+          PR1.structure.rows.length >= 3 && PR1.structure.rows.every(r => r.foundInRaw),
+          PR1.structure.rows.filter(r => !r.foundInRaw).map(r => r.what).join(', '));
+        ok('대조에 쓴 원자료가 저장소에 있고 범위를 밝힘', (() => {
+          const q = path.join(ROOT, 'data', 'figma-xml', 'bottom-sheet-structure.xml');
+          if (!fs.existsSync(q)) return false;
+          const r = fs.readFileSync(q, 'utf8');
+          return /범위:/.test(r) && r.includes('43214:28439');
+        })());
+        // PR 에만 있던 것이 GAP 으로 옮겨졌는가
+        ok('PR 에만 있던 것이 전부 GAP 으로 옮겨짐',
+          PR1.counts.carryOverMissing === 0,
+          PR1.carryOver.items.filter(c => !c.inGaps).map(c => c.what).join(', '));
+        const fromPR = IT.filter(i => /^PR #1/.test(i.source || ''));
+        ok('PR 에서 옮겨 온 GAP 이 3건이고 출처가 붙어 있음',
+          fromPR.length === 3 && fromPR.every(i => i.status === 'open'), `${fromPR.length}건`);
+        ok('스스로 재지 못한 수치는 «확인 필요»로 표시',
+          (() => { const g45 = IT.find(i => i.id === 'GAP-45'); return !!g45 && /\[확인 필요\]/.test(g45.note || ''); })());
+        // merge 판단이 «하지 말라»로 남아 있는가 — 되돌아갈 양이 크기 때문입니다.
+        ok('merge 판단이 기록됨', /merge 하면 안 됩니다/.test(PR1.mergeAdvice));
+        ok('PR 을 건드리지 않았음 — 브랜치가 그대로', PR1.rule.some(r => /건드리지 않습니다/.test(r)));
+        const htmlP1 = fs.readFileSync(path.join(ROOT, 'dist', 'index.html'), 'utf8');
+        ok('PR 대조가 Status 에 실림', htmlP1.includes('열려 있는 PR'));
+      }
+
       // ── 색 축약 표기 대조표 (GAP-26)
       const SH = VIEW.pages && VIEW.pages.colorShorthand;
       ok('색 축약 대조표가 있음', !!SH && SH.rows.length > 0);

@@ -169,6 +169,7 @@ module.exports = {
       verify: load('transcribed-verify.json'),
       spacingOutliers: load('spacing-outliers.json'),
       colorShorthand: load('color-shorthand.json'),
+      pr1: load('pr1-audit.json'),
       readSlugs: read.map(f => f.replace(/\.json$/, '')),
     };
   })(),
