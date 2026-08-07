@@ -8,7 +8,18 @@
   ],
   "auditedAt": "2026-08-06",
   "branch": "docs/bottom-sheet-component-20260805",
-  "mergeAdvice": "그대로 merge 하면 안 됩니다 — 8/5 자 브랜치라 그 뒤 쌓인 것이 되돌아갑니다. 안의 값은 대부분 지금도 맞습니다(검사 11/12 통과). 색 이름 3종만 개명 전 표기라 옮길 때 바꿔야 하고, GAP 에 아직 없는 것이 0건입니다. merge·close 는 사람이 정합니다.",
+  "mergeAdvice": "merge 해도 되돌아가는 것은 없습니다 — 6파일 728줄 추가, 삭제 0. README.md 한 곳만 충돌하고, 병합 뒤 검사는 551개 전부 통과합니다(직접 병합해 돌려 봤습니다). 안의 값도 대부분 지금도 맞습니다(대조 11/12 통과). 색 이름 3종만 개명 전 표기라 옮길 때 바꿔야 합니다. merge·close 는 사람이 정합니다.",
+  "mergeImpact": {
+    "mergeBase": "3277bbc",
+    "filesChanged": 6,
+    "insertions": 728,
+    "deletions": 0,
+    "conflicts": [
+      "README.md"
+    ],
+    "checksAfterMerge": 551,
+    "note": "세 점 diff(main...FETCH_HEAD) 기준입니다. 두 점 diff 로 보면 main 에만 있는 것이 전부 삭제로 보이지만 merge 는 그런 일을 하지 않습니다. 실제로 병합해 검사를 돌려 확인했습니다."
+  },
   "colors": {
     "what": "개명 뒤 이름이 어긋난 곳",
     "rows": [
