@@ -444,7 +444,7 @@ tools/figdec/     자체 제작 .fig 디코더 (외부 의존성 0)
   census_radius.js  반경 전역 census
 
 data/             추출된 측정 데이터 (커밋 대상)
-  foundation-data.json         .fig 실측 + 정본(canon)
+  foundation-data.json         .fig 실측 + 원본(canon)
   component-bottom-sheet.json  Bottom sheet · coupon · Large 버튼 실측 스펙 (Figma MCP 조회)
   figma-xml/                   get_metadata 응답 원본 — 손으로 옮겨 적지 않기 위한 근거
   figma-pages/                 페이지 파서 산출물 (tools/parse-figma-page.js)
@@ -569,7 +569,7 @@ Components/Buttons/Default/Secondary
 
 **컴포넌트 스펙** — `data/component-bottom-sheet.json`은 `.fig` 추출이 아니라 **Figma MCP 직접 조회**로
 측정한 값입니다. `npm run extract` 로는 재현되지 않습니다. 대신 `npm run check`의 `[6]` 블록이
-이 스펙의 색·간격·타이포·반경이 **정본(`canon`) 안에 있는지**를 기계로 대조합니다.
+이 스펙의 색·간격·타이포·반경이 **원본(`canon`) 안에 있는지**를 기계로 대조합니다.
 자세한 경위는 `docs/GDS-bottomsheet-component-20260805.md`.
 
 ---
